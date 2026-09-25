@@ -11,7 +11,7 @@ class FailingModel:
     def decompose(self, claim):
         raise ConnectionError("Ollama unavailable")
 
-    def analyze(self, claim, domain, assertions, sources, prior_gaps, reference_date):
+    def analyze(self, claim, domain, assertions, sources, prior_gaps, reference_date, domain_guidance):
         raise ConnectionError("Ollama unavailable")
 
 

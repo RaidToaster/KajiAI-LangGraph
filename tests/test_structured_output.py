@@ -4,7 +4,7 @@ import json
 from types import SimpleNamespace
 
 from kaji_langgraph.llm import OllamaBackend
-from kaji_langgraph.models import Classification
+from kaji_langgraph.models import Classification, EvidenceAssessment
 
 
 class Runnable:
@@ -48,3 +48,33 @@ def test_structured_output_repairs_markdown_response():
 def test_json_extractor_accepts_fenced_json():
     text = '```json\n{"domain":"political","confidence":0.7,"reasoning":"x","risk_level":"medium"}\n```'
     assert OllamaBackend._parse_json(Classification, text).domain == "political"
+
+
+def test_analysis_prompt_includes_domain_specific_guidance():
+    backend = OllamaBackend.__new__(OllamaBackend)
+    captured = {}
+
+    def capture(schema, prompt):
+        captured["schema"] = schema
+        captured["prompt"] = prompt
+        return EvidenceAssessment(), 0
+
+    backend._structured = capture
+    guidance = {
+        "research": "Prioritize registered clinical trials.",
+        "analysis": "Distinguish trials from anecdotes.",
+        "verification_standard": "Apply a strict medical evidence standard.",
+    }
+    backend.analyze(
+        "A medical claim",
+        "health_medical",
+        ["A medical claim"],
+        [],
+        [],
+        "2026-09-21",
+        guidance,
+    )
+    assert captured["schema"] is EvidenceAssessment
+    assert guidance["research"] in captured["prompt"]
+    assert guidance["analysis"] in captured["prompt"]
+    assert guidance["verification_standard"] in captured["prompt"]

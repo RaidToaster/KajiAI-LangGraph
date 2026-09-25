@@ -200,10 +200,45 @@ class WorkflowNodes:
                 deadline_reached = True
                 break
             budget.search_calls += 1
-            try:
-                results = self.retriever.search(query, max_results=state["policy"].get("max_results_per_search", 5))
-            except Exception as exc:
-                errors.append(f"Retrieval failed: {type(exc).__name__}: {exc}")
+            max_retries = (
+                max(0, int(state["policy"].get("max_retries", 0)))
+                if state["policy"].get("retry_on_failure", True)
+                else 0
+            )
+            retry_delay = max(0.0, float(state["policy"].get("retry_delay_seconds", 0)))
+            results = None
+            last_error: Exception | None = None
+            attempts = 0
+            for attempt in range(max_retries + 1):
+                if _elapsed({**state, "budgets": budget}) >= budget.max_seconds:
+                    deadline_reached = True
+                    break
+                attempts += 1
+                try:
+                    results = self.retriever.search(
+                        query,
+                        max_results=state["policy"].get("max_results_per_search", 5),
+                    )
+                    break
+                except Exception as exc:
+                    last_error = exc
+                    if attempt >= max_retries:
+                        break
+                    delay = retry_delay * (attempt + 1)
+                    remaining = budget.max_seconds - _elapsed({**state, "budgets": budget})
+                    if delay >= remaining:
+                        deadline_reached = True
+                        break
+                    if delay:
+                        time.sleep(delay)
+            if results is None:
+                if deadline_reached:
+                    errors.append(f"Retrieval deadline reached after {attempts} attempt(s) for query: {query}")
+                elif last_error is not None:
+                    errors.append(
+                        f"Retrieval failed after {attempts} attempt(s): "
+                        f"{type(last_error).__name__}: {last_error}"
+                    )
                 continue
             page_attempted = False
             for item in results:
@@ -258,6 +293,7 @@ class WorkflowNodes:
             assessment, tokens = self.model.analyze(
                 state["claim"], state["domain"], state["assertions"], state.get("sources", []),
                 state.get("gaps", []), state["reference_date"],
+                self.config.get("domain_guidance", {}).get(state["domain"], {}),
             )
             return {"assessment": assessment, "budgets": _record_tokens(state, tokens)}
         except Exception as exc:
@@ -304,14 +340,30 @@ class WorkflowNodes:
 
     def finalize(self, state: ClaimState) -> dict[str, Any]:
         assessment = state.get("assessment", EvidenceAssessment())
-        accepted = state.get("stop_reason") == "evidence_sufficient" and not state.get("gaps")
+        gaps = list(state.get("gaps", []))
+        stop_reason = state.get("stop_reason") or "validation_error"
+        history = list(state.get("research_history", []))
+        if stop_reason == "evidence_sufficient":
+            gaps = evidence_gaps(
+                assessment,
+                state.get("assertions", []),
+                state.get("sources", []),
+                state.get("policy", {}),
+            )
+            if gaps:
+                stop_reason = "final_gate_rejected"
+                if history:
+                    history[-1] = history[-1].model_copy(
+                        update={"gaps": gaps, "decision": stop_reason}
+                    )
+        accepted = stop_reason == "evidence_sufficient" and not gaps
         evidence = retained_evidence(assessment, state.get("sources", []))
         verdict = assessment.proposed_verdict if accepted else "UNVERIFIED"
         confidence = assessment.confidence if accepted else "Low"
         if accepted:
             summary = assessment.summary
         else:
-            detail = " ".join(state.get("gaps", []))
+            detail = " ".join(gaps)
             summary = "The evidence did not meet the deterministic verification criteria."
             if detail:
                 summary += f" {detail}"
@@ -322,7 +374,7 @@ class WorkflowNodes:
             verdict=verdict,
             confidence=confidence,
             summary=summary,
-            stop_reason=state.get("stop_reason") or "validation_error",
+            stop_reason=stop_reason,
             reference_date=state.get("reference_date", ""),
             reference_timezone=state.get("reference_timezone", ""),
             execution_id=state.get("execution_id", ""),
@@ -331,10 +383,10 @@ class WorkflowNodes:
             sources=[source for source in state.get("sources", []) if source.url in cited],
             retrieval_ledger=state.get("sources", []),
             assertions=state.get("assertions", []),
-            gaps=state.get("gaps", []),
+            gaps=gaps,
             contradictions=assessment.contradictions,
             search_queries=state.get("search_queries", []),
-            research_history=state.get("research_history", []),
+            research_history=history,
             budget=state["budgets"],
             errors=state.get("errors", []),
         )

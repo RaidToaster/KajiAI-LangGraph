@@ -17,6 +17,7 @@ def config():
         max_execution_time_seconds=30,
         max_search_calls=4,
         search_calls_per_round=1,
+        retry_delay_seconds=0,
     )
     return value
 
@@ -42,4 +43,3 @@ def two_source_retriever():
             },
         ]
     )
-

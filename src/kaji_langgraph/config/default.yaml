@@ -17,6 +17,46 @@ policy:
   max_token_limit: 32000
   max_results_per_search: 5
   max_stagnant_rounds: 2
+  retry_on_failure: true
+  max_retries: 3
+  retry_delay_seconds: 2
+
+domain_guidance:
+  general:
+    research: >-
+      Prefer original documents and independent corroboration. Search for both
+      supporting evidence and credible counterevidence.
+    analysis: >-
+      Evaluate relevance, provenance, temporal fit, and source independence.
+    verification_standard: >-
+      Require direct evidence for decisive verdicts and preserve material uncertainty.
+  scientific:
+    research: >-
+      Prioritize peer-reviewed studies, academic journals, original datasets,
+      and official scientific institutions such as WHO, NIH, and CDC.
+    analysis: >-
+      Assess study design, sample limitations, replication, and whether the
+      retrieved evidence is genuinely peer reviewed.
+    verification_standard: >-
+      Apply a high evidentiary bar and require multiple credible independent sources.
+  political:
+    research: >-
+      Seek primary records and reporting across different editorial perspectives;
+      search specifically for omitted context and counterevidence.
+    analysis: >-
+      Check partisan framing, cherry-picked facts, source incentives, dates,
+      jurisdictions, and whether reports share the same underlying source.
+    verification_standard: >-
+      Evaluate evidence on its merits and do not treat outlet diversity as source independence.
+  health_medical:
+    research: >-
+      Prioritize official health organizations, peer-reviewed medical journals,
+      systematic reviews, clinical guidelines, and registered clinical trials.
+    analysis: >-
+      Distinguish systematic reviews, trials, observational studies, case reports,
+      expert opinion, and anecdotes; note population and dosage limitations.
+    verification_standard: >-
+      Apply a strict medical evidence standard and do not generalize beyond the studied population.
 
 domains:
   general: {}
@@ -32,4 +72,3 @@ domains:
     max_search_calls: 8
     max_scrapes: 1
     max_execution_time_seconds: 180
-

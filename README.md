@@ -35,6 +35,12 @@ snippet/full-page text, UTC timestamp, SHA-256 content hash, originating query,
 provider, and lineage identifier. Similar text across hosts is flagged as
 possible copied lineage and cannot satisfy the acceptance gate.
 
+Retrieval failures use policy-controlled bounded retries with linear backoff;
+the deadline is checked before every attempt and before sleeping. Retries do
+not consume additional logical search calls. Scientific, political, medical,
+and general runs inject separate research, analysis, and verification guidance
+from configuration into the model prompt.
+
 Acceptance requires all of the following:
 
 - proposed verdict is `TRUE`, `FALSE`, or `MISLEADING` with High confidence;
@@ -48,6 +54,9 @@ Acceptance requires all of the following:
 
 Quotation matching verifies provenance only. It does not prove entailment,
 credibility, or truth.
+Immediately before accepting a decisive verdict, finalization independently
+reruns the complete deterministic gate. A changed or stale intermediate state
+therefore fails closed with `final_gate_rejected`.
 
 ## Install and run
 
@@ -98,4 +107,3 @@ ledger, source lineage, queries, timing, budgets, research history, and errors.
 The system is a research assistant, not a truth oracle. Search snippets may be
 incomplete; source independence and semantic entailment still require human
 review even when deterministic structural checks pass.
-
