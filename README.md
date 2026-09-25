@@ -60,12 +60,13 @@ therefore fails closed with `final_gate_rejected`.
 
 ## Install and run
 
-Requirements: Python 3.10–3.13, [`uv`](https://docs.astral.sh/uv/), and Ollama.
+Requirements: Python 3.10–3.13, [`uv`](https://docs.astral.sh/uv/), Ollama, and a TinyFish API key.
 
 ```bash
 uv sync --extra dev
 ollama signin
 ollama pull gemma4:31b-cloud
+export TINYFISH_API_KEY="your-api-key"
 uv run kaji-langgraph "Claim to investigate" --domain auto --max-rounds 3 --format report
 ```
 
@@ -83,6 +84,13 @@ export KAJI_MODEL=gemma4:31b-cloud
 export KAJI_OLLAMA_BASE_URL=http://localhost:11434
 export KAJI_TIMEZONE=Asia/Jakarta
 ```
+
+Live retrieval uses [TinyFish Search](https://docs.tinyfish.ai/search-api/reference)
+for ranked URLs and [TinyFish Fetch](https://docs.tinyfish.ai/fetch-api/reference)
+for clean page text. Set `TINYFISH_API_KEY` in the environment; the key is never
+stored in the project. The graph counts search calls and full-page attempts
+against its configured budgets. Fetch failures are recorded in the retrieval
+audit and search snippets remain available.
 
 No Anthropic or OpenAI key is used. If Ollama is unavailable, the workflow does
 not switch providers: classification/decomposition may use deterministic

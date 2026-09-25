@@ -21,7 +21,7 @@ from kaji_langgraph.models import (
     SourceRecord,
 )
 from kaji_langgraph.report import format_report
-from kaji_langgraph.retrieval import DDGSRetriever, Retriever, annotate_duplicate_lineage, fetch_page, normalize_result
+from kaji_langgraph.retrieval import TinyFishRetriever, Retriever, annotate_duplicate_lineage, fetch_page, normalize_result
 from kaji_langgraph.state import ClaimState
 
 
@@ -242,7 +242,9 @@ class WorkflowNodes:
                 continue
             page_attempted = False
             for item in results:
-                record = normalize_result(item, query)
+                record = normalize_result(
+                    item, query, provider=getattr(self.retriever, "provider", "custom")
+                )
                 if record is None or (record.url, record.content_hash) in seen:
                     continue
                 if (
@@ -252,12 +254,19 @@ class WorkflowNodes:
                 ):
                     page_attempted = True
                     budget.scrapes += 1
-                    text, status, error = fetch_page(
-                        record.url,
-                        timeout=state["policy"].get("page_fetch_timeout_seconds", 5),
-                        max_bytes=state["policy"].get("page_max_bytes", 1_000_000),
-                        require_https=state["policy"].get("require_https", False),
-                    )
+                    fetch = getattr(self.retriever, "fetch", fetch_page)
+                    try:
+                        text, status, error = fetch(
+                            record.url,
+                            timeout=min(
+                                state["policy"].get("page_fetch_timeout_seconds", 30),
+                                max(0.001, budget.max_seconds - _elapsed({**state, "budgets": budget})),
+                            ),
+                            max_bytes=state["policy"].get("page_max_bytes", 1_000_000),
+                            require_https=state["policy"].get("require_https", False),
+                        )
+                    except Exception as exc:
+                        text, status, error = "", None, f"{type(exc).__name__}: {exc}"
                     if text:
                         import hashlib
 
@@ -414,7 +423,7 @@ def build_graph(
         base_url=model_cfg["base_url"],
         temperature=model_cfg.get("temperature", 0.0),
     )
-    nodes = WorkflowNodes(backend, retriever or DDGSRetriever(), config)
+    nodes = WorkflowNodes(backend, retriever or TinyFishRetriever(), config)
     builder = StateGraph(ClaimState)
     builder.add_node("validate", nodes.validate)
     builder.add_node("classify", nodes.classify)

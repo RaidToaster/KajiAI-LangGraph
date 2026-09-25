@@ -5,10 +5,13 @@ from __future__ import annotations
 from datetime import datetime, timezone
 import hashlib
 from html.parser import HTMLParser
+import json
+import os
 import re
 from typing import Any, Protocol
+import urllib.error
 import urllib.request
-from urllib.parse import urlsplit
+from urllib.parse import urlencode, urlsplit
 
 from kaji_langgraph.models import SourceRecord
 
@@ -17,12 +20,73 @@ class Retriever(Protocol):
     def search(self, query: str, *, max_results: int) -> list[dict[str, Any]]: ...
 
 
-class DDGSRetriever:
-    def search(self, query: str, *, max_results: int) -> list[dict[str, Any]]:
-        from ddgs import DDGS
+class TinyFishRetriever:
+    """Search and read public pages through TinyFish's REST APIs."""
 
-        with DDGS() as client:
-            return list(client.text(query, max_results=max_results))
+    provider = "tinyfish"
+
+    def __init__(self, *, api_key: str | None = None, search_timeout: float = 15.0) -> None:
+        self.api_key = api_key
+        self.search_timeout = search_timeout
+
+    def _request(
+        self, url: str, *, payload: dict[str, Any] | None = None, timeout: float
+    ) -> dict[str, Any]:
+        key = self.api_key or os.getenv("TINYFISH_API_KEY", "").strip()
+        if not key:
+            raise ValueError("TINYFISH_API_KEY is required for TinyFish retrieval")
+        body = json.dumps(payload).encode("utf-8") if payload is not None else None
+        headers = {"X-API-Key": key, "Accept": "application/json"}
+        if body is not None:
+            headers["Content-Type"] = "application/json"
+        request = urllib.request.Request(url, data=body, headers=headers)
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                result = json.load(response)
+        except urllib.error.HTTPError as exc:
+            raise RuntimeError(f"TinyFish API returned HTTP {exc.code}") from None
+        if not isinstance(result, dict):
+            raise ValueError("TinyFish API returned an invalid response")
+        return result
+
+    def search(self, query: str, *, max_results: int) -> list[dict[str, Any]]:
+        url = "https://api.search.tinyfish.ai?" + urlencode({"query": query})
+        response = self._request(url, timeout=self.search_timeout)
+        results = response.get("results")
+        if not isinstance(results, list):
+            raise ValueError("TinyFish Search response has no results list")
+        return [item for item in results[:max_results] if isinstance(item, dict)]
+
+    def fetch(
+        self, url: str, *, timeout: float, max_bytes: int, require_https: bool
+    ) -> tuple[str, int | None, str | None]:
+        parsed = urlsplit(url)
+        if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+            return "", None, "invalid HTTP(S) URL"
+        if require_https and parsed.scheme != "https":
+            return "", None, "HTTPS is required"
+        response = self._request(
+            "https://api.fetch.tinyfish.ai",
+            payload={
+                "urls": [url],
+                "format": "markdown",
+                "ttl": 0,
+                "per_url_timeout_ms": max(1, min(110000, int(timeout * 1000))),
+            },
+            timeout=timeout + 5,
+        )
+        results = response.get("results", [])
+        if isinstance(results, list) and results and isinstance(results[0], dict):
+            page = results[0]
+            content = page.get("text")
+            if isinstance(content, str) and content.strip():
+                limited = content.encode("utf-8")[:max_bytes].decode("utf-8", errors="ignore")
+                return limited, None, None
+        errors = response.get("errors", [])
+        if isinstance(errors, list) and errors and isinstance(errors[0], dict):
+            failure = errors[0]
+            return "", failure.get("status"), str(failure.get("error") or "fetch failed")
+        return "", None, "TinyFish Fetch returned no page content"
 
 
 class StaticRetriever:
@@ -78,7 +142,7 @@ def fetch_page(url: str, *, timeout: float, max_bytes: int, require_https: bool)
         return "", None, f"{type(exc).__name__}: {exc}"
 
 
-def normalize_result(item: dict[str, Any], query: str, provider: str = "ddgs") -> SourceRecord | None:
+def normalize_result(item: dict[str, Any], query: str, provider: str = "tinyfish") -> SourceRecord | None:
     url = str(item.get("href") or item.get("url") or "").strip()
     if not urlsplit(url).hostname:
         return None
@@ -115,4 +179,3 @@ def annotate_duplicate_lineage(records: list[SourceRecord], threshold: float = 0
                 left.possible_duplicate_of.append(right.url)
                 right.possible_duplicate_of.append(left.url)
     return copies
-
