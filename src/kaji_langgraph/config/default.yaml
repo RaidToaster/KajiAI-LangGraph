@@ -11,7 +11,7 @@ jev:
   citation_min_confidence: 0.8
   injection_cutoff: 0.9
   irrelevant_cutoff: 0.1
-  max_source_reviews_per_round: 12
+  max_source_reviews_per_round: 20
   citation_batch_size: 6
 
 policy:
@@ -21,10 +21,10 @@ policy:
   page_max_bytes: 1000000
   page_text_limit: 20000
   search_calls_per_round: 2
-  max_search_calls: 5
-  max_scrapes: 2
-  max_execution_time_seconds: 120
-  max_token_limit: 32000
+  max_search_calls: 20
+  max_scrapes: 20
+  max_execution_time_seconds: 1800
+  max_token_limit: 250000
   max_results_per_search: 5
   max_stagnant_rounds: 2
   retry_on_failure: true
@@ -72,13 +72,6 @@ domains:
   general: {}
   scientific:
     require_https: true
-    max_search_calls: 8
-    max_execution_time_seconds: 180
-  political:
-    max_search_calls: 6
-    max_scrapes: 3
+  political: {}
   health_medical:
     require_peer_reviewed: true
-    max_search_calls: 8
-    max_scrapes: 1
-    max_execution_time_seconds: 180

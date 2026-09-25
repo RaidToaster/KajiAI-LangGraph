@@ -6,11 +6,12 @@ from datetime import datetime
 import hashlib
 import os
 import time
-from typing import Any, Literal
+from typing import Any, Callable, Literal
 from uuid import uuid4
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from langgraph.graph import END, START, StateGraph
+from langgraph.config import get_stream_writer
 
 from kaji_langgraph.config import effective_policy, load_config
 from kaji_langgraph.gate import evidence_gaps, retained_evidence
@@ -91,11 +92,18 @@ class WorkflowNodes:
     def __init__(
         self, model: ModelBackend, retriever: Retriever, config: dict[str, Any],
         jev: JevClient | None = None,
+        stream_progress: bool = False,
     ) -> None:
         self.model = model
+        self.model_label = "Ollama" if isinstance(model, OllamaBackend) else type(model).__name__
         self.retriever = retriever
         self.config = config
         self.jev = jev
+        self.stream_progress = stream_progress
+
+    def progress(self, message: str) -> None:
+        if self.stream_progress:
+            get_stream_writer()({"message": message})
 
     def usable_sources(self, state: ClaimState) -> list[SourceRecord]:
         sources = list(state.get("sources", []))
@@ -186,6 +194,7 @@ class WorkflowNodes:
         else:
             if self.jev:
                 try:
+                    self.progress("Jev: classifying the claim")
                     candidate, tokens = self.jev.classify(
                         state["claim"], timeout=min(10.0, _remaining(state, budget))
                     )
@@ -203,6 +212,7 @@ class WorkflowNodes:
                     errors.append(f"Jev domain routing failed: {type(exc).__name__}: {exc}")
             if parsed is None and _remaining(state, budget) > 0 and budget.tokens_used < budget.max_tokens:
                 try:
+                    self.progress(f"{self.model_label}: classifying the claim")
                     parsed, tokens = self.model.classify(state["claim"])
                     budget = _add_tokens(budget, tokens)
                 except Exception as exc:
@@ -238,6 +248,7 @@ class WorkflowNodes:
             assertions, tokens = heuristic_decomposition(state["claim"]), 0
         else:
             try:
+                self.progress(f"{self.model_label}: decomposing the claim into assertions")
                 assertions, tokens = self.model.decompose(state["claim"])
             except Exception as exc:
                 assertions, tokens = heuristic_decomposition(state["claim"]), None
@@ -285,6 +296,7 @@ class WorkflowNodes:
                 deadline_reached = True
                 break
             budget.search_calls += 1
+            self.progress(f"Search {budget.search_calls}/{budget.max_search_calls}: {query}")
             max_retries = (
                 max(0, int(state["policy"].get("max_retries", 0)))
                 if state["policy"].get("retry_on_failure", True)
@@ -307,6 +319,7 @@ class WorkflowNodes:
                     break
                 except Exception as exc:
                     last_error = exc
+                    self.progress(f"Search attempt {attempt + 1} failed: {type(exc).__name__}")
                     if attempt >= max_retries:
                         break
                     delay = retry_delay * (attempt + 1)
@@ -325,8 +338,10 @@ class WorkflowNodes:
                         f"{type(last_error).__name__}: {last_error}"
                     )
                 continue
+            self.progress(f"Search returned {len(results)} result(s)")
             if self.jev and len(results) > 1 and _remaining(state, budget) > 1 and budget.tokens_used < budget.max_tokens:
                 try:
+                    self.progress(f"Jev: ranking {len(results)} search results")
                     scores, tokens = self.jev.rank_results(
                         state["claim"], query, results,
                         timeout=min(10.0, _remaining(state, budget)),
@@ -357,6 +372,7 @@ class WorkflowNodes:
                 ):
                     page_attempted = True
                     budget.scrapes += 1
+                    self.progress(f"Fetch {budget.scrapes}/{budget.max_scrapes}: {record.url}")
                     fetch = getattr(self.retriever, "fetch", fetch_page)
                     try:
                         text, status, error = fetch(
@@ -371,11 +387,13 @@ class WorkflowNodes:
                     except Exception as exc:
                         text, status, error = "", None, f"{type(exc).__name__}: {exc}"
                     if text:
+                        self.progress(f"Fetched {record.url}")
                         record.page_text = text[: state["policy"].get("page_text_limit", 20_000)]
                         record.retrieval_kind = "full_page"
                         record.status_code = status
                         record.content_hash = hashlib.sha256(text.encode()).hexdigest()
                     elif error:
+                        self.progress(f"Fetch failed: {record.url}")
                         errors.append(f"Page fetch failed for {record.url}: {error}")
                 new_records.append(record)
                 seen.add((record.url, record.content_hash))
@@ -385,6 +403,7 @@ class WorkflowNodes:
             pending = pending[: self.config["jev"].get("max_source_reviews_per_round", 12)]
             if pending:
                 try:
+                    self.progress(f"Jev: reviewing {len(pending)} source(s)")
                     reviews, tokens = self.jev.review_sources(
                         state["claim"], pending, timeout=min(12.0, _remaining(state, budget))
                     )
@@ -418,6 +437,7 @@ class WorkflowNodes:
             return {"assessment": assessment, "fatal_error": True}
         try:
             sources = self.usable_sources(state)
+            self.progress(f"{self.model_label}: assessing {len(sources)} source(s)")
             assessment, tokens = self.model.analyze(
                 state["claim"], state["domain"], state["assertions"], sources,
                 state.get("gaps", []), state["reference_date"],
@@ -467,6 +487,9 @@ class WorkflowNodes:
                     semantic_gaps.append("Jev could not check every citation within the resource budget.")
                     break
                 try:
+                    self.progress(
+                        f"Jev: checking citations {start + 1}-{start + len(batch)} of {len(candidates)}"
+                    )
                     reviews, tokens = self.jev.check_citations(
                         batch, timeout=min(12.0, _remaining(state, budget))
                     )
@@ -595,6 +618,7 @@ def build_graph(
     retriever: Retriever | None = None,
     jev: JevClient | None = None,
     config: dict[str, Any] | None = None,
+    stream_progress: bool = False,
 ):
     config = config or load_config()
     model_cfg = config["model"]
@@ -607,7 +631,10 @@ def build_graph(
     jev_backend = jev
     if jev_backend is None and jev_cfg.get("enabled", True) and os.getenv("TYPESAFE_API_KEY"):
         jev_backend = JevClient(model=jev_cfg.get("model", "jev-1.13.0"))
-    nodes = WorkflowNodes(backend, retriever or TinyFishRetriever(), config, jev_backend)
+    nodes = WorkflowNodes(
+        backend, retriever or TinyFishRetriever(), config, jev_backend,
+        stream_progress=stream_progress,
+    )
     builder = StateGraph(ClaimState)
     builder.add_node("validate", nodes.validate)
     builder.add_node("classify", nodes.classify)
@@ -633,11 +660,12 @@ def run_claim(
     claim: str,
     *,
     domain: str = "auto",
-    max_rounds: int = 3,
+    max_rounds: int = 10,
     model: ModelBackend | None = None,
     retriever: Retriever | None = None,
     jev: JevClient | None = None,
     config: dict[str, Any] | None = None,
+    progress: Callable[[str], None] | None = None,
 ) -> FinalResult:
     config = config or load_config()
     default_policy = config["policy"]
@@ -653,8 +681,43 @@ def run_claim(
             started_at_monotonic=time.monotonic(),
         ),
     )
-    state = build_graph(model=model, retriever=retriever, jev=jev, config=config).invoke(
-        initial,
-        config={"recursion_limit": max(25, max_rounds * 8 + 10)},
+    graph = build_graph(
+        model=model, retriever=retriever, jev=jev, config=config,
+        stream_progress=progress is not None,
     )
-    return state["result"]
+    graph_config = {"recursion_limit": max(25, max_rounds * 8 + 10)}
+    if progress is None:
+        state = graph.invoke(initial, config=graph_config)
+        return state["result"]
+
+    result: FinalResult | None = None
+    for part in graph.stream(
+        initial, config=graph_config, stream_mode=["updates", "custom"], version="v2"
+    ):
+        if part["type"] == "custom":
+            progress(part["data"]["message"])
+            continue
+        if part["type"] != "updates":
+            continue
+        for node_name, update in part["data"].items():
+            if node_name == "classify":
+                progress(f"Domain: {update['domain']}")
+            elif node_name == "retrieve":
+                progress(
+                    f"Research round {update.get('research_round', 0)}: "
+                    f"{update.get('last_new_sources', 0)} new source(s)"
+                )
+            elif node_name == "check_evidence":
+                progress(f"Evidence check: {len(update.get('gaps', []))} gap(s)")
+            elif node_name == "route_research":
+                progress(
+                    "Research decision: " + (update.get("stop_reason") or "another round")
+                )
+            elif node_name == "finalize":
+                result = update["result"]
+                progress(f"Finished: {result.verdict} ({result.stop_reason})")
+            else:
+                progress(f"Completed: {node_name}")
+    if result is None:
+        raise RuntimeError("Claim analysis finished without a final result")
+    return result

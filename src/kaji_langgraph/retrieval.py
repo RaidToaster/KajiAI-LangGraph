@@ -130,7 +130,7 @@ def fetch_page(url: str, *, timeout: float, max_bytes: int, require_https: bool)
     if require_https and parsed.scheme != "https":
         return "", None, "HTTPS is required"
     try:
-        request = urllib.request.Request(url, headers={"User-Agent": "KajiSF-DJ/0.1 evidence-retriever"})
+        request = urllib.request.Request(url, headers={"User-Agent": "KajiAI/0.1 evidence-retriever"})
         with urllib.request.urlopen(request, timeout=timeout) as response:
             status = getattr(response, "status", None)
             body = response.read(max_bytes)

@@ -72,11 +72,11 @@ class EvidenceAssessment(BaseModel):
 
 
 class BudgetState(BaseModel):
-    max_rounds: int = Field(default=3, ge=1, le=10)
-    max_search_calls: int = Field(default=5, ge=0)
-    max_scrapes: int = Field(default=2, ge=0)
-    max_tokens: int = Field(default=32000, ge=0)
-    max_seconds: float = Field(default=120.0, ge=0)
+    max_rounds: int = Field(default=10, ge=1, le=10)
+    max_search_calls: int = Field(default=20, ge=0)
+    max_scrapes: int = Field(default=20, ge=0)
+    max_tokens: int = Field(default=250000, ge=0)
+    max_seconds: float = Field(default=1800.0, ge=0)
     search_calls: int = 0
     scrapes: int = 0
     tokens_used: int = 0

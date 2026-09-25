@@ -1,8 +1,8 @@
 # KajiAI-LangGraph
 
-Standalone Python/LangGraph reimplementation of KajiSF-DJ's active,
-evidence-driven claim-analysis workflow. It does not import from or execute the
-CrewAI reference project.
+Standalone Python/LangGraph implementation of KajiAI's evidence-driven
+claim-analysis workflow. It does not import from or execute the CrewAI reference
+project.
 
 The workflow classifies and decomposes a claim, retrieves external evidence,
 audits supporting/conflicting/missing evidence, verifies quotation provenance,
@@ -69,7 +69,7 @@ ollama signin
 ollama pull gemma4:31b-cloud
 export TINYFISH_API_KEY="your-api-key"
 export TYPESAFE_API_KEY="your-typesafe-key"
-uv run kaji-langgraph "Claim to investigate" --domain auto --max-rounds 3 --format report
+uv run --env-file .env kaji-langgraph "Claim to investigate" --domain auto --format report
 ```
 
 Ollama must be running. The defaults match the reference project:
@@ -96,6 +96,18 @@ audit and search snippets remain available.
 
 For local `.env` files, use `uv run --env-file .env kaji-langgraph ...`.
 The `.env` file is ignored by Git. `uv run` does not load it by default.
+
+The CLI streams each graph step, search, page fetch, and Jev/Ollama check to
+stderr as it happens. The completed report or JSON goes to stdout, so JSON
+remains pipeable. Pass `--no-progress` to hide progress. These are operation
+traces; a heartbeat appears every 15 seconds during slow calls. Structured
+model responses still arrive when each model call finishes.
+
+The current generous limits are 10 research rounds, 20 searches, 20 page
+fetches, 30 minutes, and 250,000 aggregate reported tokens. They are ceilings:
+research can finish earlier when the evidence is sufficient or stops improving.
+The limits are configured in `src/kaji_langgraph/config/default.yaml`; larger
+limits can increase TinyFish, TypeSafe, and Ollama usage and runtime.
 
 If you run this checkout from both Windows and WSL, keep separate virtual
 environments. Windows can use the default `.venv`. In WSL, run

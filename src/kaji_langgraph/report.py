@@ -13,7 +13,7 @@ DISCLAIMER = (
 def format_report(result: FinalResult) -> str:
     lines = [
         "=" * 64,
-        "KajiSF-DJ — Evidence-driven Claim Analysis",
+        "KajiAI — Evidence-driven Claim Analysis",
         "=" * 64,
         f"Claim: {result.claim}",
         f"Domain: {result.domain}",
