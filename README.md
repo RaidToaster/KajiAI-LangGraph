@@ -7,7 +7,7 @@ CrewAI reference project.
 The workflow classifies and decomposes a claim, retrieves external evidence,
 audits supporting/conflicting/missing evidence, verifies quotation provenance,
 and repeats targeted research while bounded by round, search, token, and time
-budgets. A model proposes a verdict; deterministic code alone accepts it.
+budgets. A model proposes a verdict; verification checks decide whether to accept it.
 Anything that fails the gate returns `UNVERIFIED`.
 
 ## Architecture
@@ -55,18 +55,20 @@ Acceptance requires all of the following:
 Quotation matching verifies provenance only. It does not prove entailment,
 credibility, or truth.
 Immediately before accepting a decisive verdict, finalization independently
-reruns the complete deterministic gate. A changed or stale intermediate state
-therefore fails closed with `final_gate_rejected`.
+reruns the structural gate and checks Jev's citation review when enabled. A
+changed or stale intermediate state therefore fails closed with
+`final_gate_rejected`.
 
 ## Install and run
 
-Requirements: Python 3.10–3.13, [`uv`](https://docs.astral.sh/uv/), Ollama, and a TinyFish API key.
+Requirements: Python 3.10–3.13, [`uv`](https://docs.astral.sh/uv/), Ollama, and a TinyFish API key. A TypeSafe key enables Jev review.
 
 ```bash
 uv sync --extra dev
 ollama signin
 ollama pull gemma4:31b-cloud
 export TINYFISH_API_KEY="your-api-key"
+export TYPESAFE_API_KEY="your-typesafe-key"
 uv run kaji-langgraph "Claim to investigate" --domain auto --max-rounds 3 --format report
 ```
 
@@ -91,6 +93,30 @@ for clean page text. Set `TINYFISH_API_KEY` in the environment; the key is never
 stored in the project. The graph counts search calls and full-page attempts
 against its configured budgets. Fetch failures are recorded in the retrieval
 audit and search snippets remain available.
+
+For local `.env` files, use `uv run --env-file .env kaji-langgraph ...`.
+The `.env` file is ignored by Git. `uv run` does not load it by default.
+
+If you run this checkout from both Windows and WSL, keep separate virtual
+environments. Windows can use the default `.venv`. In WSL, run
+`UV_PROJECT_ENVIRONMENT=.venv-wsl uv run --env-file .env kaji-langgraph ...`.
+Sharing one `.venv` can leave Unix symlinks that Windows `uv` cannot remove.
+
+When `TYPESAFE_API_KEY` is available, the official TypeSafe Python SDK runs
+four Jev judgments in the graph:
+
+- select the claim domain; uncertain selections fall back to Ollama;
+- rank search results so the limited full-page fetches target more promising URLs;
+- review retrieved sources for relevance, counterevidence, and instructions aimed
+  at the assistant; clearly irrelevant or suspicious sources cannot support a verdict;
+- compare cited findings with the quote and surrounding source text; unsupported,
+  contradictory, or uncertain citations create research gaps. A citation check
+  failure returns an auditable `UNVERIFIED` result.
+
+The model and thresholds are in `config/default.yaml`. Jev's judgments and source
+scores appear in JSON output under `jev_audit` and `retrieval_ledger`. These are
+probabilistic judgments, so evaluate the thresholds against representative claims
+before treating accepted verdicts as reliable. `--mock` stays fully offline.
 
 No Anthropic or OpenAI key is used. If Ollama is unavailable, the workflow does
 not switch providers: classification/decomposition may use deterministic

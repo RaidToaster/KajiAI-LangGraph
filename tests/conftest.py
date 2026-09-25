@@ -12,6 +12,7 @@ from kaji_langgraph.retrieval import StaticRetriever
 @pytest.fixture
 def config():
     value = deepcopy(load_config())
+    value["jev"]["enabled"] = False
     value["policy"].update(
         full_page_retrieval=False,
         max_execution_time_seconds=30,

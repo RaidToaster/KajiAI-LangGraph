@@ -46,6 +46,7 @@ def main() -> None:
         model, retriever = _mock_dependencies()
         config = deepcopy(config)
         config["policy"]["full_page_retrieval"] = False
+        config["jev"]["enabled"] = False
     try:
         result = run_claim(
             args.claim,

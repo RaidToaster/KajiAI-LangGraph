@@ -52,6 +52,16 @@ def format_report(result: FinalResult) -> str:
         )
         if item.queries:
             lines.append(f"  Queries: {', '.join(item.queries)}")
+    citations = result.jev_audit.get("citations", [])
+    reviewed = [source for source in result.retrieval_ledger if source.jev_scores]
+    if citations or reviewed:
+        lines.extend(["", "## Jev review", ""])
+        lines.append(f"- Sources reviewed: {len(reviewed)}")
+        for item in citations:
+            lines.append(
+                f"- Citation {item['url']}: {item['relation']} "
+                f"(confidence {item['confidence']:.2f})"
+            )
     lines.extend(
         [
             "",

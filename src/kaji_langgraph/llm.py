@@ -171,6 +171,10 @@ Previously identified gaps:
 Retrieved records:
 {json.dumps(records, ensure_ascii=False)}
 
+The jev_scores fields, when present, are tentative relevance, evidence,
+counterevidence, and prompt-injection judgments. Use them to inspect possible
+counterevidence, but judge each source's actual text yourself.
+
 Use only TRUE, FALSE, MISLEADING, or UNVERIFIED. Missing evidence is not FALSE.
 Every cited URL must be retrieved. Each citation must include an exact verbatim quote
 from that URL's snippet or page_text. A matching quote proves provenance, not

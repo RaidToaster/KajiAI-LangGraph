@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from datetime import datetime
+import hashlib
+import os
 import time
 from typing import Any, Literal
 from uuid import uuid4
@@ -12,6 +14,7 @@ from langgraph.graph import END, START, StateGraph
 
 from kaji_langgraph.config import effective_policy, load_config
 from kaji_langgraph.gate import evidence_gaps, retained_evidence
+from kaji_langgraph.jev import JevClient
 from kaji_langgraph.llm import ModelBackend, OllamaBackend, heuristic_decomposition, keyword_classification
 from kaji_langgraph.models import (
     BudgetState,
@@ -66,11 +69,73 @@ def _record_tokens(state: ClaimState, tokens: int | None) -> BudgetState:
     return budget
 
 
+def _add_tokens(budget: BudgetState, tokens: int | None) -> BudgetState:
+    updated = budget.model_copy(deep=True)
+    if tokens is None:
+        updated.token_usage_complete = False
+    else:
+        updated.tokens_used += max(0, tokens)
+    return updated
+
+
+def _remaining(state: ClaimState, budget: BudgetState) -> float:
+    return max(0.0, budget.max_seconds - _elapsed({**state, "budgets": budget}))
+
+
+def _citation_key(finding: str, url: str, quote: str, content_hash: str) -> str:
+    value = f"{finding}\0{url}\0{quote}\0{content_hash}"
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
 class WorkflowNodes:
-    def __init__(self, model: ModelBackend, retriever: Retriever, config: dict[str, Any]) -> None:
+    def __init__(
+        self, model: ModelBackend, retriever: Retriever, config: dict[str, Any],
+        jev: JevClient | None = None,
+    ) -> None:
         self.model = model
         self.retriever = retriever
         self.config = config
+        self.jev = jev
+
+    def usable_sources(self, state: ClaimState) -> list[SourceRecord]:
+        sources = list(state.get("sources", []))
+        if not self.jev:
+            return sources
+        cfg = self.config["jev"]
+        return [
+            source for source in sources
+            if source.jev_scores.get("injection", 0) < cfg.get("injection_cutoff", 0.9)
+            and not all(
+                source.jev_scores.get(field, 1) < cfg.get("irrelevant_cutoff", 0.1)
+                for field in ("relevant", "evidence", "counterevidence")
+            )
+        ]
+
+    def citation_review_gaps(self, state: ClaimState) -> list[str]:
+        if not self.jev:
+            return []
+        reviews = {
+            item.get("key"): item
+            for item in state.get("jev_audit", {}).get("citations", [])
+            if item.get("round") == state.get("research_round", 0)
+        }
+        sources = {source.url: source for source in self.usable_sources(state)}
+        gaps = []
+        for evidence in state.get("assessment", EvidenceAssessment()).evidence:
+            for url in evidence.source_urls:
+                source = sources.get(url)
+                quote = evidence.quotes.get(url, "")
+                if not source or not quote or quote not in source.retrieved_text:
+                    continue  # The structural gate handles these citations.
+                key = _citation_key(evidence.finding, url, quote, source.content_hash)
+                review = reviews.get(key)
+                if review is None:
+                    gaps.append(f"Citation support was not checked for {url}.")
+                elif review["confidence"] < self.config["jev"].get("citation_min_confidence", 0.8):
+                    gaps.append(f"Citation support is uncertain for {url}.")
+                elif review["relation"] != "supports":
+                    gaps.append(f"Citation {review['relation']} the finding: {url}.")
+        return list(dict.fromkeys(gaps))
 
     def validate(self, state: ClaimState) -> dict[str, Any]:
         claim = state.get("claim", "").strip()
@@ -90,6 +155,8 @@ class WorkflowNodes:
             "gaps": [],
             "contradictions": [],
             "errors": [],
+            "jev_audit": {"search_ranking": [], "citations": []},
+            "semantic_gaps": [],
             "fatal_error": False,
             "budget_blocked": False,
             "search_queries": [],
@@ -104,40 +171,56 @@ class WorkflowNodes:
 
     def classify(self, state: ClaimState) -> dict[str, Any]:
         requested = state.get("requested_domain", "auto")
+        budget = state["budgets"]
+        errors = list(state.get("errors", []))
+        jev_audit = dict(state.get("jev_audit", {}))
+        parsed = None
         if requested != "auto":
             domain = requested
             classification = {"domain": domain, "reasoning": "Explicit CLI override."}
-            tokens = 0
-        elif _elapsed(state) >= state["budgets"].max_seconds:
+        elif _elapsed(state) >= budget.max_seconds:
             parsed = keyword_classification(state["claim"])
             domain = parsed.domain
             classification = parsed.model_dump()
             classification["reasoning"] += " Classification model skipped because the time budget was exhausted."
-            tokens = 0
         else:
-            try:
-                parsed, tokens = self.model.classify(state["claim"])
-                domain = parsed.domain
-                classification = parsed.model_dump()
-            except Exception as exc:
+            if self.jev:
+                try:
+                    candidate, tokens = self.jev.classify(
+                        state["claim"], timeout=min(10.0, _remaining(state, budget))
+                    )
+                    budget = _add_tokens(budget, tokens)
+                    accepted = candidate.confidence >= self.config["jev"].get("domain_min_confidence", 0.6)
+                    jev_audit["domain"] = {
+                        "domain": candidate.domain,
+                        "confidence": candidate.confidence,
+                        "used": accepted,
+                        "model": getattr(self.jev, "model", ""),
+                    }
+                    if accepted:
+                        parsed = candidate
+                except Exception as exc:
+                    errors.append(f"Jev domain routing failed: {type(exc).__name__}: {exc}")
+            if parsed is None and _remaining(state, budget) > 0 and budget.tokens_used < budget.max_tokens:
+                try:
+                    parsed, tokens = self.model.classify(state["claim"])
+                    budget = _add_tokens(budget, tokens)
+                except Exception as exc:
+                    errors.append(f"Classification model unavailable: {type(exc).__name__}: {exc}")
+                    budget = _add_tokens(budget, None)
+            if parsed is None:
                 parsed = keyword_classification(state["claim"])
-                domain = parsed.domain
-                classification = parsed.model_dump()
-                classification["reasoning"] += " Ollama classification was unavailable."
-                tokens = None
-                errors = [
-                    *state.get("errors", []),
-                    f"Classification model unavailable: {type(exc).__name__}: {exc}",
-                ]
+                parsed.reasoning += " Model classification was unavailable."
+            domain = parsed.domain
+            classification = parsed.model_dump()
         policy = effective_policy(self.config, domain)
-        old = state["budgets"]
-        budget = _record_tokens(state, tokens).model_copy(
+        budget = budget.model_copy(
             update={
                 "max_search_calls": policy["max_search_calls"],
                 "max_scrapes": policy["max_scrapes"],
                 "max_tokens": policy["max_token_limit"],
                 "max_seconds": policy["max_execution_time_seconds"],
-                "max_rounds": old.max_rounds,
+                "max_rounds": state["budgets"].max_rounds,
             }
         )
         update: dict[str, Any] = {
@@ -145,9 +228,9 @@ class WorkflowNodes:
             "classification": classification,
             "policy": policy,
             "budgets": budget,
+            "errors": errors,
+            "jev_audit": jev_audit,
         }
-        if "errors" in locals():
-            update["errors"] = errors
         return update
 
     def decompose(self, state: ClaimState) -> dict[str, Any]:
@@ -194,6 +277,8 @@ class WorkflowNodes:
         seen = {(record.url, record.content_hash) for record in existing}
         new_records: list[SourceRecord] = []
         errors = list(state.get("errors", []))
+        jev_audit = dict(state.get("jev_audit", {}))
+        search_ranking = list(jev_audit.get("search_ranking", []))
         deadline_reached = False
         for query in queries:
             if _elapsed({**state, "budgets": budget}) >= budget.max_seconds:
@@ -240,6 +325,24 @@ class WorkflowNodes:
                         f"{type(last_error).__name__}: {last_error}"
                     )
                 continue
+            if self.jev and len(results) > 1 and _remaining(state, budget) > 1 and budget.tokens_used < budget.max_tokens:
+                try:
+                    scores, tokens = self.jev.rank_results(
+                        state["claim"], query, results,
+                        timeout=min(10.0, _remaining(state, budget)),
+                    )
+                    if len(scores) != len(results):
+                        raise ValueError("Jev returned an incomplete search ranking")
+                    budget = _add_tokens(budget, tokens)
+                    search_ranking.extend(
+                        {"query": query, "url": str(item.get("url") or item.get("href") or ""), "score": score}
+                        for item, score in zip(results, scores)
+                    )
+                    results = [item for _, item in sorted(
+                        zip(scores, results), key=lambda pair: pair[0], reverse=True
+                    )]
+                except Exception as exc:
+                    errors.append(f"Jev search ranking failed: {type(exc).__name__}: {exc}")
             page_attempted = False
             for item in results:
                 record = normalize_result(
@@ -268,8 +371,6 @@ class WorkflowNodes:
                     except Exception as exc:
                         text, status, error = "", None, f"{type(exc).__name__}: {exc}"
                     if text:
-                        import hashlib
-
                         record.page_text = text[: state["policy"].get("page_text_limit", 20_000)]
                         record.retrieval_kind = "full_page"
                         record.status_code = status
@@ -279,9 +380,26 @@ class WorkflowNodes:
                 new_records.append(record)
                 seen.add((record.url, record.content_hash))
         all_sources = annotate_duplicate_lineage([*existing, *new_records])
+        if self.jev and _remaining(state, budget) > 1 and budget.tokens_used < budget.max_tokens:
+            pending = [record for record in all_sources if not record.jev_scores]
+            pending = pending[: self.config["jev"].get("max_source_reviews_per_round", 12)]
+            if pending:
+                try:
+                    reviews, tokens = self.jev.review_sources(
+                        state["claim"], pending, timeout=min(12.0, _remaining(state, budget))
+                    )
+                    if len(reviews) != len(pending):
+                        raise ValueError("Jev returned incomplete source reviews")
+                    budget = _add_tokens(budget, tokens)
+                    for record, review in zip(pending, reviews):
+                        record.jev_scores = review
+                except Exception as exc:
+                    errors.append(f"Jev source review failed: {type(exc).__name__}: {exc}")
+        jev_audit["search_ranking"] = search_ranking
         stagnant = state.get("stagnant_rounds", 0) + 1 if not new_records else 0
         return {
             "sources": all_sources,
+            "jev_audit": jev_audit,
             "search_queries": [*state.get("search_queries", []), *queries],
             "budgets": budget,
             "last_new_sources": len(new_records),
@@ -299,8 +417,9 @@ class WorkflowNodes:
             assessment = EvidenceAssessment(gaps=["Research execution failed before evidence could be analyzed."])
             return {"assessment": assessment, "fatal_error": True}
         try:
+            sources = self.usable_sources(state)
             assessment, tokens = self.model.analyze(
-                state["claim"], state["domain"], state["assertions"], state.get("sources", []),
+                state["claim"], state["domain"], state["assertions"], sources,
                 state.get("gaps", []), state["reference_date"],
                 self.config.get("domain_guidance", {}).get(state["domain"], {}),
             )
@@ -316,7 +435,60 @@ class WorkflowNodes:
 
     def check_evidence(self, state: ClaimState) -> dict[str, Any]:
         assessment = state["assessment"]
-        gaps = evidence_gaps(assessment, state["assertions"], state.get("sources", []), state["policy"])
+        gaps = evidence_gaps(assessment, state["assertions"], self.usable_sources(state), state["policy"])
+        budget = state["budgets"].model_copy(deep=True)
+        errors = list(state.get("errors", []))
+        semantic_gaps: list[str] = []
+        fatal_error = state.get("fatal_error", False)
+        jev_audit = dict(state.get("jev_audit", {}))
+        citation_audit = list(jev_audit.get("citations", []))
+        if self.jev and assessment.evidence:
+            sources = {source.url: source for source in self.usable_sources(state)}
+            candidates = []
+            for item in assessment.evidence:
+                for url in item.source_urls:
+                    source = sources.get(url)
+                    quote = item.quotes.get(url, "")
+                    if not source or not quote or quote not in source.retrieved_text:
+                        continue  # The deterministic gate reports missing or altered quotes.
+                    offset = source.retrieved_text.index(quote)
+                    context = source.retrieved_text[max(0, offset - 1200): offset + len(quote) + 1200]
+                    candidates.append({
+                        "finding": item.finding,
+                        "url": url,
+                        "quote": quote,
+                        "context": context,
+                        "key": _citation_key(item.finding, url, quote, source.content_hash),
+                    })
+            batch_size = max(1, int(self.config["jev"].get("citation_batch_size", 6)))
+            for start in range(0, len(candidates), batch_size):
+                batch = candidates[start:start + batch_size]
+                if _remaining(state, budget) <= 1 or budget.tokens_used >= budget.max_tokens:
+                    semantic_gaps.append("Jev could not check every citation within the resource budget.")
+                    break
+                try:
+                    reviews, tokens = self.jev.check_citations(
+                        batch, timeout=min(12.0, _remaining(state, budget))
+                    )
+                    if len(reviews) != len(batch):
+                        raise ValueError("Jev returned incomplete citation checks")
+                    budget = _add_tokens(budget, tokens)
+                except Exception as exc:
+                    errors.append(f"Jev citation check failed: {type(exc).__name__}: {exc}")
+                    semantic_gaps.append("Citation support could not be checked by Jev.")
+                    fatal_error = True
+                    break
+                for candidate, review in zip(batch, reviews):
+                    citation_audit.append({
+                        "round": state.get("research_round", 0),
+                        "finding": candidate["finding"],
+                        "url": candidate["url"],
+                        "key": candidate["key"],
+                        **review,
+                    })
+        jev_audit["citations"] = citation_audit
+        semantic_gaps.extend(self.citation_review_gaps({**state, "jev_audit": jev_audit}))
+        gaps = list(dict.fromkeys([*gaps, *semantic_gaps]))
         history = list(state.get("research_history", []))
         if state.get("research_round", 0) > 0:
             history.append(
@@ -329,7 +501,12 @@ class WorkflowNodes:
                     gaps=gaps,
                 )
             )
-        return {"gaps": gaps, "contradictions": assessment.contradictions, "research_history": history}
+        return {
+            "gaps": gaps, "semantic_gaps": semantic_gaps,
+            "contradictions": assessment.contradictions, "research_history": history,
+            "budgets": budget, "errors": errors, "fatal_error": fatal_error,
+            "jev_audit": jev_audit,
+        }
 
     def route_research(self, state: ClaimState) -> dict[str, Any]:
         if not state.get("gaps"):
@@ -353,12 +530,13 @@ class WorkflowNodes:
         stop_reason = state.get("stop_reason") or "validation_error"
         history = list(state.get("research_history", []))
         if stop_reason == "evidence_sufficient":
-            gaps = evidence_gaps(
+            gaps = [*evidence_gaps(
                 assessment,
                 state.get("assertions", []),
-                state.get("sources", []),
+                self.usable_sources(state),
                 state.get("policy", {}),
-            )
+            ), *state.get("semantic_gaps", []), *self.citation_review_gaps(state)]
+            gaps = list(dict.fromkeys(gaps))
             if gaps:
                 stop_reason = "final_gate_rejected"
                 if history:
@@ -366,14 +544,14 @@ class WorkflowNodes:
                         update={"gaps": gaps, "decision": stop_reason}
                     )
         accepted = stop_reason == "evidence_sufficient" and not gaps
-        evidence = retained_evidence(assessment, state.get("sources", []))
+        evidence = retained_evidence(assessment, self.usable_sources(state))
         verdict = assessment.proposed_verdict if accepted else "UNVERIFIED"
         confidence = assessment.confidence if accepted else "Low"
         if accepted:
             summary = assessment.summary
         else:
             detail = " ".join(gaps)
-            summary = "The evidence did not meet the deterministic verification criteria."
+            summary = "The evidence did not meet the verification criteria."
             if detail:
                 summary += f" {detail}"
         cited = {url for item in evidence for url in item.source_urls}
@@ -398,6 +576,7 @@ class WorkflowNodes:
             research_history=history,
             budget=state["budgets"],
             errors=state.get("errors", []),
+            jev_audit=state.get("jev_audit", {}),
         )
         return {"verdict": verdict, "result": result, "report": format_report(result)}
 
@@ -414,6 +593,7 @@ def build_graph(
     *,
     model: ModelBackend | None = None,
     retriever: Retriever | None = None,
+    jev: JevClient | None = None,
     config: dict[str, Any] | None = None,
 ):
     config = config or load_config()
@@ -423,7 +603,11 @@ def build_graph(
         base_url=model_cfg["base_url"],
         temperature=model_cfg.get("temperature", 0.0),
     )
-    nodes = WorkflowNodes(backend, retriever or TinyFishRetriever(), config)
+    jev_cfg = config.get("jev", {})
+    jev_backend = jev
+    if jev_backend is None and jev_cfg.get("enabled", True) and os.getenv("TYPESAFE_API_KEY"):
+        jev_backend = JevClient(model=jev_cfg.get("model", "jev-1.13.0"))
+    nodes = WorkflowNodes(backend, retriever or TinyFishRetriever(), config, jev_backend)
     builder = StateGraph(ClaimState)
     builder.add_node("validate", nodes.validate)
     builder.add_node("classify", nodes.classify)
@@ -452,6 +636,7 @@ def run_claim(
     max_rounds: int = 3,
     model: ModelBackend | None = None,
     retriever: Retriever | None = None,
+    jev: JevClient | None = None,
     config: dict[str, Any] | None = None,
 ) -> FinalResult:
     config = config or load_config()
@@ -468,7 +653,7 @@ def run_claim(
             started_at_monotonic=time.monotonic(),
         ),
     )
-    state = build_graph(model=model, retriever=retriever, config=config).invoke(
+    state = build_graph(model=model, retriever=retriever, jev=jev, config=config).invoke(
         initial,
         config={"recursion_limit": max(25, max_rounds * 8 + 10)},
     )

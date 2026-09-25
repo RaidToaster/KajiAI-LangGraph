@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -36,6 +36,7 @@ class SourceRecord(BaseModel):
     status_code: int | None = None
     lineage_id: str = ""
     possible_duplicate_of: list[str] = Field(default_factory=list)
+    jev_scores: dict[str, float] = Field(default_factory=dict)
 
     @property
     def retrieved_text(self) -> str:
@@ -114,3 +115,4 @@ class FinalResult(BaseModel):
     research_history: list[ResearchRound] = Field(default_factory=list)
     budget: BudgetState
     errors: list[str] = Field(default_factory=list)
+    jev_audit: dict[str, Any] = Field(default_factory=dict)

@@ -42,3 +42,5 @@ class ClaimState(TypedDict, total=False):
     reference_timezone: str
     execution_id: str
     policy: dict[str, Any]
+    jev_audit: dict[str, Any]
+    semantic_gaps: list[str]
