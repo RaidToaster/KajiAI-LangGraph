@@ -4,6 +4,7 @@ import json
 import time
 
 import httpx2
+import pytest
 from typesafe_sdk import TypeSafeClient
 
 from kaji_langgraph.graph import WorkflowNodes, run_claim
@@ -44,6 +45,22 @@ class FakeJev:
             {"relation": self.relation, "confidence": self.confidence}
             for _ in citations
         ], 18
+
+
+class WhitespaceQuoteBackend(DeterministicBackend):
+    def analyze(self, *args, **kwargs):
+        assessment, tokens = super().analyze(*args, **kwargs)
+        for item in assessment.evidence:
+            item.quotes = {url: "  " + quote + "  " for url, quote in item.quotes.items()}
+        return assessment, tokens
+
+
+@pytest.mark.parametrize("jev", [None, FakeJev()])
+def test_unmatched_quote_whitespace_cannot_bypass_citation_checks(two_source_retriever, config, jev):
+    result = run_claim("Fixture claim", model=WhitespaceQuoteBackend(),
+                       retriever=two_source_retriever, jev=jev, config=config, max_rounds=1)
+    assert result.verdict == "UNVERIFIED"
+    assert "Each citation needs an exact quote from its retrieved text." in result.gaps
 
 
 def test_jev_checks_citations_without_replacing_existing_gate(backend, two_source_retriever, config):

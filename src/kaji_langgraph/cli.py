@@ -96,9 +96,9 @@ def main() -> None:
     if args.format == "json":
         print(result.model_dump_json(indent=2))
     elif args.format == "brief":
-        print(f"Verdict: {result.verdict}")
-        print(f"Confidence: {result.confidence}")
-        print(result.summary)
+        print(f"Prediction: {result.predicted_verdict} ({result.prediction_confidence})")
+        print(f"Verification: {result.verification_status}; accepted verdict: {result.verdict}")
+        print(result.prediction_summary or result.summary)
     else:
         print(format_report(result))
 

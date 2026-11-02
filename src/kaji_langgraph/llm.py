@@ -10,6 +10,7 @@ from pydantic import BaseModel
 
 from kaji_langgraph.models import (
     AssertionAssessment,
+    BenchmarkAssessment,
     Classification,
     EvidenceAssessment,
     EvidenceItem,
@@ -39,11 +40,14 @@ class ModelBackend(Protocol):
 class OllamaBackend:
     """Current LangChain Ollama integration with structured model output."""
 
-    def __init__(self, *, model: str, base_url: str, temperature: float = 0.0) -> None:
+    def __init__(self, *, model: str, base_url: str, temperature: float = 0.0, verdict_mode: str = "open") -> None:
         from langchain_ollama import ChatOllama
 
         self.model_name = model
         self.base_url = base_url
+        if verdict_mode not in {"open", "averitec"}:
+            raise ValueError("verdict_mode must be open or averitec")
+        self.verdict_mode = verdict_mode
         self._model = ChatOllama(
             model=model,
             base_url=base_url,
@@ -175,14 +179,34 @@ The jev_scores fields, when present, are tentative relevance, evidence,
 counterevidence, and prompt-injection judgments. Use them to inspect possible
 counterevidence, but judge each source's actual text yourself.
 
-Use only TRUE, FALSE, MISLEADING, or UNVERIFIED. Missing evidence is not FALSE.
+Use TRUE for supported claims, FALSE for refuted claims, CONFLICTING for genuine
+conflicting evidence or cherry-picking, and NOT_ENOUGH_EVIDENCE when the available
+evidence cannot resolve the claim. MISLEADING is reserved for misleading framing
+outside those benchmark definitions. UNVERIFIED means no assessment was possible,
+not a factual class. Missing evidence is not FALSE. Give your best evidence-based
+classification even when confidence is Medium or Low; the verification gate
+separately determines acceptance. Never increase confidence to satisfy the gate.
 Every cited URL must be retrieved. Each citation must include an exact verbatim quote
-from that URL's snippet or page_text. A matching quote proves provenance, not
+from page_text when available, otherwise snippet. A matching quote proves provenance, not
 entailment. Search coverage must include counterevidence. Do not claim sources are
 independent when they repeat the same underlying reporting. High confidence requires
 direct credible evidence covering the whole claim. Explicitly list gaps and
-contradictions and propose up to three targeted follow-up queries."""
-        return self._structured(EvidenceAssessment, prompt)
+contradictions and propose up to three targeted follow-up queries. The contradictions
+field is for unresolved issues undermining your proposed verdict. For CONFLICTING,
+explain the established disagreement in the summary and cite both sides instead.
+Write each finding narrowly enough that every attached citation supports that
+finding as written; use separate findings for different facts. Set resolved=true
+when an assertion has been adjudicated (including refuted), not only when true.
+Do not add hypothetical gaps unrelated to deciding the stated claim."""
+        schema = EvidenceAssessment
+        if getattr(self, "verdict_mode", "open") == "averitec":
+            schema = BenchmarkAssessment
+            prompt += """\nFor this evaluation, the permitted factual labels are exactly
+TRUE, FALSE, CONFLICTING, and NOT_ENOUGH_EVIDENCE. Do not use the legacy MISLEADING
+or operational UNVERIFIED labels. Cherry-picked supporting facts with material
+refuting context belong to CONFLICTING; insufficient evidence to adjudicate belongs
+to NOT_ENOUGH_EVIDENCE. Follow the restricted JSON schema below."""
+        return self._structured(schema, prompt)
 
 
 DOMAIN_KEYWORDS = {

@@ -18,8 +18,10 @@ def format_report(result: FinalResult) -> str:
         f"Claim: {result.claim}",
         f"Domain: {result.domain}",
         f"Reference date: {result.reference_date} ({result.reference_timezone})",
-        f"Verdict: {result.verdict}",
-        f"Confidence: {result.confidence}",
+        f"Prediction: {result.predicted_verdict}",
+        f"Prediction confidence: {result.prediction_confidence}",
+        f"Verification status: {result.verification_status}",
+        f"Accepted verdict: {result.verdict}",
         f"Stop reason: {result.stop_reason}",
         "",
         "## Summary",
@@ -27,8 +29,10 @@ def format_report(result: FinalResult) -> str:
         result.summary or "No supported analysis was produced.",
         "",
     ]
+    if result.prediction_summary and result.verification_status != "verified":
+        lines.extend(["## Model assessment (not accepted by the verification gate)", "", result.prediction_summary, ""])
     if result.evidence:
-        lines.extend(["## Accepted evidence", ""])
+        lines.extend(["## Cited evidence (see verification status)", ""])
         for index, item in enumerate(result.evidence, 1):
             lines.append(f"{index}. [{item.stance}] {item.finding}")
             for url in item.source_urls:

@@ -25,7 +25,7 @@ from kaji_langgraph.models import (
     SourceRecord,
 )
 from kaji_langgraph.report import format_report
-from kaji_langgraph.retrieval import TinyFishRetriever, Retriever, annotate_duplicate_lineage, fetch_page, normalize_result
+from kaji_langgraph.retrieval import TinyFishRetriever, Retriever, annotate_duplicate_lineage, best_sources, fetch_page, normalize_result
 from kaji_langgraph.state import ClaimState
 
 
@@ -106,7 +106,7 @@ class WorkflowNodes:
             get_stream_writer()({"message": message})
 
     def usable_sources(self, state: ClaimState) -> list[SourceRecord]:
-        sources = list(state.get("sources", []))
+        sources = best_sources(state.get("sources", []))
         if not self.jev:
             return sources
         cfg = self.config["jev"]
@@ -153,6 +153,9 @@ class WorkflowNodes:
         if not claim:
             return {"errors": ["Claim must not be empty."], "stop_reason": "validation_error"}
         date, timestamp, timezone = _clock()
+        if state.get("reference_date"):
+            date = state["reference_date"]
+            datetime.strptime(date, "%Y-%m-%d")
         return {
             "claim": claim,
             "sources": [],
@@ -269,14 +272,14 @@ class WorkflowNodes:
             return {"last_new_sources": 0, "budget_blocked": True}
         assessment = state.get("assessment", EvidenceAssessment())
         previous = set(state.get("search_queries", []))
-        if assessment.next_queries:
-            candidates = assessment.next_queries
-        else:
-            candidates = [
-                *[f"{assertion} evidence" for assertion in state["assertions"]],
-                f"{state['claim']} counterevidence",
-            ]
-        queries = [query for query in candidates if query.strip() and query not in previous]
+        candidates = [
+            *assessment.next_queries,
+            f"{state['claim']} evidence",
+            f"{state['claim']} counterevidence",
+            *[f"{assertion} evidence" for assertion in state["assertions"]],
+            *[f"{assertion} original source fact check" for assertion in state["assertions"]],
+        ]
+        queries = list(dict.fromkeys(query.strip() for query in candidates if query.strip() and query.strip() not in previous))
         if not queries:
             queries = [f"{state['claim']} evidence counterevidence"] if not previous else []
         allowed = min(
@@ -286,6 +289,7 @@ class WorkflowNodes:
         queries = queries[:allowed]
         existing = list(state.get("sources", []))
         seen = {(record.url, record.content_hash) for record in existing}
+        fetched_urls = {record.url for record in existing if record.page_text}
         new_records: list[SourceRecord] = []
         errors = list(state.get("errors", []))
         jev_audit = dict(state.get("jev_audit", {}))
@@ -358,19 +362,20 @@ class WorkflowNodes:
                     )]
                 except Exception as exc:
                     errors.append(f"Jev search ranking failed: {type(exc).__name__}: {exc}")
-            page_attempted = False
+            page_attempts = 0
             for item in results:
                 record = normalize_result(
                     item, query, provider=getattr(self.retriever, "provider", "custom")
                 )
-                if record is None or (record.url, record.content_hash) in seen:
+                if record is None or record.url in fetched_urls:
                     continue
                 if (
                     state["policy"].get("full_page_retrieval")
-                    and not page_attempted
+                    and page_attempts < state["policy"].get("page_fetches_per_search", 2)
                     and budget.scrapes < budget.max_scrapes
+                    and _remaining(state, budget) > 0
                 ):
-                    page_attempted = True
+                    page_attempts += 1
                     budget.scrapes += 1
                     self.progress(f"Fetch {budget.scrapes}/{budget.max_scrapes}: {record.url}")
                     fetch = getattr(self.retriever, "fetch", fetch_page)
@@ -391,12 +396,14 @@ class WorkflowNodes:
                         record.page_text = text[: state["policy"].get("page_text_limit", 20_000)]
                         record.retrieval_kind = "full_page"
                         record.status_code = status
-                        record.content_hash = hashlib.sha256(text.encode()).hexdigest()
+                        record.content_hash = hashlib.sha256(record.page_text.encode()).hexdigest()
+                        fetched_urls.add(record.url)
                     elif error:
                         self.progress(f"Fetch failed: {record.url}")
                         errors.append(f"Page fetch failed for {record.url}: {error}")
-                new_records.append(record)
-                seen.add((record.url, record.content_hash))
+                if (record.url, record.content_hash) not in seen:
+                    new_records.append(record)
+                    seen.add((record.url, record.content_hash))
         all_sources = annotate_duplicate_lineage([*existing, *new_records])
         if self.jev and _remaining(state, budget) > 1 and budget.tokens_used < budget.max_tokens:
             pending = [record for record in all_sources if not record.jev_scores]
@@ -430,7 +437,8 @@ class WorkflowNodes:
         }
 
     def analyze(self, state: ClaimState) -> dict[str, Any]:
-        if state.get("budget_blocked"):
+        if (state.get("budget_blocked") or _remaining(state, state["budgets"]) <= 0
+                or state["budgets"].tokens_used >= state["budgets"].max_tokens):
             return {"assessment": state.get("assessment", EvidenceAssessment())}
         if state.get("errors") and not state.get("sources"):
             assessment = EvidenceAssessment(gaps=["Research execution failed before evidence could be analyzed."])
@@ -455,7 +463,9 @@ class WorkflowNodes:
 
     def check_evidence(self, state: ClaimState) -> dict[str, Any]:
         assessment = state["assessment"]
-        gaps = evidence_gaps(assessment, state["assertions"], self.usable_sources(state), state["policy"])
+        usable_sources = self.usable_sources(state)
+        structural_gaps = evidence_gaps(assessment, state["assertions"], usable_sources, state["policy"])
+        gaps = list(structural_gaps)
         budget = state["budgets"].model_copy(deep=True)
         errors = list(state.get("errors", []))
         semantic_gaps: list[str] = []
@@ -522,6 +532,13 @@ class WorkflowNodes:
                     proposed_verdict=assessment.proposed_verdict,
                     confidence=assessment.confidence,
                     gaps=gaps,
+                    assessment=assessment.model_copy(deep=True),
+                    usable_source_keys=[(source.url, source.content_hash) for source in usable_sources],
+                    structural_gaps=structural_gaps,
+                    semantic_gaps=list(dict.fromkeys(semantic_gaps)),
+                    fatal_error=fatal_error,
+                    budget=budget.model_copy(deep=True),
+                    elapsed_seconds=_elapsed({**state, "budgets": budget}),
                 )
             )
         return {
@@ -582,6 +599,11 @@ class WorkflowNodes:
             claim=state.get("claim", ""),
             domain=state.get("domain", state.get("requested_domain", "auto")),
             verdict=verdict,
+            predicted_verdict=assessment.proposed_verdict,
+            prediction_confidence=assessment.confidence,
+            prediction_summary=assessment.summary,
+            verification_status=("verified" if accepted else "invalid_input" if stop_reason == "validation_error"
+                                 else "execution_error" if stop_reason == "execution_error" else "insufficient_evidence"),
             confidence=confidence,
             summary=summary,
             stop_reason=stop_reason,
@@ -590,7 +612,7 @@ class WorkflowNodes:
             execution_id=state.get("execution_id", ""),
             elapsed_seconds=_elapsed(state),
             evidence=evidence,
-            sources=[source for source in state.get("sources", []) if source.url in cited],
+            sources=[source for source in self.usable_sources(state) if source.url in cited],
             retrieval_ledger=state.get("sources", []),
             assertions=state.get("assertions", []),
             gaps=gaps,
@@ -626,6 +648,7 @@ def build_graph(
         model=model_cfg["name"],
         base_url=model_cfg["base_url"],
         temperature=model_cfg.get("temperature", 0.0),
+        verdict_mode=model_cfg.get("verdict_mode", "open"),
     )
     jev_cfg = config.get("jev", {})
     jev_backend = jev
@@ -666,12 +689,16 @@ def run_claim(
     jev: JevClient | None = None,
     config: dict[str, Any] | None = None,
     progress: Callable[[str], None] | None = None,
+    reference_date: str | None = None,
 ) -> FinalResult:
+    if reference_date is not None:
+        datetime.strptime(reference_date, "%Y-%m-%d")
     config = config or load_config()
     default_policy = config["policy"]
     initial = ClaimState(
         claim=claim,
         requested_domain=domain,
+        reference_date=reference_date or "",
         budgets=BudgetState(
             max_rounds=max_rounds,
             max_search_calls=default_policy["max_search_calls"],

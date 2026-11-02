@@ -5,7 +5,7 @@ from __future__ import annotations
 from urllib.parse import urlsplit
 
 from kaji_langgraph.models import EvidenceAssessment, EvidenceItem, SourceRecord
-from kaji_langgraph.retrieval import annotate_duplicate_lineage
+from kaji_langgraph.retrieval import annotate_duplicate_lineage, best_sources
 
 
 def _host(url: str) -> str:
@@ -25,10 +25,10 @@ def evidence_gaps(
     policy: dict,
 ) -> list[str]:
     gaps = [*assessment.gaps, *assessment.contradictions]
-    retrieved = {source.url: source for source in sources if _host(source.url) and source.retrieved_text}
+    retrieved = {source.url: source for source in best_sources(sources) if _host(source.url) and source.retrieved_text}
     cited = {url for item in assessment.evidence for url in item.source_urls}
 
-    if assessment.proposed_verdict not in {"TRUE", "FALSE", "MISLEADING"}:
+    if assessment.proposed_verdict not in {"TRUE", "FALSE", "MISLEADING", "CONFLICTING"}:
         gaps.append("No supported verdict yet.")
     if assessment.confidence != "High":
         gaps.append("Evidence confidence remains below High.")
@@ -40,15 +40,18 @@ def evidence_gaps(
     if policy.get("require_evidence_quotes", True):
         for item in assessment.evidence:
             for url in item.source_urls:
-                quote = item.quotes.get(url, "").strip()
+                # Use the same literal string as semantic review and retention.
+                # Trimming here alone could accept a quotation that downstream
+                # checks skip, leaving an accepted finding without reviewed quotes.
+                quote = item.quotes.get(url, "")
                 record = retrieved.get(url)
-                if not quote or record is None or quote not in record.retrieved_text:
+                if not quote.strip() or record is None or quote not in record.retrieved_text:
                     gaps.append("Each citation needs an exact quote from its retrieved text.")
 
     if len({_host(url) for url in cited if url in retrieved}) < 2:
         gaps.append("Find relevant evidence from at least two source hosts.")
 
-    annotated = annotate_duplicate_lineage(list(retrieved.values()))
+    annotated = annotate_duplicate_lineage([record for url, record in retrieved.items() if url in cited])
     if any(record.possible_duplicate_of and record.url in cited for record in annotated):
         gaps.append("Some cited hosts repeat substantially similar text; verify original-source lineage.")
 
@@ -74,11 +77,15 @@ def evidence_gaps(
         gaps.append("Search for evidence against the proposed conclusion.")
     if not assessment.sources_independent:
         gaps.append("Establish source independence; copied reporting is not corroboration.")
+    if assessment.proposed_verdict == "CONFLICTING" and not {"supports", "refutes"} <= {
+        item.stance for item in assessment.evidence
+    }:
+        gaps.append("A conflicting verdict requires cited evidence on both sides.")
     return list(dict.fromkeys(gap for gap in gaps if gap.strip()))
 
 
 def retained_evidence(assessment: EvidenceAssessment, sources: list[SourceRecord]) -> list[EvidenceItem]:
-    retrieved = {source.url: source for source in sources if source.retrieved_text and _host(source.url)}
+    retrieved = {source.url: source for source in best_sources(sources) if source.retrieved_text and _host(source.url)}
     retained: list[EvidenceItem] = []
     for item in assessment.evidence:
         urls = [url for url in item.source_urls if url in retrieved]

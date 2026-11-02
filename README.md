@@ -8,7 +8,10 @@ The workflow classifies and decomposes a claim, retrieves external evidence,
 audits supporting/conflicting/missing evidence, verifies quotation provenance,
 and repeats targeted research while bounded by round, search, token, and time
 budgets. A model proposes a verdict; verification checks decide whether to accept it.
-Anything that fails the gate returns `UNVERIFIED`.
+The output separates an evidence-based **prediction** from its **verification
+status**. A rejected prediction remains available for evaluation; the legacy
+`verdict` field remains `UNVERIFIED` when the acceptance gate fails. Execution
+errors are reported separately from insufficient evidence.
 
 ## Architecture
 
@@ -43,11 +46,11 @@ from configuration into the model prompt.
 
 Acceptance requires all of the following:
 
-- proposed verdict is `TRUE`, `FALSE`, or `MISLEADING` with High confidence;
+- proposed verdict is `TRUE`, `FALSE`, `MISLEADING`, or `CONFLICTING` with High confidence;
 - every assertion is resolved and cites retrieved evidence;
 - every finding has citations and each citation has an exact quote found in its
   retrieved text;
-- at least two source hosts are cited without duplicate-lineage warnings;
+- at least two source hosts are cited without duplicate lineage among the cited sources;
 - counterevidence was searched and the assessment establishes independence;
 - no unresolved gaps or contradictions remain;
 - domain-specific HTTPS or peer-review requirements pass.
@@ -153,3 +156,55 @@ ledger, source lineage, queries, timing, budgets, research history, and errors.
 The system is a research assistant, not a truth oracle. Search snippets may be
 incomplete; source independence and semantic entailment still require human
 review even when deterministic structural checks pass.
+
+## Evaluate on AVeriTeC
+
+Start Ollama before live inference (`ollama serve`, or open the Ollama app).
+An unavailable model is an execution failure, not a factual verdict.
+
+```bash
+# Offline dataset audit, including the class-imbalance baseline
+uv run python -m kaji_langgraph.evaluation inspect --output evaluation/results/dataset-audit.json
+
+# Seeded 10-claim live pilot (uses the configured services)
+uv run --env-file .env python -m kaji_langgraph.evaluation run --limit 10 --seed 42 --output evaluation/results/pilot
+
+# Continue an interrupted run with exactly the same options and code
+uv run --env-file .env python -m kaji_langgraph.evaluation run --limit 10 --seed 42 --output evaluation/results/pilot --resume
+```
+
+Each run saves a manifest, per-claim JSONL traces, a CSV, metrics with confusion
+matrices, and a readable Markdown report. The runner defaults to three rounds
+and a 300-second scheduling budget per claim; in-flight service calls may finish
+after that budget. It stops on an execution error by default. `--limit 500` runs
+the full provided dev split; this can consume substantial service usage.
+`--ids 0,6,9,10` selects explicit zero-based dataset rows for diagnosis.
+
+Predictions support the four AVeriTeC classes. `NOT_ENOUGH_EVIDENCE` is a model
+assessment of insufficiency; it is not inferred from an API failure or rejected
+citation. `CONFLICTING` requires evidence on both sides to pass verification.
+The older, broader `MISLEADING` class is retained for compatibility but is not
+silently mapped to the narrower AVeriTeC conflict class.
+
+Live inference receives only claim text and claim date. Gold labels,
+justifications, annotated answers, and fact-check URLs are withheld. Search
+can still find published fact checks: this is a contemporary open-web experiment,
+not a historical evidence-cutoff benchmark. These are **label-only metrics**,
+not the official AVeriTeC evidence score. See [evaluation/README.md](evaluation/README.md)
+for the research protocol, ablations, interpretation, and limitations.
+
+For the frozen paired study (live retrieval system and same-model knowledge-only
+control), run:
+
+```bash
+uv run --env-file .env python -m kaji_langgraph.study --limit 500 --workers 3 --seed 20261009 --max-rounds 3 --max-seconds 300 --output evaluation/results/study-20261009
+# Resume with exactly the same options plus --resume.
+uv run python -m kaji_langgraph.study_analysis evaluation/results/study-20261009
+```
+
+The study saves a source snapshot, dataset snapshot, per-round unfiltered
+assessments, exact source-version keys, and structural versus semantic gaps.
+Final analysis includes confidence intervals, paired accuracy differences,
+first-round truncation, and offline acceptance-policy replay. These replays
+reuse saved evidence and are not independent live workflow ablations. A blinded
+citation-audit worksheet is generated with human judgments left blank.

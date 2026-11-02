@@ -161,11 +161,24 @@ def normalize_result(item: dict[str, Any], query: str, provider: str = "tinyfish
     )
 
 
+def best_sources(records: list[SourceRecord]) -> list[SourceRecord]:
+    """One canonical record per URL; later snippets must never replace full pages."""
+    selected: dict[str, SourceRecord] = {}
+    for record in records:
+        current = selected.get(record.url)
+        quality = (bool(record.page_text), len(record.retrieved_text))
+        if current is None or quality > (bool(current.page_text), len(current.retrieved_text)):
+            selected[record.url] = record
+    return list(selected.values())
+
+
 def annotate_duplicate_lineage(records: list[SourceRecord], threshold: float = 0.85) -> list[SourceRecord]:
     def tokens(text: str) -> set[str]:
         return {token for token in re.findall(r"[a-z0-9]+", text.lower()) if len(token) > 2}
 
     copies = [record.model_copy(deep=True) for record in records]
+    for record in copies:
+        record.possible_duplicate_of = []
     for index, left in enumerate(copies):
         left_tokens = tokens(left.retrieved_text)
         left_host = (urlsplit(left.url).hostname or "").removeprefix("www.")

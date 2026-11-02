@@ -7,7 +7,7 @@ from typing import Any, Literal
 from pydantic import BaseModel, Field
 
 Domain = Literal["auto", "general", "scientific", "political", "health_medical"]
-Verdict = Literal["TRUE", "FALSE", "MISLEADING", "UNVERIFIED"]
+Verdict = Literal["TRUE", "FALSE", "MISLEADING", "CONFLICTING", "NOT_ENOUGH_EVIDENCE", "UNVERIFIED"]
 Confidence = Literal["Low", "Medium", "High"]
 
 
@@ -71,6 +71,12 @@ class EvidenceAssessment(BaseModel):
     next_queries: list[str] = Field(default_factory=list)
 
 
+class BenchmarkAssessment(EvidenceAssessment):
+    """A factual four-class decision; operational failures stay outside this schema."""
+
+    proposed_verdict: Literal["TRUE", "FALSE", "CONFLICTING", "NOT_ENOUGH_EVIDENCE"] = Field(...)
+
+
 class BudgetState(BaseModel):
     max_rounds: int = Field(default=10, ge=1, le=10)
     max_search_calls: int = Field(default=20, ge=0)
@@ -92,12 +98,25 @@ class ResearchRound(BaseModel):
     confidence: Confidence = "Low"
     gaps: list[str] = Field(default_factory=list)
     decision: str = ""
+    # Preserve the unfiltered model proposal and the exact source versions used
+    # by the gate. This permits policy replay without new model/search calls.
+    assessment: EvidenceAssessment | None = None
+    usable_source_keys: list[tuple[str, str]] = Field(default_factory=list)
+    structural_gaps: list[str] = Field(default_factory=list)
+    semantic_gaps: list[str] = Field(default_factory=list)
+    fatal_error: bool = False
+    budget: BudgetState | None = None
+    elapsed_seconds: float = 0.0
 
 
 class FinalResult(BaseModel):
     claim: str
     domain: str
     verdict: Verdict = "UNVERIFIED"
+    predicted_verdict: Verdict = "UNVERIFIED"
+    prediction_confidence: Confidence = "Low"
+    prediction_summary: str = ""
+    verification_status: Literal["verified", "insufficient_evidence", "execution_error", "invalid_input"] = "insufficient_evidence"
     confidence: Confidence = "Low"
     summary: str = ""
     stop_reason: str = ""

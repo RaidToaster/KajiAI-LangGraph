@@ -65,7 +65,7 @@ def test_tinyfish_fetch_failure_is_audited_and_snippet_retained(backend, config,
     )
     assert result.retrieval_ledger[0].provider == "tinyfish"
     assert result.retrieval_ledger[0].retrieved_text == "First source evidence."
-    assert result.budget.scrapes == 1
+    assert result.budget.scrapes == 2
     assert any("bot_blocked" in error for error in result.errors)
 
 

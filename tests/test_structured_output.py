@@ -4,7 +4,9 @@ import json
 from types import SimpleNamespace
 
 from kaji_langgraph.llm import OllamaBackend
-from kaji_langgraph.models import Classification, EvidenceAssessment
+from kaji_langgraph.models import BenchmarkAssessment, Classification, EvidenceAssessment
+import pytest
+from pydantic import ValidationError
 
 
 class Runnable:
@@ -78,3 +80,20 @@ def test_analysis_prompt_includes_domain_specific_guidance():
     assert guidance["research"] in captured["prompt"]
     assert guidance["analysis"] in captured["prompt"]
     assert guidance["verification_standard"] in captured["prompt"]
+
+
+def test_benchmark_analysis_uses_four_class_schema():
+    backend = OllamaBackend.__new__(OllamaBackend)
+    backend.verdict_mode = "averitec"
+
+    def capture(schema, prompt):
+        assert schema is BenchmarkAssessment
+        assert "permitted factual labels are exactly" in prompt
+        return schema(proposed_verdict="NOT_ENOUGH_EVIDENCE"), 0
+
+    backend._structured = capture
+    assessment, _ = backend.analyze("A claim", "general", ["A claim"], [], [], "2020-10-31", {})
+    assert assessment.proposed_verdict == "NOT_ENOUGH_EVIDENCE"
+    for verdict in ("MISLEADING", "UNVERIFIED"):
+        with pytest.raises(ValidationError):
+            BenchmarkAssessment(proposed_verdict=verdict)
