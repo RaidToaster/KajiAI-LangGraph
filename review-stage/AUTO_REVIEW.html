@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous research review</title>
+
+<meta name="generator" content="ARIS render-html (academic, v1)">
+<meta name="aris:source-path" content="review-stage\AUTO_REVIEW.md">
+<meta name="aris:source-sha256" content="8c362030ba7ddcae190051d65dbcb648af1cb6565447b1f1b107cfbf0ff0d1db">
+<meta name="aris:generated-at" content="2026-11-02 15:20 UTC">
+
+<!-- offline mode: MathJax + highlight.js skipped; math and code blocks render as plain text -->
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+
+nav.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  font-size: 13px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-soft);
+  padding-right: 16px;
+}
+nav.toc h3 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+nav.toc ol li { margin: 5px 0; counter-increment: toc; }
+nav.toc ol li::before { content: counter(toc) ". "; color: var(--ink-muted); margin-right: 4px; }
+nav.toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+nav.toc a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+nav.toc ul { list-style: none; padding-left: 14px; margin: 3px 0; font-size: 12px; }
+nav.toc ul li::before { content: "→ "; color: var(--border); }
+
+main { min-width: 0; }
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+header.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+header.hero .byline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+header.hero .meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 44px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h2 .num { color: var(--primary); font-weight: 600; margin-right: 8px; }
+h3 { font-size: 19px; margin: 28px 0 10px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 16px; margin: 20px 0 8px; color: var(--ink); font-weight: 600; }
+
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+ul li, ol li { margin: 4px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 14px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 14px 18px !important;
+  font-size: 13px;
+  line-height: 1.55;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+pre.diagram {
+  background: #f9f6ed;
+  border-left: 4px solid var(--accent);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.callout {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 15px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 13px; letter-spacing: 0.02em; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+details.qa, details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 10px 14px; }
+details p:first-of-type { margin-top: 8px; }
+
+mjx-container[display="true"] { margin: 12px 0 !important; }
+
+footer.aris-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px; }
+  nav.toc {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-soft);
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+  header.hero h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+}
+@media print {
+  nav.toc { display: none; }
+  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: white; }
+  header.hero { border-bottom-color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc">
+  <h3>Contents</h3>
+  <ol>
+<li><a href="#round-1-2026-11-02">Round 1 (2026-11-02)</a>
+<ul>
+<li><a href="#assessment-summary">Assessment (Summary)</a></li>
+<li><a href="#reviewer-raw-response">Reviewer Raw Response</a></li>
+<li><a href="#actions-taken">Actions Taken</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#status">Status</a></li>
+</ul>
+</li>
+<li><a href="#round-2-2026-11-02">Round 2 (2026-11-02)</a>
+<ul>
+<li><a href="#assessment-summary-1">Assessment (Summary)</a></li>
+<li><a href="#reviewer-raw-response-1">Reviewer Raw Response</a></li>
+<li><a href="#actions-taken-1">Actions Taken</a></li>
+<li><a href="#results-1">Results</a></li>
+<li><a href="#status-1">Status</a></li>
+</ul>
+</li>
+<li><a href="#method-description">Method Description</a>
+</li>
+<li><a href="#research-termination">Research termination</a>
+</li>
+<li><a href="#final-writing-and-claim-judgment">Final writing and claim judgment</a>
+</li>
+<li><a href="#remaining-blockers-and-next-action">Remaining blockers and next action</a>
+</li>
+<li><a href="#user-directed-continuation-correction">User-directed continuation correction</a>
+</li>
+</ol>
+</nav>
+
+<main>
+<header class="hero">
+  
+  <h1>Autonomous research review</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>review-stage\AUTO_REVIEW.md</code></span>
+    <span><strong>SHA256:</strong> <code>8c362030ba7d</code></span>
+    <span><strong>Rendered:</strong> 2026-11-02 15:20 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="autonomous-research-review">Autonomous research review</h1>
+<blockquote><p>Current continuation: read <a href="../CONTINUATION.md">CONTINUATION.md</a>. The prior review is completed; runtime implementation and an approved live pilot remain unfinished. Human annotation is parallel and does not block engineering.</p></blockquote>
+<p>Run: run_20261102_f991201b. Started 2026-11-02 (Asia/Jakarta). Two research rounds maximum. Same-family Codex review is provisional.</p>
+<p>Working history: evaluation/aris/20261102_120247. Baseline preserved before editing; no live inference authorized.</p>
+<h2 id="round-1-2026-11-02">Round 1 (2026-11-02)</h2>
+<h3 id="assessment-summary">Assessment (Summary)</h3>
+<ul><li>Score: 5/10</li><li>Verdict: not ready</li><li>Key criticisms: independent citation validation and controlled mechanism evidence missing; empty-query reassessment cost; unsafe manuscript regeneration; stale diagnostics and temp-path setup.</li></ul>
+<h3 id="reviewer-raw-response">Reviewer Raw Response</h3>
+<details>
+<summary>Full reviewer response</summary>
+<p><strong>Score: 5/10 for top-venue scientific readiness. Verdict: not ready.</strong></p>
+<p>This is a credible, carefully bounded development-study audit. The central results reproduce, and the manuscript avoids many common overclaims. Top-venue readiness is limited principally by the missing independent evidence validation and lack of an experiment identifying a scientific contribution beyond the combined workflow. These gaps cannot be resolved by polishing or offline calculations alone.</p>
+<p>Review metadata: native Codex; <code>review_independence: same-family</code>; <code>acceptance_status: provisional</code>. Actual model identity and reasoning effort were not independently observable to this reviewer.</p>
+<h3 id="authoritative-evidence-and-verified-findings">Authoritative evidence and verified findings</h3>
+<p>The authoritative completed study is <code>evaluation/results/study-20261009-v3</code>, established from its records rather than its name:</p>
+<ul><li>Its source archive reproduces manifest source digest <code>624a8d2fa125…</code>; the archived dataset reproduces <code>499793726b4a…</code>.</li><li>Both raw JSONL files contain exactly 500 unique selected IDs, with matching dataset claims and labels.</li><li><code>status.json</code> records completion at <code>2026-10-10T06:31:25.613125+00:00</code>.</li><li>Comparing every archived file with the working tree found only the documented <code>study_analysis.py</code> hostname-audit correction. The inspected inference files are byte-identical.</li><li>The correction, original metrics, raw records, incident record and final postprocessing distinguish the original run from later analysis.</li><li>The October 21 gate/loop analysis is explicitly post hoc analysis of those saved trajectories, not another executed condition.</li></ul>
+<p>Independent offline checks reproduced:</p>
+<table><thead><tr><th>Quantity</th><th style="text-align:right">Verified result</th></tr></thead><tbody><tr><td>Full-workflow prediction correctness</td><td style="text-align:right">337/500</td></tr><tr><td>Model-only prediction correctness</td><td style="text-align:right">269/500</td></tr><tr><td>Workflow-only / control-only correct pairs</td><td style="text-align:right">117 / 49</td></tr><tr><td>Both correct / both wrong</td><td style="text-align:right">220 / 114</td></tr><tr><td>Full-gate acceptance</td><td style="text-align:right">44/500</td></tr><tr><td>Accepted label agreement</td><td style="text-align:right">42/44</td></tr><tr><td>First-round prediction correctness</td><td style="text-align:right">344/500</td></tr><tr><td>Fatal attempts</td><td style="text-align:right">Full 8; control 5</td></tr><tr><td>Structural-only outputs withheld by semantic gate</td><td style="text-align:right">6: three correct, three wrong</td></tr></tbody></table>
+<p>Every saved replay metric matched recomputation. The seeded full-minus-control bootstrap matched the saved result. The per-claim CSV agreed with raw predictions and accepted labels.</p>
+<p>The manuscript correctly distinguishes four-class prediction from decisive-label acceptance, operational abstention from factual NEI, label agreement from citation validation, trajectory truncation from executed one-round experiments, and host matching from demonstrated contamination. Retaining all failed attempts is correct. The nonfatal sensitivity comparison is appropriately secondary.</p>
+<h3 id="prioritized-weaknesses-and-minimum-fixes">Prioritized weaknesses and minimum fixes</h3>
+<p><strong>R1 — Independent citation correctness remains unmeasured. High scientific importance; requires human work.</strong></p>
+<p>The paper’s distinctive evidence-gate component is evaluated using dataset labels and Jev’s own judgments, not independent citation-support annotations. The 95.5% accepted-label agreement therefore does not establish that accepted evidence supports the verdict. This is acknowledged at <a href="#blocked-unsafe-url">paper.tex:197</a> and <a href="#blocked-unsafe-url">paper.tex:309</a>, but it remains a substantial missing outcome.</p>
+<p>Both accepted errors, claim IDs <strong>353 and 404</strong>, have gold conflicting-evidence labels and accepted Refuted predictions. Their saved findings and quotes illustrate the gap between support for individual findings and adjudication of the whole claim, including qualifications and temporal scope. I am not treating my reading as replacement human annotation.</p>
+<p>Minimum supported action now: retain the limitation prominently and add a compact, clearly illustrative discussion of these two failures. The existing blinded worksheet and annotation instructions are a suitable starting point; do not fill them with model judgments. For a stronger scientific claim, obtain independent annotations, preferably two annotators with retained judgments and adjudication, reported separately by accepted/rejected strata. No additional historical inference is required.</p>
+<p><strong>R2 — The study establishes a combined-workflow difference, not a distinctive mechanism’s benefit or generalization. High scientific importance.</strong></p>
+<p>The same-model control changes prompting, evidence access, domain routing, review and call count together. The paper already admits this at <a href="#blocked-unsafe-url">paper.tex:149</a> and <a href="#blocked-unsafe-url">paper.tex:302</a>. The reused development split and contemporary retrieval further constrain external validity.</p>
+<p>FIRE already integrates iterative retrieval and verification, while EMULATE uses agent roles for ranking and webpage evaluation; the manuscript’s related-work descriptions are supported by their primary sources. <a href="https://aclanthology.org/2025.findings-naacl.158.pdf">FIRE</a>, <a href="https://aclanthology.org/2025.fever-1.13/">EMULATE</a>.</p>
+<p>Minimum action now: sharpen the contribution around <strong>auditing selection and trajectories in a preserved workflow</strong>, and phrase RQ2/RQ3 as observed policy-selection and saved-trajectory questions. Avoid implying that additional retrieval itself caused the reported changes.</p>
+<p>A useful additional descriptive comparison is already computable: on the <strong>same 44 gate-selected IDs</strong>, the control is correct <strong>30/44</strong>, versus <strong>42/44</strong> for the full workflow. The selected gold composition is <strong>33 Refuted, 9 Supported and 2 Conflicting</strong>, rather than the accepted prediction composition of 35 Refuted and 9 Supported. These figures clarify selection but are not a randomized or unbiased generalization estimate.</p>
+<p>Do not launch another full study merely to fill a checklist. A later bounded pilot should test one declared mechanism against a matched baseline, followed by held-out evaluation only if operational and scientific readiness are established.</p>
+<p><strong>R3 — Many “additional research” rounds perform no retrieval. Confirmed operational issue with a measurable tradeoff.</strong></p>
+<p>At <a href="#blocked-unsafe-url">graph.py:282</a>, exhausted candidate queries can leave <code>queries=[]</code>. Retrieval still increments the research round at line 433, followed by analysis and citation checks.</p>
+<p>The saved trajectories contain <strong>252 third rounds</strong> with:</p>
+<ul><li>No new search calls.</li><li>Empty prior <code>next_queries</code>.</li><li>No new ledger records.</li><li><strong>4,154,865 observed tokens</strong> and <strong>1,984.146 summed task-seconds</strong> consumed after the preceding round.</li></ul>
+<p>Those rounds changed only three labels: ID 49 became wrong; IDs 55 and 389 became correct. Thus stopping them cannot be described as preserving historical accuracy: simple saved-trajectory truncation would lose one net correct prediction.</p>
+<p>Minimum action now: add this diagnosis to the results/discussion, distinguishing retrieval from repeated assessment. A focused future runtime change can stop before model calls when no query remains and preserve the previous assessment with an explicit reason. Test call counts, preserved output and trace behavior offline. Treat the changed stopping rule as a new condition; retain the historical runtime and results. Its quality/resource tradeoff requires a bounded authorized pilot before claiming improvement.</p>
+<p>No broad “novelty detector,” threshold tuning or routing framework is justified.</p>
+<p><strong>R4 — Regeneration can silently destroy revised manuscript prose. Confirmed maintenance defect; cheap offline fix.</strong></p>
+<p><a href="#blocked-unsafe-url">evaluation/update_paper_results.py:10</a> reads the partial manuscript template, and line 204 unconditionally writes <code>paper.tex</code>; module import also executes this work. This conflicts directly with the requested preservation of later revisions.</p>
+<p>Minimum fix: place execution behind an import-safe entry point and generate to a separate default output, such as <code>paper-regenerated.tex</code>, with an explicit output argument. Preserve the original generator in the baseline archive. Verify that importing or running the default command leaves the working manuscript unchanged. This needs no live calls and does not alter historical results.</p>
+<p><strong>R5 — Historical documentation is presented without a sufficiently clear date/status boundary. Confirmed documentation mismatch; cheap fix.</strong></p>
+<p>The final paragraph of <a href="#blocked-unsafe-url">DIAGNOSTIC_FINDINGS.md</a> still says the full 500-claim model evaluation has not run and cites 50 tests. That conflicts with the completed artifacts and current tests.</p>
+<p>Minimum fix: preserve the diagnostic document as historical, add its dated scope and a prominent link to the completed study/current audit, and distinguish historical test counts from current validation. Do not rewrite its earlier observations as though they were collected after the completed run.</p>
+<p><strong>R6 — The documented environment invocation fails in the present sandbox. Verified environment problem, not a scientific-result failure.</strong></p>
+<p>I ran the documented command verbatim after reading both environment documents:</p>
+<pre><code class="language-text">.venv/Scripts/python.exe evaluation/aris/20261102_120247/run_job.py baseline-tests .venv/Scripts/python.exe -m pytest</code></pre>
+<p>Outcome: <strong>exit 1, 58 passed, 5 setup errors</strong>, no timeout. All five errors arise while creating pytest temporary directories under sandbox <code>AC/Temp</code>; there were no failed assertions. The launcher recorded <strong>4.828 seconds</strong>. I did not modify or rerun this invocation.</p>
+<p>Minimum fix: document a workspace-owned pytest base directory and verify that invocation. The executor has reported such a successful rerun; that report should be retained as a separate run rather than replacing the failed baseline record.</p>
+<h3 id="other-checks-and-boundaries">Other checks and boundaries</h3>
+<p>The 11 bibliography entries and their attached broad claims checked out against primary ACL, arXiv, ICLR, NeurIPS and LangChain records. In particular, the manuscript correctly describes the 2025 shared task’s different model, hardware, evidence-store and timing constraints. <a href="https://aclanthology.org/2025.fever-1.15/">2025 shared-task paper</a>. Its distinction between citation quality and answer correctness is supported by ALCE. <a href="https://aclanthology.org/2023.emnlp-main.398/">ALCE</a>. This was a citation check, not an exhaustive novelty search.</p>
+<p>Uncertainty reporting is generally sound for its stated scope: Wilson intervals, paired claim-level bootstrap, small accepted denominator and failure-inclusive reporting are explicit. The six semantic-gate removals are too few to establish a broad reliability advantage; the manuscript should retain their three-correct/three-wrong breakdown rather than emphasizing only the higher conditional percentage.</p>
+<p>The network-dependent runtime has no inspected path executing model-generated shell commands. TinyFish retrieval and the optional direct-fetch fallback were inspected. Prompt-injection scores and model-reported independence remain probabilistic, as the manuscript already states; no observed frozen-run evidence justifies claiming an injection defense or adding a broad security subsystem.</p>
+<p>Historical hosted model revisions, provider-specific usage and complete response metadata are unavailable. These cannot be reconstructed honestly. Future authorized pilots should record available endpoint/model response metadata and preserve failures; no existing result should acquire invented provenance.</p>
+<h3 id="evidence-coverage">Evidence coverage</h3>
+<p>Directly inspected:</p>
+<ul><li>All six requested primary documents, including extracted text from the six-page PDF.</li><li><code>study.py</code>, <code>study_analysis.py</code>, <code>evaluation.py</code>, <code>graph.py</code>, <code>gate.py</code>, <code>llm.py</code>, <code>config.py</code>, <code>models.py</code>, <code>jev.py</code>, and relevant retrieval implementation.</li><li>Study/evaluation, graph, gate, Jev, model-error, source-version, structured-output and verification-regression tests.</li><li>Manifest, status, correction record, runtime incidents, archived source, archived dataset, raw full/control records, metrics, final analysis script and per-claim CSV.</li><li>October 21 analysis script and saved output.</li><li>Environment specification, compute instructions and documented launcher.</li><li>Primary publication sources for all manuscript references.</li></ul>
+<p>PDF text was inspected; visual layout verification remains with the executor. I made no research-artifact or implementation edits and made no live model calls. The requested baseline test invocation created its ordinary logs.</p>
+<p>Reviewer offline subprocess runtime: <strong>9.072 seconds total</strong>: archive/raw checks 0.524; baseline tests 4.828; PDF extraction 0.827; replay/matched-subset checks 2.893. Checks used two numerical threads and 300-second subprocess timeouts. Exact model-review tokens/cost are unknown.</p>
+<h3 id="memory-update">Memory update</h3>
+<p>Round 1 findings to carry forward:</p>
+<ul><li><strong>Verified, not suspect:</strong> authoritative completed 500-by-two study; archived runtime provenance; central counts; replay metrics; paired bootstrap; failure denominators; CSV agreement; broad citation validity.</li><li><strong>Open scientific limitations:</strong> independent citation validation, held-out generalization, and identification of a distinctive mechanism. Offline fixes cannot resolve these.</li><li><strong>Confirmed fixable defects:</strong> manuscript regeneration overwrites revised prose; stale diagnostic status; documented pytest temporary-directory failure.</li><li><strong>Confirmed research opportunity:</strong> 252 empty-query third rounds consume substantial resources. Preserve the observed two gains/one loss; do not claim a cost-only improvement.</li><li><strong>Next review:</strong> inspect actual diffs and new output artifacts, verify preservation and regression checks, and ensure any stopping change is described as unevaluated future runtime behavior rather than a revision to historical scores.</li><li><strong>Readiness remains:</strong> <code>not ready</code>, same-family/provisional.</li></ul>
+</details>
+<h3 id="actions-taken">Actions Taken</h3>
+<p>Baseline and historical outputs preserved; verified 21 metric sets and paired inference; fixed separate/import-safe manuscript generation with regression; documented workspace temp fix. Offline stopping replay confirms mixed outcomes. Additional scoped manuscript/documentation revisions are pending round 2.</p>
+<h3 id="results">Results</h3>
+<p>63 tests pass under workspace temp; central study numbers reproduced; no new live inference.</p>
+<h3 id="status">Status</h3>
+<p>Continuing to round 2 after offline revisions. No positive receipt: score 5 and not ready.</p>
+<h2 id="round-2-2026-11-02">Round 2 (2026-11-02)</h2>
+<h3 id="assessment-summary-1">Assessment (Summary)</h3>
+<ul><li>Score:5/10</li><li>Verdict:not ready</li><li>Offline interpretation/preservation fixes verified; independent citation validation and controlled/held-out evidence remain open.</li></ul>
+<h3 id="reviewer-raw-response-1">Reviewer Raw Response</h3>
+<details>
+<summary>Full reviewer response</summary>
+<p><strong>Score: 5/10 for top-venue scientific readiness. Verdict: not ready.</strong></p>
+<p>The offline revision materially improves the audit, interpretation and manuscript-preservation workflow. The score remains unchanged because independent citation validation, a controlled mechanism comparison and held-out evidence remain missing.</p>
+<p>This is the final research review, round <strong>2/2</strong>. Review independence is <strong>same-family</strong> and acceptance status is <strong>provisional</strong>. Actual model identity and reasoning effort were not independently observable.</p>
+<h3 id="findings-addressed">Findings addressed</h3>
+<p><strong>R1 — Citation validation: appropriately bounded, still scientifically unresolved.</strong> The manuscript now discusses accepted errors 353 and 404 as illustrative saved records, explicitly distinguishing those inspections from human annotation. The human-validation limitation remains prominent. This addresses the requested clarification; it does not supply the missing independent evidence.</p>
+<p><strong>R2 — Contribution and causal interpretation: substantially improved.</strong> The revised RQs and contribution at <a href="#blocked-unsafe-url">paper.tex:49</a> now describe an empirical audit of policy selection and saved trajectories.</p>
+<p>The new comparison correctly reports <strong>42/44</strong> workflow versus <strong>30/44</strong> control matches on the same workflow-selected IDs. It distinguishes selected gold composition from prediction composition and labels the comparison descriptive. The <strong>326/429</strong> High-confidence result is also presented as a differently selected cohort, without calibration or causal claims.</p>
+<p>The analysis script selects claims from workflow acceptance and matches control predictions by claim ID. Its outputs agree with the independent counts established in round 1. No repeated raw-data recomputation was needed.</p>
+<p><strong>R3 — Query-exhaustion behavior: investigated without an unsupported runtime change.</strong> The stopping replay identifies <strong>252</strong> third rounds, <strong>4,154,865 observed tokens</strong>, two wrong-to-correct changes, one correct-to-wrong change and two new acceptances. The script verifies empty prior follow-up queries and unchanged usable-source keys.</p>
+<p>The manuscript explicitly states that truncating those saved rounds loses one net correct prediction and two acceptances. It makes no claim of cost-free quality preservation or an executed stopping ablation. Retaining the historical runtime while documenting a candidate prospective comparison is justified.</p>
+<p><strong>R4 — Generator overwrites: resolved by a focused implementation change.</strong> Both manuscript and notes generators now:</p>
+<ul><li>Execute through guarded entry points.</li><li>Accept explicit output destinations.</li><li>Default to separate regenerated files.</li><li>Preserve authored working files during import and generation.</li></ul>
+<p>I inspected the implementations, regression script, success log and job record. The regression checks compare generated historical content with preserved baseline bytes and verify that authored files remain unchanged. The successful combined check exited zero in <strong>0.125 seconds</strong>. Earlier failed whitespace comparisons remain in the ledger.</p>
+<p><strong>R5 — Historical status ambiguity: resolved.</strong> The README and evaluation documentation identify the authoritative completed study. The diagnostic document retains its historical contents behind an explicit date/status boundary. Documentation also warns that historical analysis commands overwrite reports and annotation worksheets.</p>
+<p><strong>R6 — Test-environment failure: corrected execution path documented.</strong> The workspace test record shows <strong>63 passed</strong>, exit zero, with an explicit workspace pytest base directory. The failed original invocation remains preserved separately.</p>
+<p>The revised documented invocation still has its requested fresh final-stage invocation check pending. That is a bounded handoff task, not evidence of a remaining code assertion failure.</p>
+<h3 id="remaining-weaknesses">Remaining Weaknesses</h3>
+<ol><li><strong>Independent evidence validity remains unmeasured.</strong>  Label agreement and Jev judgments do not establish citation support, source credibility or claim-level evidential sufficiency. The worksheet remains blank.</li><li><strong>Scientific identification and generalization remain limited.</strong>  The combined workflow/control comparison does not isolate the gate, retrieval, stopping policy or framework. Development reuse and contemporary-web exposure remain material constraints. The new subset analyses are useful descriptions, not substitutes for controlled or held-out evaluation.</li><li><strong>The final handoff records need closure.</strong>  At inspection, several persistent records still contained initial “planned” or “awaiting verification” wording. The executor subsequently reported updating <code>CLAIM_EVIDENCE.md</code>, <code>EXPERIMENT_TRACKER.md</code> and <code>RESOURCE_USAGE.md</code>; those post-inspection changes were not rechecked. <code>RESEARCH_STATE.md</code> and <code>TOOLING.md</code> are explicitly reserved for final handoff completion.</li><li><strong>One manuscript heading remains stronger than its contents.</strong>  “Effect of Additional Research” at <a href="#blocked-unsafe-url">paper.tex:261</a> would read more accurately as “Changes Across Saved Research Rounds.” The surrounding body already uses the appropriate interpretation.</li></ol>
+<p>A small audit wording error—“Gold NEI is excluded … by design”—was identified during review. The gate excludes <strong>NEI predictions</strong>, not gold-NEI inputs. The executor reported correcting this after inspection.</p>
+<h3 id="minimum-fixes">Minimum Fixes</h3>
+<ul><li>Complete the already planned handoff updates and modest heading correction; no new research round is necessary.</li><li>Complete final PDF visual inspection and the documented invocation check, retaining their actual outcomes.</li><li>Prioritize independent annotation of the existing accepted/rejected citation strata. Preserve original annotator decisions, disagreement and adjudication.</li><li>Keep <strong>FULL_EXPERIMENT_READINESS.md: NO GO</strong>. Its staged proposal correctly separates a possible integration smoke from a scientific pilot and a full experiment.</li><li>Do not implement or advertise a stopping-policy improvement from this replay alone. A future authorized pilot must measure both resource use and prediction/evidence outcomes.</li><li>Do not infer candidate-model compatibility from public model availability. The integration document correctly notes that endpoint acceptance remains unverified and that current Ollama documentation says cloud structured outputs are unsupported. <a href="https://docs.ollama.com/capabilities/structured-outputs">Ollama structured outputs</a>. Model-specific thinking controls also require endpoint discovery. <a href="https://docs.ollama.com/capabilities/thinking">Ollama thinking documentation</a>.</li></ul>
+<p>No broader runtime refactor, new scoring machinery or additional model sweep is justified by this review.</p>
+<h3 id="evidence-coverage-and-limits">Evidence coverage and limits</h3>
+<p>I read the complete persistent reviewer memory, the saved changes diff, actual revised generators and manuscript, new analysis scripts and outputs, regression/test logs, decision and resource records, audit, readiness decision and model-integration report.</p>
+<p>The revised six-page PDF’s text contains the updated contribution, selected-cohort comparison, query-exhaustion tradeoff and provenance limitations. This confirms content inclusion; it does not certify visual layout. Unchanged bibliography claims retain the primary-source checks from round 1.</p>
+<p>No research artifacts were edited, no new experiments or inference were launched, and unchanged statistical recomputations were not repeated. PDF document parsing took <strong>0.024 seconds</strong>; review tokens and cost are unknown.</p>
+<h3 id="memory-update">Memory update</h3>
+<ul><li><strong>Resolved:</strong> manuscript/notes generator overwrite behavior; historical diagnostic status ambiguity; practical pytest temporary-directory execution problem.</li><li><strong>Verified improvement:</strong> descriptive RQs/contribution, matched selected-cohort comparison, selected gold/prediction distinction, illustrative accepted-error cases and honest stopping tradeoff.</li><li><strong>Preserved:</strong> historical inference runtime, predictions, failures, source archive and central results. No measured stopping-policy or candidate-model improvement is claimed.</li><li><strong>Still open:</strong> independent citation validation; controlled mechanism evidence; held-out generalization; hosted-model drift and incomplete historical usage metadata.</li><li><strong>Final handoff:</strong> finish state/tooling records, final PDF checks and fresh documented invocation check. Executor-reported post-inspection documentation corrections should be recorded as such.</li><li><strong>Final research verdict:</strong> <strong>5/10, not ready</strong>, same-family/provisional. The authorized two research rounds are complete; further inference requires a separately justified and authorized stage.</li></ul>
+</details>
+<h3 id="actions-taken-1">Actions Taken</h3>
+<p>Both generators protected and checked; analysis/claim/resource trackers updated. Heading and final presentation fixes assigned to bounded paper-polishing stage. Historical inference unchanged.</p>
+<h3 id="results-1">Results</h3>
+<p>63 workspace tests pass; fresh invocation independently passes63. All21 saved metric sets and core paired statistics reproduce. No new live inference.</p>
+<h3 id="status-1">Status</h3>
+<p>Stop:maximum2 research rounds, no qualifying positive assessment. No acquittal receipt.</p>
+<h2 id="method-description">Method Description</h2>
+<p>KajiAI classifies a claim into a domain, retains the original alongside deterministic assertion fragments, retrieves TinyFish search results and canonical page text, and uses an Ollama-hosted model for structured evidence assessments. TypeSafe/Jev supplies classification, search ranking, source judgments and citation-support review. Deterministic checks cover quotations, citations, assertion coverage, source-host diversity and domain requirements; model-based citation review follows. The graph records assessment/source versions, gaps and budgets, repeating retrieval or assessment within bounded scheduling limits. Prediction is retained separately from acceptance and execution status.</p>
+<p>The preserved development study compares this combined workflow with a same-model control on500 paired claims, including all13 execution failures. Offline replay keeps evidence fixed, describes policy selection and saved trajectory changes, and cannot replace independently executed mechanism studies. No runtime policy or historical output was changed in this review.</p>
+<h2 id="research-termination">Research termination</h2>
+<p>Score progression:5→5, both not ready. Same-family/provisional; no submission readiness inferred. Missing independent human citation validity and controlled/held-out evidence require human work or separately authorized studies. For the narrow historical description, the final claim gate requests no new experiment.</p>
+<h2 id="final-writing-and-claim-judgment">Final writing and claim judgment</h2>
+<p>Writing score7→9; final writing/layout ready for author review, same-family/provisional. The first writing call failed at usage limit; a user-authorized continuation completed it. The research score remains5→5, not ready. Fresh claim gate:yes for the bounded historical description, medium confidence; integrity_status unavailable because no standalone experiment-audit was run. Stronger evidence-quality, causal-component and generalization claims remain unsupported.</p>
+<p>Final IEEE PDF:6 pages, all pages visually inspected; no overfull boxes.63 tests pass, including a fresh documented invocation. Generator defaults/imports preserve revised prose;21 historical metric sets reproduce. No new live inference or historical rerun. Full experiment:NO GO.</p>
+<h2 id="remaining-blockers-and-next-action">Remaining blockers and next action</h2>
+<ol><li>Human evidence validation: two annotators and adjudication remain needed for stronger evidence claims. Arrange this in parallel with the engineering/live-pilot continuation; effort requires annotation-time measurement.</li><li>Scientific mechanism/generalization:separately declared controlled and held-out study; cost/sample size unknown until a bounded pilot, if still scientifically warranted.</li><li>Ollama integration:local endpoint refused discovery; candidate auth/schema/thinking behavior unverified. Optional proposed smoke is bounded in FULL_EXPERIMENT_READINESS.md but not authorized.</li><li>Author/venue requirements:human author information, venue selection, policies and final submission approval remain open.</li></ol>
+<p>Resume from root CONTINUATION.md and evaluation/aris/20261102_120247/RESUME.md. Do not repeat completed analysis or use an AI presentation verdict as submission approval.</p>
+<h2 id="user-directed-continuation-correction">User-directed continuation correction</h2>
+<p>The prior review remains completed at its two-round limit. The broader runtime/live-experiment objective is unfinished. Current instructions are in root CONTINUATION.md: restore Ollama, reproduce and implement a focused runtime change, prepare a specific live smoke/pilot approval request and execute the approved budget. Human annotation is parallel. Earlier human-first/offline-stop sequencing is superseded; no live budget or scientific result is invented. Start a new run instead of reopening the completed one.</p>
+<h2 id="sidecar-state">Sidecar — <code>REVIEW_STATE.json</code></h2>
+<details><summary>Sidecar JSON: <code>D:\Projects\!skripsi\KajiAI-LangGraph\review-stage\REVIEW_STATE.json</code></summary><pre><code class="language-json">{
+  &quot;run_id&quot;: &quot;run_20261102_f991201b&quot;,
+  &quot;working_dir&quot;: &quot;D:\\Projects\\!skripsi\\KajiAI-LangGraph\\evaluation\\aris\\20261102_120247&quot;,
+  &quot;root&quot;: &quot;D:\\Projects\\!skripsi\\KajiAI-LangGraph&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-02T15:06:53.558406+00:00&quot;,
+  &quot;max_rounds&quot;: 2,
+  &quot;reviewer_route&quot;: {
+    &quot;backend&quot;: &quot;codex&quot;,
+    &quot;host&quot;: &quot;codex&quot;,
+    &quot;model&quot;: &quot;gpt-6-astra&quot;,
+    &quot;effort&quot;: &quot;xhigh&quot;,
+    &quot;transport&quot;: &quot;native&quot;
+  },
+  &quot;round&quot;: 2,
+  &quot;agent_id&quot;: &quot;/root/research_reviewer&quot;,
+  &quot;reviewer_session_id&quot;: &quot;/root/research_reviewer&quot;,
+  &quot;reviewer_cwd&quot;: &quot;D:\\Projects\\!skripsi\\KajiAI-LangGraph&quot;,
+  &quot;requested_reviewer_model&quot;: &quot;gpt-6-astra&quot;,
+  &quot;reported_reviewer_model&quot;: null,
+  &quot;actual_effort&quot;: null,
+  &quot;review_completed&quot;: true,
+  &quot;review_scope_complete&quot;: true,
+  &quot;review_independence&quot;: &quot;same-family&quot;,
+  &quot;acceptance_status&quot;: &quot;provisional&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;last_score&quot;: 5,
+  &quot;last_verdict&quot;: &quot;not ready&quot;,
+  &quot;pending_experiments&quot;: [],
+  &quot;next_action&quot;: &quot;Read CONTINUATION.md; start new run for Ollama recovery, runtime change and bounded live-pilot approval&quot;,
+  &quot;termination_reason&quot;: &quot;max_rounds_without_positive&quot;,
+  &quot;submission_ready&quot;: false,
+  &quot;overall_work_status&quot;: &quot;prior_review_completed_broader_research_pending&quot;,
+  &quot;final_pdf&quot;: &quot;evaluation/paper.pdf&quot;,
+  &quot;final_pdf_pages&quot;: 6,
+  &quot;writing_score&quot;: 9,
+  &quot;writing_verdict&quot;: &quot;ready for author review&quot;,
+  &quot;claim_supported&quot;: &quot;yes for narrow descriptive claims&quot;,
+  &quot;claim_confidence&quot;: &quot;medium&quot;,
+  &quot;continuation_context&quot;: &quot;CONTINUATION.md&quot;,
+  &quot;continuation_note&quot;: &quot;No numerical live budget approved; do not resume exhausted two-round historical loop&quot;
+}</code></pre></details>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source path <code>review-stage\AUTO_REVIEW.md</code> ·
+  SHA256 <code>8c362030ba7d</code> ·
+  generated at 2026-11-02 15:20 UTC.
+  This is a generated view — edit the source Markdown, then re-render.
+</footer>
+</main>
+
+</div>
+</body>
+</html>

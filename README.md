@@ -1,5 +1,9 @@
 # KajiAI-LangGraph
 
+Current continuation: [runtime implementation and a bounded live pilot](CONTINUATION.md). The previous offline review is complete; the broader research is unfinished. [Ready-to-paste prompt](CONTINUE_RESEARCH_PROMPT.md).
+
+Completed research: [500-by-two paired study](evaluation/results/study-20261009-v3/RESULTS.md), [working manuscript](evaluation/paper.tex), and [November 2 offline audit](evaluation/aris/20261102_120247/RESEARCH_AUDIT.md). The authoritative frozen runtime and dataset remain archived with that study. Current scores measure development-set label agreement; independent citation annotation remains unfinished.
+
 Standalone Python/LangGraph implementation of KajiAI's evidence-driven
 claim-analysis workflow. It does not import from or execute the CrewAI reference
 project.
@@ -193,13 +197,14 @@ not a historical evidence-cutoff benchmark. These are **label-only metrics**,
 not the official AVeriTeC evidence score. See [evaluation/README.md](evaluation/README.md)
 for the research protocol, ablations, interpretation, and limitations.
 
-For the frozen paired study (live retrieval system and same-model knowledge-only
-control), run:
+The following are historical runner examples for the paired study. The original
+output directory is preserved; these examples are not instructions to rerun it.
+A new approved condition must use a new directory:
 
 ```bash
-uv run --env-file .env python -m kaji_langgraph.study --limit 500 --workers 3 --seed 20261009 --max-rounds 3 --max-seconds 300 --output evaluation/results/study-20261009
+uv run --env-file .env python -m kaji_langgraph.study --limit 500 --workers 3 --seed 20261009 --max-rounds 3 --max-seconds 300 --output evaluation/results/NEW-APPROVED-STUDY
 # Resume with exactly the same options plus --resume.
-uv run python -m kaji_langgraph.study_analysis evaluation/results/study-20261009
+uv run python -m kaji_langgraph.study_analysis evaluation/results/NEW-APPROVED-STUDY
 ```
 
 The study saves a source snapshot, dataset snapshot, per-round unfiltered
