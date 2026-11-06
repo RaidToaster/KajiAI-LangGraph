@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention. original source fact check",
+        "candidates": [
+          {
+            "title": "Assad Regime Groundlessly Claims US and Allies are Lying ...",
+            "snippet": "“The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information …",
+            "url": "https://www.voanews.com/a/assad-regime-groundlessly-claims-us-and-allies-are-lying-about-chemical-attacks/6742662.html"
+          },
+          {
+            "title": "Chemical Weapons Convention (CWC) - State.gov",
+            "snippet": "Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on Their Destruction (CWC)",
+            "url": "https://2009-2017.state.gov/t/avc/trty/127917.htm"
+          },
+          {
+            "title": "Complying with the Made in USA Standard",
+            "snippet": "The FTC Act gives the Commission the power to bring law enforcement actions against false or misleading claims that a product is of U.S. origin.",
+            "url": "https://www.ftc.gov/business-guidance/resources/complying-made-usa-standard"
+          },
+          {
+            "title": "The US Violation of the Chemical Weapons Convention",
+            "snippet": "by DA Koplow · 2012 · Cited by 11 — The United States and Russia declared the possession of the world's largest CW inventories and have been working assiduously to incinerate, chemically ...",
+            "url": "https://scholarship.law.georgetown.edu/facpub/1042/"
+          },
+          {
+            "title": "The Chemical Weapons \"Red Line\"",
+            "snippet": "by GC Guidetti · 2013 — Reports that chemical agents may have been used in the war in Bosnia and. Herzegovina in July of 1995 prompted the U.S. to investigate; however, the government ...",
+            "url": "https://lawecommons.luc.edu/cgi/viewcontent.cgi?article=1009&context=pilr"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-baseline",
+  "timestamp": "2026-11-06T00:45:30.094762+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5395.406
+}

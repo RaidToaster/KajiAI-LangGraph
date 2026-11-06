@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks.",
+        "query": "Did Dr. Anthony Fauci author or co-author any paper addressing the 1918-1919 influenza pandemic, and if so, what are its title, date, and venue?",
+        "candidates": [
+          {
+            "title": "Predominant Role of Bacterial Pneumonia as a Cause ... - PMC",
+            "snippet": "by DM Morens · 2008 · Cited by 2275 — The majority of deaths in the 1918–1919 influenza pandemic likely resulted directly from secondary bacterial pneumonia caused by common upper respiratory–tract ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2599911/"
+          },
+          {
+            "title": "Fact check: Fauci study did not attribute 1918 Spanish flu ...",
+            "snippet": "In fact, the study that Fauci co-authored in 2008 does not mention masks and found that bacterial pneumonia led to most deaths in the Spanish ...",
+            "url": "https://www.reuters.com/article/world/fact-check-fauci-study-did-not-attribute-1918-spanish-flu-deaths-to-bacterial-p-idUSKBN2771ZO/"
+          },
+          {
+            "title": "No, Dr. Fauci didn't blame masks for 1918 Spanish flu deaths",
+            "snippet": "Viral claims appearing on social media say that Dr. Anthony Fauci published a study in 2008 linking mask usage during the 1918 Spanish Flu ...",
+            "url": "https://www.youtube.com/watch?v=kSBPNcx5xvY"
+          },
+          {
+            "title": "The Deadliest Flu: The Complete Story of the Discovery ...",
+            "snippet": "The true story of how the 1918 pandemic virus was discovered, sequenced and eventually reconstructed in a CDC laboratory to unpack its secrets and protect ...",
+            "url": "https://archive.cdc.gov/www_cdc_gov/flu/pandemic-resources/reconstruction-1918-virus.html"
+          },
+          {
+            "title": "Bacterial Pneumonia to Blame for Most 1918 Flu Pandemic ...",
+            "snippet": "Most victims succumbed to pneumonia caused when bacteria that normally inhabit the nose and throat invaded the lungs along a pathway created when the flu virus ...",
+            "url": "https://respiratory-therapy.com/disorders-diseases/infectious-diseases/other-infections/bacterial-pneumonia-to-blame-for-most-1918-flu-pandemic-deaths/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-070-deepseek-candidate",
+  "timestamp": "2026-11-06T01:40:00.723086+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8666.031
+}

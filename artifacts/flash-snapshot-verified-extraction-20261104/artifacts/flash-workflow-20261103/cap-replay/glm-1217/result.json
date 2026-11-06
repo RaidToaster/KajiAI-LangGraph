@@ -1,0 +1,98 @@
+{
+  "passed": false,
+  "parsed": true,
+  "valid_passage_ids": true,
+  "proposed_verdict": "FALSE",
+  "assessment": {
+    "proposed_verdict": "FALSE",
+    "confidence": "Medium",
+    "summary": "Cuba's CimaVax-EGF lung cancer vaccine exists, but the claim is refuted because the FDA authorized US trial access in October 2016, OFAC rule changes enabled access to Cuban-origin pharmaceuticals, and the US prescription barrier stems from FDA non-approval rather than sanctions.",
+    "evidence": [
+      {
+        "finding": "CimaVax-EGF is a therapeutic anticancer vaccine developed entirely in Cuba and licensed there for stage IIIB/IV non-small-cell lung cancer.",
+        "source_urls": [
+          "S7"
+        ],
+        "quotes": {
+          "S7": "P1"
+        },
+        "stance": "supports"
+      },
+      {
+        "finding": "The FDA authorized Roswell Park to run a Phase I/II trial of CimaVAX in late October 2016, with nearly 200 US volunteers by mid-November, so the US did have access as of the reference date.",
+        "source_urls": [
+          "S1"
+        ],
+        "quotes": {
+          "S1": "P2"
+        },
+        "stance": "refutes"
+      },
+      {
+        "finding": "American doctors cannot prescribe CimaVax because the FDA has not approved it pending US trials, contradicting the claim's attribution of the access barrier to sanctions.",
+        "source_urls": [
+          "S2"
+        ],
+        "quotes": {
+          "S2": "P2"
+        },
+        "stance": "refutes"
+      },
+      {
+        "finding": "OFAC's October 2016 regulatory changes authorized transactions to obtain FDA approval of, and import and market, Cuban-origin pharmaceuticals, showing sanctions were modified to enable access rather than bar it.",
+        "source_urls": [
+          "S5"
+        ],
+        "quotes": {
+          "S5": "P2"
+        },
+        "stance": "refutes"
+      }
+    ],
+    "assertions": [
+      {
+        "assertion": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "resolved": true,
+        "source_urls": [
+          "S1",
+          "S2",
+          "S5",
+          "S7"
+        ],
+        "rationale": ""
+      }
+    ],
+    "gaps": [
+      "No FDA announcement or ClinicalTrials.gov registration was retrieved to independently confirm the trial authorization beyond secondary reports (S1, S3, S8).",
+      "The pre-October-2016 embargo bar on US citizens seeking medical treatment in Cuba (S1 P1) lacks primary regulation text, so the historical 'no access' window cannot be fully bounded."
+    ],
+    "contradictions": [
+      "S1 P1 states the embargo forbids US citizens from seeking medical treatment in Cuba, partially supporting a historically bounded 'no access,' while S1 P2 and S5 record FDA/OFAC-enabled access from October 2016, refuting the unqualified claim for the reference date."
+    ],
+    "counterevidence_searched": true,
+    "sources_independent": true,
+    "peer_reviewed_sources": true,
+    "next_queries": [
+      "ClinicalTrials.gov registration and status of the Roswell Park CimaVax-EGF phase I/II trial.",
+      "OFAC CACR provision text on medical treatment and Cuban-origin pharmaceuticals before and after October 2016.",
+      "FDA approval status of CimaVax-EGF as of February 2020."
+    ]
+  },
+  "usage": [
+    {
+      "service": "ollama",
+      "request_id": "001",
+      "sent_at": "2026-11-03T08:23:36.563527+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash:cloud",
+      "done": true,
+      "done_reason": "stop",
+      "input_tokens": 3509,
+      "output_tokens": 5294,
+      "model_verified": true,
+      "incomplete": false
+    }
+  ]
+}

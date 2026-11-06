@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "Job Support Scheme closed businesses guidance November 2020 two thirds salary 67% cap £2,100 employees cannot work official gov.uk",
+        "candidates": [
+          {
+            "title": "Job Support Scheme expanded to firms required to close due ...",
+            "snippet": "The government will support eligible businesses by paying two thirds of each employees' salary (or 67%), up to a maximum of £2,100 a month. Missing:  cap  | Show results with:",
+            "url": "https://www.gov.uk/government/news/job-support-scheme-expanded-to-firms-required-to-close-due-to-covid-restrictions"
+          },
+          {
+            "title": "Check if you can claim the Job Support Scheme Closed if your ...",
+            "snippet": "JSS Closed is a grant payment you'll use to cover 66.67% of your employee's wages, up to a total grant cap of £2083.44 per month. You'll still ... Missing:  67%  £2100",
+            "url": "https://www.gov.uk/guidance/check-if-you-can-claim-the-job-support-scheme-closed-if-your-business-is-closed"
+          },
+          {
+            "title": "Job Support Scheme Expanded For Closed Businesses",
+            "snippet": "Government will cover two thirds of the wages (up to £2,100 per month) of eligible employees. Missing:  67%  cap",
+            "url": "https://www.legal500.com/intelligence/united-kingdom/employment-and-hr/job-support-scheme-expanded-for-closed-businesses"
+          },
+          {
+            "title": "Job Support Scheme - Local Government Association",
+            "snippet": "The Government will pay 61.67% of hours not worked up to a cap of £1,541.75 per month, with the employer contributing a further 5% (up to a cap of £125 per ... Missing:  November  67%",
+            "url": "https://www.local.gov.uk/job-support-scheme"
+          },
+          {
+            "title": "Employers have been legally required to close their premises ...",
+            "snippet": "The government will support eligible businesses by paying two thirds of each employees' salary (or 67%), up to a maximum of £2,100 a month.",
+            "url": "https://www.facebook.com/franksaccounts/posts/job-support-scheme-update-2employers-who-are-legally-required-to-close-their-pre/3222133194562705/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-candidate",
+  "timestamp": "2026-11-06T08:34:55.428190+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21284.734
+}

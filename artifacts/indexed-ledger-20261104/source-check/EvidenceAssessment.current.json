@@ -1,0 +1,151 @@
+{
+  "$defs": {
+    "AssertionAssessment": {
+      "properties": {
+        "assertion": {
+          "title": "Assertion",
+          "type": "string"
+        },
+        "rationale": {
+          "default": "",
+          "title": "Rationale",
+          "type": "string"
+        },
+        "resolved": {
+          "default": false,
+          "title": "Resolved",
+          "type": "boolean"
+        },
+        "source_urls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Urls",
+          "type": "array"
+        }
+      },
+      "required": [
+        "assertion"
+      ],
+      "title": "AssertionAssessment",
+      "type": "object"
+    },
+    "EvidenceItem": {
+      "properties": {
+        "finding": {
+          "default": "",
+          "title": "Finding",
+          "type": "string"
+        },
+        "quotes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Quotes",
+          "type": "object"
+        },
+        "source_urls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Urls",
+          "type": "array"
+        },
+        "stance": {
+          "default": "context",
+          "enum": [
+            "supports",
+            "refutes",
+            "context"
+          ],
+          "title": "Stance",
+          "type": "string"
+        }
+      },
+      "title": "EvidenceItem",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "assertions": {
+      "items": {
+        "$ref": "#/$defs/AssertionAssessment"
+      },
+      "title": "Assertions",
+      "type": "array"
+    },
+    "confidence": {
+      "default": "Low",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    },
+    "contradictions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Contradictions",
+      "type": "array"
+    },
+    "counterevidence_searched": {
+      "default": false,
+      "title": "Counterevidence Searched",
+      "type": "boolean"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/EvidenceItem"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "gaps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Gaps",
+      "type": "array"
+    },
+    "next_queries": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Next Queries",
+      "type": "array"
+    },
+    "peer_reviewed_sources": {
+      "default": false,
+      "title": "Peer Reviewed Sources",
+      "type": "boolean"
+    },
+    "proposed_verdict": {
+      "default": "UNVERIFIED",
+      "enum": [
+        "TRUE",
+        "FALSE",
+        "MISLEADING",
+        "CONFLICTING",
+        "NOT_ENOUGH_EVIDENCE",
+        "UNVERIFIED"
+      ],
+      "title": "Proposed Verdict",
+      "type": "string"
+    },
+    "sources_independent": {
+      "default": false,
+      "title": "Sources Independent",
+      "type": "boolean"
+    },
+    "summary": {
+      "default": "",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "title": "EvidenceAssessment",
+  "type": "object"
+}

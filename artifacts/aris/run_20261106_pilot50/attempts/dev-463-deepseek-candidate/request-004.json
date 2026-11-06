@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "558 people were killed by the police in 2018, while 201 people died in police custody",
+        "query": "What jurisdiction or country do the figures of 558 police killings and 201 deaths in police custody for 2018 refer to?",
+        "candidates": [
+          {
+            "title": "Mapping Police Violence",
+            "snippet": "Police have killed 1,062 Victim people in Location the U.S. Police killings per 1 million people in the U.S. in 49 states and the District of Columbia",
+            "url": "https://mappingpoliceviolence.org/"
+          },
+          {
+            "title": "U.S. Data on Police Shootings and Violence",
+            "snippet": "An average of 800 people are killed by law enforcement in the U.S. each year. approximately 25 percent of all persons killed by law enforcement.",
+            "url": "https://policeepi.uic.edu/u-s-data-on-police-shootings-and-violence/"
+          },
+          {
+            "title": "U.S. police kill far more civilians annually than any other...",
+            "snippet": "Data from the U.S., the Netherlands, England and Wales, and Iceland are from 2019. Data from Australia, Germany, Japan, New Zealand, and Norway are from 2018 , ...",
+            "url": "https://www.prisonpolicy.org/graphs/policekillings_total.html"
+          },
+          {
+            "title": "List of countries with annual rates and counts for killings by ...",
+            "snippet": "Official 2018 statistics show only 46 deaths in police custody and 24 deaths of people in police /judicial remand … a total of 91 nationally.",
+            "url": "https://en.wikipedia.org/wiki/List_of_countries_with_annual_rates_and_counts_for_killings_by_law_enforcement_officers"
+          },
+          {
+            "title": "Federal Deaths in Custody and During Arrest, 2021",
+            "snippet": "Federal law enforcement agencies reported 105 arrest-related deaths and 613 deaths in custody in fiscal year (FY) 2021 ( figure 1). jurisdiction with state and ... 13 pages",
+            "url": "https://bjs.ojp.gov/document/fdcda21st.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-463-deepseek-candidate",
+  "timestamp": "2026-11-06T01:05:40.187872+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6605.5
+}

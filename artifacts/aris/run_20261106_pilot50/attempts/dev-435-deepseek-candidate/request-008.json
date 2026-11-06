@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "What metrics (income, assets, consumption, GDP per capita) are used to compare wealth per capita across African populations?",
+        "candidates": [
+          {
+            "title": "The Changing Wealth of Nations 2024 - World Bank Group",
+            "snippet": "The World Bank 2024 Changing Wealth of Nations (CWON) report offers a comprehensive view of a country's wealth by accounting for natural and human capital, complementing traditional GDP measures.",
+            "url": "https://www.worldbank.org/en/publication/the-changing-wealth-of-nations"
+          },
+          {
+            "title": "How to Measure a Country's Wealth: GDP, PPP and More",
+            "snippet": "How rich is a country? The answer depends on what you measure. A nation’s yearly output, the income its residents earn, the assets it has built up, and the living standards of its people are four different things, and each ranking tells a different story.",
+            "url": "https://petersworld.org/wealth-of-nations/"
+          },
+          {
+            "title": "Assessing comparative asset-based measures of material wealth ...",
+            "snippet": "In the last decade, researchers have proposed a number of asset-based measures that permit global comparisons of household wealth across populations in different countries and over time.",
+            "url": "https://www.sciencedirect.com/science/article/pii/S2352827322000441"
+          },
+          {
+            "title": "GDP per capita (current US$) - Africa - World Bank Data",
+            "snippet": "GDP per capita (current US$) - Africa Country official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, Organisation for Economic Co-operation and Development ( OECD ); Staff estimates, World Bank ( WB )",
+            "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=A9"
+          },
+          {
+            "title": "New International Comparison Program data sheds light on ...",
+            "snippet": "New economic indicators from the International Comparison Program (ICP) deliver in-depth insights into the state of the global economy and material well-being across the world in 2021.",
+            "url": "https://blogs.worldbank.org/en/opendata/new-international-comparison-program-data-sheds-light-on-global-"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-candidate",
+  "timestamp": "2026-11-05T23:53:43.959097+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2289.265
+}

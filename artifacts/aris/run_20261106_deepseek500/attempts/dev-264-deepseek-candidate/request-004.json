@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump has not appoointed any black federal judges.",
+        "query": "How many federal judges had Donald Trump appointed as of 2020-09-25, according to official records such as the Federal Judicial Center or the Administrative Office of the U.S. Courts?",
+        "candidates": [
+          {
+            "title": "How Trump's judge appointments compare with other ...",
+            "snippet": "Trump appointed 54 federal appellate judges in four years, one short of the 55 Obama appointed in twice as much time. In the process, Trump “ ...",
+            "url": "https://www.pewresearch.org/short-reads/2021/01/13/how-trump-compares-with-other-recent-presidents-in-appointing-federal-judges/"
+          },
+          {
+            "title": "List of federal judges appointed by Donald Trump",
+            "snippet": "Trump has not made any recess appointments to the federal courts. In terms of Article I courts, Trump has made 43 appointments: 18 for the United States Court ...",
+            "url": "https://en.wikipedia.org/wiki/List_of_federal_judges_appointed_by_Donald_Trump"
+          },
+          {
+            "title": "How many federal judges has President Donald Trump ...",
+            "snippet": "⚖️ Since returning to the White House, Trump has appointed 55 judges to the federal judiciary. That's among the lowest pre-midterm totals of ...",
+            "url": "https://www.facebook.com/pewresearch/posts/how-many-federal-judges-has-president-donald-trump-appointed-in-his-second-term-/1490321319630590/"
+          },
+          {
+            "title": "Trump SCOTUS Watch",
+            "snippet": "During his time in office, Donald Trump appointed three United States Supreme Court Justices. The first Trump appointee to the Supreme Court, Neil Gorsuch, was ...",
+            "url": "https://afj.org/why-courts-matter/trump-scotus-watch/"
+          },
+          {
+            "title": "Trump's judicial appointment pace is unlikely to match his ...",
+            "snippet": "Trump appointed a near-record 231 circuit, district, and Court of International Trade judges in his first term. Those judges and the 53 second-term appointees ...",
+            "url": "https://www.brookings.edu/articles/trumps-judicial-appointment-pace-is-unlikely-to-match-his-first-term-record/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-264-deepseek-candidate",
+  "timestamp": "2026-11-06T05:03:08.897806+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8578.203
+}

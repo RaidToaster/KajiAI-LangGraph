@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "query": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received. evidence",
+        "candidates": [
+          {
+            "title": "Is voting by mail secure, and how can I know my mail-in ...",
+            "snippet": "There is a common misconception that the only way to know for sure that your vote is securely received and counted is to walk into a polling place and cast ...",
+            "url": "https://electioninnovation.org/update/is-voting-by-mail-secure-and-how-can-i-know-my-mail-in-vote-is-counted/"
+          },
+          {
+            "title": "In Person Voting 101",
+            "snippet": "In-person voting is when voters physically travel to a polling location and cast their ballots in person. When you vote in person, you will either select your.",
+            "url": "https://www.eac.gov/sites/default/files/Voting%20101/Additional%20Resources/In-Person%20Voting%20101.pdf"
+          },
+          {
+            "title": "Election Protection: Know your Rights as a Voter",
+            "snippet": "The lines may be long, but you're allowed to vote as long as you're in line when the polls close! Vote a regular ballot if you can. Cast a provisional ballot ...",
+            "url": "https://www.vote.org/election-protection/"
+          },
+          {
+            "title": "What to know about your voting rights at the polls",
+            "snippet": "ABC News Legal Contributor James Sample breaks down what voters need to know about their rights at the ballot box.",
+            "url": "https://www.youtube.com/shorts/yxRA6RReWZ4"
+          },
+          {
+            "title": "Report Voting Outside the Polling Place: Absentee, All-Mail ...",
+            "snippet": "Most states now permit voters to cast ballots before Election Day, either in person at designated early voting sites, or via a ballot that has been mailed to ...",
+            "url": "https://www.ncsl.org/elections-and-campaigns/voting-outside-the-polling-place"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:38:05.665029+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7074.984
+}

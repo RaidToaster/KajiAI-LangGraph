@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Bernie Sanders statement after Senate passage of Affordable Care Act December 2009",
+        "candidates": [
+          {
+            "title": "Senator Sanders (I-VT): Senate Democrats' Health Bill ...",
+            "snippet": "' That if you're an ordinary person who has employer-based health care, that your premiums are not going to go up in the next eight years based ...",
+            "url": "https://waysandmeans.house.gov/2009/12/14/senator-sanders-i-vt-senate-democrats-health-bill-increases-premiums/"
+          },
+          {
+            "title": "Sen. Bernie Sanders (I-VT) â€“ Health Care Debate 2009 ...",
+            "snippet": "Sen. Bernie Sanders outlines the serious problems in the current US health care system - from its complexity and cost to inadequate coverage ...",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-sen-bernie-sanders-i-vt--health-care-debate-2009-6-problems/4538749"
+          },
+          {
+            "title": "Senator Bernie Sanders (I-VT) Comments on the Senate ...",
+            "snippet": "“I voted to proceed on health care reform because our current health care system is disintegrating and must be reformed. Forty-six million ...",
+            "url": "https://www.ueunion.org/political-action/2009/senator-bernie-sanders-ivt-comments-on-the-senate-healthcare-vote"
+          },
+          {
+            "title": "Statement by Senator Bernie Sanders on Affordable Care Act ...",
+            "snippet": "\"Instead of gutting the Affordable Care Act, we need to expand on the improvements that it has made to our health care system. The time has come ...",
+            "url": "https://www.presidency.ucsb.edu/documents/statement-senator-bernie-sanders-affordable-care-act-ruling"
+          },
+          {
+            "title": "Sanders: Public Option Critical to Health Reform",
+            "snippet": "“This legislation cannot simply be a huge subsidy to private insurance companies that will get millions of new customers and be able to raise ...",
+            "url": "https://www.sanders.senate.gov/press-releases/sanders-public-option-critical-to-health-reform/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:30:18.569485+00:00",
+  "status": "reserved_outcome_unknown"
+}

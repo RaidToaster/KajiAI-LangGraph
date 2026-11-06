@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Photo of three officers at the Indian Police Service who belong to the same family.",
+        "query": "Does a photo exist that shows three people identified as Indian Police Service officers together?",
+        "candidates": [
+          {
+            "title": "Pic Shows Three IPS Officers From Same Family? It's a False Claim",
+            "snippet": "However, one of the police officers seen in the viral image, Shrut Kirti Somavanshi, told The Quint that the claim being made is “not true.”.",
+            "url": "https://www.thequint.com/news/webqoof/image-shows-three-ips-officers-belonging-to-same-family-no-false-claim"
+          },
+          {
+            "title": "posted the picture with comments such as 'I surrender' and 'people are ...",
+            "snippet": "The person in the viral picture is actually actor Kainaat Arora, who in her upcoming Punjabi movie Jagga Jiundae, is playing the role of a ...",
+            "url": "https://www.facebook.com/100068443973667/posts/like_follow_and_share_page-the-real-story-behind-the-viral-photo-of-punjab-polic/245693056922102/"
+          },
+          {
+            "title": "No, The Three IPS Officers In This Photo Are Not Siblings",
+            "snippet": "Claim : Image shows two brothers and one sister who are IPS officers from the same family. Claimed By : Facebook Post. Fact Check : False.",
+            "url": "https://www.boomlive.in/fast-check/three-ips-officers-siblings-same-family-fake-news-fact-check-17217"
+          },
+          {
+            "title": "Watch | A man allegedly posing as an #IPS officer was exposed and booked ...",
+            "snippet": "Watch | A man allegedly posing as an #IPS officer was exposed and booked by police after he reportedly tried to pull rank on real policemen ...",
+            "url": "https://www.facebook.com/TimesofIndia/posts/watch-a-man-allegedly-posing-as-an-ips-officer-was-exposed-and-booked-by-police-/1445547534286096/"
+          },
+          {
+            "title": "India police 'sorry' for lynching photo",
+            "snippet": "Police apologise for a picture of a lynched man being dragged by a mob with three officers present.",
+            "url": "https://www.bbc.com/news/world-asia-india-44572406"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-396-deepseek-candidate",
+  "timestamp": "2026-11-06T04:12:36.641336+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5545.953
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "What official announcements, notices, or press releases from HMWSSB describe doorstep delivery of bleaching powder or chlorine tablets, and what quantities and dates do they specify?",
+        "candidates": [
+          {
+            "title": "Chemical Disinfectants | Infection Control",
+            "snippet": "Alternative compounds that release chlorine and are used in the health-care setting include demand-release chlorine dioxide, sodium ...",
+            "url": "https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/chemical-disinfectants.html"
+          },
+          {
+            "title": "Bleach",
+            "snippet": "Chlorine-releasing solutions, such as liquid bleach and solutions of bleaching powder, can burn the skin and cause eye damage, especially when used in ...",
+            "url": "https://en.wikipedia.org/wiki/Bleach"
+          },
+          {
+            "title": "Tablet Chlorination",
+            "snippet": "These tablets dissolve in the wastewater, releasing the hypochlorite, which then becomes hypochlorous acid, the primary disinfectant. Do not use swimming pool.",
+            "url": "https://www.h-gac.com/getmedia/742b1465-91d1-46da-b48a-2d4216612dd4/OSSF-Treatment-Systems_Tablet-Chlorination.pdf"
+          },
+          {
+            "title": "Tablet Chlorination",
+            "snippet": "Tablet chlorinators generally have four components: • chlorine tablets, They are made of calcium hypochlorite, a common household bleach. These tablets ...",
+            "url": "https://www.lcghd.org/wp-content/uploads/2019/02/HO-FS-on-chlorine-tablets.pdf"
+          },
+          {
+            "title": "Municipal Wastewater Chlorination",
+            "snippet": "Our tableted chlorination systems deliver consistent and controllable levels of chlorine residuals to eliminate bacteria, algae and organic contaminants while ...",
+            "url": "https://www.westlakewatersolutions.com/municipal/municipal-wastewater"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-deepseek-candidate",
+  "timestamp": "2026-11-06T01:50:58.336808+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9323.64
+}

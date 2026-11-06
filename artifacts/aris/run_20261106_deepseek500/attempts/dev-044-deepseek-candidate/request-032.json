@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Deliberately infecting children to COVID-19 at “pox parties” could be a good way to help create herd immunity against COVID-19 without a vaccine.",
+        "query": "Search primary public health surveillance or outbreak-investigation records for documented deliberate SARS-CoV-2 infection gatherings among children and reported outcomes.",
+        "candidates": [
+          {
+            "title": "Children's Birthday Gatherings and SARS-CoV-2 Infection in ...",
+            "snippet": "Question Are social gatherings, exemplified by children's birthdays, associated with increased SARS-CoV-2 infection risk in older adults?",
+            "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2851590"
+          },
+          {
+            "title": "Experience",
+            "snippet": "",
+            "url": "https://experience.arcgis.com/experience/5b5719930d584e87a0eeb66b48752ce5/page/Data-Notes?views=COVID-19-Outcomes%2COutbreaks%2CRSV-Cases%2CSummary"
+          },
+          {
+            "title": "Surveillance of Acute SARS-CoV-2 Infections in Elementary ...",
+            "snippet": "The COVID Kids Bavaria study is a large, multi-center, open cohort study investigating the distribution of SARS-CoV-2 among children and staff in daycare ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9298551/"
+          },
+          {
+            "title": "COVID-19 Case Surveillance Public Use Data",
+            "snippet": "... Demographic Trends of COVID-19 cases and deaths in the US reported to CDC. 1-12 of 12. Demographic Trends of COVID-19 cases and deaths in the US reported to ...",
+            "url": "https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf"
+          },
+          {
+            "title": "Transmission of SARS-CoV-2 by children: a rapid review ... - PMC",
+            "snippet": "The role of children in the transmission of SARS-CoV-2 during the early pandemic was unclear. We aimed to review studies on the transmission of SARS-CoV-2 ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8815097/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-044-deepseek-candidate",
+  "timestamp": "2026-11-06T07:48:49.761729+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18519.062
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve.",
+        "query": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve. evidence",
+        "candidates": [
+          {
+            "title": "Five common misconceptions regarding flattening-the-curve of ...",
+            "snippet": "by AAM Daud · 2022 · Cited by 21 — 1, the flattened curve shows what happens if the spread of the virus slows down; the virus that initially grow exponentially to reach a peak and ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9435423/"
+          },
+          {
+            "title": "The COVID-19 Curve has Unflattened Fast. Now What?",
+            "snippet": "Cities and states hit hard by the new coronavirus 'flattened the curve' of a rising tide of cases by cutting back on the kinds of interactions ...",
+            "url": "https://www.michiganmedicine.org/health-lab/covid-19-curve-has-unflattened-fast-now-what"
+          },
+          {
+            "title": "Evaluating the Effectiveness of Social Distancing Interventions to Delay or ...",
+            "snippet": "Our results suggest interventions started earlier in the epidemic delay the epidemic curve and interventions started later flatten the epidemic ...",
+            "url": "https://wwwnc.cdc.gov/eid/article/26/8/20-1093_article"
+          },
+          {
+            "title": "Flattening the Curve, Then What?",
+            "snippet": "The metaphor “flattening the curve” has succinctly captured the challenge of responding to the coronavirus pandemic in the United States.",
+            "url": "https://www.thehastingscenter.org/flattening-the-curve-then-what/"
+          },
+          {
+            "title": "How will we know if all these measures are actually \"flattening the curve\"? ...",
+            "snippet": "The nation's death toll remains lower than countries government medical officials have suggested we are starting to \"flatten the curve\".",
+            "url": "https://www.facebook.com/unimelb/posts/how-will-we-know-if-all-these-measures-are-actually-flattening-the-curve-our-exp/10163568445900195/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-055-deepseek-baseline",
+  "timestamp": "2026-11-06T08:19:01.103005+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20330.406
+}

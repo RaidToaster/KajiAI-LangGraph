@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details evidence",
+        "candidates": [
+          {
+            "title": "Fact check: Harris' lesson on Lincoln Supreme Court nom ...",
+            "snippet": "Harris skipped over the fact that Lincoln could not have nominated a replacement for a Supreme Court vacancy. Our rating: True We rate this ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/13/fact-check-harris-lesson-lincoln-supreme-court-nom-lacks-detail/5943183002/"
+          },
+          {
+            "title": "Kamala Harris, Honest Abe and the Supreme Court",
+            "snippet": "There's no evidence that Lincoln said he delayed the nomination to let voters choose the next president, as Harris said.",
+            "url": "https://www.factcheck.org/2020/10/kamala-harris-honest-abe-and-the-supreme-court/"
+          },
+          {
+            "title": "Sen. Kamala Harris claimed that President Lincoln chose ...",
+            "snippet": "Sen. Kamala Harris claimed that President Lincoln chose not to nominate a Supreme Court justice until after the election because he wanted the people to vote.",
+            "url": "https://www.facebook.com/newscentermaine/posts/sen-kamala-harris-claimed-that-president-lincoln-chose-not-to-nominate-a-supreme/10157942960719613/"
+          },
+          {
+            "title": "Supreme Court Illinois Rules of Evidence",
+            "snippet": "View the Supreme Court Illinois Rules of Evidence. The Illinois Rules of Evidence govern proceedings in the courts except as otherwise ...",
+            "url": "https://www.illinoiscourts.gov/courts/supreme-court/courts-supreme-court-illinois-rules-of-evidence/"
+          },
+          {
+            "title": "Lincoln's Election-Year Supreme Court Nominee",
+            "snippet": "There is no evidence that he seriously considered announcing his choice before he was re-elected. Lincoln was not, however above using the ...",
+            "url": "https://www.lincolncottage.org/lincolns-election-year-supreme-court-nominee/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-deepseek-baseline",
+  "timestamp": "2026-11-06T01:14:48.881018+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7154.187
+}

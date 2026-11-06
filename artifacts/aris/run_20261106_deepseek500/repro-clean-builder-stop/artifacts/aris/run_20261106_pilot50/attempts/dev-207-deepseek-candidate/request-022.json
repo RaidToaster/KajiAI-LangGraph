@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "UN Population Division historical estimates Nigeria 1960 population",
+        "candidates": [
+          {
+            "title": "Nigeria Population (2026)",
+            "snippet": "Nigeria Population (LIVE) ; 1959, 44,161,681 ; 1960, 45,053,782 ; 1961, 45,989,310 ; 1962, 46,965,292.",
+            "url": "https://www.worldometers.info/world-population/nigeria-population/"
+          },
+          {
+            "title": "Demographics of Nigeria",
+            "snippet": "The Population Department of the United Nations prepared the following estimates (UN World Population Prospects 2022). Year, Population, Live births per ...",
+            "url": "https://en.wikipedia.org/wiki/Demographics_of_Nigeria"
+          },
+          {
+            "title": "World Population Prospects 2024",
+            "snippet": "It presents population estimates from 1950 to the present for 237 countries or areas, underpinned by analyses of historical demographic trends.",
+            "url": "https://population.un.org/wpp/"
+          },
+          {
+            "title": "Population, total - Nigeria",
+            "snippet": "Nigeria from The World Bank: United Nations ( UN ), UN Population Division; Statistical databases and publications from national statistical offices, Recent ...",
+            "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=NG"
+          },
+          {
+            "title": "Nigeria - Population and Demography Country Profile",
+            "snippet": "by H Ritchie · 2026 · Cited by 2 — In 2023, the estimated population of Nigeria was 227.9 million. In the chart, you can see how the population numbers have changed over the past 70 years.",
+            "url": "https://ourworldindata.org/profile/population-demography/nigeria"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-candidate",
+  "timestamp": "2026-11-06T00:09:42.179970+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3247.484
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent.",
+        "query": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s evidence",
+        "candidates": [
+          {
+            "title": "Gross Domestic Product | U.S. Bureau of Economic Analysis (BEA)",
+            "snippet": "Real gross domestic product (GDP) increased at an annual rate of 3.4 percent in the third quarter of 2026 (July, August, and September), according to the advance estimate released today by the U.S. Bureau of Economic Analysis (BEA).",
+            "url": "https://www.bea.gov/data/gdp/gross-domestic-product"
+          },
+          {
+            "title": "World GDP Ranking 2026 - StatisticsTimes.com",
+            "snippet": "On a PPP basis, China remains the world's largest economy, with an estimated GDP that exceeds that of the United States by Int. $11.9 trillion in 2026. The gap is projected to widen further in the coming years, reflecting China's stronger economic growth.",
+            "url": "https://statisticstimes.com/economy/projected-world-gdp-ranking.php"
+          },
+          {
+            "title": "Outlook",
+            "snippet": "Outlook",
+            "url": "https://outlook.live.com/owa/?path=/mail/inbox/rp/"
+          },
+          {
+            "title": "GDP rose at 33.1 percent annualized rate last quarter, but ...",
+            "snippet": "Last quarter saw a record-high jump in economic growth: The government’s initial GDP calculation came in at 33.1 percent for the quarter on an annualized basis.",
+            "url": "https://www.nbcnews.com/business/economy/gdp-rose-33-1-percent-last-quarter-blowout-figure-not-n1245068"
+          },
+          {
+            "title": "GDP U.S.: Economy grew 33.1% annualized in Q3 as ... - USA TODAY",
+            "snippet": "Economy grew at record 33.1% pace in Q3 as more businesses reopened after COVID shutdowns. But growth could slow.",
+            "url": "https://www.usatoday.com/story/money/2020/10/29/gdp-u-s-economy-grew-33-1-annualized-q-3-businesses-reopened/6064109002/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-009-deepseek-baseline",
+  "timestamp": "2026-11-06T05:55:10.929908+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11700.25
+}

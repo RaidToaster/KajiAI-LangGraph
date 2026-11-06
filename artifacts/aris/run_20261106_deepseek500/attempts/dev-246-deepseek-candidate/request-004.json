@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A “new virus” disease called Novel Bunya V!rus that is caused by ticks is diagnosed as severe fever with thrombocytopenia syndrome (SFTS) is spreading in China.",
+        "query": "What primary records or official health notices describe a disease called \"Novel Bunya V!rus\" in China, and what dates do they cover?",
+        "candidates": [
+          {
+            "title": "Novel bunya virus infection caused by tick bites can ... - Global Times",
+            "snippet": "Aug 5, 2020 · Lu'an in East China's Anhui Province confirmed on July 11 that the tick-borne infectious disease SFTS has caused five deaths and ...",
+            "url": "https://www.globaltimes.cn/content/1196864.shtml"
+          },
+          {
+            "title": "Novel bunyavirus re-emerges in China | news.com.au",
+            "snippet": "Aug 7, 2020 · A deadly virus has re-emerged in China, infecting at least 60 people as experts confirm it can spread from person to person.",
+            "url": "https://www.news.com.au/technology/novel-bunyavirus-reemerges-in-china/news-story/b833406e5b2b391aac62dc52db554e64"
+          },
+          {
+            "title": "Chinese authorities identified a new type of #coronavirus as a cause ...",
+            "snippet": "Feb 1, 2020 · Chinese authorities identified a new type of #coronavirus as a cause of pneumonia outbreak in China, which is different from any other human ...",
+            "url": "https://www.facebook.com/NHPINDIA/posts/chinese-authorities-identified-a-new-type-of-coronavirus-as-a-cause-of-pneumonia/2725354930867275/"
+          },
+          {
+            "title": "The World Health Organization (WHO) announced that the novel ...",
+            "snippet": "Jul 13, 2022 · Explanation: Regarding the name \"covid-19\" this is due to the corona virus which was first identified in China on December 31, 2019. The origin ...",
+            "url": "https://brainly.ph/question/29148964"
+          },
+          {
+            "title": "Novel coronavirus (2019-nCoV) What is ...",
+            "snippet": "Jan 29, 2020 · Coronaviruse was first seen in Hubei Province, China and is called 'novel' because it is new. Coronaviruses can make humans and animals sick.",
+            "url": "https://www.facebook.com/ExpertChitwan/posts/%F0%9D%90%8D%F0%9D%90%A8%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%AF%F0%9D%90%A2%F0%9D%90%AB%F0%9D%90%AE%F0%9D%90%AC-%F0%9D%9F%90%F0%9D%9F%8E%F0%9D%9F%8F%F0%9D%9F%97-%F0%9D%90%A7%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%95%F0%9D%90%96%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AD-%F0%9D%90%A2%F0%9D%90%AC-%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%AF%F0%9D%90%A2%F0%9D%90%AB%F0%9D%90%AE%F0%9D%90%ACcoronaviruse-was-first-seen-in-hub/625468778017821/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-246-deepseek-candidate",
+  "timestamp": "2026-11-06T04:58:31.722708+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8301.046
+}

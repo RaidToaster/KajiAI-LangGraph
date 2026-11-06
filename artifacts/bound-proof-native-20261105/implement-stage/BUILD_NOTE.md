@@ -1,0 +1,1 @@
+F0 existing proof native dispatch is the running spine (172 retained tests). F1 bound issue schema/compiler. F2 runtime/study dispatch. F3 full suite and fresh same-family provisional assumption/design review. No stubs. No live sends yet.

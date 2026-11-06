@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls independently verified original reporting evidence",
+        "candidates": [
+          {
+            "title": "Klobuchar misfires with debate salvo on Wisconsin voter ...",
+            "snippet": "“While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls.” Mostly False. Legal ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+          },
+          {
+            "title": "Democratic Candidates Debate in Charleston, South Carolina",
+            "snippet": "Senator Amy Klobuchar (MN); While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting ...",
+            "url": "https://www.presidency.ucsb.edu/documents/democratic-candidates-debate-charleston-south-carolina-0"
+          },
+          {
+            "title": "Fact Check: Late-night Wisconsin election update for ...",
+            "snippet": "The post contains a graph titled, “Wisconsin 2024 Senate Vote Totals” that shows Democratic and Republican votes for the senatorial race from 8 ...",
+            "url": "https://www.reuters.com/fact-check/late-night-wisconsin-election-update-senator-is-not-proof-fraud-2024-11-15/"
+          },
+          {
+            "title": "Minnesota Governor Debate 2026: Klobuchar on Rubber ...",
+            "snippet": "Minnesota Governor Debate 2026: Klobuchar on Rubber Stamp and Wisconsin Billionaire Donor. Summarized by AI from the post below.",
+            "url": "https://www.facebook.com/amyklobuchar/videos/an-important-point-he-is-a-packers-fan/3740344509437553/"
+          },
+          {
+            "title": "Read the full transcript of ABC News' 3rd Democratic debate",
+            "snippet": "Read the full transcript of the third 2020 Democratic Debate airing on Thursday night, Sept. 12, 2019, on ABC News.",
+            "url": "https://abcnews.com/US/read-full-transcript-abc-news-3rd-democratic-debate/story?id=65587810"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-03T08:41:02.315826+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent.",
+        "query": "then it’s less than half. This is the greatest number, 33.1 percent. evidence",
+        "candidates": [
+          {
+            "title": "Tax Payments by Undocumented Immigrants",
+            "snippet": "Undocumented immigrants paid $25.7 billion in Social Security taxes, $6.4 billion in Medicare taxes, and $1.8 billion in unemployment insurance ...",
+            "url": "https://itep.org/undocumented-immigrants-taxes-2024/"
+          },
+          {
+            "title": "2-2 Percents Greater Than 100 and Less Than 1 (Part 1)",
+            "snippet": "2-2 Percents Greater Than 100 and Less Than 1 (Part 1) Lesson 6 3 Represent Percents Greater Than 100 or Less Than 1",
+            "url": "https://www.youtube.com/watch?v=iVTlz_hHWeY"
+          },
+          {
+            "title": "Divorce Statistics: Over 115 Studies, Facts and Rates ...",
+            "snippet": "We found every divorce statistic, study and fact you need to know - over 115 in all. Find out what impacts divorce (spoiler: almost everything).",
+            "url": "https://www.wf-lawyers.com/divorce-statistics-and-facts/"
+          },
+          {
+            "title": "Welfare Use by Immigrants and the U.S.-Born, 2024",
+            "snippet": "48 percent use the welfare system compared to 33 percent of nuclear-family-only U.S.-born households.",
+            "url": "https://cis.org/Report/Welfare-Use-Immigrants-and-USBorn-2024"
+          },
+          {
+            "title": "Evolution of the global smoking epidemic over the past half ...",
+            "snippet": "by X Dai · 2022 · Cited by 734 — Smoking prevalence has declined by 27.2% (26.0% to 28.3%) for men since 1990, and by 37.9% (35.3% to 40.1%) for women.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35241576/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-009-deepseek-baseline",
+  "timestamp": "2026-11-06T05:55:18.397537+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11707.718
+}

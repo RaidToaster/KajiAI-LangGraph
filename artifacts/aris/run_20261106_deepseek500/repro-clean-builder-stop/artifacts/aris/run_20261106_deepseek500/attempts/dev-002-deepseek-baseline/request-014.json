@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens evidence",
+        "candidates": [
+          {
+            "title": "Fact check: France did not deport Pakistanis after PM Imran ...",
+            "snippet": "Pakistan's embassy in France on Sunday debunked news of Pakistani nationals being deported from the country following Prime Minister Imran ...",
+            "url": "https://www.geo.tv/latest/316317-fact-check-france-cancellation-of-pakistani-nationals-visa-pm-imran-khans-remarks-fake"
+          },
+          {
+            "title": "Fact Check: Fake tweet on France deporting Pakistanis go ...",
+            "snippet": "Tourist visas of 183 Pak citizens were rejected by France after Imran Khan criticised Macron's comments on Islam. Some 118 Pak citizens with ...",
+            "url": "https://www.indiatoday.in/fact-check/story/fact-check-fake-tweet-france-deporting-pakistanis-go-viral-imran-slams-macron-1737276-2020-11-02"
+          },
+          {
+            "title": "France takes huge step against Pakistan; revokes visas of ...",
+            "snippet": "This action is directly linked to the anti-French rhetoric of Imran Khan and has made it clear that it will not bow down to the pressure on ...",
+            "url": "https://www.dnaindia.com/world/report-france-takes-huge-step-against-pakistan-revokes-visas-of-183-nationals-2853862"
+          },
+          {
+            "title": "Indian media outlets fall for impostor account claiming ...",
+            "snippet": "“French authorities have rejected 183 visitor visas following Prime Minister Imran Khan's remarks on French President Emmanuel Macron,” reported ...",
+            "url": "https://www.altnews.in/indian-media-outlets-fall-for-impostor-account-claiming-france-revoked-183-pakistani-visas/"
+          },
+          {
+            "title": "Pakistan's Khan slams Macron's views on Islam",
+            "snippet": "The Pakistani prime minister has also sought a ban on \"Islamophobic content\" on Facebook. Imran Khan's criticism of Emmanuel Macron comes at ...",
+            "url": "https://www.dw.com/en/pakistans-imran-khan-slams-french-president-macrons-views-on-islam/a-55394035"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-baseline",
+  "timestamp": "2026-11-06T04:22:07.998430+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6117.312
+}

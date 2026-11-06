@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "What towns named Grand Island exist in the US, and in which state(s) has Nate McMurray served as a Town Supervisor?",
+        "candidates": [
+          {
+            "title": "Nate McMurray launches run for 145th Assembly District",
+            "snippet": "McMurray is the former Grand Island town supervisor and ran for congress three times. He says his campaign is about helping Niagara falls reach ...",
+            "url": "https://www.wivb.com/news/political-news/your-local-election-headquarters-new-york-state/nate-mcmurray-launches-run-for-145th-assembly-district/"
+          },
+          {
+            "title": "U.S. Congressional Candidate Nate McMurray Visits ...",
+            "snippet": "McMurray, who currently serves as Town Supervisor in Grand Island, NY, gave in Scottsville included a brief history lesson on the 27th district ...",
+            "url": "https://mhflsentinel.com/u-s-congressional-candidate-nate-mcmurray-visits-scottsville/"
+          },
+          {
+            "title": "Grand Island town supervisor mulls congressional run vs. Collins",
+            "snippet": "Nate McMurray entered public office for the first time in 2016 as Grand Island's Town Supervisor. representing New York's 27th District.",
+            "url": "https://spectrumlocalnews.com/nys/buffalo/news/2017/12/15/grand-island-town-supervisor-mulls-congressional-run-against-collins"
+          },
+          {
+            "title": "McMurray announces candidacy for 145th Assembly District",
+            "snippet": "The district includes Niagara Falls, North Tonawanda, Grand Island and Lewiston. He was elected as Grand Island town supervisor in 2015 and ...",
+            "url": "https://spectrumlocalnews.com/section/storm-season-stories/news/2026/01/21/mcmurray-announces-candidacy-for-145th-assembly-district"
+          },
+          {
+            "title": "Nate McMurray will not run for re-election for Grand Island ...",
+            "snippet": "GRAND ISLAND, N.Y. — The man who challenged Congressman Chris Collins won't run for another term as Grand Island's town supervisor. 27th ...",
+            "url": "https://www.wgrz.com/article/news/politics/nate-mcmurray-will-not-run-for-re-election-for-grand-island-supervisor/71-20ff8d8e-784c-4c7d-8b9f-c88dc67591d5"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-candidate",
+  "timestamp": "2026-11-06T01:08:24.808965+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6770.109
+}

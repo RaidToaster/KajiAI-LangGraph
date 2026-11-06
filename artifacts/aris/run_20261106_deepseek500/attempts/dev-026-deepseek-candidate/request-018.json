@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "Search for the original randomized controlled trial primary reports (e.g., TOGETHER, ACTIV-6, PRINCIPLE) evaluating ivermectin for COVID-19 treatment, rather than reviews or news summaries.",
+        "candidates": [
+          {
+            "title": "Effect of Early Treatment with Ivermectin among Patients with ...",
+            "snippet": "The efficacy of ivermectin in preventing hospitalization or extended observation in an emergency setting among outpatients with acutely symptomatic coronavirus disease 2019 (Covid-19), the disease ...",
+            "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2115869"
+          },
+          {
+            "title": "Ivermectin for COVID-19 in adults in the community (PRINCIPLE ...",
+            "snippet": "The evidence for whether ivermectin impacts recovery, hospital admissions, and longer-term outcomes in COVID-19 is contested. The WHO recommends its use only in the context of clinical trials. In this multicentre, open-label, multi-arm, adaptive ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10981761/"
+          },
+          {
+            "title": "Ivermectin for COVID-19 in adults in the community (PRINCIPLE ...",
+            "snippet": "The largest of the RCTs in outpatients, the TOGETHER trial, conducted in a largely unvaccinated Brazilian population, could not fully rule out potential for a modest benefit on the requirement for treatment escalation to secondary care.15 The ACTIV-6 and COVID-OUT placebo controlled trials of ivermectin at 400 ug/kg for 3 days 16, 17 and 600 ug ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0163445324000641"
+          },
+          {
+            "title": "Effect of Early Treatment with Ivermectin among Patients with ...",
+            "snippet": "To evaluate the efficacy of ivermectin for the prevention of progression of Covid-19 resulting in hospitalization among outpatients with SARS-CoV-2 infection, we conducted a randomized, placebo ...",
+            "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa2115869?articleTools=true"
+          },
+          {
+            "title": "ACTIV-6: Operationalizing a decentralized, outpatient ...",
+            "snippet": "ACTIV-6 is a multicenter, double-blind, placebo-controlled, randomized, platform clinical trial designed to evaluate the effectiveness of repurposed medicines in reducing symptoms and preventing disease progression in non-hospitalized participants with mild-to-moderate COVID-19.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10643936/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-candidate",
+  "timestamp": "2026-11-06T06:58:21.410555+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15490.718
+}

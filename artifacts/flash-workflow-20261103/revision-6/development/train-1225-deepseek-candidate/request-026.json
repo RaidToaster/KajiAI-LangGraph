@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Federal Reserve 2019 Survey of Consumer Finances microdata bottom-38% net worth aggregate independent calculation",
+        "candidates": [
+          {
+            "title": "Survey of Consumer Finances (SCF)",
+            "snippet": "The 2025 Survey of Consumer Finances (SCF) is the most recent survey conducted. Below are links to the report, interactive chartbook, historical report ...",
+            "url": "https://www.federalreserve.gov/econres/scfindex.htm"
+          },
+          {
+            "title": "Changes in U.S. Family Finances from 2016 to 2019",
+            "snippet": "In 2019, the median value of net housing wealth among homeowners in the bottom half of the income distribution was $89,000.",
+            "url": "https://www.federalreserve.gov/publications/2020-bulletin-changes-in-us-family-finances-from-2016-to-2019.htm"
+          },
+          {
+            "title": "Now available: 2019 Survey of Consumer Finances (SCF ...",
+            "snippet": "The 2019 SCF shows gains in median net worth across the net worth distribution. View the interactive SCF chartbook: https://go.usa.gov/xGvyX. ...",
+            "url": "https://www.facebook.com/federalreserve/posts/now-available-2019-survey-of-consumer-finances-scf-reports-on-family-incomes-net/3314863345258301/"
+          },
+          {
+            "title": "The Fed - Chart: Survey of Consumer Finances, 1989 - 2025",
+            "snippet": "For more information on how the asset, debt, and net worth variables are related, please consult this flowchart.",
+            "url": "https://www.federalreserve.gov/econres/scf/dataviz/scf/chart/"
+          },
+          {
+            "title": "Changes in U.S. Family Finances from 2016 to 2019",
+            "snippet": "by N Bhutta · 2020 · Cited by 263 — Real median net worth increased 18 percent, and mean net worth rose 2 percent. This survey marks the first in the aftermath of the Great Recession",
+            "url": "https://fedinprint.org/item/fedgrb/88954"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:52:50.754376+00:00",
+  "status": "reserved_outcome_unknown"
+}

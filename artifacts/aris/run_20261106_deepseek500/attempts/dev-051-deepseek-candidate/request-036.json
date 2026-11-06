@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost.",
+        "query": "Election Commission of India reply to Saket Gokhale complaint October 2020 BJP free vaccine Bihar primary document",
+        "candidates": [
+          {
+            "title": "Free COVID-19 vaccine promise not violation of poll code: EC",
+            "snippet": "Responding to a complaint by RTI activist Saket Gokhale, the commission said it has found no violation of the provisions of the model code in ...",
+            "url": "https://www.thehindu.com/elections/bihar-assembly/free-covid-19-vaccine-promise-not-violation-of-poll-code-ec/article32989522.ece"
+          },
+          {
+            "title": "Bihar Elections 2020: Free COVID 19 vaccine promise not poll code ...",
+            "snippet": "EC, while responding to RTI activist Saket Gokhale's complaint, said, it has found no violation of the provisions of the model code in the issue ...",
+            "url": "https://www.businesstoday.in/latest/trends/story/bihar-elections-2020-free-covid-19-vaccine-promise-not-poll-code-violation-says-ec-277258-2020-10-31"
+          },
+          {
+            "title": "Responding to a complaint by RTI activist Saket Gokhale, the ...",
+            "snippet": "Responding to a complaint by RTI activist Saket Gokhale, the commission said it has found no violation of the provisions of the model code ...",
+            "url": "https://www.facebook.com/cnbctv18india/posts/responding-to-a-complaint-by-rti-activist-saket-gokhale-the-commission-said-it-h/3552703544767018/"
+          },
+          {
+            "title": "Saket Gokhale on X",
+            "snippet": "Filed an urgent complaint with ECI regarding BJP's announcement of free Covid-19 vaccine for Bihar by Union Finance Minister @nsitharaman.",
+            "url": "https://mobile.x.com/SaketGokhale/status/1319190810995445762"
+          },
+          {
+            "title": "Free coronavirus vaccine promise not violation of poll code: Election ...",
+            "snippet": "Responding to a complaint by RTI activist Saket Gokhale, the commission said it has found no violation of the provisions of the model code in ...",
+            "url": "https://m.economictimes.com/news/elections/assembly-elections/bihar/free-coronavirus-vaccine-promise-not-violation-of-poll-code-election-commission/articleshow/78966435.cms"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-051-deepseek-candidate",
+  "timestamp": "2026-11-06T08:08:09.715225+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19679.031
+}

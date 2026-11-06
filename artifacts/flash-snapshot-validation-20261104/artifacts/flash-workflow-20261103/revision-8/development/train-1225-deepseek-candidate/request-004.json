@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans. evidence",
+        "candidates": [
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ...",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Michael Bloomberg Has Six Times More Wealth Than the ...",
+            "snippet": "So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary"
+          },
+          {
+            "title": "Two Americas, the people vs. the billionaires",
+            "snippet": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ...",
+            "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/"
+          },
+          {
+            "title": "The top 0.1% of Americans now hold more than six times ...",
+            "snippet": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ...",
+            "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/"
+          },
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That's wrong.",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T15:19:19.218328+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,30 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports."
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "domain": {
+          "type": "choice",
+          "instructions": "Which domain best describes the factual claim? Do not judge whether it is true.",
+          "criteria": {
+            "general": "A factual claim outside the other three specialist domains.",
+            "scientific": "A claim about scientific research or findings, excluding clinical health claims.",
+            "political": "A claim about government, elections, public officials, or public policy.",
+            "health_medical": "A claim about human health, disease, treatment, medicine, or clinical research."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-010-deepseek-candidate",
+  "timestamp": "2026-11-06T06:01:04.451618+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12053.765
+}

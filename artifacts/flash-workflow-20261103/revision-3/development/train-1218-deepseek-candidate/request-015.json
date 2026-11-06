@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Bernie Sanders Senate vote roll call Affordable Care Act 2009",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session - Senate.gov",
+            "snippet": "Vote Number: 395 Vote Date: December 23, 2009, Vote Result: Cloture. H.R. 3590 (Patient Protection and Affordable Care Act ) Vote Counts: YEAs ... Missing:  Bernie  | Show results with:",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00395.htm"
+          },
+          {
+            "title": "Senator Bernard Sanders - Congress.gov",
+            "snippet": "Roll Call Votes (Senate.gov) Congress (2009-2010) Medicare Prescription Drug Savings and Choice Act of 2009. Affordable Care for ...",
+            "url": "https://www.congress.gov/member/district/bernie-sanders/S000033?KWICView=false&page=56&searchResultViewType=expanded"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session - Senate.gov",
+            "snippet": "On Passage of the Bill. Vote Number: 31 Vote Date: January 29, 2009, Vote Result: Bill Passed. Reauthorization Act of 2009 ) Vote Counts: YEAs66 NAYs 32 Not ... Missing:  Bernie  Affordable",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00031.htm"
+          },
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient Protection ...",
+            "snippet": "Summary of H.R.3590 - 111th Congress (2009-2010): Patient Protection and Affordable Care Act. ... Roll Call Votes: There have been 36 roll call votes. Notes ...",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          },
+          {
+            "title": "How the ACA (Obamacare) Was Negotiated - A-Mark Foundation",
+            "snippet": "The Senate passed H.R. 3590, the Patient Protection and Affordable Care Act, on Dec. 24, 2009, by a vote of 60 to 39 (59 Democrats and 1 Independent ...",
+            "url": "https://amarkfoundation.org/reports/how-the-aca-obamacare-was-negotiated/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:36:41.555959+00:00",
+  "status": "reserved_outcome_unknown"
+}

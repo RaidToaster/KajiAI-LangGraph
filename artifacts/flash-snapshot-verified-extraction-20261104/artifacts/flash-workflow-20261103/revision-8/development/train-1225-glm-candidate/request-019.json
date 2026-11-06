@@ -1,0 +1,72 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "People’s Policy Project, \"Bloomberg Is Wealthier Than The Bottom 125 Million Americans,\" Feb. 19, 2020",
+        "candidates": [
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million Americans",
+            "snippet": "Bloomberg Is Wealthier Than The Bottom 125 Million Americans. Other estimates suggest the real number is over 150 million people. by. Matt ...",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Tag: Capital - People's Policy Project",
+            "snippet": "Bloomberg Is Wealthier Than The Bottom 125 Million Americans. Other estimates suggest the real number is over 150 million people. Feb 19th, 2020. Finland's ...",
+            "url": "https://www.peoplespolicyproject.org/tag/capital/page/2/"
+          },
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "... Feb. 19, 2020. People's Policy Project, \"Bloomberg Is Wealthier Than The Bottom 125 Million Americans,\" Feb. 19, 2020. Federal Reserve Board ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          },
+          {
+            "title": "Kerim's Micro Blog - Archive - Oxus.net",
+            "snippet": "2020-10-19: New York nursing homes with unions had fewer COVID-19 deaths ... 2020-02-20: Bloomberg Is Wealthier Than The Bottom 125 Million Americans.",
+            "url": "https://micro.oxus.net/archive/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T15:21:38.035189+00:00",
+  "status": "reserved_outcome_unknown"
+}

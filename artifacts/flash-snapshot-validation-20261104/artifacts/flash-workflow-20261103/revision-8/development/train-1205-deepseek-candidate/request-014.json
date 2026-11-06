@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Lindsey Graham transcript February 2020 comments NIH CDC Trump coronavirus",
+        "candidates": [
+          {
+            "title": "False claim: Sen. Lindsey Graham said Donald Trump probably ...",
+            "snippet": "Senator Lindsey Graham did not say Trump knows more about medicine and viruses than any other scientist at the NIH and CDC. This claim surged ... Missing:  transcript  | Show results with:",
+            "url": "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/"
+          },
+          {
+            "title": "Did US Sen. Graham Say Trump Knows More Than CDC About ...",
+            "snippet": "Lindsey Graham said, \"President Trump probably knows more about medicine and specifically viruses than any of the so-called scientists. Rating: ... Missing:  transcript  | Show results with:",
+            "url": "https://www.snopes.com/fact-check/lindsey-graham-trump-cdc/"
+          },
+          {
+            "title": "Lindsey Graham quote on Trump knowing more about viruses ...",
+            "snippet": "Sen. Lindsey Graham as saying President Trump “probably knows more about medicine and specifically viruses than any of the so-called scientists ... Missing:  transcript  | Show results with:",
+            "url": "https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/"
+          },
+          {
+            "title": "That Viral Lindsey Graham Quote Saying Trump Knows More ...",
+            "snippet": "Lindsey Graham is not real. The fake quote, which has Graham stating that President Donald Trump knows more about viruses than scientists, Missing:  transcript  | Show results with:",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087"
+          },
+          {
+            "title": "Lindsey Graham accuses Lancet letter of 'trying to destroy Trump",
+            "snippet": "Lancet letter denying Wuhan lab leak theory was scientists 'covering their a** and trying to destroy Trump's credibility', says Lindsey Graham.",
+            "url": "https://www.dailymail.com/news/article-9667447/Lindsey-Graham-accuses-scientists-wrote-Lancet-letter-trying-destroy-Trumps-credibility.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-03T15:23:29.981717+00:00",
+  "status": "reserved_outcome_unknown"
+}

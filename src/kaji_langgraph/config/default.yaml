@@ -3,6 +3,13 @@ model:
   name: gemma4:31b-cloud
   base_url: http://localhost:11434
   temperature: 0.0
+  # Optional model-generated statements and neutral questions for retrieval.
+  decomposition_method: statements
+  # Opt-in ID-referenced assessment; default analyzer is unchanged.
+  assessment_mode: standard
+  canonical_evidence_prompt: false
+  recover_empty_assessment: false
+  compact_evidence_prompt: false
 
 jev:
   enabled: true
@@ -28,6 +35,8 @@ policy:
   max_token_limit: 250000
   max_results_per_search: 5
   max_stagnant_rounds: 2
+  # Experimental resource/quality tradeoff; baseline retains reassessment.
+  stop_on_query_exhaustion: false
   retry_on_failure: true
   max_retries: 3
   retry_delay_seconds: 2

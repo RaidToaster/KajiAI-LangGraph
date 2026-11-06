@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "FDA or OFAC documentation on embargo provisions and exceptions for Cuban clinical trial collaboration",
+        "candidates": [
+          {
+            "title": "Cuba Sanctions",
+            "snippet": "OFAC has authorized by general license certain exceptions to these rules . CACR authorizes all transactions incident to obtaining approval from the U.S. Food ...",
+            "url": "https://ofac.treasury.gov/faqs/topic/1541"
+          },
+          {
+            "title": "New Round of Cuba Sanctions Changes Expand ...",
+            "snippet": "Oct 19, 2016 — OFAC's latest changes expand opportunities for U.S. persons to engage in medical research with Cuban nationals, authorize U.S. persons to ... Read more",
+            "url": "https://www.akingump.com/en/insights/alerts/new-round-of-cuba-sanctions-changes-expand-opportunities-for"
+          },
+          {
+            "title": "U.S. TREASURY DEPARTMENT OFFICE OF PUBLIC AFFAIRS",
+            "snippet": "Oct 14, 2016 — OFAC is issuing a new authorization that will allow persons subject to U.S. jurisdiction to engage in joint medical research projects with Cuban . Read more",
+            "url": "https://ofac.treasury.gov/system/files/126/cuba_fact_sheet_10142016.pdf"
+          },
+          {
+            "title": "Revised Cuba Rules Allow Medical Collaboration and Ease ...",
+            "snippet": "Oct 17, 2016 — Conduct joint medical research projects with Cuban nationals to obtain U.S. Food and Drug Administration (“ FDA ”) approval for Cuban origin ...",
+            "url": "https://www.internationaltradeinsights.com/2016/10/revised-cuba-rules-allow-medical-collaboration-and-ease-some-trade/"
+          },
+          {
+            "title": "EXPORT CONTROLS GUIDANCE ACTIVITIES INVOLVING ...",
+            "snippet": "Aug 31, 2022 — The United States (US) embargo of Cuba remains in place largely under two regulatory schemes: the Office of Foreign Assets Control's ( OFAC ) ... Read more 2 pages",
+            "url": "https://research.tamu.edu/wp-content/uploads/2024/12/EC-GUIDANCE-Cuba_08.31.2022.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-03T06:02:18.757453+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "Hyderabad Metropolitan Water Supply original source fact check",
+        "candidates": [
+          {
+            "title": "FactCheck.org - A Project of The Annenberg Public Policy ...",
+            "snippet": "As fact-checkers, we watch a lot of ads in the lead-up to elections, and we only write about a fraction of them. Some of them are downright bizarre. As we first ...",
+            "url": "https://www.factcheck.org/"
+          },
+          {
+            "title": "The Logical Indian on Reels",
+            "snippet": "The Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) has warned residents to reduce water consumption by 20% to prevent water ...",
+            "url": "https://www.facebook.com/logical.indian/videos/3203591729839921/"
+          },
+          {
+            "title": "The Hyderabad Metropolitan Water Supply and Sewerage ...",
+            "snippet": "A fake message circulating on social media claims that water supply across the city could be severely restricted or completely stopped due to ...",
+            "url": "https://www.facebook.com/patrioticviews/posts/hyderabad-water-board-dismisses-rumours-of-water-shortagehyderabad-the-hyderabad/1641822041289781/"
+          },
+          {
+            "title": "HYDERABAD HAS A WATER CRISIS?  FACTS vs FAKE ...",
+            "snippet": "Yes, viral claims that Hyderabad's reservoirs will completely dry up and the city's water supply will be shut down have been debunked by ...",
+            "url": "https://www.instagram.com/reel/De_0YL0TGIn/"
+          },
+          {
+            "title": "HMWSSB",
+            "snippet": "",
+            "url": "https://hyderabadwater.gov.in/en/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-deepseek-baseline",
+  "timestamp": "2026-11-06T01:54:01.115382+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9506.421
+}

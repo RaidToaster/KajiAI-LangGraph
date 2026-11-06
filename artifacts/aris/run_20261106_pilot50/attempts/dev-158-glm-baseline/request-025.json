@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US President Donald Trump following his positive diagnosis of COVID-19, was given treatment developed from the use of fetal tissue, made by the company Regeneron.",
+        "query": "Identify the key factual assertions in the draft before searching for sources.",
+        "candidates": [
+          {
+            "title": "Legal Research Final Flashcards",
+            "snippet": "Which of the following is a way to identify the key facts in a court opinion? Ask yourself whether the decision would have been the same if a fact had not ...",
+            "url": "https://quizlet.com/396848170/legal-research-final-flash-cards/"
+          },
+          {
+            "title": "Writing a Research Paper: Evaluate Sources - Research Guides",
+            "snippet": "This resource evaluates the accuracy of statements made by elected officials, lobbyists, and special interest groups and provides sources for their evaluations.",
+            "url": "https://guides.lib.k-state.edu/c.php?g=181829&p=1195993"
+          },
+          {
+            "title": "Factual Research: Home",
+            "snippet": "Fact-finding or information gathering involves searching for people, corporations, scientific & medical reports, public records or any other ...",
+            "url": "https://guides.law.fsu.edu/factualresearch"
+          },
+          {
+            "title": "Research for Scholarly Legal Writing: STEP 4: Refining Your ...",
+            "snippet": "Once you have solidified the core argument of the paper, you can begin to refine your research by identifying the sources that provide the most ...",
+            "url": "https://udclaw.libguides.com/scholarlylegalwriting/refiningresearch"
+          },
+          {
+            "title": "Factual Development Strategy — Identify what additional...",
+            "snippet": "Once factual gaps are identified, the lawyer must determine the most likely sources of the missing information—documents, witnesses, physical evidence, expert ...",
+            "url": "https://www.varsitytutors.com/practice/subjects/bar-exam-uniform/lessons/factual-development-strategy"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-158-glm-baseline",
+  "timestamp": "2026-11-06T02:00:33.441499+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9898.75
+}

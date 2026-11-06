@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "Search the official Food Bill text and explanatory notes for any provision mentioning gardening, cultivation, or home food production.",
+        "candidates": [
+          {
+            "title": "The 2026 Farm Bill: Comparison of the House and Senate ...",
+            "snippet": "Jul 29, 2026 — The farm bill , an omnibus, multiyear law, is the primary piece of legislation governing agricultural and food programs.",
+            "url": "https://www.congress.gov/crs-product/R48918"
+          },
+          {
+            "title": "EXPLANATORY STATEMENT FOR AGRICULTURE, RURAL DE",
+            "snippet": "EXPLANATORY STATEMENT FOR AGRICULTURE , RURAL DE-. VELOPMENT, FOOD AND DRUG ADMINISTRATION, AND. RELATED AGENCIES APPROPRIATIONS BILL , 2023. Read more",
+            "url": "https://www.appropriations.senate.gov/download/agfy23rpt"
+          },
+          {
+            "title": "Senate Agriculture Committee Releases Draft Text for 2026 ...",
+            "snippet": "Jun 26, 2026 — The U.S. Senate Committee on Agriculture has rolled out its draft version of the Farm Bill on June 23, 2026, and Chair John Boozman has ... Read more",
+            "url": "https://www.hklaw.com/en/insights/publications/2026/06/senate-agriculture-committee-releases-draft-text-for-2026-farm-bill"
+          },
+          {
+            "title": "Completing the Job: The House Farm Bill Proposal",
+            "snippet": "Feb 26, 2026 — The House Agriculture Committee has now released updated legislative text for the Farm, Food , and National Security Act of 2026 with the ... Read more",
+            "url": "https://www.fb.org/intel/markets/completing-the-job-the-house-farm-bill-proposal"
+          },
+          {
+            "title": "Plot Vote: 116th Congress > House > 23",
+            "snippet": "This bill provides FY2019 appropriations for the Department of Agriculture (USDA), except for the Forest Service, which is included in the Department of the ... Read more",
+            "url": "https://www.voteview.com/rollcall/RH1160023"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-candidate",
+  "timestamp": "2026-11-06T00:54:46.713106+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5952.015
+}

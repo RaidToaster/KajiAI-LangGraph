@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Pogba Has Quit The French National Team Over Macron's Remarks on Islam.",
+        "query": "The Sun correction Paul Pogba quit France team apology October 2020",
+        "candidates": [
+          {
+            "title": "Pogba denies quitting France team over Macron comments",
+            "snippet": "Man United midfielder Paul Pogba denied reports that said he quit the France national team over comments made by the country's president ...",
+            "url": "https://www.chinadailyhk.com/hk/article/147485"
+          },
+          {
+            "title": "Paul Pogba: Man Utd midfielder 'angry and appalled' over reports he quit ...",
+            "snippet": "Manchester United midfielder Paul Pogba also considering legal action against The Sun newspaper, which published the story; The Sun has ...",
+            "url": "https://www.skysports.com/football/news/12115111/paul-pogba-man-utd-midfielder-angry-and-appalled-over-reports-he-quit-france-team"
+          },
+          {
+            "title": "'Fake news': Pogba denies quitting France team over Macron comments",
+            "snippet": "The French leader this month declared war on \"Islamist separatism\", which he believes is taking over some Muslim communities in France.",
+            "url": "https://uk.finance.yahoo.com/news/fake-news-pogba-denies-quitting-122619734.html"
+          },
+          {
+            "title": "Paul Pogba: Man Utd star go to take legal action over reports say e wan ...",
+            "snippet": "Manchester United and France midfielder Paul Pogba say e go take legal action after \"total fake\" reports say he wan quit international ...",
+            "url": "https://www.bbc.com/pidgin/sport-54695553"
+          },
+          {
+            "title": "Paul Pogba's Juventus contract terminated before doping ban return",
+            "snippet": "Paul Pogba will leave Juventus after the Serie A club confirmed the termination of his contract by mutual consent on Friday.",
+            "url": "https://www.espn.com/soccer/story/_/id/42404429/paul-pogba-juventus-contract-terminated-doping-ban-return"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-028-deepseek-baseline",
+  "timestamp": "2026-11-06T07:04:03.047596+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15832.359
+}

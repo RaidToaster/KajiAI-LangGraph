@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "Does a campaign ad video for John Cornyn exist, and what are its date, title, and publisher?",
+        "candidates": [
+          {
+            "title": "Cornyn campaign targets Paxton with AI-generated 'Love ...",
+            "snippet": "John Cornyn's campaign released a political ad using an AI-generated man resembling Ken Paxton that's a parody of the B-52's \"Love Shack.\" The ... Missing:  exist,  title,  publisher?",
+            "url": "https://www.fox4news.com/news/cornyn-campaign-targets-paxton-ai-generated-love-shack-parody-ad"
+          },
+          {
+            "title": "John Cornyn: 'Will Be Covered' | Campaign 2020",
+            "snippet": "Experts say Cornyn's proposal would weaken protections for patients with preexisting conditions under the Affordable Care Act. Missing:  exist,  title,  publisher?",
+            "url": "https://www.washingtonpost.com/video/politics/campaign-ads-2020/john-cornyn-will-be-covered-campaign-2020/2020/10/13/aaf6e1ef-920b-4a2f-8128-0d7d80ecdb8c_video.html"
+          },
+          {
+            "title": "On Tuesday, Sen. John Cornyn's campaign released a political ...",
+            "snippet": "John Cornyn's campaign released a political ad using an AI-generated man resembling Ken Paxton that's a parody of the B-52's \"Love Shack.\" The ... Missing:  exist,  title,  publisher?",
+            "url": "https://www.facebook.com/Fox4DFW/videos/on-tuesday-sen-john-cornyns-campaign-released-a-political-ad-using-an-ai-generat/1471616054317993/"
+          },
+          {
+            "title": "Cornyn campaign releases lengthy ad on Paxton - Audacy",
+            "snippet": "Senator John Cornyn's campaign has released a lengthy digital ad detailing what the campaign calls 'The Ken Paxton Scandal Timeline They ... Missing:  video  exist,  title,  publisher?",
+            "url": "https://www.audacy.com/krld/news/local/cornyn-campaign-releases-lengthy-ad-on-paxton"
+          },
+          {
+            "title": "Texas Senate Campaign Commercials | Video | C-SPAN.org",
+            "snippet": "Campaign commercials were shown for Senate candidates Democrat Ron Kirk and Republican John Cornyn. Missing:  exist,  publisher?",
+            "url": "https://www.c-span.org/program/vignette/texas-senate-campaign-commercials/197602"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-glm-candidate",
+  "timestamp": "2026-11-06T01:26:41.983379+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7867.281
+}

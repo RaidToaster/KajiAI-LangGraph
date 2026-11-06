@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve.",
+        "query": "Archived CDC NVSS provisional COVID-19 death counts by week ending date for September–October 2020, as originally published in October 2020 (not later revised datasets)",
+        "candidates": [
+          {
+            "title": "Provisional COVID-19 Mortality Surveillance",
+            "snippet": "COVID-19 is listed as the underlying cause on the death certificate in 86% of deaths. The percent was 91% in 2020, 90% in 2021, 76% in 2022 and approximately 66 ...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm"
+          },
+          {
+            "title": "Provisional Death Counts for COVID-19",
+            "snippet": "Datasets linked on this page are available on data.cdc.gov. Please note that these datasets will no longer be updated after September 27, 2023. Provisional ...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm"
+          },
+          {
+            "title": "Provisional COVID-19 Death Counts by Week Ending Date and State",
+            "snippet": "Effective September 27, 2023, this dataset will be updated weekly on Thursdays. Deaths involving COVID-19, pneumonia, and influenza reported to NCHS by week ...",
+            "url": "https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state"
+          },
+          {
+            "title": "CDC Museum COVID-19 Timeline",
+            "snippet": "CDC issues 14-day federal quarantine orders to all 195 U.S. citizens who were repatriated back to the U.S. on January 29, 2020, from Wuhan, China. WHO's ...",
+            "url": "https://www.cdc.gov/museum/timeline/covid19.html"
+          },
+          {
+            "title": "Coronavirus (COVID-19) Deaths",
+            "snippet": "This page provides data on the number of confirmed deaths from COVID-19. The delay in reporting can take days, sometimes a week or more. it typically takes 2 ...",
+            "url": "https://ourworldindata.org/covid-deaths"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-055-deepseek-candidate",
+  "timestamp": "2026-11-06T08:22:08.579932+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20517.875
+}

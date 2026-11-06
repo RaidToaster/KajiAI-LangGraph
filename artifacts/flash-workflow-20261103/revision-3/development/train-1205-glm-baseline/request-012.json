@@ -1,0 +1,176 @@
+{
+  "service": "ollama",
+  "request": {
+    "path": "/api/chat",
+    "body": {
+      "model": "glm-5.3-flash:cloud",
+      "stream": true,
+      "options": {
+        "num_predict": 4096,
+        "temperature": 0.0
+      },
+      "format": {
+        "$defs": {
+          "AssertionAssessment": {
+            "properties": {
+              "assertion": {
+                "title": "Assertion",
+                "type": "string"
+              },
+              "resolved": {
+                "default": false,
+                "title": "Resolved",
+                "type": "boolean"
+              },
+              "source_urls": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Source Urls",
+                "type": "array"
+              },
+              "rationale": {
+                "default": "",
+                "title": "Rationale",
+                "type": "string"
+              }
+            },
+            "required": [
+              "assertion"
+            ],
+            "title": "AssertionAssessment",
+            "type": "object"
+          },
+          "EvidenceItem": {
+            "properties": {
+              "finding": {
+                "default": "",
+                "title": "Finding",
+                "type": "string"
+              },
+              "source_urls": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Source Urls",
+                "type": "array"
+              },
+              "quotes": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "title": "Quotes",
+                "type": "object"
+              },
+              "stance": {
+                "default": "context",
+                "enum": [
+                  "supports",
+                  "refutes",
+                  "context"
+                ],
+                "title": "Stance",
+                "type": "string"
+              }
+            },
+            "title": "EvidenceItem",
+            "type": "object"
+          }
+        },
+        "description": "A factual four-class decision; operational failures stay outside this schema.",
+        "properties": {
+          "proposed_verdict": {
+            "enum": [
+              "TRUE",
+              "FALSE",
+              "CONFLICTING",
+              "NOT_ENOUGH_EVIDENCE"
+            ],
+            "title": "Proposed Verdict",
+            "type": "string"
+          },
+          "confidence": {
+            "default": "Low",
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ],
+            "title": "Confidence",
+            "type": "string"
+          },
+          "summary": {
+            "default": "",
+            "title": "Summary",
+            "type": "string"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/$defs/EvidenceItem"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "assertions": {
+            "items": {
+              "$ref": "#/$defs/AssertionAssessment"
+            },
+            "title": "Assertions",
+            "type": "array"
+          },
+          "gaps": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Gaps",
+            "type": "array"
+          },
+          "contradictions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Contradictions",
+            "type": "array"
+          },
+          "counterevidence_searched": {
+            "default": false,
+            "title": "Counterevidence Searched",
+            "type": "boolean"
+          },
+          "sources_independent": {
+            "default": false,
+            "title": "Sources Independent",
+            "type": "boolean"
+          },
+          "peer_reviewed_sources": {
+            "default": false,
+            "title": "Peer Reviewed Sources",
+            "type": "boolean"
+          },
+          "next_queries": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Next Queries",
+            "type": "array"
+          }
+        },
+        "required": [
+          "proposed_verdict"
+        ],
+        "title": "BenchmarkAssessment",
+        "type": "object"
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Convert the draft below into ONLY valid JSON matching the supplied schema. Preserve only statements supported by the draft; do not invent evidence.\nJSON Schema:\n{\"$defs\": {\"AssertionAssessment\": {\"properties\": {\"assertion\": {\"title\": \"Assertion\", \"type\": \"string\"}, \"resolved\": {\"default\": false, \"title\": \"Resolved\", \"type\": \"boolean\"}, \"source_urls\": {\"items\": {\"type\": \"string\"}, \"title\": \"Source Urls\", \"type\": \"array\"}, \"rationale\": {\"default\": \"\", \"title\": \"Rationale\", \"type\": \"string\"}}, \"required\": [\"assertion\"], \"title\": \"AssertionAssessment\", \"type\": \"object\"}, \"EvidenceItem\": {\"properties\": {\"finding\": {\"default\": \"\", \"title\": \"Finding\", \"type\": \"string\"}, \"source_urls\": {\"items\": {\"type\": \"string\"}, \"title\": \"Source Urls\", \"type\": \"array\"}, \"quotes\": {\"additionalProperties\": {\"type\": \"string\"}, \"title\": \"Quotes\", \"type\": \"object\"}, \"stance\": {\"default\": \"context\", \"enum\": [\"supports\", \"refutes\", \"context\"], \"title\": \"Stance\", \"type\": \"string\"}}, \"title\": \"EvidenceItem\", \"type\": \"object\"}}, \"description\": \"A factual four-class decision; operational failures stay outside this schema.\", \"properties\": {\"proposed_verdict\": {\"enum\": [\"TRUE\", \"FALSE\", \"CONFLICTING\", \"NOT_ENOUGH_EVIDENCE\"], \"title\": \"Proposed Verdict\", \"type\": \"string\"}, \"confidence\": {\"default\": \"Low\", \"enum\": [\"Low\", \"Medium\", \"High\"], \"title\": \"Confidence\", \"type\": \"string\"}, \"summary\": {\"default\": \"\", \"title\": \"Summary\", \"type\": \"string\"}, \"evidence\": {\"items\": {\"$ref\": \"#/$defs/EvidenceItem\"}, \"title\": \"Evidence\", \"type\": \"array\"}, \"assertions\": {\"items\": {\"$ref\": \"#/$defs/AssertionAssessment\"}, \"title\": \"Assertions\", \"type\": \"array\"}, \"gaps\": {\"items\": {\"type\": \"string\"}, \"title\": \"Gaps\", \"type\": \"array\"}, \"contradictions\": {\"items\": {\"type\": \"string\"}, \"title\": \"Contradictions\", \"type\": \"array\"}, \"counterevidence_searched\": {\"default\": false, \"title\": \"Counterevidence Searched\", \"type\": \"boolean\"}, \"sources_independent\": {\"default\": false, \"title\": \"Sources Independent\", \"type\": \"boolean\"}, \"peer_reviewed_sources\": {\"default\": false, \"title\": \"Peer Reviewed Sources\", \"type\": \"boolean\"}, \"next_queries\": {\"items\": {\"type\": \"string\"}, \"title\": \"Next Queries\", \"type\": \"array\"}}, \"required\": [\"proposed_verdict\"], \"title\": \"BenchmarkAssessment\", \"type\": \"object\"}\nDraft:\n"
+        }
+      ],
+      "tools": []
+    }
+  },
+  "task": "train-1205-glm-baseline",
+  "timestamp": "2026-11-03T06:10:03.928251+00:00",
+  "status": "reserved_outcome_unknown"
+}

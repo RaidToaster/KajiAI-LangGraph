@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden said 'If Your 8-Year-Old Child Says They Want To Be Transgender, They Have A Right To Transition'.",
+        "query": "What primary record (transcript, video, audio, or official document) contains the alleged statement, and what date and venue does it show?",
+        "candidates": [
+          {
+            "title": "Rule 2.1040. Electronic recordings presented or offered ...",
+            "snippet": "the stenographic transcript is the official record of that testimony for the purpose of the trial and any subsequent hearing or appeal.",
+            "url": "https://courts.ca.gov/cms/rules/index/two/rule2_1040"
+          },
+          {
+            "title": "Verbatim Transcripts & Audio Recordings in Law",
+            "snippet": "A certified transcript is a legal document in which the reporter or transcriber swears to the accuracy of the record under penalty of perjury.",
+            "url": "https://planetdepos.com/verbatim-transcripts-and-audio-recordings-an-overview-in-legal-contexts"
+          },
+          {
+            "title": "How to submit a statement for the record at a hearing",
+            "snippet": "Title and date of the hearing, and the full name and address of the individual or organization must appear on the first page of the statement.",
+            "url": "https://www.facebook.com/groups/1315898065249754/posts/2647630368743177/"
+          },
+          {
+            "title": "How to Transcribe Audio for Court",
+            "snippet": "A complete legal transcript identifies the case, proceeding, speakers, spoken record, uncertain audio, and method of production.",
+            "url": "https://speechtext.ai/tutorials/how-to-transcribe-audio-for-court"
+          },
+          {
+            "title": "Captions and Transcripts | Section508. ...",
+            "snippet": "Captions describe dialogue, music, and sound effects in videos, while transcripts are documents that describe audio-only and video-only content, such as ...",
+            "url": "https://www.section508.gov/create/captions-transcripts/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-068-deepseek-candidate",
+  "timestamp": "2026-11-05T18:19:30.385914+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 53189.968
+}

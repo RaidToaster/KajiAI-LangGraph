@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Independent recalculation of bottom-38% household net worth from the Federal Reserve Survey of Consumer Finances 2019 raw data",
+        "candidates": [
+          {
+            "title": "2019 Survey of Consumer Finances - Federal Reserve Board",
+            "snippet": "2019 Survey of Consumer Finances The 2019 Survey of Consumer Finances (SCF) is the most recent survey conducted. Below are links to the bulletin article, interactive chartbook, historical bulletin tables, full public dataset, extract dataset, replicate weight files, and documentation.",
+            "url": "https://www.federalreserve.gov/econres/scf_2019.htm"
+          },
+          {
+            "title": "Federal Reserve Board - Survey of Consumer Finances (SCF)",
+            "snippet": "The Survey of Consumer Finances (SCF) is normally a triennial cross-sectional survey of U.S. families. The survey data include information on families' balance sheets, pensions, income, and demographic characteristics.",
+            "url": "https://www.federalreserve.gov/econres/scfindex.htm"
+          },
+          {
+            "title": "Survey of Consumer Finances - NORC",
+            "snippet": "The Federal Reserve needs reliable, accurate financial data about American households. The Federal Reserve System is responsible for promoting maximum employment, maintaining stable prices, and moderating systemic risks to the U.S. economy. Quality information about the financial well-being of U.S. households is vital for the Fed to understand how central bank policies ripple through the system.",
+            "url": "https://www.norc.org/research/projects/survey-of-consumer-finances.html"
+          },
+          {
+            "title": "Survey of Consumer Finances, 1989 - 2025 - Federal Reserve Board",
+            "snippet": "Note: The income, asset, and liability data used to make these charts are the public versions of those used in this article, and were created using this program. The article and program also contain variable definitions. For more information on how the asset, debt, and net worth variables are ...",
+            "url": "https://www.federalreserve.gov/econres/scf/dataviz/scf/table/"
+          },
+          {
+            "title": "The Fed - Distribution: Distribution of Household Wealth in ...",
+            "snippet": "Distribution of Household Wealth in the U.S. since 1989 Distribution Table Comparison Select wealth component Distribute by",
+            "url": "https://www.federalreserve.gov/releases/z1/dataviz/dfa/distribute/chart/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T15:22:01.605520+00:00",
+  "status": "reserved_outcome_unknown"
+}

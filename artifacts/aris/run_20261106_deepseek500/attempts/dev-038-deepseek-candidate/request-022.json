@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Search for official government or law-enforcement records (e.g., Secret Service protection records, passport/immigration records, or DOJ filings) that independently establish Hunter Biden was alive after 2020-10-25.",
+        "candidates": [
+          {
+            "title": "FOIA.gov Search Tool Adds Law Enforcement User Journey",
+            "snippet": "The new Law Enforcement records user journey not only helps requesters identify the multitude of federal law enforcement agencies subject to the FOIA, but also provides useful guidance for those seeking state and local records. Since the launch of the Search Tool in October 2023, nearly 99,000 queries have been recorded.",
+            "url": "https://www.justice.gov/oip/blog/foiagov-search-tool-adds-law-enforcement-user-journey"
+          },
+          {
+            "title": "Office of Information Policy | Make a FOIA Request to DOJ",
+            "snippet": "There is no central office in the government that processes FOIA requests for all federal departments and agencies. Therefore, before sending a request to the Department of Justice you should determine whether DOJ is likely to have the records you are seeking.",
+            "url": "https://www.justice.gov/oip/make-foia-request-doj"
+          },
+          {
+            "title": "FBI — Federal Bureau of Investigation",
+            "snippet": "The Vault is our new FOIA Library, containing 6,700 documents and other media that have been scanned from paper into digital copies so you can read them in the comfort of your home or office.",
+            "url": "https://vault.fbi.gov/search"
+          },
+          {
+            "title": "FOIA.gov - Freedom of Information Act",
+            "snippet": "The Freedom of Information Act (FOIA) is a law that gives you the right to access information from the federal government. It is often described as the law that keeps citizens in the know about their government.",
+            "url": "https://www.foia.gov/"
+          },
+          {
+            "title": "FBI — Federal Bureau of Investigation",
+            "snippet": "The FBI's mission demands organizational accountability. Public trust must be earned, and transparency is not optional—it is essential. To that end, the FBI Vault features a collection of documents and other media that have been processed under the Freedom of Information Act (FOIA). These files have been released either as proactive disclosures or as frequently requested FBI records.",
+            "url": "https://vault.fbi.gov/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-candidate",
+  "timestamp": "2026-11-06T07:30:58.378550+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17447.687
+}

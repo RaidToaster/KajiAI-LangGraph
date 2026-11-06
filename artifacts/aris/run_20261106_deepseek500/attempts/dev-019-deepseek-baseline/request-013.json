@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Video shows attack of French embassy in Sudan original source fact check",
+        "candidates": [
+          {
+            "title": "Video used to falsely claim protestors torched French embassy in DR Congo",
+            "snippet": "Using a keyword search for “French embassy DR Congo,” AFP Fact Check confirmed the building seen in the video is the French diplomatic hub in ...",
+            "url": "https://cedmohub.eu/video-used-to-falsely-claim-protestors-torched-french-embassy-in-dr-congo/"
+          },
+          {
+            "title": "UN 'deeply concerned' by ongoing drone attack in Sudan",
+            "snippet": "In tonight's edition, the ICC is laying the groundwork for investigations into some of the atrocities committed during Sudan's brutal war.",
+            "url": "https://www.youtube.com/watch?v=Q3uWjCO21QM"
+          },
+          {
+            "title": "UK and German embassies in Sudan targeted in protests",
+            "snippet": "In Khartoum, around 5,000 protesters stormed the embassies of Britain and Germany, which was torched and badly damaged, an AFP reporter said.",
+            "url": "https://www.france24.com/en/20120914-britain-germany-sudan-embassies-targeted-protests-anti-islam-film-usa-egypt-libya"
+          },
+          {
+            "title": "Does Video Show Sudanis Burning French Embassy after Macron's ...",
+            "snippet": "A social media post claims that an accompanying video shows a mob in Sudan setting fire to the French Embassy in the country in light of ...",
+            "url": "https://www.youtube.com/watch?v=sN9IdyijuXA"
+          },
+          {
+            "title": "All U.S. embassy staff evacuated from war-torn Sudan, White House says",
+            "snippet": "Both said one French person was wounded. And the Egyptian government said one of its workers was shot and wounded without giving details. This ...",
+            "url": "https://www.reuters.com/world/africa/sudan-army-okays-foreign-evacuation-khartoum-battle-rages-2023-04-22/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-baseline",
+  "timestamp": "2026-11-06T06:36:43.801242+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14193.109
+}

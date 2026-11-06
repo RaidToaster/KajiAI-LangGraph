@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Search official French embassy and Sudanese government statements or records for any documented attack on the French embassy in Khartoum, including date and nature of incident.",
+        "candidates": [
+          {
+            "title": "UN, France condemn escalating drone attacks across Sudan",
+            "snippet": "In a statement, the embassy said the attacks had killed hundreds of civilians, including many children, within a few days. “There is no military ...",
+            "url": "https://www.dabangasudan.org/en/all-news/article/un-france-condemn-escalating-drone-attacks-across-sudan"
+          },
+          {
+            "title": "France and Sudan | France Diplomatie",
+            "snippet": "Official statements and speeches … on 17 May 2021. the first by a French Minister since 2007. establishment in Khartoum in 1993 of the Centre for Social, ...",
+            "url": "https://www.diplomatie.gouv.fr/en/information-by-country/sudan/france-and-sudan"
+          },
+          {
+            "title": "US refusing to give Sudan's de facto leader visa for UN",
+            "snippet": "In tonight's edition: The United States is withholding a visa for Sudanese army chief Abdel Fattah al-Burhan ahead ... US refusing to give Sudan's ...",
+            "url": "https://www.youtube.com/watch?v=pCA1kRDGP6M"
+          },
+          {
+            "title": "Independent International Fact-Finding Mission for the Sudan",
+            "snippet": "To investigate and establish the facts, circumstances and root causes of all alleged human rights violations and abuses and violations of ...",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/ffm-sudan/index"
+          },
+          {
+            "title": "Sudan Travel Advisory | Travel.State.gov",
+            "snippet": "The U.S. Embassy in Khartoum suspended its operations in April 2023 due to the outbreak of armed conflict in Sudan. Cairo: +20-2-2797-3300(opens",
+            "url": "https://travel.state.gov/en/international-travel/travel-advisories/sudan.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-candidate",
+  "timestamp": "2026-11-06T06:39:39.962287+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14369.281
+}

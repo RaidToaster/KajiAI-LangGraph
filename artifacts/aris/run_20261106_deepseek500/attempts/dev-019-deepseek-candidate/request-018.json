@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Search for the original uploader and earliest dated copy of the specific video, using reverse video/keyframe search and archive records, to establish its provenance and first publication date.",
+        "candidates": [
+          {
+            "title": "How to Reverse Search a Video and Find Its Original Source ...",
+            "snippet": "Learn how to reverse search a video using keyframes, screenshots, search engines, timestamps, and source tracing to find its original source and context.",
+            "url": "https://somiq.veriqlabs.com/blog/how-to-reverse-search-a-video-and-find-where-it-originally-came-from"
+          },
+          {
+            "title": "How to Verify a Video in 2026: Provenance, Frames, Deepfakes",
+            "snippet": "How to verify a video step by step in 2026: C2PA Content Credentials, SynthID and Sora watermarks, InVID keyframes, metadata, forensics and a 12-step workflow.",
+            "url": "https://maxintel.org/video-verification-guide-2026.html"
+          },
+          {
+            "title": "How to find the original source of a photo or video",
+            "snippet": "Preserve the copy and its page context, search the whole image plus distinctive crops or video keyframes, then build a dated candidate timeline. Follow credits and links backward until they reach a creator or attributable publication. Report the result as a confirmed creator publication, earliest public copy located, likely source, or unresolved, because the oldest indexed result is not ...",
+            "url": "https://deepsearch.app/guides/how-to-find-the-original-source-of-a-photo-or-video"
+          },
+          {
+            "title": "Who Posted This Video First? Find the Original Uploader",
+            "snippet": "Find who posted a video first: search its frames to find every copy, compare upload dates and open the earliest one. Works with TikTok and YouTube links. Free.",
+            "url": "https://reverse-video-search.app/who-posted-this-video-first/"
+          },
+          {
+            "title": "Reverse Video Search: Upload a Clip or Paste a URL",
+            "snippet": "Upload a video, paste a public URL, or search by keywords to find matching pages and investigate original video sources with Reverse Video Search.",
+            "url": "https://reversevideosearch.co/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-candidate",
+  "timestamp": "2026-11-06T06:39:25.165590+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14354.484
+}

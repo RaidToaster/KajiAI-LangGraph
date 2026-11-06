@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism.",
+        "query": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism. counterevidence",
+        "candidates": [
+          {
+            "title": "Paul Pogba has not quit France’s national football team over ...",
+            "snippet": "Numerous posts shared hundreds of times on social media in Africa claim that French football player Paul Pogba has retired from the international game in protest against French President Emmanuel Macron’s recent comments about radical Islam. However, the claim is false; the football star has dismissed the reports which originated from an Egypt-based sports website.",
+            "url": "https://factcheck.afp.com/paul-pogba-has-not-quit-frances-national-football-team-over-presidents-remarks-islam"
+          },
+          {
+            "title": "Paul Pogba responds to claim he's quit France national team ...",
+            "snippet": "Reports from the Middle East suggested the Manchester United midfielder was quitting Les Bleus after recent comments from president Emmanuel Macron on Islam and terrorism.",
+            "url": "https://www.mirror.co.uk/sport/football/news/breaking-man-utd-star-paul-22904740"
+          },
+          {
+            "title": "Manchester United star Paul Pogba rubbishes reports he will ...",
+            "snippet": "It had been suggested the Manchester United star, who is a Muslim, was set to announce his retirement from international football after French president Emmanuel Macron called a recent murder in ...",
+            "url": "https://talksport.com/football/779399/manchester-united-paul-pogba-emmanuel-macron/"
+          },
+          {
+            "title": "Fact Check: Paul Pogba did not quit French football team ...",
+            "snippet": "Hyderabad: The Sun recently tweeted that Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron's comments on \"Islamist terrorism\". Many other media organisations like Sun, Republic and WION also reported the same. The claim was viral on social media too.",
+            "url": "https://newsmeter.in/fact-check-paul-pogba-did-not-quit-french-football-team-after-president-macrons-remarks-on-islam"
+          },
+          {
+            "title": "Paul Pogba calls claims of retirement 'fake news' after ...",
+            "snippet": "The news of Pogba - a devout Muslim - deciding to quit International football came in response to French President Emmanuel Macron's comments on 'Islamist terrorist attack', after an incident. The Manchester United footballer took to social media and rubbishes the rumours as he wrote, \"Unacceptable fake news\".",
+            "url": "https://www.dnaindia.com/sports/report-paul-pogba-calls-claims-of-retirement-fake-news-after-islamist-terrorism-remark-by-french-president-2852410"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-030-deepseek-baseline",
+  "timestamp": "2026-11-06T07:09:45.073860+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16174.39
+}

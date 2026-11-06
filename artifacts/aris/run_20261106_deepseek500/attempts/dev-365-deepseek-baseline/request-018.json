@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The eligibility criteria for applying to take the exam for the Union Public Service Commission (UPSC) of India, differentiates depending on whether you are a Hindu or a Muslim.",
+        "query": "UPSC Civil Services Examination 2020 official notification OBC age limit number of attempts",
+        "candidates": [
+          {
+            "title": "Civil Services Examination",
+            "snippet": "For Other Backward Castes (OBC) the upper age limit is 35 years. For Scheduled Castes (SC) and Scheduled Tribes (ST), the limit is 37 years. OBC category ...",
+            "url": "https://en.wikipedia.org/wiki/Civil_Services_Examination"
+          },
+          {
+            "title": "age limit and eligibility criteria for UPSC IAS Exam",
+            "snippet": "OBC candidates have 9 attempts; As per the official notification, the Civil Services age limit for UPSC is between 21 and 32 years of age. Age relaxation of 3 ...",
+            "url": "https://byjus.com/free-ias-prep/eligibility-criteria-for-upsc-exam/"
+          },
+          {
+            "title": "What is the total number of attempts and maximum age ...",
+            "snippet": "What is the total number of attempts and maximum age limit presently for the UPSC exam?",
+            "url": "https://www.quora.com/What-is-the-total-number-of-attempts-and-maximum-age-limit-presently-for-the-UPSC-exam"
+          },
+          {
+            "title": "IAS Exam Eligibility: Age Limit, Attempts & Qualification",
+            "snippet": "The normal limit is 6 attempts. OBC candidates have 9 attempts; SC and ST candidates have unlimited attempts within their age limit.",
+            "url": "https://www.clearias.com/ias-exam-eligibility/"
+          },
+          {
+            "title": "Welcome to UPSC | UPSC",
+            "snippet": "To apply for examinations visit new Application Portal - https://upsconline.nic.in",
+            "url": "https://upsc.gov.in/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-365-deepseek-baseline",
+  "timestamp": "2026-11-06T04:11:17.277429+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5466.593
+}

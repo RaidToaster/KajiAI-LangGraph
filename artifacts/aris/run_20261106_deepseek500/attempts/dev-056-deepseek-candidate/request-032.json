@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "registered clinical trial influenza vaccination SARS-CoV-2 susceptibility primary outcome",
+        "candidates": [
+          {
+            "title": "Articles Safety and immunogenicity of concomitant administration of ...",
+            "snippet": "by R Lazarus · 2021 · Cited by 224 — Concomitant vaccination with ChAdOx1 or BNT162b2 plus an age-appropriate influenza vaccine raises no safety concerns and preserves antibody responses to both ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0140673621023291"
+          },
+          {
+            "title": "NCT06097273 | A Study of mRNA-1083 (SARS-CoV-2 and Influenza) ...",
+            "snippet": "The purpose of this study is to evaluate the immunogenicity, safety, and reactogenicity of mRNA-1083 as compared with active control, co-administered ...",
+            "url": "https://clinicaltrials.gov/study/NCT06097273"
+          },
+          {
+            "title": "Concomitant COVID-19 and influenza vaccination not linked to increased ...",
+            "snippet": "This study evaluated the safety of co-administering COVID-19 and influenza vaccines during the same primary care visit",
+            "url": "https://www.2minutemedicine.com/concomitant-covid-19-and-influenza-vaccination-not-linked-to-increased-adverse-events/"
+          },
+          {
+            "title": "Updated Evidence for Covid-19, RSV, and Influenza Vaccines for 2025– ...",
+            "snippet": "by J Scott · 2025 · Cited by 124 — The primary vaccine effectiveness outcome was activity against laboratory-confirmed, virus-associated hospitalization (for RSV and influenza). ...",
+            "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa2514268"
+          },
+          {
+            "title": "Influenza Vaccines - Medical Clinical Policy Bulletins",
+            "snippet": "In a meta-analysis, these investigators examined whether influenza vaccination could reduce the susceptibility and severity of SARS-CoV-2 infection. They ...",
+            "url": "https://www.aetna.com/cpb/medical/data/1_99/0035.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-candidate",
+  "timestamp": "2026-11-06T08:24:02.761068+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20632.062
+}

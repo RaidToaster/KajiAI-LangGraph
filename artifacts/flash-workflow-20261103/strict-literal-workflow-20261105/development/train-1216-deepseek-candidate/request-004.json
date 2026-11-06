@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "What is the exact date and venue of the statement attributed to Kunal Kamra, and what was the full original wording?",
+        "candidates": [
+          {
+            "title": "The poster highlights a sharp satirical remark attributed to ...",
+            "snippet": "The poster highlights a sharp satirical remark attributed to comedian Kunal Kamra, who uses humor to question how political power is exercised. The statement ...",
+            "url": "https://www.facebook.com/socialsansaar/posts/the-poster-highlights-a-sharp-satirical-remark-attributed-to-comedian-kunal-kamr/1950693799062925/"
+          },
+          {
+            "title": "The controversy surrounding comedian Kunal Kamra involves ...",
+            "snippet": "... Kunal Kamra asked him about a statement attributed to former Prime Minister Jawaharlal Nehru concerning lawyers and the Indian Constitution.",
+            "url": "https://www.instagram.com/reel/Dci-uElSXb4/"
+          },
+          {
+            "title": "Kunal Kamra looks back at the early days of his career and ...",
+            "snippet": "Kunal Kamra looks back at the early days of his career and the unexpected journey that turned him into one of India's most talked-about ...",
+            "url": "https://www.facebook.com/mashableindia/videos/kunal-kamra-looks-back-at-the-early-days-of-his-career-and-the-unexpected-journe/1482310736514578/"
+          },
+          {
+            "title": "Stand-up comedian Kunal Kamra has once again found ...",
+            "snippet": "Stand-up comedian Kunal Kamra has once again found himself at the center of controversy after a video circulating on social media allegedly ...",
+            "url": "https://www.instagram.com/reel/Da091hvM7OZ/"
+          },
+          {
+            "title": "Kunal Kamra",
+            "snippet": "Kunal Kamra (born 3 October 1988) is an Indian standup comedian and political satirist which has repeatedly drawn legal action and public backlash.",
+            "url": "https://en.wikipedia.org/wiki/Kunal_Kamra"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-deepseek-candidate",
+  "timestamp": "2026-11-05T10:26:55.983000+00:00",
+  "status": "reserved_outcome_unknown"
+}

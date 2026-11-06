@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Have any criminal charges been filed against a person named Kim Martin Morrow, and if so, what charges, in what jurisdiction, and on what date?",
+        "candidates": [
+          {
+            "title": "https://pacer.uscourts.gov/file-case/court-cmecf-lookup/data ...",
+            "snippet": "... Martin</name> <state>North Carolina</state> </county> <county> <name> ... Person</name> <state>North Carolina</state> </county> <county> <name>Pitt ...",
+            "url": "https://pacer.uscourts.gov/file-case/court-cmecf-lookup/data.xml"
+          },
+          {
+            "title": "Morrow County Municipal Court Records",
+            "snippet": "No information is available for this page.",
+            "url": "https://www.morrowcountymunict.org/"
+          },
+          {
+            "title": "General Division",
+            "snippet": "The Criminal Division is responsible for hearing all felony level offenses that occur in Morrow County. As such, anyone who is indicted by the Grand Jury will ...",
+            "url": "https://morrowcountyohio.gov/government/county_elected_officials/common_pleas_court/general_division.php"
+          },
+          {
+            "title": "Morrow County Common Pleas Court | Mount Gilead, Ohio",
+            "snippet": "The office which holds the criminal case files is the Clerk of Court. If you want to see the file for your, or any criminal case, you can go to the Clerk of ...",
+            "url": "https://www.dominylaw.com/central-ohio-courts/morrow-county-common-pleas-court/"
+          },
+          {
+            "title": "𝗠𝗮𝗻 𝗘𝗻𝘁𝗲𝗿𝘀 𝗚𝘂𝗶𝗹𝘁𝘆 𝗣𝗹𝗲𝗮 𝗶𝗻 𝗖𝗵𝗶𝗹𝗱 𝗦𝗲𝘅𝘂𝗮𝗹 ...",
+            "snippet": "Morrow was booked into custody on October 27, 2026, at approximately 2:53 p.m. The case, filed March 9, 2026, includes three felony counts ...",
+            "url": "https://www.facebook.com/DuboisCountyDashCamz/posts/%F0%9D%97%A0%F0%9D%97%AE%F0%9D%97%BF%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BB-%F0%9D%97%96%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%BB%F0%9D%98%81%F0%9D%98%86-%F0%9D%97%A0%F0%9D%97%AE%F0%9D%97%BB-%F0%9D%97%98%F0%9D%97%BB%F0%9D%98%81%F0%9D%97%B2%F0%9D%97%BF%F0%9D%98%80-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B9%F0%9D%98%81%F0%9D%98%86-%F0%9D%97%A3%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%AE-%F0%9D%97%B6%F0%9D%97%BB-%F0%9D%97%96%F0%9D%97%B5%F0%9D%97%B6%F0%9D%97%B9%F0%9D%97%B1-%F0%9D%97%A6%F0%9D%97%B2%F0%9D%98%85%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%A0%F0%9D%97%B6%F0%9D%98%80%F0%9D%97%B0%F0%9D%97%BC%F0%9D%97%BB%F0%9D%97%B1%F0%9D%98%82%F0%9D%97%B0%F0%9D%98%81-%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B1-%F0%9D%97%9E%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BD%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-%F0%9D%97%96/1170909908940026/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-deepseek-candidate",
+  "timestamp": "2026-11-05T18:05:57.372646+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52376.953
+}

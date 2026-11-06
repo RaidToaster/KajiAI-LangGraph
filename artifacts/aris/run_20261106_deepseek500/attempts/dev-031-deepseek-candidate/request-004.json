@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amy Coney Barrett was confirmed as US Supreme Court Justice on October 26, 2020",
+        "query": "What is the official record of the US Senate vote confirming Amy Coney Barrett to the Supreme Court, including the date and vote tally?",
+        "candidates": [
+          {
+            "title": "Amy Coney Barrett Supreme Court nomination",
+            "snippet": "On September 26, 2020, President Donald Trump announced the nomination of Amy Coney Barrett to the position of Associate Justice of the Supreme Court of the ...",
+            "url": "https://en.wikipedia.org/wiki/Amy_Coney_Barrett_Supreme_Court_nomination"
+          },
+          {
+            "title": "Senate confirms Amy Coney Barrett, heralding new conservative era for ...",
+            "snippet": "The Republican-led Senate voted narrowly Monday to confirm Amy Coney Barrett to the Supreme Court, The vote was 52-48, with only Republicans ...",
+            "url": "https://www.nbcnews.com/politics/congress/amy-coney-barrett-set-be-confirmed-supreme-court-monday-n1244748"
+          },
+          {
+            "title": "Amy Coney Barrett confirmation hearings and votes",
+            "snippet": "Confirmation hearings for Supreme Court nominee Amy Coney Barrett were held between October 12, 2020, and October 15, 2020. All nominees to the court are ...",
+            "url": "https://ballotpedia.org/Amy_Coney_Barrett_confirmation_hearings_and_votes"
+          },
+          {
+            "title": "Senate Confirms Barrett, Delivering for Trump and Reshaping the Court",
+            "snippet": "Judge Amy Coney Barrett, a conservative appeals court judge and protégée of former Justice Antonin Scalia, was confirmed on Monday to the ...",
+            "url": "https://www.nytimes.com/2020/10/26/us/politics/senate-confirms-barrett.html"
+          },
+          {
+            "title": "Senate Confirms Amy Coney Barrett to the Supreme Court",
+            "snippet": "Tonight, the U.S. Senate confirmed Amy Coney Barrett as an Associate Justice of the Supreme Court of the United States by a vote of 52-48.",
+            "url": "https://www.judiciary.senate.gov/press/rep/releases/senate-confirms-amy-coney-barrett-to-the-supreme-court"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-031-deepseek-candidate",
+  "timestamp": "2026-11-06T07:12:54.939639+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16364.25
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Wisconsin Supreme Court Ozaukee voter purge ruling 2020 status of 200000 voters",
+        "candidates": [
+          {
+            "title": "Wisconsin Supreme Court upholds halt of election ...",
+            "snippet": "Supreme Court of Wisconsin on April 9 ruled in a 5-2 decision that a purge of the state's voter rolls could not proceed.",
+            "url": "https://fairelectionscenter.org/media/wisconsin-supreme-court-upholds-halt-of-election-suppression-effort-to-purge-state-voter-rolls/"
+          },
+          {
+            "title": "Wisconsin Appeals Court Overturns Voter Purge Ruling",
+            "snippet": "The District 4 Court of Appeals' ruling struck down a December decision by an Ozaukee County judge that said up to 209,000 voters were illegally ...",
+            "url": "https://www.wpr.org/politics/wisconsin-appeals-court-overturns-voter-purge-ruling"
+          },
+          {
+            "title": "Supreme Court rules Ozaukee County judge erred in ...",
+            "snippet": "The state Supreme Court ruled today the Elections Commission has no power to remove from the rolls thousands of voters who may have moved,",
+            "url": "https://www.wispolitics.com/2021/supreme-court-rules-ozaukee-county-judge-erred-in-ordering-elections-commission-to-purge-voter-rolls/"
+          },
+          {
+            "title": "The Wisconsin Voter Purge Is a Bad Idea",
+            "snippet": "A Wisconsin appeals court on Tuesday put on hold a purge of approximately 200,000 voters from the state voter rolls. The court proceedings ...",
+            "url": "https://www.brennancenter.org/our-work/analysis-opinion/wisconsin-voter-purge-bad-idea"
+          },
+          {
+            "title": "The Wisconsin Supreme Court has rejected an attempt by ...",
+            "snippet": "In a 5-2 decision, the Wisconsin Supreme Court ruled that Notices of Voting Eligibility are not public records, meaning they cannot be released ...",
+            "url": "https://www.facebook.com/fox21online/posts/the-wisconsin-supreme-court-has-rejected-an-attempt-by-a-conservative-activist-t/1698413455618595/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T09:03:46.193589+00:00",
+  "status": "reserved_outcome_unknown"
+}

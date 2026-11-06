@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "Which coronavirus is being referenced, and do any studies address SARS-CoV-2/COVID-19 specifically?",
+        "candidates": [
+          {
+            "title": "Features, Evaluation, and Treatment of Coronavirus (COVID-19) - NCBI",
+            "snippet": "by M Cascella · 2023 · Cited by 7671 — The COVID-19 pandemic, caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), was initially declared by the WHO in 2020, ...",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK554776/"
+          },
+          {
+            "title": "Underlying Conditions and the Higher Risk for Severe COVID-19",
+            "snippet": "COVID-19 (coronavirus disease 2019) is a disease caused by a virus named SARS-CoV-2. It can be very contagious and spreads quickly. View All · For Everyone.",
+            "url": "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html"
+          },
+          {
+            "title": "Characteristics of SARS-CoV-2 and COVID-19",
+            "snippet": "by B Hu · 2021 · Cited by 7639 — Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is a highly transmissible and pathogenic coronavirus that emerged in late 2019 ...",
+            "url": "https://www.nature.com/articles/s41579-020-00459-7"
+          },
+          {
+            "title": "SARS-CoV-2 and COVID-19",
+            "snippet": "The name of the disease is abbreviated COVID-19 where “CO” stands for corona, “VI” for virus, D” for disease, and “19” for the year in which it was identified.",
+            "url": "https://www.bcm.edu/departments/molecular-virology-and-microbiology/emerging-infections-and-biodefense/specific-agents/sars-cov-2-and-covid-19"
+          },
+          {
+            "title": "Transmission of SARS-CoV-2: implications for infection prevention ...",
+            "snippet": "Current evidence suggests that SARS-CoV-2, the virus that causes COVID-19, is predominantly spread from person-to-person.",
+            "url": "https://www.who.int/news-room/commentaries/detail/transmission-of-sars-cov-2-implications-for-infection-prevention-precautions"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-candidate",
+  "timestamp": "2026-11-06T06:57:48.979751+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15458.296
+}

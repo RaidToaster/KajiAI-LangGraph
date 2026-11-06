@@ -1,0 +1,80 @@
+{
+  "attempted_new": 8,
+  "retained_attempts": 14,
+  "matched_cases_per_model": 5,
+  "attempts": {
+    "deepseek": {
+      "gold": "Refuted",
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN",
+      "errors": [],
+      "stop_reason": "max_rounds",
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 69.70400000000018,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "counts": {
+        "ollama": 3,
+        "jev": 12,
+        "tinyfish_search": 6,
+        "tinyfish_fetch": 10
+      }
+    },
+    "glm": {
+      "gold": "Refuted",
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "errors": [
+        "Analysis failed: ValueError: Expected one complete assessment block"
+      ],
+      "stop_reason": "execution_error",
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 35.90700000000015,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "counts": {
+        "ollama": 1,
+        "jev": 4,
+        "tinyfish_search": 2,
+        "tinyfish_fetch": 4
+      }
+    }
+  },
+  "usage": {
+    "jev": 75,
+    "jev_input_tokens": 175846,
+    "jev_output_tokens": 18344,
+    "tinyfish_search": 36,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 69,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "ollama": 20,
+    "ollama_input_tokens": 49711,
+    "ollama_output_tokens": 9284,
+    "ollama_estimated_usd": 0.0180931,
+    "jev_estimated_usd": 0.007385532
+  },
+  "analysis_sha256": "5bb7430249cc125cb045db2d0601a9ad57d63d7fece2d8edc48ff9faeb83d1c2",
+  "scientific_status": "No candidate acceptance. Four GLM failures versus at most four baseline failures over the full eight-case schedule. Guard remains mathematically reachable; next failure or other binding guard requires futility audit.",
+  "next_untouched_cells": [
+    "train-1217-glm-candidate",
+    "train-1217-deepseek-candidate",
+    "train-1201-glm-baseline",
+    "train-1201-glm-candidate",
+    "train-1201-deepseek-candidate",
+    "train-1201-deepseek-baseline",
+    "train-1219-deepseek-candidate",
+    "train-1219-deepseek-baseline",
+    "train-1219-glm-baseline",
+    "train-1219-glm-candidate"
+  ],
+  "handoff": "No further live batch launched."
+}

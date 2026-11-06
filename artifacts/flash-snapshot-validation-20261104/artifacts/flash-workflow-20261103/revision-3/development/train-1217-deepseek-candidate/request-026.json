@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "OFAC Cuba sanctions CIMAvax import authorization",
+        "candidates": [
+          {
+            "title": "OFAC – Duane Morris on Cuba, Puerto Rico & the Caribbean",
+            "snippet": "OFAC is removing the monetary value limitations on what authorized travelers may import from Cuba into the United States. Persons subject to U.S. jurisdiction ...",
+            "url": "https://blogs.duanemorris.com/puertoricocubaandcaribbean/tag/ofac/"
+          },
+          {
+            "title": "Frequently Asked Questions - Newly Added",
+            "snippet": "Aug 6, 2026 — As of August 2026, the U.S. government is working to operationalize $100 million in humanitarian assistance directly to the Cuban people, ... Read more",
+            "url": "https://ofac.treasury.gov/faqs/added/2026-08-06"
+          },
+          {
+            "title": "Treasury Designates & Blocks 10 Entities for Cuban ...",
+            "snippet": "Feb 9, 2004 — OFAC is working with the State Department to review the current authorization which allows licensed travelers to import up to $100 worth of ...",
+            "url": "https://home.treasury.gov/news/press-releases/js1161"
+          },
+          {
+            "title": "Cuba's Cimavax-EGF lung cancer vaccine extends survival ...",
+            "snippet": "Sep 22, 2026 — Cuba's Cimavax -EGF lung cancer vaccine ... The decades-long sanctions prohibit most trade with Cuba , including pharmaceutical imports . Read more",
+            "url": "https://www.facebook.com/ScienceSimplified1/posts/a-country-under-six-decades-of-sanctions-built-something-american-pharma-hadnt-a/122334393194010907/"
+          },
+          {
+            "title": "OFAC loosens restrictions on Cuban Pharmaceutical Market",
+            "snippet": "The new regulations represent the first step in opening the pharmaceutical space between the U.S. and Cuba . The island nation already has a history of ... Read more",
+            "url": "https://aublr.org/2016/10/ofac-loosens-restrictions-cuban-pharmaceutical-market/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-03T06:04:37.799889+00:00",
+  "status": "reserved_outcome_unknown"
+}

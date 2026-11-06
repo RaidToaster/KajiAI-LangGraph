@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks will stop the spread of covid 19",
+        "query": "Wearing face masks will stop the spread of covid 19 counterevidence",
+        "candidates": [
+          {
+            "title": "Do facemasks protect against COVID‐19? - PMC - NIH",
+            "snippet": "There is no good evidence that facemasks protect the public against infection with respiratory viruses, including COVID‐19.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7323223/"
+          },
+          {
+            "title": "How well do face masks protect against COVID-19? - Mayo Clinic",
+            "snippet": "Most research finds that these products can slow the spread of the virus that causes COVID-19 when they are worn consistently, fit properly and are worn ...",
+            "url": "https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-mask/art-20485449"
+          },
+          {
+            "title": "An evidence review of face masks against COVID-19 | PNAS",
+            "snippet": "Jan 11, 2021 · The preponderance of evidence indicates that mask wearing reduces transmissibility per contact by reducing transmission of infected respiratory ... Missing: counterevidence | Show results with: counterevidence",
+            "url": "https://www.pnas.org/doi/10.1073/pnas.2014564118"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-013-deepseek-baseline",
+  "timestamp": "2026-11-06T06:12:21.284037+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12730.593
+}

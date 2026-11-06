@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Obtain the draft text to be assessed.",
+        "candidates": [
+          {
+            "title": "Can I retrieve a lost text message draft …",
+            "snippet": "I was writing a long text, I lost power and the draft is gone. Can I retrieve it?\n\n[Re-Titled by Moderator]",
+            "url": "https://discussions.apple.com/thread/254903575"
+          },
+          {
+            "title": "iOS 26: Find Your Draft Messages in Seconds (Stop Re-Typing! ...",
+            "snippet": "The video shows how to navigate to the iMessage app, select \"Draft Messages,\" and then pick up the list to easily manage conversations and ...",
+            "url": "https://www.facebook.com/Techsimplifyhub/videos/ios-26-find-your-draft-messages-in-seconds-stop-re-typingios-26-makes-managing-y/1483593096110143/"
+          },
+          {
+            "title": "iMessage App",
+            "snippet": "To use the Messages app, tap the Drafts icon in the Message app selection window. Once you find the draft, tap it in the list to insert the text into the ...",
+            "url": "https://docs.getdrafts.com/docs/extensions/message.html"
+          },
+          {
+            "title": "Assessments Page (Drafts and Published)",
+            "snippet": "A draft assessment can always be published by its owner. A draft assessment that is shared with a school or district can be published by its owner or a district ...",
+            "url": "https://support.renaissance.com/s/article/Assessments-Page-Drafts-and-Published-1752673901446?language=en_US"
+          },
+          {
+            "title": "Where can I find draft messages, as I have been told ...",
+            "snippet": "Google Messages doesnt have drafts. If you start typing a response to a thread, it remains in that message box until you actually send it.",
+            "url": "https://support.google.com/messages/thread/162059496/where-can-i-find-draft-messages-as-i-have-been-told-messages-are-in-drafts-but-i-can-t-get-to-them?hl=en"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-baseline",
+  "timestamp": "2026-11-03T06:00:31.194110+00:00",
+  "status": "reserved_outcome_unknown"
+}

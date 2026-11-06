@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Grand Island Erie County New York town board meeting minutes 2016 2017 2018 Nate McMurray roll call vote tax levy homeowners",
+        "candidates": [
+          {
+            "title": "Jacob's charge that McMurray raised taxes on Grand Island is ...",
+            "snippet": "The mailer claims that “While serving as Town Supervisor, Nate McMurray voted to raise taxes on homeowners.” We were curious about McMurray's ... Missing:  Erie  roll",
+            "url": "https://politifact.com/factchecks/2020/oct/28/chris-jacobs/jacobs-charge-mcmurray-raised-taxes-grand-island-c/"
+          },
+          {
+            "title": "[PDF] Town of Grand Island – Regular Meeting #19 - eCode360",
+            "snippet": "on the 17th of October, 2016. Present: Nathan D. McMurray. Supervisor. Raymond A. Billica. Councilman. Christopher K. Aronica. Missing:  Nate  roll  homeowners",
+            "url": "https://ecode360.com/GR0053/document/293272751.pdf"
+          },
+          {
+            "title": "WHERE IS BECKY? Becky Widysh is barely running a public ...",
+            "snippet": "Nate McMurray critiques the long-standing Republican dominance in Niagara County, New York, alleging a history of corruption and mismanagement.",
+            "url": "https://www.facebook.com/nate.d.mcmurray/posts/natecast-clip-where-is-beckybecky-widysh-is-barely-running-a-public-campaign-you/1533950908538139/"
+          },
+          {
+            "title": "Dave Denz responds to residency claims in Erie County",
+            "snippet": "Nate McMurray, the former congressional candidate and Grand Island supervisor, said he is \"considering\" a Democratic primary challenge to ...",
+            "url": "https://www.facebook.com/61574372120370/posts/in-response-to-my-opponent-going-to-the-buffalo-news-to-complain-and-question-my/122133611408812404/"
+          },
+          {
+            "title": "[PDF] ERIE COUNTY-WIDE",
+            "snippet": "The 2018 New York State Budget includes a new initiative designed to generate property tax savings by facilitating collaboration between local ...",
+            "url": "https://www4.erie.gov/sites/default/files/2021-06/ECWSSP%20Report.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-deepseek-candidate",
+  "timestamp": "2026-11-06T01:13:18.653897+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7063.953
+}

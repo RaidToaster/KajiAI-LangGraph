@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kanye West was ahead of Biden and Trump in the Kentucky polls in October 2020",
+        "query": "What Kentucky polls of the 2020 presidential race were conducted or released in October 2020, and what vote shares did they report for Kanye West, Joe Biden, and Donald Trump?",
+        "candidates": [
+          {
+            "title": "2020 United States presidential election in Kentucky",
+            "snippet": "The 2020 United States presidential election in Kentucky was held on Tuesday, November 3, 2020, as part of the 2020 United States presidential election in which ...",
+            "url": "https://en.wikipedia.org/wiki/2020_United_States_presidential_election_in_Kentucky"
+          },
+          {
+            "title": "Fact-check: Is Kanye polling ahead of Biden and Trump in ...",
+            "snippet": "Kanye West tweeted a screenshot from a local Kentucky news outlet, showing him leading in polls in Kentucky ahead of both Biden and Trump.",
+            "url": "https://www.poynter.org/tfcn/2020/is-kanye-polling-ahead-of-biden-and-trump-in-kentucky/"
+          },
+          {
+            "title": "Presidential Election Results 2020: Biden Wins",
+            "snippet": "Joseph R. Biden Jr. was elected the 46th president of the United States. See full results and maps from the 2020 presidential election.",
+            "url": "https://www.nytimes.com/interactive/2020/11/03/us/elections/results-president.html"
+          },
+          {
+            "title": "Is Kanye West leading Trump and Biden in Kentucky vote? ...",
+            "snippet": "CLAIM: Election results in Kentucky show rapper and independent presidential candidate Kanye West ahead of President Donald Trump and Democratic ...",
+            "url": "https://www.oregonlive.com/entertainment/2020/10/is-kanye-west-leading-trump-and-biden-in-kentucky-vote-nope.html"
+          },
+          {
+            "title": "Kentucky 2020 live election results",
+            "snippet": "Live-updating maps, vote counts, and analysis of Kentucky's 2020 presidential, U.S. Senate and U.S. House races from The Washington Post.",
+            "url": "https://www.washingtonpost.com/elections/election-results/kentucky-2020/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-102-deepseek-candidate",
+  "timestamp": "2026-11-06T05:08:57.871355+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8927.187
+}

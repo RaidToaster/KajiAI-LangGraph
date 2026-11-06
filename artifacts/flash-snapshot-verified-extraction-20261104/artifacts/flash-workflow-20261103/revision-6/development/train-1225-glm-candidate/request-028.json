@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Retrieve the full PolitiFact fact-check page to confirm its published final truth rating for Sanders' Feb. 19, 2020 statement.",
+        "candidates": [
+          {
+            "title": "PolitiFact",
+            "snippet": "Fact-checking journalism is the heart of PolitiFact. Our core principles are independence, transparency, fairness, thorough reporting and clear writing.",
+            "url": "https://politifact.com/"
+          },
+          {
+            "title": "The Principles of the Truth-O-Meter: How we fact-check",
+            "snippet": "Fact-checking journalism is the heart of PolitiFact. PolitiFact focused on looking at specific statements made by politicians and rating them ...",
+            "url": "https://politifact.com/article/2018/feb/12/principles-truth-o-meter-politifacts-methodology-i/"
+          },
+          {
+            "title": "National – PolitiFact",
+            "snippet": "Stand up for the facts! Our only agenda is to publish the truth so you can be an informed participant in democracy. We need your help. More Info ...",
+            "url": "https://politifact.com/truth-o-meter/"
+          },
+          {
+            "title": "PolitiFact",
+            "snippet": "Its journalists select original statements to evaluate and then publish their findings on the PolitiFact website, where each statement receives a \"Truth-O- ...",
+            "url": "https://en.wikipedia.org/wiki/PolitiFact"
+          },
+          {
+            "title": "Latest Fact-Checks On Bernie Sanders",
+            "snippet": "Latest Fact-Checks On Bernie Sanders. Clear. Any Rating, True, Mostly True, Half True, Mostly False, False, Pants on Fire, No Flip, Half Flip, Full Flop.",
+            "url": "https://politifact.com/factchecks/list/?category=&ruling=false&speaker=bernie-sanders"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T08:55:20.398219+00:00",
+  "status": "reserved_outcome_unknown"
+}

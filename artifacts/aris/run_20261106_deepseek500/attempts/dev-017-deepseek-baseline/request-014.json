@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "October 2020 state mail ballot receipt deadlines postmarked by Election Day NCSL",
+        "candidates": [
+          {
+            "title": "Table 11: Receipt and Postmark Deadlines for Absentee/Mail ...",
+            "snippet": "The table below shows which states require mailed ballots to be received by Election Day or postmarked by Election Day and provides deadline details for each state.",
+            "url": "https://www.ncsl.org/elections-and-campaigns/table-11-receipt-and-postmark-deadlines-for-absentee-mail-ballots"
+          },
+          {
+            "title": "Receipt Deadline is November 12 for Ballots Postmarked by ...",
+            "snippet": "County boards of elections in North Carolina will accept mail-in ballots received by November 12, as long as they are postmarked by Election Day, November 3. The U.S. Supreme Court ruled Wednesday to uphold this deadline.",
+            "url": "https://www.ncsbe.gov/news/press-releases/2020/10/29/receipt-deadline-november-12-ballots-postmarked-election-day"
+          },
+          {
+            "title": "Absentee/mail-in voting deadlines, 2020 - Ballotpedia",
+            "snippet": "How to use this interactive table: The table comprises five columns: 1. State 2. In-person request deadline (the last day voters can submit absentee/mail-in voting requests in person, if applicable) 3. Online request deadline (the last day voters can submit absentee/mail-in voting requests online, if applicable) 4. Mail request deadline (the last d...",
+            "url": "https://ballotpedia.org/Absentee/mail-in_voting_deadlines,_2020"
+          },
+          {
+            "title": "Mail-In Voting Processing Factors - CISA",
+            "snippet": "This data is sourced from state election calendars, NCSL, NASS, and NASED. CISA does not provide any warranties of any kind regarding this information. Voters should seek the most up-to-date election information from their state and local elected oficials.",
+            "url": "https://www.cisa.gov/sites/default/files/publications/mail-in-voting-processing-factors_oct-8_508.pdf"
+          },
+          {
+            "title": "Absentee/mail-in ballot receipt deadlines by state",
+            "snippet": "States have different deadlines for when absentee/mail-in ballots must be received in order to be counted. In some states, these deadlines can also vary based on whether the ballot is returned by mail or in person, and whether the voter is a member of the United States military or living overseas.",
+            "url": "https://ballotpedia.org/Absentee/mail-in_ballot_receipt_deadlines_by_state"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-017-deepseek-baseline",
+  "timestamp": "2026-11-06T06:28:15.270468+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13684.578
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden said he wants to ban fracking in the US.",
+        "query": "When did Joe Biden make any statement about banning fracking, and what was the date and context?",
+        "candidates": [
+          {
+            "title": "Joe Biden's 'not banning fracking' defense, explained",
+            "snippet": "Joe Biden was unequivocal Monday on his position for one of the more politically sensitive climate change debates: whether to ban the ...",
+            "url": "https://www.washingtonpost.com/politics/2020/09/04/joe-biden-not-banning-fracking-defense-explained/"
+          },
+          {
+            "title": "Fact check: Joe Biden doesn't want to ban all fracking, only new permits",
+            "snippet": "A claim that former Vice President Joe Biden wants to ban fracking is not entirely true. He has publicly stated that he's opposed to a ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/06/19/fact-check-joe-biden-doesnt-want-ban-all-fracking-only-new-permits/3215253001/"
+          },
+          {
+            "title": "Biden, in a first, says he opposes all new fracking",
+            "snippet": "Bernie Sanders recently suggested he would stay in the presidential race to push Joe Biden to the left. Former Vice President Joe Biden and ...",
+            "url": "https://www.eenews.net/articles/biden-in-a-first-says-he-opposes-all-new-fracking/"
+          },
+          {
+            "title": "Biden: \"I am not banning fracking\"",
+            "snippet": "Joe Biden on Monday rebutted President Trump's claim that the Democratic nominee would seek to ban fracking, the oil-and-gas extraction ...",
+            "url": "https://www.axios.com/2020/08/31/joe-biden-fracking-not-banning"
+          },
+          {
+            "title": "Biden indicates from the debate stage that he would ban all fracking",
+            "snippet": "During an exchange with Sen. Bernie Sanders (I-Vt.) at the March 15 Democratic debate, former vice president Joe Biden said, “No more — no ...",
+            "url": "https://www.washingtonpost.com/video/politics/biden-indicates-from-the-debate-stage-that-he-would-ban-all-fracking/2020/03/18/db729c6b-3dd1-41f8-9773-3fe0571112d7_video.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-047-deepseek-candidate",
+  "timestamp": "2026-11-06T07:55:11.674619+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18900.984
+}

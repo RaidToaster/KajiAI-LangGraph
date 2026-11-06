@@ -1,0 +1,158 @@
+[
+  {
+    "endpoint": "/api/version",
+    "payload": null,
+    "status": 200,
+    "value": {
+      "version": "0.34.0"
+    }
+  },
+  {
+    "endpoint": "/api/tags",
+    "payload": null,
+    "status": 200,
+    "value": {
+      "models": [
+        {
+          "name": "gemma4:31b-cloud",
+          "model": "gemma4:31b-cloud",
+          "digest": "ef09f235533c96cd75e8deed88c628335cb69e2b3ce96275d0d7a67fe9887aba",
+          "remote_model": "gemma4:31b",
+          "remote_host": "https://ollama.com",
+          "details": {
+            "parent_model": "",
+            "format": "",
+            "family": "",
+            "families": null,
+            "parameter_size": "32.7B",
+            "quantization_level": "BF16",
+            "context_length": 262144,
+            "embedding_length": 5376
+          }
+        },
+        {
+          "name": "gemma4:latest",
+          "model": "gemma4:latest",
+          "digest": "c6eb396dbd5992bbe3f5cdb947e8bbc0ee413d7c17e2beaae69f5d569cf982eb",
+          "remote_model": null,
+          "remote_host": null,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "gemma4",
+            "families": [
+              "gemma4"
+            ],
+            "parameter_size": "8.0B",
+            "quantization_level": "Q4_K_M"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "endpoint": "/api/me",
+    "payload": {},
+    "status": 200,
+    "value": {
+      "authenticated": true,
+      "keys": [
+        "id",
+        "email",
+        "name",
+        "avatarurl",
+        "plan"
+      ]
+    }
+  },
+  {
+    "endpoint": "/api/show",
+    "payload": {
+      "model": "gemma4:31b-cloud"
+    },
+    "status": 200,
+    "value": {
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "parameters": null,
+      "details": {
+        "parent_model": "gemma4:31b",
+        "format": "",
+        "family": "gemma4",
+        "families": null,
+        "parameter_size": "32682372656",
+        "quantization_level": "BF16"
+      },
+      "model_info": {
+        "gemma4.context_length": 262144,
+        "gemma4.embedding_length": 5376,
+        "general.architecture": "gemma4",
+        "general.parameter_count": 32682372656
+      }
+    }
+  },
+  {
+    "endpoint": "/api/show",
+    "payload": {
+      "model": "deepseek-v4.1-flash:cloud"
+    },
+    "status": 200,
+    "value": {
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "parameters": null,
+      "details": {
+        "parent_model": "deepseek-v4.1-flash",
+        "format": "",
+        "family": "deepseek_v41",
+        "families": null,
+        "parameter_size": "763205315794",
+        "quantization_level": "FP8"
+      },
+      "model_info": {
+        "deepseek_v41.context_length": 1048576,
+        "deepseek_v41.embedding_length": 0,
+        "general.architecture": "deepseek_v41",
+        "general.parameter_count": 763205315794
+      }
+    }
+  },
+  {
+    "endpoint": "/api/show",
+    "payload": {
+      "model": "glm-5.3-flash:cloud"
+    },
+    "status": 200,
+    "value": {
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "parameters": null,
+      "details": {
+        "parent_model": "glm-5.3-flash",
+        "format": "",
+        "family": "glm5_next",
+        "families": null,
+        "parameter_size": "321323031390",
+        "quantization_level": "FP8"
+      },
+      "model_info": {
+        "general.architecture": "glm5_next",
+        "general.parameter_count": 321323031390,
+        "glm5_next.context_length": 1048576,
+        "glm5_next.embedding_length": 4096
+      }
+    }
+  }
+]

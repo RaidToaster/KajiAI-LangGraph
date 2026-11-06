@@ -1,0 +1,2490 @@
+{
+  "accounted": 80,
+  "reused": 47,
+  "fresh_terminal": 33,
+  "next_untouched": "dev-373-deepseek-baseline",
+  "status": {
+    "status": "operational_stop",
+    "updated_at": "2026-11-06T04:40:43.871487+00:00",
+    "attempt": "dev-427-deepseek-candidate",
+    "problems": [
+      "tinyfish_search/007 unresolved or HTTP failure",
+      "transport failure; no retry"
+    ]
+  },
+  "status_text": "Operational stop at dev-427-deepseek-candidate. Reconcile the recorded condition before dispatch.",
+  "complete": false,
+  "protocol_sha256": "36f42f6eb075e54ad0a3c47539789309b0a43634906e8d7160ca3c761bbab94c",
+  "strata": {
+    "selected_50": {
+      "arms": {
+        "baseline": {
+          "started": 40,
+          "attempted": 40,
+          "completed": 39,
+          "failed": 1,
+          "timeout": 0,
+          "correct_proposals": 7,
+          "agreement": 0.175,
+          "correct_acceptances": 1,
+          "incorrect_acceptances": 0,
+          "coverage": 0.025,
+          "frozen_scores": {
+            "counts": {
+              "failed": 1,
+              "citations": 10,
+              "exact_citations": 10,
+              "jev_supported_citations": 10,
+              "accepted": 1,
+              "correct_accepted": 1,
+              "incorrect_accepted": 0,
+              "acceptance_missing_citation_checks": 0
+            },
+            "raw": {
+              "n": 40,
+              "accuracy": 0.175,
+              "macro_f1": 0.13849965823650034,
+              "coverage": 0.975,
+              "selective_accuracy": 0.1794871794871795,
+              "per_class": {
+                "Supported": {
+                  "precision": 1.0,
+                  "recall": 0.1,
+                  "f1": 0.18181818181818182,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 1.0,
+                  "recall": 0.12,
+                  "f1": 0.21428571428571425,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.08571428571428572,
+                  "recall": 1.0,
+                  "f1": 0.15789473684210528,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 1,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 9,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 0
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 3,
+                  "Not Enough Evidence": 21,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 1
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 3,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 0
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 2,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 0
+                }
+              }
+            },
+            "gate": {
+              "n": 40,
+              "accuracy": 0.025,
+              "macro_f1": 0.019230769230769232,
+              "coverage": 0.025,
+              "selective_accuracy": 1.0,
+              "per_class": {
+                "Supported": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 1.0,
+                  "recall": 0.04,
+                  "f1": 0.07692307692307693,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 10
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 1,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 24
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                }
+              }
+            }
+          },
+          "resources": {
+            "active_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 4447.5580000000045,
+              "mean": 111.1889500000001,
+              "median": 105.78900000000067,
+              "p90": 147.55340000000047,
+              "p95": 175.03724999999994
+            },
+            "workflow_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 4380.159000000009,
+              "mean": 109.50397500000021,
+              "median": 103.86750000000029,
+              "p90": 145.8063,
+              "p95": 173.3255000000001
+            },
+            "worker_overhead_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 67.39899999999591,
+              "mean": 1.6849749999998977,
+              "median": 1.6400000000000432,
+              "p90": 1.8932000000060725,
+              "p95": 1.9530499999943913
+            },
+            "ollama_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 214,
+              "mean": 5.35,
+              "median": 6.0,
+              "p90": 6.0,
+              "p95": 7.0
+            },
+            "ollama_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 2271.0460000000066,
+              "mean": 56.776150000000165,
+              "median": 56.46900000000005,
+              "p90": 74.86870000000071,
+              "p95": 81.42750000000251
+            },
+            "ollama_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1465718,
+              "mean": 36642.95,
+              "median": 32717.5,
+              "p90": 59764.6,
+              "p95": 71874.25
+            },
+            "ollama_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 508325,
+              "mean": 12708.125,
+              "median": 13433.0,
+              "p90": 13884.5,
+              "p95": 13926.5
+            },
+            "ollama_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1.0497054,
+              "mean": 0.026242635,
+              "median": 0.02613345,
+              "p90": 0.0342333,
+              "p95": 0.036116325
+            },
+            "jev_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 310,
+              "mean": 7.75,
+              "median": 7.0,
+              "p90": 10.0,
+              "p95": 10.05
+            },
+            "jev_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 102.50799999999276,
+              "mean": 2.5626999999998192,
+              "median": 2.2885000000001128,
+              "p90": 3.517600000000402,
+              "p95": 3.6849000000001864
+            },
+            "jev_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 627082,
+              "mean": 15677.05,
+              "median": 13272.0,
+              "p90": 22342.2,
+              "p95": 22827.8
+            },
+            "jev_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 71477,
+              "mean": 1786.925,
+              "median": 1524.0,
+              "p90": 2787.4,
+              "p95": 2869.3
+            },
+            "jev_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0.026337444,
+              "mean": 0.0006584361,
+              "median": 0.000557424,
+              "p90": 0.0009383724000000001,
+              "p95": 0.0009587676
+            },
+            "tinyfish_search_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 162,
+              "mean": 4.05,
+              "median": 3.0,
+              "p90": 6.0,
+              "p95": 6.0
+            },
+            "tinyfish_search_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 339.1090000000206,
+              "mean": 8.477725000000515,
+              "median": 7.953499999999849,
+              "p90": 14.205899999998655,
+              "p95": 14.863900000000559
+            },
+            "tinyfish_fetch_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 315,
+              "mean": 7.875,
+              "median": 6.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "tinyfish_fetch_seconds": {
+              "observed": 39,
+              "missing": 1,
+              "observed_total": 1585.4430000000152,
+              "mean": 40.652384615385,
+              "median": 29.045999999999367,
+              "p90": 76.9908000000004,
+              "p95": 101.65759999999928
+            },
+            "fetch_urls": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 315,
+              "mean": 7.875,
+              "median": 6.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "unknown_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1,
+              "mean": 0.025,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 0.0
+            },
+            "unknown_model_reservations_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": 0,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 0.0
+            }
+          },
+          "unknown_sends": 1,
+          "per_send_seconds": {
+            "ollama": {
+              "observed": 214,
+              "missing": 0,
+              "observed_total": 2271.0460000000066,
+              "mean": 10.61236448598134,
+              "median": 13.132500000000164,
+              "p90": 20.480099999999585,
+              "p95": 22.635150000000294
+            },
+            "jev": {
+              "observed": 310,
+              "missing": 0,
+              "observed_total": 102.50799999999276,
+              "mean": 0.3306709677419121,
+              "median": 0.31199999999989814,
+              "p90": 0.4371000000001004,
+              "p95": 0.4932500000002619
+            },
+            "tinyfish_search": {
+              "observed": 162,
+              "missing": 0,
+              "observed_total": 339.1090000000206,
+              "mean": 2.093265432098893,
+              "median": 2.155999999999949,
+              "p90": 3.0780000000012477,
+              "p95": 3.3742499999999835
+            },
+            "tinyfish_fetch": {
+              "observed": 314,
+              "missing": 1,
+              "observed_total": 1585.4430000000152,
+              "mean": 5.049181528662469,
+              "median": 2.772999999999996,
+              "p90": 11.126100000000042,
+              "p95": 19.1932499999999
+            }
+          },
+          "round_seconds": {
+            "observed": 116,
+            "missing": 0,
+            "observed_total": 4379.580999999994,
+            "mean": 37.7550086206896,
+            "median": 35.46049999999968,
+            "p90": 56.38249999999971,
+            "p95": 62.85550000000003
+          }
+        },
+        "candidate": {
+          "started": 40,
+          "attempted": 40,
+          "completed": 11,
+          "failed": 29,
+          "timeout": 0,
+          "correct_proposals": 4,
+          "agreement": 0.1,
+          "correct_acceptances": 0,
+          "incorrect_acceptances": 0,
+          "coverage": 0.0,
+          "frozen_scores": {
+            "counts": {
+              "failed": 29,
+              "citations": 64,
+              "exact_citations": 64,
+              "jev_supported_citations": 57
+            },
+            "raw": {
+              "n": 40,
+              "accuracy": 0.1,
+              "macro_f1": 0.12794612794612795,
+              "coverage": 0.275,
+              "selective_accuracy": 0.36363636363636365,
+              "per_class": {
+                "Supported": {
+                  "precision": 1.0,
+                  "recall": 0.1,
+                  "f1": 0.18181818181818182,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 1.0,
+                  "recall": 0.08,
+                  "f1": 0.14814814814814814,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.125,
+                  "recall": 0.3333333333333333,
+                  "f1": 0.18181818181818182,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 1,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 3,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 6
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 2,
+                  "Not Enough Evidence": 4,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 19
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 1,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                }
+              }
+            },
+            "gate": {
+              "n": 40,
+              "accuracy": 0.0,
+              "macro_f1": 0.0,
+              "coverage": 0.0,
+              "selective_accuracy": null,
+              "per_class": {
+                "Supported": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 10
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 25
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                }
+              }
+            }
+          },
+          "resources": {
+            "active_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 2534.906000000001,
+              "mean": 63.37265000000002,
+              "median": 62.234499999999116,
+              "p90": 110.1149999999996,
+              "p95": 114.15625
+            },
+            "workflow_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 2466.377999999997,
+              "mean": 61.65944999999992,
+              "median": 60.46900000000096,
+              "p90": 108.3299,
+              "p95": 112.52185
+            },
+            "worker_overhead_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 68.52800000000377,
+              "mean": 1.7132000000000942,
+              "median": 1.7034999999996217,
+              "p90": 1.8614999999997963,
+              "p95": 1.937749999999869
+            },
+            "ollama_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 155,
+              "mean": 3.875,
+              "median": 3.0,
+              "p90": 7.0,
+              "p95": 7.0
+            },
+            "ollama_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 501.2649999999969,
+              "mean": 12.531624999999924,
+              "median": 7.875,
+              "p90": 29.33280000000059,
+              "p95": 29.6366500000001
+            },
+            "ollama_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1001048,
+              "mean": 25026.2,
+              "median": 10818.0,
+              "p90": 58669.3,
+              "p95": 65812.45
+            },
+            "ollama_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 130692,
+              "mean": 3267.3,
+              "median": 1626.5,
+              "p90": 8229.4,
+              "p95": 9017.35
+            },
+            "ollama_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0.45714479999999996,
+              "mean": 0.011428619999999999,
+              "median": 0.0050334,
+              "p90": 0.02591583,
+              "p95": 0.026999265
+            },
+            "jev_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 400,
+              "mean": 10,
+              "median": 5.0,
+              "p90": 19.0,
+              "p95": 19.0
+            },
+            "jev_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 135.89599999999177,
+              "mean": 3.397399999999794,
+              "median": 2.4684999999994943,
+              "p90": 6.2990999999975426,
+              "p95": 6.350699999998801
+            },
+            "jev_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1780628,
+              "mean": 44515.7,
+              "median": 27638.5,
+              "p90": 97532.4,
+              "p95": 101450.95
+            },
+            "jev_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 223729,
+              "mean": 5593.225,
+              "median": 3476.0,
+              "p90": 10914.2,
+              "p95": 12267.45
+            },
+            "jev_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0.074786376,
+              "mean": 0.0018696594000000002,
+              "median": 0.001160817,
+              "p90": 0.0040963608000000006,
+              "p95": 0.0042609399
+            },
+            "tinyfish_search_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 141,
+              "mean": 3.525,
+              "median": 2.0,
+              "p90": 6.0,
+              "p95": 6.0
+            },
+            "tinyfish_search_seconds": {
+              "observed": 39,
+              "missing": 1,
+              "observed_total": 369.1040000000064,
+              "mean": 9.464205128205293,
+              "median": 7.687000000005355,
+              "p90": 17.254199999999763,
+              "p95": 18.372499999999626
+            },
+            "tinyfish_fetch_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 276,
+              "mean": 6.9,
+              "median": 4.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "tinyfish_fetch_seconds": {
+              "observed": 38,
+              "missing": 2,
+              "observed_total": 1271.1569999999867,
+              "mean": 33.45149999999965,
+              "median": 31.806000000000495,
+              "p90": 60.64820000000127,
+              "p95": 65.61005000000014
+            },
+            "fetch_urls": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 276,
+              "mean": 6.9,
+              "median": 4.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "unknown_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 3,
+              "mean": 0.075,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 1.0
+            },
+            "unknown_model_reservations_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": 0,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 0.0
+            }
+          },
+          "unknown_sends": 3,
+          "per_send_seconds": {
+            "ollama": {
+              "observed": 155,
+              "missing": 0,
+              "observed_total": 501.2649999999969,
+              "mean": 3.233967741935464,
+              "median": 2.905999999999949,
+              "p90": 5.425200000000404,
+              "p95": 5.998099999999613
+            },
+            "jev": {
+              "observed": 400,
+              "missing": 0,
+              "observed_total": 135.89599999999177,
+              "mean": 0.33973999999997945,
+              "median": 0.31300000000010186,
+              "p90": 0.42199999999966165,
+              "p95": 0.4839999999986048
+            },
+            "tinyfish_search": {
+              "observed": 140,
+              "missing": 1,
+              "observed_total": 371.2910000000063,
+              "mean": 2.6520785714286164,
+              "median": 2.5859999999997854,
+              "p90": 3.4091999999999643,
+              "p95": 3.8001500000004627
+            },
+            "tinyfish_fetch": {
+              "observed": 274,
+              "missing": 2,
+              "observed_total": 1338.532999999987,
+              "mean": 4.885156934306521,
+              "median": 2.75,
+              "p90": 9.269100000000254,
+              "p95": 18.92034999999987
+            }
+          },
+          "round_seconds": {
+            "observed": 71,
+            "missing": 0,
+            "observed_total": 2465.841999999997,
+            "mean": 34.73016901408446,
+            "median": 31.890999999995984,
+            "p90": 52.28200000000015,
+            "p95": 56.734500000000025
+          }
+        }
+      },
+      "paired_n": 40,
+      "paired_agreement_delta": -0.075,
+      "paired_bootstrap_95": {
+        "accuracy": [
+          -0.225,
+          0.075
+        ],
+        "macro_f1": [
+          -0.16278768156951517,
+          0.14477134707397865
+        ],
+        "correct_acceptance": [
+          -0.075,
+          0.0
+        ],
+        "incorrect_acceptance": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "other_450": {
+      "arms": {
+        "baseline": {
+          "started": 0,
+          "attempted": 0,
+          "completed": 0,
+          "failed": 0,
+          "timeout": 0,
+          "correct_proposals": 0,
+          "agreement": null,
+          "correct_acceptances": 0,
+          "incorrect_acceptances": 0,
+          "coverage": null,
+          "frozen_scores": null,
+          "resources": {},
+          "unknown_sends": 0,
+          "per_send_seconds": {
+            "ollama": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            },
+            "jev": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            },
+            "tinyfish_search": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            },
+            "tinyfish_fetch": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            }
+          },
+          "round_seconds": {
+            "observed": 0,
+            "missing": 0,
+            "observed_total": 0,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          }
+        },
+        "candidate": {
+          "started": 0,
+          "attempted": 0,
+          "completed": 0,
+          "failed": 0,
+          "timeout": 0,
+          "correct_proposals": 0,
+          "agreement": null,
+          "correct_acceptances": 0,
+          "incorrect_acceptances": 0,
+          "coverage": null,
+          "frozen_scores": null,
+          "resources": {},
+          "unknown_sends": 0,
+          "per_send_seconds": {
+            "ollama": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            },
+            "jev": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            },
+            "tinyfish_search": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            },
+            "tinyfish_fetch": {
+              "observed": 0,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": null,
+              "median": null,
+              "p90": null,
+              "p95": null
+            }
+          },
+          "round_seconds": {
+            "observed": 0,
+            "missing": 0,
+            "observed_total": 0,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          }
+        }
+      },
+      "paired_n": 0,
+      "paired_agreement_delta": null,
+      "paired_bootstrap_95": null
+    },
+    "pooled_500": {
+      "arms": {
+        "baseline": {
+          "started": 40,
+          "attempted": 40,
+          "completed": 39,
+          "failed": 1,
+          "timeout": 0,
+          "correct_proposals": 7,
+          "agreement": 0.175,
+          "correct_acceptances": 1,
+          "incorrect_acceptances": 0,
+          "coverage": 0.025,
+          "frozen_scores": {
+            "counts": {
+              "failed": 1,
+              "citations": 10,
+              "exact_citations": 10,
+              "jev_supported_citations": 10,
+              "accepted": 1,
+              "correct_accepted": 1,
+              "incorrect_accepted": 0,
+              "acceptance_missing_citation_checks": 0
+            },
+            "raw": {
+              "n": 40,
+              "accuracy": 0.175,
+              "macro_f1": 0.13849965823650034,
+              "coverage": 0.975,
+              "selective_accuracy": 0.1794871794871795,
+              "per_class": {
+                "Supported": {
+                  "precision": 1.0,
+                  "recall": 0.1,
+                  "f1": 0.18181818181818182,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 1.0,
+                  "recall": 0.12,
+                  "f1": 0.21428571428571425,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.08571428571428572,
+                  "recall": 1.0,
+                  "f1": 0.15789473684210528,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 1,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 9,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 0
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 3,
+                  "Not Enough Evidence": 21,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 1
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 3,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 0
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 2,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 0
+                }
+              }
+            },
+            "gate": {
+              "n": 40,
+              "accuracy": 0.025,
+              "macro_f1": 0.019230769230769232,
+              "coverage": 0.025,
+              "selective_accuracy": 1.0,
+              "per_class": {
+                "Supported": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 1.0,
+                  "recall": 0.04,
+                  "f1": 0.07692307692307693,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 10
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 1,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 24
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                }
+              }
+            }
+          },
+          "resources": {
+            "active_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 4447.5580000000045,
+              "mean": 111.1889500000001,
+              "median": 105.78900000000067,
+              "p90": 147.55340000000047,
+              "p95": 175.03724999999994
+            },
+            "workflow_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 4380.159000000009,
+              "mean": 109.50397500000021,
+              "median": 103.86750000000029,
+              "p90": 145.8063,
+              "p95": 173.3255000000001
+            },
+            "worker_overhead_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 67.39899999999591,
+              "mean": 1.6849749999998977,
+              "median": 1.6400000000000432,
+              "p90": 1.8932000000060725,
+              "p95": 1.9530499999943913
+            },
+            "ollama_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 214,
+              "mean": 5.35,
+              "median": 6.0,
+              "p90": 6.0,
+              "p95": 7.0
+            },
+            "ollama_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 2271.0460000000066,
+              "mean": 56.776150000000165,
+              "median": 56.46900000000005,
+              "p90": 74.86870000000071,
+              "p95": 81.42750000000251
+            },
+            "ollama_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1465718,
+              "mean": 36642.95,
+              "median": 32717.5,
+              "p90": 59764.6,
+              "p95": 71874.25
+            },
+            "ollama_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 508325,
+              "mean": 12708.125,
+              "median": 13433.0,
+              "p90": 13884.5,
+              "p95": 13926.5
+            },
+            "ollama_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1.0497054,
+              "mean": 0.026242635,
+              "median": 0.02613345,
+              "p90": 0.0342333,
+              "p95": 0.036116325
+            },
+            "jev_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 310,
+              "mean": 7.75,
+              "median": 7.0,
+              "p90": 10.0,
+              "p95": 10.05
+            },
+            "jev_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 102.50799999999276,
+              "mean": 2.5626999999998192,
+              "median": 2.2885000000001128,
+              "p90": 3.517600000000402,
+              "p95": 3.6849000000001864
+            },
+            "jev_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 627082,
+              "mean": 15677.05,
+              "median": 13272.0,
+              "p90": 22342.2,
+              "p95": 22827.8
+            },
+            "jev_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 71477,
+              "mean": 1786.925,
+              "median": 1524.0,
+              "p90": 2787.4,
+              "p95": 2869.3
+            },
+            "jev_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0.026337444,
+              "mean": 0.0006584361,
+              "median": 0.000557424,
+              "p90": 0.0009383724000000001,
+              "p95": 0.0009587676
+            },
+            "tinyfish_search_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 162,
+              "mean": 4.05,
+              "median": 3.0,
+              "p90": 6.0,
+              "p95": 6.0
+            },
+            "tinyfish_search_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 339.1090000000206,
+              "mean": 8.477725000000515,
+              "median": 7.953499999999849,
+              "p90": 14.205899999998655,
+              "p95": 14.863900000000559
+            },
+            "tinyfish_fetch_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 315,
+              "mean": 7.875,
+              "median": 6.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "tinyfish_fetch_seconds": {
+              "observed": 39,
+              "missing": 1,
+              "observed_total": 1585.4430000000152,
+              "mean": 40.652384615385,
+              "median": 29.045999999999367,
+              "p90": 76.9908000000004,
+              "p95": 101.65759999999928
+            },
+            "fetch_urls": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 315,
+              "mean": 7.875,
+              "median": 6.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "unknown_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1,
+              "mean": 0.025,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 0.0
+            },
+            "unknown_model_reservations_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": 0,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 0.0
+            }
+          },
+          "unknown_sends": 1,
+          "per_send_seconds": {
+            "ollama": {
+              "observed": 214,
+              "missing": 0,
+              "observed_total": 2271.0460000000066,
+              "mean": 10.61236448598134,
+              "median": 13.132500000000164,
+              "p90": 20.480099999999585,
+              "p95": 22.635150000000294
+            },
+            "jev": {
+              "observed": 310,
+              "missing": 0,
+              "observed_total": 102.50799999999276,
+              "mean": 0.3306709677419121,
+              "median": 0.31199999999989814,
+              "p90": 0.4371000000001004,
+              "p95": 0.4932500000002619
+            },
+            "tinyfish_search": {
+              "observed": 162,
+              "missing": 0,
+              "observed_total": 339.1090000000206,
+              "mean": 2.093265432098893,
+              "median": 2.155999999999949,
+              "p90": 3.0780000000012477,
+              "p95": 3.3742499999999835
+            },
+            "tinyfish_fetch": {
+              "observed": 314,
+              "missing": 1,
+              "observed_total": 1585.4430000000152,
+              "mean": 5.049181528662469,
+              "median": 2.772999999999996,
+              "p90": 11.126100000000042,
+              "p95": 19.1932499999999
+            }
+          },
+          "round_seconds": {
+            "observed": 116,
+            "missing": 0,
+            "observed_total": 4379.580999999994,
+            "mean": 37.7550086206896,
+            "median": 35.46049999999968,
+            "p90": 56.38249999999971,
+            "p95": 62.85550000000003
+          }
+        },
+        "candidate": {
+          "started": 40,
+          "attempted": 40,
+          "completed": 11,
+          "failed": 29,
+          "timeout": 0,
+          "correct_proposals": 4,
+          "agreement": 0.1,
+          "correct_acceptances": 0,
+          "incorrect_acceptances": 0,
+          "coverage": 0.0,
+          "frozen_scores": {
+            "counts": {
+              "failed": 29,
+              "citations": 64,
+              "exact_citations": 64,
+              "jev_supported_citations": 57
+            },
+            "raw": {
+              "n": 40,
+              "accuracy": 0.1,
+              "macro_f1": 0.12794612794612795,
+              "coverage": 0.275,
+              "selective_accuracy": 0.36363636363636365,
+              "per_class": {
+                "Supported": {
+                  "precision": 1.0,
+                  "recall": 0.1,
+                  "f1": 0.18181818181818182,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 1.0,
+                  "recall": 0.08,
+                  "f1": 0.14814814814814814,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.125,
+                  "recall": 0.3333333333333333,
+                  "f1": 0.18181818181818182,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 1,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 3,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 6
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 2,
+                  "Not Enough Evidence": 4,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 19
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 1,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                }
+              }
+            },
+            "gate": {
+              "n": 40,
+              "accuracy": 0.0,
+              "macro_f1": 0.0,
+              "coverage": 0.0,
+              "selective_accuracy": null,
+              "per_class": {
+                "Supported": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 10
+                },
+                "Refuted": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 25
+                },
+                "Not Enough Evidence": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "support": 2
+                }
+              },
+              "confusion_matrix": {
+                "Supported": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 10
+                },
+                "Refuted": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 25
+                },
+                "Not Enough Evidence": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 3
+                },
+                "Conflicting Evidence/Cherrypicking": {
+                  "Supported": 0,
+                  "Refuted": 0,
+                  "Not Enough Evidence": 0,
+                  "Conflicting Evidence/Cherrypicking": 0,
+                  "ABSTAIN": 2
+                }
+              }
+            }
+          },
+          "resources": {
+            "active_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 2534.906000000001,
+              "mean": 63.37265000000002,
+              "median": 62.234499999999116,
+              "p90": 110.1149999999996,
+              "p95": 114.15625
+            },
+            "workflow_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 2466.377999999997,
+              "mean": 61.65944999999992,
+              "median": 60.46900000000096,
+              "p90": 108.3299,
+              "p95": 112.52185
+            },
+            "worker_overhead_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 68.52800000000377,
+              "mean": 1.7132000000000942,
+              "median": 1.7034999999996217,
+              "p90": 1.8614999999997963,
+              "p95": 1.937749999999869
+            },
+            "ollama_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 155,
+              "mean": 3.875,
+              "median": 3.0,
+              "p90": 7.0,
+              "p95": 7.0
+            },
+            "ollama_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 501.2649999999969,
+              "mean": 12.531624999999924,
+              "median": 7.875,
+              "p90": 29.33280000000059,
+              "p95": 29.6366500000001
+            },
+            "ollama_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1001048,
+              "mean": 25026.2,
+              "median": 10818.0,
+              "p90": 58669.3,
+              "p95": 65812.45
+            },
+            "ollama_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 130692,
+              "mean": 3267.3,
+              "median": 1626.5,
+              "p90": 8229.4,
+              "p95": 9017.35
+            },
+            "ollama_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0.45714479999999996,
+              "mean": 0.011428619999999999,
+              "median": 0.0050334,
+              "p90": 0.02591583,
+              "p95": 0.026999265
+            },
+            "jev_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 400,
+              "mean": 10,
+              "median": 5.0,
+              "p90": 19.0,
+              "p95": 19.0
+            },
+            "jev_seconds": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 135.89599999999177,
+              "mean": 3.397399999999794,
+              "median": 2.4684999999994943,
+              "p90": 6.2990999999975426,
+              "p95": 6.350699999998801
+            },
+            "jev_input_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 1780628,
+              "mean": 44515.7,
+              "median": 27638.5,
+              "p90": 97532.4,
+              "p95": 101450.95
+            },
+            "jev_output_tokens": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 223729,
+              "mean": 5593.225,
+              "median": 3476.0,
+              "p90": 10914.2,
+              "p95": 12267.45
+            },
+            "jev_estimated_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0.074786376,
+              "mean": 0.0018696594000000002,
+              "median": 0.001160817,
+              "p90": 0.0040963608000000006,
+              "p95": 0.0042609399
+            },
+            "tinyfish_search_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 141,
+              "mean": 3.525,
+              "median": 2.0,
+              "p90": 6.0,
+              "p95": 6.0
+            },
+            "tinyfish_search_seconds": {
+              "observed": 39,
+              "missing": 1,
+              "observed_total": 369.1040000000064,
+              "mean": 9.464205128205293,
+              "median": 7.687000000005355,
+              "p90": 17.254199999999763,
+              "p95": 18.372499999999626
+            },
+            "tinyfish_fetch_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 276,
+              "mean": 6.9,
+              "median": 4.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "tinyfish_fetch_seconds": {
+              "observed": 38,
+              "missing": 2,
+              "observed_total": 1271.1569999999867,
+              "mean": 33.45149999999965,
+              "median": 31.806000000000495,
+              "p90": 60.64820000000127,
+              "p95": 65.61005000000014
+            },
+            "fetch_urls": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 276,
+              "mean": 6.9,
+              "median": 4.0,
+              "p90": 12.0,
+              "p95": 12.0
+            },
+            "unknown_sends": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 3,
+              "mean": 0.075,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 1.0
+            },
+            "unknown_model_reservations_usd": {
+              "observed": 40,
+              "missing": 0,
+              "observed_total": 0,
+              "mean": 0,
+              "median": 0.0,
+              "p90": 0.0,
+              "p95": 0.0
+            }
+          },
+          "unknown_sends": 3,
+          "per_send_seconds": {
+            "ollama": {
+              "observed": 155,
+              "missing": 0,
+              "observed_total": 501.2649999999969,
+              "mean": 3.233967741935464,
+              "median": 2.905999999999949,
+              "p90": 5.425200000000404,
+              "p95": 5.998099999999613
+            },
+            "jev": {
+              "observed": 400,
+              "missing": 0,
+              "observed_total": 135.89599999999177,
+              "mean": 0.33973999999997945,
+              "median": 0.31300000000010186,
+              "p90": 0.42199999999966165,
+              "p95": 0.4839999999986048
+            },
+            "tinyfish_search": {
+              "observed": 140,
+              "missing": 1,
+              "observed_total": 371.2910000000063,
+              "mean": 2.6520785714286164,
+              "median": 2.5859999999997854,
+              "p90": 3.4091999999999643,
+              "p95": 3.8001500000004627
+            },
+            "tinyfish_fetch": {
+              "observed": 274,
+              "missing": 2,
+              "observed_total": 1338.532999999987,
+              "mean": 4.885156934306521,
+              "median": 2.75,
+              "p90": 9.269100000000254,
+              "p95": 18.92034999999987
+            }
+          },
+          "round_seconds": {
+            "observed": 71,
+            "missing": 0,
+            "observed_total": 2465.841999999997,
+            "mean": 34.73016901408446,
+            "median": 31.890999999995984,
+            "p90": 52.28200000000015,
+            "p95": 56.734500000000025
+          }
+        }
+      },
+      "paired_n": 40,
+      "paired_agreement_delta": -0.075,
+      "paired_bootstrap_95": {
+        "accuracy": [
+          -0.225,
+          0.075
+        ],
+        "macro_f1": [
+          -0.16278768156951517,
+          0.14477134707397865
+        ],
+        "correct_acceptance": [
+          -0.075,
+          0.0
+        ],
+        "incorrect_acceptance": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "resources_by_source": {
+    "reused": {
+      "started": 47,
+      "attempted": 47,
+      "completed": 32,
+      "failed": 15,
+      "timeout": 0,
+      "correct_proposals": 9,
+      "agreement": 0.19148936170212766,
+      "correct_acceptances": 1,
+      "incorrect_acceptances": 0,
+      "coverage": 0.02127659574468085,
+      "frozen_scores": {
+        "counts": {
+          "failed": 15,
+          "citations": 56,
+          "exact_citations": 56,
+          "jev_supported_citations": 53,
+          "accepted": 1,
+          "correct_accepted": 1,
+          "incorrect_accepted": 0,
+          "acceptance_missing_citation_checks": 0
+        },
+        "raw": {
+          "n": 47,
+          "accuracy": 0.19148936170212766,
+          "macro_f1": 0.1731060606060606,
+          "coverage": 0.6808510638297872,
+          "selective_accuracy": 0.28125,
+          "per_class": {
+            "Supported": {
+              "precision": 1.0,
+              "recall": 0.14285714285714285,
+              "f1": 0.25,
+              "support": 14
+            },
+            "Refuted": {
+              "precision": 1.0,
+              "recall": 0.1111111111111111,
+              "f1": 0.19999999999999998,
+              "support": 27
+            },
+            "Not Enough Evidence": {
+              "precision": 0.14814814814814814,
+              "recall": 0.6666666666666666,
+              "f1": 0.24242424242424243,
+              "support": 6
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": {
+            "Supported": {
+              "Supported": 2,
+              "Refuted": 0,
+              "Not Enough Evidence": 9,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 3
+            },
+            "Refuted": {
+              "Supported": 0,
+              "Refuted": 3,
+              "Not Enough Evidence": 14,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 10
+            },
+            "Not Enough Evidence": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 4,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 2
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 0
+            }
+          }
+        },
+        "gate": {
+          "n": 47,
+          "accuracy": 0.02127659574468085,
+          "macro_f1": 0.017857142857142856,
+          "coverage": 0.02127659574468085,
+          "selective_accuracy": 1.0,
+          "per_class": {
+            "Supported": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 14
+            },
+            "Refuted": {
+              "precision": 1.0,
+              "recall": 0.037037037037037035,
+              "f1": 0.07142857142857142,
+              "support": 27
+            },
+            "Not Enough Evidence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 6
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": {
+            "Supported": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 14
+            },
+            "Refuted": {
+              "Supported": 0,
+              "Refuted": 1,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 26
+            },
+            "Not Enough Evidence": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 6
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 0
+            }
+          }
+        }
+      },
+      "resources": {
+        "active_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 4224.606000000005,
+          "mean": 89.8852340425533,
+          "median": 96.46900000000005,
+          "p90": 135.22799999999992,
+          "p95": 153.28549999999998
+        },
+        "workflow_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 4148.475000000007,
+          "mean": 88.26542553191503,
+          "median": 94.78099999999995,
+          "p90": 133.63100000000003,
+          "p95": 151.66140000000098
+        },
+        "worker_overhead_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 76.1309999999985,
+          "mean": 1.6198085106382658,
+          "median": 1.594000000000051,
+          "p90": 1.7339999999996507,
+          "p95": 1.8385000000009313
+        },
+        "ollama_sends": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 227,
+          "mean": 4.829787234042553,
+          "median": 6,
+          "p90": 7.0,
+          "p95": 7.0
+        },
+        "ollama_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 1768.4830000000022,
+          "mean": 37.62729787234047,
+          "median": 36.01700000000346,
+          "p90": 70.08439999999992,
+          "p95": 79.7765000000013
+        },
+        "ollama_input_tokens": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 1536161,
+          "mean": 32684.27659574468,
+          "median": 31431,
+          "p90": 59966.8,
+          "p95": 69116.1
+        },
+        "ollama_output_tokens": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 395590,
+          "mean": 8416.808510638299,
+          "median": 10952,
+          "p90": 13691.6,
+          "p95": 13895.8
+        },
+        "ollama_estimated_usd": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 0.9355563,
+          "mean": 0.019905453191489363,
+          "median": 0.023730900000000003,
+          "p90": 0.03227898,
+          "p95": 0.03394557
+        },
+        "jev_sends": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 434,
+          "mean": 9.23404255319149,
+          "median": 6,
+          "p90": 19.0,
+          "p95": 19.0
+        },
+        "jev_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 144.39099999998052,
+          "mean": 3.0721489361697984,
+          "median": 2.639999999999418,
+          "p90": 6.162200000000121,
+          "p95": 6.3176999999975125
+        },
+        "jev_input_tokens": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 1496816,
+          "mean": 31847.14893617021,
+          "median": 20459,
+          "p90": 78285.2,
+          "p95": 93744.5
+        },
+        "jev_output_tokens": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 185349,
+          "mean": 3943.595744680851,
+          "median": 2643,
+          "p90": 9637.8,
+          "p95": 10614.9
+        },
+        "jev_estimated_usd": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 0.062866272,
+          "mean": 0.001337580255319149,
+          "median": 0.0008592780000000001,
+          "p90": 0.0032879784,
+          "p95": 0.003937269
+        },
+        "tinyfish_search_sends": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 185,
+          "mean": 3.9361702127659575,
+          "median": 3,
+          "p90": 6.0,
+          "p95": 6.0
+        },
+        "tinyfish_search_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 409.1020000000299,
+          "mean": 8.704297872341062,
+          "median": 7.359000000011292,
+          "p90": 14.854600000000028,
+          "p95": 16.57579999999998
+        },
+        "tinyfish_fetch_sends": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 366,
+          "mean": 7.787234042553192,
+          "median": 6,
+          "p90": 12.0,
+          "p95": 12.0
+        },
+        "tinyfish_fetch_seconds": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 1780.2480000000007,
+          "mean": 37.87761702127661,
+          "median": 32.064000000000306,
+          "p90": 69.68759999999993,
+          "p95": 77.93579999999997
+        },
+        "fetch_urls": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 366,
+          "mean": 7.787234042553192,
+          "median": 6,
+          "p90": 12.0,
+          "p95": 12.0
+        },
+        "unknown_sends": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 0,
+          "mean": 0,
+          "median": 0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "unknown_model_reservations_usd": {
+          "observed": 47,
+          "missing": 0,
+          "observed_total": 0,
+          "mean": 0,
+          "median": 0,
+          "p90": 0.0,
+          "p95": 0.0
+        }
+      },
+      "unknown_sends": 0,
+      "per_send_seconds": {
+        "ollama": {
+          "observed": 227,
+          "missing": 0,
+          "observed_total": 1768.4830000000022,
+          "mean": 7.790674008810583,
+          "median": 3.7029999999999745,
+          "p90": 18.94039999999968,
+          "p95": 20.903099999999178
+        },
+        "jev": {
+          "observed": 434,
+          "missing": 0,
+          "observed_total": 144.39099999998052,
+          "mean": 0.33269815668198277,
+          "median": 0.31199999999989814,
+          "p90": 0.40599999999994907,
+          "p95": 0.46900000000005093
+        },
+        "tinyfish_search": {
+          "observed": 185,
+          "missing": 0,
+          "observed_total": 409.1020000000299,
+          "mean": 2.211362162162324,
+          "median": 2.219000000000051,
+          "p90": 3.290599999999176,
+          "p95": 3.524799999999959
+        },
+        "tinyfish_fetch": {
+          "observed": 366,
+          "missing": 0,
+          "observed_total": 1780.2480000000007,
+          "mean": 4.864065573770493,
+          "median": 2.672000000000253,
+          "p90": 9.555000000000746,
+          "p95": 17.406499999999596
+        }
+      },
+      "round_seconds": {
+        "observed": 112,
+        "missing": 0,
+        "observed_total": 4147.8609999999935,
+        "mean": 37.034473214285654,
+        "median": 33.67250000000013,
+        "p90": 55.935499999999955,
+        "p95": 59.04445000000087
+      }
+    },
+    "fresh": {
+      "started": 33,
+      "attempted": 33,
+      "completed": 18,
+      "failed": 15,
+      "timeout": 0,
+      "correct_proposals": 2,
+      "agreement": 0.06060606060606061,
+      "correct_acceptances": 0,
+      "incorrect_acceptances": 0,
+      "coverage": 0.0,
+      "frozen_scores": {
+        "counts": {
+          "failed": 15,
+          "citations": 18,
+          "exact_citations": 18,
+          "jev_supported_citations": 14
+        },
+        "raw": {
+          "n": 33,
+          "accuracy": 0.06060606060606061,
+          "macro_f1": 0.04,
+          "coverage": 0.5454545454545454,
+          "selective_accuracy": 0.1111111111111111,
+          "per_class": {
+            "Supported": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 6
+            },
+            "Refuted": {
+              "precision": 1.0,
+              "recall": 0.08695652173913043,
+              "f1": 0.16,
+              "support": 23
+            },
+            "Not Enough Evidence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4
+            }
+          },
+          "confusion_matrix": {
+            "Supported": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 3,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 3
+            },
+            "Refuted": {
+              "Supported": 0,
+              "Refuted": 2,
+              "Not Enough Evidence": 11,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 10
+            },
+            "Not Enough Evidence": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 0
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 2,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 2
+            }
+          }
+        },
+        "gate": {
+          "n": 33,
+          "accuracy": 0.0,
+          "macro_f1": 0.0,
+          "coverage": 0.0,
+          "selective_accuracy": null,
+          "per_class": {
+            "Supported": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 6
+            },
+            "Refuted": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 23
+            },
+            "Not Enough Evidence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4
+            }
+          },
+          "confusion_matrix": {
+            "Supported": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 6
+            },
+            "Refuted": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 23
+            },
+            "Not Enough Evidence": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 0
+            },
+            "Conflicting Evidence/Cherrypicking": {
+              "Supported": 0,
+              "Refuted": 0,
+              "Not Enough Evidence": 0,
+              "Conflicting Evidence/Cherrypicking": 0,
+              "ABSTAIN": 4
+            }
+          }
+        }
+      },
+      "resources": {
+        "active_seconds": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 2757.858,
+          "mean": 83.57145454545456,
+          "median": 85.92200000000003,
+          "p90": 134.74979999999996,
+          "p95": 157.5470000000003
+        },
+        "workflow_seconds": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 2698.061999999999,
+          "mean": 81.75945454545452,
+          "median": 84.18800000000056,
+          "p90": 133.0214,
+          "p95": 155.80020000000005
+        },
+        "worker_overhead_seconds": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 59.796000000001186,
+          "mean": 1.812000000000036,
+          "median": 1.8130000000001019,
+          "p90": 1.9489999999994325,
+          "p95": 1.9596000000003186
+        },
+        "ollama_sends": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 142,
+          "mean": 4.303030303030303,
+          "median": 5,
+          "p90": 7.0,
+          "p95": 7.0
+        },
+        "ollama_seconds": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 1003.8280000000013,
+          "mean": 30.419030303030343,
+          "median": 29.407000000000153,
+          "p90": 59.7121999999993,
+          "p95": 66.51600000000016
+        },
+        "ollama_input_tokens": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 930605,
+          "mean": 28200.151515151516,
+          "median": 24986,
+          "p90": 57968.2,
+          "p95": 68088.4
+        },
+        "ollama_output_tokens": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 243427,
+          "mean": 7376.575757575758,
+          "median": 8207,
+          "p90": 13512.2,
+          "p95": 13774.2
+        },
+        "ollama_estimated_usd": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 0.5712939,
+          "mean": 0.017311936363636364,
+          "median": 0.023038199999999998,
+          "p90": 0.02972922,
+          "p95": 0.03268128
+        },
+        "jev_sends": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 276,
+          "mean": 8.363636363636363,
+          "median": 7,
+          "p90": 15.2,
+          "p95": 19.0
+        },
+        "jev_seconds": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 94.01300000000401,
+          "mean": 2.8488787878789097,
+          "median": 2.295999999999367,
+          "p90": 5.1340000000000146,
+          "p95": 6.218400000000656
+        },
+        "jev_input_tokens": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 910894,
+          "mean": 27602.848484848484,
+          "median": 20125,
+          "p90": 66973.6,
+          "p95": 86245.8
+        },
+        "jev_output_tokens": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 109857,
+          "mean": 3329,
+          "median": 2418,
+          "p90": 7896.8,
+          "p95": 9996.8
+        },
+        "jev_estimated_usd": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 0.038257548,
+          "mean": 0.0011593196363636365,
+          "median": 0.0008452500000000001,
+          "p90": 0.0028128912000000006,
+          "p95": 0.0036223236000000004
+        },
+        "tinyfish_search_sends": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 118,
+          "mean": 3.5757575757575757,
+          "median": 3,
+          "p90": 6.0,
+          "p95": 6.0
+        },
+        "tinyfish_search_seconds": {
+          "observed": 32,
+          "missing": 1,
+          "observed_total": 299.11099999999715,
+          "mean": 9.34721874999991,
+          "median": 8.203500000000531,
+          "p90": 15.334900000000061,
+          "p95": 16.439699999999675
+        },
+        "tinyfish_fetch_sends": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 225,
+          "mean": 6.818181818181818,
+          "median": 6,
+          "p90": 11.8,
+          "p95": 12.0
+        },
+        "tinyfish_fetch_seconds": {
+          "observed": 30,
+          "missing": 3,
+          "observed_total": 1076.3520000000012,
+          "mean": 35.87840000000004,
+          "median": 27.140000000000327,
+          "p90": 66.04290000000019,
+          "p95": 89.37964999999994
+        },
+        "fetch_urls": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 225,
+          "mean": 6.818181818181818,
+          "median": 6,
+          "p90": 11.8,
+          "p95": 12.0
+        },
+        "unknown_sends": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 4,
+          "mean": 0.12121212121212122,
+          "median": 0,
+          "p90": 0.8,
+          "p95": 1.0
+        },
+        "unknown_model_reservations_usd": {
+          "observed": 33,
+          "missing": 0,
+          "observed_total": 0,
+          "mean": 0,
+          "median": 0,
+          "p90": 0.0,
+          "p95": 0.0
+        }
+      },
+      "unknown_sends": 4,
+      "per_send_seconds": {
+        "ollama": {
+          "observed": 142,
+          "missing": 0,
+          "observed_total": 1003.8280000000013,
+          "mean": 7.069211267605644,
+          "median": 2.9139999999999873,
+          "p90": 17.797100000000047,
+          "p95": 19.87075000000009
+        },
+        "jev": {
+          "observed": 276,
+          "missing": 0,
+          "observed_total": 94.01300000000401,
+          "mean": 0.3406268115942174,
+          "median": 0.31300000000010186,
+          "p90": 0.43800000000010186,
+          "p95": 0.48875000000043656
+        },
+        "tinyfish_search": {
+          "observed": 117,
+          "missing": 1,
+          "observed_total": 301.29799999999705,
+          "mean": 2.575196581196556,
+          "median": 2.530999999999949,
+          "p90": 3.3029999999999746,
+          "p95": 3.6087999999997917
+        },
+        "tinyfish_fetch": {
+          "observed": 222,
+          "missing": 3,
+          "observed_total": 1143.7280000000014,
+          "mean": 5.151927927927934,
+          "median": 2.9609999999997854,
+          "p90": 10.977800000000297,
+          "p95": 21.676450000000386
+        }
+      },
+      "round_seconds": {
+        "observed": 75,
+        "missing": 0,
+        "observed_total": 2697.561999999997,
+        "mean": 35.967493333333294,
+        "median": 33.65599999999995,
+        "p90": 51.15079999999998,
+        "p95": 61.136299999999935
+      }
+    }
+  },
+  "cohort_timing": {
+    "reused": {
+      "calendar_seconds": 28909.755205,
+      "worker_seconds": 4224.606000000005,
+      "other_elapsed_seconds": 24685.149204999994
+    },
+    "fresh": {
+      "calendar_seconds": 3231.33903,
+      "worker_seconds": 2757.858,
+      "other_elapsed_seconds": 473.4810299999999
+    }
+  },
+  "provider_billing_usd": null,
+  "quota_boundaries": [
+    {
+      "next_untouched": "dev-296-deepseek-candidate",
+      "resume_at": "2026-11-06T10:04:49.100000+00:00",
+      "wait_observed_at": "2026-11-06T03:21:19.745701+00:00",
+      "accounted": 47
+    }
+  ]
+}

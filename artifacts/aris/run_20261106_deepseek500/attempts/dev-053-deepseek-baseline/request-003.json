@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The FBI is in possession of the president of the US's son  Hunter Biden's laptop.",
+        "query": "The FBI is in possession of the president of the US's son  Hunter Biden's laptop. evidence",
+        "candidates": [
+          {
+            "title": "Two former FBI agents charged over Hunter Biden probes : NPR",
+            "snippet": "Republicans have long accused the FBI of mishandling the laptop and the investigations into the younger Biden. Missing:  possession  | Show results with:",
+            "url": "https://www.npr.org/2026/10/23/g-s1-149534/justice-fbi-charged-hunter-biden-laptop"
+          },
+          {
+            "title": "Judge scolds DOJ over case against ex-FBI officials accused of ...",
+            "snippet": "A federal judge has scolded the Justice Department for its unorthodox handling of a criminal case against two former FBI officials. Missing:  possession  evidence",
+            "url": "https://www.pbs.org/newshour/nation/judge-scolds-doj-over-case-against-ex-fbi-officials-accused-of-false-statements-about-hunter-bidens-laptop"
+          },
+          {
+            "title": "Congressman Biggs Leads Letter to FBI Director Wray about ...",
+            "snippet": "GILBERT, ARIZONA – Today, Congressman Andy Biggs, along with 18 of his House colleagues, sent a letter to FBI Director Christopher Wray, ...",
+            "url": "https://biggs.house.gov/media/press-releases/congressman-biggs-leads-letter-fbi-director-wray-about-hunter-bidens-alleged"
+          },
+          {
+            "title": "FBI in possession of Hunter Biden's purported laptop, sources say",
+            "snippet": "The FBI and Justice Department concur with DNI Ratcliffe that the laptop is not part of a Russian disinformation campaign. Missing:  evidence  | Show results with:",
+            "url": "https://www.fox35orlando.com/news/fbi-in-possession-of-hunter-bidens-purported-laptop-sources-say"
+          },
+          {
+            "title": "Hunter Biden laptop controversy - Wikipedia",
+            "snippet": "In October 2020, a controversy arose involving a laptop that belonged to Hunter Biden. The owner of a Delaware computer shop, John Paul Mac Isaac, said that ...",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden_laptop_controversy"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-053-deepseek-baseline",
+  "timestamp": "2026-11-06T08:13:12.209230+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19981.515
+}

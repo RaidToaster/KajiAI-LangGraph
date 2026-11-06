@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cutting the umbilical cord straight away deliberately denies the baby natural immunity so that medical professionals have a reason to vaccinate and medicate them.",
+        "query": "What does the claim mean by cutting the umbilical cord 'straight away,' and what timing thresholds (e.g., seconds, minutes) distinguish immediate from delayed cord clamping?",
+        "candidates": [
+          {
+            "title": "Should You Delay Cutting Your Baby’s Umbilical Cord?",
+            "snippet": "Delayed cord clamping means waiting 30 seconds to three minutes after birth before cutting the umbilical cord, allowing more blood to flow from the placenta to the baby.",
+            "url": "https://www.whattoexpect.com/pregnancy/cut-umbilical-cord"
+          },
+          {
+            "title": "Optimal timing of cord clamping for the prevention of iron ...",
+            "snippet": "Early cord clamping is generally carried out in the first 60 seconds after birth, whereas later cord clamping is carried out more than one minute after the birth or when cord pulsation has ceased.",
+            "url": "https://www.who.int/tools/elena/interventions/cord-clamping"
+          },
+          {
+            "title": "How Long Can You Wait to Cut the Umbilical Cord?",
+            "snippet": "The WHO defines early clamping as anything in the first 60 seconds, and late clamping as anything beyond one minute or when pulsation stops. In practice, many birth teams wait two to three minutes or simply let the cord go white and limp, which signals that the transfer is essentially complete.",
+            "url": "https://scienceinsights.org/how-long-can-you-wait-to-cut-the-umbilical-cord/"
+          },
+          {
+            "title": "Umbilical Cord Clamping: How Long Should You Wait? - Ausmed",
+            "snippet": "Despite immediate clamping of the umbilical cord being standard practice until recent years, delayed cord clamping is now routine and is recommended for most births due to its numerous benefits.",
+            "url": "https://www.ausmed.com/learn/articles/cutting-the-umbilical-cord"
+          },
+          {
+            "title": "Umbilical Cord Clamping: How Timing Affects Infant Health ...",
+            "snippet": "One hypothesis behind this is that delayed clamping may increase the risk of the newborn developing polycythemia or hyperbilirubinemia or perhaps maternal postpartum hemorrhage. During the third stage of labor, the umbilical cord is normally clamped and then cut.",
+            "url": "https://idun.augsburg.edu/cgi/viewcontent.cgi?article=2112&context=etd"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-045-deepseek-candidate",
+  "timestamp": "2026-11-05T18:15:36.387370+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52955.968
+}

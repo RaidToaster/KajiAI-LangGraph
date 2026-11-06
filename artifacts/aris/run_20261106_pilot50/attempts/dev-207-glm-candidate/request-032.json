@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "Nigeria 1962 1963 census official report published figures primary document",
+        "candidates": [
+          {
+            "title": "In 1962, Nigeria conducted a population census ...",
+            "snippet": "Conducted in May 1962, the initial count reported 45.26 million Nigerians. The Southern regions, which included the Eastern and Western areas, ...",
+            "url": "https://www.facebook.com/HistoricalnigeriaYoruba/posts/in-1962-nigeria-conducted-a-population-census-that-appeared-to-challenge-the-nor/122311307138076276/"
+          },
+          {
+            "title": "History of Population Census in Nigeria",
+            "snippet": "1962 Census. The 1962 census was the second countrywide headcount in Nigeria and the first since independence in 1960. · 1963 Census · 1973 Census · 1991 Census.",
+            "url": "https://nationalpopulation.gov.ng/census-enumeration"
+          },
+          {
+            "title": "Census Controversies and the Press in 1960s Nigeria",
+            "snippet": "Abstract. This article reconstructs the controversies following the release of the figures from Nigeria's 1963 popu- lation census. As the basis for the ...",
+            "url": "https://pure.manchester.ac.uk/ws/portalfiles/portal/204215792/contested_numbers_census_controversies_and_the_press_in_1960s_nigeria.pdf"
+          },
+          {
+            "title": "The story of how Nigeria's census figures became weaponized",
+            "snippet": "In May 1962, the first census under an independent Nigerian government began. There had been a frenzy of mobilization by politicians in the south of the country ...",
+            "url": "https://qz.com/africa/1221472/the-story-of-how-nigerias-census-figures-became-weaponized"
+          },
+          {
+            "title": "History of Census in Nigeria #fact #history #learning",
+            "snippet": "The video highlights that the population grew from 45.6 million in 1962 to 55.6 million in 1963, leading to a debate over the 1963 results. It ...",
+            "url": "https://www.facebook.com/merchantofknowledge/videos/history-of-census-in-nigeria-fact-history-learning/1577827364345794/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-glm-candidate",
+  "timestamp": "2026-11-06T00:05:31.334923+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2996.64
+}

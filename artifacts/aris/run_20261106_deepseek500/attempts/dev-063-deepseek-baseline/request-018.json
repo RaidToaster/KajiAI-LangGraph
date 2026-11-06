@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Officer who wore Trump 2020 mask to polls to face disciplinary action",
+        "query": "Miami Police Department statement Officer Ubeda Trump mask disciplinary action October 2020",
+        "candidates": [
+          {
+            "title": "Miami PD to Discipline Officer Photographed Wearing Pro-Trump ...",
+            "snippet": "City of Miami Police say they will discipline a police officer who was photographed wearing a Trump face mask while in uniform at an early ...",
+            "url": "https://www.nbcmiami.com/news/local/city-of-miami-officer-photographed-wearing-trump-mask-inside-polling-location/2309350/"
+          },
+          {
+            "title": "Miami officer facing discipline after wearing Trump mask while in ...",
+            "snippet": "A Miami officer is facing disciplinary action after he was photographed wearing a \"Trump 2020\" face mask while in uniform in a polling place.",
+            "url": "https://www.nbcnews.com/news/us-news/miami-officer-facing-discipline-after-wearing-trump-mask-while-uniform-n1244039"
+          },
+          {
+            "title": "Uniformed Miami Cop Spotted Wearing Pro-Trump Mask Near ...",
+            "snippet": "Miami's police chief, shown the photo posted on social media, said Officer Daniel Ubeda would be disciplined, though exactly how had not ...",
+            "url": "https://www.wlrn.org/2020-10-20/uniformed-miami-cop-spotted-wearing-pro-trump-mask-near-voting-site-will-be-disciplined"
+          },
+          {
+            "title": "Miami cop faces discipline for wearing Trump 2020 face mask at voting site",
+            "snippet": "A Miami police officer has been accused of intimidating voters at an early polling place, where he was pictured in uniform wearing a Trump ...",
+            "url": "https://www.youtube.com/watch?v=ZYFOC27Z3Sc"
+          },
+          {
+            "title": "Miami officer facing discipline for wearing Trump 2020 face mask at ...",
+            "snippet": "Miami Mayor Francis Suarez called the officer's behavior \"unacceptable,\" and said disciplinary measures will be taken.",
+            "url": "https://www.cbsnews.com/news/miami-officer-trump-2020-mask-voting-site-2020-10-21/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-063-deepseek-baseline",
+  "timestamp": "2026-11-06T08:41:07.827352+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21657.125
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime.",
+        "query": "What primary records or reporting document Ruth Bader Ginsburg's death date and her status as a US Supreme Court Justice?",
+        "candidates": [
+          {
+            "title": "In Memoriam: Justice Ruth Bader Ginsburg (1933-2020)",
+            "snippet": "Sep 21, 2020 — er Ginsburg (1933-2020) Ruth Bader Ginsburg died on September 18, the Supreme Court . National Archives records and stories related to Justice ...",
+            "url": "https://www.archives.gov/news/articles/justice-ginsburg-obituary"
+          },
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Ginsburg died at her home in Washington, D.C., on September 18, 2020 , at the age of 87, from complications of metastatic pancreatic cancer. The vacancy created ... Read more",
+            "url": "https://en.wikipedia.org/wiki/Ruth_Bader_Ginsburg"
+          },
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Sep 23, 2020 — On September 18, 2020, Supreme Court Justice Ruth Bader Ginsburg passed away at 87 years old . She served 27 of those years on the Supreme ...",
+            "url": "https://www.govinfo.gov/features/RBG"
+          },
+          {
+            "title": "Supreme Court Justice Ruth Bader Ginsburg Topic Guide",
+            "snippet": "On September 18, 2020, former President Clinton released a statement concerning the death of Supreme Court Justice Ruth Bader Ginsburg . Read more",
+            "url": "https://www.clintonlibrary.gov/research/supreme-court-justice-ruth-bader-ginsburg-topic-guide"
+          },
+          {
+            "title": "Death of Ruth Bader Ginsburg",
+            "snippet": "Sep 25, 2020 — ( printed page 60345) Proclamation 10081 of September 18, 2020. Death of Ruth Bader Ginsburg . A Proclamation. Today, our Nation mourns the ... Read more",
+            "url": "https://www.federalregister.gov/documents/2020/09/25/2020-21385/death-of-ruth-bader-ginsburg"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-candidate",
+  "timestamp": "2026-11-06T04:27:38.615634+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6447.921
+}

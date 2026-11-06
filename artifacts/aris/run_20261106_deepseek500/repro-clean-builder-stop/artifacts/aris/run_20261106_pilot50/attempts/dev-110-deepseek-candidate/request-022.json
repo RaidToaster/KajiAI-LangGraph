@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "Washington Post, \"Kamala Harris’s ‘little history lesson’ about Lincoln’s Supreme Court vacancy wasn’t exactly true,\" Oct. 8, 2020",
+        "candidates": [
+          {
+            "title": "Kamala Harris's 'little history lesson' about Lincoln's ...",
+            "snippet": "Kamala Harris's 'little history lesson' about Lincoln's Supreme Court vacancy wasn't exactly true · Mail-in ballots were part of a plot to deny ...",
+            "url": "https://www.washingtonpost.com/history/2020/10/08/lincoln-supreme-court-kamala-harris/"
+          },
+          {
+            "title": "The Washington Post: Kamala Harris's 'little history lesson' ...",
+            "snippet": "October 3, 2020. The Washington Post: Kamala Harris's 'little history lesson' about Lincoln's Supreme Court vacancy wasn't exactly true. imrs.jpg.",
+            "url": "https://www.lincolncottage.org/the-washington-post-kamala-harriss-little-history-lesson-about-lincolns-supreme-court-vacancy-wasnt-exactly-true/"
+          },
+          {
+            "title": "Kamala Harris, Honest Abe and the Supreme Court",
+            "snippet": "“Kamala Harris's 'little history lesson' about Lincoln's Supreme Court vacancy wasn't exactly true.” Washington Post. 8 Oct 2020. Buchanan ...",
+            "url": "https://www.factcheck.org/2020/10/kamala-harris-honest-abe-and-the-supreme-court/"
+          },
+          {
+            "title": "Fact check: Harris' lesson on Lincoln Supreme Court nom ...",
+            "snippet": "The Washington Post, Oct. 8: \"Kamala Harris's 'little history lesson' about Lincoln's Supreme Court vacancy wasn't exactly true\"; USA TODAY ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/13/fact-check-harris-lesson-lincoln-supreme-court-nom-lacks-detail/5943183002/"
+          },
+          {
+            "title": "Harris jumped to conclusions on Lincoln's court nomination",
+            "snippet": "19, 2020. Washington Post, \"Kamala Harris's 'little history lesson' about Lincoln's Supreme Court vacancy wasn't exactly true,\" Oct. 8, 2020.",
+            "url": "https://politifact.com/article/2020/oct/08/kamala-harris-jumped-conclusions-about-abraham-lin/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-deepseek-candidate",
+  "timestamp": "2026-11-06T01:16:43.077622+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7268.39
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "Eric Trump, Donald J. Trump Jr. original source fact check",
+        "candidates": [
+          {
+            "title": "Eric Trump Archives",
+            "snippet": "Former President Donald Trump and his son Eric have been dishing out revisionist history with claims that vaccine hesitancy soared once Biden assumed office and ...",
+            "url": "https://www.factcheck.org/person/eric-trump/"
+          },
+          {
+            "title": "Eric Trump, Donald Trump Jr. amplified claims of election fraud ...",
+            "snippet": "Eric Trump, Donald Trump Jr. amplified claims of election fraud, analysis shows. The president's eldest sons repeatedly retweeted misleading videos. By ...",
+            "url": "https://abcnews.com/Politics/eric-trump-donald-trump-jr-amplified-claims-election/story?id=74261329"
+          },
+          {
+            "title": "Eric Trump and Donald Trump Jr. spread false information in run up to ...",
+            "snippet": "As two of his top surrogates, President Donald Trump's eldest sons, Donald Trump Jr. and Eric Trump, have spread a significant amount of ...",
+            "url": "https://www.cnn.com/2020/11/02/politics/eric-trump-donald-trump-jr-fact-check"
+          },
+          {
+            "title": "This photo of Donald Trump Jr. and Eric Trump has been altered",
+            "snippet": "The original photo taken by Getty Images photographer C. Allegri shows the Trump sons in 2005 at Donald Trump Jr.'s wedding reception at Mar-a- ...",
+            "url": "https://politifact.com/factchecks/2020/may/21/viral-image/photo-donald-trump-jr-and-eric-trump-has-been-alte/"
+          },
+          {
+            "title": "Fact check: Donald Trump Jr. v Donald Trump Jr.",
+            "snippet": "CNN's Jake Tapper looks at Donald Trump Jr.'s varied explanations of his June 2016 meeting at Trump Tower. Read more at FactCheck.org.",
+            "url": "https://www.youtube.com/watch?v=MO3eqKQm0I8"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-baseline",
+  "timestamp": "2026-11-06T08:44:08.181282+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21837.5
+}

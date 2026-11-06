@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "New Zealand’s new Food Bill bans gardening original source fact check",
+        "candidates": [
+          {
+            "title": "Is the New Zealand anti-gardening law real or not? Seriously I ...",
+            "snippet": "As of right now, if you Google 'new zealand garden ban,' all the links on the first page indicate it's real. Between multiple Reddit posts ...",
+            "url": "https://www.reddit.com/r/OutOfTheLoop/comments/4ovxb1/is_the_new_zealand_antigardening_law_real_or_not/"
+          },
+          {
+            "title": "Gardening in New Zealand - Wikipedia",
+            "snippet": "\"New Zealand's 'new' Food Bill doesn't ban gardening\". AAP Factcheck. Retrieved 24 January 2024. ↑ Ockhuysen, Stephanie. \"The Taranaki farmers introducing ...",
+            "url": "https://en.wikipedia.org/wiki/Gardening_in_New_Zealand"
+          },
+          {
+            "title": "FactCheck.org - A Project of The Annenberg Public Policy Center",
+            "snippet": "As fact-checkers, we watch a lot of ads in the lead-up to elections, and we only write about a fraction of them. misleading or exaggerated claims. Fact- ...",
+            "url": "https://www.factcheck.org/"
+          },
+          {
+            "title": "Food Standards Australia New Zealand: Homepage",
+            "snippet": "FSANZ has set the standards for safe food in Australia and New Zealand for more than 25 years. FSANZ conducts public consultations on proposed food standards.",
+            "url": "https://www.foodstandards.gov.au/"
+          },
+          {
+            "title": "World Economic Forum did not demand ban on homegrown ...",
+            "snippet": "False. The World Economic Forum has not demanded a ban on home-grown foods. This article was produced by the Reuters Fact Check team. Read more ...",
+            "url": "https://www.reuters.com/fact-check/world-economic-forum-did-not-demand-ban-homegrown-foods-2025-03-31/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-glm-baseline",
+  "timestamp": "2026-11-06T00:52:32.868305+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5818.171
+}

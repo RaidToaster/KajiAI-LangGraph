@@ -1,0 +1,30 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The eligibility criteria for applying to take the exam for the Union Public Service Commission (UPSC) of India, differentiates depending on whether you are a Hindu or a Muslim."
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "domain": {
+          "type": "choice",
+          "instructions": "Which domain best describes the factual claim? Do not judge whether it is true.",
+          "criteria": {
+            "general": "A factual claim outside the other three specialist domains.",
+            "scientific": "A claim about scientific research or findings, excluding clinical health claims.",
+            "political": "A claim about government, elections, public officials, or public policy.",
+            "health_medical": "A claim about human health, disease, treatment, medicine, or clinical research."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-365-deepseek-candidate",
+  "timestamp": "2026-11-06T04:06:04.941093+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5154.25
+}

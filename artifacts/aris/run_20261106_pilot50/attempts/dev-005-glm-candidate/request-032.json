@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "Specific named articles in United States or Western-allied media outlets that cite allegations of Chemical Weapons Convention non-compliance, with publication dates and bylines",
+        "candidates": [
+          {
+            "title": "Chemical Weapons Convention | OPCW",
+            "snippet": "Article IV – Chemical Weapons. Article IV sets out the requirements for States Parties to destroy their chemical weapons ... Convention”, otherwise known as the ...",
+            "url": "https://www.opcw.org/chemical-weapons-convention"
+          },
+          {
+            "title": "Chemical Weapons Convention (CWC) - State.gov",
+            "snippet": "Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on Their Destruction (CWC) specifically designed to ...",
+            "url": "https://2009-2017.state.gov/t/avc/trty/127917.htm"
+          },
+          {
+            "title": "AND ENFORCEMENT OF",
+            "snippet": "by R Trapp · 2021 · Cited by 4 — I welcome UNIDIR's publication of a report on compliance management and enforcement in the Chemical Weapons. Convention (CWC) regime. The report is timely and ...",
+            "url": "https://unidir.org/wp-content/uploads/2023/05/WMD_Compliance_Report_V04.pdf"
+          },
+          {
+            "title": "Chemical Weapons Convention",
+            "snippet": "The Chemical Weapons Convention (CWC), officially the Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons ...",
+            "url": "https://en.wikipedia.org/wiki/Chemical_Weapons_Convention"
+          },
+          {
+            "title": "Chemical Weapons Under International Law: The CWC ...",
+            "snippet": "Article II of the CWC defines chemical weapons by reference to toxic chemicals, their precursors, specially designed munitions, and equipment",
+            "url": "https://www.diplomacyandlaw.com/post/chemical-weapons"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:48:14.695600+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5560.0
+}

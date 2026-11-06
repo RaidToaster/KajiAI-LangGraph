@@ -1,0 +1,59 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "site:twitter.com LindseyGrahamSC coronavirus NIH CDC scientists",
+        "candidates": [
+          {
+            "title": "GuiltFreeTips - Health Research",
+            "snippet": "What he has committed to: • Selling anti-science merchandise • Fighting the CDC on vaccines • Attacking mask usage • Campaigning for president. Quote.",
+            "url": "https://mobile.twitter.com/guiltfreetips?lang=cs"
+          },
+          {
+            "title": "Deborah Greenhouse (@greenhousemd) ...",
+            "snippet": "pediatrician, mom, loves hiking, gardening, and advocating for kids everywhere. Tweets are my own, not medical advice. she/her.",
+            "url": "https://twitter.com/greenhousemd"
+          },
+          {
+            "title": "OpenVAERS",
+            "snippet": "OpenVAERS takes the PUBLICLY available data from VAERS and make it more user friendly. We are a PRIVATE entity, not affiliated with HHS, the CDC or the FDA.",
+            "url": "https://twitter.com/openvaers"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-03T06:07:53.886127+00:00",
+  "status": "reserved_outcome_unknown"
+}

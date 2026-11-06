@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "What was Mike Bloomberg's estimated net worth around February 2020, and which primary financial disclosures or reputable wealth trackers support that figure?",
+        "candidates": [
+          {
+            "title": "Just How Rich Is Michael Bloomberg? - The Atlantic",
+            "snippet": "We can measure it in numerical terms: He is worth an estimated $64 billion. That is 64 single billions, 64,000 millions, or 64,000,000 thousands ... Missing:  disclosures  reputable  trackers  figure?",
+            "url": "https://www.theatlantic.com/ideas/archive/2020/02/meaning-bloombergs-billions/606967/"
+          },
+          {
+            "title": "Michael Bloomberg - Wikipedia",
+            "snippet": "... net worth was estimated at $55.5 billion. In 2021, Bloomberg's net worth was estimated at $106 billion, ranking him 12th on Forbes' list of billionaires. Missing:  reputable  | Show results with:",
+            "url": "https://en.wikipedia.org/wiki/Michael_Bloomberg"
+          },
+          {
+            "title": "How Much Richer Michael Bloomberg Has Gotten Over the ...",
+            "snippet": "According to Forbes, Michael Bloomberg's net worth was around $48 billion in 2020, which was already a mind-blowing amount. But fast forward ... Missing:  February  disclosures  figure?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/much-richer-michael-bloomberg-gotten-065504566.html"
+          },
+          {
+            "title": "1 Mike Bloomberg equals 660,000 American households ...",
+            "snippet": "Forbes estimates Bloomberg's net worth at $64 billion and ranks him No. 8 on the publication's famed rich list. But the Forbes figure is a ... Missing:  disclosures  reputable",
+            "url": "https://www.cbsnews.com/news/mike-bloomberg-net-worth-media-company-finance-terminals-revenue/"
+          },
+          {
+            "title": "Mike Bloomberg's net worth takes multibillion dollar hit",
+            "snippet": "As of Friday, his Forbes-estimated net worth had fallen to $56.2 billion. The Bloomberg media company has an estimated valuation of $50 billion ... Missing:  primary  disclosures  reputable  trackers  support  figure?",
+            "url": "https://www.foxbusiness.com/business-leaders/michael-bloomberg-net-worth-multibillion-dollar-hit"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-05T10:11:07.626877+00:00",
+  "status": "reserved_outcome_unknown"
+}

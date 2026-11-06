@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+        "query": "case-control or surveillance study skin or respiratory staphylococcal infection attributed to prolonged mask use with clinical culture confirmation",
+        "candidates": [
+          {
+            "title": "Medical Face Masks Do Not Affect Acid–Base Balance Yet ...",
+            "snippet": "by P Ostrowski · 2023 · Cited by 10 — prolonged mask usage could worsen pre-existing dermatoses, acne flare-ups, and skin abrasions by becoming a gateway for bacterial and fungal contamination",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9915457/"
+          },
+          {
+            "title": "Bacterial profile and associated factors of face mask ...",
+            "snippet": "Extended and improper mask use may lead to increased bacterial contamination of the mask surface, highlighting the need to better understand ...",
+            "url": "https://link.springer.com/article/10.1186/s12982-026-02814-0"
+          },
+          {
+            "title": "Effectiveness of Face Mask or Respirator Use in Indoor .. ...",
+            "snippet": "by KL Andrejko · 2022 · Cited by 263 — This report describes face mask or respirator effectiveness in helping protect against COVID-19 infection.",
+            "url": "https://www.cdc.gov/mmwr/volumes/71/wr/mm7106e1.htm"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-041-deepseek-candidate",
+  "timestamp": "2026-11-06T07:38:04.908184+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17874.218
+}

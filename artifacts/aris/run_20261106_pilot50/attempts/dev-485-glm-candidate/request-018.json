@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "Search the National Archives archived Trump White House website (2017-2021) transcript pages for the August 27, 2020 remarks and check whether the wording \"Last month, I took on Big Pharma\" appears verbatim with date and venue.",
+        "candidates": [
+          {
+            "title": "Archived Presidential White House Websites",
+            "snippet": "The archived White House website is a useful resource for photographs, speeches, press releases, and other public domain records of the Trump Presidency from  ... Missing: 27, 2020 wording Pharma verbatim date venue.",
+            "url": "https://www.archives.gov/presidential-records/research/archived-white-house-websites"
+          },
+          {
+            "title": "Trump White House Archives - National Archives",
+            "snippet": "This is historical material “frozen in time”. The website is no longer updated and links to external websites and some internal pages may not work. Missing: (2017-2021) August 27, check whether wording Big +3",
+            "url": "https://trumpwhitehouse.archives.gov/"
+          },
+          {
+            "title": "Trump's Stand for Truth in Big Pharma Ads - AMAC",
+            "snippet": "Oct 17, 2025 · President Donald Trump has once again done what few in Washington have dared to do: he's taken on deceptive and dishonest Big Pharma ...",
+            "url": "https://amac.us/newsline/trumps-stand-for-truth-in-big-pharma-ads"
+          },
+          {
+            "title": "First presidency of Donald Trump - Wikipedia",
+            "snippet": "The White House released a non-verbatim transcript of the phone call between Trump and Zelensky the next day; while the congressional intelligence ...",
+            "url": "https://en.wikipedia.org/wiki/First_presidency_of_Donald_Trump"
+          },
+          {
+            "title": "Greenhouse Gas Emissions Standards for Heavy-Duty Vehicles",
+            "snippet": "... comments submitted by the testifier or the testifier's organization, that statement is included verbatim in this RTC document. Comments received after the ...",
+            "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P101A9UG.TXT"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-glm-candidate",
+  "timestamp": "2026-11-06T01:35:12.891806+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8378.203
+}

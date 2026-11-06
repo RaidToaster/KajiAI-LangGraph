@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The eligibility criteria for applying to take the exam for the Union Public Service Commission (UPSC) of India, differentiates depending on whether you are a Hindu or a Muslim.",
+        "query": "Do UPSC application forms or official notifications collect or use religious identity in determining eligibility?",
+        "candidates": [
+          {
+            "title": "[PDF] Notif-CSP-2026-Engl-060226Rev.pdf - UPSC",
+            "snippet": "A candidate who is willing to apply for Civil Services Examination shall be required to submit the requisite information and supporting documents towards ...",
+            "url": "https://www.upsc.gov.in/sites/default/files/Notif-CSP-2026-Engl-060226Rev.pdf"
+          },
+          {
+            "title": "FAQ - UPSC",
+            "snippet": "Yes, an applicant who fulfils the eligibility criteria prescribed in the notification (i.e. the detailed information available on website https://upsc.gov.in/ ...",
+            "url": "https://upsconline.gov.in/upsc/OTRP/candidate/faq.php"
+          },
+          {
+            "title": "How to Fill UPSC Form 2026 - YouTube",
+            "snippet": "Filling the UPSC Civil Services Examination (CSE) 2026 application form is the first and most crucial step for every aspirant.",
+            "url": "https://www.youtube.com/watch?v=MqWCgcIMdh4"
+          },
+          {
+            "title": "UPSC Notification 2026 Explained: New Changes, Form Filling ...",
+            "snippet": "UPSC Notification 2026 strongly recommends using Aadhaar as the primary identity document for faster verification across exam stages.",
+            "url": "https://www.visionias.in/blog/featured/upsc-notification-2026-explained-new-changes-form-filling-process-and-mistakes-to-avoid"
+          },
+          {
+            "title": "UPSC CSE Exam Notification 2026: Complete Guide to ...",
+            "snippet": "In a significant update, UPSC will collect additional personal data at the application stage itself for future use at the interview stage and beyond.",
+            "url": "https://upscakhada.com/resources/blogs/8eb5e547-3185-4fa2-8345-ac7871e9186a"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-365-deepseek-candidate",
+  "timestamp": "2026-11-06T04:06:18.345665+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5167.656
+}

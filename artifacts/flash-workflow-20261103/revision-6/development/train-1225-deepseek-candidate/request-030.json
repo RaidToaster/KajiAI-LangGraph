@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Independent (non-Forbes) Bloomberg net worth estimate February 2020",
+        "candidates": [
+          {
+            "title": "Demystifying the Forbes 400 and the Bloomberg Billionaires Index",
+            "snippet": "Forbes or Bloomberg may get close to estimating an accurate net worth for some of the wealthiest individuals in the world, but it's not very ...",
+            "url": "https://www.helenbrowngroup.com/demystifying-the-forbes-400-and-the-bloomberg-billionaires-index/"
+          },
+          {
+            "title": "Forbes Real Time Billionaires List - The World's Richest People",
+            "snippet": "Browse today's rankings of the wealthiest people and families globally. Discover the net worth, age, and other information about the richest people in the ...",
+            "url": "https://www.forbes.com/real-time-billionaires/"
+          },
+          {
+            "title": "Michael Bloomberg Is Worth $106B, but Not on Bloomberg's Rich List",
+            "snippet": "Forbes ranked the 82-year-old Bloomberg LP founder in 12th place with an estimated $106 billion fortune as of March 8. Bloomberg landed just ...",
+            "url": "https://www.businessinsider.com/michael-bloomberg-forbes-rich-list-billionaires-wealth-rankings-fortune-philanthropy-2024-4"
+          },
+          {
+            "title": "VERIFY: No, Michael Bloomberg is not the first billionaire to run",
+            "snippet": "Published: 5:28 PM EST February 19, 2020. Updated: 11:30 PM EST ... Forbes estimated that his net worth was $4.1 billion. \"Ross Perot was the classic ...",
+            "url": "https://www.wusa9.com/article/news/verify/no-bloomberg-is-not-the-first-billionaire-to-run-for-president-but-hes-definitely-the-richest-billionaire-to-do-so/65-109cfe18-f57e-46e9-991e-0494ea9d29a0"
+          },
+          {
+            "title": "Michael Bloomberg - Wikipedia",
+            "snippet": "In 2021, Bloomberg's net worth was estimated at $106 billion, ranking him 12th on Forbes' list of billionaires. Mayor of New York City.",
+            "url": "https://en.wikipedia.org/wiki/Michael_Bloomberg"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:53:00.301427+00:00",
+  "status": "reserved_outcome_unknown"
+}

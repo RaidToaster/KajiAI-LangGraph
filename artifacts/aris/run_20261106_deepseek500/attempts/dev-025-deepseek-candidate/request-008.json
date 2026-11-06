@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "Did any post from McDonald's Azerbaijan's official account between September and October 2020 reference Nagorno-Karabakh, military operations, or territorial control?",
+        "candidates": [
+          {
+            "title": "Second Nagorno-Karabakh War - Wikipedia",
+            "snippet": "The Second Nagorno-Karabakh War was an armed conflict in 2020 that took place in the disputed region of Nagorno-Karabakh and the surrounding occupied ...",
+            "url": "https://en.wikipedia.org/wiki/Second_Nagorno-Karabakh_War"
+          },
+          {
+            "title": "Tensions Between Armenia and Azerbaijan | Global Conflict ...",
+            "snippet": "Following a summer of cross-border attacks, heavy fighting broke out along the Azerbaijan-Nagorno-Karabakh border in late September 2020. More than seven ...",
+            "url": "https://www.cfr.org/global-conflict-tracker/conflict/nagorno-karabakh-conflict"
+          },
+          {
+            "title": "Complete Defeat and the End of the Non-Recognized State of ...",
+            "snippet": "Azerbaijan launched a decisive military operation, dismantling the remaining structures of Nagorno-Karabakh's de facto authorities.",
+            "url": "https://lieber.westpoint.edu/complete-defeat-end-non-recognized-state-nagorno-karabakh/"
+          },
+          {
+            "title": "Azerbaijan and Armenia: The Nagorno-Karabakh Conflict",
+            "snippet": "The war has resulted in Azerbaijani control over much of the territory it lost to Armenian and Nagorno-Karabakh forces during previous fighting ...",
+            "url": "https://www.congress.gov/crs-product/R46651"
+          },
+          {
+            "title": "Azerbaijan announced it halted military operations in the ...",
+            "snippet": "Azerbaijan announced it halted military operations in the disputed Nagorno-Karabakh region. So called Nagorno-Karabakh region does not exist. ...",
+            "url": "https://www.facebook.com/time/posts/azerbaijan-announced-it-halted-military-operations-in-the-disputed-nagorno-karab/701819608470708/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-candidate",
+  "timestamp": "2026-11-06T06:52:02.961096+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15112.265
+}

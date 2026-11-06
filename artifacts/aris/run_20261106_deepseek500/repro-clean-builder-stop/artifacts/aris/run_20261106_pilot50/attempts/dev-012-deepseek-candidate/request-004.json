@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "What is the official title, number, and current status of the New Zealand Food Bill referred to in the claim?",
+        "candidates": [
+          {
+            "title": "Food Standards Code",
+            "snippet": "All food sold in Australia and New Zealand must comply with food standards. These standards are compiled in the Australia New Zealand Food Standards Code.",
+            "url": "https://www.foodstandards.gov.au/food-standards-code"
+          },
+          {
+            "title": "Health and nutrition claims for foods in Australia and New ...",
+            "snippet": "Nov 11, 2022 — New Zealand Food Standards Code – Standard 1.2.7 – Nutrition, health and related claims . -approved high level health claims for food -health ...",
+            "url": "https://www.campdenbri.co.uk/blogs/australia-new-zealand-health-claims.php"
+          },
+          {
+            "title": "Supporting Food Health Claims in New Zealand's Regulatory ...",
+            "snippet": "Dec 6, 2019 — since 18 January 2016, all health and nutrition claims must comply with Standard 1.2.7. as of July 2018, this Bill has stalled, Standard 1.2.7 ...",
+            "url": "https://books.rsc.org/books/edited-volume/718/chapter/433219/Supporting-Food-Health-Claims-in-New-Zealand-s"
+          },
+          {
+            "title": "An overview of environmental labelling and claims on fish ...",
+            "snippet": "by X Le Folcalvez · 2025 · Cited by 3 — New Zealand , environmental claims on food products are not regulated in the Food Standards Code.",
+            "url": "https://www.tandfonline.com/doi/full/10.1080/03036758.2024.2392801"
+          },
+          {
+            "title": "Australia and New Zealand",
+            "snippet": "FSANZ ( food in Australia and New Zealand ) refer to Standard 1.2.7 and Schedule 4 Nutrition, Health and Reated Claims which sets out the requirements for making ...",
+            "url": "https://prebioticassociation.org/prebiotic-regulatory-guide/australia-and-new-zealand-2/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-candidate",
+  "timestamp": "2026-11-06T00:53:48.080189+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5893.39
+}

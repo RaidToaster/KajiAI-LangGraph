@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The CDC has said over 98,000 people had non-COVID related deaths because of hospitals that were closed down for non-essential services",
+        "query": "CDC primary document or dataset stating over 98,000 non-COVID deaths attributable to hospital closures for non-essential services",
+        "candidates": [
+          {
+            "title": "Provisional COVID-19 Mortality Surveillance",
+            "snippet": "COVID-19 is listed as the underlying cause on the death certificate in 86% of deaths. The percent was 91% in 2020, 90% in 2021, 76% in 2022 and approximately ...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm"
+          },
+          {
+            "title": "How are COVID-19 deaths counted? It's complicated",
+            "snippet": "As the U.S. death toll nears a half-million, confusion continues over whether people die “of” COVID-19 or “with” COVID-19.",
+            "url": "https://www.aamc.org/news/how-are-covid-19-deaths-counted-it-s-complicated"
+          },
+          {
+            "title": "The impact of the pandemic on non-COVID-19 causes ... - PMC",
+            "snippet": "by Y Li · 2025 · Cited by 12 — This study uses the US Centers for Disease Control and Prevention (CDC) Mortality Multiple Cause Files data from 2010 to 2021.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145281/"
+          },
+          {
+            "title": "How does the government count COVID-19 deaths?",
+            "snippet": "The CDC is the primary federal agency tracking causes of death nationwide. It maintains the National Vital Statistics System, which gathers ...",
+            "url": "https://usafacts.org/articles/how-does-the-government-count-covid-19-deaths/"
+          },
+          {
+            "title": "COVID-19 deaths | WHO COVID-19 dashboard - WHO Data",
+            "snippet": "The latest data for coronavirus (COVID-19) deaths from the WHO COVID-19 dashboard. WHO collected the numbers of confirmed COVID-19 cases and deaths. Reported ...",
+            "url": "https://data.who.int/dashboards/covid19/deaths"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-142-deepseek-candidate",
+  "timestamp": "2026-11-06T00:15:22.134638+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3587.437
+}

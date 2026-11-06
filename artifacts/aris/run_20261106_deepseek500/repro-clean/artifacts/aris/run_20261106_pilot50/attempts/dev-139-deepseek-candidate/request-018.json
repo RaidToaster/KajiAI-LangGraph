@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "Search the Cornyn for TX Senate campaign archive or ad library for the original 'Will Be Covered' ad video or official transcript.",
+        "candidates": [
+          {
+            "title": "Senator Cornyn: Home",
+            "snippet": "Assistance for Texans in the Middle East, hurricane preparedness tips, and information on the One Big Beautiful Bill Act.",
+            "url": "https://www.cornyn.senate.gov/"
+          },
+          {
+            "title": "Senator John Cornyn (R-TX) Speaks to Reporters About ...",
+            "snippet": "Senator John Cornyn (R-TX) speaks to reporters on Capitol Hill about the upcoming midterms, data centers, and efforts to reform Social Security.",
+            "url": "https://www.c-span.org/program/news-conference/senator-john-cornyn-r-tx-speaks-to-reporters-about-midterms-and-social-security/685678"
+          },
+          {
+            "title": "Senator John Cornyn",
+            "snippet": "John Cornyn, the Senator from Texas - in Congress from 2002 through Present. Contact 517 Hart Senate Office Building Washington, DC ...",
+            "url": "https://www.congress.gov/member/john-cornyn/C001056"
+          },
+          {
+            "title": "Cornyn, Paxton, Hunt clash as spending soars in Texas ...",
+            "snippet": "Texas Senate race heats up: Cornyn, Paxton and Hunt trade attacks as $98 million already spent on ads. Hunt clash as spending soars in Texas ...",
+            "url": "https://www.youtube.com/watch?v=i-YGlSBnOqg"
+          },
+          {
+            "title": "User Clip: Sen. John Cornyn (R-Texas)",
+            "snippet": "Sen. John Cornyn (R-Texas) speech on senate floor, 2013. Senator John Cornyn (R-TX) Speaks to Reporters About Midterms and Social Security Sep 23,",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-sen-john-cornyn-r-texas/4633830"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-deepseek-candidate",
+  "timestamp": "2026-11-06T01:22:54.533610+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7639.843
+}

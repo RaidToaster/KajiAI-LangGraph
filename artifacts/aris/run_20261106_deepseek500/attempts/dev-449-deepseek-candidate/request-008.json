@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Some US mayors are fining people for going to church during the COVID-19 pandemic.",
+        "query": "What primary records (executive orders, public health directives, court filings, or enforcement records) document fines imposed on individuals for church attendance during the pandemic?",
+        "candidates": [
+          {
+            "title": "COVID-19 Presidential Executive Orders",
+            "snippet": "The legislation grants $1,400 direct payments to individuals making less than $75,000 and $2,800 to married couples making less than $150,000 annually. EO ...",
+            "url": "https://www.huschblackwell.com/covid-19-presidential-executive-orders"
+          },
+          {
+            "title": "Ensuring a Data-Driven Response to COVID-19 and Future ...",
+            "snippet": "Executive Order 13994 of January 21, 2021. Ensuring a Data-Driven Response to COVID-19 and Future High-Consequence Public Health Threats.",
+            "url": "https://www.federalregister.gov/documents/2021/01/26/2021-01849/ensuring-a-data-driven-response-to-covid-19-and-future-high-consequence-public-health-threats"
+          },
+          {
+            "title": "US Court Rulings Constrain Public Health Powers During ...",
+            "snippet": "These orders included business and school closures, stay-at-home orders, restrictions on gatherings, moratoria on evictions, and mask and ...",
+            "url": "https://healthpolicy.fsi.stanford.edu/news/us-court-rulings-constrain-public-health-powers-during-covid-19-pandemic"
+          },
+          {
+            "title": "Judicial Review of Public Health Powers Since the Start ... - PMC",
+            "snippet": "by WE Parmet · 2023 · Cited by 30 — Although courts continue to reject most challenges to public health measures, decisions issued during the COVID-19 pandemic show that health officials cannot ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9932394/"
+          },
+          {
+            "title": "Coronavirus and the First Amendment - Free Speech Center",
+            "snippet": "Can the government restrict gatherings, including church services, during the coronavirus outbreak or is that a violation of the First ...",
+            "url": "https://firstamendment.mtsu.edu/article/coronavirus-and-the-first-amendment/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-449-deepseek-candidate",
+  "timestamp": "2026-11-06T05:18:32.658709+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9501.968
+}

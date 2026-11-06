@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "What is the name of the Cuban lung cancer vaccine, and which Cuban institution developed or manufactures it?",
+        "candidates": [
+          {
+            "title": "Clinical development and perspectives of CIMAvax EGF, ...",
+            "snippet": "by PC Rodríguez · 2010 · Cited by 124 — CIMAvax EGF is a therapeutic anticancer vaccine developed entirely in Cuba and licensed in Cuba for use in adult patients with stage IIIB/IV non-small-cell ...",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20387330/"
+          },
+          {
+            "title": "CIMAvax Lung Cancer Vaccine - Buffalo",
+            "snippet": "CIMAvax-EGF is a lung cancer treatment that was developed in Cuba. It is a type of immunotherapy that harnesses the body's immune system to fight lung cancer.",
+            "url": "https://www.roswellpark.org/cimavax"
+          },
+          {
+            "title": "Roswell Park Cancer Institute Partners With Cuban ...",
+            "snippet": "The vaccine, known as CimaVax EGF, was developed by CIM and has been approved for the treatment of late-stage NSCLC in Cuba and Peru.",
+            "url": "https://ascopost.com/issues/september-10-2015/roswell-park-cancer-institute-partners-with-cuban-scientists-to-develop-lung-cancer-vaccine/"
+          },
+          {
+            "title": "Roswell Park Cancer Institute - Cuba Vaccine Collaboration",
+            "snippet": "Roswell Park Cancer Institute has finalized an agreement with the Center of Molecular Immunology in Havana supporting an early-phase clinical ...",
+            "url": "https://www.youtube.com/watch?v=E0urMhxcyvQ"
+          },
+          {
+            "title": "Cuba's Lung Cancer Vaccine CimaVax to be Available in US",
+            "snippet": "CimaVax, a new lung cancer vaccine from Cuba, It is now available to the public, and provided at no cost to patients.",
+            "url": "https://respiratory-therapy.com/products-treatment/pharmaceuticals/clinical-trials/cuba-lung-cancer-vaccine-cimavax-available-us/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-05T10:42:33.289421+00:00",
+  "status": "reserved_outcome_unknown"
+}

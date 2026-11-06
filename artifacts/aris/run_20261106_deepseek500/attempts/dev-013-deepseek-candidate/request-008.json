@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks will stop the spread of covid 19",
+        "query": "Which populations, settings, and time periods were examined in studies of mask wearing and COVID-19 transmission?",
+        "candidates": [
+          {
+            "title": "Effectiveness of Mask Wearing to Control Community Spread ... - PMC",
+            "snippet": "Compelling data now demonstrate that community mask wearing is an effective nonpharmacologic intervention to reduce the spread of this infection, especially as ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8892938/"
+          },
+          {
+            "title": "Surgical masks reduce COVID-19 spread, large-scale study shows",
+            "snippet": "Sep 1, 2021 · Furthermore, the protective effect of surgical masks was greater for older people: As a group, those ages 50 to 60 were 23% less likely to ...",
+            "url": "https://med.stanford.edu/news/all-news/2021/09/surgical-masks-covid-19.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-013-deepseek-candidate",
+  "timestamp": "2026-11-06T06:14:11.277610+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12840.593
+}

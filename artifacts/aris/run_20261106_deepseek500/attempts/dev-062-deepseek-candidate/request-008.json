@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Scientific American magazine warned that 5G technology is not safe.",
+        "query": "What is the exact title, publication date, author, and format of any Scientific American content about 5G safety?",
+        "candidates": [
+          {
+            "title": "We Have No Reason to Believe 5G Is Safe",
+            "snippet": "This article was published in Scientific American's former blog network and reflects the views of the author, not necessarily those of ...",
+            "url": "https://www.scientificamerican.com/blog/observations/we-have-no-reason-to-believe-5g-is-safe/"
+          },
+          {
+            "title": "Scientific American",
+            "snippet": "Scientific American is the essential guide to the most awe-inspiring advances in science and technology, explaining how they change our understanding of the ...",
+            "url": "https://www.scientificamerican.com/"
+          },
+          {
+            "title": "Evidence for a connection between coronavirus disease-19 and ... - PMC",
+            "snippet": "by B Rubik · 2021 · Cited by 37 — Regarding 5G, the telecommunication industry claims that it is safe because it complies with current radiofrequency radiation exposure guidelines of the FCC ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8580522/"
+          },
+          {
+            "title": "5G Devices Are about to Change Your Life",
+            "snippet": "By David Pogue Jay Bendt. This story is being republished to provide information on what to expect from the fifth-generation wireless ...",
+            "url": "https://www.scientificamerican.com/article/5g-devices-are-about-to-change-your-life/"
+          },
+          {
+            "title": "But some scientists and consumers say the same magic that makes 5G so ...",
+            "snippet": "Scientific American: \"We Have No Reason to Believe 5G is Safe\" Yes, even a mainstream publication like Scientific American is sounding the alarm ...",
+            "url": "https://www.facebook.com/ABC7Amarillo/posts/but-some-scientists-and-consumers-say-the-same-magic-that-makes-5g-so-special-al/3059971267410441/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-062-deepseek-candidate",
+  "timestamp": "2026-11-06T08:39:42.888865+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21572.187
+}

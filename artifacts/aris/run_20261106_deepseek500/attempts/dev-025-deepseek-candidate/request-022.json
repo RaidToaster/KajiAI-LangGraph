@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "Search for McDonald's Corporation or franchisee statements in October 2020 confirming or denying that the @mcdonalds.az Instagram account was official and that it posted pro-military content.",
+        "candidates": [
+          {
+            "title": "Did McDonald's in Azerbaijan Make Pro-Military Posts on ... - VOA",
+            "snippet": "This is a verified McDonald's Instagram account that posted pro-military pictures about Nagorno-Karabakh. The posts are now removed.",
+            "url": "https://www.voanews.com/a/did-mcdonald-s-in-azerbaijan-make-pro-military-posts-on-instagram-/6742646.html"
+          },
+          {
+            "title": "McDonald's Franchisee Privacy Statement",
+            "snippet": "This McDonald's Franchisee Privacy Statement (this “Statement”) describes McDonald's practices regarding the collection, use, transfer, disclosure, and other ...",
+            "url": "https://www.mcdonalds.com/us/en-us/franchisee-privacy-notice.html"
+          },
+          {
+            "title": "Free meals for Israeli soldiers divide McDonald's franchises",
+            "snippet": "McDonald's Israel said on its social media accounts last week that it has given thousands of free meals to Israel Defense Forces personnel. On ...",
+            "url": "https://www.reuters.com/world/middle-east/free-meals-israeli-soldiers-divide-mcdonalds-franchises-over-israel-hamas-war-2023-10-17/"
+          },
+          {
+            "title": "McDonald's buys all 225 of Israeli franchise restaurants after ...",
+            "snippet": "McDonald's has been subject to boycotts since franchisee Alonyal announced it would donate free meals to the Israeli military amid Gaza war.",
+            "url": "https://www.aljazeera.com/news/2024/4/5/mcdonalds-buys-all-225-of-israeli-franchise-restaurants-after-boycotts"
+          },
+          {
+            "title": "Sales of McDonald's were dented after its Israel franchise in ...",
+            "snippet": "Sales of McDonald's were dented after its Israel franchise in October announced it had given thousands of free meals to the Israeli army.",
+            "url": "https://www.facebook.com/philstarnews/posts/sales-of-mcdonalds-were-dented-after-its-israel-franchise-in-october-announced-i/840234304813991/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-candidate",
+  "timestamp": "2026-11-06T06:52:51.631801+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15160.937
+}

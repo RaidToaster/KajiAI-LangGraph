@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s take down American flags at their fast-food restaurants in support of Black Lives Matter and antifa (an umbrella term for far-left anti-fascism groups).",
+        "query": "McDonald’s take down American flags at their fast-food restaurants in support of Black Lives Matter original source fact check",
+        "candidates": [
+          {
+            "title": "McDonald's and the American Flag",
+            "snippet": "Sep 24, 2020 — Social media posts — without evidence — have accused McDonald's of taking down American flags in support of Black Lives Matter and antifa. Read more",
+            "url": "https://www.factcheck.org/2020/09/mcdonalds-and-the-american-flag/"
+          },
+          {
+            "title": "McDonald's restaurants didn't remove American flags ...",
+            "snippet": "Sep 17, 2020 — CLAIM: McDonald's removed its American flags nationwide in support of antifa and Black Lives Matter . AP'S ASSESSMENT: False. A McDonald's USA ... Read more",
+            "url": "https://apnews.com/article/archive-fact-checking-9421220126"
+          },
+          {
+            "title": "McDonald's has not removed its U.S. flags to show support ...",
+            "snippet": "Sep 21, 2020 — Fact check : McDonald's has not removed its U.S. flags to show support of Antifa and Black Lives Matter . By Reuters. September 21, 20208:15 AM ... Read more",
+            "url": "https://www.reuters.com/article/world/fact-check-mcdonalds-has-not-removed-its-us-flags-to-show-support-of-antifa-idUSKCN26C2BP/"
+          },
+          {
+            "title": "McDonald's US flags have not been removed for BLM, antifa",
+            "snippet": "Sep 23, 2020 — A Facebook post states incorrectly that McDonald's has removed its U.S. flags nationwide to support antifa and Black Lives Matter .",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/09/23/fact-check-mcdonalds-us-flags-not-removed-blm-antifa/3506584001/"
+          },
+          {
+            "title": "My McDonald's restaurant signs support the Black Lives ...",
+            "snippet": "In the wake of protests following George Floyd's death, I decided to use my restaurant signs around Houston to share the Black Lives Matter message.",
+            "url": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/my-mcds-support-blm.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-343-glm-baseline",
+  "timestamp": "2026-11-06T00:41:12.246954+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5137.546
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "Search for the original speech or interview transcript (venue, date, speaker) containing the exact quoted passage about cheaters and phony ballots.",
+        "candidates": [
+          {
+            "title": "Trump's speech claiming US election vulnerabilities, annotated",
+            "snippet": "President Donald Trump tried to convince Americans in a primetime address that their elections are vulnerable to fraud. CNN annotated the ... Missing:  interview  speaker)",
+            "url": "https://www.cnn.com/interactive/2026/07/politics/annotated-transcript-trump-speech-us-election-vis/"
+          },
+          {
+            "title": "Read: Full transcript of Donald Trump's call to Brad Raffensperger",
+            "snippet": "The bottom line is when you add it all up and then you start adding, you know, 300,000 fake ballots. Then the other thing they said is in Fulton ... Missing:  speech  interview  speaker)",
+            "url": "https://www.atlantanewsfirst.com/2023/02/15/read-full-transcript-donald-trumps-call-brad-raffensperger/"
+          },
+          {
+            "title": "Transcript - Reuters",
+            "snippet": "The Trump administration has launched real-world investigations looking into his debunked allegations of voter fraud. At the same time, the ...",
+            "url": "https://www.reuters.com/info-pages/transcript/fc234664-c9d7-11f1-a3cf-8f528236924a/"
+          },
+          {
+            "title": "False accusations and unverified claims quickly spread ... - PBS",
+            "snippet": "CLAIM: Issues with voting machines in Westchester County are evidence of Democrats cheating. THE FACTS: There is no credible evidence to ... Missing:  original  speech  interview  transcript  speaker)  passage",
+            "url": "https://www.pbs.org/newshour/politics/false-accusations-and-unverified-claims-quickly-spread-about-election-day-voting"
+          },
+          {
+            "title": "FactChecking Trump's Election Security Speech",
+            "snippet": "He cited an alleged instance of fraud from 2020 involving fake voter-registration applications in Michigan. Authorities say no one actually ... Missing:  transcript  speaker)  passage",
+            "url": "https://www.factcheck.org/2026/07/factchecking-trumps-election-security-speech/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-candidate",
+  "timestamp": "2026-11-06T05:52:46.280997+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11555.609
+}

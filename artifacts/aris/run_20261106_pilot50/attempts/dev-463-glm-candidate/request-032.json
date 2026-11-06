@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "558 people were killed by the police in 2018, while 201 people died in police custody",
+        "query": "Locate an original 2018 annual tally or downloadable dataset export from the Mapping Police Violence project showing its 2018 count and stated methodology",
+        "candidates": [
+          {
+            "title": "Mapping Police Violence",
+            "snippet": "Mapping Police Violence · About this Project · Research and Resources · Police Scorecard · Data and Methodology · Neighborhoods · Donate · Privacy Policy ...",
+            "url": "https://mappingpoliceviolence.org/"
+          },
+          {
+            "title": "Validating open-source data on fatal police shootings against ...",
+            "snippet": "Mapping Police Violence includes incidents in which officers fatally injured civilians by any means and includes cases that involved both on- ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12538985/"
+          },
+          {
+            "title": "Millions of Pages of Police Use-of-Force Files Available ...",
+            "snippet": "The records that are available through the Police Records Access Project will help researchers understand police violence for many years to come ...",
+            "url": "https://hrdag.org/2025/08/14/millions-of-pages-of-police-use-of-force-files-available-through-new-searchable-database/"
+          },
+          {
+            "title": "ACLED 2018: The Year in Review",
+            "snippet": "A review of the Armed Conflict Location & Event Data Project (ACLED) 2018 dataset demonstrates that the global political violence landscape has ...",
+            "url": "https://acleddata.com/report/acled-2018-year-review"
+          },
+          {
+            "title": "FBI — Data Tables",
+            "snippet": "Location. Crimes Against Persons Offenses, Offense Category by Location, 2018, Excel · PDF · Data Declaration. Crimes Against Property Offenses, Offense ...",
+            "url": "https://ucr.fbi.gov/nibrs/2018/tables/data-tables"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-463-glm-candidate",
+  "timestamp": "2026-11-06T01:01:28.761769+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6354.062
+}

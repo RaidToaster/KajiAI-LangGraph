@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "What did Sanders say about the Affordable Care Act after it was signed into law?",
+        "candidates": [
+          {
+            "title": "NEWS: Sanders to Democratic Senators: No...",
+            "snippet": "Repeal the $1 trillion in cuts to Medicaid and the Affordable Care Act so approximately 50,000 Americans do not have to die unnecessarily each ...",
+            "url": "https://www.help.senate.gov/dem/newsroom/press/news-sanders-to-democratic-senators-now-is-the-time-to-address-americas-health-care-crisis"
+          },
+          {
+            "title": "Sen. Bernie Sanders slammed the Trump administration for ...",
+            "snippet": "- Another 750,000 people could lose Affordable Care Act coverage under an additional proposal he criticized. Sanders also accused Trump of ...",
+            "url": "https://www.facebook.com/GoMcGill/posts/sen-bernie-sanders-slammed-the-trump-administration-for-making-significant-cuts-/1701831137981667/"
+          },
+          {
+            "title": "Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "\"The bill is not as strong as I wanted and I will work to improve it, Sanders successfully pushed for the inclusion of $11 billion in funding ...",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "Statement by Senator Bernie Sanders on Affordable Care Act ...",
+            "snippet": "\"Instead of gutting the Affordable Care Act, we need to expand on the improvements that it has made to our health care system.",
+            "url": "https://www.presidency.ucsb.edu/documents/statement-senator-bernie-sanders-affordable-care-act-ruling"
+          },
+          {
+            "title": "Editors on the Campaign Trail: Why Bernie Sanders Is Wrong ...",
+            "snippet": "by R Grant · 2016 · Cited by 1 — The Sanders single-payer program would fulfill the progressive goal of universal health care as a right, if passed by Congress and successfully implemented.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4940671/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-05T10:08:41.129131+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme evidence",
+        "candidates": [
+          {
+            "title": "Pathways to Work: Our Submission",
+            "snippet": "The proposal to merge Job Seeker's Allowance (JSA) with Employment Support Allowance (ESA) to create a new “Unemployment Insurance” carries a ...",
+            "url": "https://equalitytrust.org.uk/evidence-base/pathways-to-work-our-submission/"
+          },
+          {
+            "title": "Connect to Work: Grant Guidance for England",
+            "snippet": "Connect to Work will primarily help disabled people, people with health conditions, and those with more complex barriers to work who are ...",
+            "url": "https://www.gov.uk/government/publications/connect-to-work/connect-to-work-grant-guidance-for-england"
+          },
+          {
+            "title": "Around 47% of people who are disabled are out of work, and delays ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/Channel4News/videos/around-47-of-people-who-are-disabled-are-out-of-work-and-delays-with-the-access-/819199457627777/"
+          },
+          {
+            "title": "Unlocking benefits: Tackling barriers for disabled people wanting to work",
+            "snippet": "Reforms are needed to unlock work for people receiving work-related disability benefits, as informed by research with disabled people in ...",
+            "url": "https://www.jrf.org.uk/work/unlocking-benefits-tackling-barriers-for-disabled-people-wanting-to-work"
+          },
+          {
+            "title": "'Access to Work' scheme for disabled people - House of Commons Library",
+            "snippet": "The Access to Work scheme provides practical advice and support to disabled people and their employers with the intention of helping more ...",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/sn06666/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-baseline",
+  "timestamp": "2026-11-06T08:31:48.876559+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21098.187
+}

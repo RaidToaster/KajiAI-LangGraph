@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "PEDOPHILIA is now LEGAL in CALIFORNIA",
+        "query": "What California statutes or penal code sections criminalize sexual acts involving minors, and have any of them been repealed, amended, or decriminalized as of 2020-09-01?",
+        "candidates": [
+          {
+            "title": "California Penal Code § 261.5 (2025)",
+            "snippet": "CHAPTER 1 - Rape, Abduction, Carnal Abuse of Children, and Seduction Section 261.5. ... 261.5. (a) Unlawful sexual intercourse is an act of sexual intercourse ...",
+            "url": "https://law.justia.com/codes/california/code-pen/part-1/title-9/chapter-1/section-261-5/"
+          },
+          {
+            "title": "Senator Wiener Introduces Legislation to End ...",
+            "snippet": "“SB 145 puts an end to blatant discrimination against young LGBT people engaged in consensual sexual activity,” said Senator Wiener. “This bill ...",
+            "url": "https://sd11.senate.ca.gov/news/senator-wiener-introduces-legislation-end-discrimination-against-lgbt-people-regarding-sex"
+          },
+          {
+            "title": "California-2025-AB22-Amended",
+            "snippet": "(B) A forcible sex offense in concert with another, as described in Section 264.1 of the Penal Code. (C) A forcible lewd and lascivious act on a child under 14 ...",
+            "url": "https://legiscan.com/CA/text/AB22/id/3197980/California-2025-AB22-Amended.html"
+          },
+          {
+            "title": "SB 680: Sex offender registration: unlawful sexual intercourse ...",
+            "snippet": "SB 680 requires sex offender registration for engaging in an act of unlawful sexual intercourse with a minor, as specified. *********** ANALYSIS ADDENDUM ...",
+            "url": "https://calmatters.digitaldemocracy.org/bills/ca_202520260sb680"
+          },
+          {
+            "title": "Los Angeles Sex Crimes Statute of Limitations Attorney",
+            "snippet": "California amended Penal Code § 799 to add several sex offenses to the list of crimes with no limitation period.",
+            "url": "https://www.losangelescriminallawyer.pro/sex-crimes-statute-of-limitation.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-451-deepseek-candidate",
+  "timestamp": "2026-11-06T00:20:03.268406+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3868.578
+}

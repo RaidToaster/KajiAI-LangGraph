@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "New Zealand Food Act 2014 Ministry for Primary Industries guidance home garden growing own food licensing personal use",
+        "candidates": [
+          {
+            "title": "Food Act 2014 | MPI",
+            "snippet": "Food Act 2014. The Food Act 2014 takes a common-sense approach to food safety. If you make or sell food, your business may need to be registered.",
+            "url": "https://www.mpi.govt.nz/food-business/running-a-food-business/food-act-2014"
+          },
+          {
+            "title": "Food Act 2014",
+            "snippet": "This website is the official home for New Zealand Acts, Bills, and secondary legislation.",
+            "url": "https://www.legislation.govt.nz/act/public/2014/32/en/latest/"
+          },
+          {
+            "title": "Introduction to the Food Act 2014",
+            "snippet": "The Food Act 2014 helps make sure that food sold throughout New Zealand is safe. A central feature of the Act is a sliding scale where ...",
+            "url": "https://www.mpi.govt.nz/food-business/running-a-food-business/food-act-2014/introduction-food-act-2014"
+          },
+          {
+            "title": "“Food Licence” Selling food intended for immediate ...",
+            "snippet": "Under the Food Act 2014, ANYONE selling food must have a license and meet certain requirements in order to trade. You don't need to have a ...",
+            "url": "https://www.facebook.com/hangihousenz/posts/food-licence-selling-food-intended-for-immediate-consumption-less-than-20xpyr-le/1278003364326609/"
+          },
+          {
+            "title": "Food Act 2014",
+            "snippet": "The Food Act is a New Zealand Act of Parliament passed in 2014. It came into force on 1 March 2016 and progressively replaced the Food Act 1981 for the next ...",
+            "url": "https://en.wikipedia.org/wiki/Food_Act_2014"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-glm-candidate",
+  "timestamp": "2026-11-06T00:50:36.073483+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5701.375
+}

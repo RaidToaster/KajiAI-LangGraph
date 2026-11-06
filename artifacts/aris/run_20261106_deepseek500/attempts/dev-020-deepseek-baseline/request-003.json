@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Viral video purportedly shows Pakistani opposition MPs chanted ‘Modi, Modi’ (India's PM)  inside the Pakistani Parliament",
+        "query": "Viral video purportedly shows Pakistani opposition MPs chanted ‘Modi, Modi’ (India's PM)  inside the Pakistani Parliament evidence",
+        "candidates": [
+          {
+            "title": "What's the truth behind claims Pakistani MPs chanted 'Modi'?",
+            "snippet": "Some Indian media outlets aired claims that Prime Minister Narendra Modi's name was deliberately chanted by parliamentarians in neighbouring ... Missing:  Viral  purportedly  shows",
+            "url": "https://www.bbc.com/news/world-asia-54732525"
+          },
+          {
+            "title": "Fact Check: Did Pakistan MPs chant 'Modi, Modi' inside ...",
+            "snippet": "India Today Anti Fake News War Room (AFWA) has found the claim is false. The opposition in Pakistan's Assembly was shouting “voting, voting” for ... Missing:  evidence  | Show results with:",
+            "url": "https://www.indiatoday.in/fact-check/story/fact-check-did-pakistan-mps-chant-modi-modi-inside-parliament-1736393-2020-10-29"
+          },
+          {
+            "title": "Fact Check: Did Pakistan MPs chant 'Modi, Modi ... - YouTube",
+            "snippet": "Modi Slogan In Pak Parliament | పాక్ పార్లమెంట్లో మోదీ నినాదాల వెనక అసలు నిజం ఏమిటి? Missing:  evidence  | Show results with:",
+            "url": "https://www.youtube.com/watch?v=C1FGW5kkhYw"
+          },
+          {
+            "title": "Did Pakistan MPs chant 'Modi, Modi' inside Parliament?",
+            "snippet": "A video is being circulated on social media with the claim that it shows Pakistani MPs praising PM Modi for facilitating the evacuation of ... Missing:  purportedly  | Show results with:",
+            "url": "https://www.indiatoday.in/fact-check/video/fact-check-video-did-pakistan-mps-chant-modi-modi-inside-parliament-1922816-2022-03-09"
+          },
+          {
+            "title": "Were 'Modi-Modi' chants raised inside Pakistan parliament?",
+            "snippet": "Chants of 'voting-voting' inside Pakistan parliament were misreported as 'Modi-Modi' chants. No such pro-Modi sloganeering happened inside ... Missing:  Viral  purportedly",
+            "url": "https://timesofindia.indiatimes.com/times-fact-check/news/fact-check-were-modi-modi-chants-raised-inside-pakistan-parliament/articleshow/78933241.cms"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-020-deepseek-baseline",
+  "timestamp": "2026-11-06T06:41:28.245685+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14477.562
+}

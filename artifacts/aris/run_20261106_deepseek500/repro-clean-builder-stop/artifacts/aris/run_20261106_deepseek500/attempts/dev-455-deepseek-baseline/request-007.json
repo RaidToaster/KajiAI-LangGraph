@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Cable news channel Fox News is unavailable in Canada due to media legislation.",
+        "query": "US Cable news channel Fox News is unavailable in Canada due to media legislation. counterevidence",
+        "candidates": [
+          {
+            "title": "Fox News is available in Canada - AFP Fact Check",
+            "snippet": "The core claim that the Fox News Channel is not available in Canada is false. The Canadian Radio-television and Telecommunications Commission ( ... Missing:  counterevidence  | Show results with:",
+            "url": "https://factcheck.afp.com/fox-news-available-canada"
+          },
+          {
+            "title": "Fox News is not banned in Canada or the UK",
+            "snippet": "False. Fox News has not been banned in Canada, where it remains authorized for distribution. The network also was not banned in the U.K., ... Missing:  unavailable  | Show results with:",
+            "url": "https://apnews.com/article/fact-checking-340810040961"
+          },
+          {
+            "title": "Was the Fox News Channel Banned in Canada? | Snopes.com",
+            "snippet": "Rumor: The Fox News television channel has been banned in Canada because they report false information. Missing:  unavailable  counterevidence",
+            "url": "https://www.snopes.com/fact-check/canadian-fox/"
+          },
+          {
+            "title": "Is Fox News banned in Canada? - PolitiFact",
+            "snippet": "Fox News is “banned in Canada” because it violates a law that “prevents 'news' channels from lying to their viewers.” Missing:  unavailable  | Show results with:",
+            "url": "https://politifact.com/factchecks/2014/jul/14/facebook-posts/fox-news-banned-canada/"
+          },
+          {
+            "title": "Fox News isn't banned in Canada, despite viral posts claiming ...",
+            "snippet": "Claims Canada blocked Fox News from its airwaves are false. Canada's broadcast regulator says Fox News is still available countrywide Missing:  counterevidence  | Show results with:",
+            "url": "https://www.thecanadianpressnews.ca/fact_checking/fox-news-isnt-banned-in-canada-despite-viral-posts-claiming-otherwise-but-it-could-be/article_3566ffe6-45a5-54bf-981a-51f72ba0eada.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-455-deepseek-baseline",
+  "timestamp": "2026-11-06T03:51:07.120514+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4256.437
+}

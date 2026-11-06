@@ -1,0 +1,51 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "A fact-check specifically investigating the viral claim concluded that UNESCO did not declare the Nadar community as the most ancient race in the world.",
+            "url": "https://www.vishvasnews.com/english/viral/fact-check-unesco-did-not-declare-nadar-community-as-ancient-race-in-the-world-viral-claim-is-fake/",
+            "quote": "The viral post is fake. UNESCO has not declared Nadar Community as the most ancient race in the world.",
+            "context": "×\n\n\n## subscribe\n\nSubscribe to our newsletter and get exclusive fact checking news everyweek\n\n## subscribed\n\nThank you You are now subscribed to our newsletter\n\n*X*\n\nहिन्दीEnglishગુજરાતીमराठी\n\n**Trending**\n\n\n* AI Check\n\n* Home\n* Society\n\n# Fact Check: UNESCO did not declare Nadar community as ancient race in the world, viral claim is fake\n\nThe viral post is fake. UNESCO has not declared Nadar Community as the most ancient race in the world.\n\n* By:  Abbinaya Kuzhanthaivel\n* Published: Nov 6, 2020 at 06:18 PM\n\n* Share\n\n**New Delhi (Vishvas News).** A viral poster on social media claims that UNESCO declared Nadar community as the ancient race in the world.\n\nVishvas News investigation revealed the claim is fake.\nUNESCO editor refuted the viral claim.\n\n**Claim**\n\nA poster with a certificate is shared with a claim that UNESCO declared Nadar community as the ancient race in the world. It alleges that according to a study conducted by UNESCO, the UN Department of Heritage and Archeology, Nadar community has been declared as the world’s oldest and most trusted race. The poster further reads, “They have come to this conclusion after studying more than 3 lakh caste and ethnic groups in the world. No other caste in India is in the top 10 places…”\n\nWe found this claim first on Whats app and then on Facebook.\n\n**Investigation**\n\nWe searched on the Internet for news about Nadar community\nand UNESCO declaration. We could identify that Nadar is a tamil caste prevalent\nin southern districts of Tamil Nadu like Kanyakumari, Thoothukudi, Tirunelveli\nand Virudhunagar. However, we could not find any authentic reports of UNESCO\nidentifying "
+          },
+          {
+            "finding": "A retrieved overview of UNESCO statements on race identifies general UNESCO race statements but does not include any Nadar-specific declaration in its list.",
+            "url": "https://en.wikipedia.org/wiki/UNESCO_statements_on_race",
+            "quote": "UNESCO has published several statements about issues of race.[1]",
+            "context": "From Wikipedia, the free encyclopedia\n\n|  |  |\n| --- | --- |\n|  | This article **relies excessively on references to primary sources**. Please improve this article by adding secondary or tertiary sources.  *Find sources:* \"UNESCO statements on race\" – news **·** newspapers **·** books **·** scholar **·** JSTOR *(May 2023)* *(Learn how and when to remove this message)* |\n\n\n\n\nMorris Ginsberg\n\n\n\nClaude Levi-Strauss\n\n\n\nAshley Montagu\n\nUNESCO has published several statements about issues of race.[1]\n\nThe statements include:[2]: Foreword\n\n* *Statement on race* (Paris, July 1950)\n* *Statement on the nature of race and race differences* (Paris, June 1951)\n* *Proposals on the biological aspects of race* (Moscow, August 1964)\n* *Statement on race and racial prejudice* (Paris, September 1967)\n\nOther statements include the Declaration on the Elimination of All Forms of Racial Discrimination (1963), the \"Declaration on Race and Racial Prejudice\" (1978) and the \"Declaration of Principles on Tolerance\" (1995).\n\n## *Statement on race* (1950)\n\n[edit]\n\n*Statement on race* is the first statement on race issued by UNESCO. It was issued on 18 July 1950[3]: 5 following World War II and Nazi racism, to clarify what was scientifically known about race, and as a moral condemnation of racism.[3]: 1\n\nIt was drafted by Ernest Beaglehole, psychologist and ethnologist; Juan Comas, anthropologist; Luiz de Aguiar Costa Pinto, sociologist; Franklin Frazier, sociologist specialised in race relations studies; Morris Ginsberg, founding chairperson of the British Sociological Association; Humayun Kabir, writer, philosopher, and twice Education Minister of India; Claude Lévi-Strauss, one of the founders of e"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-003-deepseek-baseline",
+  "timestamp": "2026-11-05T23:39:46.365329+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1451.687
+}

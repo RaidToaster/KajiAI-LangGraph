@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Forbes Michael Bloomberg net worth February 2020",
+        "candidates": [
+          {
+            "title": "Michael Bloomberg",
+            "snippet": "Michael Bloomberg $94.9B Real Time Net Worth as of 11/2/26 Reflects change since 5 pm ET of prior trading day.",
+            "url": "https://www.forbes.com/profile/michael-bloomberg/"
+          },
+          {
+            "title": "Michael Bloomberg",
+            "snippet": "In 2021, Bloomberg's net worth was estimated at $106 billion, ranking him 12th on Forbes' list of billionaires.",
+            "url": "https://en.wikipedia.org/wiki/Michael_Bloomberg"
+          },
+          {
+            "title": "Billionaires Index",
+            "snippet": "Michael Dell. Down 4.7% for the day to $215B. This is their biggest one ... Net worth. $357B. Last change. +$4.52B. +1.3%. Year-over-year. +$92.1B. +34.8%. 3.",
+            "url": "https://www.bloomberg.com/billionaires/"
+          },
+          {
+            "title": "Michael Bloomberg is worth more than Ford and GM ...",
+            "snippet": "Michael Bloomberg is worth an estimated $106 billion. With a fortune of $52.8bn, Michael Bloomberg, 76, is the 11th richest person in the world ...",
+            "url": "https://www.facebook.com/businessinsider/posts/michael-bloomberg-is-worth-more-than-ford-and-gm-combined-per-forbes-estimate/802247471773539/"
+          },
+          {
+            "title": "What Is Michael Bloomberg's Net Worth?",
+            "snippet": "Former New York Mayor Michael Bloomberg is worth $61 billion, according to Forbes magazine's real-time net worth tracker.",
+            "url": "https://www.newsweek.com/michael-bloomberg-net-worth-1489053"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:36:50.762311+00:00",
+  "status": "reserved_outcome_unknown"
+}

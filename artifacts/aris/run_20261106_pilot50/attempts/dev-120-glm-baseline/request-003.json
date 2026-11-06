@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A law called The Flora and Fauna Act classified aboriginal people as animals until Australian voters overturned it in the 1960s.",
+        "query": "A law called The Flora and Fauna Act classified aboriginal people as animals until Australian voters overturned it in the 1960s. evidence",
+        "candidates": [
+          {
+            "title": "Flora and Fauna Act myth - Wikipedia",
+            "snippet": "The \"Flora and Fauna Act\" myth is a belief often repeated in public debate that Indigenous Australians were classified as fauna by legislation, ...",
+            "url": "https://en.wikipedia.org/wiki/Flora_and_Fauna_Act_myth"
+          },
+          {
+            "title": "[PDF] excluding indigenous australians from 'the people': a ...",
+            "snippet": "Until 1967, Indigenous Australians were excluded from being counted as amongst 'the people' in the Australian Constitution, by s 127. That section was deleted ...",
+            "url": "https://www.aph.gov.au/DocumentStore.ashx?id=5f610b20-2ed8-40af-8cab-d7e48d9b5b81"
+          },
+          {
+            "title": "Australia, until 60s, Aborigines came under the Flora And ...",
+            "snippet": "14K votes, 3.1K comments. While the '67 Referendum is widely considered a watershed moment for Aboriginal Rights, many of the rights claimed ...",
+            "url": "https://www.reddit.com/r/pics/comments/3wf4hi/australia_until_60s_aborigines_came_under_the/"
+          },
+          {
+            "title": "Were Indigenous Australians classified under a flora and fauna ...",
+            "snippet": "A regularly repeated claim is that Indigenous Australians were covered by a flora and fauna act, until the 1967 referendum. It's not true.",
+            "url": "https://www.abc.net.au/news/2018-03-20/fact-check-flora-and-fauna-1967-referendum/9550650"
+          },
+          {
+            "title": "Welcome to Reconciliation Week – What Was the 1967 ...",
+            "snippet": "It is sometimes mistakenly stated that the 1967 referendum overturned a Flora and Fauna Act, in which Indigenous Australians were classified as ...",
+            "url": "https://gegac.org.au/welcome-to-reconciliation-week-what-was-the-1967-referendum/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-120-glm-baseline",
+  "timestamp": "2026-11-05T23:33:21.282463+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1066.593
+}

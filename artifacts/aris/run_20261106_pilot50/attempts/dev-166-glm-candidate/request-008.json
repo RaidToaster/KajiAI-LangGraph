@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "49 percent of Nigerians are in extreme poverty.",
+        "query": "Who conducted the underlying measurement of Nigerian poverty, using what methodology and survey?",
+        "candidates": [
+          {
+            "title": "Nigeria launches its most extensive national measure of ...",
+            "snippet": "The Federal Government of Nigeria through the National Bureau of Statistics today launched the results of the 2022 Multidimensional Poverty ...",
+            "url": "https://ophi.org.uk/news/nigeria-launches-its-most-extensive-national-measure-multidimensional-poverty-0"
+          },
+          {
+            "title": "Nigeria launches its most extensive national measure of ...",
+            "snippet": "The Federal Government of Nigeria through the National Bureau of Statistics today launched the results of the 2022 Multidimensional Poverty ...",
+            "url": "https://www.mppn.org/nigeria-launches-its-most-extensive-national-measure-of-multidimensional-poverty/"
+          },
+          {
+            "title": "Measuring Poverty in Nigeria",
+            "snippet": "Measuring Poverty in Nigeria was commissioned by Oxfam GB to support the development of its new programme of poverty-alleviation work",
+            "url": "https://policy-practice.oxfam.org/resources/measuring-poverty-in-nigeria-121172/"
+          },
+          {
+            "title": "Nigeria Poverty Assessment",
+            "snippet": "These surveys were implemented by Nigeria's National Bureau of Statistics (NBS) in collaboration with the World Bank. According to the report, ...",
+            "url": "https://www.worldbank.org/en/news/press-release/2022/03/21/afw-deep-structural-reforms-guided-by-evidence-are-urgently-needed-to-lift-millions-of-nigerians-out-of-poverty"
+          },
+          {
+            "title": "Nigeria Poverty Profile 2010",
+            "snippet": "the National Consumer Survey and the Nigeria Living Standard Survey are used to compute the Relative Poverty Measure.",
+            "url": "https://www.nigerianstat.gov.ng/pdfuploads/poverty%202010.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-166-glm-candidate",
+  "timestamp": "2026-11-05T23:58:51.845418+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2597.156
+}

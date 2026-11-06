@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Do transcripts, video recordings, or official statements from Sen. Graham's office confirm or contradict the attribution using the exact wording 'probably knows more about medicine and specifically viruses than the so called scientists'?,",
+        "candidates": [
+          {
+            "title": "VERIFY: Medical Myths & Misinformation | WUSA9 Special",
+            "snippet": "VERIFY is committed to fact-checking misinformation online and showing you how we did it. During this half hour special, our researchers ...",
+            "url": "https://www.youtube.com/watch?v=c_BHqgHrwJ8"
+          },
+          {
+            "title": "True or False: Deciphering Health Information",
+            "snippet": "The Manipulation Expert: 4 Hidden Signs You're Dealing With a Toxic Person. Mel Robbins · 1.5M views ; How is AI transforming medicine? - A ...",
+            "url": "https://www.youtube.com/watch?v=iA7zXpTZRn0"
+          },
+          {
+            "title": "COVID-19: The importance of science in an era of distrust ...",
+            "snippet": "The AMA calls on all elected officials to affirm science, evidence and fact in their words and actions. We call on media to be vigilant in ...",
+            "url": "https://www.ama-assn.org/press-center/ama-speeches/covid-19-importance-science-era-distrust-and-disinformation"
+          },
+          {
+            "title": "MODULE 5 Flashcards",
+            "snippet": "A phrase is an action verb phrase that connects the source's author with its content. Phrases point the readers to the information from a source.",
+            "url": "https://quizlet.com/804396225/module-5-flash-cards/"
+          },
+          {
+            "title": "on codes, classifications and the production of accurate data",
+            "snippet": "by BR Winthereik · 2003 · Cited by 49 — The paper argues that what counts as \"accurate data\" is locally constructed. As codes are produced in local networks of human and technological actors, ...",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/14534655/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-05T10:47:40.872290+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "United Nations World Population Prospects historical estimates Nigeria 1960 population",
+        "candidates": [
+          {
+            "title": "World Population Prospects 2024",
+            "snippet": "It presents population estimates from 1950 to the present for 237 countries or areas, underpinned by analyses of historical demographic trends.",
+            "url": "https://population.un.org/wpp/"
+          },
+          {
+            "title": "Home Page | Data Portal - Population Division |",
+            "snippet": "The world's population is projected to reach 8 billion on 15 November 2022 from an estimated 2.5 billion people in 1950. It took around 37 years since 1950 ... Read more",
+            "url": "https://population.un.org/dataportal/home"
+          },
+          {
+            "title": "Population Growth",
+            "snippet": "by H Ritchie · 2023 · Cited by 290 — Global population growth peaked in the 1960s at over 2% per year. Since then, rates have more than halved, falling to less than 1%.",
+            "url": "https://ourworldindata.org/population-growth"
+          },
+          {
+            "title": "Population | United Nations",
+            "snippet": "In 1950, five years after the founding of the United Nations , world population was estimated at around 2.6 billion people. It reached 5 billion in 1987",
+            "url": "https://www.un.org/en/global-issues/population"
+          },
+          {
+            "title": "Nigeria Population (2026)",
+            "snippet": "Nigeria Population (LIVE) ; 1959, 44,161,681 ; 1960, 45,053,782 ; 1961, 45,989,310 ; 1962, 46,965,292. Read more",
+            "url": "https://www.worldometers.info/world-population/nigeria-population/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-glm-candidate",
+  "timestamp": "2026-11-06T00:04:07.598990+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2912.906
+}

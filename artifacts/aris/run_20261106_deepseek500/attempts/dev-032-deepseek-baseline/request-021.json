@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The New York post Endorsed Donald trumps bid for re-election.",
+        "query": "site:nypost.com 2020/10/26 New York Post endorses President Donald J. Trump for re-election",
+        "candidates": [
+          {
+            "title": "The New York Post endorses President Donald J. Trump ...",
+            "snippet": "The New York Post endorses President Donald J. Trump for re-election ... We can return to the explosive job creation, rising wages and general ...",
+            "url": "https://nypost.com/2020/10/26/the-new-york-post-endorses-president-donald-j-trump-for-re-election/"
+          },
+          {
+            "title": "October 26, 2020 | News Headlines",
+            "snippet": "The New York Post endorses President Donald J. Trump for re-election. October 26, 2020 | 5:01am. We can return to the explosive job creation ...",
+            "url": "https://nypost.com/2020/10/26/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-032-deepseek-baseline",
+  "timestamp": "2026-11-06T07:16:39.069289+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16588.375
+}

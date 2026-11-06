@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19 counterevidence",
+        "candidates": [
+          {
+            "title": "Fact check: Donald Trump's past flu shots, COVID-19 risk aren't ...",
+            "snippet": "An Instagram post falsely speculates that President Donald Trump's prior flu vaccinations put him at risk for COVID-19. Missing:  counterevidence  | Show results with:",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/21/fact-check-donald-trumps-flu-shots-covid-risk-arent-linked/3623699001/"
+          },
+          {
+            "title": "AP FACT CHECK: Trump's faulty claims on flu and coronavirus",
+            "snippet": "WASHINGTON (AP) — President Donald Trump is back to making false comparisons between COVID-19 and the flu, contradicting science and even ... Missing:  counterevidence  | Show results with:",
+            "url": "https://apnews.com/article/virus-outbreak-donald-trump-ap-fact-check-anthony-fauci-flu-fe474f0c15f76adf324791a2cfc1e2bb"
+          },
+          {
+            "title": "No Evidence That Flu Shot Increases Risk of COVID-19",
+            "snippet": "A claim being pushed on social media and by an organization skeptical of vaccines is using a military study to falsely suggest that the flu ... Missing:  counterevidence  | Show results with:",
+            "url": "https://www.factcheck.org/2020/04/no-evidence-that-flu-shot-increases-risk-of-covid-19/"
+          },
+          {
+            "title": "VERIFY: Will a flu vaccine help combat coronavirus? | kvue.com",
+            "snippet": "The VERIFY team tackles vaccine development and how they combat illness after video of a Tuesday Trump gaffe during a coronavirus meeting ... Missing:  counterevidence  | Show results with:",
+            "url": "https://www.kvue.com/article/news/verify/verify-how-do-vaccines-work/507-504ba12b-c34b-4588-b636-f5a61632ccaa"
+          },
+          {
+            "title": "Trump's Flu Shot Reticence - FactCheck.org",
+            "snippet": "President Donald Trump cast doubt on the value of influenza vaccines, saying he has never had the seasonal flu and only got a flu shot ... Missing:  susceptible  counterevidence",
+            "url": "https://www.factcheck.org/2020/05/trumps-flu-shot-reticence/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-baseline",
+  "timestamp": "2026-11-06T08:24:44.667034+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20673.968
+}

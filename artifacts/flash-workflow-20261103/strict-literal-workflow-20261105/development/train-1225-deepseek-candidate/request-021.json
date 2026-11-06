@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Did any fact-checker evaluate the claim that Bloomberg's wealth exceeds the bottom 125 million Americans' combined wealth?",
+        "candidates": [
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined. In fact, this 125 million figure ...",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Two Americas, the people vs. the billionaires",
+            "snippet": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ...",
+            "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/"
+          },
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "Gross found that the bottom 38% had about $6 billion in wealth, rather than Bruenig's $11.4 billion, but either way, this was enough to verify ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          },
+          {
+            "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic",
+            "snippet": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire Owns More Wealth Than Bottom 125 Million Americans Combined. \"That's wrong ...",
+            "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125"
+          },
+          {
+            "title": "The Secret IRS Files: Trove of Never-Before-Seen Records ...",
+            "snippet": "In 2018, nine of the 25 wealthiest Americans reported more than $500 million in income and three more than $1 billion. In such cases, though ...",
+            "url": "https://www.propublica.org/article/the-secret-irs-files-trove-of-never-before-seen-records-reveal-how-the-wealthiest-avoid-income-tax"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-05T10:12:11.307371+00:00",
+  "status": "reserved_outcome_unknown"
+}

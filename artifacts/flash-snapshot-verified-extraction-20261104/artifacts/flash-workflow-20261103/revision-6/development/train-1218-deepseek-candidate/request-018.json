@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Search Sanders's Senate floor statements from 2017 defending the ACA against repeal for primary-source confirmation.",
+        "candidates": [
+          {
+            "title": "Sanders Statement on CBO Score of Affordable Care Act ...",
+            "snippet": "“The CBO report that just came out analyzing the repeal of the Affordable Care Act makes it clear that this would be a total disaster for the American people. “ ...",
+            "url": "https://www.sanders.senate.gov/press-releases/sanders-statement-on-cbo-score-of-affordable-care-act-repeal/"
+          },
+          {
+            "title": "CONGRESSIONAL RECORD—SENATE S31",
+            "snippet": "The Senate is poised to pass a repeal resolution that will set the stage for true legislative relief from ObamaCare that Americans have long ...",
+            "url": "https://www.congress.gov/crec/2017/01/04/CREC-2017-01-04-pt1-PgS31-3.pdf"
+          },
+          {
+            "title": "Sanders Statement on Health Care Vote",
+            "snippet": "“This bill is opposed by virtually every major health care organization in this country. It is opposed overwhelmingly by the American people.",
+            "url": "https://www.sanders.senate.gov/press-releases/sanders-statement-on-health-care-vote/"
+          },
+          {
+            "title": "Statement by Senator Bernie Sanders on Affordable Care Act ...",
+            "snippet": "\"Instead of gutting the Affordable Care Act, we need to expand on the improvements that it has made to our health care system. The time has come ...",
+            "url": "https://www.presidency.ucsb.edu/documents/statement-senator-bernie-sanders-affordable-care-act-ruling"
+          },
+          {
+            "title": "Sen. Sanders On GOP Efforts To Replace Obamacare",
+            "snippet": "On the Senate floor Monday night, Democrats railed against secretive effort by Republicans to repeal and replace the Affordable Care Act.",
+            "url": "https://www.npr.org/2017/06/20/533617413/sen-bernie-sanders-on-gop-efforts-to-replace-obamacare"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T08:59:15.612496+00:00",
+  "status": "reserved_outcome_unknown"
+}

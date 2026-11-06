@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The plentiful evidence we have indicates that masks would not meaningfully help with aerosol transmission of COVID 19.",
+        "query": "Search for primary laboratory studies published on or before 2020-10-29 that directly measured outward emission or filtration of SARS-CoV-2 aerosols (sub-5-micron particles) by masks, with effect sizes and confidence intervals.",
+        "candidates": [
+          {
+            "title": "Inter-laboratory Comparison between Particle and Bacterial ...",
+            "snippet": "This paper presents an inter-laboratory comparison between Bacterial Filtration Efficiency (BFE) and Particle Filtration Efficiency (PFE),",
+            "url": "https://aaqr.org/articles/aaqr-22-06-oa-0252"
+          },
+          {
+            "title": "[PDF] Effects of masks and ventil - Maryland",
+            "snippet": "The present study experimentally investigates the dispersion and build-up of an exhaled aerosol modeled with polydisperse microscopic particles",
+            "url": "https://mgaleg.maryland.gov/cmte_testimony/2022/hgo/18UsGCX0_s3pYBwzYpDOZxwLbBePHLXtx.pdf"
+          },
+          {
+            "title": "Strategies to minimize SARS-CoV-2 transmission in classroom ...",
+            "snippet": "We experimentally evaluated the impact of ventilation on aerosol dynamics and distribution along with the effective filtration efficiency (EFE) ...",
+            "url": "https://www.tandfonline.com/doi/full/10.1080/23744731.2021.1944665"
+          },
+          {
+            "title": "[PDF] Aerosol Filtration Efficiency of Common Fabrics Used in ...",
+            "snippet": "In this paper, we report the results of experiments where we measure the filtration efficiencies of a number of common fabrics, as well as ...",
+            "url": "http://kinampark.com/T-Polymers/files/All%20References/Konda%202020%2C%20Aerosol%20filtration%20efficiency%20of%20common%20fabrics%20used%20in%20respiratory%20cloth%20masks.pdf"
+          },
+          {
+            "title": "On a positive note, study authors say certain face coverings ...",
+            "snippet": "On a positive note, study authors say certain face coverings usually cut the amount of exhaled viral particles in half.",
+            "url": "https://www.facebook.com/WNCNTV/posts/on-a-positive-note-study-authors-say-certain-face-coverings-usually-cut-the-amou/10160155234929750/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-016-deepseek-candidate",
+  "timestamp": "2026-11-06T06:26:08.312521+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13557.625
+}

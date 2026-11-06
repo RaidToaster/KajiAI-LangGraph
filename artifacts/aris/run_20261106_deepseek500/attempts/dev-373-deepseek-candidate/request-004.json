@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "the Indian Government set up 5 coaching centres for UPSC exams, 4 of which were in Muslim universities.",
+        "query": "Which Indian Government ministry, department, or scheme is documented as having established coaching centres for UPSC exams?",
+        "candidates": [
+          {
+            "title": "Dr. Ambedkar Centre of Excellence – Free Coaching Scheme",
+            "snippet": "The Ministry of Social Justice and Empowerment is running a scheme namely 'Free Coaching for SCs, OBCs and beneficiaries of PM CARES Children ...",
+            "url": "https://www.dosje.gov.in/schemes-and-services/dr-ambedkar-centre-of-excellence-free-coaching-scheme-2/"
+          },
+          {
+            "title": "Union Public Service Commission",
+            "snippet": "The Union Public Service Commission (UPSC) is a constitutional body in India tasked with recruiting officers for All India Services and the Central Civil ...",
+            "url": "https://en.wikipedia.org/wiki/Union_Public_Service_Commission"
+          },
+          {
+            "title": "How can government schemes be prepared effectively for ...",
+            "snippet": "If it deals with students, it is likely the Ministry of Education. If it deals with skill building, it is likely the Ministry of Skill ...",
+            "url": "https://plutusias.com/how-can-government-schemes-be-prepared-effectively-for-upsc-prelims/"
+          },
+          {
+            "title": "The Union government has partnered with the Physics ...",
+            "snippet": "The Union government has partnered with the Physics Wallah (PW) Foundation to offer free online coaching to 5,000 students annually for ...",
+            "url": "https://www.facebook.com/logical.indian/videos/the-union-government-has-partnered-with-the-physics-wallah-pw-foundation-to-offe/1927600891160795/"
+          },
+          {
+            "title": "10 Best IAS coaching Centres 2025-26 in India",
+            "snippet": "The Ministry of Social Justice and Empowerment has implemented these free IAS coaching centres through its ''Scheme of free coaching”. The ...",
+            "url": "https://collegemarker.com/blogs/government-coaching-centres-for-ias"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-373-deepseek-candidate",
+  "timestamp": "2026-11-06T04:52:19.325581+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7928.64
+}

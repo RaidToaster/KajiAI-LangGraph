@@ -1,0 +1,63 @@
+{
+  "passed": false,
+  "protocol_sha256": "179034615e6631cb1ddf08df2b29346eb026977bd8eb52c10521b3cbfed97fe6",
+  "attempted": 2,
+  "untouched": 4,
+  "positive": {
+    "glm": {
+      "passed": false,
+      "verdict": null,
+      "confidence": null,
+      "exact_label": false,
+      "retained_audit": null,
+      "transport_error": null,
+      "usage": [
+        {
+          "service": "ollama",
+          "request_id": "001",
+          "sent_at": "2026-11-03T14:46:32.499091+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 338,
+          "output_tokens": 501,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "raw_sha256": "0b10da43c8b3993b813027afbe330f1fc1f6134a1dff6e017ff2f142379a7483"
+    },
+    "deepseek": {
+      "passed": false,
+      "verdict": "CONFLICTING",
+      "confidence": "Medium",
+      "exact_label": true,
+      "retained_audit": null,
+      "transport_error": null,
+      "usage": [
+        {
+          "service": "ollama",
+          "request_id": "001",
+          "sent_at": "2026-11-03T14:46:41.166792+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 337,
+          "output_tokens": 7,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "raw_sha256": "414565dc5332f9794b1f612276277a9307f57c1fa69ef138f28a4fc457162d65"
+    }
+  },
+  "reason": "Both models missed the required Conflicting at High confidence with a valid one-line reply.",
+  "interpretation": "GLM duplicated a Refuted proposal after prose. DeepSeek matched the label at Medium confidence. The evidence distinguishes conditional opposition during negotiations from the final vote; the interpretation of the benchmark wording remains contestable.",
+  "scope": "Development diagnostic with manually selected evidence. Does not measure retrieval or automated gate acceptance."
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "India’s imports from China increased by 27% in April-August 2020",
+        "query": "India’s imports from China increased by 27% in April-August 2020 evidence",
+        "candidates": [
+          {
+            "title": "India's imports from China up 15.55 pc; exports dip 22.44 pc in Aug",
+            "snippet": "India's exports to China fell by 22.44% to USD 1 billion in August, while imports rose by 15.55% to USD 10.8 billion, resulting in a trade ...",
+            "url": "https://m.economictimes.com/news/economy/foreign-trade/indias-imports-from-china-up-15-55-pc-exports-dip-22-44-pc-in-aug/articleshow/113432038.cms"
+          },
+          {
+            "title": "China Dominates India's Imports: 80% of Tariff Lines | Raghav Priyadarshi posted on the topic",
+            "snippet": "China's Exports Jump 25% in August as Trade Surplus Widens to $119 Billion China's exports rose 25% year on year in August, customs data ...",
+            "url": "https://www.linkedin.com/posts/raghav-priyadarshi-8a44a525_china-accounts-for-at-least-80-of-india-activity-7504067353622802432-CHW1"
+          },
+          {
+            "title": "In 2020, India imported goods worth $ 58.71 billion from China, MoS (commerce and ...",
+            "snippet": "Public India's imports from China during April-July 2020 decreased to $16.60 billion from $23.45 billion in the corresponding period of the ...",
+            "url": "https://www.facebook.com/SMPRODUCT08/posts/in-2020-india-imported-goods-worth-5871-billion-from-china-mos-commerce-and-indu/2818755475065944/"
+          },
+          {
+            "title": "Is India considering easing curbs on Chinese imports amid industry pressure?",
+            "snippet": "Official data showed India's imports from China rose more than 16 per cent to over $11 billion in September, with cumulative imports reaching $91 billion",
+            "url": "https://www.nationalheraldindia.com/national/is-india-considering-easing-curbs-on-chinese-imports-amid-industry-pressure"
+          },
+          {
+            "title": "In charts: How lockdowns in China are impacting trade with India",
+            "snippet": "China's exports slowed to 3.9% on-year in April, imports from China surged to $94.2 billion in FY22 from $65.3 billion the year before.",
+            "url": "https://timesofindia.indiatimes.com/business/india-business/in-charts-how-lockdowns-in-china-are-impacting-trade-with-india/articleshow/91757846.cms"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-054-deepseek-baseline",
+  "timestamp": "2026-11-06T08:17:27.456659+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20236.765
+}

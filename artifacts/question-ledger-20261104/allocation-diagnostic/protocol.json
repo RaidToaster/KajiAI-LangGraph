@@ -1,0 +1,52 @@
+{
+  "stage": "new_matched_allocation_diagnostic",
+  "source_sha256": "c862a2ba1bea2ffb5376e77def297e5d767bf7c1623f2e7e02c0c337cb8ff7f5",
+  "schedule": [
+    {
+      "id": "glm-method",
+      "directory": "artifacts/question-ledger-20261104/allocation-diagnostic/glm-method",
+      "protocol_sha256": "4fc1c6feb6245a8284adc6900dd32648b6f4ebeeb6a81f80ee50c8f1690fd119"
+    },
+    {
+      "id": "glm-global",
+      "directory": "artifacts/question-ledger-20261104/allocation-diagnostic/glm-global",
+      "protocol_sha256": "b41f128458266a6333c31764f127ee7a5dd73bd1012fd3e738a581ce88d1cc7f"
+    },
+    {
+      "id": "deepseek-method",
+      "directory": "artifacts/question-ledger-20261104/allocation-diagnostic/deepseek-method",
+      "protocol_sha256": "18a20d252ff521b2aa8722d965179555680694d3c66b1bf307d2c77d25a11364"
+    },
+    {
+      "id": "deepseek-global",
+      "directory": "artifacts/question-ledger-20261104/allocation-diagnostic/deepseek-global",
+      "protocol_sha256": "761ddbdca141cf33ac141375bbc014adbfac9c5bf83c41ae49289b144ccb4f2c"
+    }
+  ],
+  "planned_maximum_sends": {
+    "ollama": 4,
+    "jev": 8,
+    "search": 0,
+    "fetch": 0
+  },
+  "total_investigation_maximum_including_completed": {
+    "ollama": 9,
+    "jev": 10,
+    "search": 0,
+    "fetch": 0
+  },
+  "actual_completed_before_this_phase": {
+    "ollama": 5,
+    "jev": 2,
+    "search": 0,
+    "fetch": 0
+  },
+  "resources": "One worker, two numerical threads, 300s/job; 6144 requested output tokens/cell; no retries or replacements. Same generation settings across matched allocation arms.",
+  "frozen_guards": "Unchanged. Only a both-model substantive pass with correct controls and passage support can release the conditionally authorized 68 required workflow attempts.",
+  "stop": "Inspect each cell. After GLM pair, a failed global-acceptance/gain/support prerequisite closes this phase and leaves DeepSeek untouched. Do not spend more to format-rescue or force High.",
+  "selection_files": {
+    "evaluation/global_component_selection.py": "403c12f4a67e35bf53982aab7c0d8d50f02952347b4cd58d957be63ecf44e89d",
+    "evaluation/gap_passage_selection_v2.py": "c349832133746cb3970ea7cd5675e6052fa3d93eed87f9899ceac095c3257d6c",
+    "evaluation/gap_passage_selection.py": "e23cdec73daaa4c739a351b494eb8e68f9fb4d1aad557b8898e4397d8274177f"
+  }
+}

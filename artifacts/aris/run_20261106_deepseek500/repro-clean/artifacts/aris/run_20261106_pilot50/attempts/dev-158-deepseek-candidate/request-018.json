@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US President Donald Trump following his positive diagnosis of COVID-19, was given treatment developed from the use of fetal tissue, made by the company Regeneron.",
+        "query": "Regeneron primary statement or SEC filing describing whether REGN-COV2 antibodies administered to President Trump were selected or potency-tested using HEK293T-derived pseudoparticles",
+        "candidates": [
+          {
+            "title": "Regeneron Confirms that REGN-COV2 Antibody Cocktail ...",
+            "snippet": "Regeneron provided a single 8 gram dose of REGN- COV2, a cocktail of two monoclonal antibodies, for use by President Trump. REGN-COV2 is an ...",
+            "url": "https://investor.regeneron.com/static-files/fd58ba6a-f401-47b0-9d65-cfb01c313ec6"
+          },
+          {
+            "title": "REGENERON PHARMACEUTICALS, INC. REGN on Nasdaq",
+            "snippet": "REGENERON PHARMACEUTICALS, INC. REGN on Nasdaq. This company's Exchange Act registration has been revoked. This company's Exchange Act registration as a ...",
+            "url": "https://www.sec.gov/edgar/browse/?CIK=0000872589"
+          },
+          {
+            "title": "SEC Filings | Regeneron Investors",
+            "snippet": "Discover Regeneron's Securities and Exchange Commission filings and other key information relevant for investors.",
+            "url": "https://investor.regeneron.com/financials/sec-filings/"
+          },
+          {
+            "title": "Regeneron asks FDA for emergency use authorization ...",
+            "snippet": "Regeneron is seeking emergency use authorization from the FDA for its drug that was used to treat President Donald Trump while he was ...",
+            "url": "https://www.fox13news.com/news/regeneron-asks-fda-for-emergency-use-authorization-for-antibody-drug-that-treated-trump"
+          },
+          {
+            "title": "Regeneron asks FDA for emergency authorization of its ...",
+            "snippet": "Regeneron asks FDA for emergency authorization of its Covid-19 antibody therapy given to Trump last week. By Shelby Lin Erdman.",
+            "url": "https://www.cnn.com/2020/10/08/health/regneron-eua-antibody-therapy"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-158-deepseek-candidate",
+  "timestamp": "2026-11-06T02:01:55.060735+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9980.375
+}

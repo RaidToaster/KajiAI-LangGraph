@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost.",
+        "query": "Bihar 2020 BJP manifesto original text free COVID-19 vaccine promise PDF",
+        "candidates": [
+          {
+            "title": "[PDF] covid-19-and-elections-to-the-bihar-legislative-assembly-india ...",
+            "snippet": "Times of India, The, 'Free Covid vaccine, 19 lakh jobs: BJP releases Bihar manifesto', 22. October 2020, <https://timesofindia.indiatimes.com ... Missing:  original  | Show results with:",
+            "url": "https://www.idea.int/sites/default/files/covid-19-and-elections-to-the-bihar-legislative-assembly-india-en.pdf"
+          },
+          {
+            "title": "*BJP's manifesto for Bihar elections promises free coronavirus ...",
+            "snippet": "The ruling BJP today promised 19 lakh jobs and free coronavirus vaccination for all in its manifesto for the Bihar election starting next week. Missing:  text  PDF",
+            "url": "https://www.facebook.com/cnbctv18india/posts/bjps-manifesto-for-bihar-elections-promises-free-coronavirus-vaccination-for-all/3528594483844591/"
+          },
+          {
+            "title": "Amit Malviya on X",
+            "snippet": "BJP's manifesto promises free Covid vaccine. Like all programs, center will provide vaccines to states at a nominal rate. Missing:  original  text  19  PDF",
+            "url": "https://x.com/amitmalviya/status/1319183867199299585?ref_src=twsrc%5Etfw"
+          },
+          {
+            "title": "BJP Promises 19 Lakh Jobs, Free Covid Vaccination In Bihar ...",
+            "snippet": "The ruling BJP today promised 19 lakh jobs and free coronavirus vaccination for all in its manifesto for the Bihar election starting next week. Missing:  text  PDF",
+            "url": "https://www.ndtv.com/india-news/bihar-election-bjp-promises-19-lakh-jobs-free-covid-vaccination-for-all-in-manifesto-2313961"
+          },
+          {
+            "title": "Top news of the day: BJP promises free COVID-19 vaccine in ...",
+            "snippet": "Bihar Assembly elections | BJP promises free COVID-19 vaccine. Finance Minister Nirmala Sitharaman releases party manifesto. Coronavirus | Bihar ... Missing:  text  PDF",
+            "url": "https://www.thehindu.com/news/top-news-of-october-22-2020-bjp-promises-free-covid-19-vaccine-in-bihar-election-manifesto-india-relaxes-visa-restrictions-and-more/article32919327.ece"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-051-deepseek-candidate",
+  "timestamp": "2026-11-06T08:07:08.185780+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19617.5
+}

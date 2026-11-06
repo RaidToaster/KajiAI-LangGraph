@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "America went from 75,000 flu deaths last year in 2019 to almost 0 in 2020",
+        "query": "What does the claim mean by \"America\"—the United States, a broader region, or another entity—and which population or geography is intended?",
+        "candidates": [
+          {
+            "title": "AP Human Geography Unit 4 Vocabulary Flashcards | Quizlet",
+            "snippet": "Rating 4.9 (15) Form of colonialism in which control over developing countries was shown in indirect ways, such as economic control. Example: The colonization of South America ...",
+            "url": "https://quizlet.com/260915448/ap-human-geography-unit-4-vocabulary-flash-cards/"
+          },
+          {
+            "title": "American (word) - Wikipedia",
+            "snippet": "The first two definitions in Diccionario de la lengua española (the official dictionary in Spanish) define americano as \"Native of America\" [Natural de América ] ...",
+            "url": "https://en.wikipedia.org/wiki/American_(word)"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-033-deepseek-candidate",
+  "timestamp": "2026-11-06T07:17:40.169818+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16649.468
+}

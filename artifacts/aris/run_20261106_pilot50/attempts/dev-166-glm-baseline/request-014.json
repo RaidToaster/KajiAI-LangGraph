@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "49 percent of Nigerians are in extreme poverty.",
+        "query": "49 percent of Nigerians are in extreme poverty. original source fact check",
+        "candidates": [
+          {
+            "title": "Nigeria Launches its Most Extensive National Measure of ...",
+            "snippet": "In Nigeria, 40.1% of people are poor according to the 2018/19 national monetary poverty line, and 63% are multidimensionally poor according to the National MPI ...",
+            "url": "https://nigerianstat.gov.ng/news/78"
+          },
+          {
+            "title": "Nigeria",
+            "snippet": "30.9 percent of Nigerians lived below the international extreme poverty line of $2.15 per person per day (2017 PPP) in 2018/19; just before the COVID-19 crisis.",
+            "url": "https://databankfiles.worldbank.org/public/ddpext_download/poverty/987B9C90-CB9F-4D93-AE8C-750588BF00QA/current/Global_POVEQ_NGA.pdf"
+          },
+          {
+            "title": "Nigeria: extreme inequality in numbers",
+            "snippet": "Economic inequality in Nigeria has reached extreme levels, despite being the largest economy in Africa. The country has an expanding economy with abundant human ...",
+            "url": "https://www.oxfam.org/en/nigeria-extreme-inequality-numbers"
+          },
+          {
+            "title": "World's Highest Number of People Living in Extreme ...",
+            "snippet": "World's Highest Number of People Living in Extreme Poverty (2026)\n\n1. Nigeria 🇳🇬 - 73.1 million\n\n2. DR Congo 🇨🇩 - 71.6 million\n\n3. Afghanistan ...",
+            "url": "https://www.facebook.com/AfricaFactsZone/posts/worlds-highest-number-of-people-living-in-extreme-poverty-2026-1-nigeria-731-mil/1643931547400275/"
+          },
+          {
+            "title": "Poverty in Nigeria: Examining the Causes of Extreme ...",
+            "snippet": "30.9 per cent of Nigerians lived below the international extreme poverty line of $2.15 per person per day (2017 PPP) in 2018/19 before the COVID-19 pandemic.",
+            "url": "https://rsisinternational.org/journals/ijriss/articles/poverty-in-nigeria-examining-the-causes-of-extreme-deprivation-and-sustainable-anti-poverty-strategies/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-166-glm-baseline",
+  "timestamp": "2026-11-05T23:56:39.555192+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2464.859
+}

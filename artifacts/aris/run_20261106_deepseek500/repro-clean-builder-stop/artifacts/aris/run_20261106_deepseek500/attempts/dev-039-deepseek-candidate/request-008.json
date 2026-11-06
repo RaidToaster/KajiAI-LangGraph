@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "5G causes COVID-19.",
+        "query": "What is the proposed biological or physical mechanism by which 5G exposure would cause COVID-19, and has it been tested experimentally?",
+        "candidates": [
+          {
+            "title": "Evidence for a connection between coronavirus disease-19 ...",
+            "snippet": "by B Rubik · 2021 · Cited by 37 — SARS-CoV-2, the virus that caused the COVID-19 pandemic, surfaced in Wuhan, China shortly after the implementation of city-wide (fifth generation [5G] of ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8580522/"
+          },
+          {
+            "title": "COVID-19 Vaccine Basics",
+            "snippet": "COVID-19 vaccines help our bodies develop immunity to the virus that causes COVID-19 without us having to get the illness. Different types of vaccines work in ...",
+            "url": "https://www.cdc.gov/covid/vaccines/how-they-work.html"
+          },
+          {
+            "title": "Process by which COVID-19 latches onto and enters ...",
+            "snippet": "New research shows the actual shape-changing sequence that allows coronavirus proteins to fuse with human cells.",
+            "url": "https://www.nsf.gov/news/process-which-covid-19-latches-enters-human-cells-revealed"
+          },
+          {
+            "title": "Understanding COVID-19 mRNA Vaccines",
+            "snippet": "The protein that the person makes in response to the vaccine can cause an immune response without a person ever having been exposed to the virus ...",
+            "url": "https://www.genome.gov/about-genomics/fact-sheets/Understanding-COVID-19-mRNA-Vaccines"
+          },
+          {
+            "title": "New Virus, New Test | Harvard Medical School",
+            "snippet": "The technology, involving a DNA nanoswitch, is a new way of probing a test sample for evidence of infection, said Wong, associate professor of ...",
+            "url": "https://hms.harvard.edu/news/new-virus-new-test"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-039-deepseek-candidate",
+  "timestamp": "2026-11-06T04:27:14.975882+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6424.296
+}

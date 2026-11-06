@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sleeping under a mosquito bed net treated (or not treated) with insecticide is ineffective and harmful to human health.",
+        "query": "harmful to human health. evidence",
+        "candidates": [
+          {
+            "title": "Our Current Understanding of the Human Health and Environmental ...",
+            "snippet": "Exposure to PFAS May be Harmful to Human Health. Current scientific research ... Offering additional data and scientific evidence that may not have been ...",
+            "url": "https://www.epa.gov/pfas/our-current-understanding-human-health-and-environmental-risks-pfas"
+          },
+          {
+            "title": "A critical review on the toxicological and epidemiological evidence ...",
+            "snippet": "... harmful health effects of exposure to toxic ... evidence integration for assessing human health risks to environmental chemical exposures.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39679553/"
+          },
+          {
+            "title": "Human health effects of benzene, arsenic, cadmium, nickel, lead ...",
+            "snippet": "Limited epidemiological evidence on ambient air pollution suggests adverse effects on the cardiovascular system (‎arsenic and nickel)‎. Since ...",
+            "url": "https://www.who.int/europe/publications/i/item/WHO-EURO-2023-8983-48755-72523"
+          },
+          {
+            "title": "How PFAS Impacts Your Health",
+            "snippet": "Health effects. Research is ongoing to understand the mechanisms of PFAS toxicity. Epidemiological evidence suggests associations between ...",
+            "url": "https://www.atsdr.cdc.gov/pfas/about/health-effects.html"
+          },
+          {
+            "title": "Microplastics and our health: What the science says",
+            "snippet": "... human health, leaving us in the dark about how dangerous they really are. ... Evidence is growing that this exposure could be harmful. Studies ...",
+            "url": "https://med.stanford.edu/news/insights/2025/01/microplastics-in-body-polluted-tiny-plastic-fragments.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-027-deepseek-baseline",
+  "timestamp": "2026-11-06T07:01:56.396453+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15705.718
+}

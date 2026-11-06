@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Senate roll call vote 00396, 111th Congress, H.R. 3590 member-by-member vote record showing Sanders' \"Yea\"",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "Bill Passed. Measure Number: H.R. 3590 (Patient Protection and Affordable Care Act ) ... Sanders (I-VT), Yea Schumer (D-NY), Yea Sessions (R-AL), ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm"
+          },
+          {
+            "title": "Patient Protection and Affordable Care Act 111th ...",
+            "snippet": "Roll Call Votes: There have been 36 roll call votes. Notes: H.R.4872 makes a ... Yea-Nay Vote. 60 - 39. Record Vote Number: 396.(text: CR S13890-14212) ...",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590/text"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "Motion Rejected. Measure Number: H.R. 3590 (Service Members Home Ownership Tax Act of 2009 ) ... Barrasso (R-WY), Yea Baucus (D-MT), Nay Bayh (D-IN), Nay Begich ( ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00358.htm"
+          },
+          {
+            "title": "Roll Call 165 | Bill Number: HR 3590 - House Clerk's Office",
+            "snippet": "Votes. All Votes, YEA/AYE, NAY/NO, PRESENT, NOT VOTING. All votes. Representative, Party, State, Vote. Ackerman, Ackerman, Democratic, New York ...",
+            "url": "https://clerk.house.gov/Votes/2010165"
+          },
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient ...",
+            "snippet": "Roll Call Votes: There have been 36 roll call votes. Notes: H.R.4872 makes a ... Yea-Nay Vote. 60 - 39. Record Vote Number: 396.(text: CR S13890-14212) ...",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T15:13:33.630691+00:00",
+  "status": "reserved_outcome_unknown"
+}

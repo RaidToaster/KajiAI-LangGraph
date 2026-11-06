@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "India’s imports from China increased by 27% in April-August 2020",
+        "query": "India’s imports from China increased by 27% in April-August 2020 original source fact check",
+        "candidates": [
+          {
+            "title": "Pankaj Pachauri has claimed in a #Tweet that India's imports from China ...",
+            "snippet": "#PIBFactCheck: This claim is #Fake. India's imports from China decreased by 27.63% whereas India's exports to China increased by 27% during ...",
+            "url": "https://www.facebook.com/pibfactcheck/posts/pankaj-pachauri-has-claimed-in-a-tweet-that-indias-imports-from-china-have-incre/201968234669611/"
+          },
+          {
+            "title": "This claim is #Fake. India's imports from China decreased by 27.63% ...",
+            "snippet": "India's imports from China have increased by 27% during April-August. This claim is #Fake. India's imports from China decreased by 27.63% India ...",
+            "url": "https://x.com/PIBFactCheck/status/1318466154302599168"
+          },
+          {
+            "title": "Data of first 5 months of 2021-22 indicates that Imports from China ...",
+            "snippet": "However, in terms of the share of imports from China in India's overall imports, it has increased from 13.74% in 2019-20 to 16.53% in 2020-21.",
+            "url": "https://factly.in/data-of-the-first-5-months-of-2021-22-indicates-that-imports-from-china-surpass-2019-20-levels/"
+          },
+          {
+            "title": "PDF",
+            "snippet": "The US imports from India showed the following differences as a percent of imports: approximately 5.5 percent in 2018, 6.7 percent in 2019, and 4.2 percent in ...",
+            "url": "https://www.census.gov/foreign-trade/reconciliation/recon_india_181920.pdf"
+          },
+          {
+            "title": "Foreign trade of India",
+            "snippet": "India's service exports grew by 27% in FY 2023. India is the second biggest oil importer after China. The net imports of crude oil rose from 178.973 Mt during ...",
+            "url": "https://en.wikipedia.org/wiki/Foreign_trade_of_India"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-054-deepseek-baseline",
+  "timestamp": "2026-11-06T08:18:02.658894+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20271.968
+}

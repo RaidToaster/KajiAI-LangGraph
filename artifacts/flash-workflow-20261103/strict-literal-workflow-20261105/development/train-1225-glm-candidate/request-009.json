@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "How is 'bottom 125 million Americans' defined for this comparison — by household or individual wealth, and what wealth distribution dataset or study supports such a bottom-tier aggregate?",
+        "candidates": [
+          {
+            "title": "The State of U.S. Household Wealth | St. Louis Fed",
+            "snippet": "The bottom 50% of households by wealth had $60,000 on average. As a group, they held 2.5% of total household wealth. The top 20% of households ...",
+            "url": "https://www.stlouisfed.org/open-vault/2025/june/the-state-of-us-household-wealth"
+          },
+          {
+            "title": "Wealth Inequality",
+            "snippet": "Most of the wealth of Americans in the bottom 90 percent comes from their homes — the asset category that took the biggest hit during the Great Recession. These ...",
+            "url": "https://inequality.org/facts/wealth-inequality/"
+          },
+          {
+            "title": "Who Rules America: Wealth, Income, and Power",
+            "snippet": "This document presents details on the wealth and income distributions in the United States, and explains how we use these two distributions as power ...",
+            "url": "https://whorulesamerica.ucsc.edu/power/wealth.html"
+          },
+          {
+            "title": "The U.S. Income Distribution: Trends and Issues",
+            "snippet": "One study estimated that the bottom 90% of the wealth distribution had a saving rate of 0.1%, while the top 10% had a saving rate of 24% in 2010 to 2012.",
+            "url": "https://www.congress.gov/crs-product/R44705"
+          },
+          {
+            "title": "Wealth Inequality in America (Updated 2026)",
+            "snippet": "This video contains updated infographics on the distribution of wealth in America, highlighting both the inequality itself, and the difference ...",
+            "url": "https://www.youtube.com/watch?v=2GxlL5-0m_g"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-05T10:13:21.224343+00:00",
+  "status": "reserved_outcome_unknown"
+}

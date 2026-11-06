@@ -1,0 +1,275 @@
+{
+  "phase": "development",
+  "models": {
+    "glm": "glm-5.3-flash:cloud",
+    "deepseek": "deepseek-v4.1-flash:cloud"
+  },
+  "caps": {
+    "ollama": 8,
+    "jev": 40,
+    "tinyfish_search": 6,
+    "tinyfish_fetch": 12
+  },
+  "num_predict": 4096,
+  "rounds": 3,
+  "config": {
+    "model": {
+      "provider": "ollama",
+      "name": "gemma4:31b-cloud",
+      "base_url": "http://localhost:11434",
+      "temperature": 0.0,
+      "canonical_evidence_prompt": false
+    },
+    "jev": {
+      "enabled": true,
+      "model": "jev-1.13.0",
+      "domain_min_confidence": 0.6,
+      "citation_min_confidence": 0.8,
+      "injection_cutoff": 0.9,
+      "irrelevant_cutoff": 0.1,
+      "max_source_reviews_per_round": 20,
+      "citation_batch_size": 6
+    },
+    "policy": {
+      "require_evidence_quotes": true,
+      "full_page_retrieval": true,
+      "page_fetches_per_search": 2,
+      "page_fetch_timeout_seconds": 30,
+      "page_max_bytes": 1000000,
+      "page_text_limit": 20000,
+      "search_calls_per_round": 2,
+      "max_search_calls": 20,
+      "max_scrapes": 20,
+      "max_execution_time_seconds": 270,
+      "max_token_limit": 250000,
+      "max_results_per_search": 5,
+      "max_stagnant_rounds": 2,
+      "stop_on_query_exhaustion": false,
+      "retry_on_failure": false,
+      "max_retries": 0,
+      "retry_delay_seconds": 2
+    },
+    "domain_guidance": {
+      "general": {
+        "research": "Prefer original documents and independent corroboration. Search for both supporting evidence and credible counterevidence.",
+        "analysis": "Evaluate relevance, provenance, temporal fit, and source independence.",
+        "verification_standard": "Require direct evidence for decisive verdicts and preserve material uncertainty."
+      },
+      "scientific": {
+        "research": "Prioritize peer-reviewed studies, academic journals, original datasets, and official scientific institutions such as WHO, NIH, and CDC.",
+        "analysis": "Assess study design, sample limitations, replication, and whether the retrieved evidence is genuinely peer reviewed.",
+        "verification_standard": "Apply a high evidentiary bar and require multiple credible independent sources."
+      },
+      "political": {
+        "research": "Seek primary records and reporting across different editorial perspectives; search specifically for omitted context and counterevidence.",
+        "analysis": "Check partisan framing, cherry-picked facts, source incentives, dates, jurisdictions, and whether reports share the same underlying source.",
+        "verification_standard": "Evaluate evidence on its merits and do not treat outlet diversity as source independence."
+      },
+      "health_medical": {
+        "research": "Prioritize official health organizations, peer-reviewed medical journals, systematic reviews, clinical guidelines, and registered clinical trials.",
+        "analysis": "Distinguish systematic reviews, trials, observational studies, case reports, expert opinion, and anecdotes; note population and dosage limitations.",
+        "verification_standard": "Apply a strict medical evidence standard and do not generalize beyond the studied population."
+      }
+    },
+    "domains": {
+      "general": {},
+      "scientific": {
+        "require_https": true
+      },
+      "political": {},
+      "health_medical": {
+        "require_peer_reviewed": true
+      }
+    }
+  },
+  "cases": "artifacts/flash-workflow-20261103/development-cases.json",
+  "schedule": [
+    {
+      "case": "train-1218",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1218",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1218",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1218",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1209",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1209",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1209",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1209",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1216",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1216",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1216",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1216",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1217",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1217",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1217",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1217",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1205",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1205",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1205",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1205",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1201",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1201",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1201",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1201",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1219",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1219",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1219",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1219",
+      "model": "glm",
+      "arm": "candidate"
+    }
+  ],
+  "source_sha256": "25751edd4d9912ecc4d39dca6f6f7bc8746fd3474b3f00244ef8acd453f80c43",
+  "file_sha256": {
+    "artifacts/flash-workflow-20261103/development-cases.json": "4af1ad05f10f28cd45bb3fdd8e9d3d42a5acbe5dcacd3c20a3f3e22acbac1a23",
+    "evaluation/flash_study.py": "9fe8e917bcf9fc76aa1ae0cc11239cb1e548bac79c786b797fb6637d59ae4f04",
+    "evaluation/runtime_pilot.py": "573a560b457e7bc1c27829eefe8539efad8dabd3fa7fb5021df614284693bcb8",
+    "artifacts/flash-workflow-20261103/PROTOCOL.md": "d3fcfe245400fa0d87dc95f5482df3d4bba058099c69ee7624cd4f8eaa4fed1b",
+    "uv.lock": "6cba5e4692fb76f032d8ff1f2808d84ed962862a5bb808365ac6b13243ccc091",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/attempt.json": "175062f7818f5988d6a5b54758a5c7cf1ecceb36e66fe4e3a4ee4720c555d8e6",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/job.json": "59bae31a3f33b8c332ca6ed7dc09854729b21090cda005c3b9347b5908e360fc",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/result.json": "2e210d9d11657909f08a47bbaecb3739573d59e0515d82c588f09cd92f12d184",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/usage.json": "b80e66d6c07479b6bbb94130881574083e7fdb2a9be6a91a1b20e48b3e38f694",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/attempt.json": "6ab44d9b2e09f92b51bcdeccb0aff1ba8af0ff0c797c0a11a45a1f31af91b2bd",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/job.json": "a15bec68c01c1eed88f4d769bd954da3265a756c6757224d8d7c9f23a0f84ebe",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/result.json": "bbbe29c463bc2866d07545a749c32475d47d2673b772b3f04fdac0a70b8e7809",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/usage.json": "8e3d8691092e69a42aa144d0ef73a9bc1bf06572e00b4f504e250a34b032add0",
+    "evaluation/analyze_flash_study.py": "e8100cb282e65aacaec382327b37c0335d5ca63f145542c47e0971194a3da1e1"
+  },
+  "usage_stop": {
+    "ollama_estimated_usd": 3,
+    "jev_estimated_usd": 0.3
+  },
+  "recover_empty_assessment": false,
+  "reused_attempts": {
+    "train-1218-glm-baseline": "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline",
+    "train-1218-deepseek-baseline": "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline"
+  },
+  "compact_evidence_prompt": true
+}

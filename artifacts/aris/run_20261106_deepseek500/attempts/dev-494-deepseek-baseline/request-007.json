@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign.",
+        "query": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign. counterevidence",
+        "candidates": [
+          {
+            "title": "“The Obama-Biden administration secretly launched a ...",
+            "snippet": "It also wiretapped Carter Page, a former Trump campaign adviser with many ties to Russian intelligence officials; by the time the F.B.I. applied ...",
+            "url": "https://www.nytimes.com/2020/08/26/us/politics/the-obama-biden-administration-secretly-launched-a-surveillance-operation-on-the-trump-campaign.html"
+          },
+          {
+            "title": "Did Obama Get Caught 'Spying' on Trump's 2016 Campaign?",
+            "snippet": "U.S. President Donald Trump claimed his predecessor, or unidentified political opponents, \"spied on our campaign illegally\" numerous times.",
+            "url": "https://www.snopes.com/fact-check/obama-spying-trump-campaign/"
+          },
+          {
+            "title": "Pence falsely accuses Obama admin of spying on 2016 ...",
+            "snippet": "Vice President Pence repeated a claim that the Obama administration spied on the Trump campaign in 2016 that has been fact-checked as false.",
+            "url": "https://www.nbcnews.com/video/pence-falsely-accuses-obama-admin-of-spying-on-2016-trump-campaign-93401669581"
+          },
+          {
+            "title": "Allegations of Barack Obama spying on Donald Trump",
+            "snippet": "As part of a larger conspiracy theory, Donald Trump falsely posited that Barack Obama had spied on him, which Trump described as \"the biggest political ...",
+            "url": "https://en.wikipedia.org/wiki/Allegations_of_Barack_Obama_spying_on_Donald_Trump"
+          },
+          {
+            "title": "Trump Campaign Statement - Ex-FBI Official Pleads Guilty to ...",
+            "snippet": "President Trump's re-election campaign today issued the following statement regarding news that a former FBI official will plead guilty to ...",
+            "url": "https://www.presidency.ucsb.edu/documents/trump-campaign-statement-ex-fbi-official-pleads-guilty-falsifying-document-spy-trump"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-baseline",
+  "timestamp": "2026-11-06T04:34:36.653090+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6865.968
+}

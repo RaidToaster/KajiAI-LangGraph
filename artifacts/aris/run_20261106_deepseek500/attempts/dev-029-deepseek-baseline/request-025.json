@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Wire called Durga puja racist and the goddess Durga a sex worker",
+        "query": "The Wire called Durga puja racist and the goddess Durga a sex worker original source fact check",
+        "candidates": [
+          {
+            "title": "The Wire",
+            "snippet": "... Durga Puja as 'racist' and called the Hindu goddess a 'sex worker'. As fact-checked by @AltNews, the claim stands wrong.",
+            "url": "https://x.com/thewire_in/status/1320689623056613379"
+          },
+          {
+            "title": "No, The Wire Didn't Publish an Excerpt Against Goddess Durga",
+            "snippet": "It is from a report where The Wire had quoted Union Minister Smriti Irani speaking in the Parliament and reading out a pamphlet insulting the ...",
+            "url": "https://www.thequint.com/news/webqoof/excerpt-shared-without-context-to-label-the-wire-as-anti-hindu"
+          },
+          {
+            "title": "The Wire did not 'disrespect' Durga; excerpt from 2016 article ...",
+            "snippet": "... Durga Puja a “racist festival” and the Hindu deity a “sex worker”. Ex-navy officer Harinder Sikka questioned The Wire in a critically worded ...",
+            "url": "https://www.altnews.in/the-wire-did-not-disrespect-durga-excerpt-from-2016-article-misrepresented/"
+          },
+          {
+            "title": "Viral Screenshot Misrepresents a 2016 Article on Durga Puja From The ...",
+            "snippet": "Those circulating a cropped screenshot are falsely claiming that The Wire referred to Durga Puja as 'racist' and called the Hindu goddess a ...",
+            "url": "https://m.thewire.in/article/media/fact-check-viral-durga-puja-screenshot"
+          },
+          {
+            "title": "Cropped Screenshot Of The Wire Article On Durga Puja Is Misleading",
+            "snippet": "Claim : The Wire called 'Durga puja' racist and the goddess Durga a sex worker.. Claimed By : Twitter users. Fact Check : ...",
+            "url": "https://www.boomlive.in/fake-news/cropped-screenshot-of-the-wire-article-on-durga-puja-is-misleading-10354"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-029-deepseek-baseline",
+  "timestamp": "2026-11-06T07:09:07.032273+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16136.343
+}

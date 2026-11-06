@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Did Bernie Sanders vote for the final Senate passage of H.R. 3590 in December 2009?",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "December 3, 2009, 03:10 PM. Required For Majority: 3/5. Vote Result: Motion Rejected. Measure Number: H.R. 3590 (Service Members Home Ownership Tax Act of 2009 ).",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00358.htm"
+          },
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient ...",
+            "snippet": "Shown Here: Public Law No: 111-148 (03/23/2010). (This measure has not been amended since it was passed by the Senate on December 24, 2009.",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          },
+          {
+            "title": "December 21, 2009",
+            "snippet": "As expected, the manager's amendment to the bill (HR 3590) would drop a new government-run insurance plan, or public option, that is dear to liberals. In its ...",
+            "url": "https://www.commonwealthfund.org/newsletter/washington-health-policy-week-review-archive/december-21-2009"
+          },
+          {
+            "title": "Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "The Senate passed the health care bill, 60-39, on Dec. 24, 2009, with Sanders voting in favor. No Senate Republican supported it. Local.",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "How the ACA (Obamacare) Was Negotiated",
+            "snippet": "The Senate passed H.R. 3590, the Patient Protection and Affordable Care Act, on Dec. 24, 2009, by a vote of 60 to 39 (59 Democrats and 1 Independent ...",
+            "url": "https://amarkfoundation.org/reports/how-the-aca-obamacare-was-negotiated/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-05T10:08:29.621289+00:00",
+  "status": "reserved_outcome_unknown"
+}

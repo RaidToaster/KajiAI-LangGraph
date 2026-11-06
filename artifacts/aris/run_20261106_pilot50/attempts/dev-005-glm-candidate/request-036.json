@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "Independent press-council reviews, published corrections, or retractions concerning specific chemical-weapons stories in named Western outlets",
+        "candidates": [
+          {
+            "title": "AND ENFORCEMENT OF",
+            "snippet": "by R Trapp · 2021 · Cited by 4 — CWC prohibitions on the development, production, stockpiling and use of chemical weapons 39 pages",
+            "url": "https://unidir.org/wp-content/uploads/2023/05/WMD_Compliance_Report_V04.pdf"
+          },
+          {
+            "title": "Chemical Weapons Concerns Dominate First Committee ...",
+            "snippet": "Oct 20, 2026 — Amid concerns over alleged chemical -agent use in ongoing conflicts, First Committee (Disarmament and International Security) delegates ...",
+            "url": "https://press.un.org/en/2026/gadis3773.doc.htm"
+          },
+          {
+            "title": "Media Corrections by Outlet - CAMERA.org",
+            "snippet": "Click on the outlets below to see some of the many corrections prompted by CAMERA's communication with reporters and editors.",
+            "url": "https://www.camera.org/media-corrections/outlet/"
+          },
+          {
+            "title": "Chemical Weapons Convention | OPCW",
+            "snippet": "The Convention aims to eliminate an entire category of weapons of mass destruction by prohibiting the development, production, acquisition, stockpiling, ...",
+            "url": "https://www.opcw.org/chemical-weapons-convention"
+          },
+          {
+            "title": "NPR Corrections",
+            "snippet": "NPR corrects significant errors in broadcast and online reports. Corrections of errors will be made in audio archives, written transcripts and on the website.",
+            "url": "https://www.npr.org/corrections/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:48:21.932620+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5567.234
+}

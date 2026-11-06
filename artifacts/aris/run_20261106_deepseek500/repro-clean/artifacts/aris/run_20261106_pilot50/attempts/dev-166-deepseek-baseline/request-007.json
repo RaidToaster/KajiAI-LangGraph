@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "49 percent of Nigerians are in extreme poverty.",
+        "query": "49 percent of Nigerians are in extreme poverty. counterevidence",
+        "candidates": [
+          {
+            "title": "[PDF] Nigeria - World Bank",
+            "snippet": "30.9 percent of Nigerians lived below the international extreme poverty line of $2.15 per person per day (2017 PPP) in 2018/19; just before the COVID-19 crisis.",
+            "url": "https://databankfiles.worldbank.org/public/ddpext_download/poverty/987B9C90-CB9F-4D93-AE8C-750588BF00QA/current/Global_POVEQ_NGA.pdf"
+          },
+          {
+            "title": "Deconstructing poverty and inequality in Nigeria - UNCTAD",
+            "snippet": "Extreme poverty is well above the lower-middle-income average. In 2022, 41.8% of Nigerians lived below $3 a day, versus 14.4%. Multidimensional ...",
+            "url": "https://unctad.org/publication/deconstructing-poverty-and-inequality-nigeria"
+          },
+          {
+            "title": "Nigeria Launches its Most Extensive National Measure of ...",
+            "snippet": "In Nigeria, 40.1% of people are poor according to the 2018/19 national monetary poverty line, and 63% are multidimensionally poor according to the National MPI ...",
+            "url": "https://nigerianstat.gov.ng/news/78"
+          },
+          {
+            "title": "Nigeria's extreme poverty population rate compared to other ...",
+            "snippet": "According to the new data, about 83 million Indians have been plunged into extreme poverty in 2022, representing 6 percent of the country's ...",
+            "url": "https://www.facebook.com/groups/725464725834833/posts/1639308154450481/"
+          },
+          {
+            "title": "Poverty in Nigeria - Wikipedia",
+            "snippet": "Nationally, 43 percent of Nigerians (89 million people) live below the poverty line, while another 25 percent (53 million) are at risk of poverty.",
+            "url": "https://en.wikipedia.org/wiki/Poverty_in_Nigeria"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-166-deepseek-baseline",
+  "timestamp": "2026-11-06T00:00:13.748906+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2679.062
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "Did President Donald Trump receive flu vaccines in the years before 2020, and which vaccines and dates are documented?",
+        "candidates": [
+          {
+            "title": "Did President Donald Trump Get the Flu Shot? - TIME",
+            "snippet": "With influenza season affecting thousands, public health experts are hopeful that President Trump will get a flu vaccine—and talk about it. Missing:  2020,  documented?",
+            "url": "https://time.com/5093600/president-trump-flu-shot/"
+          },
+          {
+            "title": "Trump, 79, got flu and Covid shots at his evaluation ... - Facebook",
+            "snippet": "The president also received several vaccines, including his annual flu shot and a COVID-19 booster, ahead of his trip to the Middle East, White ...",
+            "url": "https://www.facebook.com/NewsNationNow/posts/trump-79-got-flu-and-covid-shots-at-his-evaluation-which-comes-ahead-of-a-visit-/827484989658520/"
+          },
+          {
+            "title": "Fact check: Donald Trump's past flu shots, COVID-19 risk aren't ...",
+            "snippet": "An Instagram post falsely speculates that President Donald Trump's prior flu vaccinations put him at risk for COVID-19.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/21/fact-check-donald-trumps-flu-shots-covid-risk-arent-linked/3623699001/"
+          },
+          {
+            "title": "President Trump gets updated COVID, flu vaccines during ...",
+            "snippet": "A summary of President Donald Trump's physical exam revealed that he received updated COVID-19 and flu vaccines, as guidance on COVID shots ...",
+            "url": "https://www.scrippsnews.com/politics/the-president/trump-gets-updated-covid-flu-vaccines-during-physical"
+          },
+          {
+            "title": "Trump's Flu Shot Reticence - FactCheck.org",
+            "snippet": "President Donald Trump cast doubt on the value of influenza vaccines, saying he has never had the seasonal flu and only got a flu shot ...",
+            "url": "https://www.factcheck.org/2020/05/trumps-flu-shot-reticence/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-candidate",
+  "timestamp": "2026-11-06T08:23:16.348349+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20585.656
+}

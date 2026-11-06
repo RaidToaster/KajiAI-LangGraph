@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’",
+        "query": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’ original source fact check",
+        "candidates": [
+          {
+            "title": "How Can President Trump Pay Less Tax Than You? : NPR",
+            "snippet": "Analysts say real estate tax breaks allowed him to avoid high tax bills. The president's tax returns show he paid just $750 in federal income ... Missing:  raised  ago,  m  smart.  game  source",
+            "url": "https://www.npr.org/2020/10/02/919175046/how-can-president-trump-pay-less-tax-than-you"
+          },
+          {
+            "title": "Here's Why You Pay More In Taxes Than Donald Trump",
+            "snippet": "\"I bet you pay more taxes than Donald Trump, who is the President of the United States.\" Bloomberg Opinion's Tim O'Brien explains why ... Missing:  pays?  that's  fact.  $750.  Remember  raised  while  +7",
+            "url": "https://www.youtube.com/watch?v=YG5VFv8Y8qQ"
+          },
+          {
+            "title": "Donald Trump 'paid $750 in federal income taxes in 2016 and ...",
+            "snippet": "It said the president paid just $750 in income taxes in both 2016 and 2017, while he paid no income taxes at all in 10 of the previous 15 years, ... Missing:  Remember  | Show results with:",
+            "url": "https://www.bbc.com/news/technology-54319948"
+          },
+          {
+            "title": "How President Trump paid just $750 in federal taxes - CNBC",
+            "snippet": "These two strategies may have helped Trump pay just $750 in federal taxes ; Trump tax returns show large income offset by large losses · 2:0402:04. Missing:  fact.  Remember  raised  m  game  system.'",
+            "url": "https://www.cnbc.com/2020/09/28/two-strategies-that-may-have-helped-trump-pay-just-750-in-federal-taxes.html"
+          },
+          {
+            "title": "Since majority of Americans pay a income tax-how do you feel ...",
+            "snippet": "The New York Times' own documents show that Trump paid the $750 both years as a final payment — he had paid $1 million in 2016 and $4.3 million ...",
+            "url": "https://www.quora.com/Since-majority-of-Americans-pay-a-income-tax-how-do-you-feel-that-you-paid-more-than-billionaire-Trump-in-income-taxes-which-was-750-a-year-paid-by-Trump-in-2016-2017-Is-it-any-wonder-Trump-tried-to-hide-his-tax"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-007-deepseek-baseline",
+  "timestamp": "2026-11-06T05:46:37.426185+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11186.734
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "Rock musician Jon Bon Jovi performed for 12 people evidence",
+        "candidates": [
+          {
+            "title": "Bon Jovi",
+            "snippet": "Jon Bon Jovi began performing music live in 1975, at the age of 13, playing piano and guitar in New Jersey with his first band, Raze. At 16, Jon met David Bryan ...",
+            "url": "https://en.wikipedia.org/wiki/Bon_Jovi"
+          },
+          {
+            "title": "Living proof some things never change Jon Bon Jovi",
+            "snippet": "What makes a rock star endure for decades in a changing musical landscape? For Jon Bon Jovi, the answer lies in his adaptability, work ethic, ...",
+            "url": "https://www.facebook.com/BonJovi/posts/living-proof-some-things-never-change-jon-bon-jovi/1579369206879727/"
+          },
+          {
+            "title": "Jon Bon Jovi Built More Than A Music Career #jonbonjovi #bonjovi | Johan S",
+            "snippet": "",
+            "url": "https://www.facebook.com/jojoboail/videos/jon-bon-jovi-built-more-than-a-music-career-jonbonjovi-bonjovi/1316787023908906/"
+          },
+          {
+            "title": "Inside Bon Jovi's 40-Year Career: From Their Big Break to Where They ...",
+            "snippet": "There are few rock bands that have the longevity of Bon Jovi. Formed in 1983 by singer Jon “Bon Jovi” Bongiovi Jr., keyboardist David Bryan, ...",
+            "url": "https://people.com/inside-bon-jovi-legendary-career-8638084"
+          },
+          {
+            "title": "and there's a reason for it. Bon Jovi wrote it in 1986 about working-class ...",
+            "snippet": "Bon Jovi wrote it in 1986 about working-class struggle, and Jon Bon Jovi has said it's the song he's most proud of. . Now it's one of the most ...",
+            "url": "https://www.instagram.com/reel/DWJUNzks3l6/?hl=en"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-baseline",
+  "timestamp": "2026-11-06T07:34:08.336998+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17637.656
+}

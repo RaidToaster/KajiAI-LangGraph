@@ -1,0 +1,112 @@
+{
+  "attempted_new": 4,
+  "retained_attempts": 14,
+  "matched_cases_per_model": 3,
+  "case_rows": [
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "candidate",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Supported",
+      "accepted": "ABSTAIN",
+      "citations": 6,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "S1, S3, S4, S6, and S9 all trace to the same People's Policy Project analysis of Federal Reserve SCF data; no independent primary recomputation was retrieved, and S2's final rating and methodology are not directly visible.",
+        "Evidence confidence remains below High.",
+        "Establish source independence; copied reporting is not corroboration.",
+        "Citation support is uncertain for https://www.peoplespolicyproject.org/tag/capital/page/2/."
+      ],
+      "errors": []
+    },
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "baseline",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Not Enough Evidence",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "No draft content provided.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": []
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "baseline",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Not Enough Evidence",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "The draft is empty; no statements or sources were supplied to evaluate.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": []
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "candidate",
+      "gold_label": "Supported",
+      "failed": true,
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "execution_error",
+      "gaps": [
+        "The model did not return a valid evidence assessment.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": [
+        "Analysis failed: ValueError: Missing required assessment fields"
+      ]
+    }
+  ],
+  "mechanism": "Both reference routes emitted the already retrieved original analysis title. DeepSeek proposed Supported and withheld acceptance because support traced to the same analysis. GLM reached three rounds and its last line assessment omitted a required field. The job ended with an execution failure.",
+  "scientific_status": "The eight-case guard remains reachable. No candidate verdict has been accepted.",
+  "actual_usage": {
+    "jev": 43,
+    "jev_input_tokens": 111454,
+    "jev_output_tokens": 10649,
+    "tinyfish_search": 20,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 39,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "ollama": 12,
+    "ollama_input_tokens": 31322,
+    "ollama_output_tokens": 6292,
+    "ollama_estimated_usd": 0.010752199999999998,
+    "jev_estimated_usd": 0.004681068
+  },
+  "analysis_sha256": "43b368ad332a89261181a43a21a0b0f349325f582b8852b5d91117c9b3f91d1d"
+}

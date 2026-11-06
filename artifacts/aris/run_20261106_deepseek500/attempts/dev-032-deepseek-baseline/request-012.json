@@ -1,0 +1,51 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "The New York Post published a direct editorial endorsement of President Donald J. Trump for re-election on 2020-10-26.",
+            "url": "https://nypost.com/2020/10/26/the-new-york-post-endorses-president-donald-j-trump-for-re-election/",
+            "quote": "The New York Post endorses President Donald J. Trump for re-election.",
+            "context": "We can return to the explosive job creation, rising wages and general prosperity we had before the pandemic. We can have economic freedom and opportunity, and resist cancel culture and censorship. We can put annus horribilis, 2020, behind us and make America great again, again. We can do all this — if we make the right choice on Nov. 3.\n\nThe New York Post endorses President Donald J. Trump for re-election.\n\n\\*\n\nElections are always about the economy, but never more so than this year.\n\nSo a reminder: Until the necessary shutdown to fight the coronavirus, the unemployment rate stood at 3.5 percent, the lowest in a half-century. African American unemployment was 6.8 percent, the lowest figure since 1972.\n\nAdults out of the workforce for years found new prospects; for 17 months of Trump’s term, there were 1 million more job openings than people unemployed.\n\nThat drove up salaries. For the first time in a decade, wage growth exceeded 3 percent year-over-year. It also narrowed the wealth gap. Between 2016 and 2019, real median incomes rose the most, 9 percent, for those without a high school diploma. Real median incomes declined 2.3 percent for those with a college degree, mostly because older workers retired, according to the Federal Reserve’s Survey of Consumer Finances.\n\nHow did President Trump do it? First, by trusting the free market. He championed lowering the corporate tax rate to a figure more in line with the rest of the industrialized world. He cut cumbersome regulations, particularly ones rammed through as President Barack Obama was headed out the door. He streamlined the permi"
+          },
+          {
+            "finding": "A 2016 report notes the New York Post withheld its general-election endorsement that year; this concerns the 2016 election, not the 2020 re-election claim.",
+            "url": "https://www.washingtonpost.com/news/the-fix/wp/2016/11/08/shock-and-nah-new-york-post-withholds-endorsement-from-donald-trump/",
+            "quote": "After endorsing Donald Trump in the Republican primary, the New York Post withheld its backing in the general election — a surprise, given the ...",
+            "context": "After endorsing Donald Trump in the Republican primary, the New York Post withheld its backing in the general election — a surprise, given the ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-032-deepseek-baseline",
+  "timestamp": "2026-11-06T07:16:15.909957+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16565.218
+}

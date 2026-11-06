@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "What did Lindsey Graham's office or official channels say about the statement, if anything?",
+        "candidates": [
+          {
+            "title": "Trump remembers his last call with Lindsey Graham the ...",
+            "snippet": "In an exclusive interview with Meet the Press, President Donald Trump reacts to the death of Sen. Lindsey Graham (R-S.C.).",
+            "url": "https://www.youtube.com/watch?v=HQBLAbPbx0E"
+          },
+          {
+            "title": "Never-before-seen documentary footage shows the late ...",
+            "snippet": "Never-before-seen documentary footage shows the late Sen. Lindsey Graham's multi-pronged effort to support the US going to war with Iran, with ...",
+            "url": "https://www.facebook.com/cnn/videos/never-before-seen-documentary-footage-shows-the-late-sen-lindsey-grahams-multi-p/2201366253978180/"
+          },
+          {
+            "title": "Lindsey Graham's sister chosen as replacement ...",
+            "snippet": "The South Carolina governor chose the senator's little sister to serve out the rest of his term after Graham's death on Saturday.",
+            "url": "https://www.bbc.com/news/articles/c05y3rlvp20o"
+          },
+          {
+            "title": "Who will replace Lindsey Graham? How vacancies are ...",
+            "snippet": "U.S. Sen. Lindsey Graham died Saturday evening after a “brief and sudden illness,” his office said in a statement posted on social media.",
+            "url": "https://www.kcra.com/article/who-will-replace-lindsey-graham-senate/71908537"
+          },
+          {
+            "title": "Senator Lindsey Graham's sister will complete the ...",
+            "snippet": "South Caroline Gov. Henry McMaster announced that he has appointed the late senator's sister to finish his term following his sudden death.",
+            "url": "https://www.youtube.com/watch?v=CgHoWC1VJ5I"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-05T10:44:51.847561+00:00",
+  "status": "reserved_outcome_unknown"
+}

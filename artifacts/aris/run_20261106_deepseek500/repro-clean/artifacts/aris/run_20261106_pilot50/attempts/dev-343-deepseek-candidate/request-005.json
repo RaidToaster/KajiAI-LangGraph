@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s take down American flags at their fast-food restaurants in support of Black Lives Matter and antifa (an umbrella term for far-left anti-fascism groups).",
+        "query": "Did McDonald’s or any of its franchisees issue a policy, statement, or directive about removing American flags from restaurants, and if so, what did it say?",
+        "candidates": [
+          {
+            "title": "Terms and Conditions for McDonald's Online Services (USA)",
+            "snippet": "Neither McDonald's nor its parent company employs independent franchisees. If you are hired by a restaurant that is a franchisee, only that franchisee, and not ...",
+            "url": "https://www.mcdonalds.com/us/en-us/terms-and-conditions.html"
+          },
+          {
+            "title": "Although franchise owners have to abide by certain ...",
+            "snippet": "Although franchise owners have to abide by certain guidelines in their agreements with the parent company, they are free to invite political candidates ...",
+            "url": "https://www.facebook.com/27news/posts/although-franchise-owners-have-to-abide-by-certain-guidelines-in-their-agreement/963599969133093/"
+          },
+          {
+            "title": "McDonald's goes to battle over 'joint employer' rules—with ...",
+            "snippet": "McDonald's goes to battle over 'joint employer' rules—with its franchisees. Two different groups of franchisees issued warring statements on ...",
+            "url": "https://restaurantbusinessonline.com/financing/mcdonalds-goes-battle-over-joint-employer-rules-its-franchisees"
+          },
+          {
+            "title": "McDonald's ambitious plan to overhaul its restaurants and ...",
+            "snippet": "McDonald's ambitious plan to overhaul its restaurants and menu is sparking angst among US franchisees. Daniela Sirtori has more on the upgrades ...",
+            "url": "https://www.facebook.com/bloombergbusiness/videos/mcdonalds-ambitious-plan-to-overhaul-its-restaurants-and-menu-is-sparking-angst-/1087665267002127/"
+          },
+          {
+            "title": "How We Operate | McDonald's International Markets",
+            "snippet": "The US is McDonald's largest market and almost 95% of restaurants are owned and operated by conventional licensees (CLs).",
+            "url": "https://corporate.mcdonalds.com/corpmcd/our-company/how-we-operate-internationally.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-343-deepseek-candidate",
+  "timestamp": "2026-11-06T00:35:00.364219+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4765.671
+}

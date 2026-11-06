@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "Nigeria General Household Survey southeastern states per capita consumption Igbo disaggregated",
+        "candidates": [
+          {
+            "title": "Nigeria General Household Survey-Panel (Wave 5) 2023/ ...",
+            "snippet": "TABLE 4.8 • Average number of days per week the household consumed food category (days). Zone. Sector. NIGERIA. North. Central. North. East.",
+            "url": "https://www.nigerianstat.gov.ng/pdfuploads/GHS-Panel%20Wave%205%20-%20Survey%20Report.pdf"
+          },
+          {
+            "title": "Survey mean consumption or income per capita, total ...",
+            "snippet": "Survey mean consumption or income per capita, total population (2021 PPP $ per day) - Nigeria from The World Bank: Data.",
+            "url": "https://data.worldbank.org/indicator/SI.SPR.PCAP?locations=NG"
+          },
+          {
+            "title": "Economic Survey of Household Expenditure Pattern during ...",
+            "snippet": "The estimated mean expenditures for food consumed at home and while away from home were ₦17,544.60 and ₦16,700.55, respectively. Household food expenditure is ...",
+            "url": "https://www.agriscigroup.us/articles/IJASFT-10-305.php"
+          },
+          {
+            "title": "TRADE-OFF IN CONSUMPTION OF IMPORTED AND ...",
+            "snippet": "Changing demand against locally produced foods amongst Igbo farm households in South-eastern Nigeria is in the increase.",
+            "url": "https://www.researchgate.net/publication/402717728_TRADE-OFF_IN_CONSUMPTION_OF_IMPORTED_AND_TRADITIONAL_OWN_FOODS_AMONGST_IGBO_FARM_HOUSEHOLDS_IN_NIGERIA"
+          },
+          {
+            "title": "Household food security and dietary diversity in south ...",
+            "snippet": "by IC Ukonu · 2024 · Cited by 35 — The aim of this study was to investigate household food security (access) level and the dietary diversity of households in the Nsukka Local ...",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38047327/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-candidate",
+  "timestamp": "2026-11-05T23:55:23.638346+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2388.937
+}

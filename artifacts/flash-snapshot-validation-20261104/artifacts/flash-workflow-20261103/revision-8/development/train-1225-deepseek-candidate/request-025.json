@@ -1,0 +1,63 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Common Dreams reports Sanders cited the statistic at the Feb. 19, 2020 Las Vegas debate.",
+            "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+            "quote": "Democratic presidential debate stage in Las Vegas Wednesday night, Sen. Bernie Sanders cited a striking statistic to show just how \"grotesque\" billionaire businessman Michael Bloomberg's level of wealth is, particularly in a nation struggling to combat homelessness, the student debt crisis, and other major issues.\n\n\"Mike Bloomberg owns more wealth than the bottom 125 million Americans,\" said Sanders. \"That's wrong. That's immoral. That should not be the case when we got half",
+            "context": "## SUBSCRIBE TO OUR FREE NEWSLETTER\n\nDaily news & progressive opinion—funded by the people, not the corporations—delivered straight to your inbox.\n\n5\n\n#000000\n\n#FFFFFF\n\nTo donate by check, phone, or other method, see our More Ways to Give page.\n\nDaily news & progressive opinion—funded by the people, not the corporations—delivered straight to your inbox.\n\nOn the Democratic presidential debate stage in Las Vegas Wednesday night, Sen. Bernie Sanders cited a striking statistic to show just how \"grotesque\" billionaire businessman Michael Bloomberg's level of wealth is, particularly in a nation struggling to combat homelessness, the student debt crisis, and other major issues.\n\n\"Mike Bloomberg owns more wealth than the bottom 125 million Americans,\" said Sanders. \"That's wrong. That's immoral. That should not be the case when we got half a million people sleeping out on the street. When we have kids who cannot afford to go to college. When we have 45 million people dealing with student debt.\"\n\n\"We cannot continue seeing a situation where in the last three years, billionaires in this country saw an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase.\"   \n--Sen. Bernie Sanders\n\n\"We have enormous problems facing this country,\" Sanders continued. \"And we cannot continue seeing a situation where in the last three years, billionaires in this country saw an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving it away,\" said Bloomberg, who has spent more than $400 million on advertising in the Democratic presidential primary race.\n\nWatch the exchange:\n\nSanders later told Bloomb"
+          },
+          {
+            "finding": "People's Policy Project's own tag page links its Bloomberg article and notes other estimates suggest the real number is over 150 million people.",
+            "url": "https://www.peoplespolicyproject.org/tag/capital/page/2/",
+            "quote": "way through another essay with predictable results.\n* # Bloomberg Is Wealthier Than The Bottom 125 Million Americans\n\n  Other estimates suggest the real number is over 150 million people.\n* # Finland's Economy Really Is Highly Socialized\n\n  It is not just ordinary capitalism with a big welfare state. It's more.\n* # The UBI Already Exists. It Is Just Unevenly Distributed.\n\n  Capitial's share provides more than enough money to finance a universal",
+            "context": "uality.\n* # Wealth Inequality Across Age and Class in 2019\n\n  The top 10 percent of ever age group owns almost all the group's wealth.\n* # Wealth Inequality Across Education and Class in 2019\n\n  Every age and education group has the same sort of inequality.\n* # Wealth Inequality Across Race and Class in 2019\n\n  Wealth continues to be heavily concentrated at the top.\n* # Millionaires and Billionaires Own 79% of All Household Wealth\n\n  The wealthiest among us owns almost everything, once again.\n* # More Bizarre Arguments About the COVID Economic Response\n\n  ProPublica got snowed. It happens to the best of us, even David Dayen.\n* # A Bizarre Argument About the COVID Economic Response\n\n  Is cutting interest rates really a corporate giveaway?\n* # The Racial Wealth Gap Is About the Upper Classes\n\n  The top decile disparities drive almost the entire racial wealth gap.\n* # How To Think About Corporate Bailouts Correctly\n\n  Get that equity. Get that bread. Get those bands. Now. Now. Now.\n* # Some Economic Responses to the Coronavirus Recession\n\n  Some thoughts on how to respond to this recession in particular.\n* # Fareed Zakaria Is Completely Ignorant About the Nordics\n\n  Zakaria fakes his way through another essay with predictable results.\n* # Bloomberg Is Wealthier Than The Bottom 125 Million Americans\n\n  Other estimates suggest the real number is over 150 million people.\n* # Finland's Economy Really Is Highly Socialized\n\n  It is not just ordinary capitalism with a big welfare state. It's more.\n* # The UBI Already Exists. It Is Just Unevenly Distributed.\n\n  Capitial's share provides more than enough money to finance a universal basic income.\n* # Labour's Inclusive Ownership Funds Should Be Fine\n\n  The Financial Times forecasts doom and gloom where there isn't any.\n* # Don’t Blame the Alaska Permanent Fund Dividend\n\n  The state can easily close solve its budget woes with ordinary taxes.\n* # Top 1% Up $21 Trillion. Bottom 50% Down $900 Billion.\n\n  America is a hideously unequal place with a large propertyless underclass.\n* # The Difficulty of Using the Firm in Socialist Policy\n\n  Firm boundaries are arbitrary, which complicates firm-based socialism.\n* # Bernie Sanders Gives the Nod to Funds Socialism\n\n  A Meidner plan for America. Here we go. Here we fucking go!\n* # Fresh Support for Social Wealth Fund Development\n\n  Roosevelt Institute has kind words to say about Inclusive Ownership Funds."
+          },
+          {
+            "finding": "A Reddit snippet references the PolitiFact rating as \"mostly\" but the full rating text is not retrieved.",
+            "url": "https://www.reddit.com/r/politics/comments/fcifsr/does_mike_bloomberg_own_more_wealth_than_the/",
+            "quote": "Bernie Sanders stated on February 19, 2020 in a debate: “Mike Bloomberg owns more wealth than the bottom 125 million Americans.” Rated mostly ...",
+            "context": "Bernie Sanders stated on February 19, 2020 in a debate: “Mike Bloomberg owns more wealth than the bottom 125 million Americans.” Rated mostly ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T15:20:15.568353+00:00",
+  "status": "reserved_outcome_unknown"
+}

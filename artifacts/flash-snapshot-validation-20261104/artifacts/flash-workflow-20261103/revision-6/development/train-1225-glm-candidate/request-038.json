@@ -1,0 +1,48 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Yahoo Finance cites Forbes for Bloomberg's $64.2 billion net worth, corroborating the figure but sharing the same underlying Forbes source rather than adding independence.",
+            "url": "https://finance.yahoo.com/news/iveearnedmyweatlth-bloomberg-debate-billionaire-nevada-041307205.html",
+            "quote": "According to Forbes, Bloomberg's net worth currently stands at $64.2 billion. His fortune was made via his financial information and media ...",
+            "context": "According to Forbes, Bloomberg's net worth currently stands at $64.2 billion. His fortune was made via his financial information and media ..."
+          },
+          {
+            "finding": "The Jacobin article repeats the identical Forbes $64.2 billion figure and the People's Policy Project analysis, so it is not independent of S2.",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+            "quote": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ...",
+            "context": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T08:56:00.891446+00:00",
+  "status": "reserved_outcome_unknown"
+}

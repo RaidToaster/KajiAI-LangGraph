@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UNESCO declared Nadar community as the most ancient race in the world.",
+        "query": "If such a UNESCO document exists, what exactly does it say about the Nadar community, and does it use the phrase 'most ancient race in the world'?",
+        "candidates": [
+          {
+            "title": "Fact Check: UNESCO did not declare Nadar community as ...",
+            "snippet": "UNESCO did not declare Nadar community as ancient race in the world, viral claim is fake The viral post is fake.",
+            "url": "https://www.vishvasnews.com/english/viral/fact-check-unesco-did-not-declare-nadar-community-as-ancient-race-in-the-world-viral-claim-is-fake/"
+          },
+          {
+            "title": "From oblivion to light: Reconstructing Nadar community's ...",
+            "snippet": "The Karumapuram copper plate document was inscribed in the 17th-century (400 years ago) and is currently in the possession of a Hindu monastery ...",
+            "url": "https://www.sanrorhistoricalresearch.com/en/published-studies/ancient-nadar-documents/"
+          },
+          {
+            "title": "[PDF] Intangible Cultural Heritage Domains",
+            "snippet": "Instances of intangible cultural heritage are not limited to a single manifestation and many include elements from multiple domains. Take,.",
+            "url": "https://ich.unesco.org/doc/src/01857-EN.pdf"
+          },
+          {
+            "title": "Nadar (caste) - Wikipedia",
+            "snippet": "Nadar is a Tamil caste of India. Nadars are predominant in the Tamil Nadu districts of Kanyakumari, Thoothukudi, Tirunelveli, Tenkasi and Virudhunagar.",
+            "url": "https://en.wikipedia.org/wiki/Nadar_(caste)"
+          },
+          {
+            "title": "[PDF] Community as Myth and Reality in the UNESCO World ...",
+            "snippet": "1 Introduction. When comparing the role of community in the UNESCO heritage conventions, there appears to be a clear case: Community is the province of the ...",
+            "url": "https://books.openedition.org/gup/pdf/235"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-003-glm-candidate",
+  "timestamp": "2026-11-05T23:41:43.885411+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1569.187
+}

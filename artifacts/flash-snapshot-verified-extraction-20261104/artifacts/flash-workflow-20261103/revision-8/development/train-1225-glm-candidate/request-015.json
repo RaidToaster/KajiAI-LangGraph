@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Retrieve the PolitiFact verdict rating and its cited underlying data (Federal Reserve SCF and Forbes) to confirm the rating was True or Mostly True.",
+        "candidates": [
+          {
+            "title": "Fact Check Posts – PolitiFact",
+            "snippet": "Our only agenda is to publish the truth so you can be an informed participant in democracy. Latest Fact-Checks Clear Any Rating True Mostly True Half True ...",
+            "url": "https://politifact.com/factchecks/list/?ruling=mostly-true"
+          },
+          {
+            "title": "PolitiFact",
+            "snippet": "PolitiFact Videos. Truth-o-Meter. True · Mostly True · Half True · Mostly False · False · Pants on Fire. About. Our Process · Our Staff · En Español · Who pays ...",
+            "url": "https://politifact.com/"
+          },
+          {
+            "title": "Fact Check Posts – PolitiFact",
+            "snippet": "Our only agenda is to publish the truth so you can be an informed participant in democracy. Latest Fact-Checks Clear Any Rating True Mostly True Half True ...",
+            "url": "https://politifact.com/factchecks/list/?ruling=true"
+          },
+          {
+            "title": "Fact Check Posts – PolitiFact",
+            "snippet": "Latest Fact-Checks Clear Any Rating True Mostly. Palm Beach County, Florida, “was 100%” generated with artificial intelligence.",
+            "url": "https://politifact.com/factchecks/list/"
+          },
+          {
+            "title": "Latest Fact-Checks In Polls and Public Opinion",
+            "snippet": "Says in his three election campaigns, the early polls were “wildly incorrect, all three times.” Mostly True. By Hope Karnopp • June 5, 2024 ...",
+            "url": "https://politifact.com/factchecks/list/?category=polls"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T15:21:25.902680+00:00",
+  "status": "reserved_outcome_unknown"
+}

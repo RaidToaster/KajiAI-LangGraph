@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "Dr. Jose Rizal established evidence",
+        "candidates": [
+          {
+            "title": "José Rizal",
+            "snippet": "An ophthalmologist by profession, Rizal became a writer and a key member of the Filipino Propaganda Movement in the 1880s, which advocated political reforms for ...",
+            "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Rizal"
+          },
+          {
+            "title": "Jose Rizal | Biography, Education, Works, Full Name, & Facts",
+            "snippet": "In 1887 Rizal published his first novel, Noli me … established his reputation as the leading spokesman of the Philippine reform movement.",
+            "url": "https://www.britannica.com/biography/Jose-Rizal"
+          },
+          {
+            "title": "On this day, November 20, 1896, Dr. José Rizal appeared before Colonel ...",
+            "snippet": "On November 27, 1896, fifteen pieces of documentary evidence against Rizal are submitted in court. In addition, Rizal is implicated in the ...",
+            "url": "https://www.facebook.com/theperpetualite/posts/on-this-day-november-20-1896-dr-jos%C3%A9-rizal-appeared-before-colonel-francisco-oli/1237387375077374/"
+          },
+          {
+            "title": "Rizal's Preliminary Investigation Details | PDF | Philippines",
+            "snippet": "Documentary Evidences: - includes letters which allegedly implicate Rizal in the Propaganda Movement, several transcripts of speech wherein his name was used by ...",
+            "url": "https://www.scribd.com/doc/156142423/The-Trial-of-Rizal"
+          },
+          {
+            "title": "José Rizal - Singapore",
+            "snippet": "During his island exile, Rizal established a school and a hospital. He also financed and implemented several civic projects to improve the lives of Dapitan ...",
+            "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=3b320667-437b-41ed-a536-1699ba3b3649"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-baseline",
+  "timestamp": "2026-11-06T08:11:53.093887+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19902.406
+}

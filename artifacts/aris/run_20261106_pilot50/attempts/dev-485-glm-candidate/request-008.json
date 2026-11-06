@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "Is there a transcript, audio, or video recording from a primary source (such as an official White House transcript or event footage) that contains this statement?",
+        "candidates": [
+          {
+            "title": "Presidential Recordings",
+            "snippet": "Notice that some of the conversations also include transcripts. The site also has three of the Nixon Watergate tapes. The full collection can be found at The ...",
+            "url": "https://www.whitehousehistory.org/presidential-recordings"
+          },
+          {
+            "title": "Archived Presidential White House Websites",
+            "snippet": "White House websites are Presidential records. The official files that make up a Presidential administration's website are preserved in our Executive Office ...",
+            "url": "https://www.archives.gov/presidential-records/research/archived-white-house-websites"
+          },
+          {
+            "title": "Read TIME's 'What Trump Has Built' Interview Transcript",
+            "snippet": "Below is a lightly edited transcript of the interview conducted by TIME Senior Political Correspondent Eric Cortellessa and Editor-in-Chief Sam ...",
+            "url": "https://time.com/article/2026/10/01/donald-trump-2026-interview-transcript/"
+          },
+          {
+            "title": "Watergate Trial Tapes | Richard Nixon Museum and Library",
+            "snippet": "The Watergate Trial Conversations are excerpted Nixon White House tape conversations. One transcript is available for each conversation The tapes. White House ...",
+            "url": "https://www.nixonlibrary.gov/watergate-trial-tapes"
+          },
+          {
+            "title": "White House Gov Videos: Official Updates & Inside Look",
+            "snippet": "White House gov videos provide official, on demand access to presidential addresses, policy briefings, and ceremonial events.",
+            "url": "https://research.localgov.digital/white-house-gov-videos-official-updates-inside-look.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-glm-candidate",
+  "timestamp": "2026-11-06T01:34:33.474731+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8338.781
+}

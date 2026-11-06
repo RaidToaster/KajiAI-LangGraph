@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "World Food Program USA board chair Hunter Biden official governance records",
+        "candidates": [
+          {
+            "title": "Hunter Biden",
+            "snippet": "From 2011 to 2017, Biden was on the board of directors of World Food Program USA, he served as board chairman from 2011 to 2015.",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden"
+          },
+          {
+            "title": "Hunter Biden's leadership role in World Food Program USA",
+            "snippet": "Circa 2011, Hunter Biden became chairman of the board of World Food Program USA, a nonprofit supporting the work of the United Nations World ...",
+            "url": "https://www.facebook.com/61590627626831/posts/circa-2011-hunter-biden-became-chairman-of-the-board-of-world-food-program-usa-a/122142272745354254/"
+          },
+          {
+            "title": "Vice President Joe Biden and World Food Program USA Honor Former ...",
+            "snippet": "Biden's son, Hunter Biden – who serves as Board Chair of WFP USA – introduced his father. “Because of my father's many years of service in the Senate, I had ...",
+            "url": "https://wfpusa.org/news/vice-president-joe-biden-and-world-food-program-usa-honor-former-senator-bob-dole-for-his-leadership-in-the-fight-against-hunger/"
+          },
+          {
+            "title": "Hunter Biden | Chairman of the Board | World Food Program USA",
+            "snippet": "Hunter Biden serves as chairman of the board for World Food Program USA, a nonprofit based in Washington, D.C., which works to solve global hunger in ...",
+            "url": "https://www.devex.com/people/hunter-biden-985169"
+          },
+          {
+            "title": "Hunter Biden lawyer shoots down records request from House ...",
+            "snippet": "Hunter Biden's legal counsel on Thursday rejected a request from House Republicans for records and information related to his business dealings.",
+            "url": "https://www.nbcnews.com/politics/congress/house-gop-asks-hunter-biden-records-business-dealings-rcna69884"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-candidate",
+  "timestamp": "2026-11-06T08:52:21.890053+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22331.203
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent.",
+        "query": "What is the historical record of GDP growth for that country, and what was the previous highest growth figure and when did it occur?",
+        "candidates": [
+          {
+            "title": "GDP growth (annual %)",
+            "snippet": "Thematic data tables from WDI. All Countries and Economies. Country. Most Recent Year. Most Recent Value. Afghanistan. 2024. 1.9. Albania. 2025. 3.8. Algeria.",
+            "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+          },
+          {
+            "title": "U.S. GDP Growth Rate (1961-2026)",
+            "snippet": "U.S. gdp growth rate for 2025 was 2.16%, a 0.63% decline from 2024. · U.S. gdp growth rate for 2024 was 2.79%, a 0.14% decline from 2023. · U.S. gdp growth rate ...",
+            "url": "https://www.macrotrends.net/global-metrics/countries/usa/united-states/gdp-growth-rate"
+          },
+          {
+            "title": "Economic Growth",
+            "snippet": "by M Roser · 2023 · Cited by 68 — Similarly, the history of economic growth is also the history of how large global inequalities emerged – in nutrition , health , education , basic ...",
+            "url": "https://ourworldindata.org/economic-growth"
+          },
+          {
+            "title": "List of countries by real GDP growth rate",
+            "snippet": "This article includes lists of countries and dependent territories sorted by their real gross domestic product and gross national income, growth rate and ...",
+            "url": "https://en.wikipedia.org/wiki/List_of_countries_by_real_GDP_growth_rate"
+          },
+          {
+            "title": "The Facts of Economic Growth",
+            "snippet": "by CI Jones · Cited by 922 — 200 years; however, GDP per person rose by more than a factor of twenty, reaching. $26,000. The era of modern economic growth is in fact even more special than ...",
+            "url": "https://web.stanford.edu/~chadj/facts.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-009-deepseek-candidate",
+  "timestamp": "2026-11-06T05:53:25.460165+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11594.781
+}

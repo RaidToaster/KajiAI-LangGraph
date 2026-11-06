@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Klobuchar said Wisconsin kicked hundreds of thousands off voting rolls debate",
+        "candidates": [
+          {
+            "title": "Klobuchar misfires with debate salvo on Wisconsin voter ...",
+            "snippet": "“While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls.” Mostly False. Legal ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+          },
+          {
+            "title": "Milwaukee County Democrats react to South Carolina debate",
+            "snippet": "Amy Klobuchar mentioned Wisconsin over access to the polls. \"While we are all sitting here debating, Wisconsin has kicked hundreds of thousands ...",
+            "url": "https://www.cbs58.com/news/milwaukee-county-voters-react-to-south-carolina-democratic-debate"
+          },
+          {
+            "title": "Democratic debate fact check: Candidates spar in South Carolina",
+            "snippet": "\"Wisconsin has kicked hundreds of thousands of people off of their voting rolls. Georgia kicked 100,000 off,\" Klobuchar said. It's true that Georgia recently ...",
+            "url": "https://www.nbcnews.com/politics/2020-election/democratic-debate-fact-check-candidates-face-south-carolina-n1142906"
+          },
+          {
+            "title": "Fact-checking the South Carolina Democratic debate",
+            "snippet": "\"Wisconsin has kicked hundreds of thousands of people off of their voting rolls. Georgia kicked 100,000 off,\" Klobuchar said. It's true that Georgia recently ...",
+            "url": "https://www.yahoo.com/news/fact-checking-south-carolina-democratic-015957909.html"
+          },
+          {
+            "title": "Search",
+            "snippet": "Amy Klobuchar stated on February 25, 2020 in a debate: “While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of ...",
+            "url": "https://politifact.com/search/factcheck/?page=3&q=presidential+debate"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-05T10:26:11.923227+00:00",
+  "status": "reserved_outcome_unknown"
+}

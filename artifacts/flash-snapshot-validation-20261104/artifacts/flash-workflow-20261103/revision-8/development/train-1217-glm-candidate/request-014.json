@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "FDA ClinicalTrials.gov record for CimaVax-EGF Roswell Park Phase I/II trial status and results.",
+        "candidates": [
+          {
+            "title": "NCT03879694 | Survivin Long Peptide Vaccine in Treating ...",
+            "snippet": "This phase I trial studies the side effects of survivin long peptide vaccine and how it works with the immune system in treating patients with neuroendocrine ...",
+            "url": "https://clinicaltrials.gov/study/NCT03879694"
+          },
+          {
+            "title": "Short-Term Goals and Long-Term Implications of the First ...",
+            "snippet": "The CIMAvax-EGF/nivolumab phase I/II trial at Roswell Park will enroll between 60 and 90 patients with advanced (stage IIIB/IV) NSCLC whose disease has ...",
+            "url": "https://connection.asco.org/do/short-term-goals-and-long-term-implications-first-us-based-clinical-trial-cuban"
+          },
+          {
+            "title": "Findings from a phase I trial of CIMAvax-EGF in combination ...",
+            "snippet": "by R Evans · 2022 · Cited by 16 — The primary objective of this trial is to establish the safety and recommended phase. The recommended phase 2 dose of CIMAvax-EGF was 2.4 mg. Four out of 12 ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9382666/"
+          },
+          {
+            "title": "CIMAvax Lung Cancer Vaccine - Buffalo",
+            "snippet": "Roswell Park has launched the first clinical trial in the United States to study the CIMAvax-EGF® vaccine, a lung cancer treatment that was developed in Cuba ...",
+            "url": "https://www.roswellpark.org/cimavax"
+          },
+          {
+            "title": "A Vaccine (CIMAvax-EGF) for the Prevention of Lung Cancer ...",
+            "snippet": "This early phase I trial studies the side effects of a vaccine called CIMAvax-EGF and to see how well it works in preventing lung cancer ...",
+            "url": "https://ctv.veeva.com/study/a-vaccine-cimavax-egf-for-the-prevention-of-lung-cancer-development-or-recurrence"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-04T08:03:46.468395+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Photo of three officers at the Indian Police Service who belong to the same family.",
+        "query": "Photo of three officers at the Indian Police Service who belong to the same family. evidence",
+        "candidates": [
+          {
+            "title": "Indian Police Service",
+            "snippet": "The Indian Police Service (IPS) is the premier policing arm of the All India Services of Government of India. It replaced the Indian Imperial Police in 1948 ...",
+            "url": "https://en.wikipedia.org/wiki/Indian_Police_Service"
+          },
+          {
+            "title": "Every police officer has a family. They're not just heroes in uniform",
+            "snippet": "Every police officer has a family. They’re not just heroes in uniform; they’re someone’s son, daughter, partner, or parent. Let’s treat them ...",
+            "url": "https://www.facebook.com/GLFOP/posts/every-police-officer-has-a-family-theyre-not-just-heroes-in-uniform-theyre-someo/1019257730238986/"
+          },
+          {
+            "title": "Addressing Police Misconduct Laws Enforced By The ...",
+            "snippet": "This document outlines the laws enforced by the United States Department of Justice (DOJ) that address police misconduct and explains how you ...",
+            "url": "https://www.justice.gov/crt/addressing-police-misconduct-laws-enforced-department-justice"
+          },
+          {
+            "title": "Pic Shows Three IPS Officers From Same Family? It's a False Claim",
+            "snippet": "Pic Shows Three IPS Officers From Same Family? It's a False Claim. One of the police officers seen in the viral image, Shrut Kirti Somavanshi, ...",
+            "url": "https://www.thequint.com/news/webqoof/image-shows-three-ips-officers-belonging-to-same-family-no-false-claim"
+          },
+          {
+            "title": "Chapter 4 - O-1 Beneficiaries",
+            "snippet": "Although officers do not consider comparable evidence if the petitioner submits evidence in lieu of a particular criterion that is readily applicable to the ...",
+            "url": "https://www.uscis.gov/policy-manual/volume-2-part-m-chapter-4"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-396-deepseek-baseline",
+  "timestamp": "2026-11-06T04:13:03.103302+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5572.421
+}

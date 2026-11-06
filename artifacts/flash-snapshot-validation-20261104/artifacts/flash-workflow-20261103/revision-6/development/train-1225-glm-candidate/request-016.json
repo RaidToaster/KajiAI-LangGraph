@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Retrieve the full PolitiFact fact-check rating and any 2019–2020 Federal Reserve distributional data to confirm the bottom ~125 million Americans' combined wealth remained far below $64.2 billion as of February 2020.",
+        "candidates": [
+          {
+            "title": "The State of U.S. Household Wealth | St. Louis Fed",
+            "snippet": "The top 10% of households by wealth had $8.1 million on average. The bottom 50% of households by wealth had $60,000 on average. The top 20% of ...",
+            "url": "https://www.stlouisfed.org/open-vault/2025/june/the-state-of-us-household-wealth"
+          },
+          {
+            "title": "The Fed - Distributional Financial Accounts Overview",
+            "snippet": "These interactive charts and tables allow users to explore the level, composition, and share of U.S. household wealth held by five percentile ...",
+            "url": "https://www.federalreserve.gov/releases/efa/efa-distributional-financial-accounts.htm"
+          },
+          {
+            "title": "Wealth inequality in the United States - Wikipedia",
+            "snippet": "Federal Reserve data indicates that as of Q2 2026, the top 1% of households in the United States held 32.5% of the country's wealth, while the bottom 50% held ...",
+            "url": "https://en.wikipedia.org/wiki/Wealth_inequality_in_the_United_States"
+          },
+          {
+            "title": "Wealth Inequality",
+            "snippet": "Federal Reserve data show, held 84.2 percent of all U.S. wealth as of the fourth quarter of 2023, while making up only 66 percent of households.",
+            "url": "https://inequality.org/facts/wealth-inequality/"
+          },
+          {
+            "title": "Trends in the Distribution of Family Wealth, 1989 to 2022",
+            "snippet": "Average family wealth was $1.5 million, and families at the median, or midpoint, of the wealth distribution held $504,000, the Congressional ...",
+            "url": "https://www.cbo.gov/publication/60807"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T08:54:30.554422+00:00",
+  "status": "reserved_outcome_unknown"
+}

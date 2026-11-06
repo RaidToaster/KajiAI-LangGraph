@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "OPCW primary reports and fact-finding mission documents concerning alleged Chemical Weapons Convention non-compliance referenced in Western media coverage",
+        "candidates": [
+          {
+            "title": "Responding to the Use of Chemical Weapons | OPCW",
+            "snippet": "Fact-Finding Mission. The OPCW has deployed the Fact-Finding Mission to investigate allegations of chemical weapons use in Syria and has ...",
+            "url": "https://www.opcw.org/our-work/responding-use-chemical-weapons"
+          },
+          {
+            "title": "Compliance Management under the Chemical Weapons ...",
+            "snippet": "The Chemical Weapons Convention (CWC) is the primary global arms control and disarmament instrument in the field of chemical weapons. Earlier legal instruments, ...",
+            "url": "https://unidir.org/files/2019-12/UNID%20WMD%20CE%20-%20Paper%203%20v3.pdf"
+          },
+          {
+            "title": "compliance with",
+            "snippet": "” As of the end of the reporting period, seven issues have been resolved, while 19 remain open. During this reporting period, the OPCW Fact-Finding Mission (FFM) ...",
+            "url": "https://www.state.gov/wp-content/uploads/2025/04/Condition-10-c-Report-Inaccessible-Version.pdf"
+          },
+          {
+            "title": "Organisation for the Prohibition of Chemical Weapons (OPCW)",
+            "snippet": "The publication of the OPCW's fact-finding mission report on allegations of chemical weapons use in Al- Yarmouk, Syria, highlights the ...",
+            "url": "https://www.facebook.com/opcwonline/posts/-how-does-opcw-help-ensure-allegations-of-chemical-weapons-use-are-assessed-usin/1466837718814183/"
+          },
+          {
+            "title": "The OPCW and Chemical Weapons: Towards Criminal ...",
+            "snippet": "16OPCW Technical Secretariat, Report of the Fact-Finding Mission Regarding the Incident of Alleged use of Toxic Chemicals as a Weapon in ...",
+            "url": "https://spectator.clingendael.org/en/publication/opcw-and-chemical-weapons-towards-criminal-liability"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:47:22.578170+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5507.89
+}

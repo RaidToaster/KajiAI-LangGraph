@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "CIMAvax-EGF phase III/IV clinical trial results non-small cell lung cancer survival",
+        "candidates": [
+          {
+            "title": "Final results from a phase II trial of CIMAvax-EGF and ...",
+            "snippet": "by R Frascati · 2023 · Cited by 13 — The 21 PP pts had a 29% 3-year(yr) OS rate (90% Median(m) OS for PP pts was 11.9 months, 90% CI 8.0 – 23.9 months. NSCLC had the longest mOS ...",
+            "url": "https://ascopubs.org/doi/10.1200/JCO.2023.41.16_suppl.9135"
+          },
+          {
+            "title": "A Phase III Clinical Trial of the Epidermal Growth Factor ...",
+            "snippet": "by PC Rodriguez · 2016 · Cited by 216 — Switch maintenance with CIMAvax-EGF was well tolerated and significantly increased MST of patients that completed induction vaccination.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/26927662/"
+          },
+          {
+            "title": "Safety and efficacy of CIMAvax-EGF vaccine for the ...",
+            "snippet": "There were no deaths related to CIMAvaxEGF. The median overall survival (mOS) time for all vaccinated patients was 7.0 months, Median overall survival in all ...",
+            "url": "https://www.oatext.com/safety-and-efficacy-of-cimavax-egf-vaccine-for-the-treatment-of-real-world-non-small-cell-lung-cancer-patients.php"
+          },
+          {
+            "title": "CIMAvax-EGF: A New Therapeutic Vaccine for Advanced ...",
+            "snippet": "by D Saavedra · 2017 · Cited by 110 — In the Phase III trial, the 5-year survival rate was 14.4% for vaccinated subjects vs. 7.9% for controls. The advantage was larger in those patients that ...",
+            "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2017.00269/full"
+          },
+          {
+            "title": "Short-Term Goals and Long-Term Implications of the First ...",
+            "snippet": "“The phase II and phase III clinical trials have consistently shown clinical benefit in terms of increased overall survival as well as an improvement of the ...",
+            "url": "https://connection.asco.org/do/short-term-goals-and-long-term-implications-first-us-based-clinical-trial-cuban"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-03T08:46:23.607757+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Twitter now putting warnings on tweets that are just unedited clips of Biden saying he would end fracking",
+        "query": "Twitter now putting warnings on tweets that are just unedited clips of Biden saying he would end fracking counterevidence",
+        "candidates": [
+          {
+            "title": "Twitter labels edited Biden video 'manipulated tweet'",
+            "snippet": "Twitter has used its new \"manipulated media\" tag for the first time on an edited video of a speech by Joe Biden. The tag, introduced on 5 March, ...",
+            "url": "https://www.bbc.com/news/world-us-canada-51799366"
+          },
+          {
+            "title": "Trump Lied Over a Dozen Times in Debate, but Biden's Fracking ...",
+            "snippet": "A video Trump shared showing Biden speaking out against fracking has been viewed more than 10 million times.",
+            "url": "https://www.newsweek.com/trump-lied-debate-biden-fracking-viral-1541670"
+          },
+          {
+            "title": "Trump campaign promotes false claim that Biden would end fracking",
+            "snippet": "Biden disagreed, saying he did not support a national ban but he would support an end to additional permits for drilling on federal lands.",
+            "url": "https://www.washingtonpost.com/politics/2020/10/07/trump-campaign-promotes-false-claim-that-biden-would-end-fracking/"
+          },
+          {
+            "title": "Joe Biden's stance on fracking targeted in misleading political ad",
+            "snippet": "This is misleading; Biden's remarks have been sharply edited, and he has said that he does not intend to ban fracking, but will not support ...",
+            "url": "https://factcheck.afp.com/joe-bidens-stance-fracking-targeted-misleading-political-ad"
+          },
+          {
+            "title": "Trump's Video of Biden Speaking Out Against Fracking Viewed Over ...",
+            "snippet": "The video includes clips of Biden saying he would eliminate fossil fuels like coal and fracking and that there would be no more subsidies for ...",
+            "url": "https://www.newsweek.com/donald-trump-video-joe-biden-fracking-10-million-views-1541627"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-050-deepseek-baseline",
+  "timestamp": "2026-11-06T08:00:54.165191+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19243.468
+}

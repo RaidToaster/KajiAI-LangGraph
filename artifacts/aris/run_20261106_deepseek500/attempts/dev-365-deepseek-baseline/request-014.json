@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The eligibility criteria for applying to take the exam for the Union Public Service Commission (UPSC) of India, differentiates depending on whether you are a Hindu or a Muslim.",
+        "query": "site:upsc.gov.in Civil Services Examination 2020 notification eligibility age attempts religion",
+        "candidates": [
+          {
+            "title": "examination notice no 05/2026-cse date",
+            "snippet": "1. CANDIDATES TO ENSURE THEIR ELIGIBILITY FOR THE EXAMINATION: All candidates are requested to carefully read the Rules of Civil Services Examination notified ...",
+            "url": "https://www.upsc.gov.in/sites/default/files/Notif-CSP-2026-Engl-060226Rev.pdf"
+          },
+          {
+            "title": "of 24 EXAMINATION NOTICE NO. 08/2026-CAPF DATED",
+            "snippet": "TO ENSURE THEIR ELIGIBILITY FOR THE EXAMINATION: All the candidates (male/female) such as date of birth, educational qualification, etc. age ...",
+            "url": "https://www.upsc.gov.in/sites/default/files/ExamNotifi_CAPF_AC_Exam_2026_Eng_20022026.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-365-deepseek-baseline",
+  "timestamp": "2026-11-06T04:10:24.618484+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5413.921
+}

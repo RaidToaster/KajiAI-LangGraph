@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Senate roll call vote Affordable Care Act December 2009 Sanders vote record",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "Vote Date: December 23, 2009, 04:18 PM. Required For Majority: 3/5 ... Measure Title: An act entitled The Patient Protection and Affordable Care Act. Vote ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00395.htm"
+          },
+          {
+            "title": "Roll Call Votes 111th Congress-1st session (2009)",
+            "snippet": "On the Motion: Crapo Motion to Commit H.R. 3590 to the Committee on Finance; An act entitled The Patient Protection and Affordable Care Act. H.R. 3590, Dec 15.",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm"
+          },
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient ...",
+            "snippet": "Summary of H.R.3590 - 111th Congress (2009-2010): Patient Protection and Affordable Care Act. ... Roll Call Votes: There have been 36 roll call votes. Notes ...",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          },
+          {
+            "title": "SENATE—Thursday, December 17, 2009",
+            "snippet": "Madam President, we are going to finish this health care bill be- fore we leave for the holidays. For nearly an entire year, we have reached out ...",
+            "url": "https://www.govinfo.gov/content/pkg/CRECB-2009-pt24/pdf/CRECB-2009-pt24-issue-2009-12-17.pdf"
+          },
+          {
+            "title": "How the ACA (Obamacare) Was Negotiated",
+            "snippet": "The Senate passed H.R. 3590, the Patient Protection and Affordable Care Act, on Dec. 24, 2009, by a vote of 60 to 39 (59 Democrats and 1 Independent ...",
+            "url": "https://amarkfoundation.org/reports/how-the-aca-obamacare-was-negotiated/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-03T05:34:57.314437+00:00",
+  "status": "reserved_outcome_unknown"
+}

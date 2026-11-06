@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Hunter Biden, son of US President Joe Biden has died. counterevidence",
+        "candidates": [
+          {
+            "title": "Hunter Biden",
+            "snippet": "Since early 2019, Hunter and his father Joe Biden have been the subjects of false and baseless claims of corrupt activities in a Biden–Ukraine conspiracy theory ...",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden"
+          },
+          {
+            "title": "No, Hunter Biden Did Not Die From a Drug Overdose",
+            "snippet": "His attorney, George Mesires, confirmed to Snopes that Hunter Biden was alive, writing \"The rumor is false.\"",
+            "url": "https://www.snopes.com/fact-check/hunter-biden-dead-overdose-hoax/"
+          },
+          {
+            "title": "Rumors that Hunter Biden — the son of former Vice President Joe Biden",
+            "snippet": "There is no evidence that Hunter Biden died after an overdose. The claim originated on a fringe internet platform that's a known source of ...",
+            "url": "https://www.facebook.com/asburyparkpress/posts/rumors-that-hunter-biden-the-son-of-former-vice-president-joe-biden-has-died-of-/10164404070820322/"
+          },
+          {
+            "title": "Hunter Biden | Pardon, Conviction, Crimes, Addiction, & Facts",
+            "snippet": "Hunter Biden is an American attorney and businessman and the sole surviving son of Joe Biden, the 46th president of the United States.",
+            "url": "https://www.britannica.com/biography/Hunter-Biden"
+          },
+          {
+            "title": "Hunter Biden: The struggles and scandals of the US president's son",
+            "snippet": "Hunter Biden has been found guilty of illegal possession of a gun and lying about his drug use when it was bought. The verdict leaves the US ...",
+            "url": "https://www.bbc.com/news/world-us-canada-55805698"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-baseline",
+  "timestamp": "2026-11-06T07:32:00.975936+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17510.281
+}

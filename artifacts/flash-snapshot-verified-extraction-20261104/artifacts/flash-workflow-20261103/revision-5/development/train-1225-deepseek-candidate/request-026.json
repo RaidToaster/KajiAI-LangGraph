@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Federal Reserve Survey of Consumer Finances 2019 bottom 38 percent household net worth aggregate",
+        "candidates": [
+          {
+            "title": "Changes in U.S. Family Finances from 2019 to 2022",
+            "snippet": "median net worth was $3,012,500 in 2019 and $3,794,600 in 2022, and mean net worth was $6,641,800 in 2019 and $7,810,500 in 2022.",
+            "url": "https://www.federalreserve.gov/publications/files/scf23.pdf"
+          },
+          {
+            "title": "Changes in U.S. Family Finances from 2016 to 2019",
+            "snippet": "by C FinancesChanges · 2020 · Cited by 263 — The Federal Reserve Board's triennial Survey of Consumer Finances (SCF) collects infor- mation about family income, net worth, balance sheet ...",
+            "url": "https://www.federalreserve.gov/publications/files/scf20.pdf"
+          },
+          {
+            "title": "Changes in U.S. Family Finances from 2022 to 2025",
+            "snippet": "by A Aladangady · 2026 · Cited by 4 — Between the 2016 and 2019 surveys, median and mean net worth increased by 17.6 and 1.7 percent, respectively.",
+            "url": "https://www.federalreserve.gov/publications/files/scf26.pdf"
+          },
+          {
+            "title": "Now available: 2019 Survey of Consumer Finances (SCF ...",
+            "snippet": "The 2019 SCF shows gains in median net worth across the net worth distribution. the average American household's net worth is over $1 million. ...",
+            "url": "https://www.facebook.com/federalreserve/posts/now-available-2019-survey-of-consumer-finances-scf-reports-on-family-incomes-net/3314863345258301/"
+          },
+          {
+            "title": "The Fed - Chart: Survey of Consumer Finances, 1989 - 2025",
+            "snippet": "Two exceptions to this are that all households are included in the net worth and income measures. Users should be aware that unlike the tables published in the ...",
+            "url": "https://www.federalreserve.gov/econres/scf/dataviz/scf/chart/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:37:24.111942+00:00",
+  "status": "reserved_outcome_unknown"
+}

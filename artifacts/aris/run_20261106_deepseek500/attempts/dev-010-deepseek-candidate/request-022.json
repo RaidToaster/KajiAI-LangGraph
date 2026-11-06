@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports.",
+        "query": "Search for a primary transcript, recording, or C-SPAN video of Trump's own statements on climate change being a hoax, with date and venue.",
+        "candidates": [
+          {
+            "title": "User Clip: Trump Calling Climate Chnage A hoax - C-SPAN",
+            "snippet": "Gavin Jackson previewed President Trump's campaign rally in Clemson, South Carolina, and talked about the race between Sen. Darline Graham (R) and Annie Andrews ... Missing:  primary  transcript,  recording,  own  statements  venue.",
+            "url": "https://www.c-span.org/clip/campaign-2016/user-clip-trump-calling-climate-chnage-a-hoax/4826855"
+          },
+          {
+            "title": "User Clip: Climate Change Denial | Video | C-SPAN.org",
+            "snippet": "User Clip: Climate Change Denial. Trump claims California will start cooling down. This clip, title, and description were not created by C-SPAN. Missing:  primary  transcript,  recording,  own  statements  +2",
+            "url": "https://www.c-span.org/clip/white-house-event/user-clip-climate-change-denial/4906728"
+          },
+          {
+            "title": "Trump called climate change a 'con job' at the United Nations ...",
+            "snippet": "In his address at the United Nations General Assembly, U.S. President Donald Trump excoriated renewable energy, international climate ... Missing:  primary  transcript,  recording,  SPAN  video  venue.",
+            "url": "https://www.pbs.org/newshour/politics/trump-called-climate-change-a-con-job-at-the-united-nations-here-are-the-facts-and-context"
+          },
+          {
+            "title": "WATCH: Trump calls climate change 'the greatest con job ever ...",
+            "snippet": "Despite decades of scientific research on climate change, its causes and its effects on the planet, President Donald Trump on Tuesday called ... Missing:  primary  transcript,  recording,  C-  SPAN  own  date  venue.",
+            "url": "https://www.youtube.com/watch?v=G7Y8_0zAzXc"
+          },
+          {
+            "title": "'Con,' 'scam,' 'hoax': Trump's UN speech on climate",
+            "snippet": "The president used a large chunk of his speech to world leaders to condemn climate science and clean energy policies. Missing:  transcript,  C-  SPAN  video  own  date  venue.",
+            "url": "https://www.eenews.net/articles/con-scam-hoax-trumps-un-speech-on-climate/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-010-deepseek-candidate",
+  "timestamp": "2026-11-06T06:02:29.134423+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12138.453
+}

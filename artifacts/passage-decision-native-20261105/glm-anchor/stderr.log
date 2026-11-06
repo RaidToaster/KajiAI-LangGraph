@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\passage_decision.py", line 208, in analyze_passage_decision
+    result = compile_passage_decision(decision, components, records)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\passage_decision.py", line 172, in compile_passage_decision
+    issues.append(dict(**row, id=f"I{i}", basis_findings=finding_refs(issue.basis_units)))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\passage_decision.py", line 163, in finding_refs
+    raise ValueError("Component/issue references undeclared finding unit; no implicit finding added")
+ValueError: Component/issue references undeclared finding unit; no implicit finding added
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\native_catalogue_readiness.py", line 137, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\native_catalogue_readiness.py", line 98, in main
+    native.execute(root,p,next(t for t in p['schedule'] if t['id']==args.worker))
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\catalogued_readiness.py", line 271, in execute
+    assessment,tokens=b.analyze_indexed(a["claim"],a["domain"],a["assertions"],sources,[],a["reference_date"],
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\llm.py", line 451, in analyze_indexed
+    return analyze_passage_decision(self, claim, domain, assertions, sources, prior_gaps,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\passage_decision.py", line 215, in analyze_passage_decision
+    raise error from exc
+RuntimeError: Passage decision failed: ValueError: Component/issue references undeclared finding unit; no implicit finding added

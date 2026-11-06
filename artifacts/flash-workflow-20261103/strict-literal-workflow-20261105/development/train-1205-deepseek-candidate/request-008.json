@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "What is the exact wording of any such statement by Lindsey Graham, and does it match the quoted phrasing including 'probably' and 'so called scientists'?",
+        "candidates": [
+          {
+            "title": "MODULE 5 Flashcards",
+            "snippet": "A phrase is an action verb phrase that connects the source's author with its content. Phrases point the readers to the information from a source.",
+            "url": "https://quizlet.com/804396225/module-5-flash-cards/"
+          },
+          {
+            "title": "The Rights of Students with Disabilities Under the IDEA, ...",
+            "snippet": "The ADA broadly protects individuals with disabilities from discrimination in a range of contexts—both public and private—including employment, ...",
+            "url": "https://www.congress.gov/crs-product/R48068"
+          },
+          {
+            "title": "National Reading Panel - Teaching Children to Read - NICHD",
+            "snippet": "1. Does instruction in phonemic awareness improve reading? If so, how is this instruction best provided? 2. Does phonics instruction improve reading.",
+            "url": "https://www1.nichd.nih.gov/publications/pubs/nrp/documents/report.pdf"
+          },
+          {
+            "title": "Who is Darline Graham Nordone, the late Sen. Lindsey ...",
+            "snippet": "Lindsey Graham likely died after aorta tear, preliminary medical exam finds ... I count every blessing, every day,\" Graham said then, going on to ...",
+            "url": "https://www.pbs.org/newshour/politics/who-is-darline-graham-nordone-the-late-sen-lindsey-grahams-sister"
+          },
+          {
+            "title": "Read TIME's 'What Trump Has Built' Interview Transcript",
+            "snippet": "Below is a lightly edited transcript of the interview conducted by TIME",
+            "url": "https://time.com/article/2026/10/01/donald-trump-2026-interview-transcript/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-05T10:43:55.073527+00:00",
+  "status": "reserved_outcome_unknown"
+}

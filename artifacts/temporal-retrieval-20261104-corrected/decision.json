@@ -1,0 +1,60 @@
+{
+  "closed": true,
+  "source_screen_passed": false,
+  "new_search_sends": 4,
+  "new_fetch_sends": 0,
+  "new_model_sends": 0,
+  "rows": [
+    {
+      "id": "baseline-1",
+      "query": "The majority of hunters and the majority of Trump voters now want universal background checks on gun buyers. evidence",
+      "returned_results": 5,
+      "status": 200,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 5.890999999999622,
+        "hard_stop": false
+      }
+    },
+    {
+      "id": "temporal-1",
+      "query": "hunters background checks all gun buyers survey poll exact question wording 2019 2020 before February 20 2020",
+      "returned_results": 5,
+      "status": 200,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 3.0780000000013388,
+        "hard_stop": false
+      }
+    },
+    {
+      "id": "temporal-2",
+      "query": "2016 Trump voters background checks private gun sales gun shows 2019 poll exact question before February 20 2020",
+      "returned_results": 5,
+      "status": 200,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 3.5940000000009604,
+        "hard_stop": false
+      }
+    },
+    {
+      "id": "baseline-2",
+      "query": "The majority of hunters and the majority of Trump voters now want universal background checks on gun buyers. counterevidence",
+      "returned_results": 5,
+      "status": 200,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 3.264999999999418,
+        "hard_stop": false
+      }
+    }
+  ],
+  "findings": [
+    "Hunter-directed historical question returned general policy/current-data pages without an explicit newly dated hunter sample in the inspected top5.",
+    "Trump-directed question returned a2016 candidate-supporter poll, not a sample of people who later cast2016 Trump votes. Keep this population distinction.",
+    "Baseline still returned the known2013 hunter lead and a2019 registered-voter survey. No new complete whole-claim evidence was verified."
+  ],
+  "scope": "Returned-lead diagnostic only; no body verification, discovery of verified evidence, workflow acceptance or study-wide futility. No Fetch expansion justified from these leads.",
+  "workflow_release": false
+}

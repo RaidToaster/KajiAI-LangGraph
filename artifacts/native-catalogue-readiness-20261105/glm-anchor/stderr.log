@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\selected_assessment.py", line 164, in analyze_selected
+    ranges = selected_ranges(selection, components, records)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\selected_assessment.py", line 68, in selected_ranges
+    raise ValueError(f"Over-250-word extractive lead: {lead.id}")
+ValueError: Over-250-word extractive lead: R7
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\native_catalogue_readiness.py", line 111, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\native_catalogue_readiness.py", line 72, in main
+    native.execute(root,p,next(t for t in p['schedule'] if t['id']==args.worker))
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\catalogued_readiness.py", line 268, in execute
+    assessment,tokens=b.analyze_indexed(a["claim"],a["domain"],a["assertions"],sources,[],a["reference_date"],
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\llm.py", line 451, in analyze_indexed
+    return analyze_selected(self, claim, domain, assertions, sources, prior_gaps,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\selected_assessment.py", line 167, in analyze_selected
+    raise SelectionAssessmentFailure(f"Extractive adjudication failed: {type(exc).__name__}: {exc}",
+kaji_langgraph.selected_assessment.SelectionAssessmentFailure: Extractive adjudication failed: ValueError: Over-250-word extractive lead: R7

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden said 'If Your 8-Year-Old Child Says They Want To Be Transgender, They Have A Right To Transition'.",
+        "query": "Request the draft text or source material to be assessed.",
+        "candidates": [
+          {
+            "title": "[PDF] Department of Defense Source Selection Procedures - Osd.mil",
+            "snippet": "Securing Source Selection Materials. Detail the plan for securing all source selection materials throughout the evaluation process. 2.2.10 ...",
+            "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA000740-22-DPC.pdf"
+          },
+          {
+            "title": "Request for Information Regarding the Draft Interagency ...",
+            "snippet": "When determining whether to exercise march-in rights, the agency may consider a variety of facts but must assess three overarching questions: (1) ...",
+            "url": "https://www.federalregister.gov/documents/2023/12/08/2023-26930/request-for-information-regarding-the-draft-interagency-guidance-framework-for-considering-the"
+          },
+          {
+            "title": "[PDF] State Board of Education TEA Proposed Literary Works List",
+            "snippet": "Local school systems need autonomy to select literary works to meet student needs. In addition, the TEKS require students to engage in self-selection of texts:.",
+            "url": "https://tea.texas.gov/curriculum-and-instruction/instructional-materials/house-bill-1605/sboe-tea-proposed-literary-works-list-pre-read-to-support-review.pdf"
+          },
+          {
+            "title": "Can AI Draft Discovery Requests? - Harvey",
+            "snippet": "AI can produce interrogatories, requests for production, requests for admission, and draft responses or objections in seconds.",
+            "url": "https://www.harvey.ai/blog/can-ai-draft-discovery-requests"
+          },
+          {
+            "title": "Are draft assessment reports acceptable for IEP meetings?",
+            "snippet": "According to the discussions, it's recommended to request final assessment reports before the IEP meeting to be an informed participant.",
+            "url": "https://www.facebook.com/groups/iepeduc/posts/1404220538431464/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-068-glm-baseline",
+  "timestamp": "2026-11-05T18:20:48.958969+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 53268.546
+}

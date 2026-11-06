@@ -1,0 +1,844 @@
+[
+  {
+    "task": "train-1209-glm-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1209-glm-baseline/result.json",
+    "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Analysis failed: RuntimeError: Ollama responded, but JSON schema validation failed after one repair attempt: Invalid json output: \nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE "
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 9
+  },
+  {
+    "task": "train-1209-glm-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1209-glm-candidate/result.json",
+    "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "FALSE",
+    "stop": "max_rounds",
+    "errors": [
+      "Page fetch failed for https://www.nytimes.com/2020/01/13/us/wisconsin-voter-purge.html: target_http_error"
+    ],
+    "gaps": [
+      "The retrieved Politifact excerpts are partial; the exact accuracy rating (e.g., \"Mostly False\") is not visible in P1/P2, though the title and substance indicate the claim was rated inaccurate.",
+      "Politifact is a single fact-check; full independence of its underlying reporting from the Journal Sentinel (S4) is unclear, though S3/S4 independently corroborate the purge block."
+    ],
+    "last_confidence": "High",
+    "last_independence": true,
+    "last_components": [
+      {
+        "assertion": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "resolved": true,
+        "source_urls": [
+          "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+        ],
+        "rationale": ""
+      }
+    ],
+    "source_count": 28
+  },
+  {
+    "task": "train-1209-deepseek-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-7/development/train-1209-deepseek-candidate/result.json",
+    "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "FALSE",
+    "stop": "max_rounds",
+    "errors": [
+      "Page fetch failed for https://www.nytimes.com/2020/01/13/us/wisconsin-voter-purge.html: target_http_error"
+    ],
+    "gaps": [
+      "The records do not quantify the exact number of voters at issue or confirm the final disposition after the Feb. 28, 2020 ruling.",
+      "The quote is confirmed by the transcript, but its factual content is contradicted by reporting that the voters remained on the rolls.",
+      "Citation support is uncertain for https://www.pbs.org/newshour/politics/wisconsin-supreme-court-says-dont-purge-voters-from-rolls."
+    ],
+    "last_confidence": "High",
+    "last_independence": true,
+    "last_components": [
+      {
+        "assertion": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "resolved": true,
+        "source_urls": [
+          "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+        ],
+        "rationale": ""
+      }
+    ],
+    "source_count": 29
+  },
+  {
+    "task": "train-1209-deepseek-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1209-deepseek-baseline/result.json",
+    "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 12
+  },
+  {
+    "task": "train-1218-glm-baseline",
+    "path": "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/result.json",
+    "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [
+      "Page fetch failed for https://support.renaissance.com/s/article/Assessments-Page-Drafts-and-Published-1752673901446?language=en_US: empty_content"
+    ],
+    "gaps": [
+      "Draft was empty; no factual claims or evidence to evaluate.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: US Senator Bernie Sanders was opposed to Obamacare.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 17
+  },
+  {
+    "task": "train-1218-glm-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1218-glm-candidate/result.json",
+    "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Analysis failed: ValueError: Expected one complete assessment block"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: US Senator Bernie Sanders was opposed to Obamacare.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 8
+  },
+  {
+    "task": "train-1218-deepseek-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-7/development/train-1218-deepseek-candidate/result.json",
+    "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "FALSE",
+    "stop": "max_rounds",
+    "errors": [
+      "Page fetch failed for https://www.democrats.senate.gov/12/24/2009/senate-roll-call-vote-00396-8: bot_blocked",
+      "Page fetch failed for https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm: bot_blocked",
+      "Page fetch failed for https://www.democrats.senate.gov/12/24/2009/senate-roll-call-vote-00396-8: bot_blocked",
+      "Page fetch failed for https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00395.htm: bot_blocked",
+      "Page fetch failed for https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm: bot_blocked",
+      "Page fetch failed for https://www.congress.gov/bill/111th-congress/house-bill/3590: bot_blocked"
+    ],
+    "gaps": [
+      "No member-level primary roll-call text naming Sanders was retrieved beyond the snippet in S3; S1, S2, S4, S5, S6, S10 largely repeat the same PolitiFact reporting rather than providing independent corroboration.",
+      "Biden's claim that Sanders \"opposed Obamacare\" conflicts with the recorded Yea vote and Sanders' defense of the law against repeal; the pre-vote hesitance is context, not evidence of opposition to the law's passage.",
+      "Resolve and cite the assertion: US Senator Bernie Sanders was opposed to Obamacare.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "High",
+    "last_independence": false,
+    "last_components": [
+      {
+        "assertion": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "resolved": false,
+        "source_urls": [
+          "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/",
+          "https://politifact.com/factchecks/2020/feb/27/joe-biden/joe-biden-leaves-out-key-facts-claim-bernie-sander/",
+          "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm",
+          "https://prospect.org/2019/11/19/bernie-voted-for-obamacare-medicare-for-all/"
+        ],
+        "rationale": ""
+      }
+    ],
+    "source_count": 26
+  },
+  {
+    "task": "train-1218-deepseek-baseline",
+    "path": "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/result.json",
+    "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+    "expected": "Conflicting Evidence/Cherrypicking",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: US Senator Bernie Sanders was opposed to Obamacare.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 12
+  },
+  {
+    "task": "train-1225-deepseek-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1225-deepseek-candidate/result.json",
+    "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+    "expected": "Supported",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "TRUE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "S1, S3, S4, S6, and S9 all trace to the same People's Policy Project analysis of Federal Reserve SCF data; no independent primary recomputation was retrieved, and S2's final rating and methodology are not directly visible.",
+      "Evidence confidence remains below High.",
+      "Establish source independence; copied reporting is not corroboration.",
+      "Citation support is uncertain for https://www.peoplespolicyproject.org/tag/capital/page/2/."
+    ],
+    "last_confidence": "Medium",
+    "last_independence": false,
+    "last_components": [
+      {
+        "assertion": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "resolved": true,
+        "source_urls": [
+          "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+          "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+          "https://www.reddit.com/r/politics/comments/fcifsr/does_mike_bloomberg_own_more_wealth_than_the/"
+        ],
+        "rationale": ""
+      }
+    ],
+    "source_count": 19
+  },
+  {
+    "task": "train-1225-deepseek-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1225-deepseek-baseline/result.json",
+    "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+    "expected": "Supported",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "No draft content provided.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 10
+  },
+  {
+    "task": "train-1225-glm-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1225-glm-baseline/result.json",
+    "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+    "expected": "Supported",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "The draft is empty; no statements or sources were supplied to evaluate.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 10
+  },
+  {
+    "task": "train-1225-glm-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1225-glm-candidate/result.json",
+    "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+    "expected": "Supported",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Analysis failed: ValueError: Missing required assessment fields"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 25
+  },
+  {
+    "task": "train-1205-deepseek-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1205-deepseek-candidate/result.json",
+    "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.lgraham.senate.gov/public/index.cfm/2020/2/graham-on-coronavirus-response: target_http_error",
+      "Analysis failed: ValueError: Expected one complete assessment block"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 18
+  },
+  {
+    "task": "train-1205-deepseek-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1205-deepseek-baseline/result.json",
+    "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "FALSE",
+    "stop": "max_rounds",
+    "errors": [
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error"
+    ],
+    "gaps": [
+      "The retrieved records do not include an on-the-record response from Graham’s office denying the quote; several fact checks note that requests for comment went unanswered at publication time.",
+      "The fact checks largely converge on the same underlying fabricated tweet, so outlet diversity should not be treated as independent sourcing for a real Graham statement.",
+      "Each citation needs an exact quote from its retrieved text.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "High",
+    "last_independence": false,
+    "last_components": [
+      {
+        "assertion": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "resolved": true,
+        "source_urls": [
+          "https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/",
+          "https://www.snopes.com/fact-check/lindsey-graham-trump-cdc/",
+          "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087",
+          "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/"
+        ],
+        "rationale": "The retrieved fact checks directly state that the quote is not genuine, fabricated, or not something Graham said. They trace the alleged quote to a fake-news/satirical social-media post, and none provide a credible primary source showing Graham said it."
+      }
+    ],
+    "source_count": 11
+  },
+  {
+    "task": "train-1205-glm-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1205-glm-baseline/result.json",
+    "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Analysis failed: RuntimeError: Ollama responded, but JSON schema validation failed after one repair attempt: Invalid json output: \nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE "
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 16
+  },
+  {
+    "task": "train-1205-glm-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1205-glm-candidate/result.json",
+    "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+      "Page fetch failed for https://www.lgraham.senate.gov/public/index.cfm/2020/2/graham-on-coronavirus-response: target_http_error",
+      "Analysis failed: ValueError: not enough values to unpack (expected 3, got 2)"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 16
+  },
+  {
+    "task": "train-1216-deepseek-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1216-deepseek-candidate/result.json",
+    "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "FALSE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "No primary record (Kamra's own posts or archived statements) was retrieved to confirm or deny the remark; the refutation rests on a single fact-check source with no second independent host.",
+      "S7 asserts nothing Kamra said in a show can be factually refuted but does not address this specific Pulwama/NRC quote or establish that he said it, so it does not genuinely conflict on attribution.",
+      "Evidence confidence remains below High.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Medium",
+    "last_independence": false,
+    "last_components": [
+      {
+        "assertion": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "resolved": true,
+        "source_urls": [
+          "https://www.boomlive.in/fake-news/fake-quote-on-pulwama-attacks-attributed-to-comedian-kunal-kamra-6981"
+        ],
+        "rationale": ""
+      }
+    ],
+    "source_count": 22
+  },
+  {
+    "task": "train-1216-deepseek-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1216-deepseek-baseline/result.json",
+    "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Page fetch failed for https://www.boomlive.in/fake-news/fake-quote-on-pulwama-attacks-attributed-to-comedian-kunal-kamra-6981: TimeoutError: The read operation timed out",
+      "Page fetch failed for https://www.youtube.com/watch?v=_sZA153aXQU: LimitReached: Pilot stopped or deadline reached",
+      "Retrieval failed after 1 attempt(s): LimitReached: Pilot stopped or deadline reached",
+      "Jev source review failed: LimitReached: Pilot stopped or deadline reached",
+      "Analysis failed: LimitReached: Pilot stopped or deadline reached"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 5
+  },
+  {
+    "task": "train-1216-glm-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1216-glm-baseline/result.json",
+    "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "Draft text is empty; no statements available to evaluate",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 21
+  },
+  {
+    "task": "train-1216-glm-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1216-glm-candidate/result.json",
+    "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+    "expected": "Refuted",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Analysis failed: ValueError: Expected one complete assessment block"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 8
+  },
+  {
+    "task": "train-1217-glm-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1217-glm-baseline/result.json",
+    "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+    "expected": "Not Enough Evidence",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "NOT_ENOUGH_EVIDENCE",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "This domain requires peer-reviewed evidence.",
+      "Resolve and cite the assertion: Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 16
+  },
+  {
+    "task": "train-1217-glm-candidate",
+    "path": "artifacts/flash-workflow-20261103/revision-8/development/train-1217-glm-candidate/result.json",
+    "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+    "expected": "Not Enough Evidence",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "UNVERIFIED",
+    "stop": "execution_error",
+    "errors": [
+      "Page fetch failed for https://connection.asco.org/do/short-term-goals-and-long-term-implications-first-us-based-clinical-trial-cuban: bot_blocked",
+      "Analysis failed: ValueError: Expected one complete assessment block"
+    ],
+    "gaps": [
+      "The model did not return a valid evidence assessment.",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "This domain requires peer-reviewed evidence.",
+      "Resolve and cite the assertion: Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "last_confidence": "Low",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 14
+  },
+  {
+    "task": "train-1217-deepseek-baseline",
+    "path": "artifacts/flash-workflow-20261103/revision-3/development/train-1217-deepseek-baseline/result.json",
+    "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+    "expected": "Not Enough Evidence",
+    "top_keys": [
+      "case",
+      "model",
+      "arm",
+      "requested_model",
+      "gold_label",
+      "predicted_label",
+      "accepted_label",
+      "result"
+    ],
+    "prediction": "CONFLICTING",
+    "stop": "max_rounds",
+    "errors": [],
+    "gaps": [
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "This domain requires peer-reviewed evidence.",
+      "Resolve and cite the assertion: Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration.",
+      "A conflicting verdict requires cited evidence on both sides."
+    ],
+    "last_confidence": "Medium",
+    "last_independence": false,
+    "last_components": [],
+    "source_count": 11
+  }
+]

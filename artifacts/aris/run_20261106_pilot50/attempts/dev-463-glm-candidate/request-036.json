@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "558 people were killed by the police in 2018, while 201 people died in police custody",
+        "query": "Locate Bureau of Justice Statistics Mortality in Correctional Institutions or Deaths in Custody Reporting Program tables reporting deaths in police custody or jails for calendar year 2018",
+        "candidates": [
+          {
+            "title": "Mortality in Correctional Institutions (MCI) (Formerly Deaths in ...",
+            "snippet": "Collects inmate death records from each of the nation's 50 state prison systems and approximately 2,800 local jail jurisdictions.",
+            "url": "https://bjs.ojp.gov/data-collection/mortality-correctional-institutions-mci-formerly-deaths-custody-reporting-program"
+          },
+          {
+            "title": "BJS has released Federal Deaths in Custody and During ...",
+            "snippet": "This report provides statistics on deaths occurring during federal arrest, detention and incarceration, as required by law. Explore the findings ...",
+            "url": "https://www.facebook.com/DOJOJP/posts/bjs-has-released-federal-deaths-in-custody-and-during-arrest-2024-statistical-ta/1420619000209296/"
+          },
+          {
+            "title": "Data on Deaths and Deaths in Custody - NCBI - NIH",
+            "snippet": "BJS (2024a) data indicate that in FY 2022, U.S. federal law enforcement agencies reported 120 arrest-related deaths and 483 deaths in custody (see Figure 3-3).",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK620156/"
+          },
+          {
+            "title": "Mortality Reporting: An Overview",
+            "snippet": "BACKGROUND. Prisons and jails lack comprehensive reporting on deaths in custody. Here, we detail reporting policies by system and highlight key information gaps ...",
+            "url": "https://3rdcityproject.com/index.php/mortality-reporting-overview/"
+          },
+          {
+            "title": "CANY Data Portal | Deaths in Custody",
+            "snippet": "CANY collects data on state prisons. This page records deaths in custody starting December of 2025. Data tables accompanying the reports, which include data on ...",
+            "url": "https://www.correctionalassociation.org/data/dashboard-deaths-in-custody"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-463-glm-candidate",
+  "timestamp": "2026-11-06T01:01:41.923365+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6367.234
+}

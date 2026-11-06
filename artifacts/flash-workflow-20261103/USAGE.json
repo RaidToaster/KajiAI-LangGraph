@@ -1,0 +1,93 @@
+{
+  "physical_graph_attempts": 28,
+  "totals": {
+    "jev": 232,
+    "jev_input_tokens": 537826,
+    "jev_output_tokens": 55302,
+    "incomplete": 4,
+    "tinyfish_search": 111,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 217,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "ollama": 125,
+    "ollama_input_tokens": 568856,
+    "ollama_output_tokens": 270613
+  },
+  "estimates_usd": {
+    "ollama_estimated_usd": 0.34280669999999985,
+    "jev_estimated_usd": 0.022588692
+  },
+  "diagnostics": {
+    "output-smoke": [
+      {
+        "case": "deepseek-insufficient",
+        "passed": true,
+        "input_tokens": 131,
+        "output_tokens": 18
+      },
+      {
+        "case": "deepseek-refuted",
+        "passed": true,
+        "input_tokens": 144,
+        "output_tokens": 17
+      },
+      {
+        "case": "deepseek-supported",
+        "passed": true,
+        "input_tokens": 152,
+        "output_tokens": 19
+      },
+      {
+        "case": "glm-insufficient",
+        "passed": false,
+        "input_tokens": 136,
+        "output_tokens": 93
+      },
+      {
+        "case": "glm-refuted",
+        "passed": false,
+        "input_tokens": 144,
+        "output_tokens": 126
+      },
+      {
+        "case": "glm-supported",
+        "passed": false,
+        "input_tokens": 155,
+        "output_tokens": 60
+      }
+    ],
+    "brief-replay": [
+      {
+        "case": "deepseek-1225",
+        "passed": true,
+        "input_tokens": 3747,
+        "output_tokens": 546
+      },
+      {
+        "case": "glm-1217",
+        "passed": false,
+        "input_tokens": 3509,
+        "output_tokens": 4096
+      },
+      {
+        "case": "glm-1218",
+        "passed": true,
+        "input_tokens": 3195,
+        "output_tokens": 3533
+      },
+      {
+        "case": "glm-1225",
+        "passed": true,
+        "input_tokens": 3580,
+        "output_tokens": 4096
+      }
+    ]
+  },
+  "model_ids": {
+    "glm-5.3-flash:cloud": "glm-5.3-flash",
+    "deepseek-v4.1-flash:cloud": "deepseek-v4.1-flash"
+  },
+  "incomplete_scope": "Four reserved free TinyFish Fetch sends had read timeouts. No unknown Ollama or Jev send."
+}

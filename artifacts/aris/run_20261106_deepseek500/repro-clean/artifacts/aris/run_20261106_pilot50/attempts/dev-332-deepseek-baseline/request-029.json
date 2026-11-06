@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers. original source fact check",
+        "candidates": [
+          {
+            "title": "No, Netflix's CEO wasn't charged with child pornography",
+            "snippet": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography”",
+            "url": "https://politifact.com/factchecks/2020/sep/18/viral-image/no-netflixs-ceo-wasnt-charged-15-counts-child-porn/"
+          },
+          {
+            "title": "A search of his electronic devices in May of 2022 ...",
+            "snippet": "A search of his electronic devices in May of 2022, uncovered 423 images and 560 videos of child porn, some of which contained depictions of ...",
+            "url": "https://www.facebook.com/News8WROC/posts/a-search-of-his-electronic-devices-in-may-of-2022-uncovered-423-images-and-560-v/1009193851242635/"
+          },
+          {
+            "title": "Netflix Goes To Feds To Stop 'Cuties' Child Porn Case In ...",
+            "snippet": "Backed against the wall, Netflix wants a Texas District Attorney stopped from hitting the streamer with child pornography charges over the ...",
+            "url": "https://deadline.com/2022/03/netflix-cuties-child-porn-charges-lawsuit-texas-1234970827/"
+          },
+          {
+            "title": "After a man admitted to using digital currency to buy child ...",
+            "snippet": "55-year-old Julian Wachner is charged with 10 counts of having child pornography and one count for having cocaine. Court documents say he bought ...",
+            "url": "https://www.facebook.com/WISHNews8/videos/after-a-man-admitted-to-using-digital-currency-to-buy-child-pornography-marion-c/1430817578565815/"
+          },
+          {
+            "title": "Josh Duggar trial focused on computer where child porn ...",
+            "snippet": "Defense attorneys for Duggar have argued that someone else downloaded or placed the child pornography onto the work computer, noting that no ...",
+            "url": "https://www.kmbc.com/article/josh-duggar-trial-computer-where-child-porn-found/38427478"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-deepseek-baseline",
+  "timestamp": "2026-11-05T18:05:15.315596+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52334.906
+}

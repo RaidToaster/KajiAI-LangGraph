@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Senate.gov, Graham on Coronavirus Response, Feb. 26, 2020",
+        "candidates": [
+          {
+            "title": "Coronavirus: US Senate passes $2tn disaster aid bill",
+            "snippet": "The US Senate has passed a $2 trillion (£1.7tn) coronavirus aid bill that is the largest economic stimulus in US history.",
+            "url": "https://www.bbc.com/news/world-us-canada-52033863"
+          },
+          {
+            "title": "Video Posts - United States Senator Lindsey Graham",
+            "snippet": "7/26/20, Graham Discusses Latest Updates on Senate Judiciary Committee, Coronavirus, and More. June 2020. Date, Title. 6/20/20, Graham Responds to Latest ...",
+            "url": "https://www.lgraham.senate.gov/public/index.cfm/video-posts?page=12"
+          },
+          {
+            "title": "Sen. Lindsey Graham weighs in on what he feels it will take ...",
+            "snippet": "The key to opening the United States and spurring the economy is robust coronavirus testing, Sen. Lindsey Graham said on ABC's \"The View\" ...",
+            "url": "https://abcnews.com/Politics/sen-lindsey-graham-weighs-open-country-view/story?id=70171453"
+          },
+          {
+            "title": "Enlisting Big Data in the Fight Against Coronavirus",
+            "snippet": "paper hearing on how governments, the private sector, and other stakeholders are leveraging big data to combat the novel coronavirus, which causes COVID-19.",
+            "url": "https://www.commerce.senate.gov/wp-content/uploads/media/doc/Graham%20Dufault%20Testimony.pdf"
+          },
+          {
+            "title": "S.Hrg. 117-173 — EXAMINING OUR COVID-19 RESPONSE",
+            "snippet": "EXAMINING OUR COVID-19 RESPONSE: Senate, Committee on Health, Education, live video is available on our Committee website at help.senate.gov. Series 26 Fielded ...",
+            "url": "https://www.congress.gov/event/117th-congress/senate-event/LC68277/text"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-05T10:44:24.300945+00:00",
+  "status": "reserved_outcome_unknown"
+}

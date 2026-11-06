@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Germany’s Foreign Minister Heiko Maas said that Thailand’s King Maha Vajiralongkorn didn’t do anything illegal while at his German residence.",
+        "query": "Resubmit with the draft text so its claims can be evaluated against available evidence.",
+        "candidates": [
+          {
+            "title": "RefVerifier: Semi-Automated Reference Claim Verification ...",
+            "snippet": "Sep 7, 2026 — To bridge this research gap, we present RefVerifier , a semi-automated reference claim verification system for scientific manuscripts. Read more",
+            "url": "https://arxiv.org/html/2609.07652v1"
+          },
+          {
+            "title": "Supplemental Claims | Veterans Affairs",
+            "snippet": "If you disagree with our decision on your claim , you can file a Supplemental Claim to add new evidence that's relevant to your case or identify new evidence ...",
+            "url": "https://www.va.gov/decision-reviews/supplemental-claim/"
+          },
+          {
+            "title": "Understanding the December 2024 amendments to ...",
+            "snippet": "Oct 1, 2025 — Practice tip: Before admitting a statement against interest in a criminal case, establish its trustworthiness with corroborating evidence . Read more",
+            "url": "https://www.iowabar.org/?pg=IowaBarBlog&blAction=showEntry&blogEntry=131448"
+          },
+          {
+            "title": "How To Evaluate Claims, Evidence & Risk",
+            "snippet": "Evaluate all of the facts, including claims or evidence . ✓ Always question any claims made with additional questions to ensure evidence is accurate and ... 19 pages",
+            "url": "https://students.marshall.usc.edu/sites/default/files/2020-01/Evaluating-Claims-Evidence-Risks.pdf"
+          },
+          {
+            "title": "FEDERAL RULES EVIDENCE",
+            "snippet": "A party may claim error in a ruling to admit or exclude evidence only if the error affects a substantial right of the party 44 pages",
+            "url": "https://www.uscourts.gov/sites/default/files/2025-02/federal-rules-of-evidence-dec-1-2024_0.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-024-glm-baseline",
+  "timestamp": "2026-11-05T18:11:41.290946+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52720.89
+}

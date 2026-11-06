@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Search congressional roll call records for Sanders's vote on H.R.3590 (ACA) in the 111th Congress to confirm his affirmative vote.",
+        "candidates": [
+          {
+            "title": "Office of the Clerk, U.S. House of Representatives - Vote Details",
+            "snippet": "VOTE QUESTION: On Motion to Concur in Senate Amendments, DESCRIPTION: Patient Protection and Affordable Care Act, VOTE TYPE: Recorded Vote, STATUS: Passed",
+            "url": "https://clerk.house.gov/Votes/2010165"
+          },
+          {
+            "title": "Roll Call Voting Compilations - Congressional Voting Records ...",
+            "snippet": "Several online, print, and subscription resources provide roll call vote compilations. Each resource is organized uniquely and covers different time periods.",
+            "url": "https://guides.loc.gov/congressional-voting-records/rollcall"
+          },
+          {
+            "title": "Roll Call Votes 111th Congress-1st session (2009) - U.S. Senate",
+            "snippet": "On the Cloture Motion: Motion to Invoke Cloture on H.R. 3590; An act entitled The Patient Protection and Affordable Care Act. On the Amendment S.Amdt. 2786: Reid Substitute Amendment No. 2786 As Amended; In the nature of a substitute.",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm"
+          },
+          {
+            "title": "Congress.gov: Enhanced Access to House Roll Call Votes Is Now ...",
+            "snippet": "This post describes enhanced access to House roll call votes on Congress.gov for votes that date from 2023 - present.",
+            "url": "https://blogs.loc.gov/law/2025/08/congress-gov-enhanced-access-to-house-roll-call-votes-is-now-available/"
+          },
+          {
+            "title": "Roll Call Track — U.S. Congress Voting Records, Live",
+            "snippet": "Roll Call Track tracks recorded roll-call votes of the U.S. Congress and every state legislature — pulled live from official government records — alongside federal spending oversight, judicial accountability, STOCK Act disclosures, and a free FOIA / public-records request-letter helper.",
+            "url": "https://rollcalltrack.com/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T08:59:30.440140+00:00",
+  "status": "reserved_outcome_unknown"
+}

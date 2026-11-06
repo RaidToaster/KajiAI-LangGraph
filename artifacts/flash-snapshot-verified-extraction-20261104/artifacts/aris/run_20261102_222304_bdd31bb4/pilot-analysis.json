@@ -1,0 +1,234 @@
+{
+  "scope": "Two-claim development feasibility pilot; contemporary live web, no generalization claim",
+  "planned_workflows": 4,
+  "saved_workflow_results": 4,
+  "successful_workflows": 3,
+  "requests": {
+    "ollama": 11,
+    "jev": 31,
+    "tinyfish_search": 11,
+    "tinyfish_fetch": 22
+  },
+  "total_actual_requests": 75,
+  "ollama_transport_observed_tokens_including_failed_attempts_and_smoke": 190142,
+  "ollama_usage_missing_requests": 0,
+  "ollama_output_tokens": [
+    45,
+    1116,
+    1153,
+    1392,
+    1254,
+    1159,
+    1273,
+    1339,
+    1151,
+    1240,
+    1209
+  ],
+  "jev_transport_observed_tokens_including_failed_attempts": 79658,
+  "jev_usage_missing_requests": 0,
+  "rows": [
+    {
+      "claim_id": 17,
+      "condition": "baseline",
+      "gold": "Refuted",
+      "status": "execution_error",
+      "predicted_label": "ABSTAIN",
+      "accepted_label": "ABSTAIN",
+      "stop_reason": "execution_error",
+      "requests": {
+        "jev": 4,
+        "tinyfish_search": 2,
+        "tinyfish_fetch": 4,
+        "ollama": 1
+      },
+      "elapsed_seconds": 23.452999999999975,
+      "rounds": 1,
+      "observed_graph_tokens": 1844,
+      "graph_usage_complete": false,
+      "errors": [
+        "Jev search ranking failed: UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 563: character maps to <undefined>",
+        "Jev source review failed: UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 1019: character maps to <undefined>",
+        "Analysis failed: UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 1632: character maps to <undefined>"
+      ],
+      "assertion_count": 1,
+      "resolved_assertions": 0,
+      "citations": 0,
+      "literal_quotes_valid": 0,
+      "automated_citation_reviews": 0,
+      "prelimit_stop_eligibility": [
+        {
+          "round": 1,
+          "query_inventory_exhausted": false,
+          "semantic_review_guard_blocked": false,
+          "semantic_gaps": []
+        }
+      ]
+    },
+    {
+      "claim_id": 17,
+      "condition": "query_exhaustion",
+      "gold": "Refuted",
+      "status": "insufficient_evidence",
+      "predicted_label": "Refuted",
+      "accepted_label": "ABSTAIN",
+      "stop_reason": "max_rounds",
+      "requests": {
+        "jev": 9,
+        "tinyfish_search": 3,
+        "tinyfish_fetch": 6,
+        "ollama": 3
+      },
+      "elapsed_seconds": 59.266000000000076,
+      "rounds": 3,
+      "observed_graph_tokens": 73359,
+      "graph_usage_complete": true,
+      "errors": [],
+      "assertion_count": 1,
+      "resolved_assertions": 1,
+      "citations": 4,
+      "literal_quotes_valid": 4,
+      "automated_citation_reviews": 10,
+      "prelimit_stop_eligibility": [
+        {
+          "round": 1,
+          "query_inventory_exhausted": false,
+          "semantic_review_guard_blocked": false,
+          "semantic_gaps": []
+        },
+        {
+          "round": 2,
+          "query_inventory_exhausted": true,
+          "semantic_review_guard_blocked": true,
+          "semantic_gaps": [
+            "Citation support is uncertain for https://www.usatoday.com/story/news/factcheck/2020/10/30/fact-check-some-mail-ballots-arriving-post-election-day-count/6075311002/.",
+            "Citation support is uncertain for https://leadstories.com/hoax-alert/2020/10/fact-check-it-is-not-true-that-all-ballots-arriving-after-election-day-will-be-thrown-out.html."
+          ]
+        }
+      ]
+    },
+    {
+      "claim_id": 246,
+      "condition": "baseline",
+      "gold": "Refuted",
+      "status": "insufficient_evidence",
+      "predicted_label": "Refuted",
+      "accepted_label": "ABSTAIN",
+      "stop_reason": "max_rounds",
+      "requests": {
+        "jev": 9,
+        "tinyfish_search": 3,
+        "tinyfish_fetch": 6,
+        "ollama": 3
+      },
+      "elapsed_seconds": 56.9369999999999,
+      "rounds": 3,
+      "observed_graph_tokens": 86810,
+      "graph_usage_complete": true,
+      "errors": [
+        "Page fetch failed for https://www.researchgate.net/publication/370488284_Analysis_of_the_diversity_of_tick-borne_viruses_at_the_border_areas_in_Liaoning_Province_China: bot_blocked",
+        "Page fetch failed for https://core.ac.uk/download/pdf/82691959.pdf: target_unreachable"
+      ],
+      "assertion_count": 1,
+      "resolved_assertions": 1,
+      "citations": 5,
+      "literal_quotes_valid": 4,
+      "automated_citation_reviews": 9,
+      "prelimit_stop_eligibility": [
+        {
+          "round": 1,
+          "query_inventory_exhausted": false,
+          "semantic_review_guard_blocked": true,
+          "semantic_gaps": [
+            "Citation contradicts the finding: https://pmc.ncbi.nlm.nih.gov/articles/PMC4237196/."
+          ]
+        },
+        {
+          "round": 2,
+          "query_inventory_exhausted": true,
+          "semantic_review_guard_blocked": true,
+          "semantic_gaps": [
+            "Citation contradicts the finding: https://pmc.ncbi.nlm.nih.gov/articles/PMC4237196/."
+          ]
+        }
+      ]
+    },
+    {
+      "claim_id": 246,
+      "condition": "query_exhaustion",
+      "gold": "Refuted",
+      "status": "insufficient_evidence",
+      "predicted_label": "Refuted",
+      "accepted_label": "ABSTAIN",
+      "stop_reason": "max_rounds",
+      "requests": {
+        "jev": 9,
+        "tinyfish_search": 3,
+        "tinyfish_fetch": 6,
+        "ollama": 3
+      },
+      "elapsed_seconds": 60.59400000000005,
+      "rounds": 3,
+      "observed_graph_tokens": 88342,
+      "graph_usage_complete": true,
+      "errors": [
+        "Page fetch failed for https://www.researchgate.net/publication/370488284_Analysis_of_the_diversity_of_tick-borne_viruses_at_the_border_areas_in_Liaoning_Province_China: bot_blocked",
+        "Page fetch failed for https://core.ac.uk/download/pdf/82691959.pdf: target_unreachable"
+      ],
+      "assertion_count": 1,
+      "resolved_assertions": 1,
+      "citations": 4,
+      "literal_quotes_valid": 3,
+      "automated_citation_reviews": 11,
+      "prelimit_stop_eligibility": [
+        {
+          "round": 1,
+          "query_inventory_exhausted": false,
+          "semantic_review_guard_blocked": true,
+          "semantic_gaps": [
+            "Citation support is uncertain for https://pmc.ncbi.nlm.nih.gov/articles/PMC4237196/."
+          ]
+        },
+        {
+          "round": 2,
+          "query_inventory_exhausted": true,
+          "semantic_review_guard_blocked": true,
+          "semantic_gaps": [
+            "Citation contradicts the finding: https://pmc.ncbi.nlm.nih.gov/articles/PMC4237196/.",
+            "Citation support is uncertain for https://pmc.ncbi.nlm.nih.gov/articles/PMC4237196/."
+          ]
+        }
+      ]
+    }
+  ],
+  "paired": [
+    {
+      "claim_id": 17,
+      "complete_successful_pair": false,
+      "candidate_triggered": false,
+      "label_loss": false,
+      "label_gain": false,
+      "acceptance_loss": false,
+      "ollama_call_delta": null
+    },
+    {
+      "claim_id": 246,
+      "complete_successful_pair": true,
+      "candidate_triggered": false,
+      "label_loss": false,
+      "label_gain": false,
+      "acceptance_loss": false,
+      "ollama_call_delta": 0
+    }
+  ],
+  "full_study_decision": "NO GO",
+  "human_citation_validation": "not performed; human fields remain blank",
+  "caveats": [
+    "One early attempt failed because of local UTF-8 logging; retain in denominator.",
+    "Only untouched conditions continued after all dispatched outcomes were verified; original counters/deadline retained.",
+    "Independent web and model responses can drift across conditions.",
+    "Requested output cap and disabled retries differ from historical execution for both arms.",
+    "Missing/failed conditions prevent paired efficacy conclusions; do not impute outcomes.",
+    "Observed transport usage can exceed graph usage after a local exception; neither is a monetary estimate."
+  ]
+}

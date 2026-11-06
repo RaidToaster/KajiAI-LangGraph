@@ -1,0 +1,111 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day contains verbatim: Nigeria's population was 45.1 million in 1960. That estimate was specifically for 1 July 1960, three months before independence day, The report ...",
+            "url": "https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day",
+            "quote": "Nigeria's population was 45.1 million in 1960. That estimate was specifically for 1 July 1960, three months before independence day, The report ...",
+            "context": "Nigeria's population was 45.1 million in 1960. That estimate was specifically for 1 July 1960, three months before independence day, The report ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.academia.edu/112469698/Population_Census_Administration_in_Nigeria contains verbatim: Since independence in 1960, Notably, the 1963 census recorded 55 million while the 2006 census reported an inflated 140.4 million.",
+            "url": "https://www.academia.edu/112469698/Population_Census_Administration_in_Nigeria",
+            "quote": "Since independence in 1960, Notably, the 1963 census recorded 55 million while the 2006 census reported an inflated 140.4 million.",
+            "context": "Since independence in 1960, Notably, the 1963 census recorded 55 million while the 2006 census reported an inflated 140.4 million."
+          },
+          {
+            "finding": "Retained snippet record for https://www.cia.gov/readingroom/document/cia-rdp88t00768r000300400001-9 contains verbatim: The incomplete results of the Nigerian 1963 census were adjusted through the use of indirect demographic techniques using the survey estimates.",
+            "url": "https://www.cia.gov/readingroom/document/cia-rdp88t00768r000300400001-9",
+            "quote": "The incomplete results of the Nigerian 1963 census were adjusted through the use of indirect demographic techniques using the survey estimates.",
+            "context": "The incomplete results of the Nigerian 1963 census were adjusted through the use of indirect demographic techniques using the survey estimates."
+          },
+          {
+            "finding": "Retained snippet record for https://forum.effectivealtruism.org/posts/824rsHCXuqTmBb8se/nigeria-s-missing-50-million-people contains verbatim: Nigeria's official population (~220-230 million) may be significantly inflated and could be closer to 170-180 million[1] -independence census ...",
+            "url": "https://forum.effectivealtruism.org/posts/824rsHCXuqTmBb8se/nigeria-s-missing-50-million-people",
+            "quote": "Nigeria's official population (~220-230 million) may be significantly inflated and could be closer to 170-180 million[1] -independence census ...",
+            "context": "Nigeria's official population (~220-230 million) may be significantly inflated and could be closer to 170-180 million[1] -independence census ..."
+          },
+          {
+            "finding": "Retained full_page record for https://www.facebook.com/HistoricalnigeriaYoruba/posts/in-1962-nigeria-conducted-a-population-census-that-appeared-to-challenge-the-nor/122311307138076276/ contains verbatim: ## Historical Nigeria - Yoruba's Post",
+            "url": "https://www.facebook.com/HistoricalnigeriaYoruba/posts/in-1962-nigeria-conducted-a-population-census-that-appeared-to-challenge-the-nor/122311307138076276/",
+            "quote": "## Historical Nigeria - Yoruba's Post",
+            "context": "## Historical Nigeria - Yoruba's Post\n\n---\n\n### **Historical Nigeria - Yoruba**\n\nSeptember 22\n\nIn 1962, Nigeria conducted a population census that appeared to challenge the North’s established population majority. The results were rejected, and a second census followed in 1963. That exercise produced another controversy, this time reaching the Supreme Court. As Nigeria approached the 1964 federal election, disputes over population, parliamentary representation and political power intensified. Discover how the struggle over census figures became part of the wider crisis that preceded the collapse of Nigeria’s First Republic.\n\nhistoricalnigeria.com\n\nNigeria’s Census Crisis: Two Disputed Counts and the Struggle for Power in the First Republic | Historical Nigeria"
+          },
+          {
+            "finding": "Retained snippet record for https://pmc.ncbi.nlm.nih.gov/articles/PMC4335263/ contains verbatim: This paper examines the age and sex composition of Nigeria as it relates to various population characteristics using the two most recent Demographic and Health ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4335263/",
+            "quote": "This paper examines the age and sex composition of Nigeria as it relates to various population characteristics using the two most recent Demographic and Health ...",
+            "context": "This paper examines the age and sex composition of Nigeria as it relates to various population characteristics using the two most recent Demographic and Health ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_4": {
+          "type": "choice",
+          "instructions": "Does `citations[4].context`, including the quote, support `citations[4].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_5": {
+          "type": "choice",
+          "instructions": "Does `citations[5].context`, including the quote, support `citations[5].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-candidate",
+  "timestamp": "2026-11-06T00:09:33.915216+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3239.218
+}

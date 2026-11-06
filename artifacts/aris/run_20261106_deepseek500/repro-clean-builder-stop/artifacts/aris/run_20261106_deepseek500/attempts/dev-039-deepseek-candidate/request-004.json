@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "5G causes COVID-19.",
+        "query": "What primary evidence or studies are cited to support the claim that 5G causes COVID-19?",
+        "candidates": [
+          {
+            "title": "Evidence for a connection between coronavirus disease-19 ...",
+            "snippet": "by B Rubik · 2021 · Cited by 37 — We explore the scientific evidence suggesting a possible relationship between COVID-19 and radiofrequency radiation related to wireless communications ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8580522/"
+          },
+          {
+            "title": "5G is not accelerating the spread of the new coronavirus",
+            "snippet": "As we have written before, there is no evidence to suggest that 5G has anything to do with Covid-19—the illness caused by the new coronavirus.",
+            "url": "https://fullfact.org/health/5G-not-accelerating-coronavirus/"
+          },
+          {
+            "title": "Fake or Real? 💬 “The coronavirus pandemic has been ...",
+            "snippet": "“The coronavirus pandemic has been caused by 5G.” Fake! 5G mobile networks do not cause Covid-19. Viruses cannot travel on radio waves/mobile ...",
+            "url": "https://www.facebook.com/forCornwall/videos/coronavirus-myth-busting-5/2553344754963209/"
+          },
+          {
+            "title": "5G technology does not cause or spread coronavirus",
+            "snippet": "PODGORICA, 11 JULY 2021 – Almost one-third of the citizens of Montenegro (31%) believe that 5G technology causes or spreads coronavirus and ...",
+            "url": "https://www.unicef.org/montenegro/en/stories/5g-technology-does-not-cause-or-spread-coronavirus"
+          },
+          {
+            "title": "The conspiracy of Covid-19 and 5G: Spatial analysis ...",
+            "snippet": "by E Flaherty · 2022 · Cited by 91 — Adherents of conspiracy theories have surmised that 5G weakens the immune system, infects people directly with COVID-19, or causes symptoms that simulate viral ...",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0277953621008789"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-039-deepseek-candidate",
+  "timestamp": "2026-11-06T04:26:58.574787+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6407.906
+}

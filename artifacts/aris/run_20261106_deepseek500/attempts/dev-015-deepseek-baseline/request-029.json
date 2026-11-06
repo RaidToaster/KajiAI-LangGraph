@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "Illegal drug, border crossings original source fact check",
+        "candidates": [
+          {
+            "title": "Trump Makes Unsupported Claims About Drug Flows",
+            "snippet": "President Donald Trump has repeatedly said that his administration has “cut” by 97% “the flow” of illegal drugs entering the U.S. “by water, ...",
+            "url": "https://www.factcheck.org/2026/06/trump-makes-unsupported-claims-about-drug-flows/"
+          },
+          {
+            "title": "Facts About Fentanyl Smuggling - American Immigration Council",
+            "snippet": "From 2013 to 2023, the national drug overdose death rate more than doubled, with drug overdose deaths peaking in 2022 at 107,941. Much of this ...",
+            "url": "https://www.americanimmigrationcouncil.org/fact-sheet/fentanyl-smuggling/"
+          },
+          {
+            "title": "Drug Seizure Statistics - U.S. Customs and Border Protection",
+            "snippet": "To access the data used to build this dashboard, please visit the CBP Data Portal.Data is extracted from live CBP systems and data sources.",
+            "url": "https://www.cbp.gov/newsroom/stats/drug-seizure-statistics"
+          },
+          {
+            "title": "[PDF] Fentanyl Is Smuggled for US Citizens By US ... - Congress.gov",
+            "snippet": "In 2021, U.S. citizens were 86.3 percent of convicted fentanyl drug traffickers-ten times greater than convictions of illegal immigrants for the ...",
+            "url": "https://www.congress.gov/118/meeting/house/115264/documents/HHRG-118-JU00-20230201-SD020.pdf"
+          },
+          {
+            "title": "Criminologist fact-checks Trump nominee's claims ... - YouTube",
+            "snippet": "Billionaire Howard Lutnick, U.S. President Donald Trump's nominee to be commerce secretary, voiced his concerns about fentanyl coming from ...",
+            "url": "https://www.youtube.com/watch?v=2VFLAV9gJ58"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-baseline",
+  "timestamp": "2026-11-06T06:21:30.882069+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13280.187
+}

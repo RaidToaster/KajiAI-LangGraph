@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KajiAI runtime pilot and claim review</title>
+
+<meta name="generator" content="ARIS render-html (academic, v1)">
+<meta name="aris:source-path" content="artifacts\aris\run_20261102_222304_bdd31bb4\review-stage\AUTO_REVIEW.md">
+<meta name="aris:source-sha256" content="20f7f9219f8933c33fbb5fbe902c7bb432dd31ae0e256fd8e0a1ff9e53b666c5">
+<meta name="aris:generated-at" content="2026-11-02 15:50 UTC">
+
+<!-- offline mode: MathJax + highlight.js skipped; math and code blocks render as plain text -->
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+
+nav.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  font-size: 13px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-soft);
+  padding-right: 16px;
+}
+nav.toc h3 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+nav.toc ol li { margin: 5px 0; counter-increment: toc; }
+nav.toc ol li::before { content: counter(toc) ". "; color: var(--ink-muted); margin-right: 4px; }
+nav.toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+nav.toc a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+nav.toc ul { list-style: none; padding-left: 14px; margin: 3px 0; font-size: 12px; }
+nav.toc ul li::before { content: "→ "; color: var(--border); }
+
+main { min-width: 0; }
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+header.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+header.hero .byline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+header.hero .meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 44px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h2 .num { color: var(--primary); font-weight: 600; margin-right: 8px; }
+h3 { font-size: 19px; margin: 28px 0 10px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 16px; margin: 20px 0 8px; color: var(--ink); font-weight: 600; }
+
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+ul li, ol li { margin: 4px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 14px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 14px 18px !important;
+  font-size: 13px;
+  line-height: 1.55;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+pre.diagram {
+  background: #f9f6ed;
+  border-left: 4px solid var(--accent);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.callout {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 15px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 13px; letter-spacing: 0.02em; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+details.qa, details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 10px 14px; }
+details p:first-of-type { margin-top: 8px; }
+
+mjx-container[display="true"] { margin: 12px 0 !important; }
+
+footer.aris-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px; }
+  nav.toc {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-soft);
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+  header.hero h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+}
+@media print {
+  nav.toc { display: none; }
+  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: white; }
+  header.hero { border-bottom-color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc">
+  <h3>Contents</h3>
+  <ol>
+<li><a href="#scope-coverage">Scope coverage</a>
+</li>
+<li><a href="#findings-and-minimum-fixes">Findings and minimum fixes</a>
+</li>
+<li><a href="#memory-update">Memory update</a>
+</li>
+<li><a href="#score-scope-comparison">Score scope comparison</a>
+</li>
+<li><a href="#method-description">Method Description</a>
+</li>
+</ol>
+</nav>
+
+<main>
+<header class="hero">
+  
+  <h1>KajiAI runtime pilot and claim review</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>artifacts\aris\run_20261102_222304_bdd31bb4\review-stage\AUTO_REVIEW.md</code></span>
+    <span><strong>SHA256:</strong> <code>20f7f9219f89</code></span>
+    <span><strong>Rendered:</strong> 2026-11-02 15:50 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="runtime-continuation-review">Runtime continuation review</h1>
+<p>Run run_20261102_222304_bdd31bb4; historical audit not repeated.</p>
+<h1 id="runtime-continuation-review--round-1">Runtime continuation review — round 1</h1>
+<p>Score: <strong>8/10 for bounded-pilot engineering readiness</strong>. Verdict: <strong>ready</strong> for the explicitly approved frozen smoke/pilot after the fixes inspected below. Full-study readiness remains <strong>NO GO</strong>; no empirical quality gain is established.</p>
+<p>Review independence: <strong>same-family</strong>; acceptance status: <strong>provisional</strong>. Requested reviewer: GPT-6-Astra, xhigh. Actual model/effort are not independently exposed to this reviewer and are recorded as <strong>unknown</strong>, rather than inferred from the request.</p>
+<h2 id="scope-coverage">Scope coverage</h2>
+<p>Inspected AGENTS.md, CONTINUATION.md, local ARIS desktop guidance, graph/state/default configuration, both targeted test files, pilot executor, frozen Markdown/JSON protocol, supplied test logs, authenticated Ollama metadata, and installed LangChain Ollama, HTTPX/HTTPX2 and TypeSafe client/retry/transport sources. Historical study audit was not repeated. The parent reported explicit approval during review; this reviewer did not launch inference, tests, experiments, or client processes.</p>
+<p>The documented project-venv command is plausible by inspection: <code>.venv/pyvenv.cfg</code> identifies Python 3.12.4; its editable <code>.pth</code> points to this repository's <code>src</code>; required installed client sources are present. The child command reuses <code>sys.executable</code> and inherits the project working directory. This is an invocation inspection, <strong>not an independently executed fresh-environment check</strong>.</p>
+<p>The opt-in stop shares retrieval's unused-query inventory, preserves prior assessment/prediction, records <code>query_exhausted</code> on the last actual round, and retains baseline behavior when disabled. Acceptance, fatal-error, stagnation and budget precedence remain intact. Pending source reviews and citation semantic gaps prevent the new stop. Fixtures count adapter invoke boundaries, including repair calls, check trace serialization, and explicitly demonstrate that skipped reassessment can lose acceptance. These are fixture results, not remote provider measurements.</p>
+<p>The frozen two-claim protocol holds model, prompts and thresholds fixed across conditions and discloses shared limits differing from historical execution. It separates development findings from confirmatory claims. Request reservations precede sends; failed attempts and repairs consume the shared caps. Inspected SDK retry settings disable retries; redirects are disabled. The parent enforces 300-second children within the 900-second scheduling deadline. Remote cancellation and server enforcement of requested output tokens are correctly treated as unknown until observed. Durable request records preserve unknown outcomes and prevent automatic restart.</p>
+<h2 id="findings-and-minimum-fixes">Findings and minimum fixes</h2>
+<p>Two concrete defects were reported to the parent before launch:</p>
+<ol><li>TinyFish delegated to unbounded <code>json.load(response)</code>, bypassing the promised 2 MB capture bound and losing original HTTP failure bodies/status. The inspected fix now reads at most 2,000,001 bytes, retains bounded raw bytes and actual status, stops on overflow/failure, and preserves the existing no-redirect/no-retry policy.</li><li>Stream failure metadata was overwritten by the subsequent partial-response record. The inspected fix merges metadata, retaining both the error and partial-body/status evidence.</li></ol>
+<p>No remaining must-fix defect was confirmed for this narrowly bounded pilot. Logs report 73 regression passes, 10 stopping-fixture passes, five transport/guard passes, and 16 focused passes after fixes. I inspected these records; I did not rerun them. The transport mocks exercise already-consumed responses; the actual streaming and TinyFish branches were inspected, not independently executed. Live output-cap support, integration validity and trace completeness remain smoke/pilot acceptance gates.</p>
+<h2 id="memory-update">Memory update</h2>
+<p>This is the first new-run review; historical 5/10 is not superseded as a study-quality judgment. Two pilot transport defects were found and fixed during this round. Engineering is ready for the approved small pilot; larger inference remains unauthorized by this review. Retain every failure/incomplete pair. No triggering exhaustion pair means inconclusive. Human annotation stays parallel, and automated judgments remain explicitly nonhuman.</p>
+<p>Live run subsequently exposed UTF-8 logging defect; failed attempt preserved, defect fixed and only unstarted conditions continued after all transmitted responses were verified. Original budget/deadline unchanged. Round 1 predates that live observation.</p>
+<h1 id="final-boundary-actual-results-and-claims">Final boundary: actual results and claims</h1>
+<p>Score: <strong>4/10 for scientific readiness of the query-exhaustion benefit claim. Verdict: not ready. Full study: NO GO.</strong> This is a scientific evidence judgment, distinct from round 1's 8/10 bounded-pilot engineering judgment; it does not replace the historical study review.</p>
+<p>Requested reviewer: GPT-6-Astra, ultra. Actual model/effort: unknown, not independently exposed. Review independence: same-family. Acceptance status: provisional. Integrity status: unavailable as a separate formal experiment-integrity audit; the checks below are a limited primary-record reconciliation.</p>
+<p><strong>claim_supported: no.</strong> The intended claim combines resource reduction with acceptable retained quality. No live execution reached the candidate stopping branch, so this pilot did not test that tradeoff.</p>
+<p><strong>what_results_support:</strong> The opt-in implementation shares retrieval's query inventory, preserves the preceding assessment, records the actual last-round decision, and retains pending-source/semantic-review safeguards. Inspected fixtures demonstrate three versus two adapter invocations, or six versus four with repairs, and explicitly demonstrate possible acceptance loss. The supplied final log reports 79 passing tests; I did not execute tests or inference.</p>
+<p>I independently counted 75 request/response pairs: 11 Ollama, 31 Jev, 11 searches and 22 fetches. NDJSON terminal metadata and decompressed Jev bodies reproduce 190,142 and 79,658 observed tokens, respectively, including failed-attempt usage and the Ollama smoke. All response records have HTTP 200, matching saved lengths and no transport-error metadata; application-level page failures remain in the results. Every Ollama stream terminates, all requests specify gemma4:31b-cloud, and generated counts range from 45 to 1,392, below the requested 4,096 ceiling. This observation does not prove future server-side cap enforcement.</p>
+<p>Four planned workflow records remain: three nonfatal completions and the UTF-8 harness failure in baseline claim 17. The three completed predictions match Refuted gold labels: 3/3 among completed workflows, or 3/4 counting the failure as incorrect; gate coverage is 0/4. Only claim 246 forms a complete pair, with three model assessments in each arm and no accepted verdict in either. Both candidate histories exhaust queries after round two, but recorded uncertain/contradicting citation judgments keep reassessment active. Neither has stop_reason=query_exhausted.</p>
+<p>The approval receipt exactly matches the frozen JSON protocol. The first 12 requests belong only to smoke and failed baseline 17; the remaining 63 belong only to previously untouched conditions. Recovery preserves the failed workflow, cumulative counters and original deadline. All sends precede that deadline and remain within service caps. I found no confirmed numerical or authorization must-fix for the completed scope. Unused headroom does not authorize added tasks or reruns.</p>
+<p><strong>what_results_dont_support:</strong> Live stopping savings, quality noninferiority, acceptance preservation, generalization, model superiority, monetary savings, or human-validated citation correctness. The baseline failure cannot be repaired analytically by substituting its raw model response for the failed workflow outcome. The revised manuscript correctly separates fixture behavior from this inconclusive live pilot and makes no efficacy or human-annotation claim. Compilation success establishes artifact buildability only.</p>
+<p><strong>missing_evidence:</strong> Completed matched cases where the stop actually triggers; prespecified quality-loss and resource-benefit margins; sufficient independent validation cases and uncertainty estimates; independent citation-support annotations. The current zero-acceptance sample cannot establish retained useful coverage.</p>
+<p><strong>suggested_claim_revision:</strong> “A conservative opt-in stopping implementation reduces calls in controlled fixtures. A two-claim live development pilot preserved semantic reassessment and triggered no early stops; its efficiency/quality effect remains unestablished.”</p>
+<p><strong>next_experiments_needed:</strong> Protocol only: freeze a targeted eligibility challenge separating exhausted states with completed review from exhausted states requiring reassessment. Use controlled evidence to isolate stopping, retain all failures, measure actual sends/tokens plus label and acceptance changes, and declare tolerable losses before observing validation outcomes. Keep reused examples developmental and human annotation parallel. Any further inference requires a new concrete approval; do not launch the full study.</p>
+<p><strong>confidence: high</strong> that the intended benefit is unsupported; confidence in its true effect remains low.</p>
+<p><strong>Memory update:</strong> Round 2 of 2 is complete. Accounting reconciles, recovery retained the failure, and neither candidate triggered. Preserve the baseline default, the NO GO decision and all raw records. Engineering progress and a compiled paper do not establish scientific readiness. No further review round or live execution is authorized by this verdict.</p>
+<h2 id="score-scope-comparison">Score scope comparison</h2>
+<p>8/10 concerns readiness to run a bounded engineering pilot; 4/10 concerns scientific readiness of its benefit claim after actual results. The scopes differ; this is not evidence of a regressing implementation. Full raw-response diff saved with traces.</p>
+<h2 id="method-description">Method Description</h2>
+<p>The graph classifies/decomposes a claim, retrieves source versions, assesses them with the existing Ollama model, checks deterministic and Jev citation gates, then routes to further research or finalization. The opt-in candidate shares retrieval query construction and stops only when no unused query remains and no pending source or semantic review work requires reassessment. It retains the last assessment and explicit stop reason; baseline remains default.</p>
+<p>The bounded sequential development pilot used the historical model/config with common client output/deadline/retry controls, counterbalanced condition order for two seeded claims, durable actual-send reservations, complete raw replies and preserved failures. No candidate stopped early because citation gaps preserved reassessment. The authorized scope is finished; full study NO GO, intended claim unsupported, human annotation pending in parallel.</p>
+<h2 id="sidecar-state">Sidecar — <code>REVIEW_STATE.json</code></h2>
+<details><summary>Sidecar JSON: <code>D:\Projects\!skripsi\KajiAI-LangGraph\artifacts\aris\run_20261102_222304_bdd31bb4\review-stage\REVIEW_STATE.json</code></summary><pre><code class="language-json">{
+  &quot;run_id&quot;: &quot;run_20261102_222304_bdd31bb4&quot;,
+  &quot;working_dir&quot;: &quot;D:\\Projects\\!skripsi\\KajiAI-LangGraph\\artifacts\\aris\\run_20261102_222304_bdd31bb4&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-02T15:50:37.309316+00:00&quot;,
+  &quot;round&quot;: 2,
+  &quot;max_rounds&quot;: 2,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;last_score&quot;: 4,
+  &quot;last_verdict&quot;: &quot;not ready&quot;,
+  &quot;review_scope&quot;: &quot;scientific readiness of stopping-benefit claim&quot;,
+  &quot;review_independence&quot;: &quot;same-family&quot;,
+  &quot;acceptance_status&quot;: &quot;provisional&quot;,
+  &quot;reviewer_route&quot;: {
+    &quot;backend&quot;: &quot;codex&quot;,
+    &quot;model&quot;: &quot;gpt-6-astra&quot;,
+    &quot;effort&quot;: &quot;xhigh&quot;,
+    &quot;transport&quot;: &quot;native&quot;
+  },
+  &quot;reported_reviewer_model&quot;: null,
+  &quot;actual_effort&quot;: null,
+  &quot;reviewer_session_id&quot;: &quot;/root/final_claim_reviewer&quot;,
+  &quot;pending_experiments&quot;: [],
+  &quot;submission_ready&quot;: false,
+  &quot;requested_reviewer_model&quot;: &quot;gpt-6-astra&quot;,
+  &quot;requested_effort&quot;: &quot;ultra&quot;,
+  &quot;review_completed&quot;: true,
+  &quot;review_scope_complete&quot;: true,
+  &quot;claim_supported&quot;: &quot;no&quot;,
+  &quot;termination_reason&quot;: &quot;max_two_new_research_boundaries_and_inconclusive_live_pilot&quot;,
+  &quot;full_study_decision&quot;: &quot;NO GO&quot;,
+  &quot;overall_work_status&quot;: &quot;authorized_runtime_pilot_scope_finished_further_research_requires_new_scope&quot;
+}</code></pre></details>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source path <code>artifacts\aris\run_20261102_222304_bdd31bb4\review-stage\AUTO_REVIEW.md</code> ·
+  SHA256 <code>20f7f9219f89</code> ·
+  generated at 2026-11-02 15:50 UTC.
+  This is a generated view — edit the source Markdown, then re-render.
+</footer>
+</main>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks.",
+        "query": "Search archived NIH/NIAID press pages for the original August 2008 news release containing Fauci's quoted statements about causes of death in the 1918 pandemic.",
+        "candidates": [
+          {
+            "title": "Predominant role of bacterial pneumonia as a cause of death ...",
+            "snippet": "by DM Morens · 2008 · Cited by 2275 — The majority of deaths in the 1918 -1919 influenza pandemic likely resulted directly from secondary bacterial pneumonia. National Institute of ...",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/18710327/"
+          },
+          {
+            "title": "Bacterial Pneumonia Caused Most Deaths In 1918 ...",
+            "snippet": "Aug 20, 2008 — The majority of deaths during the influenza pandemic of 1918 -1919 were not caused by the influenza virus acting alone, report researchers.",
+            "url": "https://www.sciencedaily.com/releases/2008/08/080819160107.htm"
+          },
+          {
+            "title": "Study: Bacterial pneumonia was main killer in 1918 flu ...",
+            "snippet": "Aug 22, 2008 — \"In essence, the virus landed the first blow while bacteria delivered the knockout punch,\" said Fauci in an NIAID news release . Lung sections ... Read more",
+            "url": "https://www.cidrap.umn.edu/influenza-vaccines/study-bacterial-pneumonia-was-main-killer-1918-flu-pandemic"
+          },
+          {
+            "title": "Bacterial Pneumonia to Blame for Most 1918 Flu Pandemic ...",
+            "snippet": "Fauci MD, NIAD director. The researchers microscopically examined lung tissue samples from soldiers who died of influenza in 1918 and 1919. The examination ... Read more",
+            "url": "https://respiratory-therapy.com/disorders-diseases/infectious-diseases/other-infections/bacterial-pneumonia-to-blame-for-most-1918-flu-pandemic-deaths/"
+          },
+          {
+            "title": "Predominant Role of Bacterial Pneumonia as a Cause ... - PMC",
+            "snippet": "by DM Morens · 2008 · Cited by 2275 — The majority of deaths in the 1918 –1919 influenza pandemic likely resulted directly from secondary bacterial pneumonia caused by common upper respiratory–tract ... Read more",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2599911/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-070-glm-candidate",
+  "timestamp": "2026-11-06T01:44:38.126874+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8943.437
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners. original source fact check",
+        "candidates": [
+          {
+            "title": "Jacob's charge that McMurray raised taxes on Grand Island is ...",
+            "snippet": "Slight increases. We spoke with McMurray, who confirmed that as a member of the town board on Grand Island, he voted to slightly increase taxes. Missing:  Nebraska,  | Show results with:",
+            "url": "https://politifact.com/factchecks/2020/oct/28/chris-jacobs/jacobs-charge-mcmurray-raised-taxes-grand-island-c/"
+          },
+          {
+            "title": "Grand Island maintains property tax rate despite county increases",
+            "snippet": "Grand Island's property tax rate will remain unchanged after the city council voted to lower the mill levy for the seventh consecutive year.",
+            "url": "https://nebraska.tv/news/local/grand-island-maintains-property-tax-rate-despite-county-increases"
+          },
+          {
+            "title": "[PDF] FEVER 2024 The Seventh Fact Extraction and VERification ...",
+            "snippet": "FEVER 2024 also hosts the AVeriTeC shared task on real-world fact-checking, which consists of an additional 5 oral and 10 poster presentations.",
+            "url": "https://aclanthology.org/2024.fever-1.pdf"
+          },
+          {
+            "title": "Local4 asked Grand Island's mayoral candidates about ...",
+            "snippet": "Local4 asked Grand Island's mayoral candidates about property taxes, the Good Life District and leadership at City Hall. Missing:  McMurray  fact  check",
+            "url": "https://www.facebook.com/KSNBLocal4/posts/local4-asked-grand-islands-mayoral-candidates-about-property-taxes-the-good-life/1761036812693131/"
+          },
+          {
+            "title": "Commissioners 'embarrassed' to learn paperwork issue could ...",
+            "snippet": "Commissioners 'embarrassed' to learn paperwork issue could raise taxes on rental property owners ... GRAND ISLAND, Neb. — A technicality could ...",
+            "url": "https://nebraska.tv/news/local/commissioners-embarrassed-to-learn-paperwork-issue-could-raise-taxes-on-rental-property-owners"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-baseline",
+  "timestamp": "2026-11-06T01:06:59.753996+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6685.062
+}

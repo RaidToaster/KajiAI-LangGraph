@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "Which specific media outlets are alleged to have published these articles, and which specific articles are identified?",
+        "candidates": [
+          {
+            "title": "Media Offenders – The White House",
+            "snippet": "Explore the Media Bias Tracker that fact checks and holds Fake News accountable. False claims debunked, Hall of Shame for serial offenders, Leaderboard of ...",
+            "url": "https://www.whitehouse.gov/mediabias/"
+          },
+          {
+            "title": "An investigation into an AI-generated South Florida “local ...",
+            "snippet": "An investigation into an AI-generated South Florida “local news outlet ” uncovered a national network of fake news sites using artificial ...",
+            "url": "https://www.facebook.com/wgcupublicmedia/posts/an-investigation-into-an-ai-generated-south-florida-local-news-outlet-uncovered-/1751672516965219/"
+          },
+          {
+            "title": "19 Real Events Caused by Fake News in the US",
+            "snippet": "In the US, “fake news ” frequently becomes widely shared on the internet. Recently, a shooting incident occurred as a result of this spreading of fake news . Read more",
+            "url": "https://www.marubeni.com/en/research/potomac/backnumber/19.html"
+          },
+          {
+            "title": "ProPublica — Investigative Journalism and News in the Public ...",
+            "snippet": "ProPublica is an independent, non-profit newsroom that produces investigative journalism in the public interest.",
+            "url": "https://www.propublica.org/"
+          },
+          {
+            "title": "Nearly 50 news websites are 'AI-generated', a study says. ...",
+            "snippet": "May 8, 2023 — Celebritiesdeaths.com is among 49 supposed news sites that NewsGuard, an organization tracking misinformation, has identified as “almost ... Read more",
+            "url": "https://www.theguardian.com/technology/2023/may/08/ai-generated-news-websites-study"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:46:11.094123+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5436.406
+}

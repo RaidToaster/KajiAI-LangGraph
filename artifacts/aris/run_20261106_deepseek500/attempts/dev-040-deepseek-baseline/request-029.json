@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "Rock musician Jon Bon Jovi performed for 12 people original source fact check",
+        "candidates": [
+          {
+            "title": "Bon Jovi",
+            "snippet": "Jon Bon Jovi began performing music live in 1975, at the age of 13, playing piano and guitar in New Jersey with his first band, Raze.",
+            "url": "https://en.wikipedia.org/wiki/Bon_Jovi"
+          },
+          {
+            "title": "It was such a privilege to witness the comeback of my dear friend Jon Bon ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/TonyRobbins/posts/it-was-such-a-privilege-to-witness-the-comeback-of-my-dear-friend-jon-bon-jovi-a/1640104697478870/"
+          },
+          {
+            "title": "Jon Bon Jovi told 20000 people he hadn't heard a roar like that in four years",
+            "snippet": "Jon Bon Jovi told 20,000 people he hadn't heard a roar like that in four years — and wasn't sure he'd remember what it felt like. That's a ...",
+            "url": "https://www.facebook.com/nj1015/posts/jon-bon-jovi-told-20000-people-he-hadnt-heard-a-roar-like-that-in-four-years-and/1064866492607690/"
+          },
+          {
+            "title": "Jon Bon Jovi Cuts Short Madison Square Garden Concert Due to Illness",
+            "snippet": "The Rock & Roll Hall of Fame band cut short their set at Madison Square Garden, as Jon Bon Jovi struggled with the effects of a sinus infection.",
+            "url": "https://www.billboard.com/music/rock/jon-bon-jovi-madison-square-garden-concert-illness-1236302176/"
+          },
+          {
+            "title": "Fun fact about Bon Jovi! Did you find this one suprising?! Let us know  # ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/RockShowSensation/posts/fun-fact-about-bon-jovi-did-you-find-this-one-suprising-let-us-know-livemusic-ro/906899758371832/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-baseline",
+  "timestamp": "2026-11-06T07:35:16.915584+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17706.218
+}

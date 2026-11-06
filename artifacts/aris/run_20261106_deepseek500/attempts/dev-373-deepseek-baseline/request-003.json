@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "the Indian Government set up 5 coaching centres for UPSC exams, 4 of which were in Muslim universities.",
+        "query": "the Indian Government set up 5 coaching centres for UPSC exams, 4 of which were in Muslim universities. evidence",
+        "candidates": [
+          {
+            "title": "The UPSC exam results are encouraging, with 53 Muslim ...",
+            "snippet": "The UPSC exam results are encouraging, with 53 Muslim candidates qualifying out of 958 top administrative services positions, and 4 breaking ...",
+            "url": "https://www.facebook.com/ejazhussainapm/posts/the-upsc-exam-results-are-encouraging-with-53-muslim-candidates-qualifying-out-o/1607779907013157/"
+          },
+          {
+            "title": "Civil Services Examination",
+            "snippet": "The Civil Services Examination (abbr. CSE) is a standardised test in India conducted by the Union Public Service Commission (UPSC) for recruitment to higher ...",
+            "url": "https://en.wikipedia.org/wiki/Civil_Services_Examination"
+          },
+          {
+            "title": "Muslims in Indian Administrative Service",
+            "snippet": "Muslim students in India mainly aspire to be doctors, engineers and MBAs which has led to severe shortage of Muslim professionals in other ...",
+            "url": "https://www.milligazette.com/news/4-national/14327-muslims-in-indian-administrative-service/"
+          },
+          {
+            "title": "53 Muslim Candidates Clear UPSC Civil Services Exam 2025",
+            "snippet": "The list of the selected Muslim candidates UPSC 2020 1) 23 Sadaf Choudhary 2) 58 Faizan Ahmed 3) 63 Dheenah Dastageer 4) 125 Md Manzar Hussain 5 ...",
+            "url": "https://www.facebook.com/thgenglish/videos/53-muslim-candidates-clear-upsc-civil-services-exam-2025/1955890485011276/"
+          },
+          {
+            "title": "Anjuman-I-Islam's UPSC Academy (AIUPSC)",
+            "snippet": "The Anjuman-I-Islam's UPSC Academy (AIUPSC), a coaching centre for UPSC Civil services and other allied exams aims to empower the students/candidates of Muslim ...",
+            "url": "https://www.aiktc.ac.in/wp-content/uploads/2021/04/AI-UPSC-Brochure.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-373-deepseek-baseline",
+  "timestamp": "2026-11-06T04:50:32.190145+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7821.5
+}

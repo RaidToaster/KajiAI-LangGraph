@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Pogba Has Quit The French National Team Over Macron's Remarks on Islam.",
+        "query": "Paul Pogba official statement or interview announcing retirement or withdrawal from French national team",
+        "candidates": [
+          {
+            "title": "Paul Pogba says he is doing everything to get back on the pitch.",
+            "snippet": "... retirement and says he does want to make a return to football ... The void left by Pogba on French national team is bery clear. Pogba ...",
+            "url": "https://www.facebook.com/SkySportsFootball/videos/paul-pogba-says-he-is-doing-everything-to-get-back-on-the-pitch/1558644265031609/"
+          },
+          {
+            "title": "Paul Pogba: I considered retiring before doping reprieve - ESPN",
+            "snippet": "Paul Pogba revealed he considered retirement after initially being handed a four-year ban for doping, admitting that he has to be \"more ...",
+            "url": "https://www.espn.com/soccer/story/_/id/41827512/paul-pogba-considered-retiring-doping-reprieve"
+          },
+          {
+            "title": "Paul Pogba - Wikipedia",
+            "snippet": "On 15 November 2024, Juventus announced that they had reached a mutual agreement with Pogba regarding the termination of his contract, starting from the ...",
+            "url": "https://en.wikipedia.org/wiki/Paul_Pogba"
+          },
+          {
+            "title": "Paul Pogba denies reports of quitting the French national team",
+            "snippet": "Paul Pogba took to social media to denounce rumors of him retiring from the French national football team. 'Unacceptable fake news', Pogba ...",
+            "url": "https://www.facebook.com/MUFCArenaOfficial/posts/paul-pogba-denies-reports-of-quitting-the-french-national-team/1323840677955715/"
+          },
+          {
+            "title": "Paul Pogba still thinks about Les Bleus: \"A return to the French ...",
+            "snippet": "Paul Pogba on why he chose France over Guinea: \"My brothers played for Guinea, but I wanted to play for France. They were born in Guinea, and ...",
+            "url": "https://www.reddit.com/r/soccer/comments/1g5mnro/paul_pogba_still_thinks_about_les_bleus_a_return/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-028-deepseek-candidate",
+  "timestamp": "2026-11-06T07:05:50.923592+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15940.234
+}

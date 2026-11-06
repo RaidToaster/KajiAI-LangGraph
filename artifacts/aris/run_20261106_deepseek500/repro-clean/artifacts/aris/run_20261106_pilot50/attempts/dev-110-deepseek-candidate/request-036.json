@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "New York Times, \"Ginsburg Supreme Court Vacancy Is the Second Closest to a U.S. Election Ever,\" Sept. 19, 2020",
+        "candidates": [
+          {
+            "title": "Ginsburg Supreme Court Vacancy Is the Second Closest to ...",
+            "snippet": "Ginsburg Supreme Court Vacancy Is the Second Closest to a U.S. Election Ever. By Larry Buchanan and Karen Yourish Sept. 19, 2020. Share full ...",
+            "url": "https://www.nytimes.com/interactive/2020/09/19/us/politics/supreme-court-vacancies-election-year.html"
+          },
+          {
+            "title": "Site Map - September 19, 2020",
+            "snippet": "But Landlords Are in Crisis, Too. Ginsburg Supreme Court Vacancy Is the Second Closest to a U.S. Election Ever · After Trump's TikTok Ban ...",
+            "url": "https://www.nytimes.com/sitemap/2020/09/19/"
+          },
+          {
+            "title": "McConnell Vows Vote on Ginsburg Replacement as Her ...",
+            "snippet": "Ginsburg Supreme Court Vacancy Is the Second Closest to a U.S. Election Ever ; Ruth Bader Ginsburg, Supreme Court's Feminist Icon, Is Dead at 87.",
+            "url": "https://www.nytimes.com/2020/09/18/us/politics/mitch-mcconnell-supreme-court-ruth-bader-ginsburg.html"
+          },
+          {
+            "title": "Polls Have Shown Voters Prefer Biden to Pick Next Justice",
+            "snippet": "Ginsburg Supreme Court Vacancy Is the Second Closest to a U.S. Election Ever. The death of Justice Ruth Bader Ginsburg on Friday left an ...",
+            "url": "https://www.nytimes.com/2020/09/19/upshot/supreme-court-polls.html"
+          },
+          {
+            "title": "For McConnell, Ginsburg's Death Prompts Stark Turnabout ...",
+            "snippet": "Ginsburg Supreme Court Vacancy Is the Second Closest to a U.S. Election Ever. The death of Justice Ruth Bader Ginsburg on Friday left an ...",
+            "url": "https://www.nytimes.com/2020/09/18/us/mitch-mcconnell-rbg-trump.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-deepseek-candidate",
+  "timestamp": "2026-11-06T01:17:09.109419+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7294.406
+}

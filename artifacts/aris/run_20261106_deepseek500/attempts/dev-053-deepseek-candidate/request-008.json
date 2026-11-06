@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The FBI is in possession of the president of the US's son  Hunter Biden's laptop.",
+        "query": "What is the chain of custody for the laptop, including who transferred it and when, according to available records?",
+        "candidates": [
+          {
+            "title": "Chain of Custody - StatPearls - NCBI Bookshelf - NIH",
+            "snippet": "by A Badiye · 2023 · Cited by 55 — The chain of custody is the most critical process of evidence documentation. It is necessary to assure the court of law that the evidence is authentic, ie, ...",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK551677/"
+          },
+          {
+            "title": "What Is Chain of Custody? A Guide for Ediscovery Teams",
+            "snippet": "Chain of custody, in the simplest of terms, is the chronological, documented record of everyone who has handled, accessed, or stored a piece ...",
+            "url": "https://www.everlaw.com/blog/ediscovery-best-practices/chain-of-custody-guide/"
+          },
+          {
+            "title": "Chain of Custody in Records Management",
+            "snippet": "Chain of custody is the chronological, documented record of every person who handled a record, every place it was held, and every action taken ...",
+            "url": "https://www.grmdocumentmanagement.com/blog/chain-of-custody-in-records-management-why-it-matters-and-how-to-enforce-it/"
+          },
+          {
+            "title": "What is chain of custody in forensics",
+            "snippet": "Chain of custody is the documented record of who collected, handled, transferred, examined, and stored evidence throughout an investigation.",
+            "url": "https://www.facebook.com/pnpfgnhq/posts/-forensic-terms-what-is-chain-of-custodyfinding-evidence-is-only-the-beginning-k/985249971285849/"
+          },
+          {
+            "title": "The Chain of Custody Breakdown: E-Waste Disposal Process",
+            "snippet": "Document the Transfer of Custody. A pickup record should identify the sending organization, receiving party, date, and items or containers ...",
+            "url": "https://getrepowered.org/the-chain-of-custody-breakdown-where-corporate-e-waste-actually-goes-after-pickup/?srsltid=AYCX9vLFEoRSDtA-nl7evZsNdGpGRL9ngutCGNN3JJ9mmGNuUQC34S36"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-053-deepseek-candidate",
+  "timestamp": "2026-11-06T08:15:23.253240+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20112.562
+}

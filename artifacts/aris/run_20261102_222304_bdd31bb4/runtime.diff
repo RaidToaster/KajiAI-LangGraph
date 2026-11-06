@@ -1,0 +1,116 @@
+diff --git a/src/kaji_langgraph/config/default.yaml b/src/kaji_langgraph/config/default.yaml
+index 71779c4..ca2fb79 100644
+--- a/src/kaji_langgraph/config/default.yaml
++++ b/src/kaji_langgraph/config/default.yaml
+@@ -28,6 +28,8 @@ policy:
+   max_token_limit: 250000
+   max_results_per_search: 5
+   max_stagnant_rounds: 2
++  # Experimental resource/quality tradeoff; baseline retains reassessment.
++  stop_on_query_exhaustion: false
+   retry_on_failure: true
+   max_retries: 3
+   retry_delay_seconds: 2
+diff --git a/src/kaji_langgraph/graph.py b/src/kaji_langgraph/graph.py
+index 947bd77..33a578f 100644
+--- a/src/kaji_langgraph/graph.py
++++ b/src/kaji_langgraph/graph.py
+@@ -88,6 +88,20 @@ def _citation_key(finding: str, url: str, quote: str, content_hash: str) -> str:
+     return hashlib.sha256(value.encode("utf-8")).hexdigest()
+ 
+ 
++def _unused_queries(state: ClaimState) -> list[str]:
++    """Use the same query inventory for retrieval and exhaustion decisions."""
++    previous = set(state.get("search_queries", []))
++    candidates = [
++        *state.get("assessment", EvidenceAssessment()).next_queries,
++        f"{state['claim']} evidence",
++        f"{state['claim']} counterevidence",
++        *[f"{assertion} evidence" for assertion in state["assertions"]],
++        *[f"{assertion} original source fact check" for assertion in state["assertions"]],
++    ]
++    queries = list(dict.fromkeys(q.strip() for q in candidates if q.strip() and q.strip() not in previous))
++    return queries or ([f"{state['claim']} evidence counterevidence"] if not previous else [])
++
++
+ class WorkflowNodes:
+     def __init__(
+         self, model: ModelBackend, retriever: Retriever, config: dict[str, Any],
+@@ -270,18 +284,7 @@ class WorkflowNodes:
+         budget = state["budgets"].model_copy(deep=True)
+         if _budget_reason(state):
+             return {"last_new_sources": 0, "budget_blocked": True}
+-        assessment = state.get("assessment", EvidenceAssessment())
+-        previous = set(state.get("search_queries", []))
+-        candidates = [
+-            *assessment.next_queries,
+-            f"{state['claim']} evidence",
+-            f"{state['claim']} counterevidence",
+-            *[f"{assertion} evidence" for assertion in state["assertions"]],
+-            *[f"{assertion} original source fact check" for assertion in state["assertions"]],
+-        ]
+-        queries = list(dict.fromkeys(query.strip() for query in candidates if query.strip() and query.strip() not in previous))
+-        if not queries:
+-            queries = [f"{state['claim']} evidence counterevidence"] if not previous else []
++        queries = _unused_queries(state)
+         allowed = min(
+             state["policy"].get("search_calls_per_round", 2),
+             max(0, budget.max_search_calls - budget.search_calls),
+@@ -295,11 +298,13 @@ class WorkflowNodes:
+         jev_audit = dict(state.get("jev_audit", {}))
+         search_ranking = list(jev_audit.get("search_ranking", []))
+         deadline_reached = False
++        round_queries: list[str] = []
+         for query in queries:
+             if _elapsed({**state, "budgets": budget}) >= budget.max_seconds:
+                 deadline_reached = True
+                 break
+             budget.search_calls += 1
++            round_queries.append(query)
+             self.progress(f"Search {budget.search_calls}/{budget.max_search_calls}: {query}")
+             max_retries = (
+                 max(0, int(state["policy"].get("max_retries", 0)))
+@@ -429,6 +434,7 @@ class WorkflowNodes:
+             "search_queries": [*state.get("search_queries", []), *queries],
+             "budgets": budget,
+             "last_new_sources": len(new_records),
++            "round_queries": round_queries,
+             "stagnant_rounds": stagnant,
+             "research_round": state.get("research_round", 0) + 1,
+             "errors": errors,
+@@ -527,7 +533,7 @@ class WorkflowNodes:
+             history.append(
+                 ResearchRound(
+                     round_number=state["research_round"],
+-                    queries=state.get("search_queries", [])[-state["policy"].get("search_calls_per_round", 2) :],
++                    queries=state.get("round_queries", []),
+                     new_sources=state.get("last_new_sources", 0),
+                     proposed_verdict=assessment.proposed_verdict,
+                     confidence=assessment.confidence,
+@@ -557,6 +563,14 @@ class WorkflowNodes:
+             stop_reason, route = "stagnant_research", "finalize"
+         elif reason := _budget_reason(state):
+             stop_reason, route = reason, "finalize"
++        elif (
++            state["policy"].get("stop_on_query_exhaustion", False)
++            and not _unused_queries(state)
++            # A no-search round can still finish pending source/citation work.
++            and not (self.jev and any(not s.jev_scores for s in state.get("sources", [])))
++            and not state.get("semantic_gaps")
++        ):
++            stop_reason, route = "query_exhausted", "finalize"
+         else:
+             stop_reason, route = "", "research"
+         history = list(state["research_history"])
+diff --git a/src/kaji_langgraph/state.py b/src/kaji_langgraph/state.py
+index 18ad068..7ed1bd4 100644
+--- a/src/kaji_langgraph/state.py
++++ b/src/kaji_langgraph/state.py
+@@ -34,6 +34,7 @@ class ClaimState(TypedDict, total=False):
+     fatal_error: bool
+     budget_blocked: bool
+     search_queries: list[str]
++    round_queries: list[str]
+     stagnant_rounds: int
+     last_new_sources: int
+     route: str

@@ -1,0 +1,66 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://www.koin.com/news/crime/clackamas-county-2-arson-arrests-not-connected-to-wildfires/ contains verbatim: Sammy Piatt, 53, and Ignat Shchetinin, 37, were both arrested and booked Friday on charges that included arson. He's now being held on $250,000 ...",
+            "url": "https://www.koin.com/news/crime/clackamas-county-2-arson-arrests-not-connected-to-wildfires/",
+            "quote": "Sammy Piatt, 53, and Ignat Shchetinin, 37, were both arrested and booked Friday on charges that included arson. He's now being held on $250,000 ...",
+            "context": "Sammy Piatt, 53, and Ignat Shchetinin, 37, were both arrested and booked Friday on charges that included arson. He's now being held on $250,000 ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.facebook.com/CBS2Boise/videos/ontario-man-charged-with-15-counts-of-arson/1326289052923904/ contains verbatim: Ontario man arrested, charged with 15 counts of arson in Malheur County fires. Fires are being started in clackamas County too.",
+            "url": "https://www.facebook.com/CBS2Boise/videos/ontario-man-charged-with-15-counts-of-arson/1326289052923904/",
+            "quote": "Ontario man arrested, charged with 15 counts of arson in Malheur County fires. Fires are being started in clackamas County too.",
+            "context": "Ontario man arrested, charged with 15 counts of arson in Malheur County fires. Fires are being started in clackamas County too."
+          },
+          {
+            "finding": "Retained snippet record for https://www.facebook.com/ABC17News/posts/a-man-has-been-charged-with-first-degree-arson-in-connection-with-one-of-three-w/1709393764131248/ contains verbatim: ...”Four people have been arrested for arson for deliberately starting blazes along the West Coast including one man who livestreamed the ...",
+            "url": "https://www.facebook.com/ABC17News/posts/a-man-has-been-charged-with-first-degree-arson-in-connection-with-one-of-three-w/1709393764131248/",
+            "quote": "...”Four people have been arrested for arson for deliberately starting blazes along the West Coast including one man who livestreamed the ...",
+            "context": "...”Four people have been arrested for arson for deliberately starting blazes along the West Coast including one man who livestreamed the ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-355-deepseek-candidate",
+  "timestamp": "2026-11-06T04:18:16.725380+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5886.046
+}

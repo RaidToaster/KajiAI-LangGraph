@@ -1,0 +1,27 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans."
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "domain": {
+          "type": "choice",
+          "instructions": "Which domain best describes the factual claim? Do not judge whether it is true.",
+          "criteria": {
+            "general": "A factual claim outside the other three specialist domains.",
+            "scientific": "A claim about scientific research or findings, excluding clinical health claims.",
+            "political": "A claim about government, elections, public officials, or public policy.",
+            "health_medical": "A claim about human health, disease, treatment, medicine, or clinical research."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-05T10:10:59.499655+00:00",
+  "status": "reserved_outcome_unknown"
+}

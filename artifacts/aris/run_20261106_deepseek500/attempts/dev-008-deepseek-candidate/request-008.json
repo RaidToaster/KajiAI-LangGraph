@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "What election, jurisdiction, and ballot-counting process does the statement refer to?",
+        "candidates": [
+          {
+            "title": "How are Nevada ballots counted and verified?",
+            "snippet": "Here are details of the ballot counting and verification process, according to information provided by the Nevada secretary of state's office.",
+            "url": "https://www.reviewjournal.com/news/politics-and-government/nevada/how-are-nevada-ballots-counted-and-verified-2177540/"
+          },
+          {
+            "title": "Ballot Counting Process: How Your Vote Is Verified and ...",
+            "snippet": "You will be asked to fill out information, typically on an envelope, to help election workers determine whether you are eligible to vote. Your ...",
+            "url": "https://www.superlawyers.com/resources/civil-rights/ballot-counting-process-how-your-vote-is-verified-and-tallied/"
+          },
+          {
+            "title": "The Polls Have Closed. What Happens Now?",
+            "snippet": "During canvassing, states verify voters' signatures, review provisional ballots and determine voter eligibility to ensure that all eligible ...",
+            "url": "https://www.ncsl.org/resources/details/the-polls-have-closed-what-happens-now"
+          },
+          {
+            "title": "The Bipartisan Policy Center Explains Vote Counting",
+            "snippet": "Typically, one worker states the vote for each candidate and issue on a ballot, another worker views the ballot to ensure each vote is accurately stated, and ...",
+            "url": "https://www.usvotefoundation.org/election-integrity-bipartisan-policy-vote-counting"
+          },
+          {
+            "title": "This is how votes are counted and verified in U.S. elections",
+            "snippet": "After verifying the legitimacy of ballots, opening millions of envelopes, and carefully tracking every step, election officials are ready to count the votes!",
+            "url": "https://act.represent.us/sign/how-votes-are-counted"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-candidate",
+  "timestamp": "2026-11-06T05:52:01.287489+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11510.609
+}

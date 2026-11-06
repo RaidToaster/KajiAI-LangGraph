@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Republican Matt Gaetz was part of a company that had to pay 75 million in hospice fraud. They stole from dying people.",
+        "query": "What primary records (court filings, settlement agreements, enforcement actions) document a 75 million payment or penalty related to hospice fraud involving any company connected to Matt Gaetz?",
+        "candidates": [
+          {
+            "title": "Misleading Posts Target GOP Rep. Matt Gaetz - FactCheck.org",
+            "snippet": "Oct 31, 2019 · ... Gaetz. “He was part of a company that had to pay 75 million in hospice fraud. They stole from dying people. He is the swamp.” Like many ... Missing: primary agreements, penalty",
+            "url": "https://www.factcheck.org/2019/10/misleading-posts-target-gop-rep-matt-gaetz/"
+          },
+          {
+            "title": "Lawsuit accuses Senate President Don Gaetz's former company of ...",
+            "snippet": "May 9, 2013 · ... Gaetz, accusing the company of engaging in Medicare fraud for more than 11 years, including during the time Gaetz was vice chairman. The ... Missing: primary settlement agreements, enforcement +4",
+            "url": "https://www.tampabay.com/news/politics/legislature/senate-president-don-gaetzs-former-company-sued-for-medicaid-fraud/2120026/"
+          },
+          {
+            "title": "[PDF] Journal of the S E N A T E State of Florida",
+            "snippet": "Nov 20, 2018 · ... fact or make any false, fictitious, or fraudulent statement or re- presentation or make or use any writing or document knowing the same contains ...",
+            "url": "https://www.flsenate.gov/usercontent/session/archive/journals/2019/2019-sj-bound-vI.pdf"
+          },
+          {
+            "title": "- PROTECTING DREAMERS AND TPS RECIPIENTS - GovInfo",
+            "snippet": "... fraud measures and enforcement were invited by our side. Most of my--my Democratic colleagues know without including sufficient measures addressing fraud ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-116hhrg36231/html/CHRG-116hhrg36231.htm"
+          },
+          {
+            "title": "H. Rept. 115-699 - FORMERLY INCARCERATED REENTER ...",
+            "snippet": "... relating to fraud and related activity in connection with computers. ``(xiii) Any section of chapter 51, relating to homicide, except for section 1112 (relating ...",
+            "url": "https://www.congress.gov/committee-report/115th-congress/house-report/699/1"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-004-deepseek-candidate",
+  "timestamp": "2026-11-06T05:22:13.957459+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9723.265
+}

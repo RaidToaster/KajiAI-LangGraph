@@ -1,0 +1,248 @@
+{
+  "parsed": true,
+  "parse_error": null,
+  "decisions": [
+    {
+      "id": "sufficient",
+      "proposed_verdict": "TRUE",
+      "confidence": "High",
+      "summary": "Two independent sources agree that the Northport council approved the bridge plan seven votes to two on 1 June 2024.",
+      "evidence": [
+        {
+          "finding": "Council minutes for the 1 June 2024 meeting record approval with seven votes in favor and two against.",
+          "source": "N1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "An independent reporter who attended and personally tallied the roll call confirms a seven-to-two result on 1 June 2024 and found no subsequent reversal at that meeting.",
+          "source": "N2",
+          "passage": "P1",
+          "stance": "supports"
+        }
+      ],
+      "resolved": true,
+      "gaps": [],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": []
+    },
+    {
+      "id": "attribution",
+      "proposed_verdict": "TRUE",
+      "confidence": "High",
+      "summary": "The claim is about what Mayor Imani said, and both the transcript and an independently made audio recording confirm he made the quoted 20-percent statement on 2024-02-02.",
+      "evidence": [
+        {
+          "finding": "Interview transcript dated 2024-02-02 records Mayor Imani saying Eastport unemployment fell by 20 percent between 2022 and 2023.",
+          "source": "I1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "Reporter B independently audio-recorded the same 2024-02-02 interview; the recording contains Imani saying the identical statement.",
+          "source": "I2",
+          "passage": "P1",
+          "stance": "supports"
+        }
+      ],
+      "resolved": true,
+      "gaps": [],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": []
+    },
+    {
+      "id": "insufficient_content",
+      "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "Medium",
+      "summary": "Whether Eastport unemployment actually fell by 20 percent between 2022 and 2023 is only evidenced by Mayor Imani's own statement, which the supplied records confirm as an utterance but never check against any dataset.",
+      "evidence": [
+        {
+          "finding": "The transcript records Imani stating the 20 percent fall, but explicitly provides no unemployment dataset.",
+          "source": "I1",
+          "passage": "P1",
+          "stance": "context"
+        },
+        {
+          "finding": "Reporter B's independent recording confirms Imani made the statement but states the statistic was not verified.",
+          "source": "I2",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "No labor statistics or measurement of Eastport unemployment for 2022 and 2023 are supplied.",
+        "Reporter B explicitly did not verify the statistic."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": false,
+      "ledger": []
+    },
+    {
+      "id": "conflicting",
+      "proposed_verdict": "CONFLICTING",
+      "confidence": "Medium",
+      "summary": "Two independent, similarly scoped 2023 measurements of the same Westport citywide median disagree (28 vs 34 minutes), one under and one over the 30-minute threshold, with the discrepancy unresolved.",
+      "evidence": [
+        {
+          "finding": "Lab A's independent citywide 2023 sample yields a median of 28 minutes, satisfying the less-than-30 condition.",
+          "source": "W1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "Lab B's independent citywide 2023 sample yields a median of 34 minutes, above the 30-minute threshold, without using Lab A's observations.",
+          "source": "W2",
+          "passage": "P1",
+          "stance": "refutes"
+        },
+        {
+          "finding": "Lab B records that the discrepancy between the two measurements has not been resolved.",
+          "source": "W2",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "No data or review resolves the 28 vs 34 minute discrepancy."
+      ],
+      "contradictions": [
+        "Lab A median 28 minutes vs Lab B median 34 minutes for the same population and period."
+      ],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": []
+    },
+    {
+      "id": "shared",
+      "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "Medium",
+      "summary": "The causal 15-percent reduction claim originates solely from a vendor whose release admits no adjustment for confounders, and the second record only repeats the vendor's figures without verification, so attribution of causation is unsupported.",
+      "evidence": [
+        {
+          "finding": "Vendor press release asserts the 15 percent reduction but admits comparing before/after delays without adjusting for traffic volume, construction, seasonality or other changes, undermining causal attribution.",
+          "source": "S1",
+          "passage": "P1",
+          "stance": "context"
+        },
+        {
+          "finding": "The Southport Bulletin repeats the vendor's figures and explicitly did not collect or independently verify any measurements.",
+          "source": "S2",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "No independent measurements of Southport junction delays for 2023 or 2024 are supplied.",
+        "No comparison population or control for the causal condition exists; the causal inference from the 2023-to-2024 difference is unvalidated.",
+        "The only secondhand account derives from the same vendor source, so it adds no independence."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": false,
+      "ledger": []
+    },
+    {
+      "id": "train-1225",
+      "proposed_verdict": "TRUE",
+      "confidence": "Medium",
+      "summary": "For the ~2020 context, Bloomberg's ~$64.2B net worth exceeds the combined wealth of the bottom 38 percent of households (~125.7 million people), an independent replication confirming even with a lower bottom-38% figure of ~$6 billion, though derivation detail (125M population estimate) creates minor residual uncertainty.",
+      "evidence": [
+        {
+          "finding": "Using Forbes ($64.2B) and Fed SCF data (bottom 38% of households, ~47.8M households / ~2.63 members, ~$11.4B combined), the analysis concludes Bloomberg owns nearly six times the wealth of the bottom ~125.7 million people.",
+          "source": "S1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "P2 completes the derivation: bottom 38% ≈ 47.8M households × 2.63 members ≈ 125.7M people, with combined wealth of $11.4B, so Bloomberg's wealth is nearly 6× greater.",
+          "source": "S1",
+          "passage": "P2",
+          "stance": "supports"
+        },
+        {
+          "finding": "PolitiFact commissioned an independent replication (Gross, University of Michigan), which found the bottom 38% held about $6 billion rather than $11.4B, but verified either way that Bloomberg held more wealth than the bottom 38% of US households combined; PolitiFact also identifies Bloomberg as former mayor of New York.",
+          "source": "S2",
+          "passage": "P2",
+          "stance": "supports"
+        },
+        {
+          "finding": "Sanders made the exact statement at the Feb. 19, 2020 Las Vegas debate, establishing the attribution context and wording.",
+          "source": "S2",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "No primary Forbes or Federal Reserve SCF source is directly supplied; figures rest on the analyzing publications (S1, S3) and PolitiFact's replication of Bruenig's math.",
+        "The lower replication estimate ($6B) narrows but does not eliminate uncertainty about the exact bottom-38% wealth figure; the 125-million person figure depends on an average-membership assumption.",
+        "Snippet records S5 and S6 provide no substantive data and are not used."
+      ],
+      "contradictions": [
+        "Bruenig estimate of bottom-38% wealth ($11.4B) vs PolitiFact's replication estimate (~$6B), though both are far below Bloomberg's net worth and the comparison holds under either figure."
+      ],
+      "counterevidence_searched": true,
+      "sources_independent": false,
+      "ledger": []
+    }
+  ],
+  "anchor_gate": {
+    "gaps": [
+      "No primary Forbes or Federal Reserve SCF source is directly supplied; figures rest on the analyzing publications (S1, S3) and PolitiFact's replication of Bruenig's math.",
+      "The lower replication estimate ($6B) narrows but does not eliminate uncertainty about the exact bottom-38% wealth figure; the 125-million person figure depends on an average-membership assumption.",
+      "Snippet records S5 and S6 provide no substantive data and are not used.",
+      "Bruenig estimate of bottom-38% wealth ($11.4B) vs PolitiFact's replication estimate (~$6B), though both are far below Bloomberg's net worth and the comparison holds under either figure.",
+      "Evidence confidence remains below High.",
+      "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "errors": [],
+    "fatal_error": false,
+    "jev_audit": {
+      "citations": [
+        {
+          "round": 1,
+          "finding": "Using Forbes ($64.2B) and Fed SCF data (bottom 38% of households, ~47.8M households / ~2.63 members, ~$11.4B combined), the analysis concludes Bloomberg owns nearly six times the wealth of the bottom ~125.7 million people.",
+          "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+          "key": "c86deb15983be2671abba5423a4c08eb2d88f75ccffb0b8169306581a231c95d",
+          "relation": "supports",
+          "confidence": 0.98
+        },
+        {
+          "round": 1,
+          "finding": "P2 completes the derivation: bottom 38% ≈ 47.8M households × 2.63 members ≈ 125.7M people, with combined wealth of $11.4B, so Bloomberg's wealth is nearly 6× greater.",
+          "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+          "key": "85fa59eab31510fb43fb96943bfe66a0f614da7fba0f45eeb522ad661060548e",
+          "relation": "supports",
+          "confidence": 1.0
+        },
+        {
+          "round": 1,
+          "finding": "PolitiFact commissioned an independent replication (Gross, University of Michigan), which found the bottom 38% held about $6 billion rather than $11.4B, but verified either way that Bloomberg held more wealth than the bottom 38% of US households combined; PolitiFact also identifies Bloomberg as former mayor of New York.",
+          "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+          "key": "67e20c20e51f387a72fbdde8f2f96cfbfc1582d3a80f14bc0af6a46a9f7a2e8b",
+          "relation": "supports",
+          "confidence": 0.83
+        },
+        {
+          "round": 1,
+          "finding": "Sanders made the exact statement at the Feb. 19, 2020 Las Vegas debate, establishing the attribution context and wording.",
+          "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+          "key": "3eacca723b2a40b7690bd5d423f1e51ec4b0ca0236200d1457f689157baf8d98",
+          "relation": "supports",
+          "confidence": 1.0
+        }
+      ]
+    }
+  },
+  "anchor_gate_eligible": false,
+  "scope": "Prospective fixed development packet; authored controls are not empirical acceptances; no live retrieval/workflow result."
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "From 8th October the UK government will combine weekly flu and covid reports.",
+        "query": "Did the UK government announce a change to combine weekly flu and COVID-19 reports, and on what date was the announcement made?",
+        "candidates": [
+          {
+            "title": "National flu and COVID-19 surveillance report: 22 October ...",
+            "snippet": "National flu and COVID-19 surveillance report: 22 October 2026 (week 43). Updated 5 November 2026. Applies to England. Contents. Main points ...",
+            "url": "https://www.gov.uk/government/statistics/national-flu-and-covid-19-surveillance-reports-2026-to-2027-season/national-flu-and-covid-19-surveillance-report-22-october-2026-week-43"
+          },
+          {
+            "title": "Dr Suzanna McDonald is back with #UKHSAVirusWatch. ...",
+            "snippet": "COVID-19 activity has also increased slightly in recent weeks but it remains at low levels in the UK. Like flu, COVID-19 viruses also change ...",
+            "url": "https://www.facebook.com/UKHealthSecurityAgency/videos/dr-suzanna-mcdonald-is-back-with-ukhsaviruswatch-with-possible-signs-of-an-early/1628737968847986/"
+          },
+          {
+            "title": "Flu and Covid-19 statistics are being published in one ...",
+            "snippet": "Covid-19 and influenza reports are being combined. Our verdict. This is correct, but it will have no effect on the numbers, which will still be ...",
+            "url": "https://fullfact.org/health/flu-covid-phe-not-combined/"
+          },
+          {
+            "title": "UKHSA data dashboard",
+            "snippet": "The UKHSA data dashboard shares public health data in a simple, inclusive and accessible way. The dashboard covers a range of topics such as respiratory viruses ...",
+            "url": "https://ukhsa-dashboard.data.gov.uk/"
+          },
+          {
+            "title": "UKHSAVirusWatch: The latest flu, COVID-19 and RSV data ...",
+            "snippet": "Flu activity decreased and is circulating at baseline levels COVID-19 activity decreased and is circulating at baseline levels RSV ...",
+            "url": "https://www.facebook.com/UKHealthSecurityAgency/posts/ukhsaviruswatch-the-latest-flu-covid-19-and-rsv-data-from-our-weekly-winter-surv/1205049391800266/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-123-deepseek-candidate",
+  "timestamp": "2026-11-06T04:03:26.343776+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4995.656
+}

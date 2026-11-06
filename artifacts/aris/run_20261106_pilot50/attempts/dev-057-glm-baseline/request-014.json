@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Provide the draft content to be assessed.",
+        "candidates": [
+          {
+            "title": "What is a demand draft, telephone check, or preauthorized ...",
+            "snippet": "Aug 22, 2024 — A demand draft allows someone to withdraw money from your checking account without your signature. It is also called a telephone check or ... Read more",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-demand-draft-telephone-check-or-preauthorized-draft-en-1067/"
+          },
+          {
+            "title": "Guidance for Applicant Prepared Draft EAs",
+            "snippet": "Applicants should consult with the staff regarding the format, content , level of analysis, and perspective appropriate for the APDEA. As an example, the ... Read more 3 pages",
+            "url": "https://www.ferc.gov/sites/default/files/2020-04/draft-ea-guidance.pdf"
+          },
+          {
+            "title": "Real-World Data: Assessing Electronic Health Records ...",
+            "snippet": "Jul 25, 2024 — This guidance is intended to provide sponsors and other interested parties with considerations when proposing to use electronic health records ( ... Read more",
+            "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/real-world-data-assessing-electronic-health-records-and-medical-claims-data-support-regulatory"
+          },
+          {
+            "title": "New England wetland functional assessment, Draft user guide",
+            "snippet": "The primary objective of any aquatic resource assessment typically falls into one of three categories: 1) To document existing conditions 2) To compare ... 242 pages",
+            "url": "https://www.nae.usace.army.mil/Portals/74/docs/regulatory/Davis/13.NEWFA-Draft-User%20Guide%20_October2025.pdf"
+          },
+          {
+            "title": "Creating an Item Bank Assessment - Renaissance Learning",
+            "snippet": "Item Bank assessments can be created by filtering existing items by linked standards, item type, grade level, subject, etc., adding the desired items, Item ...",
+            "url": "https://support.renaissance.com/s/article/Creating-an-Item-Bank-Assessment-1752675510956?language=en_US"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-baseline",
+  "timestamp": "2026-11-06T01:06:54.229449+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6679.531
+}

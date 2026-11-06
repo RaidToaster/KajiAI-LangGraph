@@ -1,0 +1,48 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "PolitiFact adjudicated Joe Biden's identical claim that Sanders 'opposed Obamacare' as leaving out key facts, because Sanders voted for the law while preferring single-payer.",
+            "url": "https://politifact.com/factchecks/2020/feb/27/joe-biden/joe-biden-leaves-out-key-facts-claim-bernie-sander/",
+            "quote": "Sanders and Barack Obama “were close buddies.” But they were not, Biden said, claiming that Sanders was against Obama’s signature health care law.\n\nSanders “opposed Obamacare, didn’t like the fact we didn’t push a single-payer option,” Biden said in an MSNBC interview aired Feb. 23.\n\nIs Biden right? If viewers were left with the impression that Sanders voted against Obamacare, they were misled. Sanders voted for the law. But Sanders also wanted",
+            "context": "Joe Biden  \n\nstated on February 23, 2020 in an MSNBC interview:\n\nSays Bernie Sanders “opposed Obamacare, didn’t like the fact we didn’t push a single-payer option.”\n\nDemocratic presidential candidates former Vice President Joe Biden, left, and Sen. Bernie Sanders, I-Vt., speak during a Democratic presidential primary debate Thursday, Dec. 19, 2019, in Los Angeles. (AP)\n\nBy\n\nMiriam Valverde \n  \n\nFebruary 27, 2020\n\n# Joe Biden leaves out key facts in claim that Bernie Sanders opposed Obamacare\n\n#### If your time is short\n\n* Sen. Bernie Sanders voted in favor of Obamacare.\n* Sanders wanted a single-payer option in the law and did not like that it was not part of it.\n* Sanders successfully pushed for the inclusion of $11 billion in funding for community health centers, especially in rural areas. He said that expansion was an important factor in helping him vote for the bill.\n\nSee the sources for this fact-check\n\nFormer Vice President Joe Biden said Sen. Bernie Sanders talks in a way that one would think Sanders and Barack Obama “were close buddies.” But they were not, Biden said, claiming that Sanders was against Obama’s signature health care law.\n\nSanders “opposed Obamacare, didn’t like the fact we didn’t push a single-payer option,” Biden said in an MSNBC interview aired Feb. 23.\n\nIs Biden right? If viewers were left with the impression that Sanders voted against Obamacare, they were misled. Sanders voted for the law. But Sanders also wanted a single-payer option in the law and didn’t like that it wasn’t included.\n\n“I think it is fair to say that Sen. Sanders was ambivalent about the ACA and uncertain if he was going to vote for it during much of the 2009-10 debate,” said Jonathan Oberlander, a professor at the University of North Carolina at Chapel Hill and an expert on the law.\n\nBut Sanders voted for the bill, Oberlander said, “so it’s not fair to simply say he opposed it.”\n\n## Biden cites Sanders pre-vote hesitance as evidence of opposition\n\nObama on March 23, 2010, signed into law the Patient Protection and Affordable Care Act, better known as Obamacare. The Senate passed the health care bill, 60-39, on Dec. 24, 2009, with Sanders voting in favor. No Senate Republican supported it.\n\nAbout a week before, Sanders told Fox News’ Neil Cavuto that he was not yet a “yes” vote on the bill. “I am going to do my best to make this bill a better bill, a bill that I can vote for, but I have indicated both to the White House and the Democratic leadership that my vote is not secure at this point,” Sanders said Dec. 16, 2009.\n\nSanders said that without a public option, he worried about controlling costs.\n\n“What a strong Medicare"
+          },
+          {
+            "finding": "Context: Sanders proposed replacing Obamacare with a government-run single-payer plan, and Obama said Sanders' supporters helped undermine the law, but this advocacy coexisted with his vote for and defense of the ACA.",
+            "url": "https://www.reuters.com/article/world/obama-says-sanders-supporters-helped-undermine-obamacare-idUSKBN14Q2E4/",
+            "quote": "During Sanders' campaign for the presidential nomination, he proposed replacing Obamacare with a government-run single-payer health insurance ...",
+            "context": "During Sanders' campaign for the presidential nomination, he proposed replacing Obamacare with a government-run single-payer health insurance ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-03T05:34:54.224351+00:00",
+  "status": "reserved_outcome_unknown"
+}

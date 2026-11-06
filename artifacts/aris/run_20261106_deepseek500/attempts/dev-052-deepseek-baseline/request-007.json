@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund. counterevidence",
+        "candidates": [
+          {
+            "title": "Misleading claim circulates that World Bank and IMF were established by ...",
+            "snippet": "The Tagalog-language post translates to English in part as: \"President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD ...",
+            "url": "https://factcheck.afp.com/misleading-claim-circulates-world-bank-and-imf-were-established-former-dictator-ferdinand-marcos-and"
+          },
+          {
+            "title": "FALSE: Ferdinand Marcos, Jose Rizal established World Bank",
+            "snippet": "Claim: Former President Ferdinand Marcos and national hero Jose Rizal established the “global debt facility,” also known as the World Bank.",
+            "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-jose-rizal-established-world-bank/"
+          },
+          {
+            "title": "The myth that Ferdinand Marcos & Jose Rizal established the IMF & ...",
+            "snippet": "The myth that Ferdinand Marcos & Jose Rizal established the IMF & World Bank is FALSE. The IMF-WB was established in 1944 by member ...",
+            "url": "https://x.com/SaltAndReality/status/1451380428141596672"
+          },
+          {
+            "title": "#FactCheck: Dictator Ferdinand Marcos, Sr., lawyer of Jose Rizal? ...",
+            "snippet": "... Jose Rizal was not shot in Bagumbayan but instead lived up to a 113 years old and was able to establish World Bank alongside Ferdinand Marcos Sr ...",
+            "url": "https://www.facebook.com/pressoneph/posts/factcheck-dictator-ferdinand-marcos-sr-lawyer-of-jose-rizal-not-true-this-is-rec/1106060296917290/"
+          },
+          {
+            "title": "FALSE: Ferdinand Marcos inherits Jose Rizal's gold in Vatican Bank",
+            "snippet": "Claim: National hero Jose Rizal owned a “White Vatican Account” and transferred it to former president Ferdinand Marcos. · Rating: FALSE ...",
+            "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-inherits-gold-jose-rizal-vatican-bank/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-baseline",
+  "timestamp": "2026-11-06T08:11:21.041147+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19870.343
+}

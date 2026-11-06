@@ -1,0 +1,1074 @@
+{
+  "case": "dev-021",
+  "model": "deepseek",
+  "arm": "baseline",
+  "requested_model": "deepseek-v4.1-flash:cloud",
+  "gold_label": "",
+  "predicted_label": "Not Enough Evidence",
+  "accepted_label": "ABSTAIN",
+  "result": {
+    "claim": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+    "domain": "political",
+    "verdict": "UNVERIFIED",
+    "predicted_verdict": "NOT_ENOUGH_EVIDENCE",
+    "prediction_confidence": "Low",
+    "prediction_summary": "",
+    "verification_status": "insufficient_evidence",
+    "confidence": "Low",
+    "summary": "The evidence did not meet the verification criteria. No supported verdict yet. Evidence confidence remains below High. Every finding needs retrieved citations. Find relevant evidence from at least two source hosts. Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. Search for evidence against the proposed conclusion. Establish source independence; copied reporting is not corroboration.",
+    "stop_reason": "max_rounds",
+    "reference_date": "2020-10-27",
+    "reference_timezone": "SE Asia Standard Time",
+    "execution_id": "1e3c0696-4b9e-4721-96e1-a183245d4568",
+    "elapsed_seconds": 152.65599999999904,
+    "evidence": [],
+    "sources": [],
+    "retrieval_ledger": [
+      {
+        "title": "s-nlp/AVeriTeC_dev_filtered_10shot",
+        "url": "https://huggingface.co/datasets/s-nlp/AVeriTeC_dev_filtered_10shot",
+        "snippet": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as ...",
+        "page_text": "Dataset Viewer\n\n  Auto-converted to Parquet    Duplicate\n\n \n\nSubset (1)\n\ndefault · 427 rows\n\ndefault (427 rows) \n\nSplit (1)\n\ndev · 427 rows\n\ndev (427 rows)\n\n| Unnamed: 0  int64  0  499 | claim  stringlengths  19  310 | required\\_reannotation  bool  2 classes | label  stringclasses  2 values | justification  stringlengths  4  1.04k | claim\\_date  stringdate  2020-08-26 00:00:00  2020-10-31 00:00:00 | speaker  stringlengths  5  98  ⌀ | original\\_claim\\_url  stringlengths  24  469  ⌀ | fact\\_checking\\_article  stringlengths  78  250 | reporting\\_source  stringlengths  3  122  ⌀ | location\\_ISO\\_code  stringclasses  24 values | claim\\_types  stringclasses  14 values | fact\\_checking\\_strategies  stringclasses  18 values | questions  stringlengths  248  17.3k | cached\\_original\\_claim\\_url  stringlengths  24  562  ⌀ | is\\_correct  float64  0  1 | is\\_hallu  float64  0  1 | primed\\_text  stringlengths  4.27k  4.56k | out  stringlengths  80  286 | out\\_clean  stringclasses  3 values | is\\_good  bool  2 classes |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 0 | In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial. | false | Refuted | The answer and sources show that the claim was published in a fake news site so the claim is refuted. | 31-10-2020 | null | null | https://web.archive.org/web/20201130144023/https://checkyourfact.com/2020/11/03/fact-check-sean-connery-letter-steve-jobs-apple-1998/ | Facebook | null | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'Where was the claim first published', 'answers': [{'answer': 'It was first published on Sccopertino', 'answer\\_type': 'Abstractive', 'source\\_url': 'https://web.archive.org/web/20201129141238/https://scoopertino.com/exposed-the-imac-disaster-that-almost-was/', 'source\\_medium': 'Web text', 'cached\\_source\\_ur... | null | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact mentions specific individuals (Sean Connery and Steve Jobs) and a particular company (Apple), making it uniquely identifiable; GOOD | GOOD | true |\n| 1 | Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents | false | Refuted | Seems that the Wzshington post accused the singer wrong lyrics. Therefore the claim is refuted | 31-10-2020 | null | null | https://web.archive.org/web/20201103001419/https://leadstories.com/hoax-alert/2020/11/fact-check-trump-administration-did-not-claim-songwriter-billie-eilish-was-destroying-country-in-leaked-documents.html | Instagram | US | ['Position Statement', 'Event/Property Claim'] | ['Written Evidence'] | [{'question': 'Has the Trump administration voiced that Billie Eilish was destroying the country', 'answers': [{'answer': 'A Washington Post story wrongly claimed the Trump administration accused Billie Eilish of “destroying our country', 'answer\\_type': 'Extractive', 'source\\_url': 'https://web.archive.org/web/202011011... | null | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact explicitly mentions the Trump Administration and Billie Eilish, making it directly tied to these specific entities; GOOD | GOOD | true |\n| 2 | Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country. | false | Refuted | The tweet was not the official government page and there is no evidence that visas were cancelled so the claim is refuted. | 31-10-2020 | Consulate General Of Pakistan France | https://web.archive.org/web/20201113115127/https://twitter.com/pakconsulatefr/status/1322495811993903104 | https://web.archive.org/web/20210629013122/https://www.indiatoday.in/fact-check/story/fact-check-fake-tweet-france-deporting-pakistanis-go-viral-imran-slams-macron-1737276-2020-11-02 | Twitter | FR | ['Causal Claim', 'Event/Property Claim'] | ['Written Evidence'] | [{'question': 'How did Macron criticise Islam?', 'answers': [{'answer': 'Macron described Islam as a religion “in crisis” worldwide and vowed to present a bill in December to strengthen a law that officially separated church and state in France.', 'answer\\_type': 'Extractive', 'source\\_url': 'https://www.aljazeera.com/ne... | https://web.archive.org/web/20201113115127/https://twitter.com/pakconsulatefr/status/1322495811993903104 | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact explicitly mentions specific individuals (Imran Khan and Macron) and details a unique event involving them; GOOD | GOOD | true |\n| 3 | UNESCO declared Nadar community as the most ancient race in the world. | false | Refuted | This claim is refuted. According to the QA pairs, UNESCO have never declared a \"most ancient race\", and for those who have analysed this question, they have theorised that the San people of southern Africa may be the most \"ancient race\"- no the Nadar community. Therefore, this claim is refuted. | 31-10-2020 | Kumar Shankar | null | https://web.archive.org/web/20210225110220/https://www.vishvasnews.com/english/viral/fact-check-unesco-did-not-declare-nadar-community-as-ancient-race-in-the-world-viral-claim-is-fake/ | Facebook | IN | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'What is Nadar?', 'answers': [{'answer': \"Nadar (also referred as Nadan, Shanar) is a caste of Tamil Nadu & Kerala, South India. The Nadars are an entrepreneurial south Indian caste] and constitute 12% of Tamil Nadu's population. The Nadar community was not a singular caste, but an assortment of sub-caste... | null | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact explicitly mentions the Nadar community and a specific declaration by UNESCO, making it directly tied to the Nadar community; GOOD | GOOD | true |\n| 4 | Republican Matt Gaetz was part of a company that had to pay 75 million in hospice fraud. They stole from dying people. | true | Refuted | The company was sold in 2004 and the law suit was filed in 2013 | 31-10-2020 | null | null | https://web.archive.org/web/20210713185816/https://www.factcheck.org/2019/10/misleading-posts-target-gop-rep-matt-gaetz/ | Facebook | US | ['Numerical Claim', 'Event/Property Claim'] | ['Written Evidence', 'Numerical Comparison'] | [{'question': 'Did Matt Gaetz work for Chemed Corporation, Vitas Hospice Services LLC or Vitas Healthcare Corporation?', 'answers': [{'answer': 'No answer could be found.', 'answer\\_type': 'Unanswerable', 'source\\_url': '', 'source\\_medium': ''}]}, {'question': \"Did Matt Gaetz's father Don Gaetz co-found Vitas?\", 'answers... | null | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact explicitly mentions the name of the individual, Matt Gaetz, and describes a specific incident directly tied to him; GOOD | GOOD | true |\n| 5 | The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention. | false | Refuted | Refuted by answer/source. | 30-10-2020 | Syrian Arab News Agency (SANA) | https://web.archive.org/web/20210415103410/https://sana.sy/en/?p=208083 | https://web.archive.org/web/20210304003724/https://www.polygraph.info/a/assad-regime-groundlessly-claims-us-and-allies-are-lying-about-chemical-attacks/30938689.html | Syrian state media outlet | SY | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'Has Syria complied with the Chemical Weapons Convention?', 'answers': [{'answer': 'No', 'answer\\_type': 'Boolean', 'source\\_url': 'https://web.archive.org/web/20210302193538/https://www.theguardian.com/world/2020/apr/06/report-set-to-blame-syria-chemical-attacks-on-bashar-al-assad', 'source\\_medium': 'Web t... | https://web.archive.org/web/20210415103410/https://sana.sy/en/?p=208083 | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact specifies the entities involved, including the United States of America and its Western allies, making it directly tied to them; GOOD | GOOD | true |\n| 6 | More than 225,000 people dead, 225,000. The estimates are, if we’d have acted responsibly, there’d be 160,000 fewer dead than there are today, because of covid-19. | false | Supported | It seems that indeed the umbers are true therefore the claim is supported | 30-10-2020 | Joe Biden | null | https://web.archive.org/web/20210212055748/https://www.washingtonpost.com/politics/2020/11/02/fact-checking-final-arguments-biden-trump/ | null | US | ['Numerical Claim'] | ['Written Evidence', 'Numerical Comparison'] | [{'question': 'How many deaths were recorded in the US on October 31, 2020', 'answers': [{'answer': '230,512', 'answer\\_type': 'Extractive', 'source\\_url': 'https://injuryfacts.nsc.org/home-and-community/safety-topics/covid-19-cases-in-the-united-states/', 'source\\_medium': 'Image/graphic', 'cached\\_source\\_url': 'https://w... | null | 1 | 0 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact lacks explicit mention of a specific entity, such as a country, organization, or time frame, making it too vague; BAD | BAD | false |\n| 7 | Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’ | false | Supported | True, question mark required (?) | 30-10-2020 | Joe Biden | null | https://web.archive.org/web/20210212055748/https://www.washingtonpost.com/politics/2020/11/02/fact-checking-final-arguments-biden-trump/ | null | US | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': \"What was Trump's tax return in 2017\", 'answers': [{'answer': 'Trump Paid $750 in Federal Income Taxes in 2017', 'answer\\_type': 'Extractive', 'source\\_url': 'https://web.archive.org/web/20210212182804/https://www.nytimes.com/2020/09/29/us/trump-750-taxes.html', 'source\\_medium': 'Web text', 'cached\\_source\\_u... | null | 1 | 0 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This statement explicitly mentions Donald Trump and a specific tax amount, making it directly tied to him; GOOD | GOOD | true |\n| 8 | You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3. | false | Refuted | The mail in ballots have to be counted no later than 7 days after election day. so that it would be weeks later is refuted. | 30-10-2020 | Donald Trump | null | https://web.archive.org/web/20210212055748/https://www.washingtonpost.com/politics/2020/11/02/fact-checking-final-arguments-biden-trump/ | null | US | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'When are mail-in ballots counted?', 'answers': [{'answer': 'Vote-by-mail ballots that are mailed must be postmarked on or before Election Day and received by your county elections office no later than 7 days after Election Day.', 'answer\\_type': 'Extractive', 'source\\_url': 'https://www.sos.ca.gov/election... | null | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This statement lacks specificity regarding the entity or context, such as an election year or location, and appears to be a quote without clear attribution; BAD | BAD | false |\n| 12 | New Zealand’s new Food Bill bans gardening | false | Refuted | The bill is not into legislation for now. I see claim as false. | 29-10-2020 | null | null | https://web.archive.org/web/20210415103231/https://www.aap.com.au/new-zealands-new-food-bill-doesnt-ban-gardening/ | Facebook | NZ | ['Event/Property Claim'] | ['Written Evidence', 'Consultation'] | [{'question': 'Which Food Bill does the claim refer to?', 'answers': [{'answer': 'The claim refers to the Food Act 2014, first read in New Zealand Parliament in May 2010.', 'answer\\_type': 'Abstractive', 'source\\_url': 'https://www.parliament.nz/en/pb/bills-and-laws/bills-proposed-laws/document/00DBHOH\\_BILL9974\\_1/food-bi... | null | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact specifies the country (New Zealand) and a particular law (Food Bill), making it directly tied to that entity; GOOD | GOOD | true |\n| 13 | Wearing face masks will stop the spread of covid 19 | false | Supported | From the question and answer pair it does indeed seem that face masks are useful in stopping the spread of covid19. Therefore, the claim is supported. | 29-10-2020 | Yinon Weiss | https://thefederalist.com/2020/10/29/these-12-graphs-show-mask-mandates-do-nothing-to-stop-covid/ | https://web.archive.org/web/20210711073635/https://healthfeedback.org/claimreview/wearing-face-masks-helps-reduce-the-spread-of-covid-19-but-it-only-confers-partial-protection-and-should-be-combined-with-additional-public-health-measures/ | The Federalist | US | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'Does a face mask prevent the spread of Covid 19?', 'answers': [{'answer': 'Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demogra... | https://web.archive.org/web/20230327113113/https://thefederalist.com/2020/10/29/these-12-graphs-show-mask-mandates-do-nothing-to-stop-covid/ | 1 | 0 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This statement is a generic health guideline and does not refer to a specific entity, location, or context; BAD | BAD | false |\n| 14 | Jammu and Kashmir (J&K) in Pakistan/India was removed from the United Nations (UN) list of “unresolved disputes”. | false | Refuted | The answer and source show that they were never on the list so the claim is refuted. | 29-10-2020 | Paresh Rawal  | https://archive.ph/3oBfZ | https://web.archive.org/web/20210608054144/https://www.altnews.in/old-unfounded-reports-of-removal-of-jk-from-un-list-of-disputes-viral-again/ | Twitter/Latest laws | PK | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'What is the dispute in Jammu and Kasmir about?', 'answers': [{'answer': 'The first Indo-Pakistan war, in 1947-1948, split Jammu and Kashmir in two, with both countries since claiming ownership over the entire territory. As such, Kashmir is both the cause and consequence of war and hostilities between the... | https://archive.ph/3oBfZ | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This fact mentions a specific geographic location and an international organization, making it directly tied to Jammu and Kashmir; GOOD | GOOD | true |\n| 16 | The plentiful evidence we have indicates that masks would not meaningfully help with aerosol transmission of COVID 19. | true | Refuted | Evidence finds that surgical face masks could prevent transmission of human coronaviruses and influenza viruses from symptomatic individuals. The CDC and the World Health Organization (WHO), at the time of the claim, also recommended cloth masks for the general public. | 29-10-2020 | Yinon Weiss | https://thefederalist.com/2020/10/29/these-12-graphs-show-mask-mandates-do-nothing-to-stop-covid/ | https://web.archive.org/web/20210711073635/https://healthfeedback.org/claimreview/wearing-face-masks-helps-reduce-the-spread-of-covid-19-but-it-only-confers-partial-protection-and-should-be-combined-with-additional-public-health-measures/ | The Federalist | US | ['Event/Property Claim'] | ['Written Evidence'] | [{'question': 'Have any studies been done to show if masks help with Aerosol transmission ?', 'answers': [{'answer': 'Surgical face masks significantly reduced detection of influenza virus RNA in respiratory droplets and coronavirus RNA in aerosols, with a trend toward reduced detection of coronavirus RNA in respirator... | https://web.archive.org/web/20230327113113/https://thefederalist.com/2020/10/29/these-12-graphs-show-mask-mandates-do-nothing-to-stop-covid/ | 0 | 1 | <|begin\\_of\\_text|><|start\\_header\\_id|>system<|end\\_header\\_id|> Cutting Knowledge Date: December 2023 Today Date: 26 Jul 2024 You are an expert in verifying atomic facts extracted from Wikipedia pages for specificity to a single entity. Your task is to determine if a given atomic fact refers exclusively to the specified ... | This statement lacks specificity to a particular entity, study, or source, and could apply to various discussions about COVID-19; BAD | BAD | false |\n| 17 | All USA Ballots Arriving After Election Day Will Be Thrown Out | false | Refuted | Two sources confirm that postal ballots received after election day can still be counted, therefore not all will be thrown out. | 28-10-2020 | Eric ",
+        "retrieved_at": "2026-11-06T06:43:05.493164+00:00",
+        "content_hash": "3a76131d2165fa0d4966050a85282a4ddf67ef774114bac81f70ffc66690a1db",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "1a141e8a6df9026cca84211ab763050ca750a5a15906b901cc4e34aa94ede276",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.09,
+          "evidence": 0.16,
+          "counterevidence": 0.14,
+          "injection": 0.74
+        }
+      },
+      {
+        "title": "Several Utah residents claimed that they were unable to vote in the June ...",
+        "url": "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/",
+        "snippet": "Several Utah residents claimed that they were unable to vote in the June 23 primary after failing to receive their ballots through the mail.",
+        "page_text": "Several Utah residents claimed that they were unable to vote in the June 23 primary after failing to receive their ballots through the mail.\n\nAll reactions:\n\n62 comments\n\n4 shares\n\nLike\n\nComment\n\nMost relevant\n\n\n\nKTNV.COM\n\nDepartment of Justice charges Utah postal worker with disposing mail-in ballots in the trash\n\n### Department of Justice charges Utah postal worker with disposing mail-in ballots in the trash\n\nGabriel Gentile\n\nDrop...\n\nIt...\n\nOff...\n\nIn...\n\nPerson!\n\n3\n\nView all 2 replies\n\nKatrina Weaver\n\nI wonder what party the postal worker belongs to?\n\nGavin Bullock\n\nBut mail in ballots are supposed to be safe. Its the only way to go these days. Why vote in person?\n\n7\n\nView all 5 replies\n\nDiego Mejia\n\nIf the felon convicted in chief is able to vote by mail, why can’t the rest of us do it?\n\n15\n\nView all 20 replies\n\nJoy Lane\n\nproblem is when he's found guilty in federal court, Trump will pardon him... where are the consequences? Maybe he will be shamed by his community? I hope certainly not celebrated.\n\n4\n\nView all 2 replies\n\nPhilip Burger\n\n300 people did not receive their mail-in ballots.\n\nMichelle Lorraine\n\nHeaven forbid making a phone call.\n\nView all 3 replies\n\nMost relevant is selected, so some comments may have been filtered out.",
+        "retrieved_at": "2026-11-06T06:43:08.747612+00:00",
+        "content_hash": "0f4d2ec68461ad2678b9ea68753549bddcffe3c28c9ca609ea747f9e6677a141",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "8ede15d1f1c425a04cda63ad793541b27c2b1e600751ecdc157d6326ea5399b6",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.25,
+          "evidence": 0.39,
+          "counterevidence": 0.33,
+          "injection": 0.06
+        }
+      },
+      {
+        "title": "Voters in Utah County have raised concerns about the recent primary ...",
+        "url": "https://www.instagram.com/reel/Dc1WL0PC-ZL/",
+        "snippet": "",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:11.346510+00:00",
+        "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "69c60b54d8655b66176c6166d0d4a28faa5f36be8c35da24487e7ec94056105e",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.16,
+          "evidence": 0.06,
+          "counterevidence": 0.1,
+          "injection": 0.08
+        }
+      },
+      {
+        "title": "GOP lawmakers who claimed there's been widespread voter fraud in Utah ...",
+        "url": "https://www.instagram.com/p/De4GdBrF8vy/",
+        "snippet": "GOP lawmakers who claimed there's been widespread voter fraud in Utah demanded a security study of the state's mail ballots.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:11.346510+00:00",
+        "content_hash": "4de80e4f098a8aefbe8710be8e0a20462d9fb5e06d6c1f8a064bc20bae25edd6",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "3155e336e2c0df90a5a2888bc3c670d4c9276bb054495480325b76d14570c37d",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.13,
+          "evidence": 0.13,
+          "counterevidence": 0.17,
+          "injection": 0.06
+        }
+      },
+      {
+        "title": "Utah election audit fine no widespread fraud of noncitizins casting ballots",
+        "url": "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/",
+        "snippet": "Here's what she found. While 27 alleged noncitizens were found on voter rolls, there remains no evidence of widespread fraud in Utah elections.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:11.346510+00:00",
+        "content_hash": "5ff37ade856fea91003c3f4dd70f01c65db132d29156a2758457e5c58373b54b",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "24ae7e742fb7c8dcdf50b35291e3c2f55782aac2b8844fcf585149fdf2b61549",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.09,
+          "evidence": 0.17,
+          "counterevidence": 0.26,
+          "injection": 0.07
+        }
+      },
+      {
+        "title": "History in a Post-Truth World: Theory and Praxis [1 ed.] 0367333244, ...",
+        "url": "https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html",
+        "snippet": "46 Despite having no evidence for this explosive claim, a poll commissioned by the Washington Post in 2017 found that just under half of Republicans believe ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:15.711437+00:00",
+        "content_hash": "2d4cb6a921d181a8e4c381abf259fac77ec0658afacba10c45098fe26d94b1ae",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "5c73ad5bd888df2fb75278ac1cf46f984e0c7a8cab3c8defc77022e743a62d1a",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.03,
+          "evidence": 0.05,
+          "counterevidence": 0.1,
+          "injection": 0.18
+        }
+      },
+      {
+        "title": "journal of - contempora ry antisemitism - Cloudfront.net",
+        "url": "https://dhjhkxawhe8q4.cloudfront.net/asp-wp/wp-content/uploads/2026/08/25163517/Academic-Studies-Press-JCA-9.1-OA.pdf",
+        "snippet": "The article also argues that antisemitic attitudes are disproportion- ately concentrated among Muslims and notes that perpetrators of, and individuals accused.",
+        "page_text": "JOURNAL  OF\nCONTEMPO/R_A R Y  \nANTISEMITISM \nV O L U M E  9.1 \nSPECIAL SPRING ISSUE 2026\n\nACADEMIC STUDIES PRESS\nBOSTON\n2026\nJOURNAL  OF\nCONTEMPO/R_A R Y  \nANTISEMITISM \nV O L U M E  9.1 \nSPECIAL SPRING ISSUE 2026\nANTISEMITISM  \nAND ANTIZIONISM\nAFTER OCTOBER 7TH\n\nEDITOR-IN-CHIEF\nLesley Klaff (Sheffield Hallam University, UK; University of Haifa, Israel)\nDEPUTY EDITOR\nDaniel Allington (King’s College London, UK)\nASSOCIATE EDITORS\nSteven Baum (Independent Scholar, US)\nEve Garrard (University of Manchester, UK)\nNeil Kressel (William Paterson University, US)\nDavid Seymour (City, University of London, UK)\nNORTH AMERICAN EDITORIAL CONSULTANT\nMark Goldfeder (Director, National Jewish Advocacy Center)\nBOOK REVIEW EDITOR\nBalázs Berkovits (Comper Center for the Study of Antisemitism, University of Haifa)\nEDITORIAL BOARD\nDaniel Chernilo (School of Government, Universidad Adolfo Ibáñez, Chile)\nHüseyin Cicek (University of Vienna, Austria)\nBen Cohen (Senior Correspondent, Algemeiner Journal, US)\nDonna Robinson Divine (Smith College, US; University of Haifa, Israel; President, Association for \nIsrael Studies)\nMatthew Feldman (Liverpool Hope University, UK; consultant in radical-right extremism and terrorism)\nChad Alan Goldberg (University of Wisconsin-Madison, US)\nRusi Jaspal (Pro Vice-Chancellor [Research & Knowledge Exchange], Brighton University, UK)\nAnthony Julius (University College London, UK; Mishcon de Reya LLP , UK)\nRichard Landes (Bar-Ilan University, Israel)\nLord John Mann (Government Antisemitism Tsar)\nKenneth L. Marcus (Louis D Brandeis Center for Human Rights Under Law; former Assistant \nSecretary of Education for Civil Rights, US)\nDavid Patterson (University of T exas at Dallas, US)\nLars Rensmann (University of Passau, Germany)\nDave Rich (Community Security T rust, UK)\nAsaf Romirowsky (Executive Director, Scholars for Peace in the Middle East;  \nUniversity of Haifa, Israel)\nMonika Schwarz-Friesel (T echnical University, Berlin, Germany)\nPhilip Spencer (Kingston University, UK; Pears Institute for the Study of Antisemitism, UK)\nDerek Spitz, KC (Barrister at One Essex Court)\nGerald Steinberg (Bar-Ilan University, Israel)\nJonathan T urner, KC (Chief Executive, UK Lawyers for Israel, UK)\nJames Vaughan (Aberystwyth University, UK)\nShalva Weil (Hebrew University of Jerusalem, Israel)\nISSN: 2472-9906\n\nJournal of Contemporary Antisemitism\nVolume 9.1, Special Spring Issue 2026\nContents\nEditorial vii\nLesley Klaff\nARTICLES\nAntisemitic Attitudes and Anti-Jewish Crime in the United Kingdom:  \nLongitudinal T rends, Demographic Predictors, and Policy Implications 1\nDaniel Allington\nGen Z and the Jews: Understanding Age Differences in American Attitudes T oward \nAntisemitism, Israel, and the Holocaust 43\nNeil Kressel\nAntizionism as a Distinct Anti-Jewish Bigotry 63\nAdam Louis-Klein\nIsrael, Genocide, and Gaza: The Law and Politics of an Accusation 79\nJohn Strawson\nINTERVIEW\nWe Would Like to Think That All the Virtues Are Invested in Intelligence. \nOf Course, They’re Not 97\nMatthew Feldman interviews Anthony Julius\nBOOK REVIEWS \nOn Antisemitism: A Word in History. By Mark Mazower 105\nReview essay by John Hyman\nAntisemitism and the Law. By Robert Katz 117\nReviewed by Lili Levi\n\nWe are pleased to present \nthis special Spring 2026 \nissue, appropriately titled \nAntisemitism and Antizionism After October 7.\nThe events of October 7, 2023, and the \nGaza war that followed have transformed schol-\narly and public debate about Jews, Israel, and \nantisemitism. Questions that had long occupied \nscholars, policymakers, and communal organi -\nsations have acquired renewed urgency: how \nshould contemporary antisemitism be under -\nstood and measured? What is the relationship \nbetween antisemitism and antizionism? How \nare attitudes toward Jews and Israel changing, \nparticularly among younger generations? And \nwhat are the implications of these develop -\nments for law, politics, and public discourse? \nThe contributions collected here address these \nquestions from a variety of disciplinary perspec-\ntives. Taken together, they offer new empirical \nevidence, conceptual analysis, legal argument, \nand critical reflection on some of the most con-\nsequential debates surrounding antisemitism \nand antizionism in the post-October 7 era.\nWe are especially grateful to JCA Associate \nEditor Dr Steven K. Baum, the Department of \nDigital Humanities at King’s College London, \nand the Institute for the Critical Study of \nAntizionism for their generous support in \nmaking this special issue freely available to read-\ners through open-access publication.\nDespite what appeared to be a long-term \ndecline in antisemitic attitudes within the \nBritish population, antisemitic incidents \nrecorded by the Community Security T rust \nhave increased, while Jewish perceptions \nof security have declined. In “Antisemitic \nAttitudes and Anti-Jewish Crime in the  \nEditorial \nLesley Klaﬀ\nJCA 2026 (DOI: 10.26613/jca/9.1.200)\nUnited Kingdom: Longitudinal T rends, \nDemographic Predictors, and Policy \nImplications,” Daniel Allington examines this \napparent paradox by bringing together two \nimportant datasets. The first dataset is derived \nfrom official UK government statistics on reli -\ngiously aggravated crime, while the second \ndraws on six years of attitudinal surveys con -\nducted in partnership with YouGov and funded \nby the Campaign Against Antisemitism. Based \non his analysis, Allington argues that crimes \ntargeting perceived Jews have increased sub -\nstantially, lending support both to Community \nSecurity T rust reporting and to Jewish percep-\ntions of heightened risk. He further contends \nthat the proportions of individuals expressing \nelevated levels of both “old” (traditional) and \n“new” (antizionist or Israel-related) antise -\nmitic attitudes have increased significantly \nsince October 7, 2023. The article also argues \nthat antisemitic attitudes are disproportion -\nately concentrated among Muslims and notes \nthat perpetrators of, and individuals accused \nof involvement in, several recent high-pro -\nfile attacks and attempted attacks against the \nJewish community have tended to come from \nthe same population. T wo additional findings \nare highlighted: first, that levels of “old” and \n“new” antisemitic attitudes are closely cor -\nrelated from one year to the next; and second, \nthat recent growth in such attitudes has been \nmost pronounced among younger respondents. \nDaniel Allington is Reader in Social Analytics  \nat King’s College London and a Senior  \nAssociate Fellow at the Counter Extremism \nGroup. \nIn “Gen Z and the Jews: Understanding \nAge Differences in American Attitudes T owards\n\nEditorial\nviii Journal of Contemporary Antisemitism\nAntisemitism, Israel and the Holocaust,” Neil \nKressel examines generational differences \nin attitudes toward Israel, knowledge of the \nHolocaust, and antisemitism in the United \nStates. Drawing on recent polling data and \nsocial-scientific research, he argues that younger \nAmericans tend to be less supportive of Israel, \nsomewhat less informed about the Holocaust, \nand, by some measures, more accepting of \nantisemitic narratives than older cohorts. \nRather than treating variables such as political \norientation, religiosity, race and ethnicity, and \nmedia consumption as competing explana -\ntions, Kressel proposes that they function as the \nprincipal channels through which generational \nchange is expressed. He concludes by consider-\ning whether declining Holocaust consciousness \nand changing forms of political socialisation \nmay reshape the future relationship between \nAmerican Jews and wider American society. In \nKressel’s assessment, these generational differ -\nences are unlikely to disappear as individuals \nage. If current trends continue, he suggests, it \nmay be difficult to assume that the United States \nof the future will be as hospitable to Jews as it \nhas been in the past. The article also raises the \nquestion of whether sensitivity to antisemitism \ncan be sustained as Holocaust consciousness \ncontinues to decline. Neil Kressel is Professor \nof Psychology at William Paterson University. \nThe third article, “Antizionism as a Distinct \nAnti-Jewish Bigotry,” by Adam Louis-Klein, \nargues that antizionism is not merely a political \nstance that occasionally crosses into antisemi -\ntism, but a coherent ideological formation in its \nown right, with its own genealogy, characteris -\ntic libels, and political logic. T racing antizion -\nism’s development through the Nazi–Islamist \nnexus, Soviet-Arab nationalist propaganda, \nand Western settler-colonial theory, the article \nidentifies a recurring triad of accusations—\ncoloniser, apartheid, and genocide—which \nLouis-Klein argues constitutes the stable core \nof antizionist discourse. Drawing on struc -\ntural anthropology and genealogical meth -\nods, he contends that antizionism represents a  \nsystematic inversion of classical antisemitism. \nWhereas classical antisemitism was anti-assimi-\nlationist, casting Jews as an alien and infiltrating \nminority, antizionism is described as assimila -\ntionist, denying the legitimacy of Jewish nation-\nhood and sovereignty while recoding the Jew \nfrom a non-European outsider into a white colo-\nnial oppressor. The article further argues that \nprevailing definitional frameworks—including \nthe IHRA Working Definition, the Jerusalem \nDeclaration on Antisemitism, and the Nexus \nDocument—obscure this structure by treat -\ning classical antisemitism as the model against \nwhich antizionism is measured. Recognising \nantizionism as a distinct contemporary form \nof anti-Jewish bigotry, Louis-Klein contends, \nrequires moving beyond this “line-crossing” \nparadigm and identifying antizionism’s own \ncharacteristic tropes and libels. Adam Louis-\nKlein is a doctoral candidate in anthropology at \nMcGill University.\nIn our final article, “Israel, Genocide, and \nGaza: The Law and Politics of an Accusation,” \nJohn Strawson examines the claim that Israel’s \nmilitary response to October 7 has been geno -\ncidal. He focuses on the legal definition of \ngenocide contained in the 1948 Genocide \nConvention and its application in the jurispru-\ndence of the two United Nations international \ncriminal tribunals established during the 1990s \nto address atrocities in the former Yugoslavia \nand Rwanda. Strawson argues that the designa-\ntion of Israeli military action as “genocide” by \nthe Independent International Commission of \nInquiry established by the UN Human Rights \nCouncil and chaired by Navi Pillay does not \nsatisfy the specific intent requirement central to \nthe legal doctrine. He further contends that the \nwillingness of some legal scholars to rely upon \nthis designation in calling for immediate puni -\ntive action against Israel reflects a political cam-\npaign that risks undermining international law \nwhile simultaneously contributing to the inter-\nnational rise in antisemitism. John Strawson is \nProfessor Emeritus of International Law at the \nUniversity of East London.\n\nEditorial\nJCA | Vol. 9 | No. 1 |  Special Spring Issue 2026 ix\nThis special issue also includes our regu -\nlar interview feature. Recorded in June 2025, \nMatthew Feldman’s conversation with Anthony \nJulius reflects on Julius’s distinguished career, \nfrom representing Princess Diana and Deborah \nLipstadt to being portrayed by Andrew Scott in \nthe film adaptation of the 2000 David Irving \nlibel case, Denial. The interview then turns \nto contemporary antisemitism and its various \nmanifestations, particularly Holocaust denial. \nAgainst the backdrop of rising antisemitism, \nFeldman reflects on Julius’s longstanding com-\nmitment to the public good in Britain and his \nefforts to remind both allies and critics alike of \nwhat is at stake in confronting prejudice and \nintolerance. Matthew Feldman is Professor \nEmeritus in the Modern History of Ideas and a \nleading UK expert on the radical right.\nThe IHRA Working Definition of \nAntisemitism has become a focal point in con -\ntemporary debates about antisemitism and \nantizionism, particularly on university cam -\npuses. In a review essay on Mark Mazower’s \nbook On Antisemitism: A Word in History, John \nHyman argues that any coherent discussion of \nhow antisemitism should be defined must begin \nwith a clearer understanding of what definitions \nare, the forms they take, their functions in law, \nthe social sciences, and lexicography, and the \ncriteria by which they should be evaluated. John \nHyman holds the Grote Chair in Philosophy of \nMind and Logic at University College London.\nIn her review of Robert Katz’s Antisemitism \nand the Law —the first American casebook \ndevoted to the subject—Lili Levi argues that \nthe inclusion of antisemitism as a field of legal \nstudy within law school curricula is particularly \nimportant at a moment when antisemitism is \nbecoming increasingly normalised and main -\nstreamed in the United States. She contends \nthat both the book and the emerging field of \nlaw and antisemitism must navigate internal \ndisagreements, external pressures, technolog -\nical challenges, and curricular competition. \nAt the same time, she commends the volume \nfor its attention to both legal analysis and alli -\nance-building while identifying promising \ndirections for future development. Lili Levi is \nProfessor of Law at the University of Miami \nSchool of Law.\nWe hope that the contributions collected \nin this special Spring issue will inform ongo -\ning scholarly discussion and public debate and \nencourage further research into the changing \ndynamics of antisemitism and antizionism in \nour post-October 7 world.\nLesley Klaff\nEditor-in-Chief\n\nAntisemitic Attitudes and Anti-Jewish Crime in the  \nUnited Kingdom: Longitudinal Trends, Demographic  \nPredictors, and Policy Implications\nDaniel Allington\nJCA 2026 (DOI: 10.26613/jca/9.1.201)\nINTRODUCTION\n2025 was the year in which a \nlong-anticipated, long-dreaded \nevent came to pass. On the \nmorning of October 2—the first morning of \nYom Kippur—the Heaton Park Hebrew \nCongregation synagogue in Manchester became \nunwilling host to the United Kingdom’s first \nlethal terror attack on a Jewish place of worship. \nAbstract\nRecent terror attacks against Jewish targets in the United Kingdom and elsewhere in the \ndiaspora have been motivated by hostility to Israel and (for the most part) carried out by \nMuslim members of migrant communities, often with links to Islamist organizations. In \nthis, such attacks follow trends in anti-Jewish incidents more broadly. An explanation for \nthis pattern may be found in evidence (a) that antisemitic attitudes are low in the United \nKingdom and culturally similar countries, but much higher in parts of the Muslim world \nfrom which large numbers have migrated to the United Kingdom, and (b) that extremists \nexploit the Israel-Hamas con/f_lict in order to radicalize Muslims in particular.\n /T_his article presents two empirical studies. /T_he /f_irst, which aggregates oﬃcial UK po -\nlice statistics for the eight-year period ending March 2025, /f_inds absolute numbers of \nreligiously aggravated crimes targeting perceived Jews to have roughly tripled, appearing \nto track developments in the Israel-Hamas con/f_lict (notably doubling after October 7, \n2023). /T_he second, which analyzes attitudinal data collected from the general British pop-\nulation between December 2020 and September 2025 (n = 11394), /f_inds proportions of \nindividuals with elevated levels of “old” (Judeophobic) and “new” (antizionist) antisemitic \nattitudes to be almost perfectly correlated from one year to the next, roughly doubling after \nthe Hamas-led atrocities of October 7, 2023, with this rise having occurred disproportion-\nately among the young (especially with regard to “old” antisemitic attitudes, which barely \nchanged among individuals of median age and above). Multiple demographic predictors \nare identi/f_ied with regard to “old” and “new” antisemitic attitudes, identity as Muslim \nemerging as by far the strongest in respect of both. Christians of all denominations are \nfound to be particularly unlikely to hold elevated levels of antisemitic attitudes in relation \nto Israel and its supporters, while Christians of mainstream denominations are found to \nbe no more nor less susceptible to elevated levels of classic antisemitic belief than people of \nno religion (although Christians of small minority denominations were found to be more \nlikely to hold such attitudes). /T_hese /f_indings have important policy implications, both for \ngovernment and for the Jewish community itself.\nKeywords: Antisemitism, antizionism, hate crime, Islamism, Jihadism, migration, Muslims, terrorism\n\nDaniel Allington\n2 Journal of Contemporary Antisemitism\nOnce upon a time, it might have seemed safe to \nassume that such an attack could come only \nfrom right-wing extremist members of the coun-\ntry’s historical ethnic and religious majority \ncommunity, i.e., white British people of \nChristian faith. But this was almost exactly two \nyears after the largest massacre of Jews since the \nHolocaust, carried out by a coalition of \nPalestinian militants and civilians which crossed \nthe border between Gaza and Israel on October \n7, 2023, under the leadership of the Qatari-\nfunded Iranian proxy militia, Hamas: an Islamist \ngroup dedicated to the killing of Jews. 1 So it \nshould have come as no surprise that an era of \ncomparative Anglo-Jewish safety would come to \nan end with an attack, not from white British \nChristians inspired by neo-Nazism, Christian \nNationalism, or White Nationalism, but from a \ndifferent ethnic, religious, and ideological \nquarter entirely.\nJihad al-Shamie was the Syrian-born, \nUK-resident son of a doctor who had praised the \nperpetrators of the October 7, 2023, atrocities \nas “Allah’s men on earth.”2 During his rampage—\nwhich resulted in death or serious injury for \nthree members of the congregation (one of \nwhom was accidentally hit by a police bullet)—\nal-Shamie explicitly pledged allegiance to Islamic \nState3 and shouted, “this is what they get for \nkilling our children,” 4 thus identifying his \nmurderous actions as retribution for the death \nof Palestinians in Gaza. His own death was guar-\nanteed by the fake suicide belt that he wore, the \npresence of which obliged police responders to \ntake his life.\nLike the Hamas-led incursion that the terror-\nist’s father had celebrated, albeit on a much \nsmaller scale, the Heaton Park synagogue attack \nresulted in loss of life. The same was thankfully \nnot true of the terror plot hatched by T unisian-\nborn Walid Saadaoui together with the Syrian-\nborn Kuwaiti national Amar Hussein. 5 These \ntwo Islamic State supporters were convicted on \nDecember 23 the same year in connection with \na planned mass casualty attack on Jewish \ncommunity targets in the same city, in \npreparation for which they had attempted to \nprocure smuggled automatic weapons and \nammunition.6 Both men were said to have a \n“visceral dislike” of Jews, 7 with the October 7, \n2023, atrocities having inspired Saadaoui—who \nonce prayed not to be caught until he had \n“br[oken his] thirst with Jewish, Christians [sic], \nand their [sic] proxies’ blood”—to begin \npreparing an attack, and with Hussein describing \nUK Prime Minister Sir Keir Starmer as “[a] \nterrorist that kills our children and gives Israel \nweapons [to] kill our children.”8\nAs Saadaoui’s reference to Christian blood \nshould remind the readers of this article, it is not \nalways Jews who become the immediate victims \nof antisemitic crime. Eight days after the \nOctober 7, 2023, pogrom, Ahmed Ali Alid—a \nMoroccan citizen who had entered the United \nKingdom illegally and applied for asylum—\nmurdered an elderly non-Jewish man, also \nattempting to murder a fellow asylum seeker \nwho had converted to Christianity. 9 Following \nhis arrest, Alid told police that “he wanted to kill \n[his two victims] because of the conflict in Gaza \nand so that Palestine would be free from \n‘Zionists,’” further clarifying that “he ",
+        "retrieved_at": "2026-11-06T06:43:18.243809+00:00",
+        "content_hash": "51364177267e5e7205f8ecf3ba947adff6070a7311f8ba751184e34f007e811d",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "8845b1b307a2562e00a79a17160cb3ee15b1ed097428a346e18650891e78f4b6",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.03,
+          "evidence": 0.04,
+          "counterevidence": 0.07,
+          "injection": 0.12
+        }
+      },
+      {
+        "title": "Zundel v. Ramsdell (Utah Ct. App. 2024)",
+        "url": "https://law.justia.com/cases/utah/court-of-appeals-published/2024/20230043-ca.html",
+        "snippet": "Zundel v. Ramsdell (Utah Ct. App. 2024). Court: Utah Court of Appeals. Citation: 2024 UT App 88. Docket Number: 20230043-CA.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:54.323875+00:00",
+        "content_hash": "0b3014bd3b4440751b6bf4a6b36f3980031bf07191b3b814dd9c20ecb943fb28",
+        "query": "Taylor Zundel claimed on Instagram that she evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "c24ae00ee3e36a084001d9ee3df0ad0ba820b85db3c43e5becd74db75c0a65b6",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.69,
+          "evidence": 0.57,
+          "counterevidence": 0.36,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "Instagram Model Claims It Was Self-Defense But the Evidence Disagrees",
+        "url": "https://www.facebook.com/ChristinaRandallOfficial/videos/instagram-model-claims-it-was-self-defense-but-the-evidence-disagrees-reels-true/713784621449542/",
+        "snippet": "Instagram Model Claims It Was Self-Defense But the Evidence Disagrees #reels #truecrime #storytelling.",
+        "page_text": "Facebook\nLog In\nForgot Account?\nVideo\nMore\nHome\nLive\nReels\nExplore\nChristina Randall\nAccounts with a verified badge have been authenticated and can be Meta Verified subscribers or notable persons or brands.\nVerified account\nSunday, July 20, 2025 at 12:01 PM\nJuly 20, 2025\n·\nShared with Public\nFollow\nInstagram Model Claims It Was Self-Defense But the Evidence Disagrees\n#reels\n#truecrime\n#storytelling\nSee more\nComments\nMost relevant\n\nJv Gutierrez\nTatatata too much\n1y\nΠανος Μαριν\nShes is in jail right now Christina..We know that!!!\n1y\n4\nView more comments\n2 of 15\nRelated Reels\nChristina Randall\n\n587K\nChristina Randall\n\n217K\nChristina Randall\n\n111K\nChristina Randall\n\n127K\nChristina Randall\n\n88K\nChristina Randall\n\n96K\nChristina Randall\n\n121K\nChristina Randall\n\n124K\nChristina Randall\n\n112K\nChristina Randall\n\n141K\nChristina Randall\n\n94K\nChristina Randall\n\n159K\nRelated videos\n0:43\nA Mother's Worst Nightmare\nChristina Randall\n24.3K views\n·\n16h ago\n1:32\nHow Justin Mohn's Case Went From Conspiracy To Horror #reels #truecrime #viral\nChristina Randall\n45K views\n·\n16h ago\n8:56\nBaby Dylan Found In Well\nChristina Randall\n30.1K views\n·\n21h ago\n7:32\nWhat Is REALLY Hiding at the Bottom of the Ocean?\nChristina Randall\n115.8K views\n·\n1d ago\n1:21\nHow a Jealous Fiancée Triggered Tragic Event #reels #truecrime #storytelling\nChristina Randall\n75.8K views\n·\n1d ago\n1:07\nMasked ‘Trick-or-Treaters’ Tried to Get Inside Her House As Part of a Disturbing Prank #reels #truecrime #halloween\nChristina Randall\n98.9K views\n·\n2d ago\n10:45\nLetecia Stauch’s Brother Testified And Broke Down\nChristina Randall\n149.3K views\n·\n2d ago\n1:28\nA Mother Blamed the Internet for Her Darkest Decision\nChristina Randall\n63K views\n·\n3d ago\n1:08\nShe Escaped After 88 Days of Terror #reels #truecrime #viral\nChristina Randall\n91.2K views\n·\n3d ago\nPages\nPublic figure\nChristina Randall\nVideos\nView Transcript\nHome\nLive\nExplore\nSee more on Facebook\nEmail or phone number\nPassword\nLog In\nForgot password?\nor\nCreate new account",
+        "retrieved_at": "2026-11-06T06:43:56.137580+00:00",
+        "content_hash": "d47a27ae608073b587cc679640e34988f7c9c1db389a0a0979b9811a0f59b73d",
+        "query": "Taylor Zundel claimed on Instagram that she evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "f8de4920282c1d30c2d4bb9b3fd185e37fc7af90642937267cd030699c07e113",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.03,
+          "evidence": 0.04,
+          "counterevidence": 0.11,
+          "injection": 0.06
+        }
+      },
+      {
+        "title": "Taylor Swift has been granted a restraining order against an alleged ...",
+        "url": "https://www.instagram.com/reel/DKwvaZ_xxU8/",
+        "snippet": "522 likes, 8 comments - cbsmornings on June 11, 2025: \"Taylor Swift has been granted a restraining order against an alleged stalker who ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:59.219313+00:00",
+        "content_hash": "204fed74f0eb29504fb4125ecd8d490022c3bd611b7871b6930efbf72a7dd76f",
+        "query": "Taylor Zundel claimed on Instagram that she evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "de5afd16c99a1c67ed137122f72464929a4306235b93701cf2ff4cd0b09bcf34",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.03,
+          "evidence": 0.04,
+          "counterevidence": 0.09,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "Ernst Zündel, Holocaust Denier Tried for Spreading His Message, Dies at 78",
+        "url": "https://www.nytimes.com/2017/08/07/world/europe/ernst-zundel-canada-germany-holocaust-denial.html",
+        "snippet": "Mr. Zündel spewed anti-Semitic propaganda from his house in Toronto and twice saw his convictions overturned.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:59.219313+00:00",
+        "content_hash": "3efa7d7cc9432e0657f013808beac5050a26b3363994380d6e800abfdbd5ccd8",
+        "query": "Taylor Zundel claimed on Instagram that she evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "7a8632063227431bd7c3b8fbc923555f430893c689071d7778ad408a346b0f97",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.03,
+          "evidence": 0.05,
+          "counterevidence": 0.19,
+          "injection": 0.04
+        }
+      },
+      {
+        "title": "L.A. Trial: Zuckerberg Denies Instagram Targets Kids - Osakwe",
+        "url": "https://www.youtube.com/watch?v=jFrQaF4--2w",
+        "snippet": "Subscribe to our Channel for high profile interviews. Follow us on Twitter at https://twitter.com/ARISEtv | and Instagram: ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:43:59.219313+00:00",
+        "content_hash": "649ef9335e5c8acb29c55d5a3cd16681922684f2a4353c688cc06eaf92c7d8c4",
+        "query": "Taylor Zundel claimed on Instagram that she evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "9acc65d43bcee47e3a7ab34445080c870fd34db1089b330c1d8d3f0967c4f825",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.04,
+          "evidence": 0.04,
+          "counterevidence": 0.09,
+          "injection": 0.09
+        }
+      },
+      {
+        "title": "Some Utah County voters incorrectly received notice telling them to ...",
+        "url": "https://www.ksl.com/article/51640353/some-utah-county-voters-incorrectly-received-notice-telling-them-to-include-copy-of-id-with-ballot",
+        "snippet": "Some Utah County voters received this voting notice saying their ID was required to vote in error, even if they had voted before or already ...",
+        "page_text": "KEY TAKEAWAYS\n\n* Utah County Clerk's Office mistakenly sent ID requirement notices to some voters.\n* Clerical error affected 71 previous voters and some verified first-time voters.\n* Clerk's office clarified the mistake ensuring verified voters' ballots won't be rejected.\n\nPROVO — The Utah County Clerk's Office inadvertently sent mailers to some registered voters incorrectly stating that they needed to return a copy of their ID with their mail-in ballot or it would be rejected.\n\nSome first-time voters do need to include a copy of their ID when sending their ballot back, but the ID is not required with returned ballots if a voter has previously voted or has already verified their identity beforehand. The clerk's office sent out some 6,144 notices alerting voters of the need to include a copy of their ID ahead of this fall's midterms, but at least 71 went to people who had previously voted, and an unknown number were sent to first-time voters who had already been verified, according to Utah County Clerk Aaron Davidson.\n\nHe said a clerical error in his office led to the notices being sent out, but his team has fixed the issue, ensuring ballots will not be rejected for those who have already verified their identity.\n\n\"There's processes in place, but we're not going to disenfranchise anybody,\" he told KSL on Friday.\n\nThe Utah Elections Handbook requires election workers to verify identity when voters register by comparing it with a database containing driver's license numbers and Social Security numbers. If a voter does not provide ID when they register, they must show ID before voting, vote in person, or include a copy of their ID with their mail-in ballot.\n\n\"Voters that have voted in person, or who were imported into VISTA at the time of its creation do not need to show additional ID to vote by mail, but do still need to show valid ID to vote in person,\" the handbook states.\n\nThe state elections office received a complaint from a voter on Monday, according to Deputy Director of Elections Shelly Jackson.\n\n\"I think the county just got a little overzealous and marked all the first-time voters\" as needing to prove their identity, she said.\n\nDavidson said various reasons led to some voters being incorrectly notified. His office put out a clarification Friday, taking responsibility for the mistake.\n\n\"Unfortunately, this notice was also sent to some voters who did not need to provide identification,\" his office stated. \"We recognize that this caused unnecessary confusion, and we sincerely apologize.\"\n\nThe county also included instructions for different types of voters to make sure their ballots are counted:\n\n* **First-time voters:** Follow the identification instructions in your insert if you have not already satisfied the ID requirement.\n* **Returning voters:** You do not need to submit additional ID simply because you received this insert.\n* **Not sure?** Call our office at **801-851-8683**.\n\nVoters can also sign up to receive alerts on the status of their ballot at vote.utah.gov.\n\nThis isn't the first time ballot instructions from Davidson's office have caused confusion. Last year, the county mailed notices instructing voters to include the last four digits of their driver's license, state identification card number or Social Security card number or risk their vote not being counted.\n\nThe four-digit requirement is part of a new Utah voter ID law. That provision hasn't taken effect yet, but counties can put a space for those digits on the ballot if they want to.\n\nThe issue with incorrect notices being sent appears to be isolated to Utah County.\n\n\"I was quite surprised when a couple of voters started contacting our office about this,\" Jackson said. \"It's just not something that we see regularly.\"\n\n**Contributing:** Heather Peterson and Andy Cupp\n\n×\n\nThe Key Takeaways for this article were generated with the assistance of large language models and reviewed by our editorial team. The article, itself, is solely human-written.\n\n### Related stories\n\n### Most recent Utah County stories\n\n### Related topics\n\nUtah CountyUtahPolitics",
+        "retrieved_at": "2026-11-06T06:44:01.601274+00:00",
+        "content_hash": "64df7b8319e21fac7588c74fa709e285df618db7f16122a9db7a56a871a505c9",
+        "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "1bdacb5c6c753f09d21f7085d0d13226728d9feaaa3afa21172a9ddd3c08ff6a",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.16,
+          "evidence": 0.34,
+          "counterevidence": 0.43,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "Utah County clerk acknowledges error after thousands receive voter ID ...",
+        "url": "https://kutv.com/news/politics/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+        "snippet": "The Utah County Clerk acknowledged thousands of voters there incorrectly received notices telling them they need to submit a copy of their ...",
+        "page_text": "# Utah County clerk acknowledges error after thousands receive voter ID notices\n\n---\n\nby Nate Carlisle, KUTV\n\nFri, October 23, 2026 at 7:29 PM\n\nUpdated Fri, October 23, 2026 at 7:46 PM\n\n6VIEW ALL PHOTOS\n\nThe Utah County clerk on acknowledged thousands of voters incorrectly received notices telling them they need to submit a copy of their identification with their ballot. (KUTV)\n\nPROVO, Utah (KUTV) — The Utah County clerk on acknowledged thousands of voters incorrectly received notices telling them they need to submit a copy of their identification with their ballot.\n\nThe notices were meant to go to a few voters who did not provide government ID at the time they registered, said Aaron Davidson, the county clerk. Instead, they went to a wider swath of new voters and even a few who voted previously.\n\n\"So it was a clerical error,\" Davidson said. \"There were a total of 6,144 first-time voter, first-time voter notifications that went out... I did go through and we did find 71 that they have voted in the past.\"\n\n## MORE | Utah voter registration\n\nUtah County Clerk MailerPDF preview\n\nThe Utah County Clerk acknowledged thousands of voters there incorrectly received notices telling them they need to submit a copy of their identification with their ballot.\n\nView PDF\n\nDavidson attributed the mistakes to miscommunication with the state's driver license database -- many Utahns register to vote when they obtain their license -- and the failure of some of the clerk staff to check a box when people voted in previous elections.\n\nVoters who provided identification during registration or who have voted previously will not be required to resubmit ID.\n\n\"If they send it in or they don't send it in, we're still gonna count the ballot,\" Davidson said.\n\nRegistering to vote was a smooth process for Jennifer Penrod on Friday. She recently moved from the California Bay Area to pursue a master's degree at Brigham Young University.\n\n\"So I just walked into the office,\" Penrod said, \"filled out the voter registration, and with my last four of my social and my passport, and that was what it took.\"\n\nAn employee at the clerk's office told Penrod her ballot will be mailed next week.\n\nYet, Sarah McConkie worries about mistakes like that at the Utah County clerk. McConkie works with the nonpartisan advocacy group Indivisible Utah County.\n\n\"We're concerned that if people are getting in the mail this notice with their ballots saying that you need to take an extra step that you don't need to,\" McConkie said, \"it could dissuade people from voting, make it feel more complicated, intimidating, cumbersome than it needs to be.\"\n\nDavidson said some of the voters who -- rightly or not -- received the notification have already returned their ballots with a copy of their ID.\n\nThe notices went to a single-digit percentage of the Utah County electorate. Davidson said voter discouragement concerns only seem to come from those not impacted.\n\n\"I've never heard that complaint from somebody that it is affected, that got that notification,\" Davidson said.\n\n\\_\\_\\_\\_\\_",
+        "retrieved_at": "2026-11-06T06:44:08.243941+00:00",
+        "content_hash": "155afa8310b1c21c6b4b804735304b4595aa512cb5758140d6a3fc4562a89d52",
+        "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "698fddfc482ca70ca51d3646b5287121a4fb5ef316b276bcea40c112ef4b37ce",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.16,
+          "evidence": 0.37,
+          "counterevidence": 0.43,
+          "injection": 0.06
+        }
+      },
+      {
+        "title": "Utah County clerk acknowledges error after thousands receive voter ID ...",
+        "url": "https://kjzz.com/news/local/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+        "snippet": "The Utah County Clerk acknowledged thousands of voters there incorrectly received notices telling them they need to submit a copy of their ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:44:09.776438+00:00",
+        "content_hash": "5799ba02b749e9c85cec84ac7014cc4a9b562d6f2c305bb451b5376e1069bc06",
+        "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "829815a7f1b9a827cd5c5b68ea61a4cab5d0361b348fcd343772d226cb54b8d9",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.17,
+          "evidence": 0.25,
+          "counterevidence": 0.31,
+          "injection": 0.06
+        }
+      },
+      {
+        "title": "Misleading claims about voting are spreading online as voters cast their ...",
+        "url": "https://www.facebook.com/wccoradio/posts/misleading-claims-about-voting-are-spreading-online-as-voters-cast-their-ballots/2031503411500373/",
+        "snippet": "Misleading claims about voting are spreading online as voters cast their ballots in the midterms, with Election Day days away.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:44:09.776438+00:00",
+        "content_hash": "600574d2a812ac0a17a49afcadaef20d020fca3683ae283791b8b2f6e45df52e",
+        "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "5f7ec7d9016b239edea4e115c43382bc6e154d9a18ebc5d6fc4e1778349092e9",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.18,
+          "evidence": 0.12,
+          "counterevidence": 0.25,
+          "injection": 0.07
+        }
+      },
+      {
+        "title": "Deep-red Utah embraced voting by mail. Then came 2020.",
+        "url": "https://apnews.com/article/2022-midterm-elections-voting-utah-election-2020-f4b52c6feb078cd9aa46ed508e7f91c6",
+        "snippet": "Utah was the only Republican-led state that mailed all active voters ballots before the 2020 election made the practice the subject of ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:44:09.776438+00:00",
+        "content_hash": "997237f514ea12d5cb9cb1dfbfe48ccdacd0da7b840aebc3e81838a04b36e988",
+        "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "3f0978564b1be9b2edf8eb07d7b7b41292b8e715625ca00c8595945df83abe05",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.13,
+          "evidence": 0.17,
+          "counterevidence": 0.21,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "Fact Check: Voting Machine Message Voters Received Did NOT ...",
+        "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-voting-machine-message-voters-received-did-not-prevent-them-from-voting.html",
+        "snippet": "Her name is Taylor Zundel, and it sounds like she and her husband live in or near Salt Lake City. And she witnessed quite the irregularity when they showed up ...",
+        "page_text": "Not formatted\n\nWere a handful of early voters in Utah who went to cast ballots told they had already voted? Yes, that's true: But it happened to only a few people and was due to a technical error by a poll worker. Once the problem was fixed, they able to vote. Official records show they had not voted previously, said Salt Lake County Clerk Sherry Swensen.\n\nThe claim appeared in an article published by The Cain Gang on October 29, 2020 titled \"Instagram Testimony: People Are Showing Up to Vote and Being Told They Already Voted\" (archived here) which opened:\n\n> Her name is Taylor Zundel, and it sounds like she and her husband live in or near Salt Lake City. And she witnessed quite the irregularity when they showed up for early voting: Not just her husband, but at least one other voter, were told when they got there that records showed they had already...\n\nUsers on social media only saw this title, description and thumbnail:\n\n> Her name is Taylor Zundel, and it sounds like she and her husband live in or near Salt Lake City. And she witnessed quite the irregularity when they showed up for early voting: Not just her husband, but at least one other voter, were told when they got there that records showed they had already...\n\nNewsGuard, a company that uses trained journalist to rank the reliability of websites, describes hermancain.com as:\n\n> A website featuring conservative commentary by Herman Cain, a former businessman who ran for president in 2012. Cain died in July 2020 of the COVID-19 virus.\n\nAccording to NewsGuard the site can generally be trusted to maintain journalistic standards. Read their full assessment here.\n\nThe Cain Gang story is right: Some voting machines in Utah told potential voters they had already voted when, in fact, they had not. But the Cain Gang story lacks critical context.\n\nFirst, it only happened to a handful of people, Salt Lake County Clerk Sherrie Swensen told Lead Stories in a telephone interview October 30, 2020. There was no widespread or systematic denial of vote to a large swath of people.\n\nSecondly, the problem was caused by poll worker error and an outdated default message on the voting machines that told voters they had already voted when the machine could not read the voter access card or it was inserted after a prescribed time limit.\n\nAccording to Swensen, after signing in at the voting station, each voter is given a voter access card that is inserted into the voting machine to call up a ballot on the screen. Before handing the card over, the poll worker is supposed to clear it electronically, in effect wiping it clean and activating it. That enables the card to pull up the ballot. But if the poll worker does not clear the card, an error message appears on the voting machine screen that says the voter has already voted. A similar message will appear on the screen if the machine times out because a voter took more than 2 1/2 minutes in inserting the card after it has been cleared. That happens sometimes, Swensen said, if a voter is too busy talking on the phone or stops to read a sample ballot, for example.\n\nThe controversy started when a woman posted a video on the Instagram account for Taylor Zundel on October 26, 2020 in which she relayed what happened when she and her husband went to early voting that day in Salt Lake County, Utah.\n\nAccording to the woman, after her husband checked in, he was handed the voter access card to insert into the voting machine. But when he inserted it, the screen said he had already voted, which he hadn't. He took the card back to the check-in desk and was told the poll worker would have to call an election official in Salt Lake City \"to clear his vote,\" she says in the video.\n\nWhen he was given the card back, he went back to the machine and was able to vote.\n\nThe woman says several times in the video that the issue is important, and notes that:\n\n> It doesn't feel right.\n\nShe also posted a message on the Instagram account that said:\n\n> VOTER FRAUD? YOU TELL ME  \n>   \n> This happened to TWO different people within the short 5-10 mins I was voting. This isn't okay! Spread the word.\n\nWhen election officials found out about the video, one of them posted the following comment on the woman's Instagram page:\n\n> Hello Taylor,  \n>   \n> We are happy to help you understand what happened.  \n> We can assure you that this was not a case of voter fraud.  \n> What happened was a mistake by the poll worker at your location.  \n> That worker missed a step on the check-in screen. By missing that step, no information was added to the card. When that happens and the card is inserted into the machine, a red error message comes across the machine indicating, \"This voter access card is already voted. Please remove it from the machine.\" That card was not properly processed and had no information on it.  \n> It's also important to note that we do not \"clear votes.\" The individuals you spoke to were referring to properly processing the voting card, which is a generic information transmitting device.\n>\n> We go to great lengths to ensure safe and secure elections. If you have other concerns, please contact our office by phone or come down in person to the Salt Lake County Government Center.\n>\n> We are here for you Monday-Friday 8 a.m. to 5 p.m.\n>\n> We are always available with answers to your questions about elections.  \n>   \n> Best Wishes,  \n>   \n> Salt Lake County Elections\n\nSalt Lake County Clerk Swensen said in a telephone interview with Lead Stories on October 29, 2020, that she wrote the note. Swensen said it's important for voters to understand what happened and to know there's no fraud or ill-intent in the routine glitch. To that end, she said:\n\n> We offered to have her come in and we could demonstrate.\n\nHas she accepted the invitation and gone in? Answered Swensen:\n\n> I haven't heard that she has.\n\nThe woman in the video doesn't come right out and say it, but questions she poses seem to assume that someone had voted in her husband's place. Her questions:\n\n* Who did he apparently vote for before?\n* What if he hadn't voted this year? The other vote would have counted.\n* Is it all that easy to clear a vote? \"If so, that's a little scary,\" she says.\n\nThe Cain Gang articles also poses a series of questions that seem to indicate some type of voter fraud was occurring:\n\n* Who marked these men as already having voted, when they hadn't?\n* What exactly does it mean to \"clear your vote\" and how is it done? Who has the authority to do it?\n* Did someone frauduently vote using their names? Is it that easy? If so, how many other fraudulent votes end up getting counted because no one realizes they happened?\n* How many people never get the chance to vote because election officials don't know how to solve a problem like this?\n* If people are wrongly marked down as having voted when they didn't, could the opposite also happen? That people who do vote never have their votes recorded? Can that happen? Does it?\n\nAs Swensen pointed out, no one had voted previously using these voters' identities. And votes are not cleared, she said. It's the voter access cards that are wiped clear before each use. The problem, she said, was easily fixed by clearing the cards.",
+        "retrieved_at": "2026-11-06T06:44:36.370018+00:00",
+        "content_hash": "101cdf34db40a5ee2f45a99dd1ef2eda8c2bd1d15fe31f0e3cf084d20d475f68",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "7df16f636b5df370cdb3ac9cbc032c1053651ee29208d70d0060f6a2021c0338",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.96,
+          "evidence": 0.94,
+          "counterevidence": 0.79,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "GOP lawmakers who claimed there's been widespread voter fraud in Utah ...",
+        "url": "https://www.instagram.com/p/De1uTYmjdnE/",
+        "snippet": "GOP lawmakers who claimed there's been widespread voter fraud in Utah demanded a security study of the state's mail ballots.",
+        "page_text": "SALT LAKE TRIBUNE -- GOP lawmakers who claimed there’s been widespread voter fraud in Utah demanded a security study of the state’s mail ballots. The Wednesday reveal from researchers: Utah’s system works — and neither “in-person or mail voting is inherently more secure.”  \n  \nThe two approaches ultimately “remain subject to many of the same risks,” Utah Valley University researchers determined after analyzing election systems in Utah and five other states.  \n  \nThe taxpayer-funded, $100,000 study was commissioned by lawmakers earlier this year as part of a last-minute compromise to preserve the state’s vote-by-mail election system against a House GOP push to gut it. The results come as political attacks on mail voting continue both in the Beehive State and nationwide.  \n  \nRead more from the Salt Lake Tribune at KPCW.org. 🔗Link in bio.\n\nThe two approaches ultimately “remain subject to many of the same risks,” Utah Valley University researchers determined after analyzing election systems in Utah and five other states.\n\nThe taxpayer-funded, $100,000 study was commissioned by lawmakers earlier this year as part of a last-minute compromise to preserve the state’s vote-by-mail election system against a House GOP push to gut it. The results come as political attacks on mail voting continue both in the Beehive State and nationwide.\n\nRead more from the Salt Lake Tribune at KPCW.org. 🔗Link in bio.\n\nWaste of our money to discover there’s nothing wrong\n\nReply\n\nWant a Utahn Supreme Court Justice held accountable?   \nFile a complaint with https://jcc.utah.gov/complaint-form/  \nCase name League of Women Voters of Utah, et al. v. Utah State Legislature  \nCase # is 20260365-SC  \n  \nReason for complaint: Menssen’s name appeared on a publicly available list of more than 161,000 Utahns who signed the petition circulated by the Utah Republican Party. Menssen signed the petition on Feb. 12. He now sits on the court deciding the very lawsuit that seeks to enforce Prop 4, and he has already heard arguments in the case. When a judge has personally signed on to one side of a fight, the public has every reason to question his impartiality.  \n  \nCorroborating: Des News, SLTribune, Utah Political Watch, Utah News Dispatch\n\nFile a complaint with https://jcc.utah.gov/complaint-form/\n\nCase name League of Women Voters of Utah, et al. v. Utah State Legislature\n\nCase # is 20260365-SC\n\nReason for complaint: Menssen’s name appeared on a publicly available list of more than 161,000 Utahns who signed the petition circulated by the Utah Republican Party. Menssen signed the petition on Feb. 12. He now sits on the court deciding the very lawsuit that seeks to enforce Prop 4, and he has already heard arguments in the case. When a judge has personally signed on to one side of a fight, the public has every reason to question his impartiality.\n\nCorroborating: Des News, SLTribune, Utah Political Watch, Utah News Dispatch\n\n1 like\n\nReply\n\nProofread!\n\n3 likes\n\nReply\n\nLog in to like or comment.",
+        "retrieved_at": "2026-11-06T06:44:48.149036+00:00",
+        "content_hash": "21700be4bad5848a609e1df0a5de6fe923d990981f3d4c106223db990647123c",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "53c692334d0a6e64c4e0f47a1188c3638abf8b7ecc36fd24958d65642d55c094",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.04,
+          "evidence": 0.08,
+          "counterevidence": 0.1,
+          "injection": 0.07
+        }
+      },
+      {
+        "title": "Debunking Viral Claims Archives",
+        "url": "https://www.factcheck.org/fake-news/",
+        "snippet": "Debunking Viral Claims. These articles debunk misinformation shared on social media. We also provide resources for readers: an article and a video on how to ...",
+        "page_text": "Q: Are voting machines changing Democratic votes to Republican votes? Several posts on Facebook are making that claim.\n\nA: There is no evidence that touchscreen voting machines are deliberately switching voter selections. Rather, elections experts and state election officials have said that reported issues of machines initially not recording votes correctly are a result of familiar machine calibration issues or voter error. Also, nearly the entire country votes in a manner where voters review a paper ballot before having their votes officially cast.\n\nQ: Did the Trump administration have 60 cherry blossom trees cut down in D.C. to build a golf course?\n\nA: In what the Department of Interior called “routine maintenance,” about 60 trees were removed from East Potomac Park, according to the Washington Post. But only one cherry tree removal was mentioned in that article, and an advocacy group opposed to major changes to the park told us it only knew “for certain” of one cherry tree being cut down.\n\nQ: I read this on FB. Is it true? The U.S. Treasury just declared the U.S government is insolvent.\n\nA: No. That’s the conclusion of an opinion piece that cited a Treasury report showing the government’s liabilities outweigh its assets. But that’s been the case for decades, and unlike an insolvent business, the government can levy taxes.\n\n### ICE Officers and Bonuses\n\nQ: Is it true that ICE agents are financially rewarded for the number of people taken into custody?\n\nA: The Department of Homeland Security has said there is no such policy, and an immigration think tank told us it is unaware of any payments per arrest. The Wall Street Journal reported that agents “are rewarded for making arrests” but didn’t say how they are rewarded. Immigration and Customs Enforcement quickly scrapped a proposed program to pay bonuses to speed up deportations.\n\n### Viral Claims About Charlie Kirk’s Words\n\nSince the fatal shooting of Charlie Kirk on Sept. 10, social media users have shared posts showing, quoting or paraphrasing remarks the posts attribute to the conservative activist. Many readers have asked us to provide the facts on whether Kirk, the founder of the youth political group Turning Point USA, made several of these comments.\n\nAfter the fatal shooting of conservative activist Charlie Kirk, social media claims offering political views of the assassination and the reaction to it quickly spread. One message falsely claimed that “not a single Republican condemned” the targeted shooting of a Democratic politician in Minnesota in June. Many Republicans, including President Donald Trump, condemned it.\n\nRepublican Sen. Mike Lee of Utah and others posted unfounded claims on social media about the political affiliation of the gunman arrested in the June 14 fatal shootings of a Democratic Minnesota lawmaker and her husband and the wounding of another Democratic state lawmaker and his wife.\n\nQ: Is there an ad in Craigslist to hire people to riot in L.A.?\n\nA: No, there has been no such ad on Craigslist. Some social media posts cited a Craigslist ad to falsely claim it showed that people protesting the immigration raids in Los Angeles were being paid for their actions. But a pair of podcasters told the Associated Press they placed the ad as a prank for their show, and it had nothing to do with the protests.\n\nQ: Did President Donald Trump call military nurse Ruby Bradley a “loser,” and were there orders for her service history to be removed from Department of Defense archives?\n\nA: There’s no evidence for these claims. We could find no record of Trump referring to nurse Ruby Bradley, who received 34 medals for her service during World War II and the Korean War. A Pentagon spokesperson told us that there was “nothing deleted and/or taken offline related to Ruby Bradley”\n\nPresident Donald Trump said in a March 30 interview that “there are methods” for him to serve a third term in the White House, and a Daily Mail article referred to a “loophole” in the 22nd Amendment that would make it possible. But legal experts told us the “loophole” legal argument is “implausible” and “defeats the clear intent” of the amendment.",
+        "retrieved_at": "2026-11-06T06:44:58.733140+00:00",
+        "content_hash": "704df67d7ac296a62ce6edaf5902c526589928553e4b69f1fc27e72c668d0297",
+        "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "f44f19bdde9b7449eda7f732a07d97a6481bdc6f385c2dc8da62b922219055c1",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.05,
+          "evidence": 0.09,
+          "counterevidence": 0.16,
+          "injection": 0.08
+        }
+      },
+      {
+        "title": "Please FACT CHECK things before you post them!!! And be careful what ...",
+        "url": "https://www.instagram.com/reel/DL3Sqc-y2xo/?hl=en",
+        "snippet": "Please FACT CHECK things before you post them!!! And be careful what information you share. 95% of inflammatory viral claims that “feel ...",
+        "page_text": "Never miss a post from taylorlorenz\n\nSign up for Instagram to stay in the loop.\n\nSign up\n\nLog in\n\nSorry, we're having trouble playing this video.\n\nLearn more\n\ntaylorlorenz\n\n•\n\nFollow\n\nOriginal audio\n\n---\n\ntaylorlorenz\n\n 69w\n\nPlease FACT CHECK things before you post them!!! And be careful what information you share. 95% of inflammatory viral claims that “feel true” are FALSE! Anyone can do basic reporting, let’s all build a better media environment.\n\ntkincannon123\n\n 61w\n\ni think u r wrong on this!\n\nReply\n\nmik.wild\n\n 67w\n\nAgreed 100000%\n\nReply\n\numagzro\n\n 69w\n\n👏🏽👏🏽👏🏽\n\nReply\n\np.s.a.l.m.23\n\n 69w\n\nŸòù are a disgusting liberal inside and out. Abortion is murder.\n\nReply\n\nbretterlich\n\n 69w\n\n…said a road cone to an avalanche\n\n1 like\n\nReply\n\n3.3K88\n\nJuly 8, 2025\n\nLog in to like or comment.\n\n---\n\nMore posts from taylorlorenz\n\nSee more posts\n\n---",
+        "retrieved_at": "2026-11-06T06:45:00.943531+00:00",
+        "content_hash": "ba03f633d66e4c0a0401f6973308f620a155226903a8176ad805482dd312f7c1",
+        "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "c7f22835b1349df5c002ead6628729358267112cc50b2b9a4c1d67ef75bb7153",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.03,
+          "evidence": 0.04,
+          "counterevidence": 0.07,
+          "injection": 0.13
+        }
+      },
+      {
+        "title": "Fact-checking claims targeting Taylor Swift and Travis Kelce",
+        "url": "https://www.wral.com/archive/22136185/",
+        "snippet": "",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:45:11.596161+00:00",
+        "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "9f640edb2137f74d04821bad5070485364f64e75618d774fd465fc5979b21650",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.05,
+          "evidence": 0.04,
+          "counterevidence": 0.06,
+          "injection": 0.06
+        }
+      },
+      {
+        "title": "Taylor Swift and Travis Kelce's engagement is real, but the couple is ...",
+        "url": "https://www.poynter.org/fact-checking/2025/is-it-true-that-taylor-swift-travis-kelce/",
+        "snippet": "Taylor Swift and Travis Kelce's engagement is real, but the couple is often targeted by false claims. But PolitiFact found no evidence Kelce ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:45:11.596161+00:00",
+        "content_hash": "7882ec888112caeb128574dd5a6568339a0a3c92836f1d45cfd81bca09d67520",
+        "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "c773f5f227e242e4583e58210728884f0fcebaa1c2a9df8a32f38dbbabe26d1a",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.02,
+          "evidence": 0.04,
+          "counterevidence": 0.04,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "Former Meta engineer says Instagram took a 'don't ask, don't tell' approach ...",
+        "url": "https://abc7news.com/post/former-meta-engineer-says-instagram-took-dont-ask-tell-approach-kids-13-lawsuit-testimony/19705836/",
+        "snippet": "A former Meta engineer told jurors Wednesday that the company took a \"don't ask, don't tell\" approach on kids under 13 on its platforms.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T06:45:11.596161+00:00",
+        "content_hash": "d4a911f7fce78ceaa4234e782e79d369170c82907601d2122bc520650f57610f",
+        "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "bc2ed749566b8eaae35b37c24f34179173a0c5a34b0423cc76bb8878fea69c27",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.02,
+          "evidence": 0.04,
+          "counterevidence": 0.04,
+          "injection": 0.06
+        }
+      }
+    ],
+    "assertions": [
+      "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+      "Taylor Zundel claimed on Instagram that she",
+      "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted."
+    ],
+    "verification_questions": [],
+    "planning_statements": [],
+    "decomposition_method": "statements",
+    "gaps": [
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+      "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+      "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "contradictions": [],
+    "search_queries": [
+      "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+      "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence",
+      "Taylor Zundel claimed on Instagram that she evidence",
+      "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+      "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+      "Taylor Zundel claimed on Instagram that she original source fact check"
+    ],
+    "research_history": [
+      {
+        "round_number": 1,
+        "queries": [
+          "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence"
+        ],
+        "new_sources": 7,
+        "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+        "confidence": "Low",
+        "gaps": [
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+          "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "decision": "research_more",
+        "assessment": {
+          "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+          "confidence": "Low",
+          "summary": "",
+          "evidence": [],
+          "assertions": [],
+          "gaps": [],
+          "contradictions": [],
+          "counterevidence_searched": false,
+          "sources_independent": false,
+          "peer_reviewed_sources": false,
+          "next_queries": [],
+          "component_ledger": [],
+          "source_origin_ledger": [],
+          "raw_indexed_assessment": {},
+          "indexed_input": {}
+        },
+        "usable_source_keys": [
+          [
+            "https://huggingface.co/datasets/s-nlp/AVeriTeC_dev_filtered_10shot",
+            "3a76131d2165fa0d4966050a85282a4ddf67ef774114bac81f70ffc66690a1db"
+          ],
+          [
+            "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/",
+            "0f4d2ec68461ad2678b9ea68753549bddcffe3c28c9ca609ea747f9e6677a141"
+          ],
+          [
+            "https://www.instagram.com/reel/Dc1WL0PC-ZL/",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ],
+          [
+            "https://www.instagram.com/p/De4GdBrF8vy/",
+            "4de80e4f098a8aefbe8710be8e0a20462d9fb5e06d6c1f8a064bc20bae25edd6"
+          ],
+          [
+            "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/",
+            "5ff37ade856fea91003c3f4dd70f01c65db132d29156a2758457e5c58373b54b"
+          ],
+          [
+            "https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html",
+            "2d4cb6a921d181a8e4c381abf259fac77ec0658afacba10c45098fe26d94b1ae"
+          ]
+        ],
+        "structural_gaps": [
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+          "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "semantic_gaps": [],
+        "fatal_error": false,
+        "budget": {
+          "max_rounds": 3,
+          "max_search_calls": 20,
+          "max_scrapes": 20,
+          "max_tokens": 250000,
+          "max_seconds": 270.0,
+          "search_calls": 2,
+          "scrapes": 4,
+          "tokens_used": 22449,
+          "token_usage_complete": true,
+          "started_at_monotonic": 14571.281
+        },
+        "elapsed_seconds": 47.82799999999952
+      },
+      {
+        "round_number": 2,
+        "queries": [
+          "Taylor Zundel claimed on Instagram that she evidence",
+          "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence"
+        ],
+        "new_sources": 10,
+        "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+        "confidence": "Low",
+        "gaps": [
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+          "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "decision": "research_more",
+        "assessment": {
+          "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+          "confidence": "Low",
+          "summary": "",
+          "evidence": [],
+          "assertions": [],
+          "gaps": [],
+          "contradictions": [],
+          "counterevidence_searched": false,
+          "sources_independent": false,
+          "peer_reviewed_sources": false,
+          "next_queries": [],
+          "component_ledger": [],
+          "source_origin_ledger": [],
+          "raw_indexed_assessment": {},
+          "indexed_input": {}
+        },
+        "usable_source_keys": [
+          [
+            "https://huggingface.co/datasets/s-nlp/AVeriTeC_dev_filtered_10shot",
+            "3a76131d2165fa0d4966050a85282a4ddf67ef774114bac81f70ffc66690a1db"
+          ],
+          [
+            "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/",
+            "0f4d2ec68461ad2678b9ea68753549bddcffe3c28c9ca609ea747f9e6677a141"
+          ],
+          [
+            "https://www.instagram.com/reel/Dc1WL0PC-ZL/",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ],
+          [
+            "https://www.instagram.com/p/De4GdBrF8vy/",
+            "4de80e4f098a8aefbe8710be8e0a20462d9fb5e06d6c1f8a064bc20bae25edd6"
+          ],
+          [
+            "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/",
+            "5ff37ade856fea91003c3f4dd70f01c65db132d29156a2758457e5c58373b54b"
+          ],
+          [
+            "https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html",
+            "2d4cb6a921d181a8e4c381abf259fac77ec0658afacba10c45098fe26d94b1ae"
+          ],
+          [
+            "https://law.justia.com/cases/utah/court-of-appeals-published/2024/20230043-ca.html",
+            "0b3014bd3b4440751b6bf4a6b36f3980031bf07191b3b814dd9c20ecb943fb28"
+          ],
+          [
+            "https://www.facebook.com/ChristinaRandallOfficial/videos/instagram-model-claims-it-was-self-defense-but-the-evidence-disagrees-reels-true/713784621449542/",
+            "d47a27ae608073b587cc679640e34988f7c9c1db389a0a0979b9811a0f59b73d"
+          ],
+          [
+            "https://www.nytimes.com/2017/08/07/world/europe/ernst-zundel-canada-germany-holocaust-denial.html",
+            "3efa7d7cc9432e0657f013808beac5050a26b3363994380d6e800abfdbd5ccd8"
+          ],
+          [
+            "https://www.ksl.com/article/51640353/some-utah-county-voters-incorrectly-received-notice-telling-them-to-include-copy-of-id-with-ballot",
+            "64df7b8319e21fac7588c74fa709e285df618db7f16122a9db7a56a871a505c9"
+          ],
+          [
+            "https://kutv.com/news/politics/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+            "155afa8310b1c21c6b4b804735304b4595aa512cb5758140d6a3fc4562a89d52"
+          ],
+          [
+            "https://kjzz.com/news/local/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+            "5799ba02b749e9c85cec84ac7014cc4a9b562d6f2c305bb451b5376e1069bc06"
+          ],
+          [
+            "https://www.facebook.com/wccoradio/posts/misleading-claims-about-voting-are-spreading-online-as-voters-cast-their-ballots/2031503411500373/",
+            "600574d2a812ac0a17a49afcadaef20d020fca3683ae283791b8b2f6e45df52e"
+          ],
+          [
+            "https://apnews.com/article/2022-midterm-elections-voting-utah-election-2020-f4b52c6feb078cd9aa46ed508e7f91c6",
+            "997237f514ea12d5cb9cb1dfbfe48ccdacd0da7b840aebc3e81838a04b36e988"
+          ]
+        ],
+        "structural_gaps": [
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+          "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "semantic_gaps": [],
+        "fatal_error": false,
+        "budget": {
+          "max_rounds": 3,
+          "max_search_calls": 20,
+          "max_scrapes": 20,
+          "max_tokens": 250000,
+          "max_seconds": 270.0,
+          "search_calls": 4,
+          "scrapes": 8,
+          "tokens_used": 50712,
+          "token_usage_complete": true,
+          "started_at_monotonic": 14571.281
+        },
+        "elapsed_seconds": 90.23399999999856
+      },
+      {
+        "round_number": 3,
+        "queries": [
+          "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+          "Taylor Zundel claimed on Instagram that she original source fact check"
+        ],
+        "new_sources": 7,
+        "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+        "confidence": "Low",
+        "gaps": [
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+          "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "decision": "max_rounds",
+        "assessment": {
+          "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+          "confidence": "Low",
+          "summary": "",
+          "evidence": [],
+          "assertions": [],
+          "gaps": [],
+          "contradictions": [],
+          "counterevidence_searched": false,
+          "sources_independent": false,
+          "peer_reviewed_sources": false,
+          "next_queries": [],
+          "component_ledger": [],
+          "source_origin_ledger": [],
+          "raw_indexed_assessment": {},
+          "indexed_input": {}
+        },
+        "usable_source_keys": [
+          [
+            "https://huggingface.co/datasets/s-nlp/AVeriTeC_dev_filtered_10shot",
+            "3a76131d2165fa0d4966050a85282a4ddf67ef774114bac81f70ffc66690a1db"
+          ],
+          [
+            "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/",
+            "0f4d2ec68461ad2678b9ea68753549bddcffe3c28c9ca609ea747f9e6677a141"
+          ],
+          [
+            "https://www.instagram.com/reel/Dc1WL0PC-ZL/",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ],
+          [
+            "https://www.instagram.com/p/De4GdBrF8vy/",
+            "4de80e4f098a8aefbe8710be8e0a20462d9fb5e06d6c1f8a064bc20bae25edd6"
+          ],
+          [
+            "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/",
+            "5ff37ade856fea91003c3f4dd70f01c65db132d29156a2758457e5c58373b54b"
+          ],
+          [
+            "https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html",
+            "2d4cb6a921d181a8e4c381abf259fac77ec0658afacba10c45098fe26d94b1ae"
+          ],
+          [
+            "https://law.justia.com/cases/utah/court-of-appeals-published/2024/20230043-ca.html",
+            "0b3014bd3b4440751b6bf4a6b36f3980031bf07191b3b814dd9c20ecb943fb28"
+          ],
+          [
+            "https://www.facebook.com/ChristinaRandallOfficial/videos/instagram-model-claims-it-was-self-defense-but-the-evidence-disagrees-reels-true/713784621449542/",
+            "d47a27ae608073b587cc679640e34988f7c9c1db389a0a0979b9811a0f59b73d"
+          ],
+          [
+            "https://www.nytimes.com/2017/08/07/world/europe/ernst-zundel-canada-germany-holocaust-denial.html",
+            "3efa7d7cc9432e0657f013808beac5050a26b3363994380d6e800abfdbd5ccd8"
+          ],
+          [
+            "https://www.ksl.com/article/51640353/some-utah-county-voters-incorrectly-received-notice-telling-them-to-include-copy-of-id-with-ballot",
+            "64df7b8319e21fac7588c74fa709e285df618db7f16122a9db7a56a871a505c9"
+          ],
+          [
+            "https://kutv.com/news/politics/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+            "155afa8310b1c21c6b4b804735304b4595aa512cb5758140d6a3fc4562a89d52"
+          ],
+          [
+            "https://kjzz.com/news/local/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+            "5799ba02b749e9c85cec84ac7014cc4a9b562d6f2c305bb451b5376e1069bc06"
+          ],
+          [
+            "https://www.facebook.com/wccoradio/posts/misleading-claims-about-voting-are-spreading-online-as-voters-cast-their-ballots/2031503411500373/",
+            "600574d2a812ac0a17a49afcadaef20d020fca3683ae283791b8b2f6e45df52e"
+          ],
+          [
+            "https://apnews.com/article/2022-midterm-elections-voting-utah-election-2020-f4b52c6feb078cd9aa46ed508e7f91c6",
+            "997237f514ea12d5cb9cb1dfbfe48ccdacd0da7b840aebc3e81838a04b36e988"
+          ],
+          [
+            "https://leadstories.com/hoax-alert/2020/10/fact-check-voting-machine-message-voters-received-did-not-prevent-them-from-voting.html",
+            "101cdf34db40a5ee2f45a99dd1ef2eda8c2bd1d15fe31f0e3cf084d20d475f68"
+          ],
+          [
+            "https://www.instagram.com/p/De1uTYmjdnE/",
+            "21700be4bad5848a609e1df0a5de6fe923d990981f3d4c106223db990647123c"
+          ],
+          [
+            "https://www.factcheck.org/fake-news/",
+            "704df67d7ac296a62ce6edaf5902c526589928553e4b69f1fc27e72c668d0297"
+          ]
+        ],
+        "structural_gaps": [
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Resolve and cite the assertion: Taylor Zundel claimed on Instagram that she",
+          "Resolve and cite the assertion: other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "semantic_gaps": [],
+        "fatal_error": false,
+        "budget": {
+          "max_rounds": 3,
+          "max_search_calls": 20,
+          "max_scrapes": 20,
+          "max_tokens": 250000,
+          "max_seconds": 270.0,
+          "search_calls": 6,
+          "scrapes": 12,
+          "tokens_used": 82429,
+          "token_usage_complete": true,
+          "started_at_monotonic": 14571.281
+        },
+        "elapsed_seconds": 152.65599999999904
+      }
+    ],
+    "budget": {
+      "max_rounds": 3,
+      "max_search_calls": 20,
+      "max_scrapes": 20,
+      "max_tokens": 250000,
+      "max_seconds": 270.0,
+      "search_calls": 6,
+      "scrapes": 12,
+      "tokens_used": 82429,
+      "token_usage_complete": true,
+      "started_at_monotonic": 14571.281
+    },
+    "errors": [
+      "Page fetch failed for https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html: bot_blocked",
+      "Page fetch failed for https://law.justia.com/cases/utah/court-of-appeals-published/2024/20230043-ca.html: bot_blocked"
+    ],
+    "jev_audit": {
+      "search_ranking": [
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://www.instagram.com/p/De4GdBrF8vy/",
+          "score": 0.15
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/",
+          "score": 0.19
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://www.instagram.com/reel/Dc1WL0PC-ZL/",
+          "score": 0.17
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/",
+          "score": 0.11
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://huggingface.co/datasets/s-nlp/AVeriTeC_dev_filtered_10shot",
+          "score": 0.81
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence",
+          "url": "https://dhjhkxawhe8q4.cloudfront.net/asp-wp/wp-content/uploads/2026/08/25163517/Academic-Studies-Press-JCA-9.1-OA.pdf",
+          "score": 0.02
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence",
+          "url": "https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html",
+          "score": 0.05
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she evidence",
+          "url": "https://law.justia.com/cases/utah/court-of-appeals-published/2024/20230043-ca.html",
+          "score": 0.55
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she evidence",
+          "url": "https://www.facebook.com/ChristinaRandallOfficial/videos/instagram-model-claims-it-was-self-defense-but-the-evidence-disagrees-reels-true/713784621449542/",
+          "score": 0.03
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she evidence",
+          "url": "https://www.instagram.com/reel/DKwvaZ_xxU8/",
+          "score": 0.03
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she evidence",
+          "url": "https://www.nytimes.com/2017/08/07/world/europe/ernst-zundel-canada-germany-holocaust-denial.html",
+          "score": 0.03
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she evidence",
+          "url": "https://www.youtube.com/watch?v=jFrQaF4--2w",
+          "score": 0.03
+        },
+        {
+          "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://kutv.com/news/politics/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+          "score": 0.25
+        },
+        {
+          "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://kjzz.com/news/local/utah-county-clerk-acknowledges-error-after-thousands-receive-voter-id-notices",
+          "score": 0.19
+        },
+        {
+          "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://www.ksl.com/article/51640353/some-utah-county-voters-incorrectly-received-notice-telling-them-to-include-copy-of-id-with-ballot",
+          "score": 0.29
+        },
+        {
+          "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://www.facebook.com/wccoradio/posts/misleading-claims-about-voting-are-spreading-online-as-voters-cast-their-ballots/2031503411500373/",
+          "score": 0.17
+        },
+        {
+          "query": "other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. evidence",
+          "url": "https://apnews.com/article/2022-midterm-elections-voting-utah-election-2020-f4b52c6feb078cd9aa46ed508e7f91c6",
+          "score": 0.16
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+          "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-voting-machine-message-voters-received-did-not-prevent-them-from-voting.html",
+          "score": 0.9
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+          "url": "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/",
+          "score": 0.18
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+          "url": "https://www.instagram.com/p/De1uTYmjdnE/",
+          "score": 0.1
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+          "url": "https://www.instagram.com/p/De4GdBrF8vy/",
+          "score": 0.09
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+          "url": "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/",
+          "score": 0.07
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+          "url": "https://www.poynter.org/fact-checking/2025/is-it-true-that-taylor-swift-travis-kelce/",
+          "score": 0.03
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+          "url": "https://www.factcheck.org/fake-news/",
+          "score": 0.26
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+          "url": "https://www.instagram.com/reel/DL3Sqc-y2xo/?hl=en",
+          "score": 0.07
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+          "url": "https://www.wral.com/archive/22136185/",
+          "score": 0.06
+        },
+        {
+          "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+          "url": "https://abc7news.com/post/former-meta-engineer-says-instagram-took-dont-ask-tell-approach-kids-13-lawsuit-testimony/19705836/",
+          "score": 0.03
+        }
+      ],
+      "citations": [],
+      "domain": {
+        "domain": "political",
+        "confidence": 1.0,
+        "used": true,
+        "model": "jev-1.13.0"
+      }
+    }
+  }
+}

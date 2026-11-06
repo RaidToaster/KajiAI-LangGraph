@@ -24,6 +24,12 @@ def build_parser() -> argparse.ArgumentParser:
         choices=["auto", "general", "scientific", "political", "health_medical"],
     )
     parser.add_argument("--max-rounds", type=int, default=10, choices=range(1, 11))
+    parser.add_argument(
+        "--decomposition-method", choices=["statements", "statements_and_questions", "questions_as_guidance"],
+        help="Use statement decomposition or model-generated statements and verification questions",
+    )
+    parser.add_argument("--assessment-mode", choices=["standard", "indexed", "ledger", "reference_first", "scope_first", "factored", "extractive", "adjudicated", "catalogued", "proof", "bound_proof", "literal_proof", "strict_literal", "passage_decision", "path_adjudicated", "evidence_adjudicated"],
+                        help="Use the default analyzer, claim IDs, or a component/origin ledger")
     parser.add_argument("--format", choices=["report", "brief", "json"], default="report")
     parser.add_argument(
         "--no-progress", action="store_true", help="Hide live progress messages on stderr"
@@ -47,6 +53,10 @@ def main() -> None:
     args = build_parser().parse_args()
     model = retriever = None
     config = load_config()
+    if args.decomposition_method:
+        config["model"]["decomposition_method"] = args.decomposition_method
+    if args.assessment_mode:
+        config["model"]["assessment_mode"] = args.assessment_mode
     if args.mock:
         model, retriever = _mock_dependencies()
         config = deepcopy(config)

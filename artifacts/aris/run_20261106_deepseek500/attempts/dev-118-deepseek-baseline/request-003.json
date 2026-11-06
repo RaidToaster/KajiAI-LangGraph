@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Most Arab citizens support normalization with Israel.",
+        "query": "Most Arab citizens support normalization with Israel. evidence",
+        "candidates": [
+          {
+            "title": "Taking Arabs' Pulse on Normalization of Ties with Israel",
+            "snippet": "In five of the six countries surveyed, fewer than one-in-ten citizens favor or strongly favor the respective peace treaties that Israel signed ...",
+            "url": "https://www.arabbarometer.org/2020/12/taking-arabs-pulse-on-normalizing-ties-with-israel/"
+          },
+          {
+            "title": "Arab Public Opinion on Arab-Israeli Normalization and ...",
+            "snippet": "Notably, a majority in the Palestinian territories express openness to some form of contact with Israelis—60% of West Bankers, 62% of Gazans, ...",
+            "url": "https://www.washingtoninstitute.org/policy-analysis/arab-public-opinion-arab-israeli-normalization-and-abraham-accords"
+          },
+          {
+            "title": "What do ordinary Arabs think about normalizing relations ...",
+            "snippet": "The vast majority of Arabs probably oppose normalization and express a high degree of support for Palestinian statehood and rights.",
+            "url": "https://goodauthority.org/news/what-do-ordinary-arabs-think-about-normalizing-relations-with-israel/"
+          },
+          {
+            "title": "Can the Abraham Accords Succeed? Exploring Arab Support ...",
+            "snippet": "In the twelve countries in the survey, only 20.4 percent of respondents believe that the Arab world should accept Israel, while 79.6 percent ...",
+            "url": "https://www.wilsoncenter.org/article/can-abraham-accords-succeed-exploring-arab-support-normalization-israel"
+          },
+          {
+            "title": "The Arab Minority in Israel and the Normalization ...",
+            "snippet": "the majority of the Arab community in Israel (61.8% of the respondents) support the normalization agreements between Israel and the Arab ...",
+            "url": "https://dayan.org/content/arab-minority-israel-and-normalization-agreements-arab-countries"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-118-deepseek-baseline",
+  "timestamp": "2026-11-06T05:05:41.400680+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8730.718
+}

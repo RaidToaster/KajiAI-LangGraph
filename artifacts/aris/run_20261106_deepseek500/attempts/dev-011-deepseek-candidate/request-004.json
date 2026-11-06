@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The U.S. surgeon general and the Centers for Disease Control both previously said that ‘masks are not effective in preventing [the] general public from catching coronavirus.’",
+        "query": "What primary records, transcripts, or official statements show what the U.S. surgeon general said about masks and the general public's risk of catching coronavirus, and on what date?",
+        "candidates": [
+          {
+            "title": "[PDF] Confronting Health Misinformation - HHS.gov",
+            "snippet": "Jul 14, 2021 · I am urging all Americans to help slow the spread of health misinformation during the COVID-19 pandemic and beyond.",
+            "url": "https://www.hhs.gov/sites/default/files/surgeon-general-misinformation-advisory.pdf"
+          },
+          {
+            "title": "Coronavirus: US surgeon general asks CDC to see if face masks are ...",
+            "snippet": "Apr 2, 2020 · To date, more than 938000 people worldwide have contracted the coronavirus, with 47273 deaths, according to Johns Hopkins University.",
+            "url": "https://www.cnbc.com/2020/04/02/coronavirus-us-surgeon-general-asks-cdc-to-see-if-face-masks-are-effective.html"
+          },
+          {
+            "title": "Advice for the public: Coronavirus disease (COVID-19)",
+            "snippet": "Mar 18, 2023 · Keep yourself and others safe: Do it all! · Get vaccinated as soon as it's your turn and follow local guidance on vaccination. · Keep physical ...",
+            "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+          },
+          {
+            "title": "Facemasks and the Covid 19 pandemic: What advice should health ...",
+            "snippet": "One study of 138 patients with COVID‐19 reported that 29% were healthcare workers: one patient admitted to a hospital in Wuhan infected more than 10 medical ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7262130/"
+          },
+          {
+            "title": "Coronavirus disease 2019 (COVID-19) - Symptoms and causes",
+            "snippet": "Aug 31, 2026 · Coronavirus disease 2019 (COVID-19) is an illness caused by the virus SARS-CoV-2. Learn more about the symptoms, risks and ways to protect ...",
+            "url": "https://www.mayoclinic.org/diseases-conditions/coronavirus/symptoms-causes/syc-20479963"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-011-deepseek-candidate",
+  "timestamp": "2026-11-06T06:04:53.469996+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12282.781
+}

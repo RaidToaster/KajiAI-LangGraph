@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Jammu and Kashmir (J&K) in Pakistan/India was removed from the United Nations (UN) list of “unresolved disputes”.",
+        "query": "What UN document, resolution, or official record, if any, records the removal of Jammu and Kashmir from a UN list of unresolved disputes, and on what date?",
+        "candidates": [
+          {
+            "title": "Kashmir, the oldest dispute at the UN Agenda",
+            "snippet": "The Kashmir dispute is the oldest unresolved international conflict in the world today. Pakistan considers Kashmir as its core political dispute with India.",
+            "url": "https://pakun.org/kashmir-at-the-un"
+          },
+          {
+            "title": "UN Documents for Jammu and Kashmir",
+            "snippet": "UN Documents for Jammu and Kashmir: Security Council Resolutions. This resolution demanded a durable ceasefire and cessation of hostilities until withdrawals ...",
+            "url": "https://www.securitycouncilreport.org/un_documents_type/security-council-resolutions/?ctype=Jammu%20and%20Kashmir&cbtype=jammu-and-kashmir"
+          },
+          {
+            "title": "United Nations Security Council Resolution 47",
+            "snippet": "United Nations Security Council Resolution 47, adopted on 21 April 1948, concerns the resolution of the Kashmir conflict. After hearing arguments from both ...",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_47"
+          },
+          {
+            "title": "Jammu and Kashmir Dispute",
+            "snippet": "The Jammu and Kashmir dispute is one of the longest pending disputes on the agenda of the United Nations Security Council (UNSC).",
+            "url": "https://www.mofa.gov.pk/jammu-and-kashmir-dispute"
+          },
+          {
+            "title": "Jammu and Kashmir out of U.N. list of disputes UNITED ...",
+            "snippet": "The message reads: \"Jammu and Kashmir has been removed from the UN's list of unresolved disputes. This means Pakistan cannot raise Kashmir in UN ...",
+            "url": "https://www.facebook.com/panditrajan.sharma/posts/jammu-and-kashmir-out-of-un-list-of-disputes-united-nationsjammu-and-kashmir-has/5981004661922396/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-014-deepseek-candidate",
+  "timestamp": "2026-11-06T06:16:19.218878+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12968.546
+}

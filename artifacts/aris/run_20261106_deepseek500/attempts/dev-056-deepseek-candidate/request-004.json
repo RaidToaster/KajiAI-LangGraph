@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "What is the stated basis or source for the claim that previous flu vaccines may have made President Donald Trump susceptible to COVID-19?",
+        "candidates": [
+          {
+            "title": "Fact check: Donald Trump's past flu shots, COVID-19 risk ...",
+            "snippet": "Oct 22, 2020 — An Instagram post falsely speculates that President Donald Trump's prior flu vaccinations put him at risk for COVID - 19 .",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/21/fact-check-donald-trumps-flu-shots-covid-risk-arent-linked/3623699001/"
+          },
+          {
+            "title": "Trump's faulty claims on flu and coronavirus",
+            "snippet": "Oct 6, 2020 — WASHINGTON (AP) — President Donald Trump is back to making false comparisons between COVID - 19 and the flu , contradicting science and even ...",
+            "url": "https://apnews.com/article/virus-outbreak-donald-trump-ap-fact-check-anthony-fauci-flu-fe474f0c15f76adf324791a2cfc1e2bb"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-candidate",
+  "timestamp": "2026-11-06T08:22:46.091620+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20555.39
+}

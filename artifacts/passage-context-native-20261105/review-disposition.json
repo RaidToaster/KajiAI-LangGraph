@@ -1,0 +1,39 @@
+{
+  "native_diagnostic_justified": true,
+  "assessment_mode": "passage_decision",
+  "assessment_reasoning": {
+    "glm": "high",
+    "deepseek": false
+  },
+  "caps_by_kind": {
+    "anchor": {
+      "ollama": 1,
+      "jev": 2
+    }
+  },
+  "planned_max_sends": {
+    "ollama": 2,
+    "jev": 4,
+    "search": 0,
+    "fetch": 0
+  },
+  "requested_output_token_cap_total": 12288,
+  "aggregate_job_seconds_cap": 600,
+  "reused_deepseek_plan": {
+    "result": "artifacts/strict-literal-native-20261105/deepseek-plan/result.json",
+    "audit": "artifacts/strict-literal-native-20261105/deepseek-plan-audit.json"
+  },
+  "prior_accounting": "artifacts/passage-context-native-20261105/prior-accounting.json",
+  "additional_helpers": [
+    "evaluation/run_passage_context_native.ps1",
+    "evaluation/prepare_passage_context_native.py",
+    "artifacts/passage-context-native-20261105/prior-accounting.json",
+    "src/kaji_langgraph/config/default.yaml",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "review_report": "artifacts/passage-context-native-20261105/REVIEW.md",
+  "criterion": "FullnativefidelityofC0/classes/stance/sourceunits/origin/action/dates/allissuesandactualindependence; allmaterialissuesblock. Literalrecordselfreport/Jevscores notworldtruth or efficacy. Faithfulhonestabstentionentryonlyafterbothmodels; immediately original8case/modeldevelopment19new+13matchingbaselines andunchangedguards. Firstfailureclosesphase, norepair/retry/pruning; requiredexact+Jev>=.80/provenance/wholeclaimauditforanyacceptance. Final2000onlyinadifferentchat.",
+  "postreview_delta": null,
+  "mechanism": "Separate lossless issue-context passage ledger; no promotion to six verdict findings. Every material issue blocks, unknown/duplicate IDs fail. Previous failed phases remain failed."
+}

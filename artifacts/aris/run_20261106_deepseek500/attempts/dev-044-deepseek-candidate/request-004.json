@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Deliberately infecting children to COVID-19 at “pox parties” could be a good way to help create herd immunity against COVID-19 without a vaccine.",
+        "query": "What evidence exists on whether deliberate infection of children with SARS-CoV-2 at gatherings (\"pox parties\") has been attempted or documented, and what outcomes were reported?",
+        "candidates": [
+          {
+            "title": "How to hold an ethical pox party | Request PDF - ResearchGate",
+            "snippet": "Pox parties are a controversial alternative to vaccination for diseases such as chickenpox. Such parties involve parents infecting non-immune children by ...",
+            "url": "https://www.researchgate.net/publication/320646735_How_to_hold_an_ethical_pox_party"
+          },
+          {
+            "title": "COVID-19 immunity certificates: science, ethics, policy, and law",
+            "snippet": "Already we have seen talk of 'COVID-19 parties,' along the lines of the measles or chicken pox parties that many parents let their children attend, parties ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7313854/"
+          },
+          {
+            "title": "[PDF] Parents Informed and Educated | NYC.gov",
+            "snippet": "Pox parties are social events where children are purposely exposed to chickenpox and measles. Before the varicella (chickenpox) or measles ...",
+            "url": "https://www.nyc.gov/assets/doh/downloads/pdf/imm/parents-informed-and-educated-booklet.pdf"
+          },
+          {
+            "title": "'Pox Parties' in the Age of Facebook - The New York Times",
+            "snippet": "So-called pox parties, where parents would arrange play dates with infected children ... pox parties were done before vaccination was available.",
+            "url": "https://archive.nytimes.com/well.blogs.nytimes.com/2011/11/16/pox-parties-in-the-age-of-facebook/"
+          },
+          {
+            "title": "The Truth About Covid Parties | Center for Inquiry",
+            "snippet": "Before vaccines were available, some parents held “pox parties” in which kids were encouraged to play with others who had chicken pox ...",
+            "url": "https://centerforinquiry.org/blog/the-truth-about-covid-parties/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-044-deepseek-candidate",
+  "timestamp": "2026-11-06T07:47:19.846328+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18429.156
+}

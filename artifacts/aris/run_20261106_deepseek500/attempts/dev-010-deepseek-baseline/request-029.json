@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports.",
+        "query": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes original source fact check",
+        "candidates": [
+          {
+            "title": "'I Don't Know That It's Man-Made,' Trump Says of Climate ...",
+            "snippet": "Oct 15, 2018 — On “60 Minutes,” President Trump backed off his claim that global warming is a hoax . But he also made several new assertions unsupported by ...",
+            "url": "https://www.nytimes.com/2018/10/15/climate/trump-climate-change-fact-check.html"
+          },
+          {
+            "title": "Trump Clings to Inaccurate Climate Change Talking Points",
+            "snippet": "Sep 9, 2024 — Former President Donald Trump , who has famously called climate change a “ hoax ” for many years, hasn't used the word lately with respect to ... Read more",
+            "url": "https://www.factcheck.org/2024/09/trump-clings-to-inaccurate-climate-change-talking-points/"
+          },
+          {
+            "title": "Trump says climate change not a hoax, but not sure of its ...",
+            "snippet": "Oct 15, 2018 — In an interview with CBS' \"60 Minutes\" that aired Sunday night, Trump said he doesn't want to put the U.S. at a disadvantage in responding ...",
+            "url": "https://www.pbs.org/newshour/politics/trump-says-climate-change-not-a-hoax-but-not-sure-of-its-source"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-010-deepseek-baseline",
+  "timestamp": "2026-11-06T06:00:35.969995+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12025.265
+}

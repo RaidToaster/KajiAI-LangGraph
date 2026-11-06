@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "Search the New York Attorney General's official press releases and court filings for the exact stipulation text resolving claims against Donald Trump Jr., Ivanka Trump, and Eric Trump, to confirm whether any lifetime charity ban was imposed on any of them.",
+        "candidates": [
+          {
+            "title": "People v Trump (2025 NY Slip Op 04756)",
+            "snippet": "The Attorney General also sued the following individuals in the Trump Organization: executives Donald Trump, Jr. and Eric Trump, former ...",
+            "url": "https://www.nycourts.gov/reporter/3dseries/2025/2025_04756.htm"
+          },
+          {
+            "title": "Trump Foundation agrees to dissolve amid lawsuit",
+            "snippet": "New York's attorney general and Trump Foundation lawyers filed a joint stipulation in a court laying out a process for shutting down the ...",
+            "url": "https://www.pbs.org/newshour/politics/trump-foundation-agrees-to-dissolve-amid-lawsuit"
+          },
+          {
+            "title": "People v Donald J. Trump (Criminal) | New York Courts",
+            "snippet": "The Courts The mission of the Unified Court System is to promote the rule of law and to serve the public by providing just and timely resolution of all matters ...",
+            "url": "https://www.nycourts.gov/public-information/people-v-donald-j-trump-criminal"
+          },
+          {
+            "title": "Trump Foundation Archives",
+            "snippet": "Posts on social media falsely claim that the Trump family is “disallowed from operating ANY charity” in New York because they “stole from a kids cancer ...",
+            "url": "https://www.factcheck.org/issue/trump-foundation/"
+          },
+          {
+            "title": "Congressional Record",
+            "snippet": "Read the letters from prosecutors, from attorneys general, from law en- forcement, all warning of the dangers of this bill. Anyone with ...",
+            "url": "https://www.govinfo.gov/content/pkg/CRECB-2017-pt14/pdf/CRECB-2017-pt14.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-candidate",
+  "timestamp": "2026-11-06T08:46:07.695520+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21957.015
+}

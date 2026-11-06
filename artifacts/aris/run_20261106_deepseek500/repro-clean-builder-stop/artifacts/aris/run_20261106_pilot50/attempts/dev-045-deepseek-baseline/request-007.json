@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cutting the umbilical cord straight away deliberately denies the baby natural immunity so that medical professionals have a reason to vaccinate and medicate them.",
+        "query": "Cutting the umbilical cord straight away deliberately denies the baby natural immunity so that medical professionals have a reason to vaccinate and medicate them. counterevidence",
+        "candidates": [
+          {
+            "title": "Could cutting the umbilical cord too soon stress newborns?",
+            "snippet": "Cutting the cord too soon after birth might stress the baby's heart, increase the risk for bleeding inside the brain, and increase the risk for ...",
+            "url": "https://www.nichd.nih.gov/news/releases/Pages/051415-podcast-umbilical-cord.aspx"
+          },
+          {
+            "title": "Should you delay cutting the cord?  - #delayedcordclamping",
+            "snippet": "The post explains that the umbilical cord is beneficial for babies born full-term or preterm, allowing them to receive extra blood, iron, and ...",
+            "url": "https://www.facebook.com/dryoun/videos/should-you-delay-cutting-the-cord-delayedcordclamping-newbornbaby-doctorreacts/1058109682965482/"
+          },
+          {
+            "title": "Talking with Parents about Vaccines",
+            "snippet": "Help strengthen communication between you and parents with these tips about vaccine conversations.",
+            "url": "https://www.cdc.gov/vaccines-children/hcp/conversation-tips/index.html"
+          },
+          {
+            "title": "Misconceptions About Vaccines",
+            "snippet": "Perhaps the most common misconception is that a child's immune system can be “overloaded” if the child receives multiple vaccines at once.",
+            "url": "https://historyofvaccines.org/vaccines-101/misconceptions-about-vaccines/"
+          },
+          {
+            "title": "Cutting cord early 'risk to babies'",
+            "snippet": "Cutting the umbilical cord immediately after birth - currently standard practice - puts the baby at risk of iron deficiency, experts say.",
+            "url": "https://www.bbc.com/news/health-22307946"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-045-deepseek-baseline",
+  "timestamp": "2026-11-05T18:13:13.570094+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52813.156
+}

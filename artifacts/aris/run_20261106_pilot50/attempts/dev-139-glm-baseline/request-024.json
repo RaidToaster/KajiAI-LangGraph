@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "will be covered in his plan. evidence",
+        "candidates": [
+          {
+            "title": "MHCP Member Evidence of Coverage",
+            "snippet": "Members who get services through a health plan will receive an evidence of coverage from their health plan. Your member rights. You have the ...",
+            "url": "https://www.dhs.state.mn.us/dhs16_179701/"
+          },
+          {
+            "title": "Proof of Immigration Status or Lawful Presence",
+            "snippet": "Learn which documents Covered California accepts to confirm your immigration status or lawful presence, how to submit it, and what to expect during review.",
+            "url": "https://www.coveredca.com/enrollment/documents/immigration-status"
+          },
+          {
+            "title": "L.A. Care Covered Member Documents",
+            "snippet": "This publication is called a Subscriber Agreement & Combined Evidence of Coverage and Disclosure Form (also called the Subscriber Agreement & Member Handbook).",
+            "url": "https://www.lacare.org/members/documents/la-care-covered"
+          },
+          {
+            "title": "Evidence of Coverage (EOC)",
+            "snippet": "This term includes all Medicare health plans and Medicare drug plans. , your plan will send you an \"Evidence of Coverage\" (EOC) each year, usually in the fall.",
+            "url": "https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/evidence-of-coverage"
+          },
+          {
+            "title": "Coverage with Evidence Development",
+            "snippet": "CMS released an updated guidance document on August 7, 2024 that describes coverage with evidence development (CED).",
+            "url": "https://www.cms.gov/medicare/coverage/evidence"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-glm-baseline",
+  "timestamp": "2026-11-06T01:25:37.130774+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7802.437
+}

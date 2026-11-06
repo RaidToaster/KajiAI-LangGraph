@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Even if your mail-in ballot is postmarked prior to the Election day but arrives after the Election day it will be thrown out.",
+        "query": "Even if your mail-in ballot is postmarked prior to the Election day original source fact check",
+        "candidates": [
+          {
+            "title": "Fact check: Mail-in ballots arriving after Election Day will count in some states",
+            "snippet": "“Even if your mail-in ballot is postmarked today, if it arrives after Election Day, it will be thrown out. Discounted. Ignored,” reads an ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/30/fact-check-some-mail-ballots-arriving-post-election-day-count/6075311002/"
+          },
+          {
+            "title": "Here's What the New USPS Rule Means for Voting by Mail",
+            "snippet": "In 16 states and the District of Columbia, mailed ballots can be counted if they are received by a deadline set after Election Day — but only if ...",
+            "url": "https://campaignlegal.org/update/heres-what-new-usps-rule-means-voting-mail"
+          },
+          {
+            "title": "What if Mail Ballots Arrive After Election Day Without a Postmark?",
+            "snippet": "There are ways for election officials to verify that a ballot was cast by Election Day, even if it arrives without a legible postmark. For ...",
+            "url": "https://www.brennancenter.org/our-work/analysis-opinion/what-if-mail-ballots-arrive-after-election-day-without-postmark"
+          },
+          {
+            "title": "Voting by Mail",
+            "snippet": "The Postal Service recommends mailing your completed ballot before Election Day, and at least 1 week before the deadline by which their completed ballot must be ...",
+            "url": "https://faq.usps.com/s/article/Voting-by-Mail"
+          },
+          {
+            "title": "Postal Service Changes and Mail Voting",
+            "snippet": "The upshot is that even if voters mail their ballots a day or two before Election Day, it could mean that they will not be counted. During ...",
+            "url": "https://fairelectionscenter.org/postal-service-changes-and-mail-voting/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-018-deepseek-baseline",
+  "timestamp": "2026-11-06T06:34:56.256518+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14085.562
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime.",
+        "query": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime. evidence",
+        "candidates": [
+          {
+            "title": "#OnThisDay in 2020, Ruth Bader Ginsburg, the second ...",
+            "snippet": "Ruth Bader Ginsburg, the second woman to serve as an associate justice of the Supreme Court of the United States, died while in office. died at ...",
+            "url": "https://www.facebook.com/AmericanBarAssociation/posts/onthisday-in-2020-ruth-bader-ginsburg-the-second-woman-to-serve-as-an-associate-/1199573388870381/"
+          },
+          {
+            "title": "REFLECTIONS ON JUSTICE RUTH BADER GINSBURG ...",
+            "snippet": "Ratzlaf v. United States was one of the first Supreme Court decisions Justice Ginsburg authored, and it exemplifies her approach.",
+            "url": "https://columbialawreview.org/content/reflections-on-justice-ruth-bader-ginsburg-and-her-approach-to-criminal-law-and-procedure/"
+          },
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Until her death on September 18, 2020, Ginsburg worked with a personal trainer in the Supreme Court's exercise room, and for many years could lift more than ...",
+            "url": "https://www.oyez.org/justices/ruth_bader_ginsburg"
+          },
+          {
+            "title": "HONORING THE DEATH OF SUPREME COURT JUSTICE ...",
+            "snippet": "Ruth Bader Ginsburg served more than 27 years as an Associate Justice of the Supreme Court of the United States. She was a loving wife to her ...",
+            "url": "https://no.usembassy.gov/honoring-the-death-of-supreme-court-justice-ruth-bader-ginsburg/"
+          },
+          {
+            "title": "The SDCBA Remembers Justice Ruth Bader Ginsburg",
+            "snippet": "Justice Ginsburg passed away on September 18, 2020 at age 87. Just a day earlier—on Constitution Day—she was awarded the 2020 Liberty Medal by ...",
+            "url": "https://www.sdcba.org/?pg=RuthBaderGinsburg"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-baseline",
+  "timestamp": "2026-11-06T04:28:46.826123+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6516.14
+}

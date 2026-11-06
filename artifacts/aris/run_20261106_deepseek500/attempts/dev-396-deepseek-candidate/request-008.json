@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Photo of three officers at the Indian Police Service who belong to the same family.",
+        "query": "Have the three individuals in the photo been identified by name and confirmed as Indian Police Service officers?",
+        "candidates": [
+          {
+            "title": "Indian Police Rank Identification Guide: Stars and Insignia ...",
+            "snippet": "It provides a visual guide to identifying different police officers based on their shoulder insignias, covering ranks from Constable, Head ...",
+            "url": "https://www.facebook.com/61561196766695/videos/police-rank-identificationpoliceofficer-policerank/2277178696399972/"
+          },
+          {
+            "title": "As AI Took Over Policing in Delhi, Who Bore the Brunt?",
+            "snippet": "He added, “These images were then fed into the facial recognition software and matched against the individuals appearing in the three private ...",
+            "url": "https://pulitzercenter.org/stories/ai-took-over-policing-delhi-who-bore-brunt"
+          },
+          {
+            "title": "Indian Police Service",
+            "snippet": "The Indian Police Service (IPS) is the premier policing arm of the All India Services of Government of India. It replaced the Indian Imperial Police in 1948 ...",
+            "url": "https://en.wikipedia.org/wiki/Indian_Police_Service"
+          },
+          {
+            "title": "NRS: CHAPTER 289 - PEACE OFFICERS AND OTHER ...",
+            "snippet": "The photograph of a peace officer may be released: (a) If the peace officer authorizes the release; or (b) If the peace officer has been arrested.",
+            "url": "https://www.leg.state.nv.us/nrs/nrs-289.html"
+          },
+          {
+            "title": "How Two Indian Officers Shaped Modern Fingerprint Systems ...",
+            "snippet": "In the 1890s, two Indian police officers made a remarkable contribution to the history of fingerprint identification.",
+            "url": "https://www.facebook.com/authoramish/videos/in-the-1890s-two-indian-police-officers-made-a-remarkable-contribution-to-the-hi/1841919220168664/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-396-deepseek-candidate",
+  "timestamp": "2026-11-06T04:12:47.419757+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5556.734
+}

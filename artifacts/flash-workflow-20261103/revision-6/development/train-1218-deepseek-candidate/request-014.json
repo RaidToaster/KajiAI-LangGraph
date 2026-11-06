@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Search Congressional roll-call records for Sanders's 2010 vote on the Affordable Care Act to obtain a primary record.",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 111 th Congress - 2 nd Session",
+            "snippet": "Vote Number: 105 Vote Date: March 25, 2010, Vote Result: Bill Passed (Health Care and Education Reconciliation Act of 2010 ) Vote Counts: YEAs56 NAYs 43 Not ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00105.htm"
+          },
+          {
+            "title": "Amendments - H.R.3590 - 111th Congress (2009-2010): ...",
+            "snippet": "Roll Call Votes: There have been 36 roll call votes … commonly referred to as the Affordable Care Act (ACA).",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590/amendments"
+          },
+          {
+            "title": "111th Senate Roll Call Votes Page",
+            "snippet": "This point-in-time capture includes all files publicly linked on Voteview.com. The data listed below are current. Patient Protection and Affordable Care Act.\", ...",
+            "url": "https://legacy.voteview.com/senate111.htm"
+          },
+          {
+            "title": "House Roll Call Vote 11",
+            "snippet": "House Roll Call Vote 11 119th Congress - 2nd Session (2026) · Roll Call Vote · Result - Passed House · All Votes.",
+            "url": "https://www.congress.gov/votes/house/119-2/11"
+          },
+          {
+            "title": "Val Hoyle",
+            "snippet": "Val Hoyle (Democratic Party) is a member of the U.S. House, representing Oregon's 4th Congressional District. She assumed office on January 3, 2023.",
+            "url": "https://ballotpedia.org/Val_Hoyle"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T08:59:04.626476+00:00",
+  "status": "reserved_outcome_unknown"
+}

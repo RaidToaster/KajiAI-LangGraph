@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "President Ferdinand Marcos evidence",
+        "candidates": [
+          {
+            "title": "Human rights abuses of the Marcos dictatorship",
+            "snippet": "Evidence reveals that not only was he aware of tortures and murders enacted by his military and police force, but that he was condoned and at times arranged for ...",
+            "url": "https://en.wikipedia.org/wiki/Human_rights_abuses_of_the_Marcos_dictatorship"
+          },
+          {
+            "title": "President Ferdinand Marcos Jr. warned that corruption will not be ...",
+            "snippet": "Marcos Jr. had already vowed during his July 27 SONA that the investigation would be guided by the evidence, regardless of political or family ...",
+            "url": "https://www.instagram.com/p/DfYm-mNCOQP/"
+          },
+          {
+            "title": "Tracking the Proceeds of Organised Crime: The Marcos Case ...",
+            "snippet": "Marcos, his wife, and their associates probably looted, diverted, and laundered at least 5 billion dollars in public assets",
+            "url": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/tracking-proceeds-organised-crime-marcos-case-australian-institute"
+          },
+          {
+            "title": "EVIDENCE SOUGHT OVER ALLEGATIONS OF ABUSE BY ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/thechronicle.com.ph/posts/evidence-sought-over-allegations-of-abuse-by-president-marcosquestions-have-been/122262109946282035/"
+          },
+          {
+            "title": "President Ferdinand Marcos Jr. said all evidence unearthed in the ...",
+            "snippet": "President Ferdinand Marcos Jr. said all evidence unearthed in the widening flood control scandal — including documents said to implicate his ...",
+            "url": "https://www.facebook.com/politics.com.ph/posts/president-ferdinand-marcos-jr-said-all-evidence-unearthed-in-the-widening-flood-/1293276869505374/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-baseline",
+  "timestamp": "2026-11-06T08:11:47.177014+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19896.484
+}

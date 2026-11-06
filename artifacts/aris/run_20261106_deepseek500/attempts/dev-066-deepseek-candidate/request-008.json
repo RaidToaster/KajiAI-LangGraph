@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "What official records or organizational documents list the chairs or board leadership of the World Food Program, and do any name Hunter Biden?",
+        "candidates": [
+          {
+            "title": "The Bidens' Influence Peddling Timeline",
+            "snippet": "In December 2015, after a Burisma board of directors meeting, Zlochevsky and Hunter Biden “called D.C.” in the wake of mounting pressures the company was facing ...",
+            "url": "https://oversight.house.gov/the-bidens-influence-peddling-timeline/"
+          },
+          {
+            "title": "Hunter Biden, Burisma, and Corruption",
+            "snippet": "Hunter Biden's position on the board created an immediate potential conflict of interest that would prove to be problematic for both U.S. and ...",
+            "url": "https://www.hsgac.senate.gov/library/files/hsgac-finance-report/"
+          },
+          {
+            "title": "Hunter Biden",
+            "snippet": "From 2011 to 2017, Biden was on the board of directors of World Food ... Business records show that Hunter Biden is still listed as a board member of ...",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-candidate",
+  "timestamp": "2026-11-06T08:52:06.297591+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22315.609
+}

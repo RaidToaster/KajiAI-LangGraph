@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Twitter now putting warnings on tweets that are just unedited clips of Biden saying he would end fracking",
+        "query": "What did Twitter's warning-label or moderation policies state around October 2020 regarding clips of political candidates' statements?",
+        "candidates": [
+          {
+            "title": "Twitter Expands Warning Labels To Slow Spread of ...",
+            "snippet": "Twitter's New Rules Aim To Prevent Confusion Around The 2020 Vote. It gave more details on plans to label posts that claim victory before ...",
+            "url": "https://www.npr.org/2020/10/09/922028482/twitter-expands-warning-labels-to-slow-spread-of-election-misinformation"
+          },
+          {
+            "title": "Twitter's Policy Changes Underscore the Election-Related ...",
+            "snippet": "The company also announced it would remove any tweets “that encourage violence or call for people to interfere with election results or the ...",
+            "url": "https://www.vanityfair.com/news/2020/10/twitters-policy-changes-underscore-election-related-misinformation?srsltid=AYCX9vIRBqfja9UbdVowa49ku2O30SVMd_JQayjj0MNVtRnZ5l7oiMJW"
+          },
+          {
+            "title": "Additional steps we're taking ahead of the 2020 US Election",
+            "snippet": "Under this policy, we will label Tweets that falsely claim a win for any candidate and will remove Tweets that encourage violence or call for ...",
+            "url": "https://blog.x.com/en_us/topics/company/2020/2020-election-changes"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-050-deepseek-candidate",
+  "timestamp": "2026-11-06T08:00:04.208407+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19193.515
+}

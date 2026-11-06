@@ -1,0 +1,359 @@
+{
+  "phase": "development",
+  "models": {
+    "glm": "glm-5.3-flash:cloud",
+    "deepseek": "deepseek-v4.1-flash:cloud"
+  },
+  "caps": {
+    "ollama": 8,
+    "jev": 40,
+    "tinyfish_search": 6,
+    "tinyfish_fetch": 12
+  },
+  "num_predict": 4096,
+  "rounds": 3,
+  "config": {
+    "model": {
+      "provider": "ollama",
+      "name": "gemma4:31b-cloud",
+      "base_url": "http://localhost:11434",
+      "temperature": 0.0,
+      "canonical_evidence_prompt": false
+    },
+    "jev": {
+      "enabled": true,
+      "model": "jev-1.13.0",
+      "domain_min_confidence": 0.6,
+      "citation_min_confidence": 0.8,
+      "injection_cutoff": 0.9,
+      "irrelevant_cutoff": 0.1,
+      "max_source_reviews_per_round": 20,
+      "citation_batch_size": 6
+    },
+    "policy": {
+      "require_evidence_quotes": true,
+      "full_page_retrieval": true,
+      "page_fetches_per_search": 2,
+      "page_fetch_timeout_seconds": 30,
+      "page_max_bytes": 1000000,
+      "page_text_limit": 20000,
+      "search_calls_per_round": 2,
+      "max_search_calls": 20,
+      "max_scrapes": 20,
+      "max_execution_time_seconds": 270,
+      "max_token_limit": 250000,
+      "max_results_per_search": 5,
+      "max_stagnant_rounds": 2,
+      "stop_on_query_exhaustion": false,
+      "retry_on_failure": false,
+      "max_retries": 0,
+      "retry_delay_seconds": 2
+    },
+    "domain_guidance": {
+      "general": {
+        "research": "Prefer original documents and independent corroboration. Search for both supporting evidence and credible counterevidence.",
+        "analysis": "Evaluate relevance, provenance, temporal fit, and source independence.",
+        "verification_standard": "Require direct evidence for decisive verdicts and preserve material uncertainty."
+      },
+      "scientific": {
+        "research": "Prioritize peer-reviewed studies, academic journals, original datasets, and official scientific institutions such as WHO, NIH, and CDC.",
+        "analysis": "Assess study design, sample limitations, replication, and whether the retrieved evidence is genuinely peer reviewed.",
+        "verification_standard": "Apply a high evidentiary bar and require multiple credible independent sources."
+      },
+      "political": {
+        "research": "Seek primary records and reporting across different editorial perspectives; search specifically for omitted context and counterevidence.",
+        "analysis": "Check partisan framing, cherry-picked facts, source incentives, dates, jurisdictions, and whether reports share the same underlying source.",
+        "verification_standard": "Evaluate evidence on its merits and do not treat outlet diversity as source independence."
+      },
+      "health_medical": {
+        "research": "Prioritize official health organizations, peer-reviewed medical journals, systematic reviews, clinical guidelines, and registered clinical trials.",
+        "analysis": "Distinguish systematic reviews, trials, observational studies, case reports, expert opinion, and anecdotes; note population and dosage limitations.",
+        "verification_standard": "Apply a strict medical evidence standard and do not generalize beyond the studied population."
+      }
+    },
+    "domains": {
+      "general": {},
+      "scientific": {
+        "require_https": true
+      },
+      "political": {},
+      "health_medical": {
+        "require_peer_reviewed": true
+      }
+    }
+  },
+  "cases": "artifacts/flash-workflow-20261103/development-cases.json",
+  "schedule": [
+    {
+      "case": "train-1209",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1209",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1209",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1209",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1218",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1218",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1218",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1218",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1205",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1205",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1205",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1205",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1216",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1216",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1216",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1216",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1217",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1217",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1217",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1217",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1201",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1201",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1201",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1201",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1219",
+      "model": "deepseek",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1219",
+      "model": "deepseek",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1219",
+      "model": "glm",
+      "arm": "baseline"
+    },
+    {
+      "case": "train-1219",
+      "model": "glm",
+      "arm": "candidate"
+    }
+  ],
+  "source_sha256": "82d8f3dbd03391006f300adebcdba4398d9b7a6b03ceb12f1c2b5f77d5d847bb",
+  "file_sha256": {
+    "artifacts/flash-workflow-20261103/development-cases.json": "4af1ad05f10f28cd45bb3fdd8e9d3d42a5acbe5dcacd3c20a3f3e22acbac1a23",
+    "evaluation/flash_study.py": "50039b8d0e40ff6f8a74e075ebe7b202a714e47cfd1f3897f3c366b7dd0742f7",
+    "evaluation/runtime_pilot.py": "573a560b457e7bc1c27829eefe8539efad8dabd3fa7fb5021df614284693bcb8",
+    "artifacts/flash-workflow-20261103/PROTOCOL.md": "d3fcfe245400fa0d87dc95f5482df3d4bba058099c69ee7624cd4f8eaa4fed1b",
+    "uv.lock": "6cba5e4692fb76f032d8ff1f2808d84ed962862a5bb808365ac6b13243ccc091",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/attempt.json": "175062f7818f5988d6a5b54758a5c7cf1ecceb36e66fe4e3a4ee4720c555d8e6",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/job.json": "59bae31a3f33b8c332ca6ed7dc09854729b21090cda005c3b9347b5908e360fc",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/result.json": "2e210d9d11657909f08a47bbaecb3739573d59e0515d82c588f09cd92f12d184",
+    "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline/usage.json": "b80e66d6c07479b6bbb94130881574083e7fdb2a9be6a91a1b20e48b3e38f694",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/attempt.json": "6ab44d9b2e09f92b51bcdeccb0aff1ba8af0ff0c797c0a11a45a1f31af91b2bd",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/job.json": "a15bec68c01c1eed88f4d769bd954da3265a756c6757224d8d7c9f23a0f84ebe",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/result.json": "bbbe29c463bc2866d07545a749c32475d47d2673b772b3f04fdac0a70b8e7809",
+    "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline/usage.json": "8e3d8691092e69a42aa144d0ef73a9bc1bf06572e00b4f504e250a34b032add0",
+    "evaluation/analyze_flash_study.py": "d9a372fb4891c6f93f22c57347b2d9bb12f1f5c8a0549174347f688db75b2e9b",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-deepseek-baseline/attempt.json": "1f2a7c88bca520f832b6ee63ca20196d2756d940f00bed49130fd4d3bafbc699",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-deepseek-baseline/job.json": "3e0ab18a95af8e8c08d94230ae92b6551962ba26b639e71e77c712b62e2e4ada",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-deepseek-baseline/result.json": "18b4afc194d9f3cacffdb1d05d5b95c73469821ec551bc022098328b6be118d8",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-deepseek-baseline/usage.json": "e6acd965362179fb7636174ca92932f23b0e506e49d88f1edc54aa2e742e0ac8",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-glm-baseline/attempt.json": "869b0d5006940c191245041f8af259aea1da252454a549e2ed113ac608b36837",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-glm-baseline/job.json": "fe8ff926acd1f9d8e74204bbfd028f9f9697fad5d30c42767bc8a9de3ab29832",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-glm-baseline/result.json": "165e1e099db678d3a7e5d308fa172f0cd042b8c5e172db8d9a7b0bcf19412736",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1225-glm-baseline/usage.json": "52a3d9480b5989de7f486fe147a62198729da7f6397b704254453608a833e5b5",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-glm-baseline/attempt.json": "9eb829b7c3c60a4853554bb4149c68385314dd8fdf34e1fc6c1f0bb49bce92d4",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-glm-baseline/job.json": "bf5e55b69d2d605a4b11876951e03ef93d9811062a0b8fd2d435fdd3915f5502",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-glm-baseline/result.json": "6e45707efceffa083a4a7ec9bed3fcd424bb8d4527e9cae4c1c36255655788e3",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-glm-baseline/usage.json": "c4ab174a071d04f5d40d9ac457395712be5751b4e71207e01e438727b3126d42",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-deepseek-baseline/attempt.json": "fcf75a8061decfe6639577561fd1921ea209cd33e9693739c35337430e99fa2e",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-deepseek-baseline/job.json": "c64c420a3b3302cd76702dd9ce897e1d4fcaf26db139af7e675bf4fc86def0e4",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-deepseek-baseline/result.json": "8bb2e8902eae79fa3ac1c15517b7987364cb86cf29e97fd53a4a311a322c63bc",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1209-deepseek-baseline/usage.json": "f3f02f7d60142aac6761a90cf07a68808e24102eb1110e01e97b0c7e21c99c0a",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-deepseek-baseline/attempt.json": "2d2da27ffab8a30c6c9173c9154bac42fbda68a0847a6b64c353dd62d175ac56",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-deepseek-baseline/job.json": "3d3b989a483c67140c853cf4cf1978f2c37e1053c98719e70515f37c22f2cc85",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-deepseek-baseline/result.json": "8c5c7c2871ba1d5087d825b6385c687385323d342d293e4f2e6b888e75c39d08",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-deepseek-baseline/usage.json": "99db2dfbd6307fed749196afb81cafaeef028d9a31e0811c0a59d7d4be5f599e",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-glm-baseline/attempt.json": "223a52f619258a5ddf952db1a6c2057353bf9b6febdc68918b0ec29dfbe11aa7",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-glm-baseline/job.json": "cd6d15bf6393aa43e49aeed56d233f854ca1a547ae287507ba4e51e30fe9d8ce",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-glm-baseline/result.json": "2afcbad7f2f281cdac637f26c852ef0904c3df034c29cccc0b1fa8ab2175039b",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1216-glm-baseline/usage.json": "ee672e72b7430d42f49dfd51d00638be480a88fc0cf9eba137a29550efc8d352",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-glm-baseline/attempt.json": "60e076e9b6957e3267cf7410f3885acb5e0aa911530763b5f1054b2fd2d340e3",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-glm-baseline/job.json": "94487fafc1299c47d28b2ca8d9b7b8d5ab1c11e3e9c1c947d1bfa7710f2f7f60",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-glm-baseline/result.json": "0313a0d3946a33818cada888190f6f6996620b9a8dbbb8572e4abf75e899806b",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-glm-baseline/usage.json": "87ff8146147c8f76b21b925b7141803be4780ac85073ff6b473a00d841ce8785",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-deepseek-baseline/attempt.json": "60adc224025a052f683a47433751cf1c06272cc67433ef9408135541d72384de",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-deepseek-baseline/job.json": "0da7bcbaf8699eb8497b6eec16e4b231fe61eb8b55a02ce42cf0c37494ff82b4",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-deepseek-baseline/result.json": "303234ed5518936ff4c93efee3c788e9dd579c8cbc3bc6c344f3e5ef968897d4",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1217-deepseek-baseline/usage.json": "1c574d785e91332b86450bccef2ae37e98cfb9f7ef03332e85f6a91e56c4a86e",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-deepseek-baseline/attempt.json": "41c41b47964209025430e3df415f2e08189efab63fdb78f97de3fd0df39f59e2",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-deepseek-baseline/job.json": "87e6077b80edbebb1262c3b97b252017a23f0d71d1d001fe5165aec45a043a85",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-deepseek-baseline/result.json": "5394ca4ddde6c3441c2477b42887f2e90675bb88800b53408e0cbe911bd4f6ac",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-deepseek-baseline/usage.json": "87fc2e121efaf044b93507476cf0a6cc6b2b0cbd9ef388c6652da620178612d5",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-glm-baseline/attempt.json": "f5a65434a6f6b63c36bee7042ae44b5cb4708130ac0ce9afe8130b8c9011605a",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-glm-baseline/job.json": "3908366c18124fa18d21dbf4b292196baa9ccc50334b492ec4903a9d9165f9df",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-glm-baseline/result.json": "d1031d51784fb477be94d5cf6ed9cf54e4047b913df289ce70a10da1da9c94d4",
+    "artifacts/flash-workflow-20261103/revision-3/development/train-1205-glm-baseline/usage.json": "142431be1f8b5b8d97ea1dbf034300a682e87c49fb1c1e795f454150ab1eb17c",
+    "artifacts/flash-workflow-20261103/provenance-replay/decision.json": "a4f86323a727953255f83b93196fdd4a20454ba42a79512ea19a3788428b0cb7",
+    "artifacts/flash-workflow-20261103/provenance-replay/protocol.json": "cf08393a01537856c00b40b1770b5495c59e1c636a00c102e424a50b7cf2c56c",
+    "artifacts/flash-workflow-20261103/provenance-replay/shared-live-trace/result.json": "1ef6d0489b9050a3dd1a2336ff9d253afe49bc58764dba012bbf11da22e5964a",
+    "artifacts/flash-workflow-20261103/provenance-replay/independent-authored/result.json": "7b4080c5d423e0dc0f0dd51cd35133a5f30ff22e1a6d204ade6acac03223ae5e",
+    "artifacts/flash-workflow-20261103/provenance-replay/unclear-authored/result.json": "a8ee63871f323d627232772354b527079927f97922d5029be4c2e36a3e31f763",
+    "artifacts/flash-workflow-20261103/line-replay/protocol.json": "c04f2f36363680dc8a90a4d55522dbc39b8d69b62248fb9dc0b79fd52b777458",
+    "artifacts/flash-workflow-20261103/line-replay/boundary-reanalysis.json": "d996b10d52122a171fda99e5f9fa0b5667384ea8ad7ec24badfc19fe4232b69d"
+  },
+  "usage_stop": {
+    "ollama_estimated_usd": 3,
+    "jev_estimated_usd": 0.3
+  },
+  "recover_empty_assessment": false,
+  "reused_attempts": {
+    "train-1218-glm-baseline": "artifacts/flash-workflow-20261103/development/train-1218-glm-baseline",
+    "train-1218-deepseek-baseline": "artifacts/flash-workflow-20261103/development/train-1218-deepseek-baseline",
+    "train-1225-deepseek-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1225-deepseek-baseline",
+    "train-1225-glm-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1225-glm-baseline",
+    "train-1209-glm-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1209-glm-baseline",
+    "train-1209-deepseek-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1209-deepseek-baseline",
+    "train-1216-deepseek-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1216-deepseek-baseline",
+    "train-1216-glm-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1216-glm-baseline",
+    "train-1217-glm-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1217-glm-baseline",
+    "train-1217-deepseek-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1217-deepseek-baseline",
+    "train-1205-deepseek-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1205-deepseek-baseline",
+    "train-1205-glm-baseline": "artifacts/flash-workflow-20261103/revision-3/development/train-1205-glm-baseline"
+  },
+  "compact_evidence_prompt": true,
+  "brief_assessment_tokens": 8192,
+  "require_independent_provenance_review": true,
+  "retrieval_rate_limits": {
+    "tinyfish_search": [
+      [
+        60,
+        27
+      ],
+      [
+        3600,
+        450
+      ]
+    ],
+    "tinyfish_fetch": [
+      [
+        60,
+        135
+      ],
+      [
+        86400,
+        900
+      ]
+    ]
+  },
+  "retrieval_usage_scope": "artifacts/flash-workflow-20261103",
+  "line_assessment_prompt": true,
+  "search_source_references": true
+}

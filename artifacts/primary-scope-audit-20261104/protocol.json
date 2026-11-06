@@ -1,0 +1,37 @@
+{
+  "question": "Does the source's overall-average household-size conversion describe the members of the wealth-ranked bottom38%? Inspect weighted actual household/primary-economic-unit sizes in current public2016 files, without assuming these are the exact2020-vintage files or proving individual ownership.",
+  "stage": "primary-data feasibility audit, not candidate/confirmation/final evaluation",
+  "source_page": "https://www.federalreserve.gov/econres/scf_2016.htm",
+  "acquisition": {
+    "maximum_requests": 3,
+    "metadata_bytes_cap": 500000,
+    "combined_zip_bytes_cap": 16000000,
+    "targets": [
+      "Full public2016 Stata main dataset (approximately10MB ZIP)",
+      "2016 summary extract CSV (approximately4MB ZIP)"
+    ],
+    "never_download": [
+      "replicate weights",
+      "ASCII full data",
+      "model weights"
+    ],
+    "retries": 0,
+    "timeout_seconds": 30
+  },
+  "analysis_predeclaration": [
+    "Inspect identifiers and documented fields before computing; do not guess an unavailable field. Join full main data's Y1,YY1,X101 (household members),X7001 (primary economic unit members),X42001 (weight) to summary Y1,YY1,WGT,NETWORTH.",
+    "The current official macro defines WGT=X42001/5. Verify that relationship and all one-to-one joins; stop on mismatch instead of silently rescaling. Derive implicate as Y1-10*YY1 per the official codebook and require five implicates.",
+    "Report pooled WGT-weighted estimates and five per-implicate estimates using full weights (WGT*5). Sort by NETWORTH and take the bottom37% and38% by weighted household mass, using a fractional boundary record; report boundary mass explicitly.",
+    "For both cutoffs report weighted household mass, actual X101/X7001 member mass, aggregate wealth in the extract's declared current units, and the 2.63-times-household proxy. Record whether actual member mass reaches125 million, without inferring individual asset ownership.",
+    "Do not call five implicates independent seeds or confidence bounds. No sampling-variance claim without replicate weights, which are outside this audit. No direct comparison to nominal2020 Forbes dollars without a verified inflation/version mapping.",
+    "An estimate is a current-version diagnostic, not a reproduction of Bruenig/Gross. It does not qualify a workflow, clear a gap, or release the conditional68 attempts. Every uncertainty about source vintage, membership scope and individual wealth remains explicit."
+  ],
+  "controls_before_analysis": [
+    "Fractional weighted cutoff gives expected household and member totals on a hand-calculated fixture.",
+    "Five replicated implicates with weights/5 do not inflate population totals by5.",
+    "Bottom37% negative value cannot transfer to bottom38%; membership and money are distinct dimensions."
+  ],
+  "resource_limits": "One worker, two numerical threads,300 seconds/job; existing Python environments only. No service credit use or billing changes.",
+  "created_at": "2026-11-04T10:22:03.817842+00:00",
+  "runner_sha256": "44ffd24c7d0a44629c77ace327784a2f054554c28b2844a7c38fd6b5691477b8"
+}

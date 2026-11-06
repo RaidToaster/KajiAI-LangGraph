@@ -1,0 +1,33 @@
+[
+  {
+    "type": "cloud_concurrency_stall",
+    "recorded_at": "2026-10-10T06:21:13.594062+00:00",
+    "ollama_server_version": "0.34.0",
+    "status_before_recovery": {
+      "complete": false,
+      "completed": {
+        "full": 487,
+        "closed_book": 479
+      },
+      "planned_per_condition": 500,
+      "halted": true,
+      "updated_at": "2026-10-10T06:18:34.929436+00:00"
+    },
+    "queue_timeout_full_claim_ids": [
+      445,
+      269,
+      279
+    ],
+    "queue_timeout_model_only_claim_ids": [
+      8
+    ],
+    "pending_model_only_claim_ids_interrupted_by_server_restart": [
+      264,
+      388
+    ],
+    "action": "Restart the task-owned local Ollama daemon after the study halts scheduling. Preserve all errors and resume only unattempted tasks.",
+    "protocol_change": false,
+    "inference_source_change": false,
+    "caveat": "Operator recovery interrupts pending requests; these attempts are retained as execution failures, not replaced by successful retries."
+  }
+]

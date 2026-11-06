@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "Did Harris attribute specific actions or words to Lincoln, and were those presented as direct quotations or paraphrases?",
+        "candidates": [
+          {
+            "title": "Abraham Lincoln quote authenticity and spurious quotations",
+            "snippet": "Commonly misattributed sayings include “You cannot strengthen the weak by weakening the strong” and “Nearly all men can stand adversity, but if ... Read more",
+            "url": "https://www.facebook.com/LincolnCollection/posts/you-can-fool-some-of-the-people-all-of-the-time-and-all-of-the-people-some-of-th/2324983670878756/"
+          },
+          {
+            "title": "Quotes by Abraham Lincoln",
+            "snippet": "Selected Quotations by Abraham Lincoln . For your convenience, this page combines two of our previous collections of Lincoln quotations and groups them under ... Read more",
+            "url": "https://www.abrahamlincolnonline.org/lincoln/speeches/quotes.htm"
+          },
+          {
+            "title": "Lincoln-Douglas Debates: 4",
+            "snippet": "Explore the insights and strategies of Lincoln Douglas debate #4. Enhance your knowledge of their debates today!",
+            "url": "https://teachingamericanhistory.org/document/the-lincoln-douglas-debates-4th-debate-part-i/"
+          },
+          {
+            "title": "Misquoting Lincoln",
+            "snippet": "Aug 25, 2006 — Bush supporters falsely quote Lincoln as advocating arresting, exiling or hanging members of Congress who damage military morale in wartime. Read more",
+            "url": "https://www.factcheck.org/2006/08/misquoting-lincoln/"
+          },
+          {
+            "title": "» Abraham Lincoln Quotes",
+            "snippet": "“ Lincoln's speech is understandable by people of all walks of life, by immigrants , by young people . Lincoln had no pretentions whatsoever. Read more",
+            "url": "https://www.abrahamlincoln.org/features/speeches-writings/abraham-lincoln-quotes/index.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-glm-candidate",
+  "timestamp": "2026-11-06T01:14:10.759208+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7116.062
+}

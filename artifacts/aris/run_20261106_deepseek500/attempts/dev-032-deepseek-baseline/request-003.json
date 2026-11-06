@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The New York post Endorsed Donald trumps bid for re-election.",
+        "query": "The New York post Endorsed Donald trumps bid for re-election. evidence",
+        "candidates": [
+          {
+            "title": "Trump endorses Cuomo for NYC mayor: What this could mean",
+            "snippet": "Former New York Gov. Andrew Cuomo received a last-minute endorsement from President Trump, who warned he may limit federal funding to New York ...",
+            "url": "https://www.fox5ny.com/news/trump-endorses-cuomo-nyc-mayor-what-could-mean"
+          },
+          {
+            "title": "Trump Relies on Falsehoods to Cast Doubt on Elections",
+            "snippet": "Trump Relies on Falsehoods to Cast Doubt on Elections. The president has spread false claims about ranked-choice systems, voting machines, vote ...",
+            "url": "https://www.nytimes.com/2026/10/24/us/politics/trump-elections-voting-fact-check.html"
+          },
+          {
+            "title": "Trump endorses 'big lie' proponents for state election posts",
+            "snippet": "Despite a lack of credible evidence to support Trump's allegations of mass voter fraud, the former president has continued to push the “big lie ...",
+            "url": "https://ny1.com/nyc/queens/ap-top-news/2021/09/20/trump-endorses-big-lie-proponents-for-state-election-posts"
+          },
+          {
+            "title": "ON THE GROUND: As voters handed Donald Trump a historic rebuttal in ...",
+            "snippet": "As voters handed Donald Trump a historic rebuttal in the US midterm elections on Tuesday, progressives in New York City saw their message ...",
+            "url": "https://www.facebook.com/thenationalnewspaperscotland/posts/on-the-ground-as-voters-handed-donald-trump-a-historic-rebuttal-in-the-us-midter/1798504778943977/"
+          },
+          {
+            "title": "Live Updates: Voters hand control of Congress to Democrats in sharp ...",
+            "snippet": "Democrats won control of Congress in Tuesday's 2026 midterm elections in a widespread repudiation of President Donald Trump and the ...",
+            "url": "https://www.pbs.org/newshour/politics/live-updates-midterm-voters-go-to-the-polls-on-election-day"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-032-deepseek-baseline",
+  "timestamp": "2026-11-06T07:15:48.234524+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16537.546
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks will stop the spread of covid 19",
+        "query": "Search PubMed/ClinicalTrials.gov for randomized controlled trials or cluster-randomized trials measuring SARS-CoV-2 infection incidence with mask-wearing interventions, and retrieve the primary trial reports and protocols.",
+        "candidates": [
+          {
+            "title": "Face Masks to Reduce COVID-19 in Bangladesh | ClinicalTrials.gov",
+            "snippet": "The primary goal of the village-level intervention is to assess whether mask-wearing reduces community-level COVID-19 seroconversion.",
+            "url": "https://clinicaltrials.gov/study/NCT04630054"
+          },
+          {
+            "title": "Impact of community masking on COVID-19: A cluster-randomized ...",
+            "snippet": "We find that surgical masks are particularly effective in reducing symptomatic seroprevalence of SARS-CoV-2. In villages randomized to surgical masks (N = 200), ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9036942/"
+          },
+          {
+            "title": "Physical interventions to interrupt or reduce the spread of respiratory ...",
+            "snippet": "Jan 30, 2023 · Wearing masks in the community probably makes little or no difference to the outcome of laboratory-confirmed influenza/SARS-CoV-2 compared to ...",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/36715243/"
+          },
+          {
+            "title": "A Trial of Two Mask Systems in Preventing SARS CoV-2 in ...",
+            "snippet": "A cluster randomized trial will be conducted to evaluate the difference between an Acteev™ system (Acteev™ N95 masks YQD8008 during shifts+ Acteev™ fabric ...",
+            "url": "https://clinicaltrials.gov/study/NCT05036941"
+          },
+          {
+            "title": "Impact of community masking on COVID-19: A cluster-randomized ...",
+            "snippet": "Dec 2, 2021 · We conducted a cluster-randomized trial to measure the effect of community-level mask distribution and promotion on symptomatic severe acute ...",
+            "url": "https://www.science.org/doi/10.1126/science.abi9069"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-013-deepseek-candidate",
+  "timestamp": "2026-11-06T06:14:45.298571+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12874.609
+}

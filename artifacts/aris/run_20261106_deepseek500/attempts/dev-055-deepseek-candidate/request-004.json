@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve.",
+        "query": "What were the reported daily or weekly Covid-19 death counts over time in the relevant jurisdiction(s) around and before 2020-10-21, and do they show a flat trend?",
+        "candidates": [
+          {
+            "title": "Provisional COVID-19 Mortality Surveillance",
+            "snippet": "Provisional death counts by time period and jurisdiction, United States. This table has counts of deaths involving COVID-19 and other select causes of death by time-period in which the death occurred.",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm"
+          },
+          {
+            "title": "COVID-19 data | WHO COVID-19 dashboard",
+            "snippet": "WHO stopped requiring daily basis data reporting since August 2023 and the data presented in this dashboard are weekly frequency.",
+            "url": "https://data.who.int/dashboards/covid19/data"
+          },
+          {
+            "title": "Excess Deaths Associated with COVID-19 - Centers for Disease ...",
+            "snippet": "Counts of deaths in the most recent weeks were compared with historical trends (from 2013 to present) to determine whether the number of deaths in recent weeks was significantly higher than expected, using Farrington surveillance algorithms (1). The ‘surveillance’ package in R (2) was used to implement the Farrington algorithms, which use overdispe...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm"
+          },
+          {
+            "title": "Coronavirus (COVID-19) Deaths - Our World in Data",
+            "snippet": "This page provides data on the number of confirmed deaths from COVID-19. Research has shown that these figures are an underestimate of the total pandemic death toll. This is because of limited testing, poorly functioning death registries, challenges in determining the cause of death, and disruptions during the pandemic.",
+            "url": "https://ourworldindata.org/covid-deaths"
+          },
+          {
+            "title": "Provisional COVID-19 death counts, rates, and percent of ...",
+            "snippet": "This file contains COVID-19 death counts, death rates, and percent of total deaths by jurisdiction of residence. The data is grouped by different time periods including 3-month period, weekly, and total (cumulative since January 1, 2020).",
+            "url": "https://data.cdc.gov/National-Center-for-Health-Statistics/Provisional-COVID-19-death-counts-rates-and-percen/mpx5-t7tu"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-055-deepseek-candidate",
+  "timestamp": "2026-11-06T08:21:03.590247+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20452.89
+}

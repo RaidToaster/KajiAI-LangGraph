@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "Obtain the actual draft content to identify and assess its claims.",
+        "candidates": [
+          {
+            "title": "Real-World Data: Assessing Electronic Health Records ...",
+            "snippet": "Jul 25, 2024 — This guidance is intended to provide sponsors and other interested parties with considerations when proposing to use electronic health records ( ... Read more",
+            "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/real-world-data-assessing-electronic-health-records-and-medical-claims-data-support-regulatory"
+          },
+          {
+            "title": "Stop Measuring Claims AI by Extraction Accuracy Alone",
+            "snippet": "Oct 28, 2026 — Extraction accuracy measures how often a system correctly identifies and captures information from source documents, such as names, dates, ...",
+            "url": "https://www.nomad-data.com/blog/claims-ai-extraction-accuracy"
+          },
+          {
+            "title": "How to verify claims in AI-generated text using a prompt",
+            "snippet": "Ask AI to separate facts from guesses. Try this prompt: “Review this draft . Label claims supported by my source material, reasonable ... Read more",
+            "url": "https://www.facebook.com/groups/698593531630485/posts/1743943813762113/"
+          },
+          {
+            "title": "Health Products Compliance Guidance",
+            "snippet": "Dec 20, 2022 — Once the claims are identified , the FTC assesses the scientific evidence upon which the company relies to determine whether there is adequate ... Read more",
+            "url": "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance"
+          },
+          {
+            "title": "Real-World Data: Assessing Electronic Health Records ...",
+            "snippet": "Jul 25, 2024 — Assessing Electronic Health Records and Medical Claims Data To Support Regulatory Decision-Making for Drug and Biological Products; Draft ...",
+            "url": "https://www.federalregister.gov/documents/2024/07/25/2024-16338/real-world-data-assessing-electronic-health-records-and-medical-claims-data-to-support-regulatory"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-glm-baseline",
+  "timestamp": "2026-11-06T01:24:59.187345+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7764.5
+}

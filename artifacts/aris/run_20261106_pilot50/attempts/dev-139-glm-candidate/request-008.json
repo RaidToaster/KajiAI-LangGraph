@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "What is the exact wording in the ad regarding preexisting conditions and selling plans to any patient?",
+        "candidates": [
+          {
+            "title": "Marketplace health plans cover pre-existing conditions",
+            "snippet": "All Marketplace plans must cover treatment for pre-existing medical conditions . No insurance plan can reject you, charge you more, or refuse to pay for ... Read more",
+            "url": "https://www.healthcare.gov/coverage/pre-existing-conditions/"
+          },
+          {
+            "title": "What is a Pre-Existing Condition?",
+            "snippet": "A pre-existing condition is a medical condition that you have before starting a new health care plan . Find examples and learn more.",
+            "url": "https://www.cigna.com/knowledge-center/what-is-a-pre-existing-condition"
+          },
+          {
+            "title": "Affordable Care Act (ACA) Pre-existing Conditions",
+            "snippet": "The ACA bars use of pre-existing conditions . The Patient Protection and Affordable Care Act (ACA) prohibits the use of pre-existing conditions —such as heart ... Read more",
+            "url": "https://www.facingourrisk.org/privacy-policy-legal/laws-protections/ACA/pre-existing-conditions"
+          },
+          {
+            "title": "Pre-existing conditions",
+            "snippet": "Aug 18, 2025 — Put simply, a pre-existing condition is a health issue you had before your current health plan started — examples could be asthma, diabetes or ... Read more",
+            "url": "https://www.uhc.com/news-articles/benefits-and-coverage/understanding-pre-existing-conditions-and-health-coverage"
+          },
+          {
+            "title": "How to Cover Pre-existing Conditions",
+            "snippet": "Insurers are prohibited only from denying coverage for a pre-existing condition altogether; it is quite permissible, however, for insurance providers to charge ... Read more",
+            "url": "https://www.nationalaffairs.com/publications/detail/how-to-cover-pre-existing-conditions"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-glm-candidate",
+  "timestamp": "2026-11-06T01:27:29.731215+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7915.031
+}

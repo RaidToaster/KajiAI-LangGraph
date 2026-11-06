@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "Eric Trump, Donald J. Trump Jr. evidence",
+        "candidates": [
+          {
+            "title": "Trump's Sons Cast the Blame for Fraud on Their Company's Accountants ...",
+            "snippet": "Donald Trump Jr. and his brother Eric Trump both testified in the trial that accuses their family business of overvaluing its assets.",
+            "url": "https://www.nytimes.com/2023/11/02/nyregion/eric-trump-donald-jr-fraud-trial.html"
+          },
+          {
+            "title": "Eric Trump testifies in New York civil fraud trial. Former President ...",
+            "snippet": "The trial accuses him, his brother Donald Trump Jr., and his father of knowingly committing fraud by submitting statements of financial ...",
+            "url": "https://www.npr.org/2023/11/02/1210024471/donald-trump-jr-and-eric-trump-to-take-the-stand-in-new-york-civil-fraud-trial"
+          },
+          {
+            "title": "People v Trump Org., Inc.",
+            "snippet": "Upon the foregoing documents, it is hereby ordered that the motion by respondents Donald J. Trump, Ivanka Trump, and Donald Trump, Jr. to quash ...",
+            "url": "https://www.nycourts.gov/Reporter/pdfs/2022/2022_30538.pdf"
+          },
+          {
+            "title": "Don Trump Jr.'s Ex Faces Fresh Financial News After Claims She ...",
+            "snippet": "” In an October 2023 interview, Eric Trump revealed it was his father's idea to have his mother laid to rest at the “family funeral plot.",
+            "url": "https://www.facebook.com/stylecaster/posts/don-trump-jrs-ex-faces-fresh-financial-news-after-claims-she-knows-where-bodies-/1652628969645830/"
+          },
+          {
+            "title": "Eric Trump, Donald Trump Jr. testify in New York civil fraud trial",
+            "snippet": "Eric Trump was called to the stand in his family's New York fraud trial after Donald Trump Jr., his brother, wrapped up his own testimony.",
+            "url": "https://www.youtube.com/watch?v=xgl90zPTA0w"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-baseline",
+  "timestamp": "2026-11-06T08:43:09.199415+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21778.515
+}

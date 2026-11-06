@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kanye West was ahead of Biden and Trump in the Kentucky polls in October 2020",
+        "query": "Kanye West was ahead of Biden and Trump in the Kentucky polls in October 2020 counterevidence",
+        "candidates": [
+          {
+            "title": "Kanye West tweet showed mock election data, not results",
+            "snippet": "Oct 14, 2020 — Kanye West is leading Joe Biden and Donald Trump in Kentucky precinct voting polls ,” read another tweeted sharing the false information. The ... Read more",
+            "url": "https://apnews.com/article/fact-checking-9565471123"
+          },
+          {
+            "title": "Fact-check: Is Kanye polling ahead of Biden and Trump in ...",
+            "snippet": "Oct 23, 2020 — The presidential election is right around the corner, and while the focus has been on President Donald Trump and Joe Biden , rapper turned ... Read more",
+            "url": "https://www.poynter.org/tfcn/2020/is-kanye-polling-ahead-of-biden-and-trump-in-kentucky/"
+          },
+          {
+            "title": "Kentucky election results tweeted by Kanye West are not ...",
+            "snippet": "Oct 14, 2020 — Correction October 19, 2020 : Correcting an earlier version of this article that referred to Libertarian candidate Jo Jorgensen as Joe ...",
+            "url": "https://www.reuters.com/article/world/fact-check-kentucky-election-results-tweeted-by-kanye-west-are-not-valid-idUSKBN26Z2OM/"
+          },
+          {
+            "title": "Fact check: No, Kanye West isn't leading Kentucky's ...",
+            "snippet": "Oct 16, 2020 — Claim: Kentucky election results show Kanye West , Jo Jorgensen with major vote totals. Donald Trump and Joe Biden aren't the only people running ... Read more",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/16/fact-check-no-kanye-west-isnt-leading-kentucky-presidential-votes/3671444001/"
+          },
+          {
+            "title": "Kanye West Still Doesn't Seem to Understand He's Not ...",
+            "snippet": "Oct 14, 2020 — Kanye West still seems to believe he's beating Joe Biden and Donald Trump in the presidential election after a fake early Kentucky election ...",
+            "url": "https://www.vanityfair.com/style/2020/10/kanye-west-presidential-campaign-false-kentucky-election-results?srsltid=AYCX9vKEfQu-J0XPQNvjquHo6xgadwbP8-44NEnLnR2zOyaxjIR1pzo9"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-102-deepseek-baseline",
+  "timestamp": "2026-11-06T05:10:27.314724+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9016.625
+}

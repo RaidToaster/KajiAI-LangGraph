@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amber Alert Issued For License Plate Q72B381",
+        "query": "Which law enforcement agency, if any, issued an Amber Alert referencing license plate Q72B381, and on what date?",
+        "candidates": [
+          {
+            "title": "Guidelines for Issuing AMBER Alerts - Office of Justice Programs",
+            "snippet": "AMBER plans require law enforcement to confirm an abduction prior to issuing an alert. This is essential when determining the level of risk to the child.",
+            "url": "https://amberalert.ojp.gov/about/guidelines-for-issuing-alerts"
+          },
+          {
+            "title": "Rocky Hill Police Department",
+            "snippet": "Statute. 52-571m. i. Hot List: A list of license plate numbers or other vehicle identifiers maintained for an authorized law enforcement purpose ...",
+            "url": "https://www.rockyhillct.gov/DocumentCenter/View/2777/Automatic-License-Plate-Reader-ALPR-Policy"
+          },
+          {
+            "title": "What are the criteria for issuing Amber Alerts?",
+            "snippet": "Certain criteria need to be met in order for law enforcement to issue an Amber Alert for a missing child age 17 or younger.",
+            "url": "https://abc13.com/post/what-are-the-criteria-for-issuing-amber-alerts/3084583/"
+          },
+          {
+            "title": "KNOW THE CRITERIA: Today is National Amber Alert ...",
+            "snippet": "The AMBER Alert plan is for the safe recovery of missing children that a law enforcement agency believes have been abducted and are in danger of ...",
+            "url": "https://www.facebook.com/MNBCA/posts/know-the-criteria-today-is-national-amber-alert-awareness-day-states-have-differ/766457275518447/"
+          },
+          {
+            "title": "East Haven Police Department",
+            "snippet": "The ALPR system will identify a license plate and/or a motor vehicle. B. The ALPR system shall be restricted to legitimate law enforcement uses ...",
+            "url": "https://www.easthaven-ct.gov/DocumentCenter/View/1030/Policy-4026---Automated-License-Plate-Readers-ALPR"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-466-deepseek-candidate",
+  "timestamp": "2026-11-06T04:30:24.037227+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6613.343
+}

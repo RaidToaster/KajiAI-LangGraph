@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Provide the draft text to be converted and assessed.",
+        "candidates": [
+          {
+            "title": "Free Grammar Check",
+            "snippet": "Polish your writing in seconds. Check grammar, spelling, and clarity without leaving the page. Paste or type your text, then select Check my writing. Click a ...",
+            "url": "https://www.grammar.com/grammar-check"
+          },
+          {
+            "title": "Free Grammar Checker - Grammar Correction",
+            "snippet": "TutorBin Free Grammar Checker is the best AI Powered tool that instantly checks your grammar, spelling, punctuation, typos. Type your sentence or upload you ...",
+            "url": "https://tutorbin.com/grammar-checker"
+          },
+          {
+            "title": "word choice - \"provide\" vs. \"provide with\"",
+            "snippet": "I am wondering if the following sentence is correct: We add the information their study provides with to our article. The context is: their study ...",
+            "url": "https://english.stackexchange.com/questions/137660/provide-vs-provide-with"
+          },
+          {
+            "title": "Writing a Draft",
+            "snippet": "A draft is any text which not in its final form. It is work in progress. A preliminary draft may contain just a few main ideas and notes about what you intend ...",
+            "url": "https://www.writing.support/drafting.htm"
+          },
+          {
+            "title": "Free AI Grammar Checker (no sign-up required)",
+            "snippet": "Paste your text in the grammar checker and hit the button to fix all grammar, spelling, and punctuation errors using cutting-edge AI technology.",
+            "url": "https://quillbot.com/grammar-check"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-baseline",
+  "timestamp": "2026-11-03T06:10:42.226857+00:00",
+  "status": "reserved_outcome_unknown"
+}

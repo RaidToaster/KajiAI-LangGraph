@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+        "query": "What specific documents are alleged to have been leaked, and what are their dates, authors, and originating agencies?",
+        "candidates": [
+          {
+            "title": "Leaked Pentagon documents takeaways: Here are details ...",
+            "snippet": "Apr 17, 2023 — CBS News has reviewed over 50 documents that appear to be part of the leak of highly sensitive information. The documents ' presence online ... Read more",
+            "url": "https://www.cbsnews.com/news/pentagon-leaked-documents-details-takeaways-jack-teixera/"
+          },
+          {
+            "title": "The Protection of Classified Information: The Legal ...",
+            "snippet": "Feb 2, 2023 — Summary. This report provides an overview of the relationship between executive and legislative authority over national security information ... Read more",
+            "url": "https://www.congress.gov/crs-product/RS21900"
+          },
+          {
+            "title": "The Snowden Affair - National Security Archive",
+            "snippet": "Sep 4, 2013 — The Snowden leaks have generated broad public debate over issues of security, privacy, and legality inherent in the NSA's surveillance of ... Read more",
+            "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB436/"
+          },
+          {
+            "title": "Data Breach Response: A Guide for Business",
+            "snippet": "Move quickly to secure your systems and fix vulnerabilities that may have caused the breach. The only thing worse than a data breach is multiple data breaches. Read more",
+            "url": "https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business"
+          },
+          {
+            "title": "WikiLeaks",
+            "snippet": "WikiLeaks is a non-profit media organisation and publisher of leaked documents. It is funded by donations and media partnerships. Read more",
+            "url": "https://en.wikipedia.org/wiki/WikiLeaks"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-001-deepseek-candidate",
+  "timestamp": "2026-11-06T03:54:46.291802+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4475.609
+}

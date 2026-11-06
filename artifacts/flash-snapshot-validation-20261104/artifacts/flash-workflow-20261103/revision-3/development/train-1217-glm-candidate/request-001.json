@@ -1,0 +1,27 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba."
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "domain": {
+          "type": "choice",
+          "instructions": "Which domain best describes the factual claim? Do not judge whether it is true.",
+          "criteria": {
+            "general": "A factual claim outside the other three specialist domains.",
+            "scientific": "A claim about scientific research or findings, excluding clinical health claims.",
+            "political": "A claim about government, elections, public officials, or public policy.",
+            "health_medical": "A claim about human health, disease, treatment, medicine, or clinical research."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-03T06:01:17.300796+00:00",
+  "status": "reserved_outcome_unknown"
+}

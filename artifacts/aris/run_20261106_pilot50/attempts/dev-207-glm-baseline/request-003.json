@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "At independence, Nigeria had a population of 45 million. evidence",
+        "candidates": [
+          {
+            "title": "At independence in 1960, Nigeria had about 45 million ...",
+            "snippet": "At independence in 1960, Nigeria had about 45 million people.",
+            "url": "https://www.facebook.com/punchnewspaper/posts/at-independence-in-1960-nigeria-had-about-45-million-people/3837300756308058/"
+          },
+          {
+            "title": "Impact Of Population Growth On Nigeria's Development ...",
+            "snippet": "Impact Of Population Growth On Nigeria's Development Since 1960. Why NIGERIA Has As Many People As Its 15 Nearest Neighbors",
+            "url": "https://www.youtube.com/watch?v=cO26P4kmkzA"
+          },
+          {
+            "title": "11 Facts You Should Know About Nigeria as It Celebrates ...",
+            "snippet": "The country then had a population of over 45 million people. 3. Nigeria has been ruled by military leaders for a combined 29 years. On Jan ...",
+            "url": "https://www.globalcitizen.org/en/content/facts-to-know-about-nigeria-independence/"
+          },
+          {
+            "title": "Nigeria GDP Growth vs Average Prosperity Since 1960 ...",
+            "snippet": "At Independence in 1960, Nigeria inherited a population of 45 million people with a corresponding Gross Domestic Product (GDP) of $4.2bn.",
+            "url": "https://www.facebook.com/HonClementJimbo/videos/at-independence-in-1960-nigeria-inherited-a-population-of-45-million-people-with/1050729530191005/"
+          },
+          {
+            "title": "Fact-checking Buhari's independence day speech",
+            "snippet": "At independence, Nigeria had a population of 45 million Verdict Correct Nigeria's population figures have historically been controversial, with ...",
+            "url": "https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-glm-baseline",
+  "timestamp": "2026-11-06T00:10:35.047646+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3300.359
+}

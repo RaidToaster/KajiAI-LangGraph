@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Dan Lyons original February 2020 tweet Lindsey Graham fake quote",
+        "candidates": [
+          {
+            "title": "That Viral Lindsey Graham Quote Saying Trump Knows ...",
+            "snippet": "However, the quote was posted by satirical author Dan Lyons, whose Twitter bio reads, \"aka Fake Steve, inventor of fake news.\" Read More. GOP ...",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087"
+          },
+          {
+            "title": "Did US Sen. Graham Say Trump Knows More Than CDC ...",
+            "snippet": "In the last few days, Lyons has also shared fake quotes from Trump's spiritual adviser Paula White and U.S. Rep. Devin Nunes, as well as this ...",
+            "url": "https://www.snopes.com/fact-check/lindsey-graham-trump-cdc/"
+          },
+          {
+            "title": "False claim: Sen. Lindsey Graham said Donald Trump ...",
+            "snippet": "Lyons, whose Twitter bio reads: “aka Fake Steve, inventor of fake news. NYT best-selling author, DISRUPTED and LAB RATS. Silicon Valley (HBO) ...",
+            "url": "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/"
+          },
+          {
+            "title": "Countering Misinformation (Part III) - The Psychology of ...",
+            "snippet": "In the game, which takes about fifteen minutes, you play as a fake news magnate who tries to gain a following and build credibility in a ...",
+            "url": "https://www.cambridge.org/core/books/psychology-of-misinformation/countering-misinformation/C6E877CC9673F7FAF3DB921820DFF178"
+          },
+          {
+            "title": "“Pink Slime”: Partisan journalism and the future of local news",
+            "snippet": "then-editor, Gerould Kern, described the fake bylines, plagiarism, and fabricated quotes as ... fake news sites,” OpenSecrets, May 22, 2020, https://www.",
+            "url": "https://towcenter.columbia.edu/sites/default/files/content/%E2%80%9CPink%20Slime%E2%80%9D_%20Partisan%20journalism%20and%20the%20future%20of%20local%20news.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-03T08:27:26.129169+00:00",
+  "status": "reserved_outcome_unknown"
+}

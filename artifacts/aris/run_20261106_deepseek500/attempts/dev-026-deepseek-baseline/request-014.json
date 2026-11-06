@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "Ivermectin is a treatment for coronavirus. original source fact check",
+        "candidates": [
+          {
+            "title": "Ivermectin and COVID-19",
+            "snippet": "There continues to be interest in a drug called ivermectin for the prevention or treatment of COVID-19 in humans. The FDA has not authorized ...",
+            "url": "https://www.fda.gov/consumers/consumer-updates/ivermectin-and-covid-19"
+          },
+          {
+            "title": "News: A large study finds that ivermectin... (The New York Times)",
+            "snippet": "The anti-parasitic drug ivermectin, which has surged in popularity as an alternative treatment for Covid-19 despite a lack of strong research to back it up, ...",
+            "url": "https://www.ncbi.nlm.nih.gov/search/research-news/15867/"
+          },
+          {
+            "title": "ivermectin Archives",
+            "snippet": "Kennedy Jr. made several false, misleading and baseless claims about the origins of Lyme disease and the respiratory syncytial virus, the COVID-19 pandemic, and ...",
+            "url": "https://www.factcheck.org/issue/ivermectin/"
+          },
+          {
+            "title": "Ivermectin: How false science created a Covid 'miracle' drug",
+            "snippet": "Ivermectin has been called a Covid \"miracle\" drug, championed by vaccine opponents, and recommended by health authorities in some countries.",
+            "url": "https://www.bbc.com/news/health-58170809"
+          },
+          {
+            "title": "Debunking COVID-19 myths",
+            "snippet": "If what you heard doesn't mention a COVID-19 vaccine or COVID-19 medicine from your healthcare professional, it could be a myth. Myths are ...",
+            "url": "https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-myths/art-20485720"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-baseline",
+  "timestamp": "2026-11-06T06:56:23.938825+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15373.25
+}

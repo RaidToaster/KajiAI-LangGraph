@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "World Food Program USA IRS Form 990 board of directors chair Hunter Biden 2011 2016",
+        "candidates": [
+          {
+            "title": "Return of Organization Exempt From Income Tax",
+            "snippet": "CHAIRMAN. CARL STERN. SECRETARY/TREASURER. 4.00. X. 0. 0. 0. 1.00. X. (3) HUNTER BIDEN. 1.00. DIRECTOR. X. 0. 0. 0. 0. 0. (4) LAWRENCE DARROW. 1.00. DIRECTOR. Q ...",
+            "url": "https://wfpusa.org/wp-content/uploads/2025/05/WFP-USA-Form-990-2017.pdf"
+          },
+          {
+            "title": "Friends Of The World Food Program Inc - Nonprofit Explorer",
+            "snippet": "Form 990 tax filings from 2011 to 2025. Raquet (Chairman) Hunter Biden (Director) full Form 990s. PDFs and digital copies of full Form 990 documents",
+            "url": "https://projects.propublica.org/nonprofits/organizations/133843435"
+          },
+          {
+            "title": "Vice President Joe Biden and World Food Program USA Honor Former ...",
+            "snippet": "Biden's son, Hunter Biden – who serves as Board Chair of WFP USA – introduced his father. honored to be a part of WFP USA.",
+            "url": "https://wfpusa.org/news/vice-president-joe-biden-and-world-food-program-usa-honor-former-senator-bob-dole-for-his-leadership-in-the-fight-against-hunger/"
+          },
+          {
+            "title": "World Food Program USA Annual Report 2011",
+            "snippet": "Hunter Biden,. Chairman, Board of Directors. Richard Leach,. President and CEO ... WFP USA has worked closely with the U.S. government to keep members of.",
+            "url": "https://law.du.edu/sites/default/files/2023-09/Sutton%20Colloquium%202013%20-%20World%20Food%20Program%20USA%20Annual%20Report%202011.pdf"
+          },
+          {
+            "title": "Hunter Biden | Chairman of the Board | World Food Program USA",
+            "snippet": "Hunter Biden serves as chairman of the board for World Food Program USA, a nonprofit based in Washington, D.C., which works to solve global hunger in ...",
+            "url": "https://www.devex.com/people/hunter-biden-985169"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-candidate",
+  "timestamp": "2026-11-06T08:53:05.657194+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22374.968
+}

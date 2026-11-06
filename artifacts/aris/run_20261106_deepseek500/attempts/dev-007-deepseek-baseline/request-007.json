@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’",
+        "query": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’ counterevidence",
+        "candidates": [
+          {
+            "title": "Here's Why You Pay More In Taxes Than Donald Trump",
+            "snippet": "\"I bet you pay more taxes than Donald Trump, who is the President of the United States.\" Bloomberg Opinion's Tim O'Brien explains why ...",
+            "url": "https://www.youtube.com/watch?v=YG5VFv8Y8qQ"
+          },
+          {
+            "title": "How Can President Trump Pay Less Tax Than You?",
+            "snippet": "The president's tax returns show he paid just $750 in federal income taxes each year in 2016 and 2017 and paid nothing at all for many years ...",
+            "url": "https://www.npr.org/2020/10/02/919175046/how-can-president-trump-pay-less-tax-than-you"
+          },
+          {
+            "title": "Donald Trump 'paid $750 in federal income taxes in 2016 ...",
+            "snippet": "It said the president paid just $750 in income taxes in both 2016 and 2017, while he paid no income taxes at all in 10 of the previous 15 years, ...",
+            "url": "https://www.bbc.com/news/technology-54319948"
+          },
+          {
+            "title": "Why is 'I paid more taxes than Donald Trump' trending?",
+            "snippet": "PEOPLE on Twitter are saying “I paid more taxes than Donald Trump” after it was revealed that the billionaire president paid $750 in taxes ...",
+            "url": "https://www.the-sun.com/news/1547777/trump-tax-returns-evasion-debt-white-house-twitter/"
+          },
+          {
+            "title": "Trump's tax revelation could tarnish image that fueled rise",
+            "snippet": "The bombshell revelations that President Donald Trump paid just $750 in federal income taxes the year he ran for office and paid no income ...",
+            "url": "https://whyy.org/articles/trumps-tax-revelation-could-tarnish-image-that-fueled-rise/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-007-deepseek-baseline",
+  "timestamp": "2026-11-06T05:44:37.267551+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11066.578
+}

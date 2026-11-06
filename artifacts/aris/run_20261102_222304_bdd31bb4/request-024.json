@@ -1,0 +1,48 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "In the 2020 election, 21 states and Washington, D.C., counted ballots arriving after November 3, with varying deadlines.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/30/fact-check-some-mail-ballots-arriving-post-election-day-count/6075311002/",
+            "quote": "Many states require that a ballot be received by Nov. 3, however, 21 states and Washington, D.C., will count ballots that arrive after Nov. 3, with deadlines varying.",
+            "context": "rives after Election Day, it will be thrown out and ignored\n\nAs election officials across the country deal with a record number of mail-in ballots ahead of Election Day, voters on social media are faced with a surge of misinformation about voting by mail.\n\nA recent viral post on Facebook claims that any mail-in ballots arriving after Election Day won’t be counted.\n\n“Even if your mail-in ballot is postmarked today, if it arrives after Election Day, it will be thrown out. Discounted. Ignored,” reads an Oct. 28 Facebook post by author Elizabeth Gilbert.\n\nUSA TODAY reached out to a spokesperson for Gilbert for comment.\n\nThe post has been shared over 1,300 times and is accompanied by a screenshot of a tweet from former U.S. Attorney General Eric Holder, who is now chairman of the National Democratic Redistricting Committee.\n\n“It’s too late to use the mails. Given Supreme Court rulings I urge everyone to now vote in person; early vote or use drop boxes. Protect your health but don’t let the Court and the deliberately crippled Postal Service deprive you of your most previous civil right,” reads the tweet from Holder.\n\nFact check: What's true and what's false about voting by mail in 2020\n\nMany states require that a ballot be received by Nov. 3, however, 21 states and Washington, D.C., will count ballots that arrive after Nov. 3, with deadlines varying. Here's a guide:\n\n## Nov. 6 deadline\n\nIn Kentucky, mail-in ballots must be postmarked by Nov. 3 and received by Nov. 6, however, county clerks say it is a risk to send absentee ballots through the mail because there is no guarantee thatthey will arrive by the deadline.\n\nBallots being sent via mail in Kansas and Virginia must be postmarked by the close of business on Election Day. In Kansas, ballots must be received by 5 p.m. Nov 6, and at noon for Virginia, Time reported.\n\nIn Massachusetts, ballots are due by 5 p.m. Nov. 6.\n\nIn Pennsylvania – a key battleground state – the Nov. 6 ballot return deadline remains in place after the Supreme Court recently refused for a second time to change the state's election rules, USA TODAY reported.\n\n## Nov. 9 deadline\n\nAccording to FiveThirtyEight, absentee ballots in Iowa and North Dakota must be postmarked by Nov. 2 and received by noon Nov. 9.\n\nIn West Virginia, officials expect absentee ballots mailed as late as Election Day to be counted by Nov. 9, according to WCHS.\n\nFact check: Michigan governor encourages voters to drop off ballots, not mail them\n\n## Nov. 10 and Nov. 12 deadlines\n\nMinnesota's secretary of state said Thursday it's too late"
+          },
+          {
+            "finding": "The U.S. Supreme Court ruled that states are permitted to count mailed ballots that arrive after Election Day.",
+            "url": "https://apnews.com/article/supreme-court-mailed-ballots-trump-elections-5f24f718ea92a33838485ce6302e079e",
+            "quote": "The Supreme Court has ruled that states can count mailed ballots that arrive after Election Day, preserving rules in nearly 30 states",
+            "context": "## Supreme Court rules states can count late-arriving mailed ballots, rejecting Trump-led challenge\n\n0 seconds of 44 secondsVolume 0%\n\n1 of 3 | \n\n\nThe Supreme Court has ruled that states can count mailed ballots that arrive after Election Day, preserving rules in nearly 30 states, and handing President Donald Trump a significant defeat.\n\nBy \nMARK SHERMAN\n\nUpdated 1:46 PM EST, June 29, 2026\n\nShare\n\n* Facebook\n* Copy\n\n  Link copied\n* Print\n* Email\n* X\n* LinkedIn\n* Bluesky\n* Flipboard\n* Pinterest\n* Reddit\n\nWASHINGTON (AP) — The Supreme Court on Monday ruled that states can count ballots that arrive after Election Day, a persistent target of President Donald Trump.\n\nThe 5-4 decision rejected a Republican-led attack on laws in more than half the states and the District of Columbia that permit mailed ballots to arrive and be counted some number of days after the election, provided they are postmarked by Election Day. The outcome spares officials the headache of changing their ballot rules just a few months before the 2026 midterm congressional elections.\n\nIn just over half those states, the more forgiving deadlines apply only to ballots cast by military and overseas voters.\n\nJustice Amy Coney Barrett wrote the court’s majority opinion, joined by Chief Justice John Roberts and the three liberal justices.\n\nFederal laws setting a single Election Day “leave open when those votes must be received,” Barrett wrote.\n\nundefined\n\nAP AUDIO: Supreme Court rules states can c"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "17-query_exhaustion",
+  "timestamp": "2026-11-02T15:36:58.555155+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Carbon dioxide intoxication is caused by wearing face masks.",
+        "query": "Search NIOSH/OSHA/WHO guidance and peer-reviewed occupational studies for documented CO2 rebreathing or intoxication incidents attributed to specific respirator or mask designs, with exposure levels and durations.",
+        "candidates": [
+          {
+            "title": "1910.134 - Respiratory protection.",
+            "snippet": "In the control of those occupational diseases caused by breathing air contaminated with harmful dusts, fogs, fumes, mists, gases, smokes, sprays, or vapors, ...",
+            "url": "http://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134"
+          },
+          {
+            "title": "CO2 Levels Behind and in Front of Different Protective Mask ...",
+            "snippet": "by H Akhondi · 2022 · Cited by 5 — Our primary objective was to determine whether continuous mask-wearing causes elevated levels of carbon dioxide (CO2) behind the facemasks. Elevated CO2 ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10324709/"
+          },
+          {
+            "title": "Respirator Types and Use | Personal Protective Equipment",
+            "snippet": "The NIOSH Respirator Approval Program is responsible for evaluating and approving respirators used in U.S. workplace settings. Types. There are two main types ...",
+            "url": "https://www.cdc.gov/niosh/ppe/respirators/index.html"
+          },
+          {
+            "title": "Assigned Protection Factors",
+            "snippet": "This guidance document focuses on the mandatory selection provisions of the APFs, MUCs, and Table I 1 at page 14 and their role in the overall Respiratory ...",
+            "url": "https://www.osha.gov/sites/default/files/publications/3352-APF-RESPIRATORS.pdf"
+          },
+          {
+            "title": "Carbon dioxide increases with face masks but remains ...",
+            "snippet": "We evaluated concentrations of CO2 under various PPE. National Institute for Occupational Safety and Health (NIOSH) limits were breached. ...",
+            "url": "https://www.researchgate.net/publication/350903274_Carbon_dioxide_increases_with_face_masks_but_remains_below_short-term_NIOSH_limits"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-173-deepseek-candidate",
+  "timestamp": "2026-11-06T03:50:36.239787+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4225.562
+}

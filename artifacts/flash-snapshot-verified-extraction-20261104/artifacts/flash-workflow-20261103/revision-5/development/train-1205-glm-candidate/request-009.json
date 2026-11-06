@@ -1,0 +1,78 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Newsweek reports the viral quote attributed to Sen. Lindsey Graham is not real.",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087",
+            "quote": "By Matthew Impelli\n\nLife & Trends Reporter\n\nNewsweek is a Trust Project member\n\nSee more of our trusted coverage when you search.to see more of our trusted coverage when you search.\n\n...\n\nA viral quote attributed to Republican Senator Lindsey Graham is not real.\n\nThe fake quote, which has Graham stating that President Donald Trump knows more about viruses than scientists, gained traction on Twitter last week. However, the quote was posted",
+            "context": "By Matthew Impelli\n\nLife & Trends Reporter\n\nNewsweek is a Trust Project member\n\nSee more of our trusted coverage when you search.to see more of our trusted coverage when you search.\n\n...\n\nA viral quote attributed to Republican Senator Lindsey Graham is not real.\n\nThe fake quote, which has Graham stating that President Donald Trump knows more about viruses than scientists, gained traction on Twitter last week. However, the quote was posted by satirical author Dan Lyons, whose Twitter bio reads, \"aka Fake Steve, inventor of fake news.\"\n\n\"CAPITOL HILL: @LindseyGrahamSC says @realDonaldTrump \"probably knows more about medicine and specifically viruses than any of the so-called scientists at the NIH [National Institute of Health] and CDC [Centers for Disease Control]. If anyone is going to eradicate this plague it'll be the president,\" Lyons wrote.\n\nView this post on X\n\nOn Sunday, historian and author Kevin Kruse retweeted the quote, informing people that it is not real.\n\n\"This is fake. Stop retweeting this account please,\" Kruse wrote as a reply to Lyon's tweet.\n\nView this post on X\n\nParker Molloy, editor at large for Media Matters, also chimed in on the false claim, writing, \"the replies to Kevin's tweet, pointing out that the quote (which a lot of people seem to be sharing as if it were real) is fake, and depressing.\"\n\nView this post on X\n\n*Newsweek* was unable to find any evidence of Graham saying this. The fact-checking site, Snopes, also came up empty in their investigation.\n\nHowever, Graham released a statement on February 26, discussing Trump's response to the coronavirus, which has infected over 89,000 people i"
+          },
+          {
+            "finding": "The fabricated quote was posted by satirical author Dan Lyons, and its text matches the claimed wording about Trump knowing more about medicine and viruses than NIH/CDC scientists.",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087",
+            "quote": "more about viruses than scientists, gained traction on Twitter last week. However, the quote was posted by satirical author Dan Lyons, whose Twitter bio reads, \"aka Fake Steve, inventor of fake news.\"\n\n\"CAPITOL HILL: @LindseyGrahamSC says @realDonaldTrump \"probably knows more about medicine and specifically viruses than any of the so-called scientists at the NIH [National Institute of Health] and CDC [Centers for Disease Control]. If anyone is going to eradicate this plague",
+            "context": "By Matthew Impelli\n\nLife & Trends Reporter\n\nNewsweek is a Trust Project member\n\nSee more of our trusted coverage when you search.to see more of our trusted coverage when you search.\n\n...\n\nA viral quote attributed to Republican Senator Lindsey Graham is not real.\n\nThe fake quote, which has Graham stating that President Donald Trump knows more about viruses than scientists, gained traction on Twitter last week. However, the quote was posted by satirical author Dan Lyons, whose Twitter bio reads, \"aka Fake Steve, inventor of fake news.\"\n\n\"CAPITOL HILL: @LindseyGrahamSC says @realDonaldTrump \"probably knows more about medicine and specifically viruses than any of the so-called scientists at the NIH [National Institute of Health] and CDC [Centers for Disease Control]. If anyone is going to eradicate this plague it'll be the president,\" Lyons wrote.\n\nView this post on X\n\nOn Sunday, historian and author Kevin Kruse retweeted the quote, informing people that it is not real.\n\n\"This is fake. Stop retweeting this account please,\" Kruse wrote as a reply to Lyon's tweet.\n\nView this post on X\n\nParker Molloy, editor at large for Media Matters, also chimed in on the false claim, writing, \"the replies to Kevin's tweet, pointing out that the quote (which a lot of people seem to be sharing as if it were real) is fake, and depressing.\"\n\nView this post on X\n\n*Newsweek* was unable to find any evidence of Graham saying this. The fact-checking site, Snopes, also came up empty in their investigation.\n\nHowever, Graham released a statement on February 26, discussing Trump's response to the coronavirus, which has infected over 89,000 people in at least 61 countries and killed over 3,000, according to Johns Hopkins University.\n\n\"I appreciate President Trump's determination and leadership and his administration's efforts to contain the spread of the coronavirus and keep our country safe,\" Graham said in a statement posted to his website.\n\nGraham's office did not respond to *Newsweek*'s request for comment for th"
+          },
+          {
+            "finding": "PolitiFact states Graham did not say Trump probably knows more about medicine and viruses than medical professionals.",
+            "url": "https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/",
+            "quote": "Mar 5, 2020 · Sen. Lindsey Graham didn't say that President Trump probably knows more about medicine and viruses than medical professionals. The quote was ... Missing: counterevidence | Show results with: counterevidence",
+            "context": "Mar 5, 2020 · Sen. Lindsey Graham didn't say that President Trump probably knows more about medicine and viruses than medical professionals. The quote was ... Missing: counterevidence | Show results with: counterevidence"
+          },
+          {
+            "finding": "Reuters fact-check labels the claim false, stating Graham did not say Trump knows more about medicine and science than actual doctors and scientists.",
+            "url": "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/",
+            "quote": "Mar 4, 2020 · “Lindsey Graham did not say that President Trump knows more about medicine and science than actual doctors and scientists. Nor did he say that ... Missing: counterevidence | Show results with: counterevidence",
+            "context": "Mar 4, 2020 · “Lindsey Graham did not say that President Trump knows more about medicine and science than actual doctors and scientists. Nor did he say that ... Missing: counterevidence | Show results with: counterevidence"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-03T08:32:35.904692+00:00",
+  "status": "reserved_outcome_unknown"
+}

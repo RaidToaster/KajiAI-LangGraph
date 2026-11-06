@@ -1,0 +1,36 @@
+{
+  "source_result": "artifacts/flash-workflow-20261103/revision-8/development/train-1225-glm-candidate/result.json",
+  "source_result_sha256": "8504c62134339c8ff07dce82d959e4fb872fa2e4ae21bba197f9a048b2d20bd6",
+  "source_request_sha256": "f1752ba99cc4920d30798a9144dd41850087ec69f26ba2f0ad97b404766fbabe",
+  "queries": {
+    "statements": [
+      "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans. evidence",
+      "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans. counterevidence"
+    ],
+    "glm_questions": [
+      "What estimates of Mike Bloomberg's net worth existed around 19 February 2020?",
+      "What estimates of the combined wealth of the bottom 125 million Americans existed for the same period?"
+    ],
+    "deepseek_questions": [
+      "What was Mike Bloomberg's estimated net worth around 19 February 2020, and what source supports it?",
+      "What was the estimated total wealth of the bottom 125 million Americans around February 2020, and how was that group defined?"
+    ]
+  },
+  "per_arm_query_budget": 2,
+  "passages_per_query": 2,
+  "words_per_passage": 72,
+  "window_stride": 56,
+  "all_sources_retained": true,
+  "ranking": "Sum IDF * (1+log term frequency) for unique query terms; IDF=log((N+1)/(df+1))+1. Descending, stable source/document order. No semantic model or gold labels.",
+  "material_exposure_cues": {
+    "net_worth": "Forbes|64\\.2",
+    "aggregate_wealth": "11\\.4|\\$6 billion",
+    "population_conversion": "2\\.63|47\\.8|125\\.7",
+    "separate_calculation": "replicat|Gross",
+    "data_year": "2016|2019",
+    "former_mayor": "former mayor"
+  },
+  "cues_note": "Presence only. Cues do not establish sufficiency, independence, causal support, or truth.",
+  "scope": "Post hoc development-only fixed corpus; measures selected passage exposure. Zero live retrieval on all arms, no discovery/acceptance effect claim.",
+  "runner_sha256": "59e2286d18491354a6a4e5a0e7900954b2d5960142e17d71276dce5f47bf4446"
+}

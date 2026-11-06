@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "America went from 75,000 flu deaths last year in 2019 to almost 0 in 2020",
+        "query": "America went from 75,000 flu deaths last year in 2019 to almost 0 in 2020 counterevidence",
+        "candidates": [
+          {
+            "title": "Estimated Flu Disease Burden 2019–2020 Flu Season",
+            "snippet": "CDC estimates that the burden of illness during the 2019–2020 season was moderate with an estimated 35 million people sick with flu, 16 million ...",
+            "url": "https://www.cdc.gov/flu-burden/php/data-vis/2019-2020.html?CDC_AAref_Val=https://www.cdc.gov/flu/about/burden/2019-2020.html"
+          },
+          {
+            "title": "Flu Deaths vs. COVID-19 Deaths",
+            "snippet": "CDC estimates that flu has resulted in 9 million – 41 million illnesses, 140,000 – 710,000 hospitalizations, and 12,000 – 52,000 deaths annually between 2010 ...",
+            "url": "https://familiesfightingflu.org/flu-deaths-vs-covid-19-deaths/"
+          },
+          {
+            "title": "How Deadly Was the 2019-2020 Flu Season?",
+            "snippet": "Preliminary data suggests there were an estimated 24,000-62,000 flu deaths for the 2019-20 influenza season , according to the US Centers ...",
+            "url": "https://www.contagionlive.com/view/how-deadly-was-the-2019-2020-flu-season"
+          },
+          {
+            "title": "During the 2018-19 flu season, about 35 million people in the US ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/Newstalk1037fm/posts/during-the-2018-19-flu-season-about-35-million-people-in-the-us-contracted-the-f/2991412867570576/"
+          },
+          {
+            "title": "How many people get the flu?",
+            "snippet": "The CDC estimates that between 12,000 and 52,000 people died of the flu annually between 2010 and 2020. The 2017–18 flu season had more related deaths than any ...",
+            "url": "https://usafacts.org/articles/how-many-people-die-flu/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-033-deepseek-baseline",
+  "timestamp": "2026-11-06T07:18:38.585735+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16707.89
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wildfires do not Affect Mexico And Canada",
+        "query": "What data exist on wildfire occurrence, burned area, or wildfire impacts in Mexico and Canada, and for what time periods are they reported?",
+        "candidates": [
+          {
+            "title": "Wildfires and Climate Change",
+            "snippet": "The database includes active fire detections and near-real time burned area perimeters from NASA's MODIS and VIIRS sensors.",
+            "url": "https://science.nasa.gov/earth/explore/wildfires-and-climate-change/"
+          },
+          {
+            "title": "The Latest Data Confirms: Forest Fires Are Getting Worse",
+            "snippet": "Aug 17, 2022 — Canada's 2023 wildfire season burned six times as much forest area as the 2001 to 2022 annual average, and the summer of 2026 indicated the ...",
+            "url": "https://www.wri.org/insights/global-trends-forest-fires"
+          },
+          {
+            "title": "Understanding wildfire occurrence and size in Jalisco ...",
+            "snippet": "by C Toledo-Jaime · 2024 · Cited by 10 — Among the regions most affected by wildfires in Mexico is the state of Jalisco, which has the largest accumulated burned area in the last five decades. period ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0378112724006613"
+          },
+          {
+            "title": "Wildfires",
+            "snippet": "by V Samborska · 2024 · Cited by 24 — Explore global and country-level data on the extent of wildfires and how they've changed over time.",
+            "url": "https://ourworldindata.org/wildfires"
+          },
+          {
+            "title": "National wildland fire summary",
+            "snippet": "The number of fires is about the 10-year average for this time of year, and area burned is also about average or just below.",
+            "url": "https://cwfis.cfs.nrcan.gc.ca/en/summary"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-348-deepseek-candidate",
+  "timestamp": "2026-11-06T03:54:16.483717+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4445.796
+}

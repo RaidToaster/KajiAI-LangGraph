@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "COVID-19 pandemic pre-planned with the help from Bill Gates.",
+        "query": "Johns Hopkins Center for Health Security Event 201 primary planning documents, participant list, and funding agreements",
+        "candidates": [
+          {
+            "title": "Event 201",
+            "snippet": "The Johns Hopkins Center for Health Security in partnership with the World Economic Forum and the Bill and Melinda Gates Foundation hosted Event 201, ...",
+            "url": "https://centerforhealthsecurity.org/our-work/tabletop-exercises/event-201-pandemic-tabletop-exercise"
+          },
+          {
+            "title": "Our History",
+            "snippet": "The Center was founded in 1998 by D.A. Henderson as the first nongovernment organization to study the vulnerability of the US civilian population",
+            "url": "https://centerforhealthsecurity.org/who-we-are/history-of-the-center-for-health-security"
+          },
+          {
+            "title": "Johns Hopkins Center for Health Security to host Event 201, a global ...",
+            "snippet": "The Johns Hopkins Center for Health Security works to protect people from epidemics and disasters and build resilient communities through ...",
+            "url": "https://centerforhealthsecurity.org/2019/johns-hopkins-center-for-health-security-to-host-event-201-a-global-pandemic-exercise"
+          },
+          {
+            "title": "Johns Hopkins Center for Health Security",
+            "snippet": "Our Mission: To protect people's health from epidemics and disasters and ensure that communities are resilient to major challenges.",
+            "url": "https://centerforhealthsecurity.org/"
+          },
+          {
+            "title": "Johns Hopkins Center for Health Security",
+            "snippet": "The center works on health security issues including prevention and preparation for epidemics and pandemics; biological weapons prevention; and the biosecurity",
+            "url": "https://en.wikipedia.org/wiki/Johns_Hopkins_Center_for_Health_Security"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-035-deepseek-candidate",
+  "timestamp": "2026-11-06T07:24:33.367220+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17062.687
+}

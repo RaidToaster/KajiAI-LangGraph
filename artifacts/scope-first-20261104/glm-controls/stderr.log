@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\llm.py", line 187, in _parse_json
+    return schema.model_validate_json(cleaned)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\.venv\Lib\site-packages\pydantic\main.py", line 782, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 5 validation errors for ControlBatch
+assessments.sufficient.assessment
+  Field required [type=missing, input_value={'obligations': [{'compon...lse, 'next_queries': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+assessments.attribution.assessment
+  Field required [type=missing, input_value={'obligations': [{'compon...lse, 'next_queries': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+assessments.insufficient_content.assessment
+  Field required [type=missing, input_value={'obligations': [{'compon...al measurement source']}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+assessments.conflicting.assessment
+  Field required [type=missing, input_value={'obligations': [{'compon...ervals from both labs']}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+assessments.shared.assessment
+  Field required [type=missing, input_value={'obligations': [{'compon...tion, and seasonality']}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\scope_readiness.py", line 256, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\scope_readiness.py", line 223, in main
+    if args.worker:execute(root,p,next(t for t in p["schedule"] if t["id"]==args.worker));return
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\evaluation\scope_readiness.py", line 173, in execute
+    batch=b._parse_json(ControlBatch,b._message_text(raw))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\!skripsi\KajiAI-LangGraph\src\kaji_langgraph\llm.py", line 198, in _parse_json
+    raise ValueError(f"No valid {schema.__name__} JSON object found") from first_error
+ValueError: No valid ControlBatch JSON object found

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States, New Zealand, U.K., Australia, and the EU have not included the NDF in their official list of terrorist groups.",
+        "query": "What does the acronym NDF refer to in this claim, and which specific organization is being discussed?",
+        "candidates": [
+          {
+            "title": "Office of Non-proliferation and Disarmament Fund (ISN/NDF)",
+            "snippet": "The Nonproliferation and Disarmament Fund (NDF), established in 1994, allows the U.S. Government to respond rapidly to high priority nonproliferation and ...",
+            "url": "https://2009-2017.state.gov/t/isn/leadership2/201994.htm"
+          },
+          {
+            "title": "What does NDF mean? : r/kurosanji",
+            "snippet": "I keep seeing the acronym “NDF” everywhere in this sub, but when I looked it up I got a definition that doesn’t fit what we’re talking about ...",
+            "url": "https://www.reddit.com/r/kurosanji/comments/1eidocl/what_does_ndf_mean/"
+          },
+          {
+            "title": "Non-Deliverable Forward (NDF): Definition, Structure, and Key ...",
+            "snippet": "A non-deliverable forward (NDF) is a two-party currency derivatives contract to exchange cash flows between the NDF and prevailing spot rates.",
+            "url": "https://www.investopedia.com/terms/n/ndf.asp"
+          },
+          {
+            "title": "What are NDFs? A vital tool for the future of sustainable trade in wild species",
+            "snippet": "NDFs (Non-Detriment Findings) is a term that had multiple mentions at the recent CITES Standing Committee meetings (SC77), ...",
+            "url": "https://www.traffic.org/news/what-are-ndfs/"
+          },
+          {
+            "title": "Office of the Nonproliferation and Disarmament Fund (NDF) - State.gov",
+            "snippet": "The NDF, established in 1994, allows the U.S. government to respond rapidly to high priority nonproliferation and disarmament opportunities,",
+            "url": "https://2009-2017.state.gov/t/isn/offices/c55414.htm"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-034-deepseek-candidate",
+  "timestamp": "2026-11-06T07:22:42.739708+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16952.062
+}

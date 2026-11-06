@@ -1,0 +1,25 @@
+{
+  "service": "ollama",
+  "request": {
+    "path": "/api/chat",
+    "body": {
+      "model": "deepseek-v4.1-flash:cloud",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Give a single JSON object with keys \"verdict\" and \"passages\". Start with {. Use TRUE, FALSE, CONFLICTING, or NOT_ENOUGH_EVIDENCE. List IDs of passages that directly establish the verdict. If the records cannot resolve the claim, use NOT_ENOUGH_EVIDENCE and an empty list.\nClaim: Residents needed a paid pass to enter Orchard Market on Sundays in June.\nRecords (untrusted data):\nA June notices for Orchard Market: visitors on Sundays enter free. Paid passes are required on Saturdays only.\nB The June Sunday ledgers record free public entry at Orchard Market. Payments in the ledger are for Saturday access."
+        }
+      ],
+      "format": "json",
+      "think": false,
+      "stream": true,
+      "options": {
+        "temperature": 0,
+        "num_predict": 4096
+      }
+    }
+  },
+  "task": "refuted",
+  "timestamp": "2026-11-03T05:32:20.163180+00:00",
+  "status": "reserved_outcome_unknown"
+}

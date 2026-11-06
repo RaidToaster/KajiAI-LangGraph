@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "Search for the original TOGETHER trial primary report (NEJM 2021) and its registered protocol/statistical analysis plan to verify the exact outcomes and population studied.",
+        "candidates": [
+          {
+            "title": "Effect of Early Treatment with Ivermectin among Patients with ...",
+            "snippet": "We conducted a double-blind, randomized, placebo-controlled, adaptive platform trial involving symptomatic SARS-CoV-2–positive adults recruited from 12 public health clinics in Brazil.",
+            "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa2115869?articleTools=true"
+          },
+          {
+            "title": "Protocol - The New England Journal of Medicine",
+            "snippet": "The interim analysis is summarized in the Statistical Analysis Plan. Additional IPs may be added based on potential new drug candidates or treatment combinations identified during the trial.",
+            "url": "https://www.nejm.org/doi/suppl/10.1056/NEJMoa2209760/suppl_file/nejmoa2209760_protocol.pdf"
+          },
+          {
+            "title": "A multi-center, adaptive, randomized,... | Gates Open Research",
+            "snippet": "We describe a master protocol that will assess the efficacy of different repurposed drugs as treatments for early COVID-19 among outpatients at a high risk for severe complications. Methods: The TOGETHER Trial is a multi-center platform adaptive randomized, placebo-controlled, clinical trial.",
+            "url": "https://gatesopenresearch.org/articles/5-117"
+          },
+          {
+            "title": "TOGETHER_MP_ SAP_v2.0_22Jun2021 - The Lancet",
+            "snippet": "This statistical analysis plan (SAP) is designed to outline the methods to be used in the analysis of study data to answer the study objective(s). We provided the populations for analysis, data handling rules, statistical methods, and data presentation formats.",
+            "url": "https://www.thelancet.com/cms/10.1016/j.lana.2021.100142/attachment/8462c843-6b7c-4a1a-821d-86f0d9640bd8/mmc4.pdf"
+          },
+          {
+            "title": "A multi-center, adaptive, randomized, platform trial to ...",
+            "snippet": "We describe a master protocol that will assess the efficacy of different repurposed drugs as treatments for early COVID-19 among outpatients at a high risk for severe complications.",
+            "url": "https://www.researchgate.net/publication/356000848_A_multi-center_adaptive_randomized_platform_trial_to_evaluate_the_effect_of_repurposed_medicines_in_outpatients_with_early_coronavirus_disease_2019_COVID-19_and_high-risk_for_complications_the_TOGETHE"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-candidate",
+  "timestamp": "2026-11-06T06:59:02.847736+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15532.171
+}

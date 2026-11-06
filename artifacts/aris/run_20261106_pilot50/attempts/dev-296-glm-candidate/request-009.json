@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The family or Justine Damond received a $55 million settlement after she was gunned down by a Minneapolis police officer.",
+        "query": "Did the family of Justine Damond reach a settlement with the city of Minneapolis, and in what month and year?",
+        "candidates": [
+          {
+            "title": "Killing of Justine Damond - Wikipedia",
+            "snippet": "Damond's family brought a civil lawsuit against the City of Minneapolis … the city settled for US$20 million in 2019. March 2021 settlement of $27 million",
+            "url": "https://en.wikipedia.org/wiki/Killing_of_Justine_Damond"
+          },
+          {
+            "title": "The settlement would be the highest ever paid by the city of ...",
+            "snippet": "The city of Minneapolis will pay the family of Justine Ruszczyk Damond a record $20 million to settle a lawsuit over her July 15, 2017 ...",
+            "url": "https://www.facebook.com/washingtonpost/posts/the-settlement-would-be-the-highest-ever-paid-by-the-city-of-minneapolis-eclipsi/10160825317832293/"
+          },
+          {
+            "title": "Minneapolis reaches $20M settlement over Ruszczyk killing",
+            "snippet": "Minneapolis Mayor Jacob Frey announces at a press conference Friday, May 3, that the city reached a $20 million agreement with the family of ...",
+            "url": "https://www.mprnews.org/story/2019/05/03/police-trial-shooting-justine-damond-ruszczyk-australia-family-settle"
+          },
+          {
+            "title": "Justine Damond's family awarded record $US20m settlement ...",
+            "snippet": "Justine Damond's family awarded record $US20m settlement from Minneapolis. Justine Ruszczyk Damond will receive a record $US20m ($A29 million) ...",
+            "url": "https://www.theguardian.com/us-news/2019/may/04/justine-damonds-family-awarded-record-us20m-settlement-from-minneapolis"
+          },
+          {
+            "title": "Minneapolis Reaches $20M Settlement With Justine Ruszczyk ...",
+            "snippet": "Minneapolis Mayor Jacob Frey announced Friday afternoon that the city had reached a settlement with the family of Justine Ruszczyk Damond ...",
+            "url": "https://www.youtube.com/watch?v=gA1uNwJ4kfI"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-296-glm-candidate",
+  "timestamp": "2026-11-06T02:06:17.201899+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 10242.515
+}

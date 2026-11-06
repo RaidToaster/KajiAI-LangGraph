@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A Maryland man was sentenced to a year in jail for throwing parties.",
+        "query": "A Maryland man was sentenced to a year in jail for throwing parties. evidence",
+        "candidates": [
+          {
+            "title": "A Maryland man was sentenced to a year in jail ...",
+            "snippet": "Did anyone read the article or just the headline? I'll sum it up. He had a 50+ people party and that violated the states ban.",
+            "url": "https://www.facebook.com/KMOVStLouis/posts/a-maryland-man-was-sentenced-to-a-year-in-jail-for-throwing-parties-at-his-home-/10164295137255603/"
+          },
+          {
+            "title": "Maryland Man Gets Year in Jail for Hosting Parties ...",
+            "snippet": "Shawn Marshall Myers, 42, of Hughesville was arrested in March when officers found more than 50 people hanging out around a bonfire at his home.",
+            "url": "https://www.nbcwashington.com/news/local/maryland-man-gets-year-in-jail-for-hosting-parties-violating-covid-19-crowd-restrictions/2428432/"
+          },
+          {
+            "title": "Maryland man sentenced to year in jail for holding large ...",
+            "snippet": "Shawn Marshall Myers, 42, threw a large party at a home in Hughesville, Maryland in March, according to a press release from the Charles County ...",
+            "url": "https://www.cbsnews.com/news/coronavirus-maryland-parties-shawn-myers-sentenced-one-year/"
+          },
+          {
+            "title": "Maryland man sentenced to year in jail after hosting ...",
+            "snippet": "Shawn Marshall Myers, 42, on Friday was convicted on two counts of failure to comply with an emergency order, the Charles County State's ...",
+            "url": "https://www.foxnews.com/us/maryland-man-jail-sentence-coronavirus-parties"
+          },
+          {
+            "title": "Man gets 1 year in jail for holding large parties against ...",
+            "snippet": "Shawn Myers, 42, was arrested in Charles County, Md., for holding large parties against COVID-19 rules. Charles County Sheriff's Office. \"Officers tried to ...",
+            "url": "https://abcnews.com/US/man-year-jail-holding-large-parties-covid-19/story?id=73259644"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-257-deepseek-baseline",
+  "timestamp": "2026-11-06T04:36:37.713283+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6987.031
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "What did the UK government's official guidance and Treasury announcements state about the Job Support Scheme and Universal Credit for employees unable to work in tier 3 areas?",
+        "candidates": [
+          {
+            "title": "Universal Credit",
+            "snippet": "Universal Credit is replacing 6 other benefits with a single monthly payment if you're out of work or on a low income - eligibility, how to prepare.",
+            "url": "https://www.gov.uk/universal-credit"
+          },
+          {
+            "title": "Plans to help benefits recipients into work 'a mess', say DWP officials",
+            "snippet": "Plans to help those affected by benefits cuts into work are not \"properly considered\", officials tell the BBC.",
+            "url": "https://www.bbc.com/news/articles/c9w1p44vzleo"
+          },
+          {
+            "title": "Scheme aims to cushion the financial blow of unemployment and provide ...",
+            "snippet": "The Job Entry Targeted Support scheme is providing six months of personalised support for people who have been unable to find work within the ...",
+            "url": "https://www.facebook.com/TheNationalNews/posts/scheme-aims-to-cushion-the-financial-blow-of-unemployment-and-provide-people-wit/541078074715288/"
+          },
+          {
+            "title": "Plan for Jobs and employment support - Work and Pensions Committee",
+            "snippet": "Those who are eligible will be able to receive up to 12 months of provision, with up to £4,000 available per person. Funding will be available ...",
+            "url": "https://publications.parliament.uk/pa/cm5803/cmselect/cmworpen/600/report.html"
+          },
+          {
+            "title": "Insights | UK Government Announces Job Support Scheme",
+            "snippet": "For six months from 1 November 2020, the government (and employers) will subsidise the pay of eligible employees who are working fewer hours ...",
+            "url": "https://www.dorsey.com/insights/uk-government-announces-job-support-scheme"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-candidate",
+  "timestamp": "2026-11-06T08:33:32.981890+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21202.281
+}

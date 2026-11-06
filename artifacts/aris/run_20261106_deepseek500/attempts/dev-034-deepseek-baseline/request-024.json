@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States, New Zealand, U.K., Australia, and the EU have not included the NDF in their official list of terrorist groups.",
+        "query": "The United States, New Zealand, U.K., Australia, and the EU have not included the NDF in their official list of terrorist groups. original source fact check",
+        "candidates": [
+          {
+            "title": "Malaya wrongly claims NDF listed as terrorist group by PH, other countries",
+            "snippet": "Second, the United States (U,S), New Zealand, U.K., Australia, and the EU have also not included the NDF in their official list of terrorist ...",
+            "url": "https://verafiles.org/articles/vera-files-fact-check-dilg-usec-malaya-wrongly-claims-ndf-li"
+          },
+          {
+            "title": "Country Reports on Terrorism 2022",
+            "snippet": "EU and the United States share a common definition of terrorism and have established a common list of terrorist groups. Most recently, the United States ...",
+            "url": "https://www.state.gov/wp-content/uploads/2023/11/Country_Reports_on_Terrorism_2022-v3.pdf"
+          },
+          {
+            "title": "Muslim Brotherhood",
+            "snippet": "Prime Minister, Hazem Al Beblawi on 21 December 2013, declared the Muslim Brotherhood as a terrorist organisation after a car bomb ripped through a police ...",
+            "url": "https://en.wikipedia.org/wiki/Muslim_Brotherhood"
+          },
+          {
+            "title": "WATCH | Alma Gabin, a former NPA rebel, appeals to other ...",
+            "snippet": "The NDF has been formally designated as a terrorist organization by the Anti-Terrorism Council on June 23, 2021, citing it as “an integral and ...",
+            "url": "https://www.facebook.com/ntfelcac/posts/watch-alma-gabin-a-former-npa-rebel-appeals-to-other-former-rebels-to-work-with-/282125697352883/"
+          },
+          {
+            "title": "Engaging Non-State Armed Groups",
+            "snippet": "It is relevant to emphasize the UN General Assembly statement that the motive or espoused cause of the terrorist behaviour never justifies terrorism. There will ...",
+            "url": "https://unidir.org/wp-content/uploads/2023/09/engaging-non-state-armed-groups-en-326.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-034-deepseek-baseline",
+  "timestamp": "2026-11-06T07:21:35.096948+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16884.421
+}

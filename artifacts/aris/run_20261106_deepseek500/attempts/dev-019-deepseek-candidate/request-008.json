@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "What visual and contextual details in the video identify the location as the French embassy in Sudan?",
+        "candidates": [
+          {
+            "title": "Sudan fighting continues: France closes embassy until further notice",
+            "snippet": "The evacuation of foreign nations out of Sudan is picking up pace this Monday - as fierce fighting stretches into its second week.",
+            "url": "https://www.youtube.com/watch?v=Cfya7zQI_5Y"
+          },
+          {
+            "title": "US, UK and France evacuate embassy personnel amid ongoing fighting in ...",
+            "snippet": "Foreign countries on Sunday rushed to evacuate their nationals from battle-torn Sudan where deadly fighting raged into a second week between ...",
+            "url": "https://www.youtube.com/watch?v=92XRICtP6Jc"
+          },
+          {
+            "title": "Western evacuations leave Sudanese passport holders in limbo",
+            "snippet": "",
+            "url": "https://www.facebook.com/cgtneuropeofficial/videos/western-evacuations-leave-sudanese-passport-holders-in-limbo/628604042450317/"
+          },
+          {
+            "title": "Sudan",
+            "snippet": "Sudan, officially the Republic of the Sudan, is a country in Northeast Africa. It borders the Central African Republic to the southwest, Chad to the west, ...",
+            "url": "https://en.wikipedia.org/wiki/Sudan"
+          },
+          {
+            "title": "France (FR) Representation in Sudan (SD) - Consular Protection",
+            "snippet": "Postal address. Embassy of France, Rue 13 Amarat Khartoum Sudan. Consular Protection. This site is managed by: Directorate-General for Justice and Consumers.",
+            "url": "https://consular-protection.ec.europa.eu/representation-offices/france-fr-representation-sudan-sd_en"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-candidate",
+  "timestamp": "2026-11-06T06:38:28.787561+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14298.109
+}

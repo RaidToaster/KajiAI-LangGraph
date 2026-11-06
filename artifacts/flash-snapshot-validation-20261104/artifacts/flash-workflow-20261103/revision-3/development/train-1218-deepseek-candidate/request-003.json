@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "US Senator Bernie Sanders was opposed to Obamacare. evidence",
+        "candidates": [
+          {
+            "title": "PolitiFact: Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "Is Biden right? If viewers were left with the impression that Sanders voted against Obamacare, they were misled. Sanders voted for the law. But ...",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "Why Bernie Sanders Is Wrong on Health Care (and Hillary Clinton Is ...",
+            "snippet": "In the legislative development of the ACA, single-payer was effectively blocked by conservative Democrats led by then Senate Finance Committee chairman Max ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4940671/"
+          },
+          {
+            "title": "Bernie Sanders exaggerates with claim that he helped write ...",
+            "snippet": "Democratic presidential candidates Hillary Clinton and Bernie Sanders sparred over health care policy during a debate in Charleston, S.C., ...",
+            "url": "https://politifact.com/factchecks/2016/jan/18/bernie-sanders/fact-checking-bernie-sanders-claim-he-helped-write/"
+          },
+          {
+            "title": "Democrats Rally In Dozens Of Cities To Oppose Obamacare Repeal",
+            "snippet": "Just days after Congressional Republicans took the first major step toward repealing the Affordable Care Act, Sen. Bernie Sanders headlined ...",
+            "url": "https://www.npr.org/2017/01/15/509960559/democrats-rally-in-dozens-of-cities-to-oppose-obamacare-repeal"
+          },
+          {
+            "title": "Issues - Senator Bernie Sanders",
+            "snippet": "Senator Sanders is fighting to lower costs for consumers by bringing greater transparency and competition to the health care system. In 2014, he and the late ...",
+            "url": "https://www.sanders.senate.gov/issues/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:36:14.736405+00:00",
+  "status": "reserved_outcome_unknown"
+}

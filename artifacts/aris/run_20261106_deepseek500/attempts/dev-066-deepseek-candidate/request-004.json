@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "Did Hunter Biden ever hold the title of chairman at the World Food Program, and if so, during what dates?",
+        "candidates": [
+          {
+            "title": "Vice President Joe Biden and World Food Program USA Honor Former ...",
+            "snippet": "Biden's son, Hunter Biden – who serves as Board Chair of WFP USA – introduced his father. said Hunter Biden.",
+            "url": "https://wfpusa.org/news/vice-president-joe-biden-and-world-food-program-usa-honor-former-senator-bob-dole-for-his-leadership-in-the-fight-against-hunger/"
+          },
+          {
+            "title": "Hunter Biden",
+            "snippet": "From 2011 to 2017, Biden was on the board of directors of World Food Program USA, he served as board chairman from 2011 to 2015.",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden"
+          },
+          {
+            "title": "Hunter Biden | Chairman of the Board | World Food Program USA",
+            "snippet": "Hunter Biden serves as chairman of the board for World Food Program USA, a nonprofit based in Washington, D.C., which works to solve global hunger in ...",
+            "url": "https://www.devex.com/people/hunter-biden-985169"
+          },
+          {
+            "title": "Through Decades Of Addiction, Hunter Biden Says His Family Never ...",
+            "snippet": "Hunter Biden, at the time serving as board chairman of World Food Program USA, with then-Vice President Joe Biden in 2016.",
+            "url": "https://www.capradio.org/news/npr/story?storyid=983385027"
+          },
+          {
+            "title": "Hunter Biden's commitment to global food security",
+            "snippet": "\"Circa 2011, Hunter Biden entered one of the quieter but historically documented chapters of his professional life when he became chairman of ...",
+            "url": "https://www.facebook.com/StoriesofLegends/posts/on-april-12-2016-inside-the-gilded-ceremonial-halls-of-the-organization-of-ameri/935100072758160/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-candidate",
+  "timestamp": "2026-11-06T08:51:50.191302+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22299.5
+}

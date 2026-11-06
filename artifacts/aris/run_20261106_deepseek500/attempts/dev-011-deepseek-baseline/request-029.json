@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The U.S. surgeon general and the Centers for Disease Control both previously said that ‘masks are not effective in preventing [the] general public from catching coronavirus.’",
+        "query": "The U.S. surgeon general original source fact check",
+        "candidates": [
+          {
+            "title": "FactChecking Claims in Casey Means' Surgeon General ...",
+            "snippet": "Early in the hearing, Cassidy asked Means whether she believed that “vaccines, whether individually or collectively, contribute to autism.” ... Missing:  source  | Show results with:",
+            "url": "https://www.factcheck.org/2026/03/factchecking-claims-in-casey-means-surgeon-general-confirmation-hearing/"
+          },
+          {
+            "title": "[PDF] Confronting Health Misinformation - HHS.gov",
+            "snippet": "A Surgeon General's Advisory is a public statement that calls the American people's attention to a public health issue and provides ...",
+            "url": "https://www.hhs.gov/sites/default/files/surgeon-general-misinformation-advisory.pdf"
+          },
+          {
+            "title": "Anniversary of the Surgeon General's First Report on Smoking ...",
+            "snippet": "1964 - Surgeon General Luther L. Terry issued \"Smoking and Health\", the first Surgeon General's report to receive widespread media and public ... Missing:  original  | Show results with:",
+            "url": "https://www.govinfo.gov/features/anniversary-report-smoking-health"
+          },
+          {
+            "title": "How come there's no Surgeon General? Take a wild guess",
+            "snippet": "The nominee is Vivek Murthy, who was tapped by Obama to become “America's doctor” 11 months ago. ... Nearly 70,000 people (at last check) have ... Missing:  original  | Show results with:",
+            "url": "https://whyy.org/articles/how-come-theres-no-surgeon-general-take-a-wild-guess/"
+          },
+          {
+            "title": "Surgeon General's 1964 report: making smoking history",
+            "snippet": "On a Saturday morning 50 years ago tomorrow, then Surgeon General Luther Terry made a bold announcement to a roomful of reporters: cigarette ...",
+            "url": "https://www.health.harvard.edu/blog/surgeon-generals-1964-report-making-smoking-history-201401106970"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-011-deepseek-baseline",
+  "timestamp": "2026-11-06T06:07:17.169582+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12426.484
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wildfires do not Affect Mexico And Canada",
+        "query": "Wildfires do not Affect Mexico And Canada evidence",
+        "candidates": [
+          {
+            "title": "FACT SHEET: Climate change and wildfires in Canada",
+            "snippet": "Accelerating climate change, largely from the burning of fossil fuels, makes wildfires bigger, hotter, and more destructive (Climate Atlas of Canada n.d.).",
+            "url": "https://climateinstitute.ca/news/fact-sheet-wildfires/"
+          },
+          {
+            "title": "Wildfire smoke knows no borders: Differential vulnerability to ...",
+            "snippet": "by L Schwarz · 2023 · Cited by 12 — While the San Diego-Tijuana border can be exposed to the same wildfire smoke event, socio-demographic differences may drive differential effects on population ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10287006/"
+          },
+          {
+            "title": "Wildfires and Climate Change",
+            "snippet": "Parts of the Western United States, Mexico, Brazil, and East Africa now have fire seasons that are more than a month longer than they were 35 years ago.",
+            "url": "https://science.nasa.gov/earth/explore/wildfires-and-climate-change/"
+          },
+          {
+            "title": "What's Really Going On With Canada's Wildfires: Data vs. Viral ...",
+            "snippet": "Canada's viral wildfire footage isn't evidence that climate change is spiraling out of control. these fires occur with no road access.",
+            "url": "https://www.facebook.com/readthefreepress/videos/globally-wildfire-rates-have-declined-by-24-over-the-past-two-decades-and-canada/2177118046198051/"
+          },
+          {
+            "title": "Why do the Canadian wildfires seem to effect the United ...",
+            "snippet": "I live in NE Ohio and I feel like we get smoke from the fires at least once a year now. I don't remember this when I was a kid. I've heard Global Warming ...",
+            "url": "https://www.reddit.com/r/NoStupidQuestions/comments/1uy3t76/why_do_the_canadian_wildfires_seem_to_effect_the/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-348-deepseek-baseline",
+  "timestamp": "2026-11-06T03:52:50.600291+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4359.906
+}

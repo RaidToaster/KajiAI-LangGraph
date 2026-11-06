@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UNESCO declared Nadar community as the most ancient race in the world.",
+        "query": "Has UNESCO issued any official declaration, press release, publication, or resolution concerning the Nadar community?",
+        "candidates": [
+          {
+            "title": "Text of the Convention for the Safeguarding ...",
+            "snippet": "Noting the far-reaching impact of the activities of UNESCO in establishing normative instruments for the protection of the cultural heritage, in particular the ...",
+            "url": "https://ich.unesco.org/en/convention"
+          },
+          {
+            "title": "Convention Concerning the Protection of the World ...",
+            "snippet": "The General Conference of UNESCO adopted on 16 November 1972 the Recommendation concerning the Protection at National Level, of the Cultural and Natural ...",
+            "url": "https://whc.unesco.org/en/conventiontext/"
+          },
+          {
+            "title": "An Analysis of the Operational Guidelines, 1994–2019",
+            "snippet": "by H Jang · 2021 · Cited by 53 — UNESCO's world heritage program aims to protect sites of cultural and natural heritage worldwide. Issues of local communities and well-being ...",
+            "url": "https://www.mdpi.com/2071-1050/13/13/7144"
+          },
+          {
+            "title": "navigating change in UNESCO designated sites\" offers ...",
+            "snippet": "UNESCO has published the landmark work Indigenous Knowledge, testimonies from Indigenous communities",
+            "url": "https://www.facebook.com/unesco/posts/-just-publishedunescos-new-publication-indigenous-knowledge-ancestral-places-nav/1182900943885452/"
+          },
+          {
+            "title": "UNESCO's World Heritage Program: The Challenges and ...",
+            "snippet": "UNESCO adds “community” to the Budapest Declaration's list of “c's”. 2008. World ... concerning world heritage and tourism have not been resolved. While ...",
+            "url": "https://books.openedition.org/gup/213?lang=en"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-003-glm-candidate",
+  "timestamp": "2026-11-05T23:41:16.686517+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1542.0
+}

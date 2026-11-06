@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Photo of three officers at the Indian Police Service who belong to the same family.",
+        "query": "Photo of three officers at the Indian Police Service who belong to the same family. counterevidence",
+        "candidates": [
+          {
+            "title": "Pic Shows Three IPS Officers From Same Family? It's a False ...",
+            "snippet": "It's a False Claim One of the police officers seen in the viral image, Shrut Kirti Somavanshi, said that the claim is “not true.”",
+            "url": "https://www.thequint.com/news/webqoof/image-shows-three-ips-officers-belonging-to-same-family-no-false-claim"
+          },
+          {
+            "title": "No, The Three IPS Officers In This Photo Are Not Siblings | BOOM",
+            "snippet": "Claim : Image shows two brothers and one sister who are IPS officers from the same family. Claimed By : Facebook Post. Fact Check : False.",
+            "url": "https://www.boomlive.in/fast-check/three-ips-officers-siblings-same-family-fake-news-fact-check-17217"
+          },
+          {
+            "title": "For years, Indian police officers were mostly seen as men. But a ...",
+            "snippet": "Meet the inspirational IPS officers of India, who donned the uniform and stood tall against crime, corruption, and social bias.",
+            "url": "https://www.instagram.com/p/C8EQ8jPhr1I/"
+          },
+          {
+            "title": "Three Police Officers. Three Families. Three Stories ... - YouTube",
+            "snippet": "Hear how three police officers have made their ... Predator Deputy Arrested After Detectives Find His Photo On An Underage Girl's Snapchat.",
+            "url": "https://www.youtube.com/watch?v=lOheHKL1FQ4"
+          },
+          {
+            "title": "No, these three IPS officers are not siblings, they are batch mates",
+            "snippet": "The three people in the image are identified as Pooja Vashisth, Tushar Gupta and Shruta Kirti Somavanshi. All these three are IPS officers.",
+            "url": "https://factly.in/no-these-three-ips-officers-are-not-siblings-they-are-batch-mates/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-396-deepseek-baseline",
+  "timestamp": "2026-11-06T04:13:36.796149+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5606.109
+}

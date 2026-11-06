@@ -1,0 +1,40 @@
+{
+  "native_diagnostic_justified": true,
+  "assessment_mode": "passage_decision",
+  "assessment_reasoning": {
+    "glm": "high",
+    "deepseek": false
+  },
+  "caps_by_kind": {
+    "anchor": {
+      "ollama": 1,
+      "jev": 3
+    }
+  },
+  "planned_max_sends": {
+    "ollama": 2,
+    "jev": 6,
+    "search": 0,
+    "fetch": 0
+  },
+  "requested_output_token_cap_total": 12288,
+  "aggregate_job_seconds_cap": 600,
+  "reused_deepseek_plan": {
+    "result": "artifacts/strict-literal-native-20261105/deepseek-plan/result.json",
+    "audit": "artifacts/strict-literal-native-20261105/deepseek-plan-audit.json"
+  },
+  "prior_accounting": "artifacts/path-feedback-native-20261105/prior-accounting.json",
+  "additional_helpers": [
+    "evaluation/run_path_feedback_native.ps1",
+    "evaluation/prepare_path_feedback_native.py",
+    "artifacts/path-feedback-native-20261105/prior-accounting.json",
+    "src/kaji_langgraph/config/default.yaml",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "review_report": "artifacts/path-feedback-native-20261105/REVIEW.md",
+  "criterion": "FullnativefidelityofC0/classes/stance/sourceunits/origin/action/dates/allissuesandactualindependence; allmaterialissuesblock. Literalrecordselfreport/Jevscores notworldtruth or efficacy. Faithfulhonestabstentionentryonlyafterbothmodels; immediately original8case/modeldevelopment19new+13matchingbaselines andunchangedguards. Firstfailureclosesphase, norepair/retry/pruning; requiredexact+Jev>=.80/provenance/wholeclaimauditforanyacceptance. Final2000onlyinadifferentchat.",
+  "postreview_delta": null,
+  "mechanism": "Separate Jev evidence-path review on the same retained record view BEFORE adjudication, followed by unchanged citation/provenance acceptance checks. Review is labeled fallible feedback, not evidence or client judgment override.",
+  "predecision_source_path_review": true
+}

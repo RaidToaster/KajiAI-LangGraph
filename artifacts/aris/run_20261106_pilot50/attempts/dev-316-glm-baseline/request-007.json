@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Canada would like to reopen the border with the U.S",
+        "query": "Canada would like to reopen the border with the U.S counterevidence",
+        "candidates": [
+          {
+            "title": "US to reopen Mexico Canada land borders for fully ...",
+            "snippet": "The US has said it will reopen its land borders with Mexico and Canada to fully vaccinated travellers from November. It means those sealed out ...",
+            "url": "https://www.bbc.com/news/world-us-canada-58893052"
+          },
+          {
+            "title": "U.S. representatives want plan to reopen Canada-U.S. border",
+            "snippet": "More than two dozen U.S. congresspeople are calling on the U.S. and Canada to craft a plan for a phased reopening of the Canada-U.S. border.",
+            "url": "https://www.youtube.com/watch?v=2uzZbyYPozA"
+          },
+          {
+            "title": "Task Force To Look At How To Reopen The Canada-U.S. ...",
+            "snippet": "The border is now shut down for an indefinite period of time, and there is no clear timeline to reopen.",
+            "url": "https://www.forbes.com/sites/stephaniefillion/2020/11/24/task-force-to-look-at-how-to-reopen-the-canada-us-border/"
+          },
+          {
+            "title": "U.S.-Canadian border reopening offers hope to local ...",
+            "snippet": "Regulations require visitors to show proof of vaccination and a negative COVID-19 test taken within 72 hours of the trip, according to the North Country Chamber ...",
+            "url": "https://csg-erc.org/u-s-canadian-border-reopening-offers-hope-to-local-communities/"
+          },
+          {
+            "title": "Canada-U.S. border has been shut down for a year",
+            "snippet": "Canada-U.S. border has been shut down for a year — and there's no reopening plan. There is no plan. There are still too few vaccinated people; ...",
+            "url": "https://www.cbc.ca/news/world/canada-border-restriction-reopening-1.5948695"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-316-glm-baseline",
+  "timestamp": "2026-11-05T23:43:09.627145+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1654.937
+}

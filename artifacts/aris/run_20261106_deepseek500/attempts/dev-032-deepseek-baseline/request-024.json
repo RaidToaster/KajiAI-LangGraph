@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The New York post Endorsed Donald trumps bid for re-election.",
+        "query": "New York Post December 27 2020 editorial Give it up Mr. President",
+        "candidates": [
+          {
+            "title": "The Post says: Give it up, Mr. President — for your sake and the nation's",
+            "snippet": "We understand, Mr. President, that you're angry that you lost. But to continue down this road is ruinous.",
+            "url": "https://nypost.com/2020/12/27/give-it-up-mr-president-for-your-sake-and-the-nations/"
+          },
+          {
+            "title": "New York Post Editorial Blasts Trump's Fraud Claims",
+            "snippet": "“Give it up, Mr. President — for your sake and the nation's.” In doch's New York Post, told the president to end his attempts to overturn the ...",
+            "url": "https://www.nytimes.com/2020/12/28/business/media/new-york-post-trump-editorial.html"
+          },
+          {
+            "title": "New York Post Tells Trump to 'Give It Up' Over Election Claim",
+            "snippet": "The paper, which endorsed Trump for president, tells Trump to “Give it up,” adding “for your sake and the nation's.” Trump is a regular reader ...",
+            "url": "https://www.bloomberg.com/news/articles/2020-12-28/new-york-post-tells-trump-to-give-it-up-over-election-claim"
+          },
+          {
+            "title": "New York Post to Donald Trump: Stop the insanity",
+            "snippet": "President Donald Trump's favorite newspaper has turned against him.",
+            "url": "https://www.cnn.com/2020/12/28/media/new-york-post-donald-trump-editorial"
+          },
+          {
+            "title": "Trump-Supporting New York Post Editorial Tells the President: You Lost",
+            "snippet": "New York Post editorial board tells Trump it's time to end the 'undemocratic coup' and secure his legacy by helping Republicans maintain control ...",
+            "url": "https://www.businessinsider.com/new-york-post-editorial-board-tells-trump-to-accept-loss-2020-12"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-032-deepseek-baseline",
+  "timestamp": "2026-11-06T07:16:48.125769+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16597.437
+}

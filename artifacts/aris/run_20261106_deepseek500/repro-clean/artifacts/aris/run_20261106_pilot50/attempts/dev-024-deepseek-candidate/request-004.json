@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Germany’s Foreign Minister Heiko Maas said that Thailand’s King Maha Vajiralongkorn didn’t do anything illegal while at his German residence.",
+        "query": "Did Heiko Maas make a statement that Thailand's King Maha Vajiralongkorn did not do anything illegal while at his German residence, and what was the exact wording and date?",
+        "candidates": [
+          {
+            "title": "The Legality of the King of Thailand´s Long Term Vacation ...",
+            "snippet": "German Foreign Minister Heiko Maas declared before the Parliament that “politics concerning Thailand should not be conducted from German soil”.",
+            "url": "https://www.publicinternationallawandpolicygroup.org/lawyering-justice-blog/2021/2/8/w-to-handle-complicated-guests-the-legality-of-the-king-of-thailands-long-term-vacation-in-germany"
+          },
+          {
+            "title": "The Thai king has spent the majority of his time over ...",
+            "snippet": "Andrew MacGregor Marshall: “Heiko Maas says that the German government will not allow Vajiralongkorn to make political decisions from Bavaria.",
+            "url": "https://www.facebook.com/scmp/posts/the-thai-king-has-spent-the-majority-of-his-time-over-the-past-several-years-liv/10158911580484820/"
+          },
+          {
+            "title": "Germany does not believe Thai king breached state ...",
+            "snippet": "Thai protesters have accused King Maha Vajiralongkorn of conducting state business, including signing royal decrees, while he. Heiko Maas says ...",
+            "url": "https://www.aljazeera.com/news/2020/10/29/germany-does-not-believe-thai-king-breached-state-business-ban"
+          },
+          {
+            "title": "Vajiralongkorn",
+            "snippet": "German foreign minister Heiko Maas warned Vajiralongkorn not to govern from German soil. ... \"Thailand's king should not reign from German soil, Berlin says\".",
+            "url": "https://en.wikipedia.org/wiki/Vajiralongkorn"
+          },
+          {
+            "title": "Thai king under scrutiny in Germany",
+            "snippet": "Heiko Maas publicly warned the king that \"politics concerning Thailand is not to be done from German soil.\"",
+            "url": "https://www.dw.com/en/thai-king-maha-vajiralongkorn-under-political-and-tax-scrutiny-in-germany/a-60770986"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-024-deepseek-candidate",
+  "timestamp": "2026-11-05T18:10:34.647192+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52654.234
+}

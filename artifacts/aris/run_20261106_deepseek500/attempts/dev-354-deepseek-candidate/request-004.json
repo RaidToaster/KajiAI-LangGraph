@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "unemployment rate in the state of Edo, Nigeria reduced from 25% to 19% during Godwin Obaseki's tenure.",
+        "query": "What are the official unemployment rate figures for Edo State, Nigeria, and which agency or survey produced them?",
+        "candidates": [
+          {
+            "title": "NBS UNEMPLOYMENT COMMITEE REVIEW REPORT",
+            "snippet": "The Labour Force Survey (LFS) is the only official source of labour force statistics such as national and state unemployment rates in Nigeria as used by NBS",
+            "url": "https://www.nigerianstat.gov.ng/pdfuploads/NBS%20UNEMPLOYMENT%20COMMITEE%20REVIEW%20REPORT.pdf"
+          },
+          {
+            "title": "The oil-producing States also happen to have the highest ...",
+            "snippet": "Again the States with the highest unemployment rates in Nigeria are: Akwa Ibom: 37.7% Rivers: 36.4% Bayelsa: 32.6% [They also happen to be oil- ...",
+            "url": "https://www.facebook.com/ayekooto.akindele/posts/the-oil-producing-states-also-happen-to-have-the-highest-unemployment-rates-in-n/724467624642386/"
+          },
+          {
+            "title": "3.2.2. Unemployment | European Union Agency for Asylum",
+            "snippet": "Unemployment. In April 2023, the government changed the unemployment rate calculation methodology to follow ILO guidelines.",
+            "url": "https://www.euaa.europa.eu/nigeria-country-focus/322-unemployment"
+          },
+          {
+            "title": "Nigeria's revamp of economic indicators sparks debate",
+            "snippet": "Using the new method, the Nigerian statistics office gives the country's unemployment rate as 4.3% and “time-related underemployment” as 9.2%.",
+            "url": "https://african.business/2025/02/trade-investment/nigerias-revamp-of-economic-indicators-sparks-debate"
+          },
+          {
+            "title": "The unemployment rate in most countries has risen in 2021 ...",
+            "snippet": "Nigeria needs to create 3.5 million jobs yearly for the next 5 years to maintain the current 40% total unemployment rate ( unemployed and ...",
+            "url": "https://www.facebook.com/DevBankNG/posts/the-unemployment-rate-in-most-countries-has-risen-in-2021-record-levels-of-unemp/1726515110888853/?locale=sw_KE"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-354-deepseek-candidate",
+  "timestamp": "2026-11-06T05:06:38.384650+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8787.703
+}

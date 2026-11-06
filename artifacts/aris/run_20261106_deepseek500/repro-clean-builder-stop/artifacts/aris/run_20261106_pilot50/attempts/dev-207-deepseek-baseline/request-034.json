@@ -1,0 +1,96 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Africa Check's fact-check directly labels the statement that Nigeria had a population of 45 million at independence as correct.",
+            "url": "https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day",
+            "quote": "At independence, Nigeria had a population of 45 million Verdict Correct Nigeria's population figures have historically been controversial, with ...",
+            "context": "At independence, Nigeria had a population of 45 million Verdict Correct Nigeria's population figures have historically been controversial, with ..."
+          },
+          {
+            "finding": "A 2020 Global Citizen article states that at independence Nigeria had over 45 million people, consistent with a rounded figure of about 45 million.",
+            "url": "https://www.globalcitizen.org/en/content/facts-to-know-about-nigeria-independence/",
+            "quote": "The country then had a population of over 45 million people.",
+            "context": " on Earth and the seventh most populous country in the world.\n\nThere is so much to learn about Nigeria, its people, and its cultures. With so much history and cultural richness, there are many lessons to be learned from Nigeria’s impact on the African continent and the world at large. Global Citizen celebrates the resilience and ingenuity of the Nigerian people on this historic and important day.\n\nHere are 11 historical facts you should know about the country often referred to as the “Giant of Africa”:\n\n#### **1. Nigeria was formed in 1914.**\n\nThe land area known today as Nigeria was formed in 1914 when colonial authorities merged the Northern and Southern Protectorates of Nigeria, to form the amalgamated Protectorate and Colony of Nigeria.\n\nThis merger brought together over 400 ethnic groups and tribes into what was then the largest British colony in the world. The name “Nigeria” is also derived from colonial sources.\n\n#### **2. Nigeria gained independence from colonial rule in 1960.**\n\nNigeria gained independence from the British empire in 1960, initially adopting a British style of government with Abubakar Tafawa Balewa as the first Nigerian head of government (prime minister). The country then had a population of over 45 million people.\n\n#### **3. Nigeria has been ruled by military leaders for a combined 29 years.**\n\nOn Jan. 15 1966, a group of young, idealistic, UK-trained army majors overthrew Nigeria's democratic government in a violent military coup — the country’s first.\n\nA succession of increasingly repressive military governments ruled Nigeria for 29 of the next 33 years, until the restoration of democracy in 1999.\n\nSome of the blowback effects of this coup include:\n\n* the secessionist Biafra movement;\n* it propelled a group of young military officers onto the national stage and they still wield enormous influence in Nigerian politics;\n* corruption — the military decreed that all natural resources be controlled by the state, which has entrenched the do-or-die nature of Nigerian politics;\n* the army's politicised past means that Nigerians live with the (real or imagined) fear that a coup is a possible outcome of any political crisis.\n\n#### **4. The Nigerian civil war started in 1967.**\n\nIn 1967, following two coups and turmoil that led to about a million Igbos (one of Nigeria’s most-populous ethnic groups primarily from the Eastern region of the country) returning to the south-east of Nigeria, the Republic "
+          },
+          {
+            "finding": "A Punch newspaper Facebook post states that at independence in 1960 Nigeria had about 45 million people.",
+            "url": "https://www.facebook.com/punchnewspaper/posts/at-independence-in-1960-nigeria-had-about-45-million-people/3837300756308058/",
+            "quote": "At independence in 1960, Nigeria had about 45 million people.",
+            "context": "At independence in 1960, Nigeria had about 45 million people.\n\nAll reactions:\n\n16 comments\n\n35 shares\n\nLike\n\nComment\n\nMost relevant\n\n\n\nMorenike Mafoh\n\nSome of the population are not Nigerian but too late to distinguish them. Some are the one causong problems in the nation.\n\nAdeloye Fasona\n\nWhat about the fewer people's that stolen our resources, does countries that you talking about some of their citizens dont like to have babies, let's our government do the right things for their citizens.\n\nChibuike Ezeani\n\nHow can you determine the population of a country without census? The last was done in the last 14yrs and another one isn't insight at all.\n\nOsiegbu Godwin Tony Okoh\n\nFake news\n\nAbdulsalam Sikiru\n\nWe are just too many people, we need to find ways to control the geometrical population growth just like China and other developed countries\n\nAnthony Ihemere\n\nWhy is ours different? China's population is more than six times that of Nigeria, yet she is growing in leaps and bounds in every aspect of human endeavor. If I may ask, are they not of this same planet with us?\n\nOsato Praise\n\nOk\n\nSani Sodangi\n\nDon't relate poverty with population growth. China is a clear case study. Corruption and sadistic greed of our leadership, phsycopantic and blind "
+          },
+          {
+            "finding": "A Facebook post snippet gives historical estimates of roughly 45 million in 1960 and specifically says Nigeria had 45.1 million people in 1960.",
+            "url": "https://www.facebook.com/dubawa/posts/one-billion-people-in-nigeria-false-data-from-credible-sources-disagree-with-thi/1319616643666036/",
+            "quote": "Historical estimates for Nigeria's population, from roughly 45 million in 1960 to over 208. Nigeria had 45.1 million people in 1960.",
+            "context": "Historical estimates for Nigeria's population, from roughly 45 million in 1960 to over 208. Nigeria had 45.1 million people in 1960."
+          },
+          {
+            "finding": "Nigeria's National Population Commission records that the first post-independence countrywide census was in 1962, indicating the 1960 figure was an estimate rather than a census count.",
+            "url": "https://nationalpopulation.gov.ng/census-enumeration",
+            "quote": "The 1962 census was the second countrywide headcount in Nigeria and the first since independence in 1960.",
+            "context": "1962 Census. The 1962 census was the second countrywide headcount in Nigeria and the first since independence in 1960. · 1963 Census · 1973 Census · 1991 Census."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_4": {
+          "type": "choice",
+          "instructions": "Does `citations[4].context`, including the quote, support `citations[4].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-baseline",
+  "timestamp": "2026-11-06T00:09:09.934794+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3215.25
+}

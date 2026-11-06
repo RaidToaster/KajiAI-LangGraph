@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "Which court, attorney general, or regulator imposed any such ban, and on what date?",
+        "candidates": [
+          {
+            "title": "Attorney General James Urges Court to Punish Martin Shkreli ...",
+            "snippet": "the court banned Shkreli for life … the ban was issued on February 4, 2022, with no offset from losses on trades, plus interest;",
+            "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-urges-court-punish-martin-shkreli-brazenly-violating"
+          },
+          {
+            "title": "Review of State Bar Complaints and Allegations Against ...",
+            "snippet": "The Department of Justice (\"Department\") proposes to establish a process for reviewing bar complaints and allegations against its attorneys.",
+            "url": "https://www.federalregister.gov/documents/2026/03/05/2026-04390/review-of-state-bar-complaints-and-allegations-against-department-of-justice-attorneys"
+          },
+          {
+            "title": "- New Jersey Office of Attorney General",
+            "snippet": "Attorney General Jennifer Davenport and a multistate coalition secured an important victory in court that stops the federal government's imposition of ...",
+            "url": "https://www.njoag.gov/"
+          },
+          {
+            "title": "State of California - Department of Justice - Office of the ...",
+            "snippet": "The Attorney General's Office is committed to protecting the rights of all people. Recognizing that discrimination has no place in our society, the Attorney ...",
+            "url": "https://oag.ca.gov/"
+          },
+          {
+            "title": "OPEN MEETINGS ACT Handbook 2026",
+            "snippet": "This Open Meetings Act Handbook is intended to help public officials comply with the various provisions of the Texas Open Meetings Act and to familiarize the ...",
+            "url": "https://www.texasattorneygeneral.gov/sites/default/files/files/divisions/open-government/openmeetings_hb.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-candidate",
+  "timestamp": "2026-11-06T08:45:07.994442+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21897.312
+}

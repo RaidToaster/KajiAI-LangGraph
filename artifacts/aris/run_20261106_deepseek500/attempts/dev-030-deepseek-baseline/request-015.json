@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism.",
+        "query": "Paul Pogba, who plays for Manchester United evidence",
+        "candidates": [
+          {
+            "title": "Paul Pogba: Former Man United star breaks silence with bullish statement ...",
+            "snippet": "Former Manchester United midfielder Paul Pogba has spoken out regarding Manchester City's recent guilty verdict.",
+            "url": "https://sports.yahoo.com/articles/paul-pogba-former-man-united-070500648.html"
+          },
+          {
+            "title": "Paul Pogba",
+            "snippet": "Pogba began his professional career at Manchester United, playing several games in the 2011–12 season. However, limited appearances caused him to join Italian ...",
+            "url": "https://en.wikipedia.org/wiki/Paul_Pogba"
+          },
+          {
+            "title": "Paul Pogba during his time at Manchester United : r/soccer",
+            "snippet": "If we count by minutes, he played 756 mins total, which is actually less than 9 games worth of minutes.. So Utd paid 17m for 9 games of Ighalo, ...",
+            "url": "https://www.reddit.com/r/soccer/comments/u9pxau/paul_pogba_during_his_time_at_manchester_united/"
+          },
+          {
+            "title": "Pogback! | How the world reacted to Man Utd smashing transfer record on ...",
+            "snippet": "... Manchester United breaking the world transfer record to bring Paul Pogba back to Old Trafford from Juventus. #SkySportsRetro #SkySports ...",
+            "url": "https://www.youtube.com/watch?v=d593aGwWREQ"
+          },
+          {
+            "title": "Paul Pogba: I want to show Manchester United they made a mistake",
+            "snippet": "Paul Pogba has said he wants to show Manchester United they made a mistake by failing to extend his contract beyond this summer.",
+            "url": "https://www.nytimes.com/athletic/4175235/2022/06/15/paul-pogba-i-want-to-show-manchester-united-they-made-a-mistake/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-030-deepseek-baseline",
+  "timestamp": "2026-11-06T07:10:09.464774+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16198.781
+}

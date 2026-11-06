@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "You’re watching the cheaters evidence",
+        "candidates": [
+          {
+            "title": "What Cheaters Do When They're Confronted With ...",
+            "snippet": "This post offers advice on how to identify a cheating partner by observing their reaction rather than just their words. It presents a list of ...",
+            "url": "https://www.facebook.com/61551725894184/posts/what-cheaters-do-when-theyre-confronted-with-evidence-%EF%B8%8Frelationshiptruths-hidden/122231406524057529/"
+          },
+          {
+            "title": "Is it possible to prove that a partner is cheating without any ...",
+            "snippet": "Is it possible to prove that a partner is cheating without any evidence? If not, how can one handle suspicions of infidelity in a relationship?",
+            "url": "https://www.quora.com/Is-it-possible-to-prove-that-a-partner-is-cheating-without-any-evidence-If-not-how-can-one-handle-suspicions-of-infidelity-in-a-relationship"
+          },
+          {
+            "title": "Cheaters | Season 6 Episode 36 | FilmRise TV",
+            "snippet": "Maria demands the truth from her husband after he lied about being with his family. Olivia gives details on why she cheated on her husband ...",
+            "url": "https://www.youtube.com/watch?v=Z1YYyQ2fNgo"
+          },
+          {
+            "title": "How to Get The Truth From a Cheating Spouse 2026",
+            "snippet": "A common tactic identified was “trickle truthing”: admitting to a minor transgression like a kiss while hiding the full extent of the affair.",
+            "url": "https://medium.com/@thomas_knight/how-to-get-the-truth-from-a-cheating-spouse-411d68e4cc8d"
+          },
+          {
+            "title": "Would You Show the Evidence of Your Partner Cheating?",
+            "snippet": "Showing them proof doesn't get you honesty—it gets you more manipulation. Showing it to them doesn't bring clarity; it just gives them a chance ...",
+            "url": "https://www.reddit.com/r/Infidelity/comments/1jhh0px/would_you_show_the_evidence_of_your_partner/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-baseline",
+  "timestamp": "2026-11-06T05:48:20.870562+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11290.187
+}

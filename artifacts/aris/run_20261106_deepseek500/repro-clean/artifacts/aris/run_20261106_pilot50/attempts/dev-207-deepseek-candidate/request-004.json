@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "What population estimates for Nigeria around 1960 (independence year) are reported by primary sources such as censuses or official statistical records?",
+        "candidates": [
+          {
+            "title": "In 1962, Nigeria conducted a population census ...",
+            "snippet": "Conducted in May 1962, the initial count reported 45.26 million Nigerians. The Southern regions, which included the Eastern and Western areas, ...",
+            "url": "https://www.facebook.com/HistoricalnigeriaYoruba/posts/in-1962-nigeria-conducted-a-population-census-that-appeared-to-challenge-the-nor/122311307138076276/"
+          },
+          {
+            "title": "Fact-checking Buhari's independence day speech",
+            "snippet": "Nigeria's population was 45.1 million in 1960. That estimate was specifically for 1 July 1960, three months before independence day, The report ...",
+            "url": "https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day"
+          },
+          {
+            "title": "POPULATION PROBLEMS AND POLITICAL STABILITY",
+            "snippet": "The incomplete results of the Nigerian 1963 census were adjusted through the use of indirect demographic techniques using the survey estimates.",
+            "url": "https://www.cia.gov/readingroom/document/cia-rdp88t00768r000300400001-9"
+          },
+          {
+            "title": "Nigeria's Missing 50 Million People",
+            "snippet": "Nigeria's official population (~220-230 million) may be significantly inflated and could be closer to 170-180 million[1] -independence census ...",
+            "url": "https://forum.effectivealtruism.org/posts/824rsHCXuqTmBb8se/nigeria-s-missing-50-million-people"
+          },
+          {
+            "title": "(PDF) Population Census Administration in Nigeria",
+            "snippet": "Since independence in 1960, Notably, the 1963 census recorded 55 million while the 2006 census reported an inflated 140.4 million.",
+            "url": "https://www.academia.edu/112469698/Population_Census_Administration_in_Nigeria"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-candidate",
+  "timestamp": "2026-11-06T00:09:16.833919+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3222.14
+}

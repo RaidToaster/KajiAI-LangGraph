@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers. evidence",
+        "candidates": [
+          {
+            "title": "A search of his electronic devices in May of 2022 ...",
+            "snippet": "A search of his electronic devices in May of 2022, uncovered 423 images and 560 videos of child porn, some of which contained depictions of ...",
+            "url": "https://www.facebook.com/News8WROC/posts/a-search-of-his-electronic-devices-in-may-of-2022-uncovered-423-images-and-560-v/1009193851242635/"
+          },
+          {
+            "title": "No, Netflix's CEO wasn't charged with child pornography",
+            "snippet": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography”",
+            "url": "https://politifact.com/factchecks/2020/sep/18/viral-image/no-netflixs-ceo-wasnt-charged-15-counts-child-porn/"
+          },
+          {
+            "title": "Man sentenced to 30 years for child porn",
+            "snippet": "Judson Morrow of Greenwood Arkansas was sentenced to 30 years for producing child porn specifically involving two young girls, said Conner Eldridge with the ...",
+            "url": "https://www.4029tv.com/article/man-sentenced-to-30-years-for-child-porn/4953439"
+          },
+          {
+            "title": "Fact Check: 'Kim Martin Morrow' Is NOT The CEO Of Netflix ...",
+            "snippet": "Was \"Kim Martin Morrow the CEO of Netflix\" charged with 15 charges for child pornography? No, that's not true. Kim...",
+            "url": "https://leadstories.com/hoax-alert/2020/09/fact-check-kim-martin-morrow-is-not-the-ceo-of-netflix-and-was-not-charged-with-15-counts-of-child-pornography.html"
+          },
+          {
+            "title": "Was Netflix CEO arrested on child pornography charges? ...",
+            "snippet": "Latter versions of this rumour claimed the arrested Netflix CEO was called Kim Martin Morrow, who doesn't exist. An example of the rumour as it ...",
+            "url": "https://www.thatsnonsense.com/was-netflix-ceo-arrested-on-child-pornography-charges-fact-check/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-deepseek-baseline",
+  "timestamp": "2026-11-05T18:03:56.741489+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52256.328
+}

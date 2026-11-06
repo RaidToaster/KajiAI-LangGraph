@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000 counterevidence",
+        "candidates": [
+          {
+            "title": "A $10,000 Obamacare penalty? Doubtful. - PolitiFact",
+            "snippet": "“Because our family couldn’t afford health insurance, Obama/Biden penalized us about $10,000, then took that $10,000 and used it to pay for others’ free Obamacare.",
+            "url": "https://www.politifact.com/factchecks/2020/oct/28/facebook-posts/10000-obamacare-penalty-doubtful/"
+          },
+          {
+            "title": "A $10,000 Obamacare Penalty? Doubtful. - KFF Health News",
+            "snippet": "The viral social media posts claim that the family “couldn’t afford health insurance” and was penalized $10,000. Health policy experts told us that while the social media post doesn’t give all the specifics needed to know if this was absolutely true, it seems unlikely a penalty would be this high.",
+            "url": "https://kffhealthnews.org/courts/fact-check-a-10000-obamacare-penalty-doubtful/"
+          },
+          {
+            "title": "Fact Check: Trump, Congress DID End Tax Penalty For Non ...",
+            "snippet": "Did someone who couldn't afford health care under Barack Obama's Affordable Care Act get penalized $10,000, which was then used to pay for others' free health care? And is it true that Trump \"ended that theft?\" This is a mixture of false and true.",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-trump-congress-did-end-theft-of-tax-penalty-for-non-insured-but-10000-penalty-not-likely.html"
+          },
+          {
+            "title": "PolitiFact | A $10,000 Obamacare penalty? Doubtful.",
+            "snippet": "The viral social media posts claim that the family \"couldn’t afford health insurance\" and was penalized $10,000. Health policy experts told us that while the social media post...",
+            "url": "https://api.politifact.com/factchecks/2020/oct/28/facebook-posts/10000-obamacare-penalty-doubtful/"
+          },
+          {
+            "title": "A $10,000 Obamacare penalty? Doubtful. - News-Medical.net",
+            "snippet": "A viral social media post claims that a family was penalized $10,000 for not being able to afford health insurance. It also claimed the penalty money was taken to pay for others'...",
+            "url": "https://www.news-medical.net/news/20201029/A-2410000-Obamacare-penalty-Doubtful.aspx"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-baseline",
+  "timestamp": "2026-11-06T08:48:32.925035+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22102.234
+}

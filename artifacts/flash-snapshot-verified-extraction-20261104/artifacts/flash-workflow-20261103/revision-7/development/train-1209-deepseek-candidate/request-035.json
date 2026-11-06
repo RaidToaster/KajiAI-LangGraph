@@ -1,0 +1,33 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "A Wisconsin judge ordered removal of up to 209,000 names, showing the underlying dispute Klobuchar referenced.",
+            "url": "https://apnews.com/article/cf306f8ffada6f356ec9f1c43e7ff0aa",
+            "quote": "By \nSCOTT BAUER and IVAN MORENO\n\nPublished 8:03 PM EST, January 13, 2020\n\nShare\n\n* Facebook\n* Copy\n\n  Link copied\n* Print\n* Email\n* X\n* LinkedIn\n* Bluesky\n* Flipboard\n* Pinterest\n* Reddit\n\nPORT WASHINGTON, Wis. (AP) — A Wisconsin judge on Monday found the state’s bipartisan elections commission to be in contempt and ordered it to immediately begin removing up to 209,000 names from the state’s voter rolls",
+            "context": "## Wisconsin judge orders up to 209K voter names be deleted\n\n1 of 2 | \n\n\nGregory Lewis, the leader of Souls to the Polls led a protest outside the Ozaukee County Courthouse in Port Washington, Wis., Monday, January 13, 2020, where Ozaukee County Circuit Judge Paul Malloy held state election officials in contempt of court for not following his order to remove thousands of people from the voters rolls. Before the courtroom session Gregory Lewis, the leader of Souls to the Polls led a protest outside the courthouse and spoke to media gathered. Protestors had tape over their mouths symbolizing their voices being silenced. (Michael Sears/Milwaukee Journal-Sentinel via AP)\n\nLicense this photo\n\nBy \nSCOTT BAUER and IVAN MORENO\n\nPublished 8:03 PM EST, January 13, 2020\n\nShare\n\n* Facebook\n* Copy\n\n  Link copied\n* Print\n* Email\n* X\n* LinkedIn\n* Bluesky\n* Flipboard\n* Pinterest\n* Reddit\n\nPORT WASHINGTON, Wis. (AP) — A Wisconsin judge on Monday found the state’s bipartisan elections commission to be in contempt and ordered it to immediately begin removing up to 209,000 names from the state’s voter rolls or face fines for each day it doesn’t.\n\n▶ Follow live updates on the midterm elections\n\nHours later, a divided Wisconsin Supreme Court declined a request from a conservative law firm to immediately hear the case, meaning that the legal battle will now shift to a lower state appeals court and likely not be resolved before the November presidential election.\n\nThe Supreme Court’s decision not to get involved now was a win for liberals, who will now attempt to persuade a lower appeals court to put the original ruling on hold while the legal fight continues. The appeals court had refused to act while the Supreme Court was considering what to do.\n\nThe case is being closely watched, as Wisconsin is a battleground state that President Donald Trump won by fewer than 23,000 votes in 2016. Democrats are fighting the lawsuit, saying the purge would unfairly affect their voters. Republicans say they merely want to ensure that people who have moved are not able to vote from their old addresses.\n\nThe conservative-controlled Supreme Court deadlocked 3-3 on whether to take the case, which would have resulted in a quicker resolution. Newly elected conservative Justice Brian Hagedorn sided with two "
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T15:11:14.146155+00:00",
+  "status": "reserved_outcome_unknown"
+}

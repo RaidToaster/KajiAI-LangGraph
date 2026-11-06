@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "From 8th October the UK government will combine weekly flu and covid reports.",
+        "query": "site:gov.uk 2020 Public Health England Weekly flu and COVID-19 Surveillance Report 8 October",
+        "candidates": [
+          {
+            "title": "National flu and COVID-19 surveillance report: 8 October ...",
+            "snippet": "Influenza A positivity rates were highest among those aged between 18 and 24 years, with a rolling 7-day positivity rate of 28.1% up to Sunday 4 ...",
+            "url": "https://www.gov.uk/government/statistics/national-flu-and-covid-19-surveillance-reports-2026-to-2027-season/national-flu-and-covid-19-surveillance-report-8-october-2026-week-41"
+          },
+          {
+            "title": "National flu and COVID-19 surveillance report: 22 October ...",
+            "snippet": "Influenza A positivity rates were highest among those aged between 18 and 24 years, with a rolling 7-day positivity rate of 12.0% up to Sunday ...",
+            "url": "https://www.gov.uk/government/statistics/national-flu-and-covid-19-surveillance-reports-2026-to-2027-season/national-flu-and-covid-19-surveillance-report-22-october-2026-week-43"
+          },
+          {
+            "title": "Surveillance of influenza and other seasonal respiratory ...",
+            "snippet": "This report describes surveillance findings for seasonal influenza, other seasonal respiratory viruses and the monitoring of human cases of ...",
+            "url": "https://www.gov.uk/government/statistics/influenza-in-the-uk-annual-epidemiological-reports/surveillance-of-influenza-and-other-seasonal-respiratory-viruses-in-winter-2021-to-2022"
+          },
+          {
+            "title": "Weekly national flu and COVID-19 surveillance reports ...",
+            "snippet": "The number of acute respiratory infection incidents (suspected outbreaks) in England was 448 in week 34, compared to 439 in the previous week.",
+            "url": "https://www.gov.uk/government/news/weekly-national-flu-and-covid-19-surveillance-reports-published"
+          },
+          {
+            "title": "UKHSA data dashboard",
+            "snippet": "Weekly percentage of people tested by PCR who are positive for influenza in EnglandVisit Influenza to find out more COVID-19",
+            "url": "https://ukhsa-dashboard.data.gov.uk/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-123-deepseek-baseline",
+  "timestamp": "2026-11-06T04:04:28.963337+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5058.281
+}

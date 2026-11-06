@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "Search for Kamra's February 21, 2020 tweet denying the quote on the original platform.",
+        "candidates": [
+          {
+            "title": "In a statement on Twitter, Kunal Kamra said that he does ...",
+            "snippet": "Kunal Kamra has refused to apologise for his tweets as he said his views haven't changed. Why no action against Kunal Kamra's tweets?",
+            "url": "https://www.facebook.com/TheNewsMinute/posts/in-a-statement-on-twitter-kunal-kamra-said-that-he-does-not-intend-to-apologise-/2803199333273116/"
+          },
+          {
+            "title": "Kunal Kamra refuses to apologise, retract his tweets",
+            "snippet": "Kamra refused to apologise or retract his tweets on the Supreme Court. Mr. Kamra reacted in a tweet titled 'no lawyers, no apology, no fine, no ...",
+            "url": "https://www.thehindu.com/news/national/kunal-kamra-refuses-to-apologise-retract-his-tweets/article61729558.ece"
+          },
+          {
+            "title": "I don't intend to retract my tweets or apologise for them",
+            "snippet": "Kamra refuses to apologise or retract his tweets criticising the Supreme Court and its judges during and after the hearing of bail petition of ...",
+            "url": "https://www.groundxero.in/2020/11/13/i-dont-intend-to-retract-my-tweets-or-apologise-for-them-kunal-kamra/"
+          },
+          {
+            "title": "Comparing Conversational Framing Strategies on Twitter",
+            "snippet": "by H ZADE · 2024 · Cited by 27 — In the remainder of this article, we refer to the original tweet as the root tweet, and the reply tweet and the quote tweet collectively as the response tweet.",
+            "url": "https://faculty.washington.edu/garyhs/docs/zade-JCSS-replyorquote.pdf"
+          },
+          {
+            "title": "Kunal Kamra refuses to apologise for tweet against ...",
+            "snippet": "Kunal tweets in SC Kamra has filed his affidavit in response to the notice maintaining that even judges know no protection from jokes",
+            "url": "https://www.hindustantimes.com/india-news/kunal-kamra-refuses-to-apologise-for-tweet-against-supreme-court-101611899775716.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-deepseek-candidate",
+  "timestamp": "2026-11-05T10:27:50.041044+00:00",
+  "status": "reserved_outcome_unknown"
+}

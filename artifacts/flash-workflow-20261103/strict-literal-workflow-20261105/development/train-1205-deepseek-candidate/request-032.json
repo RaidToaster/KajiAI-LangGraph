@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "What did NIH and CDC scientists or officials say in response to the comparison, if they addressed it?",
+        "candidates": [
+          {
+            "title": "A Case Comparison of the CDC's Response to COVID-19 ...",
+            "snippet": "by E Schiff · 2023 · Cited by 34 — In three case studies, we analyze the CDC's success in handling H1N1 and Ebola, and its failures on COVID-19. We find that the CDC suffered not only from ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9716189/"
+          },
+          {
+            "title": "The Trump administration dismantled the CDC's peer review ...",
+            "snippet": "CDC-funded extramural research reflected the “most meritorious ideas and projects,” and maintained public accountability. Words like “haphazard ...",
+            "url": "https://insidemedicine.substack.com/p/exclusive-the-trump-administration"
+          },
+          {
+            "title": "CDC blocks publication of report showing COVID vaccine ...",
+            "snippet": "The Centers for Disease Control and Prevention (CDC) has canceled publication of a scientific report showing the efficacy of the COVID-19 ...",
+            "url": "https://www.cidrap.umn.edu/covid-19/cdc-blocks-publication-report-showing-covid-vaccine-efficacy"
+          },
+          {
+            "title": "The NIH Director couldn't say whether we're better ...",
+            "snippet": "The NIH Director couldn't say whether we're better prepared for public health threats under Trump—because we aren't.",
+            "url": "https://www.facebook.com/senatorpattymurray/videos/the-nih-director-couldnt-say-whether-were-better-prepared-for-public-health-thre/945506608479763/"
+          },
+          {
+            "title": "House committee holds hearing with vaccine science critics",
+            "snippet": "House committee holds hearing with vaccine science critics",
+            "url": "https://www.youtube.com/watch?v=msXXyf2ZetI"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-05T10:44:59.319448+00:00",
+  "status": "reserved_outcome_unknown"
+}

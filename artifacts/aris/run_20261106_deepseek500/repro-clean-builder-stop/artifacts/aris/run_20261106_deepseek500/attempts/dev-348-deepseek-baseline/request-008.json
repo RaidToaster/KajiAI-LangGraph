@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wildfires do not Affect Mexico And Canada",
+        "query": "Wildfires do not Affect Mexico And Canada counterevidence",
+        "candidates": [
+          {
+            "title": "Wildfires Across Borders: Comparing Impacts in Los Angeles ...",
+            "snippet": "The January 2025 wildfires in Los Angeles made one thing clear: wildfire disasters do not respect political borders, but recovery capacity and ...",
+            "url": "https://envhistnow.com/2026/06/25/wildfires-across-borders-comparing-impacts-in-los-angeles-and-northern-mexico/"
+          },
+          {
+            "title": "Wildfire smoke knows no borders: Differential vulnerability to ...",
+            "snippet": "by L Schwarz · 2023 · Cited by 12 — While the San Diego-Tijuana border can be exposed to the same wildfire smoke event, socio-demographic differences may drive differential effects on population ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10287006/"
+          },
+          {
+            "title": "Fact check: Canada and Mexico are fighting wildfires, too",
+            "snippet": "Based on our research, the claim that wildfires on the West Coast stop at the borders of Canada and Mexico is FALSE. Despite some maps that show ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/09/22/fact-check-canada-and-mexico-fighting-wildfires-too/5828057002/"
+          },
+          {
+            "title": "Fact check: Wildfires do affect Canada and Mexico",
+            "snippet": "False. Wildfires do affect Canada and Mexico. The map seems to show U.S. fires only. This article was produced by the Reuters Fact Check team.",
+            "url": "https://www.reuters.com/article/world/fact-check-wildfires-do-affect-canada-and-mexico-idUSKBN2672GR/"
+          },
+          {
+            "title": "Why are wildfires such a big problem in California and not ...",
+            "snippet": "Why are wildfires such a big problem in California and not the rest of the USA?",
+            "url": "https://www.quora.com/Why-are-wildfires-such-a-big-problem-in-California-and-not-the-rest-of-the-USA"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-348-deepseek-baseline",
+  "timestamp": "2026-11-06T03:52:56.730436+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4366.031
+}

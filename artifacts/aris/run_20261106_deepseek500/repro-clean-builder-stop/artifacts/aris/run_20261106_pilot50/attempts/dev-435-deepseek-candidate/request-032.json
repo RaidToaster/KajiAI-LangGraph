@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "Igbo per capita income or consumption compared with other African ethnic groups original survey data",
+        "candidates": [
+          {
+            "title": "The Igbos, on average, are richer than any ethnic group in ...",
+            "snippet": "The Igbos, on average, are richer than any ethnic group in Nigeria, some accounts say Africa. And this is true whether in Lagos, Abuja, Maiduguri ...",
+            "url": "https://www.facebook.com/ameer.lukmanharuna/posts/the-igbos-on-average-are-richer-than-any-ethnic-group-in-nigeria-some-accounts-s/1787600978102597/"
+          },
+          {
+            "title": "Igbo people",
+            "snippet": "The Igbo people are one of the largest ethnic groups in Africa. The Igbo proved decisive and enthusiastic. Igbo people access to their savings placed in ...",
+            "url": "https://en.wikipedia.org/wiki/Igbo_people"
+          },
+          {
+            "title": "Disaggregating the Global MPI",
+            "snippet": "by MP across Ethnic · Cited by 4 — Overall poverty levels are much lower in Nigeria than in the Central African Republic (with an MPI of 0.291 in Nigeria, compared to 0.465 in the. Central ...",
+            "url": "https://ophi.org.uk/sites/default/files/2024-03/OPHI_Briefing_55_2020_%28online%29.pdf"
+          },
+          {
+            "title": "Survey mean consumption or income per capita, total ...",
+            "snippet": "Survey mean consumption or income per capita, total population. Africa World Bank, Poverty and Inequality Platform. Data are based on primary household survey ...",
+            "url": "https://data.worldbank.org/indicator/SI.SPR.PCAP?locations=A9"
+          },
+          {
+            "title": "Factcheck: Pastor Reno Omokri reaches to hagiography on ...",
+            "snippet": "Misleading. The claim that Igbo people have the richest per capita in Africa is misleading. There are no official statistical records to support ...",
+            "url": "https://dubawa.org/factcheck-pastor-reno-omokri-reaches-to-hagiography-on-a-claim-that-igbos-have-richest-people-per-capita-in-africa/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-candidate",
+  "timestamp": "2026-11-05T23:54:46.829192+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2352.14
+}

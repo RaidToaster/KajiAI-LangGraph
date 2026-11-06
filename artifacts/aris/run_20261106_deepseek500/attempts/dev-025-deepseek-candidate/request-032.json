@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "Search Wayback Machine or archive.today for archived captures of instagram.com/mcdonalds.az from September–October 2020 showing the disputed posts.",
+        "candidates": [
+          {
+            "title": "Discovering the Traces of Disinformation on Instagram ... - arXiv",
+            "snippet": "In this study, we set out to quantify the replayability and quality of past captures of Instagram account pages, specifically focusing on a ...",
+            "url": "https://arxiv.org/html/2301.09188v1"
+          },
+          {
+            "title": "Instagram Wayback machine : r/WaybackMachine - Reddit",
+            "snippet": "Does Wayback Machine work for Instagram? Best ways to view Instagram archives.",
+            "url": "https://www.reddit.com/r/WaybackMachine/comments/grccg1/instagram_wayback_machine/"
+          },
+          {
+            "title": "Using the Wayback Machine - Internet Archive Help Center",
+            "snippet": "This introduction video provides an overview for how to use the Wayback Machine, including information about searching by URL or keyword, ...",
+            "url": "https://help.archive.org/help/using-the-wayback-machine/"
+          },
+          {
+            "title": "Where to see content you've archived on Instagram",
+            "snippet": "Below Removed and archived content, tap Archived. Tap Stories archive at the top, then select Stories archive, Posts archive or Live archive.",
+            "url": "https://help.instagram.com/312717949183643/"
+          },
+          {
+            "title": "The Internet Archive's Wayback Machine database of historical ...",
+            "snippet": "The Internet Archive's Wayback Machine database of historical websites has been the target of a massive DDoS attack, says the founder.",
+            "url": "https://www.facebook.com/FastCompany/posts/the-internet-archives-wayback-machine-database-of-historical-websites-has-been-t/842177577776706/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-candidate",
+  "timestamp": "2026-11-06T06:53:10.156871+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15179.468
+}

@@ -1,0 +1,131 @@
+{
+  "totals": {
+    "ollama": 130,
+    "ollama_input_tokens": 1539612,
+    "ollama_output_tokens": 209104,
+    "jev": 176,
+    "jev_input_tokens": 559002,
+    "jev_output_tokens": 50074
+  },
+  "flash_sends_by_requested_model": {
+    "glm-5.3-flash:cloud": 84,
+    "deepseek-v4.1-flash:cloud": 46
+  },
+  "new_workflow_search": 78,
+  "new_workflow_fetch": 144,
+  "source": "artifacts\\flash-workflow-20261103\\strict-literal-workflow-20261105\\usage-current.json",
+  "source_sha256": "9d773683591dd2d338e18a781b81e45c5b29ebffeb3872f940077393d5e8ae78",
+  "known_local_capture_failure": "artifacts\\flash-workflow-20261103\\strict-literal-workflow-20261105\\development\\train-1209-glm-candidate\\resume-review.json",
+  "historical_unknown": "One historical refused-loopback token usage remains UNKNOWN, never zero.",
+  "all_model_outcomes_known": true,
+  "confirmation_attempts": 0,
+  "final_attempts": 0,
+  "additional_phase": "artifacts/passage-decision-native-20261105",
+  "additional_phase_sends": [
+    {
+      "service": "ollama",
+      "request_id": "001",
+      "sent_at": "2026-11-05T11:11:13.156680+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash:cloud",
+      "done": true,
+      "done_reason": "stop",
+      "input_tokens": 8192,
+      "output_tokens": 2259,
+      "model_verified": true,
+      "incomplete": false
+    }
+  ],
+  "scope": "All continuation requests through this new native phase; historical study/unknown separate.",
+  "base_sha256": "77a31d9f2694e2dff0763b0fc0b91c7cfc8f879b64724f64bd89deafb15dc9c4",
+  "phase_attempts": [
+    {
+      "directory": "artifacts/bound-source-native-20261106/glm-anchor",
+      "task": {
+        "id": "glm-anchor",
+        "model": "glm",
+        "kind": "anchor",
+        "started_at": "2026-11-05T17:08:10.728973+00:00",
+        "protocol_sha256": "4c8d9a7d6df187dc9bada87ce7af4d89ce1be15e2a5dafd1ca065200b442cbc2"
+      },
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 42.734000000004016,
+        "accounting_problem": false,
+        "hard_stop": false
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T17:08:13.106003+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 20272,
+          "output_tokens": 1885
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T17:08:13.674251+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 7550,
+          "output_tokens": 2242,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "003",
+          "sent_at": "2026-11-05T17:08:31.069265+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5847,
+          "output_tokens": 237
+        },
+        {
+          "service": "ollama",
+          "request_id": "004",
+          "sent_at": "2026-11-05T17:08:31.443016+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 7430,
+          "output_tokens": 3526,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "005",
+          "sent_at": "2026-11-05T17:08:52.718255+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4861,
+          "output_tokens": 249
+        }
+      ]
+    }
+  ],
+  "new_unknown_or_accounting_problems": [],
+  "final_launch_in_this_chat": false
+}

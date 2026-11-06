@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "Who made this statement, and on what date and in what venue or medium was it made?",
+        "candidates": [
+          {
+            "title": "Declaration of Independence (1776)",
+            "snippet": "Jefferson drafted the statement between June 11 and 28, submitted drafts to Adams and Franklin who made some changes, and then presented the ...",
+            "url": "https://www.archives.gov/milestone-documents/declaration-of-independence"
+          },
+          {
+            "title": "The Meaning of 'Medium' is the Message.",
+            "snippet": "When Marshall McLuhan made this statement for the first time… (in 1958, at a Vancouver conference — he would later write it up as the first ...",
+            "url": "https://medium.com/@andrewmcluhan/the-meaning-of-medium-is-the-message-9bbe732869a7"
+          },
+          {
+            "title": "The medium is the message",
+            "snippet": "\"The medium is the message\" is a phrase coined by the Canadian communication theorist Marshall McLuhan. Extensions of Man, published in 1964.",
+            "url": "https://en.wikipedia.org/wiki/The_medium_is_the_message"
+          },
+          {
+            "title": "What does \"the medium is the message\" mean?",
+            "snippet": "“The medium is the message” was coined by media theorist Marshall McLuhan in his book, Understanding Media. It's also the name of the first chapter of that ...",
+            "url": "https://kadavy.net/medium-is-the-message-meaning/"
+          },
+          {
+            "title": "The Medium is the Message | Social & Psychological ...",
+            "snippet": "In The Medium is the Message, Marshall McLuhan argues that the medium with which a message is sent is itself another message; he claims that ...",
+            "url": "https://wordpress.lehigh.edu/comm385-sp19/2019/01/28/the-medium-is-the-message/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-candidate",
+  "timestamp": "2026-11-06T05:51:23.754328+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11473.062
+}

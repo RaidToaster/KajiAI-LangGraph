@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Erie County New York official budget resolution Grand Island town board supervisor Nate McMurray tax vote",
+        "candidates": [
+          {
+            "title": "POLONCARZ UNVEILS 2027 PROPOSED ERIE COUNTY ...",
+            "snippet": "The Poloncarz administration has decreased the county's Property Tax Rate by 40.2%, or $2.02 per thousand, since 2012. “The 2027 Budget is very ...",
+            "url": "https://www4.erie.gov/exec/press/poloncarz-unveils-2027-proposed-erie-county-budget"
+          },
+          {
+            "title": "Erie County's proposed 2027 budget increases spending 5.5%",
+            "snippet": "Erie County proposed 2027 budget calls for a 5.5% spending increase, while lowering the county property tax rate amid rising costs.",
+            "url": "https://spectrumlocalnews.com/nys/rochester/news/2026/10/15/2027-erie-county-budget-proposal"
+          },
+          {
+            "title": "As previously announced, my 2027 proposed Erie County, NY Budget ...",
+            "snippet": "As previously announced, my 2027 proposed Erie County, NY Budget will reduce the county's tax rate by 8 cents per thousand: from $3.09 to $3.01.",
+            "url": "https://www.facebook.com/CountyExecutiveMarkPoloncarz/posts/as-previously-announced-my-2027-proposed-erie-county-ny-budget-will-reduce-the-c/1468253355165861/"
+          },
+          {
+            "title": "Erie County Executive Mark Poloncarz presents 2027 Proposed Budget",
+            "snippet": "Erie County Executive Mark Poloncarz is presenting the 2027 Budget Proposal.",
+            "url": "https://www.youtube.com/watch?v=ywUYg-diZFM"
+          },
+          {
+            "title": "Poloncarz unveils 'very tight' 2027 Erie County budget proposal | News 4 ...",
+            "snippet": "A key component of the proposed $2.4 billion budget is dropping the property tax rate. The budget would reduce Erie County's tax rate by 8 cents ...",
+            "url": "https://www.wivb.com/news/local-news/erie-county/poloncarz-unveils-very-tight-2027-erie-county-budget-proposal/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-candidate",
+  "timestamp": "2026-11-06T01:09:58.312946+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6863.625
+}

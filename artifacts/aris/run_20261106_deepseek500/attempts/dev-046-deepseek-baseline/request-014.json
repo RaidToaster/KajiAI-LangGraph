@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The umbilical cord should not be cut until 1 hour after birth or they baby will not have enough blood right after birth.",
+        "query": "The umbilical cord should not be cut until 1 hour after birth or they baby will not have enough blood right after birth. original source fact check",
+        "candidates": [
+          {
+            "title": "Delayed (optimal) cord clamping - Tommy's",
+            "snippet": "The cord should not be clamped earlier than 1 minute after birth. You can have delayed cord clamping even if you have help to deliver the placenta after giving ...",
+            "url": "https://www.tommys.org/pregnancy-information/giving-birth/delayed-cord-clamping-optimal"
+          },
+          {
+            "title": "Time to Cut the Cord - PMC - NIH",
+            "snippet": "The World Health Organization recommends that the umbilical cord not be clamped earlier than 1 minute after birth in term or preterm newborns.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6353264/"
+          },
+          {
+            "title": "Your Baby's Umbilical Cord: 5 Surprising Facts for New ...",
+            "snippet": "Even after delayed cord clamping and cutting, some blood still remains in the cord and placenta. This leftover blood can also help babies who ...",
+            "url": "https://www.healthychildren.org/English/ages-stages/prenatal/delivery-beyond/Pages/your-babys-umbilical-cord-5-surprising-facts-for-new-and-expectant-parents.aspx"
+          },
+          {
+            "title": "Delayed umbilical cord clamping - Mayo Clinic Health System",
+            "snippet": "Waiting 30–60 seconds after birth is considered the proper cord clamping time frame due to the health benefits for your baby. For babies born ...",
+            "url": "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/delayed-umbilical-cord-clamping-benefits"
+          },
+          {
+            "title": "Getting to know your newborn - NHS",
+            "snippet": "Your newborn's umbilical cord takes about a week to dry out and drop off. Keep it clean and dry until it does. If you notice any bleeding or ...",
+            "url": "https://www.nhs.uk/pregnancy/labour-and-birth/getting-to-know-your-newborn/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-046-deepseek-baseline",
+  "timestamp": "2026-11-06T07:51:33.538218+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18682.843
+}

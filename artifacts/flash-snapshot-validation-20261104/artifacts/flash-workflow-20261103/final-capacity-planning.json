@@ -1,0 +1,67 @@
+{
+  "status": "Planning arithmetic only. Recompute using a passing candidate and refreshed account balances before final release.",
+  "sample": "Six retrospective compact and current attempts per model/arm. Failures retained. This candidate failed confirmation eligibility.",
+  "mean_per_attempt": {
+    "glm-baseline": {
+      "ollama_usd": 0.0100599,
+      "jev_usd": 0.000616784,
+      "searches": 3.8333333333333335,
+      "fetches": 7.5,
+      "worker_seconds": 134.57549999999992
+    },
+    "glm-candidate": {
+      "ollama_usd": 0.005695675,
+      "jev_usd": 0.00065905,
+      "searches": 3.5,
+      "fetches": 6.666666666666667,
+      "worker_seconds": 115.526166666667
+    },
+    "deepseek-candidate": {
+      "ollama_usd": 0.0053355,
+      "jev_usd": 0.0014952490000000001,
+      "searches": 6,
+      "fetches": 11.833333333333334,
+      "worker_seconds": 89.83866666666715
+    },
+    "deepseek-baseline": {
+      "ollama_usd": 0.020693549999999998,
+      "jev_usd": 0.000450422,
+      "searches": 2.6666666666666665,
+      "fetches": 5.166666666666667,
+      "worker_seconds": 79.184666666667
+    }
+  },
+  "projected_2000_attempts": {
+    "ollama_usd": 20.8923125,
+    "jev_usd": 1.6107525000000003,
+    "searches": 8000.0,
+    "fetches": 15583.333333333334,
+    "worker_seconds": 209562.50000000055
+  },
+  "proposed_local_rate_limits": {
+    "tinyfish_search": [
+      [
+        60,
+        27
+      ],
+      [
+        3600,
+        450
+      ]
+    ],
+    "tinyfish_fetch": [
+      [
+        60,
+        135
+      ],
+      [
+        86400,
+        900
+      ]
+    ]
+  },
+  "observed_fetch_projection_24h_windows": 18,
+  "worst_case_fetch_reservations": 24000,
+  "worst_case_fetch_24h_windows": 27,
+  "limiter_check": "Verified against saved reservations and synthetic minute and daily limits. Unresolved free sends count toward limits."
+}

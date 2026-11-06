@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "US Senator Bernie Sanders was opposed to Obamacare. original source fact check",
+        "candidates": [
+          {
+            "title": "Biden's Factual Distortions - FactCheck.org",
+            "snippet": "He claimed that one of his rivals for the Democratic presidential nomination, Sen. Bernie Sanders, “was opposed to Obamacare.” Sanders voted ... Missing:  source  | Show results with:",
+            "url": "https://www.factcheck.org/2020/02/bidens-factual-distortions/"
+          },
+          {
+            "title": "Fact check: Biden says Sanders 'opposed Obamacare' - WRAL",
+            "snippet": "Bernie Sanders talks in a way that one would think Sanders and former President Barack Obama \"were close buddies.\" But they were not, Biden said ... Missing:  original  | Show results with:",
+            "url": "https://www.wral.com/archive/18995113/"
+          },
+          {
+            "title": "Joe Biden leaves out key facts in claim that Bernie Sanders ...",
+            "snippet": "Biden said Sanders “opposed Obamacare, didn't like the fact we didn't push a single-payer option.” Sanders voted for the passage of Obamacare, ...",
+            "url": "https://politifact.com/factchecks/2020/feb/27/joe-biden/joe-biden-leaves-out-key-facts-claim-bernie-sander/"
+          },
+          {
+            "title": "PolitiFact: Sanders claims he helped write the Affordable Care Act",
+            "snippet": "For that, Sanders' claim received a MOSTLY FALSE rating. SOURCES: \"I helped write\" the A.C.A. Sanders says. Bernie Sanders, remarks at the ...",
+            "url": "https://mynews13.com/fl/orlando/news/2016/1/25/politifact_sanders_c"
+          },
+          {
+            "title": "Bernie Sanders's claim that he would expand, not dismantle ...",
+            "snippet": "Sanders proposed to set up a new health-care system that would have eliminated all existing federal health insurance, including Medicare and ... Missing:  source  | Show results with:",
+            "url": "https://www.washingtonpost.com/news/fact-checker/wp/2015/11/23/bernie-sanderss-claim-that-he-would-expand-not-dismantle-the-affordable-care-act/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T08:34:54.314090+00:00",
+  "status": "reserved_outcome_unknown"
+}

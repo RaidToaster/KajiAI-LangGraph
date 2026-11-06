@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons and seven other underage girls were featured on Hunter Biden's laptop.",
+        "query": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons original source fact check",
+        "candidates": [
+          {
+            "title": "Congressional Record",
+            "snippet": "Democratic Leader, U.S. Senate, Washington, DC. I am writing regard- ing our ongoing commitment to reform of the health care system",
+            "url": "https://www.congress.gov/115/crec/2017/01/13/CREC-2017-01-13.pdf"
+          },
+          {
+            "title": "- PAIN RELIEF PROMOTION ACT",
+            "snippet": "We started from scratch in re-drafting legislation with three goals: (1) Make clear under the Controlled Substances Act (CSA) the federal standard that no one ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-106shrg72844/html/CHRG-106shrg72844.htm"
+          },
+          {
+            "title": "Nomination of Paul Matey to the United States Court of Appeals for ...",
+            "snippet": "Breitbart News' Steve Bannon. QUESTIONS FROM SENATOR COONS 1. News reports had revealed how he had hired a friend, Jill Cooperman, to serve as ...",
+            "url": "https://www.judiciary.senate.gov/download/matey-responses-to-qfrspdf"
+          },
+          {
+            "title": "2026 midterm elections: Live fact-checks as Democrats flip key Senate ...",
+            "snippet": "PolitiFact has been covering key races and fact-checking claims about the candidates and voting. Follow this live blog for our latest updates.",
+            "url": "https://politifact.com/article/2026/nov/03/election-day-midterm-live-fact-check-vote-results/"
+          },
+          {
+            "title": "My position on supporting Trump nominees is quite clear. And I'm ...",
+            "snippet": "My position on supporting Trump nominees is quite clear. And I'm looking forward to leading the charge to get Pam Bondi and Kash Patel confirmed. ...",
+            "url": "https://www.facebook.com/SenatorThomTillis/posts/my-position-on-supporting-trump-nominees-is-quite-clear-and-im-looking-forward-t/1133191358166782/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-037-deepseek-baseline",
+  "timestamp": "2026-11-06T07:28:09.205412+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17278.515
+}

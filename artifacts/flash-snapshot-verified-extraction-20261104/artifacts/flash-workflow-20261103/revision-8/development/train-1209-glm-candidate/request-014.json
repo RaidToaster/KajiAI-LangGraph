@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Retrieve the full Politifact ruling and Wisconsin Election Commission records from February 2020 on the 190,000+ voter purge and court stay to independently evaluate the underlying accuracy claim.",
+        "candidates": [
+          {
+            "title": "Wisconsin's Voter-Roll Purge",
+            "snippet": "Wisconsin election officials appealed the ruling, and in February a state appeals court struck down the county judge's ruling, and blocked the purge. But ...",
+            "url": "https://americanoversight.org/investigation/wisconsins-voter-roll-purge/"
+          },
+          {
+            "title": "Settlement Finalized in Wisconsin Voter Purge Lawsuit",
+            "snippet": "MADISON — On August 17, 2022, a settlement was finalized in federal court in Wisconsin to reinstate more than 31000 registered voters who ...",
+            "url": "https://www.lwv.org/newsroom/press-releases/settlement-finalized-wisconsin-voter-purge-lawsuit"
+          },
+          {
+            "title": "Wisconsin Supreme Court Rejects Voter Purge Lawsuit",
+            "snippet": "The dispute over the voter list began in June 2019, when the Wisconsin Elections Commission decided how it would handle thousands of voters who ...",
+            "url": "https://www.wpr.org/justice/wisconsin-supreme-court-rejects-voter-purge-lawsuit"
+          },
+          {
+            "title": "No, court did not rule 200000 Wisconsin ballots were ...",
+            "snippet": "The number of people claiming this status in Wisconsin rose from 57,000 in the 2016 presidential election to about 215,000 in the November 2020 ...",
+            "url": "https://politifact.com/factchecks/2021/jan/06/facebook-posts/no-court-did-not-rule-200000-wisconsin-ballots-wer/"
+          },
+          {
+            "title": "Recounts have swung elections in Wisconsin, but nowhere ...",
+            "snippet": "The 2020 election is in “recount territory” and “I've seen elections change as a result of” recounts.",
+            "url": "https://politifact.com/factchecks/2020/nov/18/scott-fitzgerald/recounts-have-swung-elections-wisconsin-nowhere-ne/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-03T15:16:50.242549+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The CDC has said over 98,000 people had non-COVID related deaths because of hospitals that were closed down for non-essential services",
+        "query": "Obtain the draft content so its statements can be extracted and verified.",
+        "candidates": [
+          {
+            "title": "Lexis+ with Protégé | Legal AI Solution for Drafting & ...",
+            "snippet": "Lexis+ with Protégé is a legal AI solution for drafting, research, and analysis, delivering trusted results from authoritative LexisNexis resources.",
+            "url": "https://www.lexisnexis.com/en-us/products/lexis-plus-protege.page"
+          },
+          {
+            "title": "Chapter 5: Collecting data",
+            "snippet": "Review authors should plan in advance what data will be required for their systematic review, and develop a strategy for obtaining them (see MECIR Box 5.3.a).",
+            "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-05"
+          },
+          {
+            "title": "Clearbrief — Legal AI with proof built in, inside Microsoft Word",
+            "snippet": "Clearbrief is legal AI with proof built in. Draft, cite-check, hyperlink, and verify legal work in Microsoft Word — with every key point tied back to the ...",
+            "url": "https://www.clearbrief.com/"
+          },
+          {
+            "title": "AI draft verification prompt for construction sources",
+            "snippet": "Ask which line supports each statement. If the source is silent, the draft should say so. Copy this complete prompt to get the same results.",
+            "url": "https://www.facebook.com/EngrMVYN/posts/an-ai-draft-should-be-easy-to-checkkeep-the-source-beside-the-answer-ask-which-l/1461147609557082/"
+          },
+          {
+            "title": "How to Use Perplexity AI for Legal Document Analysis & ...",
+            "snippet": "AI tools like Perplexity can help attorneys with legal document analysis and drafting. Perplexity can extract clauses, summarize case law, and ...",
+            "url": "https://spellbook.com/learn/perplexity-ai-legal-document-analysis-drafting"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-142-glm-baseline",
+  "timestamp": "2026-11-06T00:17:20.340953+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3705.64
+}

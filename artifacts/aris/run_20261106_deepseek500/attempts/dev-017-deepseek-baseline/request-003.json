@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "All USA Ballots Arriving After Election Day Will Be Thrown Out evidence",
+        "candidates": [
+          {
+            "title": "Supreme Court rules states can count late-arriving mailed ballots",
+            "snippet": "The Supreme Court ruled Monday that states should be allowed to count ballot that are mailed on time but arrive after Election Day.",
+            "url": "https://www.nbcwashington.com/news/national-international/supreme-court-late-arriving-mail-in-ballots-mississippi/4107000/"
+          },
+          {
+            "title": "Supreme Court rules states can count late-arriving mailed ballots, rejecting Trump-led challenge",
+            "snippet": "The federal appeals court in New Orleans struck down a Mississippi law allowing ballots to be counted if they arrive within five business days ...",
+            "url": "https://www.mysuncoast.com/2026/06/29/supreme-court-rules-states-can-count-late-arriving-mailed-ballots-rejecting-trump-led-challenge/"
+          },
+          {
+            "title": "In a ruling that surprised some court observers, justices in a 5-4 decision found that nothing in federal laws blocks states from counting ballots that are postmarked on or before an election, but rec",
+            "snippet": "In a ruling that surprised some court observers, justices in a 5-4 decision found that nothing in federal laws blocks states from counting ballots ...",
+            "url": "https://www.facebook.com/oregonpublicbroadcasting/posts/in-a-ruling-that-surprised-some-court-observers-justices-in-a-5-4-decision-found/1453411216825781/"
+          },
+          {
+            "title": "We've seen it before: Common themes to expect on and before Election Day",
+            "snippet": "A video of someone depositing multiple ballots is not evidence of fraud. Every ballot still goes through signature verification and voter record ...",
+            "url": "https://www.cip.uw.edu/2026/10/28/common-rumor-themes-election-day/"
+          },
+          {
+            "title": "24-1260 Watson v. Republican National Committee (06/29/2026)",
+            "snippet": "All absentee ballots must be. “postmarked on or before the date of the election and re- ceived by the registrar no more than five (5) business ...",
+            "url": "https://www.supremecourt.gov/opinions/25pdf/24-1260_g3cn.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-017-deepseek-baseline",
+  "timestamp": "2026-11-06T06:27:35.764617+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13645.078
+}

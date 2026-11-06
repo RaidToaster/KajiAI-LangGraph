@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "World Bank GNI per capita by ethnic group Nigeria Igbo 2019",
+        "candidates": [
+          {
+            "title": "GNI per capita, Atlas method (current US$)",
+            "snippet": "GNI per capita, Atlas method (current US $). Country official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, ... Read more",
+            "url": "https://data.worldbank.org/indicator/NY.GNP.PCAP.CD"
+          },
+          {
+            "title": "GNI per capita, PPP (current international $)",
+            "snippet": "GNI per capita, PPP (current international $). International Comparison Program ( ICP ), World Bank ( WB ), uri: worldbank.org/en/programs/icp/ ... Read more",
+            "url": "https://data.worldbank.org/indicator/NY.GNP.PCAP.PP.CD"
+          },
+          {
+            "title": "World Bank Country and Lending Groups",
+            "snippet": "... GNI per capita between $4,636 and $14,375; high-income economies are those with more than a GNI per capita of $14,375. Please note: Regions in this table ... Read more",
+            "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+          },
+          {
+            "title": "According to the World Bank collection of development ...",
+            "snippet": "... gross national income ( GNI ) per capita of $2,157 in 2019 . Nigeria , Others To Benefit As IMF Unveils $45b Fund. CHANNELSTV.COM. Nigeria , Others ... Read more",
+            "url": "https://www.facebook.com/channelsforum/posts/according-to-the-world-bank-collection-of-development-indicators-nigeria-is-amon/579004610253961/"
+          },
+          {
+            "title": "List of countries by GNI (nominal) per capita",
+            "snippet": "This is a list of countries by gross national income per capita in 2025 at nominal values, according to the Atlas method, an indicator of income developed ... Read more",
+            "url": "https://en.wikipedia.org/wiki/List_of_countries_by_GNI_(nominal)_per_capita"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-baseline",
+  "timestamp": "2026-11-05T23:46:54.745408+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1880.046
+}

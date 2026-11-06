@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks.",
+        "query": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu original source fact check",
+        "candidates": [
+          {
+            "title": "Fact check: Fauci study did not attribute 1918 Spanish flu ...",
+            "snippet": "In fact, the study that Fauci co-authored in 2008 does not mention masks and found that bacterial pneumonia led to most deaths in the Spanish ...",
+            "url": "https://www.reuters.com/article/world/fact-check-fauci-study-did-not-attribute-1918-spanish-flu-deaths-to-bacterial-p-idUSKBN2771ZO/"
+          },
+          {
+            "title": "A study by Fauci and colleagues didn't blame 1918 ...",
+            "snippet": "Anthony Fauci showed that “most of the deaths” during the 1918-1919 Spanish flu pandemic were actually due to infections from face masks. AP'S ...",
+            "url": "https://apnews.com/article/fact-check-fauci-study-1918-spanish-flu-masks-deaths-998351571536"
+          },
+          {
+            "title": "Dr. Fauci Didn't Write Paper Blaming Most Spanish Flu ...",
+            "snippet": "Fake news about the coronavirus can do real harm. Polygraph.info is spotlighting fact-checks from other reliable sources here​.",
+            "url": "https://www.voanews.com/a/covid-19-pandemic_infodemic_infodemic-dr-fauci-didnt-write-paper-blaming-most-spanish-flu-deaths/6197476.html"
+          },
+          {
+            "title": "No, Dr. Fauci didn't blame masks for 1918 Spanish flu deaths",
+            "snippet": "Viral claims appearing on social media say that Dr. Anthony Fauci published a study in 2008 linking mask usage during the 1918 Spanish Flu ...",
+            "url": "https://www.youtube.com/watch?v=kSBPNcx5xvY"
+          },
+          {
+            "title": "The 1918 Influenza Pandemic and COVID-19, Part II - PMC",
+            "snippet": "by DM Morens · 2021 · Cited by 48 — Both the 1918 influenza pandemic and the 2019‒2021 COVID-19 pandemic are among the most disastrous infectious disease emergences of modern times.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8493155/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-070-glm-baseline",
+  "timestamp": "2026-11-06T01:48:06.626924+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9151.937
+}

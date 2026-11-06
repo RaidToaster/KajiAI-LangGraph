@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amber Alert Issued For License Plate Q72B381",
+        "query": "Amber Alert Issued For License Plate Q72B381 counterevidence",
+        "candidates": [
+          {
+            "title": "Automated license plate reader helps DPS locate children ...",
+            "snippet": "Two missing children were recovered following a statewide AMBER Alert thanks to an automated license plate reader, according to Texas DPS. ...",
+            "url": "https://www.fox26houston.com/news/automated-license-plate-reader-helps-dps-locate-children-from-amber-alert-houston"
+          },
+          {
+            "title": "🚨 A statewide AMBER Alert. 📍 Thousands of tips. 📸 ...",
+            "snippet": "🚨 A statewide AMBER Alert.\n📍 Thousands of tips.\n📸 Automated License Plate Readers.\n🤝 Strong teamwork.\n\nBecause of the public’s vigilance ...",
+            "url": "https://www.facebook.com/100064591393607/posts/a-statewide-amber-alert-thousands-of-tips-automated-license-plate-readers-stron/1448227047340328/"
+          },
+          {
+            "title": "Automated License Plate Reader Helps DPS Locate Children ...",
+            "snippet": "AMBER Alert issued out of Bexar Co. last week. Escarleth Vasquez, 15, and Alejandro Vasquez, 1, were located safe in Houston on Thursday. (512) ...",
+            "url": "https://www.dps.texas.gov/news/automated-license-plate-reader-helps-dps-locate-children-amber-alert-houston-central-texas"
+          },
+          {
+            "title": "What are the criteria for issuing Amber Alerts?",
+            "snippet": "Certain criteria need to be met in order for law enforcement to issue an Amber Alert for a missing child age 17 or younger.",
+            "url": "https://abc13.com/post/what-are-the-criteria-for-issuing-amber-alerts/3084583/"
+          },
+          {
+            "title": "Guidelines for Issuing AMBER Alerts - Office of Justice Programs",
+            "snippet": "AMBER plans require law enforcement to confirm an abduction prior to issuing an alert. This is essential when determining the level of risk to the child.",
+            "url": "https://amberalert.ojp.gov/about/guidelines-for-issuing-alerts"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-466-deepseek-baseline",
+  "timestamp": "2026-11-06T04:31:06.261599+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6655.578
+}

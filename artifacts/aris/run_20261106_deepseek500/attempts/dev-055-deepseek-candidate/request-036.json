@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve.",
+        "query": "Archived state health department COVID-19 death dashboards for California, Texas, Florida, and New York for weeks ending September–October 2020",
+        "candidates": [
+          {
+            "title": "State COVID-19 Data Dashboards",
+            "snippet": "Current Status of COVID-19 Dashboards · Number of total cases · Number of total deaths · Number of cases by county · Map of cases by county · Number ...",
+            "url": "https://shvs.org/resources/state-covid-19-data-dashboards/"
+          },
+          {
+            "title": "Provisional COVID-19 Mortality Surveillance",
+            "snippet": "This page highlights provisional COVID-19 mortality in the following ways: (1) display of overall deaths by week for data from 2015 through the current year, (2) ...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm"
+          },
+          {
+            "title": "COVID-19 - Florida Department of Health",
+            "snippet": "Symptoms may appear 2-14 days after exposure to the virus. Common COVID-19 include: Fever or chills; Cough; Shortness of breath or difficulty breathing; Fatigue ...",
+            "url": "https://www.floridahealth.gov/diseases-and-conditions/disease/covid-19/"
+          },
+          {
+            "title": "Global COVID-19 Tracker",
+            "snippet": "This tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths ...",
+            "url": "https://www.kff.org/covid-19/global-covid-19-tracker/"
+          },
+          {
+            "title": "Pandemic Mitigation Collaborative - COVID-19 Data Dashboard",
+            "snippet": "PMC COVID-19 Data Dashboard. Use the desktop interactive map to scroll over each county for more detail. See the CDC's map for state-level estimates only.",
+            "url": "https://pmc19.com/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-055-deepseek-candidate",
+  "timestamp": "2026-11-06T08:22:16.118775+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20525.437
+}

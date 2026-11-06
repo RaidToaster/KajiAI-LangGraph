@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Bernie Sanders 2010 statement on Affordable Care Act passage single-payer",
+        "candidates": [
+          {
+            "title": "Medicare for All: Here's what Bernie Sanders' proposal ...",
+            "snippet": "Sanders envisions a four-year transition period. Children under 19 would get universal coverage one year after the bill is signed into law.",
+            "url": "https://edition.cnn.com/interactive/2020/03/politics/medicare-for-all-annotated/"
+          },
+          {
+            "title": "17 Senators Introduce Medicare for All Act",
+            "snippet": "The Affordable Care Act, which Sanders supported when it was passed in 2010, was an important step forward. It provided access to health ...",
+            "url": "https://www.sanders.senate.gov/press-releases/17-senators-introduce-medicare-for-all-act/"
+          },
+          {
+            "title": "Government Monopoly: Senator Sanders' “Single-Payer” ...",
+            "snippet": "Senator Bernie Sanders and 16 Senate Democrats are sponsoring the Medicare for All Act, which radically restructures how the U.S. pays for health care. The bill ...",
+            "url": "https://www.heritage.org/health-care-reform/report/government-monopoly-senator-sanders-single-payer-health-care-prescription"
+          },
+          {
+            "title": "The Sanders Single-Payer Health Care Plan",
+            "snippet": "by J Holahan · Cited by 34 — Bernie Sanders proposed a single-payer system to replace all current health coverage. His system would cover all medically necessary care, ...",
+            "url": "https://www.urban.org/research/publication/sanders-single-payer-health-care-plan-effect-national-health-expenditures-and-federal-and-private-spending"
+          },
+          {
+            "title": "Medicare for All Act",
+            "snippet": "On September 13, 2017, Senator Bernie Sanders (I-VT) introduced a parallel bill. The act would similarly establish a universal single-payer health care system ...",
+            "url": "https://en.wikipedia.org/wiki/Medicare_for_All_Act"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-03T05:35:05.207751+00:00",
+  "status": "reserved_outcome_unknown"
+}

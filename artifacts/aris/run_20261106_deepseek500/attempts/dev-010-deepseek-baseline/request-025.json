@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports.",
+        "query": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports. original source fact check",
+        "candidates": [
+          {
+            "title": "Fact-Check: Did Donald Trump Suggest Nuking Hurricanes?",
+            "snippet": "... in a tweet, adding, \"I never said this. Just more FAKE NEWS!\" Donald Trump nuke hurricane nuclear bomb debate. During the first presidential ...",
+            "url": "https://www.newsweek.com/fact-check-did-donald-trump-suggest-nuking-hurricanes-1535171"
+          },
+          {
+            "title": "Scoop: Trump suggested nuking hurricanes to stop them from ...",
+            "snippet": "President Trump has suggested multiple times to senior Homeland Security and national security officials that they explore using nuclear ... Missing:  guess  hoaxes,  increasing  violent  frequency?  maybe",
+            "url": "https://www.axios.com/2019/08/25/trump-nuclear-bombs-hurricanes"
+          },
+          {
+            "title": "Trump called climate change a 'con job' at the United Nations ...",
+            "snippet": "... for this lie,'' said Stanford University climate scientist Rob Jackson.. Trump also called the carbon footprint \"a hoax made up by people with ... Missing:  guess  hoaxes,  remember  violent  frequency?  detonate  +2",
+            "url": "https://www.pbs.org/newshour/politics/trump-called-climate-change-a-con-job-at-the-united-nations-here-are-the-facts-and-context"
+          },
+          {
+            "title": "Trump denies asking about nuking hurricanes",
+            "snippet": "... blow up large hurricanes with nuclear weapons prior to reaching shore is ridiculous. I never said this. Just more FAKE NEWS! — Donald J. Missing:  hoaxes,  remember  increasing  violent  frequency?  +2",
+            "url": "https://www.washingtonpost.com/nation/2019/08/26/trump-nuclear-weapons-hurricane/"
+          },
+          {
+            "title": "Trump suggests 'nuking hurricanes' to stop them hitting America",
+            "snippet": "... hurricanes with nuclear weapons prior to reaching shore is ridiculous,” he tweeted. “I never said this. Just more FAKE NEWS!” Axios reported ... Missing:  guess  hoaxes,  increasing  violent  frequency?",
+            "url": "https://www.theguardian.com/us-news/2019/aug/26/donald-trump-suggests-nuking-hurricanes-to-stop-them-hitting-america-report"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-010-deepseek-baseline",
+  "timestamp": "2026-11-06T05:59:51.268438+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11980.578
+}

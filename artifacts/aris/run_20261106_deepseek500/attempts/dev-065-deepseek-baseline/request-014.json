@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000 original source fact check",
+        "candidates": [
+          {
+            "title": "A $10,000 Obamacare Penalty? Doubtful. - KFF Health News",
+            "snippet": "“Because our family couldn't afford health insurance, Obama/Biden penalized us about $10,000, then took that $10,000 and used it to pay for ...",
+            "url": "https://kffhealthnews.org/courts/fact-check-a-10000-obamacare-penalty-doubtful/"
+          },
+          {
+            "title": "A $10000 Obamacare penalty? Doubtful. - PolitiFact",
+            "snippet": "A viral Facebook post claims that former President Barack Obama's health insurance law penalized a family a large amount of money for not ...",
+            "url": "https://politifact.com/factchecks/2020/oct/28/facebook-posts/10000-obamacare-penalty-doubtful/"
+          },
+          {
+            "title": "Imprisoned for Not Having Health Care? - FactCheck.org",
+            "snippet": "A: Both House and Senate bills would levy a tax on persons who refuse to obtain coverage. Willfully evading that tax could result in jail time ... Missing:  couldn't  afford  $10000  original  source",
+            "url": "https://www.factcheck.org/2009/11/imprisoned-for-not-having-health-care/"
+          },
+          {
+            "title": "For many uninsured, Obamacare fines double at tax time - PBS",
+            "snippet": "WASHINGTON — Many people who went without health insurance last year are now seeing fines more than double under President Barack Obama's ... Missing:  couldn't  $10000  source  fact",
+            "url": "https://www.pbs.org/newshour/health/for-many-uninsured-obamacare-fines-double-at-tax-time"
+          },
+          {
+            "title": "What are the tax penalties for Obamacare? | eHealth",
+            "snippet": "eHealth explains the tax penalties for not having health insurance and how to find out if they apply to you. Learn more about Obamacare ...",
+            "url": "https://www.ehealthinsurance.com/resources/affordable-care-act/obamacare-tax-penalties"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-baseline",
+  "timestamp": "2026-11-06T08:49:08.647781+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22137.968
+}

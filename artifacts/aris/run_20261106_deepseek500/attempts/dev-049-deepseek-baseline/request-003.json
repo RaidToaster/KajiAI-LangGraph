@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+        "query": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration. evidence",
+        "candidates": [
+          {
+            "title": "MISSING CONTEXT: US achieved best carbon emission numbers under Trump",
+            "snippet": "The US supposedly saw the “best” carbon emission numbers in 35 years under President Donald Trump's administration. Trump made this claim during the 3rd ...",
+            "url": "https://www.rappler.com/newsbreak/fact-check/us-achieved-best-carbon-emission-numbers-under-trump/"
+          },
+          {
+            "title": "US has 'lowest carbon emissions numbers in 35 years' under Trump administration",
+            "snippet": "US has 'lowest carbon emissions numbers in 35. America was able to achieve the cleanest water and freshest air, as well as the lowest carbon ...",
+            "url": "https://www.news24.com.au/world/us-has-lowest-carbon-emissions-numbers-in-35-years-under-trump-administration/video/86cd0d17bd48ee903f83134825750d0f"
+          },
+          {
+            "title": "Is Trump's claim that the US has the cleanest air, water, and its best carbon emission numbers in 35 years true?",
+            "snippet": "Is Trump’s claim that the US has the cleanest air, water, and its best carbon emission numbers in 35 years true?",
+            "url": "https://www.quora.com/Is-Trump-s-claim-that-the-US-has-the-cleanest-air-water-and-its-best-carbon-emission-numbers-in-35-years-true?top_ans=97322607"
+          },
+          {
+            "title": "Trump said his administration has had the best carbon emission numbers that the U.S. has ...",
+            "snippet": "Trump said his administration has had the best carbon emission numbers that the U.S. has had in 35 years, while China, India and Russia all had ...",
+            "url": "https://www.facebook.com/bloombergoriginals/posts/trump-said-his-administration-has-had-the-best-carbon-emission-numbers-that-the-/1431344353727551/"
+          },
+          {
+            "title": "Energy & Environment - Trump White House Archives",
+            "snippet": "Under President Trump, the United States continued to lead the world in greenhouse gas emission reductions, cutting energy-related CO2 emissions by 12 percent ...",
+            "url": "https://trumpwhitehouse.archives.gov/issues/energy-environment/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-049-deepseek-baseline",
+  "timestamp": "2026-11-06T07:57:52.897624+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19062.218
+}

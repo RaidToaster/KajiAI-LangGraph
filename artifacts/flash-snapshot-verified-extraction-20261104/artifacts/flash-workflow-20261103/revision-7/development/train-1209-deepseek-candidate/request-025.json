@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Wisconsin Elections Commission final status of Ozaukee County voter roll case after February 28 2020 ruling",
+        "candidates": [
+          {
+            "title": "Timothy Zignego v. Wisconsin Elections Commission :: 2020",
+            "snippet": "... DECISION DATED AND FILED February 28, 2020 ... board of election commissioners shall change the elector's registration from eligible to ineligible status.",
+            "url": "https://law.justia.com/cases/wisconsin/court-of-appeals/2020/2020ap000112.html"
+          },
+          {
+            "title": "Wisconsin Appeals Court Keeps Voters Facing Purge on ...",
+            "snippet": "A Wisconsin appeals court on Friday blocked two rulings ordering elections officials to immediately purge over 200000 people from the voter ...",
+            "url": "https://www.courthousenews.com/wisconsin-appeals-court-keeps-voters-facing-purge-on-rolls/"
+          },
+          {
+            "title": "Federal Court Rules for Wisconsin Voters, Rejects Trump ...",
+            "snippet": "Federal judge dismisses DOJ lawsuit seeking unredacted statewide voter file.",
+            "url": "https://www.aclu.org/press-releases/federal-court-rules-for-wisconsin-voters-rejects-trump-administration-demand-for-private-voter-data"
+          },
+          {
+            "title": "ZIGNEGO ET AL V. WISCONSIN ELECTION COMMISSION ...",
+            "snippet": "Current Status: The Wisconsin Supreme Court issued a 5-2 decision on April 9, 2021 that the Wisconsin Elections Commission (WEC) does not have a duty to remove ...",
+            "url": "https://will-law.org/case/zignego-et-al-v-wisconsin-election-commission-et-al/"
+          },
+          {
+            "title": "United States v. Wisconsin Elections Commission",
+            "snippet": "The DOJ attempted to bypass Wisconsin's public records procedures. · Wisconsin election officials are required to protect voter privacy.",
+            "url": "https://www.publicrightsproject.org/what-we-do/legal-advocacy/us-v-wisconsin-elections-commission/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T15:10:49.262964+00:00",
+  "status": "reserved_outcome_unknown"
+}

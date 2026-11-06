@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "Which sources or datasets report a figure of 45 million for Nigeria's population at independence, and what methodology produced that figure?",
+        "candidates": [
+          {
+            "title": "One billion people in Nigeria? False! Data from credible ...",
+            "snippet": "Fact Check: Is Nigeria's population actually 1 billion? Absolutely false! While Nigeria remains Africa's most populous nation, latest 2026 data ...",
+            "url": "https://www.facebook.com/dubawa/posts/one-billion-people-in-nigeria-false-data-from-credible-sources-disagree-with-thi/1319616643666036/"
+          },
+          {
+            "title": "Nigeria's Population Nears 240 Million Amid Census ...",
+            "snippet": "Nigeria's population is estimated at approximately 239.6 million, according to live projections derived from United Nations data. Historical ...",
+            "url": "https://www.facebook.com/straightfromnaija/posts/nigerias-population-nears-240-million-amid-census-uncertainty-un-data-showsas-of/1508995707902813/"
+          },
+          {
+            "title": "Fact-checking Buhari's independence day speech - Africa Check",
+            "snippet": "At independence, Nigeria had a population of 45 million Verdict. The report estimates Nigeria's 1960 urban population at 6.96 million. The most ...",
+            "url": "https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day"
+          },
+          {
+            "title": "Capitalizing on Nigeria's demographic dividend - PMC - NIH",
+            "snippet": "This paper examines the age and sex composition of Nigeria as it relates to various population characteristics using the two most recent Demographic and Health ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4335263/"
+          },
+          {
+            "title": "Anyone else believe Nigeria's population figures are largely ...",
+            "snippet": "220-230 million most sources claim we are. Even at 160-170 million, we'd still be the most populated country in Africa. estimate Nigeria's ...",
+            "url": "https://www.reddit.com/r/geography/comments/160316l/anyone_else_believe_nigerias_population_figures/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-candidate",
+  "timestamp": "2026-11-06T00:09:22.361033+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3227.671
+}

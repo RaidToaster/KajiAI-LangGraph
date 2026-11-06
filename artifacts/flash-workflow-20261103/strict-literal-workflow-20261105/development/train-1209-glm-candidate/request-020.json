@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Judge finds Wisconsin elections commissioners in contempt of court, orders them to quickly remove people from the rolls, Milwaukee Journal Sentinel, Jan. 13, 2020.",
+        "candidates": [
+          {
+            "title": "Judge finds Wisconsin election officials in contempt over ...",
+            "snippet": "PORT WASHINGTON - An Ozaukee County judge found the state Elections Commission and three of its members in contempt of court Monday, saying they ...",
+            "url": "https://www.jsonline.com/story/news/politics/2020/01/13/judge-contempt-court-order-wisconsin-voter-rolls-case/2804070001/"
+          },
+          {
+            "title": "Judge finds Wisconsin election officials in contempt over ...",
+            "snippet": "Ozaukee County Circuit Judge Paul Malloy held state election officials in contempt of court for not following his order to remove thousands of ...",
+            "url": "https://www.jsonline.com/picture-gallery/news/local/wisconsin/2020/01/13/judge-finds-wisconsin-election-officials-contempt-over-voter-rolls/4457150002/"
+          },
+          {
+            "title": "Judge finds state Elections Commission in contempt on ...",
+            "snippet": "Ozaukee County Judge Paul Malloy found the state Elections Commission in contempt of court on Monday for failing to immediately purge more ...",
+            "url": "https://wisconsinexaminer.com/briefs/judge-finds-state-elections-commission-in-contempt-on-voter-purge/"
+          },
+          {
+            "title": "Wisconsin judge orders up to 209K voter names be deleted",
+            "snippet": "PORT WASHINGTON, Wis. — A Wisconsin judge on Monday found the state's bipartisan elections commission to be in contempt and ordered it to immediately begin ...",
+            "url": "https://www.sandiegouniontribune.com/2020/01/13/wisconsin-judge-orders-up-to-209k-voter-names-be-deleted/"
+          },
+          {
+            "title": "Judge Holds Elections Commissioners In Contempt In ...",
+            "snippet": "An Ozaukee County Circuit Court judge found three Wisconsin Elections Commission members and the commission in contempt of court Monday ...",
+            "url": "https://www.wpr.org/justice/judge-holds-elections-commissioners-contempt-wisconsins-voter-purge-case"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-05T10:18:56.605252+00:00",
+  "status": "reserved_outcome_unknown"
+}

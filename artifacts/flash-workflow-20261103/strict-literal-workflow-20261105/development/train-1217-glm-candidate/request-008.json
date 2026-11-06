@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "What clinical trials or regulatory approvals has this vaccine received, and from which health authorities?",
+        "candidates": [
+          {
+            "title": "Clinical development and approval of COVID-19 vaccines - PMC",
+            "snippet": "by U Kalinke · 2022 · Cited by 120 — 115 vaccine candidates had entered pre- clinical development and five were being investigated in Phase I clinical trials … by major regulatory authorities ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8935460/"
+          },
+          {
+            "title": "How Vaccines are Developed and Approved for Use",
+            "snippet": "Aug 10, 2024 — The vaccine manufacturing process. During Phase 3 clinical trials , FDA looks at the company's proposed manufacturing process for the vaccine . Read more",
+            "url": "https://www.cdc.gov/vaccines/basics/how-developed-approved.html"
+          },
+          {
+            "title": "Vaccine Development, Testing, and Regulation",
+            "snippet": "Jan 16, 2024 — The FDA has 30 days to review and approve this application. Once approved, the vaccine can be tested in three phases on humans. Clinical Studies ... Read more",
+            "url": "https://historyofvaccines.org/vaccines-101/how-are-vaccines-made/vaccine-development-testing-and-regulation/"
+          },
+          {
+            "title": "Explore Our Vaccine Clinical Trials",
+            "snippet": "Phase 4 clinical trials are conducted once the vaccine has received approval for use by regulatory authorities such as the U.S. FDA.",
+            "url": "https://www.pfizerclinicaltrials.com/our-research/vaccines"
+          },
+          {
+            "title": "An Overview Of Vaccine Development, Approval, And ...",
+            "snippet": "Vaccine approval comes under FDA authority through the Federal Food, Drug, and Cosmetic Act and is also governed by the Public Health Service Act, which ... Read more",
+            "url": "https://www.healthaffairs.org/doi/10.1377/hlthaff.2020.01620"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-05T10:36:09.506393+00:00",
+  "status": "reserved_outcome_unknown"
+}

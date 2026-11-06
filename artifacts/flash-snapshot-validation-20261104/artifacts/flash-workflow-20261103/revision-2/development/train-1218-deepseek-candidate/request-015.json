@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Senate roll call vote H.R. 3590 December 24 2009 Sanders vote",
+        "candidates": [
+          {
+            "title": "Senate Session | December 24, 2009",
+            "snippet": "The Senate passed the $871 billion health care bill, H.R. 3590, by a vote of 60 to 39. Senator Bunning (R-KY) was the only Senator not ...",
+            "url": "https://www.c-span.org/program/us-senate/senate-session/217353"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "On the Cloture Motion (Motion to Invoke Cloture on H.R. 3590 ). Vote Number: 395. Vote Date: December 23, 2009, 04:18 PM. Required For Majority ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00395.htm"
+          },
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient ...",
+            "snippet": "Roll Call Votes: There have been 36 roll call votes. Notes ... (This measure has not been amended since it was passed by the Senate on December 24, 2009.",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          },
+          {
+            "title": "CONGRESSIONAL RECORD—SENATE S13646",
+            "snippet": "CONGRESSIONAL RECORD—SENATE. S13646. December 21, 2009 ... 2837, to H.R. 3590. Under rule XV of the ... VerDate Nov 24 2008 00:08 Dec 22, 2009 Jkt 089060 ...",
+            "url": "https://www.govinfo.gov/link/crec/155/S/13646"
+          },
+          {
+            "title": "Senate Vote #376 (111th Congress): On the Motion (Crapo Motion t ...",
+            "snippet": "Bernie Sanders ... Vote #379 On the Motion to Table H.R. 3590. Motion ... Bill Passed (60-39) Dec 24, 2009. Source: Official U.S. Senate roll call vote data (senate ...",
+            "url": "https://senatordb.com/vote/111-1-376"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:30:12.091747+00:00",
+  "status": "reserved_outcome_unknown"
+}

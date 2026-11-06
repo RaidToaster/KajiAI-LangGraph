@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime.",
+        "query": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime. original source fact check",
+        "candidates": [
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Ruth Bader Ginsburg spent a lifetime flourishing in the face of adversity before being appointed a Supreme Court justice, where she successfully fought ...",
+            "url": "https://www.oyez.org/justices/ruth_bader_ginsburg"
+          },
+          {
+            "title": "Honoring the Life and Legacy of Justice Ruth Bader Ginsburg",
+            "snippet": "... death of Marty Ginsburg in 2010. Although many worried that she looked frail, the “Notorious RBG” became famous for her strength training regime ...",
+            "url": "https://www.arlingtoncemetery.mil/Blog/Post/12351/Honoring-the-Life-and-Legacy-of-Justice-Ruth-Bader-Ginsburg"
+          },
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Joan Ruth Bader Ginsburg was an American lawyer and jurist who served as an associate justice of the Supreme Court of the United States from 1993 until her ...",
+            "url": "https://en.wikipedia.org/wiki/Ruth_Bader_Ginsburg"
+          },
+          {
+            "title": "HONORING THE DEATH OF SUPREME COURT JUSTICE ...",
+            "snippet": "A fighter to the end, Justice Ginsburg defeated cancer and the odds numerous times — all while continuing to serve on the Court. Her commitment ...",
+            "url": "https://no.usembassy.gov/honoring-the-death-of-supreme-court-justice-ruth-bader-ginsburg/"
+          },
+          {
+            "title": "Remembering Supreme Court Justice Ruth Bader Ginsburg ...",
+            "snippet": "Supreme Court Justice Ruth Bader Ginsburg, who long stood for women's rights issues and became the court's second female justice, died ...",
+            "url": "https://www.youtube.com/watch?v=qOuA2_dauGc"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-baseline",
+  "timestamp": "2026-11-06T04:29:29.470109+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6558.781
+}

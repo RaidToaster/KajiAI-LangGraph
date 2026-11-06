@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald trump said: \"Joe Biden recently raised his hand on the debate stage and promised he was going to give it away, your health care dollars to illegal immigrants, which is going to bring massive number of immigrants into our country.\"",
+        "query": "Search for the official transcript or C-SPAN video of the June 2019 Democratic primary debate where candidates were asked about health care for undocumented immigrants, to verify whether Joe Biden raised his hand and what he said.",
+        "candidates": [
+          {
+            "title": "Democrats spar over immigration, health care at first night ...",
+            "snippet": "Democrats spar over immigration, health care at first night of June 2019 primary debate ... Al Green says he had to confront Trump. February ...",
+            "url": "https://www.washingtonpost.com/video/politics/democrats-spar-over-immigration-health-care-at-first-night-of-june-2019-primary-debate/2019/06/26/bba2b83c-f701-4ae3-8e98-b5c31676b0fc_video.html"
+          },
+          {
+            "title": "All 10 Candidates Support Health Care for Undocumented ...",
+            "snippet": "In Thursday night's presidential debate on NBC, all 10 Democratic hopefuls showed support for access to health care for everyone ...",
+            "url": "https://www.wsj.com/video/all-10-candidates-support-health-care-for-undocumented-immigrants/06B0B30E-7371-45C6-964B-1FFEDE399B59"
+          },
+          {
+            "title": "Democrats Say Health Plans Would Cover Undocumented ...",
+            "snippet": "All Democrats on the stage raised their hands when asked if their health care plan would offer coverage for undocumented immigrants ...",
+            "url": "https://www.youtube.com/watch?v=aMSmoNOZJ9Y"
+          },
+          {
+            "title": "Fact-checking Trump ad on Democrats, health care for ...",
+            "snippet": "Is it true that Democrats at a June debate said they support free health care — at the expense of taxpayers — for immigrants illegally in the ...",
+            "url": "https://politifact.com/factchecks/2019/aug/01/donald-trump/fact-checking-trump-ad-democrats-health-care-immig/"
+          },
+          {
+            "title": "2019 Democratic Debate | Rev",
+            "snippet": "See the full transcript of the debate below and use the video links to see the transcript text synced with video of the debate. June 28, 2019.",
+            "url": "https://www.rev.com/transcripts/transcript-from-night-2-of-the-2019-democratic-debates"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-482-deepseek-candidate",
+  "timestamp": "2026-11-06T05:13:36.791045+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9206.109
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US President Donald Trump following his positive diagnosis of COVID-19, was given treatment developed from the use of fetal tissue, made by the company Regeneron.",
+        "query": "Regeneron REGN-COV2 regulatory submission or peer-reviewed publication describing HEK293T pseudoparticle use in antibody selection and potency testing",
+        "candidates": [
+          {
+            "title": "REGEN-COV™ Antibody Cocktail Is Active Against SARS ...",
+            "snippet": "REGEN-COVTM (casirivimab and imdevimab antibody cocktail) successfully neutralizes the circulating SARS-CoV-2 variants first identified in the ...",
+            "url": "https://investor.regeneron.com/news-releases/news-release-details/regen-covtm-antibody-cocktail-active-against-sars-cov-2-variants"
+          },
+          {
+            "title": "Regeneron's COVID-19 Outpatient Trial Prospectively ...",
+            "snippet": "Results showed no significant difference in virologic or clinical efficacy between the REGN-COV2 high dose (8 grams) and low dose (2.4 grams).",
+            "url": "https://investor.regeneron.com/news-releases/news-release-details/regenerons-covid-19-outpatient-trial-prospectively-demonstrates"
+          },
+          {
+            "title": "Two Science Publications Highlight Potential of REGN-COV2 ...",
+            "snippet": "Regeneron scientists selected pairs of highly potent individual antibodies that simultaneously and non-competitively bind to the RBD. Regeneron ...",
+            "url": "https://newsroom.regeneron.com/news-releases/news-release-details/two-science-publications-highlight-potential-regn-cov2-anti"
+          },
+          {
+            "title": "REGN-COV2 antibodies prevent and treat SARS-CoV ... - PMC",
+            "snippet": "by A Baum · 2020 · Cited by 659 — We demonstrate that REGN-COV-2 can greatly reduce virus load in the lower and upper airways and decrease virus-induced pathological sequelae when administered ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7857396/"
+          },
+          {
+            "title": "Regeneron offers early look at COVID-19 antibody cocktail data",
+            "snippet": "Regeneron Pharmaceuticals has offered a first glimpse at data from closely watched studies of REGN-COV2, its antibody therapy for COVID-19.",
+            "url": "https://cen.acs.org/biological-chemistry/infectious-disease/Regeneron-offers-early-look-COVID/98/i38"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-158-deepseek-candidate",
+  "timestamp": "2026-11-06T02:02:24.928989+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 10010.234
+}

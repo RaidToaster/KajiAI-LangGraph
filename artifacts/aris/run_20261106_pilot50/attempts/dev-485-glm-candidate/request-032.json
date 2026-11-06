@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "Search the National Archives archived Trump White House website (trumpwhitehouse.archives.gov) for an official transcript or video page dated August 27, 2020 that contains the phrase \"Last month, I took on Big Pharma.\"",
+        "candidates": [
+          {
+            "title": "Archived Presidential White House Websites",
+            "snippet": "The archived websites are an excellent resource for photographs, speeches, press releases, digital data and other public domain records. Virtual Library ... Missing:  (trumpwhitehouse.  dated  27,  2020  Pharma.",
+            "url": "https://www.archives.gov/presidential-records/research/archived-white-house-websites"
+          },
+          {
+            "title": "Trump White House Archives - National Archives",
+            "snippet": "This is historical material “frozen in time”. The website is no longer updated and links to external websites and some internal pages may not work. Missing:  dated  August  27,  contains  Big",
+            "url": "https://trumpwhitehouse.archives.gov/"
+          },
+          {
+            "title": "President Trump Demands America First Prescription Drug ...",
+            "snippet": "President Donald J. Trump sent letters to 17 of the leading pharmaceutical companies outlining steps Missing:  archived  website  (trumpwhitehouse.  transcript  27,  +2",
+            "url": "https://www.whitehouse.gov/releases/2025/08/president-trump-demands-america-first-prescription-drug-pricing/"
+          },
+          {
+            "title": "Records Released In Response to Presidential Records Act ...",
+            "snippet": "The National Archives received records from the Trump Administration, which ended on January 20, 2021. We are in the process of preserving and providing access ... Missing:  (trumpwhitehouse.  transcript  video  27,  2020  +4",
+            "url": "https://www.archives.gov/foia/pra-trump-admin"
+          },
+          {
+            "title": "- THE LAW ENFORCEMENT EXPERIENCE ON JANUARY 6TH",
+            "snippet": "I want to start by showing a video that tells the story of what was going on in the Trump White House on election night in November 2020. Mr ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-117hhrg50139/html/CHRG-117hhrg50139.htm"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-glm-candidate",
+  "timestamp": "2026-11-06T01:36:58.238902+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8483.546
+}

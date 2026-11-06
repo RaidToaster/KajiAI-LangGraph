@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’",
+        "query": "Why should you pay more taxes than Donald Trump pays? evidence",
+        "candidates": [
+          {
+            "title": "Odds Are You Paid More In Federal Taxes Than Trump Did The ...",
+            "snippet": "ARNOLD: Now, conservatives argue that by lowering taxes for businesses, you help the whole economy because that creates more jobs and lifts all ... Missing:  evidence  | Show results with:",
+            "url": "https://www.npr.org/2020/09/30/918572938/odds-are-you-paid-more-in-federal-taxes-than-trump-did-the-year-he-took-office"
+          },
+          {
+            "title": "You Paid More Taxes Than Donald Trump",
+            "snippet": "Trump's real estate and resort businesses are mostly money losers, contributing to hundreds of millions of tax-deductible business losses each ... Missing:  evidence  | Show results with:",
+            "url": "https://ips-dc.org/you-paid-more-taxes-than-donald-trump/"
+          },
+          {
+            "title": "Here's Why You Pay More In Taxes Than Donald Trump",
+            "snippet": "\"I bet you pay more taxes than Donald Trump, who is the President of the United States.\" Bloomberg Opinion's Tim O'Brien explains why ... Missing:  pays?  evidence",
+            "url": "https://www.youtube.com/watch?v=YG5VFv8Y8qQ"
+          },
+          {
+            "title": "It's Time to Change the Tax Laws to Make Donald Trump and ...",
+            "snippet": "Donald Trump's tax skirting exceeds that of most rich people by miles. Most regular people pay taxes, most rich people pay taxes, and most ... Missing:  evidence  | Show results with:",
+            "url": "https://itep.org/its-time-to-change-the-tax-laws-to-make-donald-trump-and-corporate-giants-pony-up/"
+          },
+          {
+            "title": "[PDF] TAX FAIRNESS: PRESIDENT DONALD TRUMP, A CASE STUDY",
+            "snippet": "President Trump's tax payments, as reported by the NYT, are low by both standards. his taxes are not comparable: $750 is a small fraction of ...",
+            "url": "https://waysandmeans.house.gov/wp-content/uploads/2020/10/Rosenthal-Testimony.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-007-deepseek-baseline",
+  "timestamp": "2026-11-06T05:45:23.150924+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11112.468
+}

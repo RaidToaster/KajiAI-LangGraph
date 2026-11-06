@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "Pakistani Ministry of Foreign Affairs or Embassy in Paris statements on reported visa cancellations/deportations of Pakistani citizens in 2020",
+        "candidates": [
+          {
+            "title": "Ministry of Foreign Affairs Pakistan",
+            "snippet": "Profile Statements and Speeches Banner Image Submit Press Releases And Statements … of Foreign Affairs, to reaffirm Pakistan's unwavering support for the ...",
+            "url": "https://www.mofa.gov.pk/"
+          },
+          {
+            "title": "Reports about the cancellation of deportation orders in the ...",
+            "snippet": "According to the statement, deportations are carried out strictly on legal grounds, including visa violations and the use of invalid or illegal ...",
+            "url": "https://www.facebook.com/PediastanOfficial/posts/reports-about-the-cancellation-of-deportation-orders-in-the-united-arab-emirates/122257571966514082/"
+          },
+          {
+            "title": "Responses to Information Requests - Immigration and Refugee ...",
+            "snippet": "United Press International (UPI) reported that 87 Pakistani nationals were deported from the United States \"mostly for ignoring court orders to leave the ...",
+            "url": "https://www.irb-cisr.gc.ca/en/country-information/rir/Pages/index.aspx?doc=436011&pedisable=true&wbdisable=true"
+          },
+          {
+            "title": "“15,000 people have been deported.” New Lines Magazine 's ...",
+            "snippet": "15000 people have been deported.” New Lines Magazine 's Surbhi Gupta describes the punitive measures taken against Pakistanis residing in ...",
+            "url": "https://www.facebook.com/FRANCE24.English/videos/15000-people-have-been-deportednew-lines-magazine-s-surbhi-gupta-describes-the-p/1011996694721487/"
+          },
+          {
+            "title": "Pakistan rejects reports of politically motivated UAE ...",
+            "snippet": "Pakistan rejects reports of politically motivated UAE deportations as 'fake news' · Interior ministry says any deportations linked to immigration ...",
+            "url": "https://www.arabnews.pk/pakistan/pakistan-rejects-reports-of-politically-motivated-uae-deportations-as-fake-news-2642819"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-candidate",
+  "timestamp": "2026-11-06T04:24:41.379071+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6270.687
+}

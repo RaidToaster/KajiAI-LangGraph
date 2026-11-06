@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "deported 118 from the country. evidence",
+        "candidates": [
+          {
+            "title": "Third Country Deportations Tracker",
+            "snippet": "Third Country Deportations Tracker The tracker compiles publicly available information to document third country deportations from the United States.",
+            "url": "https://refugees.org/tcdtracker/"
+          },
+          {
+            "title": "These Men Were Deported to El Salvador With No Due ...",
+            "snippet": "The case of Frengel Reyes, who was deported to El Salvador despite having no tattoos, criminal history, or any possible connections to Tren de ...",
+            "url": "https://www.americanimmigrationcouncil.org/blog/men-deported-el-salvador-stories-investigation/"
+          },
+          {
+            "title": "THIRD COUNTRY DEPORTATION",
+            "snippet": "by S SHERMAN-STOKES · Cited by 22 — This article argues that “third country deportations” are not only part of this growing, and dangerous, trend toward deportations that happen ...",
+            "url": "https://mckinneylaw.iu.edu/practice/law-reviews/ilr/pdf/vol53p333.pdf"
+          },
+          {
+            "title": "Deportation | USAGov",
+            "snippet": "Learn how to get help if you are facing deportation. Locate someone who is detained by ICE, and know how to report an immigration violation.",
+            "url": "https://www.usa.gov/deportation"
+          },
+          {
+            "title": "Twenty migrants deported from the United States arrived in ...",
+            "snippet": "Twenty migrants deported from the United States arrived in Liberia on Thursday, the first group of up to 1,200 deportees that the West African ...",
+            "url": "https://www.facebook.com/trtafrika/videos/twenty-migrants-deported-from-the-united-states-arrived-in-liberia-on-thursday-t/1047120774746639/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-baseline",
+  "timestamp": "2026-11-06T04:22:18.317275+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6127.625
+}

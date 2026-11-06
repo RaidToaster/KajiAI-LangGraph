@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Grand Island New York town board meeting minutes 2016 2017 2018 tax levy vote record supervisor",
+        "candidates": [
+          {
+            "title": "Recorded Meetings - Grand Island, NY",
+            "snippet": "Agendas & Minutes Town Supervisor Messages from Supervisor. Access to Records Request Genealogical. Tax Information Advisory Boards Missing:  2018  levy  vote",
+            "url": "https://www.grand-island.ny.us/1530/Recorded-Meetings"
+          },
+          {
+            "title": "Town Board Meetings | Grand Island, NY",
+            "snippet": "Minutes are available following Town Board approval. View Most Recent Agendas and Minutes Missing:  2018  levy  vote  record  supervisor",
+            "url": "https://www.grandislandny.gov/241/Town-Board-Meetings"
+          },
+          {
+            "title": "[PDF] town board of the town of grand island - eCode360",
+            "snippet": "A regular meeting of the Town Board of Grand Island, New York was held at the Town. Hall, 2255 Baseline Rd., Grand Island, NY at 8:00p.m. on the 16th of April, ... Missing:  2016  2017",
+            "url": "https://ecode360.com/GR0053/document/437529713.pdf"
+          },
+          {
+            "title": "Agenda Center • Town Government - Grand Island, NY",
+            "snippet": "View current agendas and minutes for all boards and commissions. Search Agendas by: Time Period Traffic. Town Board Meeting Agenda. Agendas & Minutes Meeting ... Missing:  levy  vote  record  supervisor",
+            "url": "https://www.grandislandny.gov/AgendaCenter/Town-Government-12"
+          },
+          {
+            "title": "Jacob's charge that McMurray raised taxes on Grand Island is ...",
+            "snippet": "The town's official meeting minutes of the board session with the budget vote show that McMurray voted in favor of the increase. McMurray ...",
+            "url": "https://politifact.com/factchecks/2020/oct/28/chris-jacobs/jacobs-charge-mcmurray-raised-taxes-grand-island-c/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-candidate",
+  "timestamp": "2026-11-06T01:09:25.584056+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6830.89
+}

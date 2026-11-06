@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania. evidence",
+        "candidates": [
+          {
+            "title": "Bon Jovi did not play in front of just 12 people and 7 pumpkins at a Biden ...",
+            "snippet": "Fact check: Bon Jovi did not play in front of just 12 people and 7 pumpkins at a Biden campaign event. By Reuters. October 26, 20207:10 PM UTC ...",
+            "url": "https://www.reuters.com/article/world/fact-check-bon-jovi-did-not-play-in-front-of-just-12-people-and-7-pumpkins-at-a-idUSKBN27B2E9/"
+          },
+          {
+            "title": "Surging coronavirus colors White House race in closing days",
+            "snippet": "Musician Jon Bon Jovi performs at a campaign event for Democratic presidential candidate former Vice President Joe Biden at Dallas High ...",
+            "url": "https://www.clickorlando.com/news/politics/2020/10/24/trump-to-vote-in-fla-hold-3-rallies-biden-focuses-on-pa/"
+          },
+          {
+            "title": "VIDEO: Jon Bon Jovi campaigns for Biden in Dallas, Penn.",
+            "snippet": "Howard Stern Inducts Bon Jovi at the 2018 Rock & Roll Hall of Fame Induction Ceremony ... Jon Bon Jovi - Blaze Of Glory (Official Music Video).",
+            "url": "https://www.youtube.com/watch?v=-stewqcIc4Q"
+          },
+          {
+            "title": "Joe Biden's campaign is living on more than a prayer to help him win the White ...",
+            "snippet": "Jon Bon Jovi at a campaign event for Joe Biden presidential candidate ... He played for 12 people and 7 pumpkins. Largest crowd for him, in ...",
+            "url": "https://www.facebook.com/TomsRiver.org/posts/joe-bidens-campaign-is-living-on-more-than-a-prayer-to-help-him-win-the-white-ho/3276064329171534/"
+          },
+          {
+            "title": "Download file 4.75 MB",
+            "snippet": "... Jobs attempted to recruit Sean Connery for a 1998 Apple Christmas ad campaign. The fabricated letter was included in this humorous and fictional piece ...",
+            "url": "https://huggingface.co/datasets/fever/AVeriTeCFever8Dev/resolve/ad4871c74f79c951de161a72304baa9dfd59abeb/submissions/cca1ff1a-d404-4736-9179-00ada5e89ee0-ce3dd108-e8ac-483b-8eed-5b73da2e24e1.csv?download=true"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-baseline",
+  "timestamp": "2026-11-06T07:33:31.212859+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17600.531
+}

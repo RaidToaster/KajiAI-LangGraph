@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "Search for the original PRINCIPLE trial primary report (e.g., Lancet or medRxiv preprint) evaluating ivermectin for COVID-19 in community adults, rather than news summaries or secondary reviews.",
+        "candidates": [
+          {
+            "title": "Ivermectin for COVID-19 in adults in the community (PRINCIPLE ...",
+            "snippet": "The evidence for whether ivermectin impacts recovery, hospital admissions, and longer-term outcomes in COVID-19 is contested. The WHO recommends its use only in the context of clinical trials. In this multicentre, open-label, multi-arm, adaptive ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10981761/"
+          },
+          {
+            "title": "Results — PRINCIPLE Trial",
+            "snippet": "The analysis included 2,157 participants receiving ivermectin plus usual NHS care, compared with 3,256 participants receiving usual NHS care alone. Research paper: Ivermectin for COVID-19 in adults in the community (PRINCIPLE): an open, randomised, controlled, adaptive platform trial of short- and longer-term outcomes",
+            "url": "https://www.principletrial.org/results"
+          },
+          {
+            "title": "Ivermectin for COVID-19 in adults in the community (PRINCIPLE ...",
+            "snippet": "Ivermectin for COVID-19 is unlikely to provide clinically meaningful improvement in recovery, hospital admissions, or longer-term outcomes. Further trials of ivermectin for SARS-Cov-2 infection in vaccinated community populations appear unwarranted.",
+            "url": "https://www.journalofinfection.com/article/S0163-4453%2824%2900064-1/fulltext"
+          },
+          {
+            "title": "Ivermectin for COVID-19 in adults in the community (PRINCIPLE ...",
+            "snippet": "Methods Trial design We assessed the effectiveness of ivermectin in the UK national, multi-centre, primary care, open-label, multi-arm, prospective adaptive Platform Randomised trial of Treatments in the Community for Pandemic and Epidemic Illnesses (PRINCIPLE), which opened on April 2, 2020, and closed to recruitment on July 1, 2022.",
+            "url": "https://www.journalofinfection.com/article/S0163-4453(24)00064-1/pdf"
+          },
+          {
+            "title": "Examining the Evidence: Ivermectin and COVID-19 in the ...",
+            "snippet": "This section dives into the PRINCIPLE trial's specific methodology and comprehensive data on ivermectin's effectiveness, following participants for up to 12 months post-treatment in community settings. It aims to offer an objective, evidence-based overview of this repurposed drug's potential role.",
+            "url": "https://www.principletrial.org/principle-a-guide/examining-the-evidence-ivermectin-and-covid-19-in-the-principle-trial"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-candidate",
+  "timestamp": "2026-11-06T06:58:51.784480+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15521.093
+}

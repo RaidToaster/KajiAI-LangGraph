@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial.",
+        "query": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial. evidence",
+        "candidates": [
+          {
+            "title": "Did Sean Connery Send a Letter to Apple Rejecting ...",
+            "snippet": "A purported letter from Sean Connery caustically rejects an offer for him to become a pitchman for Apple Computers.",
+            "url": "https://www.snopes.com/fact-check/false-sean-connery-letter-to-apple/"
+          },
+          {
+            "title": "Steve Jobs 1983 Letter: Why He Refused to Sign Fan Autographs",
+            "snippet": "The post text clarifies that this speech was a commercial failure and that the actual product, the Macintosh, was released much later in 2010.",
+            "url": "https://www.facebook.com/61555458357249/videos/in-1983-steve-jobs-typed-this-reply-to-a-letter-asking-for-his-autograph/2269698850090930/"
+          },
+          {
+            "title": "No, Sean Connery didn't turn down an offer from Steve Jobs",
+            "snippet": "Connery told Steve Jobs that he flat-out refused to participate in an Apple ad. Why? Because Jobs was “a computer salesman” and Connery was “f* ...",
+            "url": "https://www.cultofmac.com/news/no-sean-connery-didnt-turn-down-an-offer-from-steve-jobs"
+          },
+          {
+            "title": "Fact Extraction and VERification",
+            "snippet": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial. The answer and sources show that the claim was published in a fake news site ...",
+            "url": "https://fever.ai/dataset_viewer/averitec/0.html"
+          },
+          {
+            "title": "No, Sean Connery Didn't Call Steve Jobs a 'Computer ...",
+            "snippet": "No, Sean Connery Didn't Call Steve Jobs a 'Computer Salesman'. The letter was published in 2011 on a satirical website called Scoopertino and ...",
+            "url": "https://www.thequint.com/news/webqoof/sean-connery-did-not-call-steve-jobs-a-computer-salesman"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-000-deepseek-baseline",
+  "timestamp": "2026-11-06T05:19:30.294207+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9559.609
+}

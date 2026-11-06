@@ -1,0 +1,621 @@
+
+===== PAGE 1 =====
+KajiAI: Auditable Claim V
+Research and Select
+Author N
+Department a
+City, C
+Email addres
+Abstract—A correct factual prediction does not necessarily
+provide verifiable evidence, and additional web research can
+changeapreviouslycorrectanswer.ThispaperpresentsKajiAI,a
+LangGraphworkflowthatseparatesalanguagemodel’sproposed
+verdict from an evidence-based acceptance decision. It records
+versionedretrievedtext,checksliteralquotationprovenance,ap-
+plies structural evidence requirements and model-based citation
+review, and repeats research within explicit resource budgets.
+A completed evaluation assessed all 500 AVeriTeC development
+claims using both the workflow and a model-only control, re-
+taining13executionfailures.Theworkflowachieved67.4%label
+accuracy and 0.500 macro F1, compared with 53.8% and 0.417
+for the control. The paired accuracy difference was 13.6 per-
+centagepoints,witha95%bootstrapintervalof8.6–18.6points.
+Thecompletegateaccepted44verdicts,ofwhich42matchedthe
+dataset labels; coverage was 8.8%. Additional rounds corrected
+18 predictions and changed 25 correct predictions into incorrect
+outcomes.Theseresultsshowwhypredictionquality,acceptance
+coverage, evidence support and research cost require separate
+measurement. Contemporary web access, development-set reuse
+and the absence of independent human citation validation limit
+the conclusions.
+Index Terms—automated fact-checking, retrieval-augmented
+generation,LangGraph,citationprovenance,selectiveprediction,
+AVeriTeC
+I. INTRODUCTION
+Automated fact-checking requires more than assigning a
+plausibly correct label. A system should identify evidence,
+connect that evidence to the claim, disclose uncertainty and
+preserve enough provenance for inspection. FEVER estab-
+lished an evidence-oriented task using claims derived from
+Wikipedia [1]. AVeriTeC extends this setting to real-world
+claims and web evidence [2]. Its shared-task score combines
+verdictcorrectnesswithevidencequality[3],emphasizingthat
+labelagreementaloneisanincompleteaccountofverification.
+Retrieval-augmented generation provides external informa-
+tion to a language model [4], but retrieved documents, cita-
+tions and repeated reasoning do not themselves guarantee an
+evidence-supported verdict. Citation evaluation distinguishes
+answer correctness from citation quality [5]. This distinction
+motivates an architecture in which prediction and acceptance
+are observable, separate decisions.
+We present KajiAI, an auditable workflow implemented
+with LangGraph. A model proposes a factual label and an
+evidence assessment. A gate checks retrieved citations, exact
+quotations, assertion coverage, source-host diversity and do-
+main requirements, followed by automated semantic citation
+Verification with Bounded
+tive Evidence Gates
+Name(s)
+and Institution
+Country
+ss or ORCID
+review. Failed checks preserve the prediction while withhold-
+ing an accepted verdict. Unresolved gaps can trigger further
+research, subject to limits on rounds, searches, page fetches,
+elapsed time and reported tokens.
+This paper examines three questions: RQ1, whether the
+complete workflow improves label prediction relative to the
+same model without retrieval; RQ2, how evidence checks
+affect coverage and accuracy among accepted verdicts; and
+RQ3, whether additional research improves saved predictions
+enough to justify its resource use.
+The contributions are an explicit state-and-provenance de-
+sign separating prediction from acceptance; a frozen, resum-
+able evaluation protocol with failure-inclusive scoring and
+fixed-evidence policy replay; and measurements exposing the
+interaction between accuracy, selective acceptance and itera-
+tion cost. LangGraph is the orchestration mechanism, rather
+than a proposed new learning algorithm. The experiment does
+notisolateaframeworkmigrationorestablishsuperiorityover
+other fact-checking systems.
+II. RELATEDWORK
+A. Evidence-Based Fact-Checking
+FEVER pairs supported and refuted claims with annotated
+evidence sentences [1]. AVeriTeC uses real-world claims,
+question–answer evidence and textual justifications from web
+sources [2]. The AVeriTeC shared task evaluates evidence
+retrieval and veracity prediction jointly [3]. We use its de-
+velopment labels for a local four-class study; our scores are
+not official AVeriTeC scores and cannot be directly compared
+with shared-task rankings.
+The 2025 AVeriTeC shared task instead specifies open-
+weight models, a precompiled evidence store, a single-GPU
+resourceconstraintandaone-minuteprocessinglimit[6].Our
+cloud-assisted,contemporary-webprotocoldoesnotreproduce
+those conditions.
+B. Retrieval and Citation Evaluation
+Lewis et al. introduced a retrieval-augmented formulation
+combining parametric generation with an external document
+memory [4]. Self-RAG learns retrieval and critique behaviors
+usingreflectiontokens[7].KajiAIdoesnottrainsuchamodel:
+its research loop uses structured assessments, query templates
+andexplicitroutingrules.Thismakesthebehaviorinspectable
+
+===== PAGE 2 =====
+while leaving query generation and stopping quality open to
+evaluation.
+FIRE integrates retrieval and verification iteratively, choos-
+ing a final judgment or another search query using confidence
+[8].EMULATEdistributessearch-resultrankingandwebpage-
+content assessment across agents [9]. Iterative research and
+role separation therefore precede KajiAI. Our empirical focus
+ispreservingsourceversions,separatingprovisionalprediction
+from rule-based acceptance, and measuring iteration effects
+in frozen traces; we do not claim these mechanisms are first
+proposed here.
+ALCE evaluates generated answers along fluency, correct-
+ness and citation quality dimensions [5]. Our literal-quote
+check addresses a narrower property: whether a quoted string
+occurs in stored text for its cited URL. A separate model
+reviews whether that quotation supports its attached finding.
+Neither mechanism independently establishes the truth of the
+overall verdict.
+C. Selective Prediction
+Selective classification introduces a reject option to trade
+coverage for accuracy on accepted instances [10]. KajiAI
+applies this perspective through evidence requirements rather
+than a learned selective classifier. We report coverage and
+conditional label accuracy without importing statistical risk
+guaranteesfromselective-learningmethods.Modelconfidence
+categories and citation-review confidence have not been cali-
+brated against independent human judgments.
+III. SYSTEMDESIGN
+A. Stateful Graph and Execution
+LangGraph supports stateful workflows combining deter-
+ministic operations and model calls [11]. Eight nodes execute
+KajiAI’s process in Fig. 1. The shared state includes the
+original claim, optional reference date, domain, assertions, re-
+trievalledger,researchhistory,proposedassessment,evidence
+gaps, budgets and stop reason. Individual claims follow a
+sequentialgraph;thestudyrunnerprocessesuptothreeclaims
+concurrently.
+The evaluated model is gemma4:31b-cloud, accessed
+through a local Ollama endpoint. The cloud model and Tiny-
+Fish and TypeSafe services make this a network-dependent
+implementation. Successfully fetched pages are reused within
+a claim. The study runner resumes at completed claim bound-
+aries; the graph has no persistent checkpoint store.
+Domain classification uses Jev when its confidence is at
+least 0.6, with an Ollama classifier and then keyword scoring
+as fallbacks. The profiles are general, scientific, political and
+health/medical. Decomposition is a deterministic conjunction
+heuristic, limited to six fragments; the original claim is al-
+ways retained. Fragments are coverage obligations within one
+assessment, rather than independently executed agents or a
+weighted verdict ensemble.
+Validateclaimandinitializestate
+Classifydomainandselectpolicy
+Decompose;retainoriginalclaim
+Retrieveandrecordversionedevidence
+Generatestructured
+evidenceassessment
+gaps
+Checkstructuralrules +budget
+andcitationsupport
+Routebygaps,failuresandbudgets
+acceptorstop
+Finalize:prediction,acceptancestatus,
+evidenceandexecutionaudit
+tupnidilavni
+Fig. 1. Explicit stateful workflow. Remaining gaps can trigger retrieval;
+failures, stagnation and budgets stop research. Finalization independently
+rechecksacceptanceconditions.
+B. Query Construction and Retrieval
+At round t, retrieval constructs an ordered list from (i)
+follow-upqueriesproposedinthepreviousassessment,(ii)the
+claim plus “evidence,” (iii) the claim plus “counterevidence,”
+(iv) each assertion plus “evidence,” and (v) each assertion
+plus “original source fact check.” It trims and deduplicates
+strings, excludes previously used queries and selects the first
+two remaining candidates when the budget permits.
+Candidate construction therefore combines model sugges-
+tionswithhardcodedtemplates.Nolearnedoptimizerchooses
+the best query. Jev ranks returned URLs for fetching, a
+separate decision from choosing a query. TinyFish supplies
+up to five results per search and up to two full-page fetch
+attempts per search. Failed fetches leave available snippets in
+the ledger.
+A source record stores the URL, query, provider, retrieval
+time, snippet or page text, content hash and review scores.
+Full-page text is preferred to a snippet for the same URL,
+truncatedto20,000charactersandhashedaftertruncation.The
+canonical record used in an assessment is retained by URL
+and hash, permitting replay against the same text version. Jev
+sourcereviewestimatesrelevance,evidencevalue,counterevi-
+dencevalueandinjectionrisk.Reviewedrecordswithinjection
+scoreatleast0.9,orallthreerelevance/evidencescoresbelow
+0.1, are excluded from usable evidence. Unreviewed records
+retain permissive defaults; this filter is not a demonstrated
+injection defense.
+C. Prediction and Acceptance
+The analyzer returns a structured assessment containing a
+verdict,confidencecategory,findings,citedURLs,quotations,
+assertion resolutions, contradictions, gaps and next queries. It
+
+===== PAGE 3 =====
+alsoreportssourceindependence,counterevidencesearchand,
+where required, peer-reviewed support. These model-reported
+flagsarepolicyinputsratherthanindependentlyverifiedfacts.
+Let yˆ be the proposed label for claim i, and G and G
+i s m
+the structural and semantic gap sets. Acceptance is
+a =1{G =∅, G =∅, F =0}, (1)
+i s m i
+where F indicates execution failure. The accepted output is
+i {
+yˆ, a =1,
+y˜ = i i (2)
+i ⊥, a =0,
+i
+where ⊥ is operational abstention, not the factual NEI class.
+Structural acceptance requires a decisive verdict and High
+confidence; nonempty retrieved citations for every finding;
+literal quotations in canonical source text; complete assertion
+coverage;atleasttwocitedhosts;noflaggedduplicatelineage
+among cited sources; and no unresolved gaps or contradic-
+tions.Atoken-setJaccardthresholdof0.85flagssubstantially
+similar source text. Counterevidence and independence flags
+must be positive. Scientific claims require HTTPS citations;
+health/medical claims require the peer-review flag. A con-
+flicting verdict additionally requires supporting and refuting
+findings. Distinct hosts, text dissimilarity and model flags do
+not prove actual independence.
+Foreacheligiblefinding–URL–quotationtriple,Jevreviews
+the quotation and up to 1,200 surrounding characters on each
+side. Semantic acceptance requires a “supports” relation with
+confidence at least 0.8 for every citation. Missing or failed
+citation checks block acceptance. Review identity includes
+finding, URL, quotation and content hash; finalization repeats
+structuralchecksandconfirmsreviewcoverage.Thistestsquo-
+tationsupportforanattachedfinding,nottheentireinferential
+chain from documents to verdict.
+D. Bounded Research and Auditability
+When gaps remain, routing allows further research if exe-
+cutionhasnotfailedandresourceandstagnationlimitspermit
+it. Twoconsecutive rounds with no newledger records trigger
+a stagnation stop. A new record can be a changed snippet for
+an already fetched URL, so ledger growth is not equivalent to
+new usable evidence.
+Each round retains its raw assessment, exact usable source
+versions, gaps, budget snapshot, elapsed time and stop deci-
+sion.Reportedtokenusageisaggregated,withacompleteness
+flag when accounting is unavailable. Time and token limits
+govern scheduling; an in-flight request can finish after the
+soft deadline or exceed the reported-token threshold. Missing
+usage prevents a guaranteed spend cap. The report preserves
+proposed and accepted verdicts separately and distinguishes
+insufficient evidence from execution errors.
+IV. EVALUATIONPROTOCOL
+A. Dataset and Frozen Conditions
+The completed study assesses all 500 AVeriTeC devel-
+opment claims in two conditions. The split contains 122
+Supported, 305 Refuted, 35 Not Enough Evidence and 38
+TABLEI
+FROZENEVALUATIONCONFIGURATION
+Setting Value
+Mainmodel/temperature gemma4:31b-cloud/0
+Reviewmodel/threshold jev-1.13.0/0.8
+Researchlimitsperclaim 3rounds;300ssoftdeadline
+Search/fetchceilings 20logicalsearches;20fetches
+Budgetedreportedtokens 250,000aggregatereportedtokens
+Per-roundretrieval Upto2queries;2fetches/query
+Studyscheduling 3workers;seed20261009
+Installedlibraries LangGraph1.2.11;Pydantic2.13.5;Type-
+SafeSDK0.7.1
+Conflicting Evidence/Cherrypicking labels. Only claim text
+and claim date are supplied as dataset inputs to inference.
+Goldlabels,justificationsandannotatedevidencearereserved
+for scoring and post hoc audit. Both conditions use the same
+model, temperature and structured-output adapter.
+The model-only control produces one verdict from existing
+model knowledge without search, domain routing or an evi-
+dence gate. The full workflow applies the architecture above.
+Theircomparisonmeasuresthecombinedworkflow,including
+its different prompt and evidence context; it does not isolate
+retrieval, Jev or LangGraph individually. The first-round con-
+dition truncates saved full-workflow trajectories rather than
+constituting a separately executed system.
+Table I summarizes the protocol. Claim-condition tasks
+were shuffled with a fixed seed, but contemporary search
+andcloud-modelresponsesremainexternallyvariable.Source,
+configuration, package versions, dataset bytes and hashes
+are archived. Earlier exploratory runs used different source
+versions and are excluded. Resume checks reject changes to
+the frozen inference configuration.
+The local reproducibility bundle, study-20261009-v3,
+contains the run manifest, source archive, dataset snapshot,
+raw JSONL records and per-claim replay results. Source
+and dataset SHA-256 prefixes are 624a8d2fa125 and
+499793726b4a,respectively;themanifestretainstheircom-
+plete hashes. The plotting script reads saved metrics, without
+issuing additional service calls.
+The study completed 500 full-workflow and 500 model-
+only attempts on the same claims. Ollama’s monthly usage
+limitinterruptedexecutionafter302workflowand283control
+attempts. Execution resumed after additional credits were
+supplied,withtheoriginalmodel,source,datasetandsettings.
+The seven earlier quota failures remain recorded rather than
+beingretriedorreplaced.Laterconcurrent-slottimeoutshalted
+scheduling;restartingthelocalOllamadaemoninterruptedtwo
+pendingcontrolrequests.Thesefailuresalsoremainrecorded,
+andonlyunattemptedtaskswereresumed.Intotal,8workflow
+and 5 control attempts ended in fatal execution errors. All
+1,000plannedclaim-conditionattemptsareretainedinscoring.
+B. Metrics and Uncertainty
+The evaluation schema maps TRUE, FALSE,
+NOT_ENOUGH_EVIDENCE and CONFLICTING to
+
+===== PAGE 4 =====
+the four dataset labels. Generic MISLEADING predictions
+are not equated with the conflicting-evidence class. The
+evidence gate accepts decisive labels only, excluding NEI by
+design. Accepted NEI recall is therefore zero even when raw
+predictions are correct.
+For n attempted claims and gold labels y , raw accuracy,
+i
+coverage and selective accuracy are
+∑n
+1
+A= 1{yˆ =y }, (3)
+n i i
+i=1
+∑n
+1
+C = a , (4)
+n i
+∑i=1
+n a 1{yˆ =y }
+A = i=1∑i i i . (5)
+sel n a
+i=1 i
+Selective accuracy is undefined when no output is accepted.
+MacroF1averagesF1acrossthefourgoldclasses;abstentions
+contribute missed predictions without becoming a fifth gold
+class.End-to-endaccepted-labelaccuracyisCA ,preventing
+sel
+conditional accuracy from obscuring low coverage.
+Fatal errors remain in the denominator. Failure-inclusive
+scoring treats them as abstentions; raw scoring can preserve
+an earlier prediction if a later service fails. Raw and failure-
+inclusiveaccuraciescoincide.Wereport95%Wilsonintervals
+forproportions,apairedaccuracybootstrapwith2,000claim-
+level resamples and seed 20261009, and an exact two-sided
+McNemar test. These intervals treat claims as sampling units;
+they do not capture correlated topics, shared-source effects,
+model drift, service availability or web changes.
+C. Offline Policy Replay and Citation Audit
+Policy replay applies alternative acceptance rules to the
+samesavedfinalassessmentsandsourceversions.Wecompare
+structural-only acceptance with the full gate and semantic
+thresholdsfrom0.5to0.95.Replaycannotshowhowchanging
+a gate would alter later retrieval or reasoning. Removing
+exact-quote requirements also changes eligibility for semantic
+review, so it is not an isolated semantic ablation.
+Citation measurements count finding–URL occurrences in
+final assessments, including repeated URLs across findings.
+A blinded human-audit worksheet contains 454 citation rows
+from 44 accepted and 50 sampled rejected claims; labels and
+acceptance status are stored separately. Human annotation
+fields remain blank. Automated Jev judgments are measure-
+ments rather than independent human ground truth.
+V. RESULTS
+A. Paired Label Prediction
+Bothconditionsassessthesame500claims:122Supported,
+305Refuted,35NEIand38Conflictinglabels.TableIIreports
+the paired label results, including failed attempts.
+Full predictions are correct on 337 claims, compared with
+269 for the control. The workflow is correct on 117 claims
+missedbythecontrol,whilethecontroliscorrecton49missed
+by the workflow; both are correct on 220 and both are wrong
+on 114. The paired accuracy difference is 13.60 percentage
+TABLEII
+PREDICTIONRESULTSONALL500CLAIMS
+Condition Accuracy(%) 95%CI MacroF1
+AlwaysRefuted 61.0 56.7–65.2 0.189
+Modelonly 53.8 49.4–58.1 0.417
+Firstround† 68.8 64.6–72.7 0.530
+Finalworkflow 67.4 63.2–71.4 0.500
+†Saved-trajectorytruncation,notaseparateliveone-roundcondition.Wilson
+intervals;locallabelmetrics,notofficialAVeriTeCevidencescores.
+TABLEIII
+ACCEPTANCEREPLAYON500FINALASSESSMENTS
+Policy Accepted Coverage(%) Correct/accepted
+Structuralonly 50 10.0 45/50(90.0%)
+Structural+Jev 44 8.8 42/44(95.5%)
+Conditional accuracy 95% CI: 78.6–95.7% for structural-only replay; 84.9–
+98.7%forthefullgate.
+points (bootstrap 95% CI: 8.60–18.60); exact McNemar p =
+1.35×10−7.
+The majority baseline achieves 61.0% accuracy because
+Refuted dominates the split, but its macro F1 is only 0.189.
+The workflow improves accuracy and macro F1 over the
+model-only control. It predicts the conflicting class 98 times,
+compared with 38 gold conflicting labels. Its NEI recall is
+17.1%, compared with 40.0% for the control. Improvement is
+therefore not uniform across classes.
+B. Selective Acceptance
+Table III compares acceptance rules on all 500 saved
+finalassessments.Rawpredictionaccuracyandaccepted-label
+accuracy represent different outcomes.
+The full gate withholds 6 outputs accepted by structural-
+only replay: 3 wrong labels and 3 correct labels. It accepts 35
+Refuted,9Supported; NEI isexcludedby design.Itscoverage
+interval is 6.6–11.6%; end-to-end accepted-label accuracy is
+8.4%. The gate rejects 295 correct raw predictions and 161
+wrongones.Itsobserved95.5%conditionalaccuracydescribes
+asmallselectedsubsetanddoesnotguaranteecorrectaccepted
+verdicts.
+Both accepted errors have gold conflicting-evidence labels
+butreceiveRefutedpredictions.Passingquotation-supportand
+structural checks therefore does not ensure the correct claim-
+level label.
+Figure 2 shows descriptive threshold replay. Stricter thresh-
+olds reduce coverage, while lower thresholds can admit ad-
+ditional outputs. Selecting a threshold from this development
+analysis would require separate validation.
+C. Effect of Additional Research
+First-round accuracy is 68.8%, compared with 67.4% for
+final predictions. Additional rounds change 62 predictions:
+18 wrong-to-correct, 25 correct-to-wrong and 19 between
+incorrect labels. The final-minus-first difference is −1.40 per-
+centage points (bootstrap 95% CI: −4.00 to 1.20). Excluding
+
+===== PAGE 5 =====
+100
+80
+60
+40
+20
+0
+0.50 0.60 0.70 0.80 0.90 0.95
+Citation-review confidence threshold
+egatnecreP
+Coverage
+Accuracy among accepted
+Fig.2. Semantic-thresholdreplayonall500finalassessments.Evidenceand
+structuralrulesarefixed;thecurvedoesnotestablishanoptimalthreshold.
+8 fatal attempts yields −0.81 points on 492 nonfatal attempts,
+with an interval of −3.25 to 1.63.
+Thesesavedtrajectoriesquantifytheobservedeffectoflater
+research, while a separately deployed one-round system can
+behave differently because timing and search responses can
+change. Of the attempted workflows, 452 use 3 rounds, 30
+use 2 rounds, 18 use 1 round. The prevalence of the round
+limit warrants evaluating stopping behavior.
+The paired intervals include zero, so the negative point
+estimate does not establish a negative average iteration effect.
+Individual harmful changes and additional resource use still
+warrant examining stopping policies.
+D. Citation Diagnostics and Resource Use
+Final assessments contain 2,611 citation occurrences. Of
+these, 1,914 have literal quotes present in canonical text
+and 1,914 have Jev reviews. 34 reviewed quotes receive a
+relationotherthan“supports,”and158receivesupportingcon-
+fidence below 0.8. The remaining 697 occurrences fail literal
+provenance matching. They are not automatically counted as
+hallucinations: a quotation can refer to a snippet differing
+fromthepreferredfull-pagetext,orexhibitanotherprovenance
+mismatch.
+Final structural gaps include missing exact quotations on
+353 claims and insufficient independence flags on 357; these
+categories overlap. A host-exposure audit unwraps Wayback
+Machine URLs before comparison. On 208 of 500 claims, a
+cited host matches the host of the dataset’s fact-check article.
+Host equality does not prove exact-article exposure, and an
+unmatched host does not exclude other exposure routes.
+Intheposthochost-match group,workflowandcontrol ac-
+curaciesare77.9%and50.5%(208claims);intheunmatched
+grouptheyare59.9%and56.2%(292claims).Groupsdepend
+on workflow citations and differ in class composition. This
+is a descriptive exposure audit, not a causal comparison or
+contamination-free score.
+Table IV reports operational totals. There are 551 recorded
+fetch failures and 2 Jev ranking failures, distinct from fatal
+TABLEIV
+OPERATIONALMEASUREMENTSON500TASKSPERCONDITION
+Measurement Fullworkflow Modelonly
+Attemptedtasks 500 500
+Fatalexecutionerrors 8 5
+Meanelapsedtime(s) 79.2 7.7
+Medianelapsedtime(s) 72.1 3.4
+90thpercentiletime(s) 120.1 9.0
+Logicalsearchcalls 2,049 0
+Page-fetchattempts 3,953 0
+Observedmodeltokens 34,452,832 183,416
+Same500claiminputs;tokensaggregateprovidersandaccountingisincom-
+plete.Concurrenttaskdurationsarenotstudywall-clocktime.
+execution errors. The 934 rounds after the first consume
+1,049 searches, 2,013 fetch attempts and 23,546,637 observed
+tokens; 263 add no new ledger records. Incomplete provider-
+level accounting prevents an exact monetary-cost estimate.
+Iteration cost and the saved accuracy changes support investi-
+gating evidence novelty and stopping rules.
+VI. DISCUSSIONANDLIMITATIONS
+A. What the Results Support
+The paired comparison offers evidence that the combined
+workflow improves label prediction over this control. Accep-
+tance replay shows semantic checks removing wrong labels
+from a structurally eligible subset while also rejecting correct
+labels. Trace analysis identifies a cost-bearing failure mode in
+repeated research. These observations support treating predic-
+tion, acceptance and resource use as separate outcomes.
+TheydonotestablishacausaladvantageofLangGraphover
+CrewAI, a hallucination-reduction percentage or benchmark-
+leading performance. No independently executed retrieval-
+only,Jev-disabledoralternative-frameworkconditionhasbeen
+completed. Fixed-assessment replay audits acceptance policy
+but cannot replace those experiments.
+B. Threats to Validity
+Service availability: All planned claim-condition attempts
+are complete, including 13 recorded fatal failures. Quota and
+concurrent-slot interruptions required resumption across time.
+Aposthocsensitivityanalysison487pairswithoutfatalerrors
+gives a workflow-minus-control difference of 14.37 points
+(bootstrap95% CI:9.45–19.10);remoteresponsesandcurrent
+web results can drift. Retaining failures exposes operational
+performance, while rerunning failed claims and silently re-
+placing them would change the experiment.
+Temporal and verdict exposure: Retrieval uses the con-
+temporary web without a historical publication cutoff. Later
+reports and published verdicts can help predict older claims.
+OriginalAVeriTeCannotationsaddresstemporalevidencecon-
+cerns [2], but our protocol does not reproduce that constraint.
+Pretraining exposure is unknown, and the repeatedly used
+development split is not a pristine held-out test.
+Evidence validity: Literal checks verify provenance only.
+Jevsupportjudgmentslackindependentcalibrationandhuman
+
+===== PAGE 6 =====
+entailment labels. Model-reported independence and peer-
+review flags can be wrong. Text similarity can miss para-
+phrased copying or flag legitimate overlap; snippets can omit
+qualifying context. The prepared human audit has not been
+performed.
+Taskandcontrolscope:Differentpromptsmakethemodel-
+only comparison a combined-workflow effect. Heuristic de-
+composition can create incomplete fragments. Excluding NEI
+from acceptance restricts task coverage. Multilingual, mul-
+timodal, adversarial and user-facing behavior has not been
+evaluated.
+Reproducibility: Hashes preserve source and text, not fu-
+ture service responses. Temperature zero does not guarantee
+bitwise reproducibility. Soft deadlines, incomplete token ac-
+countingandquotasaffectmeasurements.Secretsareexcluded
+from archived artifacts.
+C. Next Evaluation Steps
+Independent human review should assess citation support
+and source credibility. A separate study can compare one-
+round and iterative workflows under controlled retrieval and
+test stopping rules based on usable-evidence novelty rather
+than ledger growth. A held-out, temporally constrained eval-
+uation and independently executed retrieval-only and Jev-
+disabled conditions would better isolate the contribution of
+each mechanism. Such changes must be versioned and eval-
+uated separately to avoid mixing post hoc improvements into
+this condition.
+VII. CONCLUSION
+KajiAI makes proposed verdicts, evidence acceptance and
+research history independently inspectable. In a completed
+500-claim AVeriTeC development evaluation, the workflow
+improves paired label accuracy over a model-only control,
+while a strict gate accepts few claims and later research can
+worsen saved predictions. The measured tradeoff concerns
+coverage, conditional correctness and cost. Independent cita-
+tion validation, held-out evaluation and controlled studies of
+revised stopping policies remain necessary.
+ACKNOWLEDGMENT
+OpenAI Codex assisted with drafting Sections I–VII, cre-
+ating the architecture diagram and data-driven plotting code,
+andauditingevaluationscriptsandregressiontests.Numerical
+results were computed from saved execution records. Inde-
+pendent human citation validation was not performed. The
+authors are responsible for reviewing the manuscript, sources
+and findings before submission.
+REFERENCES
+[1] J.Thorne,A.Vlachos,C.Christodoulopoulos,andA.Mittal,“FEVER:
+A large-scale dataset for fact extraction and verification,” in Proc.
+NAACL-HLT,vol.1,2018,pp.809–819,doi:10.18653/v1/N18-1074.
+[2] M. Schlichtkrull, Z. Guo, and A. Vlachos, “AVeriTeC: A dataset for
+real-worldclaimverificationwithevidencefromtheweb,”inAdvances
+in Neural Information Processing Systems, vol. 36, 2023. [Online].
+Available:https://arxiv.org/abs/2305.13117
+[3] M.Schlichtkrulletal.,“TheAutomatedVerificationofTextualClaims
+(AVeriTeC)sharedtask,”inProc.SeventhFactExtractionandVERifi-
+cationWorkshop,2024,pp.1–26,doi:10.18653/v1/2024.fever-1.1.
+[4] P.Lewisetal.,“Retrieval-augmentedgenerationforknowledge-intensive
+NLPtasks,”inAdvancesinNeuralInformationProcessingSystems,vol.
+33,2020.[Online].Available:https://arxiv.org/abs/2005.11401
+[5] T.Gao,H.Yen,J.Yu,andD.Chen,“Enablinglargelanguagemodels
+togeneratetextwithcitations,”inProc.EMNLP,2023,pp.6465–6488,
+doi:10.18653/v1/2023.emnlp-main.398.
+[6] M. Akhtar et al., “The 2nd Automated Verification of Textual Claims
+(AVeriTeC) shared task: Open-weights, reproducible and efficient sys-
+tems,” in Proc. Eighth Fact Extraction and VERification Workshop,
+2025,pp.201–223,doi:10.18653/v1/2025.fever-1.15.
+[7] A.Asai,Z.Wu,Y.Wang,A.Sil,andH.Hajishirzi,“Self-RAG:Learning
+to retrieve, generate, and critique through self-reflection,” in Proc.
+InternationalConferenceonLearningRepresentations,2024.[Online].
+Available:https://arxiv.org/abs/2310.11511
+[8] Z. Xie et al., “FIRE: Fact-checking with iterative retrieval and verifi-
+cation,” in Findings of the Association for Computational Linguistics:
+NAACL 2025, 2025, pp. 2901–2914, doi: 10.18653/v1/2025.findings-
+naacl.158.
+[9] S.Hong,M.Luo,andX.Wan,“EMULATE:Amulti-agentframework
+for determining the veracity of atomic claims by emulating human
+actions,” in Proc. Eighth Fact Extraction and VERification Workshop,
+2025,pp.179–183,doi:10.18653/v1/2025.fever-1.13.
+[10] Y. Geifman and R. El-Yaniv, “Selective classification for deep neural
+networks,”inAdvancesinNeuralInformationProcessingSystems,vol.
+30,2017.[Online].Available:https://arxiv.org/abs/1705.08500
+[11] LangChain,“LangGraphoverview.”Accessed:Oct.10,2026.[Online].
+Available:https://docs.langchain.com/oss/python/langgraph/overview

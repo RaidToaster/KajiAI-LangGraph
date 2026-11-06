@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Lindsey Graham office statement denying Trump virus quote 2020",
+        "candidates": [
+          {
+            "title": "That Viral Lindsey Graham Quote Saying Trump Knows ...",
+            "snippet": "The quote, which cites Graham saying that Trump will \"eradicate this plague,\" originated from a satire Twitter account.",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087"
+          },
+          {
+            "title": "Lindsey Graham quote on Trump knowing more about ...",
+            "snippet": "Quotes Sen. Lindsey Graham as saying President Trump “probably knows more about medicine and specifically viruses than any of the so-called ...",
+            "url": "https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/"
+          },
+          {
+            "title": "Sen. Lindsey Graham responds to President Trump's ...",
+            "snippet": "“This is a difficult situation for the world at large. We must be agile and aggressive in our approach to containing this virus. I'm confident ...",
+            "url": "https://wpde.com/news/local/sen-lindsay-graham-responds-to-president-trumps-coronavirus-response"
+          },
+          {
+            "title": "Did US Sen. Graham Say Trump Knows More Than CDC ...",
+            "snippet": "Lindsey Graham said, \"President Trump probably knows more about medicine and specifically viruses than any of the so-called scientists at the ...",
+            "url": "https://www.snopes.com/fact-check/lindsey-graham-trump-cdc/"
+          },
+          {
+            "title": "Sen. Lindsey Graham Supports Trump's Response to COVID ...",
+            "snippet": "The South Carolina senator says the nation is “struggling with testing at a large scale” and the US has to hold China accountable if it ...",
+            "url": "https://www.youtube.com/watch?v=n0-2baZ9o9U"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-deepseek-candidate",
+  "timestamp": "2026-11-03T06:07:25.073250+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,111 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://www.nytimes.com/2020/08/26/us/politics/the-obama-biden-administration-secretly-launched-a-surveillance-operation-on-the-trump-campaign.html contains verbatim: It also wiretapped Carter Page, a former Trump campaign adviser with many ties to Russian intelligence officials; by the time the F.B.I. applied ...",
+            "url": "https://www.nytimes.com/2020/08/26/us/politics/the-obama-biden-administration-secretly-launched-a-surveillance-operation-on-the-trump-campaign.html",
+            "quote": "It also wiretapped Carter Page, a former Trump campaign adviser with many ties to Russian intelligence officials; by the time the F.B.I. applied ...",
+            "context": "It also wiretapped Carter Page, a former Trump campaign adviser with many ties to Russian intelligence officials; by the time the F.B.I. applied ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.pbs.org/newshour/politics/top-u-s-intel-officer-confirms-warrantless-searches-americans contains verbatim: The Obama administration has been conducting warrantless searches of Americans' communications as part of the NSA's surveillance operations ... Missing:  evidence  exists  directed,  Biden",
+            "url": "https://www.pbs.org/newshour/politics/top-u-s-intel-officer-confirms-warrantless-searches-americans",
+            "quote": "The Obama administration has been conducting warrantless searches of Americans' communications as part of the NSA's surveillance operations ... Missing:  evidence  exists  directed,  Biden",
+            "context": "The Obama administration has been conducting warrantless searches of Americans' communications as part of the NSA's surveillance operations ... Missing:  evidence  exists  directed,  Biden"
+          },
+          {
+            "finding": "Retained snippet record for https://www.bbc.com/news/articles/cx2l01ek0y7o contains verbatim: It was declassified on Wednesday, a day after President Trump accused former President Barack Obama of leading an effort to falsely tie him to ...",
+            "url": "https://www.bbc.com/news/articles/cx2l01ek0y7o",
+            "quote": "It was declassified on Wednesday, a day after President Trump accused former President Barack Obama of leading an effort to falsely tie him to ...",
+            "context": "It was declassified on Wednesday, a day after President Trump accused former President Barack Obama of leading an effort to falsely tie him to ..."
+          },
+          {
+            "finding": "Retained snippet record for https://en.wikipedia.org/wiki/Allegations_of_Barack_Obama_spying_on_Donald_Trump contains verbatim: In July 2025, Tulsi Gabbard distributed documents that she insinuated placed guilt for certain members of the Obama administration, that she termed \"treasonous\" ...",
+            "url": "https://en.wikipedia.org/wiki/Allegations_of_Barack_Obama_spying_on_Donald_Trump",
+            "quote": "In July 2025, Tulsi Gabbard distributed documents that she insinuated placed guilt for certain members of the Obama administration, that she termed \"treasonous\" ...",
+            "context": "In July 2025, Tulsi Gabbard distributed documents that she insinuated placed guilt for certain members of the Obama administration, that she termed \"treasonous\" ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.nytimes.com/2019/12/17/us/politics/fisa-court-order-fbi-surveillance.html contains verbatim: Dec 17, 2019 — WASHINGTON — A secretive federal court accused the F.B.I. on Tuesday of misleading judges about the rationale for wiretapping a former Trump ... Read more",
+            "url": "https://www.nytimes.com/2019/12/17/us/politics/fisa-court-order-fbi-surveillance.html",
+            "quote": "Dec 17, 2019 — WASHINGTON — A secretive federal court accused the F.B.I. on Tuesday of misleading judges about the rationale for wiretapping a former Trump ... Read more",
+            "context": "Dec 17, 2019 — WASHINGTON — A secretive federal court accused the F.B.I. on Tuesday of misleading judges about the rationale for wiretapping a former Trump ... Read more"
+          },
+          {
+            "finding": "Retained snippet record for https://www.npr.org/2020/01/11/795566486/fbi-apologizes-to-court-for-mishandling-surveillance-of-trump-campaign-adviser contains verbatim: Jan 11, 2020 — The FBI apologized to the secret court that handles national security investigations for the way it conducted surveillance of a former Trump ... Read more",
+            "url": "https://www.npr.org/2020/01/11/795566486/fbi-apologizes-to-court-for-mishandling-surveillance-of-trump-campaign-adviser",
+            "quote": "Jan 11, 2020 — The FBI apologized to the secret court that handles national security investigations for the way it conducted surveillance of a former Trump ... Read more",
+            "context": "Jan 11, 2020 — The FBI apologized to the secret court that handles national security investigations for the way it conducted surveillance of a former Trump ... Read more"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_4": {
+          "type": "choice",
+          "instructions": "Does `citations[4].context`, including the quote, support `citations[4].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_5": {
+          "type": "choice",
+          "instructions": "Does `citations[5].context`, including the quote, support `citations[5].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-candidate",
+  "timestamp": "2026-11-06T04:33:44.686135+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6814.0
+}

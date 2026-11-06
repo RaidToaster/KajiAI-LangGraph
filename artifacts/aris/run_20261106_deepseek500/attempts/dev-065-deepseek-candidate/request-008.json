@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "What was the actual dollar amount of the ACA individual shared responsibility penalty, and how did it vary by year, income, and family size?",
+        "candidates": [
+          {
+            "title": "Questions and answers on the individual shared responsibility ...",
+            "snippet": "Enacted in December 2017, the Tax Cuts and Jobs Act (TCJA) reduced the shared responsibility payment to zero for tax year 2019 and all subsequent years.",
+            "url": "https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-individual-shared-responsibility-provision"
+          },
+          {
+            "title": "The Cost of the Individual Mandate Penalty for the Remaining ...",
+            "snippet": "A flat dollar amount equal to $695 per adult plus $347.50 per child, up to a maximum of $2,085 for the family. · 2.5% of family income in excess ...",
+            "url": "https://www.kff.org/affordable-care-act/the-cost-of-the-individual-mandate-penalty-for-the-remaining-uninsured/"
+          },
+          {
+            "title": "The Individual Mandate for Health Insurance Coverage: In Brief",
+            "snippet": "The total dollar amount assessed on a taxpayer (for themselves and any dependents) is capped at 300% of the annual flat dollar amount.",
+            "url": "https://www.congress.gov/crs-product/R44438"
+          },
+          {
+            "title": "What Is the Individual Shared Responsibility Provision?",
+            "snippet": "For the law's first year, 2014, the law set the annual penalty at $95 per adult and $47.50 per child, up to a maximum of $285 per family—or 1 percent of family ...",
+            "url": "https://turbotax.intuit.com/tax-tips/health-care/what-is-the-individual-shared-responsibility-provision/L3oDBb37I"
+          },
+          {
+            "title": "The Effect of Eliminating the Individual Mandate Penalty and ...",
+            "snippet": "Per the Tax Cut and Jobs Act of 2017, the penalty will be eliminated beginning in 2019 although the act did not change the legal requirement to ...",
+            "url": "https://www.commonwealthfund.org/publications/fund-reports/2018/jul/eliminating-individual-mandate-penalty-behavioral-factors"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-candidate",
+  "timestamp": "2026-11-06T08:47:01.305915+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22010.625
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The FBI is in possession of the president of the US's son  Hunter Biden's laptop.",
+        "query": "Search for contemporaneous October 2020 records or statements from the FBI or DOJ confirming or denying possession of the laptop as of 2020-10-22.",
+        "candidates": [
+          {
+            "title": "2 ex-FBI officials charged with making false statements about ...",
+            "snippet": "2 ex-FBI officials charged with making false statements about Hunter Biden's laptop ... The revelation of the laptop's existence in October 2020 ...",
+            "url": "https://abc7ny.com/story/2-ex-fbi-officials-charged-making-false-statements-hunter-bidens-laptop/19972560/"
+          },
+          {
+            "title": "2 ex-FBI officials charged with making false statements about ...",
+            "snippet": "2 ex-FBI officials charged with making false statements about Hunter Biden's laptop ... The revelation of the laptop's existence in October 2020 ...",
+            "url": "https://abcnews.com/Politics/wireStory/2-fbi-officials-charged-making-false-statements-hunter-137510537"
+          },
+          {
+            "title": "2 ex-FBI officials charged with lying about involvement in ...",
+            "snippet": "2 ex-FBI officials charged with lying about involvement in investigation into Hunter Biden's laptop · A criminal complaint comes just before the ...",
+            "url": "https://www.audacy.com/1010wins/news/politics/biden-laptop-fbi-official-charged-e41b7407f97c6dfc7c017875054c0c67"
+          },
+          {
+            "title": "Hunter Biden laptop letter - Wikipedia",
+            "snippet": "On October 14, 2020, the Hunter Biden laptop controversy began when the New York Post published a story about a laptop that belonged to Hunter Biden that ...",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden_laptop_letter"
+          },
+          {
+            "title": "Ex-FBI officials charged with lying to Congress over Hunter ...",
+            "snippet": "On Oct. 22, 2020, the government says Benavides spoke with an unnamed FBI employee from the Criminal Division to discuss the laptop investigation in detail, ...",
+            "url": "https://www.courthousenews.com/ex-fbi-officials-charged-with-lying-to-congress-over-hunter-biden-laptop-probe/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-053-deepseek-candidate",
+  "timestamp": "2026-11-06T08:16:11.229228+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20160.546
+}

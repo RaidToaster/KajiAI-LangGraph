@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States. original source fact check",
+        "candidates": [
+          {
+            "title": "Trump Makes Unsupported Claims About Drug Flows",
+            "snippet": "The amount of fentanyl seized by Customs and Border Protection decreased by about 50% in the first full 15 months of Trump’s second term, going from 26,398 pounds seized in President Joe Biden ...",
+            "url": "https://www.factcheck.org/2026/06/trump-makes-unsupported-claims-about-drug-flows/"
+          },
+          {
+            "title": "Cartels turn to drug trafficking as human smuggling profits drop",
+            "snippet": "In Texas’ Rio Grande Valley, cartel smugglers continue to smuggle drugs like fentanyl into the United States. A year ago, the sector monitored by the U.S. Border Patrol was seeing up to 2,000 illegal border crossings by migrants per day. Cartels were largely responsible for smuggling large groups of migrants across the border.",
+            "url": "https://www.newsnationnow.com/us-news/immigration/border-coverage/cartels/cartels-drug-human-smuggling-profits/"
+          },
+          {
+            "title": "CBP Reports 96% Drop in Tucson Sector Border Crossings and ...",
+            "snippet": "Additionally, more infrastructure, including new border barriers and surveillance technology, helped reduce illegal border crossings in Tucson Sector from more than 460,000 in FY 2024 to about 16,000 in FY 2026 – a 96% reduction.",
+            "url": "https://www.hstoday.us/subject-matter-areas/border-security/cbp-reports-96-drop-in-tucson-sector-border-crossings-and-major-arizona-drug-seizures/"
+          },
+          {
+            "title": "Trump Administration Delivers 15 Straight Months of Zero ...",
+            "snippet": "DHS and CBP announced 15 consecutive months of zero releases at the border, continuing the unprecedented trend of historically low border crossings.",
+            "url": "https://www.dhs.gov/news/2026/08/13/trump-administration-delivers-15-straight-months-zero-releases-border"
+          },
+          {
+            "title": "Under President Trump and Secretary Mullin, DHS Announces ...",
+            "snippet": "A Safer Border President Trump’s policies are also saving lives by reducing unlawful crossings, leading to a dramatic decline in border-related deaths. Fewer unlawful crossings have contributed to a significant decline in border-related deaths.",
+            "url": "https://www.dhs.gov/news/2026/10/16/under-president-trump-and-secretary-mullin-dhs-announces-lowest-fiscal-year-border"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-baseline",
+  "timestamp": "2026-11-06T06:21:24.652133+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13273.968
+}

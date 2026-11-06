@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Some US mayors are fining people for going to church during the COVID-19 pandemic.",
+        "query": "Some US mayors are fining people for going to church during the COVID-19 pandemic. counterevidence",
+        "candidates": [
+          {
+            "title": "COVID-19: What Mayors Need to Know",
+            "snippet": "Mayor are working closely with their local public health agencies to disseminate information to the general public, schools, businesses, outgoing travelers and ...",
+            "url": "https://www.usmayors.org/issues/covid-19/"
+          },
+          {
+            "title": "Avoid church gatherings to prevent disease spread",
+            "snippet": "We are advising people not to go to church tomorrow. Church is a place where so many go to find community, comfort and caring - especially in ...",
+            "url": "https://www.facebook.com/MayorElicker/posts/we-are-advising-people-not-to-go-to-church-tomorrow-church-is-a-place-where-so-m/144962707028670/"
+          },
+          {
+            "title": "Banning Religious Assemblies to Stop the Spread of ...",
+            "snippet": "Most of the United States is now subject to some form of state or local order directing residents to “stay at · home” and closing nonessential ...",
+            "url": "https://www.congress.gov/crs_external_products/LSB/PDF/LSB10450/LSB10450.1.pdf"
+          },
+          {
+            "title": "3. How the COVID-19 pandemic affected U.S. religious life",
+            "snippet": "The COVID-19 pandemic had an enormous impact on how religious communities gather for worship. In July 2020, just 6% of Americans who ...",
+            "url": "https://www.pewresearch.org/politics/2025/02/12/how-the-covid-19-pandemic-affected-u-s-religious-life/"
+          },
+          {
+            "title": "Urban Churches Show an Increase in Attendance, Donations ...",
+            "snippet": "by AG Niazi · 2024 · Cited by 10 — Urban Churches Show an Increase in Attendance, Donations, and Finances During the COVID-19 Pandemic in the USA: Evidence from the United Methodist Church.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11319417/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-449-deepseek-baseline",
+  "timestamp": "2026-11-06T05:17:26.907138+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9436.218
+}

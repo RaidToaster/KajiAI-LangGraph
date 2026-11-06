@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Carbon dioxide intoxication is caused by wearing face masks.",
+        "query": "Search occupational safety and public health agency guidance (e.g., NIOSH, OSHA, WHO) on CO2 retention and rebreathing in face masks and respirators, with measured exposure levels and durations",
+        "candidates": [
+          {
+            "title": "National Institute for Occupational Safety and Health | NIOSH ...",
+            "snippet": "Learn about NIOSH and access information on workplace safety and health.",
+            "url": "https://www.cdc.gov/niosh/index.html"
+          },
+          {
+            "title": "Communication Products and Publications | Publications | CDC",
+            "snippet": "Publications Numbered Communication Products Occupational safety and health materials from NIOSH for employers, workers and more.",
+            "url": "https://www.cdc.gov/niosh/publications/index.html"
+          },
+          {
+            "title": "OSHA Publications | Occupational Safety and Health Administration",
+            "snippet": "NOTICE: OSHA publications are now primarily digital, making them easier to access and share. Some print items are offered. Visit the “All Publications” listing to view what’s available.",
+            "url": "https://www.osha.gov/publications/"
+          },
+          {
+            "title": "Respiratory Protection - General Guidance | Occupational ...",
+            "snippet": "An online version, of this decision logic is available as part of the OSHA Respiratory Protection eTool. Respirators. National Institute for Occupational Safety and Health (NIOSH) Workplace Safety and Health Topics. Provides information and links to topics pertaining to respirators. NIOSH Respirator Trusted-Source Information Page.",
+            "url": "https://www.osha.gov/respiratory-protection/general"
+          },
+          {
+            "title": "Welcome to PPE-Info",
+            "snippet": "Please note that there are 28 OSHA-approved occupational safety and health State Plans. State Plans are required to have standards and enforcement programs that are at least as effective as federal OSHA’s and may have different or more stringent standards related to PPE.",
+            "url": "https://wwwn.cdc.gov/PPEinfo"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-173-deepseek-candidate",
+  "timestamp": "2026-11-06T03:50:11.986254+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4201.296
+}

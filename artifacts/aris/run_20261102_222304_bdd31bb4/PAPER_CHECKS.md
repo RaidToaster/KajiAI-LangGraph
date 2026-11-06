@@ -1,0 +1,1 @@
+Revised PDF: 7 pages; successful compilation; zero overfull boxes or unresolved citations; embedded fonts; 11 existing references; 4 tables and 2 figures. All pages rendered; full contact inspected, runtime text and final reference page inspected in detail. Prior TeX/PDF/ZIP preserved. See paper-build-verified/pdf-validation.json. No claim of publication readiness.

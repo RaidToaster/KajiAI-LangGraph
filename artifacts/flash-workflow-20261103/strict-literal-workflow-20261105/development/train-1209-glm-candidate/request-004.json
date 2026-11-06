@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Did Amy Klobuchar, on the record during a debate, utter the exact or substantially similar words 'While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls'?",
+        "candidates": [
+          {
+            "title": "Klobuchar misfires with debate salvo on Wisconsin voter ...",
+            "snippet": "Klobuchar said during the debate in South Carolina that, “While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+          },
+          {
+            "title": "Klobuchar says she \"would have caught that fraud\"",
+            "snippet": "Amy Klobuchar and Minnesota House Speaker Lisa Demuth sparred over the state's fraud scandals and split on the state's. Klobuchar leads Demuth ...",
+            "url": "https://www.cbsnews.com/minnesota/news/minnesota-governors-debate-brainerd-demuth-klobuchar/"
+          },
+          {
+            "title": "What They're Saying About Amy Klobuchar at the Fifth ...",
+            "snippet": "\"Klobuchar had her best debate yet\" She was funny, pointed, and injected herself in the debate in just the right way.",
+            "url": "https://www.presidency.ucsb.edu/documents/klobuchar-campaign-press-release-what-theyre-saying-about-amy-klobuchar-the-fifth"
+          },
+          {
+            "title": "Here's what people are saying about Amy Klobuchar's ...",
+            "snippet": "U.S. Sen. Amy Klobuchar got a third chance to make her case on the nationally-televised Democratic debate stage Thursday night.",
+            "url": "https://www.startribune.com/here-s-what-people-are-saying-about-amy-klobuchar-s-debate-performance/560234561"
+          },
+          {
+            "title": "Takeaways from the final gubernatorial debate between ...",
+            "snippet": "Amy Klobuchar each focused on guilt by association during their final gubernatorial debate Wednesday. Repeating a theme on display up and ...",
+            "url": "http://www.walkermn.com/around_the_web/news/takeaways-from-the-final-gubernatorial-debate-between-demuth-klobuchar/article_d35e33cb-c42e-562a-b086-7a6e9670271c.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-05T10:17:45.291044+00:00",
+  "status": "reserved_outcome_unknown"
+}

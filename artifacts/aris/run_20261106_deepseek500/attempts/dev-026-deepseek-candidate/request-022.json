@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "Search regulatory or public-health agency primary assessments (FDA, EMA, WHO guideline panels) that independently evaluated ivermectin as a COVID-19 treatment.",
+        "candidates": [
+          {
+            "title": "Search | FDA",
+            "snippet": "Sklice is a single-use lotion with ivermectin 0.5% as the active ingredient, for the topical … to be safe or effective for the treatment or prevention of COVID -19 and they are not FDA-approved ...",
+            "url": "https://www.fda.gov/search?s=ivermectin+for+covid"
+          },
+          {
+            "title": "EMA advises against use of ivermectin for the prevention or ...",
+            "snippet": "EMA therefore concluded that use of ivermectin for prevention or treatment of COVID-19 cannot currently be recommended outside controlled clinical trials. Further well-designed, randomised studies are needed to draw conclusions as to whether the product is effective and safe in the prevention and treatment of COVID-19.",
+            "url": "https://www.ema.europa.eu/en/news/ema-advises-against-use-ivermectin-prevention-or-treatment-covid-19-outside-randomised-clinical-trials"
+          },
+          {
+            "title": "Ivermectin and COVID-19 | FDA",
+            "snippet": "The FDA has not authorized or approved ivermectin for use in preventing or treating COVID-19 in humans or animals.",
+            "url": "https://www.fda.gov/consumers/consumer-updates/ivermectin-and-covid-19"
+          },
+          {
+            "title": "Ivermectin COVID Studies: A Review of Major Trials",
+            "snippet": "Every major, well-designed randomized trial of ivermectin for COVID-19 has reached the same conclusion: the drug does not produce a clinically meaningful benefit for outpatients with mild to moderate disease. That verdict comes from thousands of participants across multiple countries, tested in blinded, placebo-controlled settings, and confirmed by the most authoritative systematic review on ...",
+            "url": "https://biologyinsights.com/ivermectin-covid-studies-a-review-of-major-trials/"
+          },
+          {
+            "title": "How Have Public‑Health Organizations Assessed Ivermectin ...",
+            "snippet": "Major public-health organizations have examined dozens of ivermectin trials and — while some meta-analyses and advocacy groups report large benefits — authoritative bodies such as the World Health Organization and the U.S. COVID-19 Treatment Guidelines Panel concluded evidence is insufficient to recommend ivermectin outside clinical trials ...",
+            "url": "https://factually.co/fact-checks/health/ivermectin-covid-19-trials-assessments-by-public-health-organizations-4ab226"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-candidate",
+  "timestamp": "2026-11-06T06:58:33.871608+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15503.187
+}

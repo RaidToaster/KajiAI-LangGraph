@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Independent fact-check of Sanders Bloomberg bottom 125 million Americans wealth claim",
+        "candidates": [
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "Sanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.” The numbers check out. It's worth noting, however, that ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          },
+          {
+            "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic",
+            "snippet": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire Owns More Wealth Than Bottom 125 Million Americans Combined. \"That's wrong.",
+            "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125"
+          },
+          {
+            "title": "Sanders' Wealth Inequality Stat",
+            "snippet": "CNN reported in May that Sanders “has an estimated net worth of $330,507, making him the poorest candidate currently in the race.” But that also ...",
+            "url": "https://www.factcheck.org/2016/01/sanders-wealth-inequality-stat/"
+          },
+          {
+            "title": "Video: Sanders on Income and Wealth",
+            "snippet": "Vermont Sen. Bernie Sanders, in his May 26 presidential announcement speech, said that “in America we now have more income and wealth ...",
+            "url": "https://www.factcheck.org/2015/06/video-sanders-on-income-and-wealth/"
+          },
+          {
+            "title": "Sen. Bernie Sanders (I-VT) argues the U.S. economy is working ...",
+            "snippet": "The top 1 percent of wealthiest Americans own more wealth than the bottom 92 percent of earners, Sanders said, while the two richest people in ...",
+            "url": "https://www.facebook.com/CBSNews/posts/sen-bernie-sanders-i-vt-argues-the-us-economy-is-working-for-mr-bloomberg-and-ot/10157721685965950/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:37:33.424538+00:00",
+  "status": "reserved_outcome_unknown"
+}

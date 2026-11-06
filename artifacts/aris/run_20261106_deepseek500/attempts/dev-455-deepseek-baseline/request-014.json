@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Cable news channel Fox News is unavailable in Canada due to media legislation.",
+        "query": "US Cable news channel Fox News is unavailable in Canada due to media legislation. original source fact check",
+        "candidates": [
+          {
+            "title": "Fox News is available in Canada",
+            "snippet": "US cable news channel Fox News is not available in Canada due to media legislation in the country. This claim is false, according to Fox News ...",
+            "url": "https://factcheck.afp.com/fox-news-available-canada"
+          },
+          {
+            "title": "Fox News - Breaking News Updates | Latest News Headlines ...",
+            "snippet": "Breaking News, Latest News and Current News from FOXNews.com. FOX News 24/7 Watch Free for 3 Days Must-Watch",
+            "url": "https://www.foxnews.com/"
+          },
+          {
+            "title": "Canadian television news regulations and Fox ...",
+            "snippet": "￼ it’s illegal to lie on television news in Canada. That’s why Fox News is not in Canada. 🇨🇦 ￼",
+            "url": "https://www.facebook.com/groups/288544190546353/posts/614145144652921/"
+          },
+          {
+            "title": "Online News Act",
+            "snippet": "The Online News Act known commonly as Bill C-18, is a Canadian federal statute. Introduced in the 44th Canadian Parliament, passed by the Senate on June 15, ...",
+            "url": "https://en.wikipedia.org/wiki/Online_News_Act"
+          },
+          {
+            "title": "Was the Fox News Channel Banned in Canada?",
+            "snippet": "Rumor: The Fox News television channel has been banned in Canada because they report false information.",
+            "url": "https://www.snopes.com/fact-check/canadian-fox/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-455-deepseek-baseline",
+  "timestamp": "2026-11-06T03:51:34.196850+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4283.515
+}

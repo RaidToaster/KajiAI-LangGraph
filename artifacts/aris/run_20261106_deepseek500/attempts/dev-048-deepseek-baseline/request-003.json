@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "99% of people recover from COVID-19.",
+        "query": "99% of people recover from COVID-19. evidence",
+        "candidates": [
+          {
+            "title": "Whole of population-based cohort study of recovery time from COVID ...",
+            "snippet": "by B Liu · 2021 · Cited by 82 — COVID-19 results in persisting symptoms but there is little systematically collected data estimating recovery time following infection.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8225991/"
+          },
+          {
+            "title": "Coronavirus disease (COVID-19): Post COVID-19 condition",
+            "snippet": "Most people who develop COVID-19 fully recover, but current evidence suggests approximately 10–20% of people experience a variety of mid and ...",
+            "url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-post-covid-19-condition"
+          },
+          {
+            "title": "Several online outlets continue to claim 99.9% of people who get ...",
+            "snippet": "How to educate the public on COVID-19 survivor rates and long-term effects? Kim Killian ▻ Survivor Corps. 6y · Public ...",
+            "url": "https://www.facebook.com/kens5/posts/several-online-outlets-continue-to-claim-999-of-people-who-get-the-coronavirus-r/10165583641400045/"
+          },
+          {
+            "title": "RECOVER COVID Initiative: Home",
+            "snippet": "Researching COVID to Enhance Recovery (RECOVER), a National Institutes of Health (NIH) research initiative, seeks to understand and prevent Long COVID.",
+            "url": "https://recovercovid.org/"
+          },
+          {
+            "title": "Post acute sequelae of COVID-19 (long COVID): Living evidence",
+            "snippet": "The Australian National Clinical Evidence Taskforce defines long COVID as “signs and symptoms that develop during or after an infection ...",
+            "url": "https://aci.health.nsw.gov.au/statewide-programs/critical-intelligence-unit/post-acute-sequelae"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-048-deepseek-baseline",
+  "timestamp": "2026-11-06T07:56:18.779080+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18968.093
+}

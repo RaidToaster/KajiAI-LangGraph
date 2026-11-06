@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UNESCO declared Nadar community as the most ancient race in the world.",
+        "query": "What UNESCO records, documents, or press releases, if any, mention the Nadar community, and what do they state?",
+        "candidates": [
+          {
+            "title": "World Heritage",
+            "snippet": "The 1972 World Heritage Convention protects sites of outstanding universal value for all humanity.",
+            "url": "https://www.unesco.org/en/world-heritage"
+          },
+          {
+            "title": "United Nations - UNESCO's Memory of the World Register",
+            "snippet": "There you are going to find what we have been doing related including books, manuscripts, maps, photographs, and sound or video recordings, ...",
+            "url": "https://www.youtube.com/watch?v=VlBcJpxZOqU"
+          },
+          {
+            "title": "unesco",
+            "snippet": "UNESCO sponsors projects that improve literacy, provide technical training and education, advance science, protect independent media and press freedom,",
+            "url": "https://en.wikipedia.org/wiki/UNESCO"
+          },
+          {
+            "title": "PREPARING WORLD HERITAGE NOMINATIONS",
+            "snippet": "It is an official document that is submitted to UNESCO by the relevant State Party, or two or more States Parties in the case of ...",
+            "url": "https://irpmzcc2.org/upload/libreria/archivos/activity-643-1_202402261444.pdf"
+          },
+          {
+            "title": "How do sites make it onto the list?",
+            "snippet": "It is not UNESCO which proposes or identifes a site but rather the country in which the site is located. Thus, the application for acceptance onto the list ...",
+            "url": "https://www.unesco.at/en/culture/world-heritage/how-do-sites-make-it-onto-the-list"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-003-deepseek-candidate",
+  "timestamp": "2026-11-05T23:38:40.749400+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1386.062
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "When was the campaign ad video released or aired, and who produced or sponsored it?",
+        "candidates": [
+          {
+            "title": "Ramaswamy campaign says it produced ad with Amy ...",
+            "snippet": "Ramaswamy campaign says it produced ad with Amy Acton's mother and will spend millions to promote it Politics Oct 21, ing the estranged mother ...",
+            "url": "https://www.pbs.org/newshour/politics/ramaswamy-campaign-says-it-produced-ad-with-amy-actons-mother-and-will-spend-millions-to-promote-it"
+          },
+          {
+            "title": "Warning - Domestic",
+            "snippet": "Secretary Kristi Noem announced a nationwide and international multimillion-dollar ad campaign warning illegal aliens",
+            "url": "https://www.dhs.gov/medialibrary/assets/video/58918"
+          },
+          {
+            "title": "DHS Announces Ad Campaign Warning Illegal Aliens to ...",
+            "snippet": "The international ads warn criminal illegal aliens not to come to America and break its laws or they will be hunted down and deported. This ...",
+            "url": "https://www.dhs.gov/news/2025/02/17/dhs-announces-ad-campaign-warning-illegal-aliens-self-deport-and-stay-out"
+          },
+          {
+            "title": "White House releases new taxpayer-funded ad describing ' ...",
+            "snippet": "The ad signals an expansion of the White House's controversial use of government funds to air pieces that resemble campaign advertisements.",
+            "url": "https://www.nbcnews.com/politics/trump-administration/white-house-releases-new-taxpayer-funded-ad-describing-final-battle-rcna600171"
+          },
+          {
+            "title": "Video Campaigns with YouTube Ads",
+            "snippet": "Discover how to advertise on YouTube with YouTube Ads. Grow your business with video campaigns that reach potential customers where they're watching.",
+            "url": "https://business.google.com/us/ad-solutions/youtube-ads/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-deepseek-candidate",
+  "timestamp": "2026-11-06T01:22:35.737058+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7621.046
+}

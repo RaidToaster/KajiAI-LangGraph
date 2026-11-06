@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "PEDOPHILIA is now LEGAL in CALIFORNIA",
+        "query": "Provide the draft text so its statements can be extracted and assessed.",
+        "candidates": [
+          {
+            "title": "Chapter 5: Collecting data",
+            "snippet": "9), data extraction is still largely a manual process. Electronic searches for text can provide a useful aid to locating information within a report.",
+            "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-05"
+          },
+          {
+            "title": "Guide to Practice on Reservations to Treaties, with ...",
+            "snippet": "Page 1. 1. Text of the draft guidelines constituting the Guide to Practice on Reservations to Treaties, with commentaries, as provisionally adopted by the ...",
+            "url": "https://legal.un.org/ilc/texts/instruments/english/draft_articles/GuidetoPracticeReservations_commentaries.pdf"
+          },
+          {
+            "title": "Scanning and Live Text",
+            "snippet": "Drafts provides document scanning interface to capture text documents (even multi-page documents), can import image files transcribing text, or works great with ...",
+            "url": "https://docs.getdrafts.com/docs/editor/document-scanning.html"
+          },
+          {
+            "title": "Declaration-Drafting_\"Original Rough Draught\"",
+            "snippet": "Jefferson provided clues by applying marginal comments identifying the handwriting of inserted text, which allows us to more clearly identify the stage",
+            "url": "https://jeffersonpapers.princeton.edu/declaration-of-independence/original-rough-draught/"
+          },
+          {
+            "title": "Guideline for Extractables and Leachables Q3E",
+            "snippet": "A list of extractables and leachables studies conducted should be included along with an 212 assessment report which will typically include ...",
+            "url": "https://database.ich.org/sites/default/files/ICH_Q3E_EWG_Step2_DraftGuideline_2025_0704.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-451-glm-baseline",
+  "timestamp": "2026-11-06T00:21:31.264323+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3956.578
+}

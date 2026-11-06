@@ -1,0 +1,30 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime."
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "domain": {
+          "type": "choice",
+          "instructions": "Which domain best describes the factual claim? Do not judge whether it is true.",
+          "criteria": {
+            "general": "A factual claim outside the other three specialist domains.",
+            "scientific": "A claim about scientific research or findings, excluding clinical health claims.",
+            "political": "A claim about government, elections, public officials, or public policy.",
+            "health_medical": "A claim about human health, disease, treatment, medicine, or clinical research."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-candidate",
+  "timestamp": "2026-11-06T04:27:32.880473+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6442.187
+}

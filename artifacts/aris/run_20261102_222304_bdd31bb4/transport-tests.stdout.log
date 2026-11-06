@@ -1,0 +1,94 @@
+...FF                                                                    [100%]
+================================== FAILURES ===================================
+______ test_transport_counts_sends_and_preserves_response_stream[httpx] _______
+
+tmp_path = WindowsPath('D:/Projects/!skripsi/KajiAI-LangGraph/artifacts/aris/run_20261102_222304_bdd31bb4/pytest-transport/test_transport_counts_sends_an0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BC34C3CCE0>
+module_name = 'httpx'
+
+    @pytest.mark.parametrize("module_name",["httpx","httpx2"])
+    def test_transport_counts_sends_and_preserves_response_stream(tmp_path,monkeypatch,module_name):
+        import importlib
+        module=importlib.import_module(module_name)
+        monkeypatch.setattr(module,"HTTPTransport",lambda **kwargs: module.MockTransport(
+            lambda request: module.Response(200,json={"eval_count":2})))
+        protocol={"caps":{"ollama":2},"num_predict":4}
+        pilot.write(tmp_path/"live-state.json",{"counts":{"ollama":0},"deadline":time.time()+10,"stop":None})
+        ledger=pilot.Ledger(tmp_path,protocol)
+        with module.Client(transport=pilot.transport(module,ledger,"ollama")) as client:
+            assert client.post("http://fixture.test/api/chat",json={"model":"fixture"}).json() == {"eval_count":2}
+        assert json.loads((tmp_path/"live-state.json").read_text())["counts"]["ollama"] == 1
+>       assert json.loads((tmp_path/"response-001.body").read_bytes()) == {"eval_count":2}
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_runtime_pilot.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Program Files\Python312\Lib\pathlib.py:1019: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/Projects/!skripsi/KajiAI-LangGraph/artifacts/aris/run_20261102_222304_bdd31bb4/pytest-transport/test_transport_counts_sends_an0/response-001.body')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\!skripsi\\KajiAI-LangGraph\\artifacts\\aris\\run_20261102_222304_bdd31bb4\\pytest-transport\\test_transport_counts_sends_an0\\response-001.body'
+
+C:\Program Files\Python312\Lib\pathlib.py:1013: FileNotFoundError
+______ test_transport_counts_sends_and_preserves_response_stream[httpx2] ______
+
+tmp_path = WindowsPath('D:/Projects/!skripsi/KajiAI-LangGraph/artifacts/aris/run_20261102_222304_bdd31bb4/pytest-transport/test_transport_counts_sends_an1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BC34C2B830>
+module_name = 'httpx2'
+
+    @pytest.mark.parametrize("module_name",["httpx","httpx2"])
+    def test_transport_counts_sends_and_preserves_response_stream(tmp_path,monkeypatch,module_name):
+        import importlib
+        module=importlib.import_module(module_name)
+        monkeypatch.setattr(module,"HTTPTransport",lambda **kwargs: module.MockTransport(
+            lambda request: module.Response(200,json={"eval_count":2})))
+        protocol={"caps":{"ollama":2},"num_predict":4}
+        pilot.write(tmp_path/"live-state.json",{"counts":{"ollama":0},"deadline":time.time()+10,"stop":None})
+        ledger=pilot.Ledger(tmp_path,protocol)
+        with module.Client(transport=pilot.transport(module,ledger,"ollama")) as client:
+            assert client.post("http://fixture.test/api/chat",json={"model":"fixture"}).json() == {"eval_count":2}
+        assert json.loads((tmp_path/"live-state.json").read_text())["counts"]["ollama"] == 1
+>       assert json.loads((tmp_path/"response-001.body").read_bytes()) == {"eval_count":2}
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_runtime_pilot.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Program Files\Python312\Lib\pathlib.py:1019: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/Projects/!skripsi/KajiAI-LangGraph/artifacts/aris/run_20261102_222304_bdd31bb4/pytest-transport/test_transport_counts_sends_an1/response-001.body')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\!skripsi\\KajiAI-LangGraph\\artifacts\\aris\\run_20261102_222304_bdd31bb4\\pytest-transport\\test_transport_counts_sends_an1\\response-001.body'
+
+C:\Program Files\Python312\Lib\pathlib.py:1013: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_runtime_pilot.py::test_transport_counts_sends_and_preserves_response_stream[httpx]
+FAILED tests/test_runtime_pilot.py::test_transport_counts_sends_and_preserves_response_stream[httpx2]
+2 failed, 3 passed in 0.50s

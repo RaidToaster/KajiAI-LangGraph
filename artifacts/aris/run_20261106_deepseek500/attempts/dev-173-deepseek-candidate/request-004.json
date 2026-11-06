@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Carbon dioxide intoxication is caused by wearing face masks.",
+        "query": "What evidence exists that wearing face masks raises inhaled carbon dioxide to levels associated with carbon dioxide intoxication?",
+        "candidates": [
+          {
+            "title": "Possible toxicity of chronic carbon dioxide exposure ... - PMC",
+            "snippet": "by K Kisielinski · 2023 · Cited by 34 — During the SARS-CoV-2-pandemic, face masks have become one of the most important ubiquitous factors affecting human breathing. It increases ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9981272/"
+          },
+          {
+            "title": "Effect of Wearing Face Masks on the Carbon Dioxide ...",
+            "snippet": "by O Geiss · 2021 · Cited by 90 — In this study, the carbon dioxide concentration in the breathing zone was measured while wearing a surgical mask, a KN95 and a cloth mask. For the surgical mask ...",
+            "url": "https://aaqr.org/articles/aaqr-20-07-covid-0403"
+          },
+          {
+            "title": "Wearing face masks as a potential source for inhalation ...",
+            "snippet": "by K Kisielinski · 2024 · Cited by 30 — Face masks filter bacteria, dirt, plastic fibres, but may also cause health harms. •. Inhalation of particles and potentially toxic substances from the mask is ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0147651323013623"
+          },
+          {
+            "title": "Study suggests children are breathing CO2 when wearing ...",
+            "snippet": "Journal of the American Medical Association published a research letter suggesting high levels of carbon dioxide detected in children ...",
+            "url": "https://abc7news.com/post/jama-masks-children-and-co2-pediatrics-face-mask-study/10866564/"
+          },
+          {
+            "title": "Levels Behind and in Front of Different Protective Mask Types",
+            "snippet": "by H Akhondi · 2022 · Cited by 5 — The use of masks increased the CO2 concentration in the air behind them to levels historical- ly associated with toxicity. Keywords face mask; masks; CO2 level; ...",
+            "url": "https://scholarlycommons.hcahealthcare.com/cgi/viewcontent.cgi?article=1321&context=hcahealthcarejournal"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-173-deepseek-candidate",
+  "timestamp": "2026-11-06T03:49:31.836190+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4161.156
+}

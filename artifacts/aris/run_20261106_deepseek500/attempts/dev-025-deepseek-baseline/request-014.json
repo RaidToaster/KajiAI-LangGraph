@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh. original source fact check",
+        "candidates": [
+          {
+            "title": "Did McDonald's in Azerbaijan Make Pro-Military Posts on Instagram?",
+            "snippet": "This is a verified McDonald's Instagram account that posted pro-military pictures about Nagorno-Karabakh. The posts are now removed.",
+            "url": "https://www.voanews.com/a/did-mcdonald-s-in-azerbaijan-make-pro-military-posts-on-instagram-/6742646.html"
+          },
+          {
+            "title": "Nagorno-Karabakh profile",
+            "snippet": "Provides an overview of Nagorno-Karabakh, and key facts about this former territory in the Caucasus.",
+            "url": "https://www.bbc.com/news/world-europe-18270325"
+          },
+          {
+            "title": "NEW REPORT: Azerbaijani Regime Ethnically Cleansed Nagorno- ...",
+            "snippet": "Freedom House and partners found that Azerbaijani authorities waged a deliberate campaign to empty Nagorno-Karabakh of its ethnic Armenian ...",
+            "url": "https://freedomhouse.org/article/new-report-azerbaijani-regime-ethnically-cleansed-nagorno-karabakh-according-international"
+          },
+          {
+            "title": "A McDonald's franchise wades into the Nagorno-Karabakh conflict",
+            "snippet": "After military clashes between Azerbaijan and Armenia broke out last month, fast-food franchisees began to weigh in — on behalf of Azerbaijan.",
+            "url": "https://www.washingtonpost.com/world/2020/10/29/azerbaijan-mcdonalds-nagorno-karabakh/"
+          },
+          {
+            "title": "WEAPONIZATION OF SOCIAL MEDIA: A CASE OF THE CONFLICT ...",
+            "snippet": "WEAPONIZATION OF SOCIAL MEDIA: A CASE OF THE CONFLICT BETWEEN. AZERBAIJAN AND NAGORNO-KARABAKH. Robert Avetisyan. TABLE OF CONTENTS. I. INTRODUCTORY NOTE .",
+            "url": "https://www.swlaw.edu/sites/default/files/2025-05/JIMEL%2010.2%20-%20Avetisyan.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-baseline",
+  "timestamp": "2026-11-06T06:54:46.722110+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15276.031
+}

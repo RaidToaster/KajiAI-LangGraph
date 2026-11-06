@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Bernie Sanders statement after Senate passage of Affordable Care Act December 24 2009",
+        "candidates": [
+          {
+            "title": "Fact check: Biden says Sanders 'opposed Obamacare'",
+            "snippet": "The Senate passed the health care bill, 60-39, on Dec. 24, 2009, with Sanders voting in favor. No Senate Republican supported it.",
+            "url": "https://www.wral.com/archive/18995113/"
+          },
+          {
+            "title": "Statement by Senator Bernie Sanders on Affordable Care Act ...",
+            "snippet": "\"Instead of gutting the Affordable Care Act, we need to expand on the improvements that it has made to our health care system. The time has come ...",
+            "url": "https://www.presidency.ucsb.edu/documents/statement-senator-bernie-sanders-affordable-care-act-ruling"
+          },
+          {
+            "title": "User Clip: Sen. Bernie Sanders (I-VT)â€“ Health Care Debate ...",
+            "snippet": "Sen. Bernie Sanders outlines an alternate proposal to the Affordable Care Act, advocating for a single-payer public health care system.",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-sen-bernie-sanders-i-vt-health-care-debate-2009-14-on-a-public-option/4543170"
+          },
+          {
+            "title": "PolitiFact: Sanders claims he helped write the Affordable ...",
+            "snippet": "At the time, Vermont Senator Bernie Sanders said, \"I helped write\" the ACA. PolitiFact Florida heard the claim and gave it a MOSTLY FALSE rating ...",
+            "url": "https://mynews13.com/fl/orlando/news/2016/1/25/politifact_sanders_c"
+          },
+          {
+            "title": "Sanders Statement on Health Care Vote",
+            "snippet": "Bernie Sanders (I-Vt.) issued the following statement Tuesday after Senate Republicans voted to begin debate on a bill to repeal the Affordable ...",
+            "url": "https://www.sanders.senate.gov/press-releases/sanders-statement-on-health-care-vote/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:31:02.179899+00:00",
+  "status": "reserved_outcome_unknown"
+}

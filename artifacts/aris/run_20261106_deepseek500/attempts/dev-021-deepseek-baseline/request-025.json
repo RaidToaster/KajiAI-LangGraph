@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. original source fact check",
+        "candidates": [
+          {
+            "title": "Fact Check: Voting Machine Message Voters Received Did NOT ...",
+            "snippet": "Her name is Taylor Zundel, and it sounds like she and her husband live in or near Salt Lake City. And she witnessed quite the irregularity when they showed up ...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-voting-machine-message-voters-received-did-not-prevent-them-from-voting.html"
+          },
+          {
+            "title": "Several Utah residents claimed that they were unable to vote in the June ...",
+            "snippet": "Several Utah residents claimed that they were unable to vote in the June 23 primary after failing to receive their ballots through the mail.",
+            "url": "https://www.facebook.com/KTNVLasVegas/posts/several-utah-residents-claimed-that-they-were-unable-to-vote-in-the-june-23-prim/1666529082182478/"
+          },
+          {
+            "title": "GOP lawmakers who claimed there's been widespread voter fraud in Utah ...",
+            "snippet": "GOP lawmakers who claimed there's been widespread voter fraud in Utah demanded a security study of the state's mail ballots.",
+            "url": "https://www.instagram.com/p/De1uTYmjdnE/"
+          },
+          {
+            "title": "GOP lawmakers who claimed there's been widespread voter fraud in Utah ...",
+            "snippet": "GOP lawmakers who claimed there's been widespread voter fraud in Utah demanded a security study of the state's mail ballots.",
+            "url": "https://www.instagram.com/p/De4GdBrF8vy/"
+          },
+          {
+            "title": "Utah election audit fine no widespread fraud of noncitizins casting ballots",
+            "snippet": "Here's what she found. While 27 alleged noncitizens were found on voter rolls, there remains no evidence of widespread fraud in Utah elections.",
+            "url": "https://www.sltrib.com/news/politics/2026/05/27/utah-election-audit-fine-no/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-021-deepseek-baseline",
+  "timestamp": "2026-11-06T06:44:36.029306+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14665.343
+}

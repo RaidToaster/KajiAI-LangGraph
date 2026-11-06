@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "Did French authorities cancel the visas of 183 Pakistani citizens, and on what date or during what period?",
+        "candidates": [
+          {
+            "title": "A plethora of Indian media outlets reported that France ...",
+            "snippet": "A plethora of Indian media outlets reported that France revoked visas of 183 Pakistanis living in the country. The 'news' was based on tweets by ...",
+            "url": "https://www.facebook.com/AltnewsZubair/posts/a-plethora-of-indian-media-outlets-reported-that-france-revoked-visas-of-183-pak/2893825797542658/"
+          },
+          {
+            "title": "France Rejects 183 Pak Visitor Visas | Pakistan Consulate ...",
+            "snippet": "France has rejected 183 Pakistan visitor visas as per Pakistan Consulate's tweet. Around 120 Pakistanis have been deported by France",
+            "url": "https://www.youtube.com/watch?v=Ii50GqhYNEg"
+          },
+          {
+            "title": "Pakistan",
+            "snippet": "The amount is non-refundable in case the visa is rejected. It takes an average of 15 days to obtain a short-stay visa and 30 days for a long-stay visa, No visa ...",
+            "url": "https://france-visas.gouv.fr/en/pakistan"
+          },
+          {
+            "title": "Fact Check: Fake tweet on France deporting Pakistanis go ...",
+            "snippet": "Tourist visas of 183 Pak citizens were rejected by France after Imran Khan criticised Macron's comments on Islam. Some 118 Pak citizens with ...",
+            "url": "https://www.indiatoday.in/fact-check/story/fact-check-fake-tweet-france-deporting-pakistanis-go-viral-imran-slams-macron-1737276-2020-11-02"
+          },
+          {
+            "title": "Visa requirements for French citizens",
+            "snippet": "As of 2026, French citizens have visa-free or visa on arrival access to 185 countries and territories, ranking the French passport 4th in terms of travel ...",
+            "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_French_citizens"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-candidate",
+  "timestamp": "2026-11-06T04:24:17.514738+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6246.828
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "Search for the 2017 Forbes investigation into the Eric Trump Foundation and any subsequent NYAG or IRS action specifically addressing donations intended for St. Jude Children's Research Hospital.",
+        "candidates": [
+          {
+            "title": "New York Attorney General Looking Into Eric Trump Foundation",
+            "snippet": "The New York attorney general, which has been investigating the Donald J. Trump Foundation for months, is now looking into the Eric Trump ... Missing:  Search  subsequent",
+            "url": "https://www.forbes.com/sites/danalexander/2017/06/09/new-york-attorney-general-looking-into-eric-trump-foundation/"
+          },
+          {
+            "title": "Inside The Investigation Of Eric Trump's Kids-Cancer Charity",
+            "snippet": "The Eric Trump Foundation did some real good, pushing more than $25 million to St. Jude, the pediatric cancer hospital in Tennessee. Its model ... Missing:  specifically  intended",
+            "url": "https://www.forbes.com/sites/danalexander/2026/05/18/how-eric-trump-created-a-myth-around-his-kids-cancer-charity/"
+          },
+          {
+            "title": "Eric Trump Foundation Told Donors Money Went To Kids With ...",
+            "snippet": "From 2011 to 2015, the Eric Trump Foundation doled out over $500000 to about 40 charities other than St. Jude Children's Research Hospital, ... Missing:  intended  | Show results with:",
+            "url": "https://www.forbes.com/sites/danalexander/2017/06/29/eric-trump-foundation-told-donors-money-went-to-kids-with-cancer-then-gave-to-different-causes/"
+          },
+          {
+            "title": "According to a Forbes investigation, the Eric Trump Foundation ...",
+            "snippet": "Jude Children's Research Hospital in Memphis, Tennessee—funneled hundreds of thousands of dollars to the Trump Organization instead. In the ... Missing:  Search  IRS  action  specifically  intended",
+            "url": "https://www.facebook.com/theinvestigative/photos/according-to-a-forbes-investigation-the-eric-trump-foundationestablished-to-rais/1322348153407127/"
+          },
+          {
+            "title": "New Filings Show Donations To Eric Trump's Foundation ...",
+            "snippet": "Eric Trump's old foundation took in roughly $900000 in 2017, its lowest total since 2010, according to a tax return obtained by Forbes. Missing:  IRS  specifically  intended",
+            "url": "https://www.forbes.com/sites/danalexander/2019/01/08/donations-to-eric-trumps-foundation-plunged-amid-scandal/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-candidate",
+  "timestamp": "2026-11-06T08:46:21.778345+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21971.093
+}

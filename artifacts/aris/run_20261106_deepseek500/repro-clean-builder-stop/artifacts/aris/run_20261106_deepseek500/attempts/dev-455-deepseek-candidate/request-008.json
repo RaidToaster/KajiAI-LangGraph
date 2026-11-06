@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Cable news channel Fox News is unavailable in Canada due to media legislation.",
+        "query": "Has Fox News been carried by Canadian cable, satellite, or IPTV providers, and if so, under what authorization or exemption?",
+        "candidates": [
+          {
+            "title": "Fox News is available in Canada - AFP Fact Check",
+            "snippet": "Fox News is not available in Canada due to media legislation in the country. This claim is false, according to Fox News … is currently ... Missing:  IPTV  | Show results with:",
+            "url": "https://factcheck.afp.com/fox-news-available-canada"
+          },
+          {
+            "title": "Is it true that the FOX news channel cannot be labeled ... - Quora",
+            "snippet": "Thankfully no. We Canadians do have access to Fox News and Fox Business through premium tiers on our cable/satellite/IPTV services, but it's no ...",
+            "url": "https://www.quora.com/Is-it-true-that-the-FOX-news-channel-cannot-be-labeled-a-news-channel-in-Canada"
+          },
+          {
+            "title": "Was the Fox News Channel Banned in Canada? | Snopes.com",
+            "snippet": "The CRTC regulations apply only to Canadian broadcasters using Canadian airwaves; they do not apply to the Fox News Channel, which is a non- ... Missing:  IPTV  authorization",
+            "url": "https://www.snopes.com/fact-check/canadian-fox/"
+          },
+          {
+            "title": "Fox News is not banned in Canada or the UK",
+            "snippet": "False. Fox News has not been banned in Canada, where it remains authorized for distribution. The network also was not banned in the U.K., ... Missing:  satellite,  IPTV",
+            "url": "https://apnews.com/article/fact-checking-340810040961"
+          },
+          {
+            "title": "Fox News currently airs in Canada, and it wasn't banned in the ...",
+            "snippet": "The CRTC regulations apply only to Canadian broadcasters using Canadian airwaves; they do not apply to the Fox News Channel, which is a non- ... Missing:  IPTV  | Show results with:",
+            "url": "https://www.facebook.com/WBNS10TV/posts/fox-news-currently-airs-in-canada-and-it-wasnt-banned-in-the-uk-instead-the-netw/10160675320879369/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-455-deepseek-candidate",
+  "timestamp": "2026-11-06T03:52:33.768079+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4343.078
+}

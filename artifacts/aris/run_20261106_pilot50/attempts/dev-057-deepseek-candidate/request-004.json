@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "What primary records (meeting minutes, ordinances, resolutions, or roll-call votes) document Nate McMurray's votes while serving as Town Supervisor on Grand Island, Nebraska?",
+        "candidates": [
+          {
+            "title": "McMurray claims financial victories on Grand Island - PolitiFact",
+            "snippet": "As Democrat Nathan McMurray looks for votes in a Republican-leaning congressional district, he points to his record as Grand Island town ...",
+            "url": "https://politifact.com/factchecks/2018/aug/29/nathan-mcmurray/mcmurray-claims-about-grand-island-record-are-true/"
+          },
+          {
+            "title": "Attempting something way out of my comfort zone, but I think it ...",
+            "snippet": "Public Projects like this getting their initial start at the Town Council level with funding, resolutions and ordinances.",
+            "url": "https://www.facebook.com/groups/1284208815256360/posts/3028373867506504/"
+          },
+          {
+            "title": "[PDF] Supreme Court of Nebraska",
+            "snippet": "Records v........... ............................... 912 Citicorp Mortgage, Inc.; Nebraska Irrigation, 138 LaBenz Trucking v. Snyder",
+            "url": "http://govdocs.nebraska.gov/epubs/S3000/B001-1994may.pdf"
+          },
+          {
+            "title": "[PDF] BILLS AND RESOLUTIONS - GovInfo",
+            "snippet": "-Senate reconsiders vote by which it disagreed to House amendments and asks for conference, 4006.-Senate concurs in House amendment, 4006.-. Examined and signed ...",
+            "url": "https://www.govinfo.gov/content/pkg/GPO-CRECB-1944-pt12/pdf/GPO-CRECB-1944-pt12-2.pdf"
+          },
+          {
+            "title": "[PDF] congressional record - senate - Congress.gov",
+            "snippet": "A resolution adopted at a meeting of more than 1,000 farmers-essentially cotton farmers--of the State of Arkansas, a stabilized price",
+            "url": "https://www.congress.gov/82/crecb/1952/03/17/GPO-CRECB-1952-pt2-15.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-deepseek-candidate",
+  "timestamp": "2026-11-06T01:12:38.519716+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7023.828
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "49 percent of Nigerians are in extreme poverty.",
+        "query": "What source or organization reported the figure that 49 percent of Nigerians are in extreme poverty, and when was it published?",
+        "candidates": [
+          {
+            "title": "A Better Future for All Nigerians",
+            "snippet": "11 Nigeria's poverty numbers were first published by NBS in May 2020 (see. NBS (2020)). 12 As with the majority of statistics in this report, this estimate ...",
+            "url": "https://documents1.worldbank.org/curated/en/099730003152232753/pdf/P17630107476630fa09c990da780535511c.pdf"
+          },
+          {
+            "title": "Nigeria Launches its Most Extensive National Measure of ...",
+            "snippet": "The Federal Government of Nigeria through the National Bureau of Statistics today launched the results of the 2022 Multidimensional Poverty Index (MPI) Survey.",
+            "url": "https://nigerianstat.gov.ng/news/78"
+          },
+          {
+            "title": "UN: Nigeria's multidimensional poverty rate rises to 38.7% ...",
+            "snippet": "Citing a report from The Punch newspaper, the audio states that 17.9 million Nigerians fell into poverty between 2021 and 2024,",
+            "url": "https://www.facebook.com/thecableng/posts/un-nigerias-multidimensional-poverty-rate-rises-to-387-as-179m-citizens-battle-d/1433716972277938/"
+          },
+          {
+            "title": "Poverty in Nigeria: Some Dimensions and Contributing ...",
+            "snippet": "by C Ucha · Cited by 316 — As reported by Teshome (2008), the then newly released African Development Indicators report of the World Bank showed that “education, once seen as the surest, ...",
+            "url": "https://www.american.edu/cas/economics/ejournal/upload/ucha_accessible.pdf"
+          },
+          {
+            "title": "Extreme poverty",
+            "snippet": "ODI also released a paper in 2014 entitled \"The Chronic Poverty Report 2014–2015: The road to zero extreme poverty\", in which its authors assert that ...",
+            "url": "https://en.wikipedia.org/wiki/Extreme_poverty"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-166-glm-candidate",
+  "timestamp": "2026-11-05T23:58:24.199054+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2569.515
+}

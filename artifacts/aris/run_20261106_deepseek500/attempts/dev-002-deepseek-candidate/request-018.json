@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "French Ministry of Interior or embassy records/statements on visa refusals or deportations of Pakistani nationals in October–November 2020",
+        "candidates": [
+          {
+            "title": "Pakistan's Interior Ministry has rejected reports of targeted ...",
+            "snippet": "Pakistan's Interior Ministry has rejected reports of targeted deportations of Pakistanis from the United Arab Emirates.",
+            "url": "https://www.facebook.com/samaatv/posts/pakistans-interior-ministry-has-rejected-reports-of-targeted-deportations-of-pak/1452397666918389/"
+          },
+          {
+            "title": "Visa Denials",
+            "snippet": "Department of State visa case records are confidential under INA section 222(f), so information can only be provided to visa applicants, with some exceptions.",
+            "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html"
+          },
+          {
+            "title": "Interior Ministry Denies Reports of 'Country or Sect-Specific ...",
+            "snippet": "Pakistan's Interior Ministry has denied reports claiming that Pakistanis are being specifically targeted for deportation from the United Arab ...",
+            "url": "https://www.youtube.com/watch?v=8KmwVY_tW2I"
+          },
+          {
+            "title": "Pakistan",
+            "snippet": "Visa applications submitted in Pakistan are examined by the French Embassy in Islamabad; only the Embassy is authorised to take decisions about visas. For short ...",
+            "url": "https://france-visas.gouv.fr/en/pakistan"
+          },
+          {
+            "title": "List of news, statements and events - Page 1 sur 2",
+            "snippet": "WARNING: Individuals are impersonating the consulate, embassy, or ambassador of France to Pakistan to offer fraudulent services to submit a visa application.",
+            "url": "https://pk.diplomatie.gouv.fr/en/actualites"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-candidate",
+  "timestamp": "2026-11-06T04:24:31.838042+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6261.156
+}

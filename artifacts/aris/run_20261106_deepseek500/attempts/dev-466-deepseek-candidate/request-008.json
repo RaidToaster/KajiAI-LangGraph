@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amber Alert Issued For License Plate Q72B381",
+        "query": "Do state or national Amber Alert records or missing-children clearinghouses list license plate Q72B381 in connection with an Amber Alert?",
+        "candidates": [
+          {
+            "title": "AMBER Alerts - MissingKids.org",
+            "snippet": "State Missing Person Clearinghouses (1-800-843-5678) number. Toll-Free Line: (800) 346-3243. Missing Children's Clearinghouse 804-674",
+            "url": "https://www.missingkids.org/gethelpnow/amber"
+          },
+          {
+            "title": "Guidelines for Issuing AMBER Alerts - Office of Justice Programs",
+            "snippet": "AMBER plans require law enforcement to confirm an abduction prior to issuing an alert. This is essential when determining the level of risk to the child.",
+            "url": "https://amberalert.ojp.gov/about/guidelines-for-issuing-alerts"
+          },
+          {
+            "title": "AMBER Alert Plan - California Highway Patrol - CA.gov",
+            "snippet": "The WEA AMBER Alert notification is automatically sent from National Center for Missing and Exploited Children (NCMEC) at the time of the AMBER Alert activation ...",
+            "url": "https://www.chp.ca.gov/news-alerts/alerts/amber-alert-plan/"
+          },
+          {
+            "title": "Amber Alerts - Radio Television Digital News Association",
+            "snippet": "It also might include information about potential suspects, including if they are a registered sex offender, as well as vehicle description and license plate.",
+            "url": "https://www.rtdna.org/amber-alerts"
+          },
+          {
+            "title": "Amber alert - Wikipedia",
+            "snippet": "Public information in an Amber alert usually includes the name and description of the abductee, and license plate number of the abductor's vehicle if available.",
+            "url": "https://en.wikipedia.org/wiki/Amber_alert"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-466-deepseek-candidate",
+  "timestamp": "2026-11-06T04:30:32.932079+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6622.25
+}

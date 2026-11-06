@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "Nigeria independence 1960 population estimate primary source methodology",
+        "candidates": [
+          {
+            "title": "Nigeria - People, Culture, Economy",
+            "snippet": "Nigeria was granted independence on October 1, 1960. A new constitution established a federal system with an elected prime minister and a ...",
+            "url": "https://www.britannica.com/place/Nigeria/Independent-Nigeria"
+          },
+          {
+            "title": "11 Facts You Should Know About Nigeria as It Celebrates ...",
+            "snippet": "With an estimated population of about 204 million people, Nigeria gained independence from colonial rule in 1960. Nigeria gained independence ...",
+            "url": "https://www.globalcitizen.org/en/content/facts-to-know-about-nigeria-independence/"
+          },
+          {
+            "title": "In 1960 when Nigeria gained independence ...",
+            "snippet": "In 1960 when Nigeria gained independence, Nigeria's population was 45 million and 's population was 45 million. 233 million (estimate)",
+            "url": "https://www.facebook.com/kaybiyi/posts/in-1960-when-nigeria-gained-independence-nigerias-population-was-45-million-and-/10163671446241032/"
+          },
+          {
+            "title": "Nigeria at 65: The Complete History of Its Independence",
+            "snippet": "The road to Nigeria's independence on October 1, 1960, was long and difficult. It was marked by resistance, sacrifice, and determination.",
+            "url": "https://www.youtube.com/watch?v=G_zy5UFa5Lg"
+          },
+          {
+            "title": "History of Nigeria",
+            "snippet": "On 1 October 1960, Nigeria gained full independence from the United Kingdom on the basis of a federal constitution, with three large states having a weak ...",
+            "url": "https://en.wikipedia.org/wiki/History_of_Nigeria"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-candidate",
+  "timestamp": "2026-11-06T00:10:16.596845+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3281.906
+}

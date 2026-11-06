@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "What is the aggregate net worth of the bottom 125 million Americans around February 2020?",
+        "candidates": [
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America.",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Distribution of Household Wealth in the U.S. since 1989",
+            "snippet": "Note: Distributions by generation are defined by birth year as follows: Silent and Earlier=born before 1946, Baby Boomer=born 1946-1964, ...",
+            "url": "https://www.federalreserve.gov/releases/z1/dataviz/dfa/distribute/table/"
+          },
+          {
+            "title": "What Is the Average Net Worth of the Top 1%?",
+            "snippet": "The minimum net worth of the top 1% of households is roughly $13.7 million. An individual would have to earn an average of $450,100 per year to join the top ...",
+            "url": "https://www.investopedia.com/financial-edge/1212/average-net-worth-of-the-1.aspx"
+          },
+          {
+            "title": "Are You Rich? The Average Net Worth by Age",
+            "snippet": "Did your wealth grow? Discover the new average net worth by age from the Fed's Survey of Consumer Finances, plus key benchmarks.",
+            "url": "https://www.kiplinger.com/retirement/average-net-worth-by-age-how-do-you-measure-up"
+          },
+          {
+            "title": "Affluence in the United States",
+            "snippet": "Affluence refers to an individual's or household's economical and financial advantage in comparison to others. It may be assessed through either income or ...",
+            "url": "https://en.wikipedia.org/wiki/Affluence_in_the_United_States"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-05T10:12:04.767613+00:00",
+  "status": "reserved_outcome_unknown"
+}

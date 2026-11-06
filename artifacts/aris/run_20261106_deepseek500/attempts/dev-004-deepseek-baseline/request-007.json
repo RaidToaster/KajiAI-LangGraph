@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Republican Matt Gaetz was part of a company that had to pay 75 million in hospice fraud. They stole from dying people.",
+        "query": "Republican Matt Gaetz was part of a company that had to pay 75 million in hospice fraud. They stole from dying people. counterevidence",
+        "candidates": [
+          {
+            "title": "Misleading Posts Target GOP Rep. Matt Gaetz",
+            "snippet": "“He was part of a company that had to pay 75 million in hospice fraud. They stole from dying people. He is the swamp.” Like many claims that ...",
+            "url": "https://www.factcheck.org/2019/10/misleading-posts-target-gop-rep-matt-gaetz/"
+          },
+          {
+            "title": "Largest US hospice company sued for Medicare fraud",
+            "snippet": "Florida Gov. Rick Scott was ousted from his role as CEO of Columbia/HCA after a Medicare fraud investigation led to the company paying a $1.7 ...",
+            "url": "https://www.gainesville.com/story/news/politics/2013/05/09/largest-us-hospice-company-sued/31199121007/"
+          },
+          {
+            "title": "Firm Started By Sen. President Gaetz Accused Of Medicare ...",
+            "snippet": "The U.S. Department of Justice is suing the hospice company founded by Senate President Don Gaetz, accusing it of Medicare fraud, ...",
+            "url": "https://news.wfsu.org/politics/2013-05-10/firm-started-by-sen-president-gaetz-accused-of-medicare-fraud"
+          },
+          {
+            "title": "Lawsuit accuses Senate President Don Gaetz's former ...",
+            "snippet": "... Gaetz, accusing the company of engaging in Medicare fraud for more than 11 years, including during the time Gaetz was vice chairman. The ...",
+            "url": "https://www.tampabay.com/news/politics/legislature/senate-president-don-gaetzs-former-company-sued-for-medicaid-fraud/2120026/"
+          },
+          {
+            "title": "Nation's Largest Hospice Chain Faces False Claims Act ...",
+            "snippet": "Vistas Hospice Fraud Allegations. According to the government's official complaint, for a duration of approximately 12 years, Vitas fraudulently ...",
+            "url": "https://bergermontague.com/nations-largest-hospice-chain-faces-false-claims-act-lawsuit-for-medicare-fraud/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-004-deepseek-baseline",
+  "timestamp": "2026-11-06T05:23:34.591728+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9803.906
+}

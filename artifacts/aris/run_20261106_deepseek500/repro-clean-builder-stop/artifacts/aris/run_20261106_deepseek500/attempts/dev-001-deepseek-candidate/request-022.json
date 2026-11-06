@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+        "query": "Search for the Washington Post's original October 2020 article and its correction notice, plus any statement from the Post or HHS about the misattribution.",
+        "candidates": [
+          {
+            "title": "The Washington Post - Breaking news and latest headlines ...",
+            "snippet": "Breaking news, live coverage, investigations, analysis, video, photos and opinions from The Washington Post. stories with The Washington Post.",
+            "url": "https://www.washingtonpost.com/"
+          },
+          {
+            "title": "Decline in Trust in the Centers for Disease Control and ... - PMC",
+            "snippet": "Researchers present a subset of results from May and October 2020 surveys fielded through the RAND American Life Panel to assess changes in levels of trust ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9242572/"
+          },
+          {
+            "title": "Office for Civil Rights (OCR) - HHS.gov",
+            "snippet": "OCR advances the health and well-being of all Americans by enforcing civil rights, protecting religious freedom, and securing health information privacy and ...",
+            "url": "https://www.hhs.gov/ocr/index.html"
+          },
+          {
+            "title": "The Washington Post Spreads Fake News About Common ...",
+            "snippet": "White House Press Release - The Washington Post Spreads Fake News About Common Sense NIH Policy ... The Washington Post is lying to its readers.",
+            "url": "https://www.presidency.ucsb.edu/documents/white-house-press-release-the-washington-post-spreads-fake-news-about-common-sense-nih"
+          },
+          {
+            "title": "HHS Notice of Benefit and Payment Parameters for 2020",
+            "snippet": "SUMMARY: This final rule sets forth payment parameters and provisions related to the risk adjustment and risk adjustment data validation ...",
+            "url": "https://www.federalregister.gov/documents/2019/04/25/2019-08017/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2020"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-001-deepseek-candidate",
+  "timestamp": "2026-11-06T03:55:18.708183+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4508.015
+}

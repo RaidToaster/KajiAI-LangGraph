@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Speaker Robin Vos lost a Republican-held seat in the 2018 election for the first time.",
+        "query": "Speaker Robin Vos lost a Republican-held seat in the 2018 election for the first time. evidence",
+        "candidates": [
+          {
+            "title": "Yes, because of gerrymandering only one Republican ...",
+            "snippet": "My 2018 election was the first time Speaker Robin Vos has lost a Republican-held seat. she beat Republican Matt Adamczyk by 138 votes in 2018.",
+            "url": "https://politifact.com/factchecks/2020/oct/29/robyn-vining/yes-because-gerrymandering-only-one-republican-ass/"
+          },
+          {
+            "title": "Four things we learned from Tuesday's Democratic tsunami ...",
+            "snippet": "The Republican phalanx that retiring Assembly Speaker Robin Vos held together through the end of the Walker era and eight years of split ...",
+            "url": "https://wisconsinwatch.org/2026/11/wisconsin-election-democratic-government-tsunami-four-things-we-learned/"
+          },
+          {
+            "title": "Robin Vos",
+            "snippet": "Robin Vos (Republican Party) is a member of the Wisconsin State Assembly, representing District 33. He assumed office on January 6, 2025.",
+            "url": "https://ballotpedia.org/Robin_Vos"
+          },
+          {
+            "title": "Republican Wisconsin Speaker Robin Vos leaving office ...",
+            "snippet": "The Republicans held as many as 64 seats under Vos, but that dropped to 54 in what will be Vos's final year. Democrats are optimistic they can ...",
+            "url": "https://pbswisconsin.org/news-item/republican-wisconsin-speaker-robin-vos-leaving-office-after-reshaping-the-state/"
+          },
+          {
+            "title": "Republicans' power grab in Wisconsin is more evidence ...",
+            "snippet": "Speaker Robin Vos, both Republicans, began floating the idea of fundamentally altering the powers of the governor and state attorney general.",
+            "url": "https://www.nbcnews.com/think/opinion/republicans-power-grab-wisconsin-more-evidence-party-doesn-t-care-ncna943521"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-036-deepseek-baseline",
+  "timestamp": "2026-11-06T05:14:30.980569+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9260.296
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "query": "U.S. citizens should show up at polling places on Election Day original source fact check",
+        "candidates": [
+          {
+            "title": "There is a jumble of rules in place around the U.S. on ...",
+            "snippet": "Thirty-seven states have laws requesting or requiring voters to show some form of identification at the polls, while the remaining 13 states and ...",
+            "url": "https://www.facebook.com/nytimes/posts/there-is-a-jumble-of-rules-in-place-around-the-us-on-election-day-including-whet/1536544114994713/"
+          },
+          {
+            "title": "FACT FOCUS: False accusations and unverified claims ...",
+            "snippet": "FACT FOCUS: False accusations and unverified claims quickly spread about Election Day voting. Election Day was barely underway before ...",
+            "url": "https://www.wral.com/news/ap/4eb6d-fact-focus-false-accusations-and-unverified-claims-quickly-spread-about-election-day-voting/"
+          },
+          {
+            "title": "False and misleading claims about the voting process are ...",
+            "snippet": "False and misleading claims about the voting process are being spread online as voters cast their ballots in the 2026 midterms, ...",
+            "url": "https://www.facebook.com/wgno/posts/false-and-misleading-claims-about-the-voting-process-are-being-spread-online-as-/1671360847917696/"
+          },
+          {
+            "title": "What to know about the fake election poll numbers shared ...",
+            "snippet": "Just a few days later, the truth emerged: The poll was fabricated. The California results were among at least three \"polls\" across three states ...",
+            "url": "https://www.pbs.org/newshour/politics/what-to-know-about-the-fake-election-poll-numbers-shared-and-retracted-by-a-mysterious-company"
+          },
+          {
+            "title": "Exposing and Disrupting Federal Attempts to Interfere in ...",
+            "snippet": "The law is very clear that federal law enforcement cannot show up at polling locations in an armed capacity while voting is occurring. I ...",
+            "url": "https://democracyforward.org/work/research/exposing-and-disrupting-federal-attempts-to-interfere-in-the-2026-midterm-elections/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:39:42.899817+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7172.218
+}

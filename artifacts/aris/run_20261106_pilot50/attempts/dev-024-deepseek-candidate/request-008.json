@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Germany’s Foreign Minister Heiko Maas said that Thailand’s King Maha Vajiralongkorn didn’t do anything illegal while at his German residence.",
+        "query": "In what context or forum did Heiko Maas allegedly make this statement, and was it reported by primary German government sources or only by secondary media?",
+        "candidates": [
+          {
+            "title": "Maas criticized for proposed 'sexist advert' ban - DW.com",
+            "snippet": "Minister Heiko Maas has come under fire after reportedly calling for a ban on adverts which \"reduce women or men to sexual objects.\" Missing:  context  primary  secondary",
+            "url": "https://www.dw.com/en/german-justice-minister-maas-slammed-over-proposed-sexist-advert-ban/a-19179720"
+          },
+          {
+            "title": "German minister says Facebook should be treated as a media ...",
+            "snippet": "Germany's Justice Minister says he believes Facebook Inc. should be treated like a media company rather than a technology platform, ...",
+            "url": "https://www.reuters.com/article/technology/german-minister-says-facebook-should-be-treated-as-a-media-company-idUSKBN13C29B/"
+          },
+          {
+            "title": "German courts should tackle fake news now, says justice minister",
+            "snippet": "Heiko Maas has warned technology companies such as Facebook that they need to respect Germany's laws against defamation. Missing:  context  forum  allegedly  sources",
+            "url": "https://www.theguardian.com/world/2016/dec/18/german-courts-should-tackle-fake-news-now-says-minister"
+          },
+          {
+            "title": "Germany warns social media firms over illegal content - BBC",
+            "snippet": "Mr Maas quoted research which suggested Twitter deletes only 1% of the hate speech it is told about by users, and Facebook, 39%. \"This isn't ...",
+            "url": "https://www.bbc.com/news/technology-39269535"
+          },
+          {
+            "title": "Germany threatens to fine Facebook over hate speech",
+            "snippet": "Germany's justice minister says the government is considering making Facebook liable for hate speech posted on the social network.",
+            "url": "https://www.fox5ny.com/news/germany-threatens-to-fine-facebook-over-hate-speech"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-024-deepseek-candidate",
+  "timestamp": "2026-11-05T18:10:44.804280+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52664.39
+}

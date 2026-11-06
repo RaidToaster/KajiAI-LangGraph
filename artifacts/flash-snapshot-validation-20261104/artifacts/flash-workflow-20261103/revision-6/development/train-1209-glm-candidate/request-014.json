@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls original source fact check",
+        "candidates": [
+          {
+            "title": "Klobuchar misfires with salvo on Wisconsin voter suppression",
+            "snippet": "“While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls.” Mostly False. Legal ... Missing:  original  | Show results with:",
+            "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+          },
+          {
+            "title": "Amy Klobuchar 2026 Campaign: Fact-Check on Opponent's ...",
+            "snippet": "A brutal fact-check. My opponent is flooding the airwaves with ridiculous lies — don't believe them. Missing:  US  said  While  sitting  here  Wisconsin  kicked  +5",
+            "url": "https://www.facebook.com/amyklobuchar/videos/dont-believe-everything-you-see-on-tv/1132393872459745/"
+          },
+          {
+            "title": "KTTC fact-checks claims from Minnesota gubernatorial debate",
+            "snippet": "Sen. Amy Klobuchar said she worked with the Department of Justice following the 2022 Feeding Our Future fraud indictments to secure additional ... Missing:  sitting  kicked  thousands  rolls",
+            "url": "https://www.kttc.com/2026/10/22/kttc-fact-checks-claims-minnesota-gubernatorial-debate/"
+          },
+          {
+            "title": "- S. 1, FOR THE PEOPLE ACT - GovInfo",
+            "snippet": "Democrats defended the last elections as secure without meaningful election fraud as Senator Klobuchar has done here today. Missing:  kicked  | Show results with:",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-117shrg44074/html/CHRG-117shrg44074.htm"
+          },
+          {
+            "title": "Minnesota Governor Debate 2026: Klobuchar on Rubber ...",
+            "snippet": "Minnesota Governor Debate 2026: Klobuchar on Rubber Stamp and Wisconsin Billionaire Donor. Summarized by AI from the post below. Missing:  sitting  kicked  thousands  rolls  original  source  fact  check",
+            "url": "https://www.facebook.com/amyklobuchar/videos/an-important-point-he-is-a-packers-fan/3740344509437553/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-03T09:00:53.009008+00:00",
+  "status": "reserved_outcome_unknown"
+}

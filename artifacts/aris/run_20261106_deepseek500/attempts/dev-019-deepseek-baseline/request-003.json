@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Video shows attack of French embassy in Sudan evidence",
+        "candidates": [
+          {
+            "title": "The war in #Sudan is spreading. \"As long as weapons, fighters ...",
+            "snippet": "Speaking in English, she announces that South Sudan learned with grave concern of a drone attack by the Sudanese Armed Forces on Amiet market ...",
+            "url": "https://www.facebook.com/uninvhrc/videos/the-war-in-sudan-is-spreading-as-long-as-weapons-fighters-and-military-support-c/1428619008805975/"
+          },
+          {
+            "title": "US refusing to give Sudan's de facto leader visa for UN",
+            "snippet": "In tonight's edition: The United States is withholding a visa for Sudanese army chief Abdel Fattah al-Burhan ahead of his scheduled UN ...",
+            "url": "https://www.youtube.com/watch?v=pCA1kRDGP6M"
+          },
+          {
+            "title": "Protesters attack French Embassy in Burkina Faso's ... - PBS",
+            "snippet": "Video on social media showed residents with lit torches outside the perimeter of the French embassy and other images showed part of the ...",
+            "url": "https://www.pbs.org/newshour/world/protesters-attack-french-embassy-in-burkina-fasos-capital-after-countercoup"
+          },
+          {
+            "title": "Sudan: Video Footage Shows Extreme Violence, Abuse",
+            "snippet": "The footage also shows gruesome, bloody injuries from gunshots; evidence of harsh beatings and torture; and the effects of raids by security ...",
+            "url": "https://www.hrw.org/news/2019/02/10/sudan-video-footage-shows-extreme-violence-abuse"
+          },
+          {
+            "title": "UN, France condemn escalating drone attacks across Sudan",
+            "snippet": "The UN and France have expressed concern over escalating drone attacks across Sudan, warning that strikes on civilian infrastructure are ...",
+            "url": "https://www.dabangasudan.org/en/all-news/article/un-france-condemn-escalating-drone-attacks-across-sudan"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-baseline",
+  "timestamp": "2026-11-06T06:35:57.234116+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14146.546
+}

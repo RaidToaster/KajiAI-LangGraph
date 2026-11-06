@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+        "query": "Search for the original leaked HHS/White House document (or a primary copy) listing Billie Eilish and the exact wording of the entry, to determine whether the 'destroying our country' phrase is attributed to her or to the administration.",
+        "candidates": [
+          {
+            "title": "Government Transparency & Election Integrity",
+            "snippet": "The White House Transparency Task Force was formed by President Trump to expose government weaponization, failed foreign policies, and election integrity.",
+            "url": "https://www.whitehouse.gov/transparency/"
+          },
+          {
+            "title": "Trump Administration Wrongly Quoted as Saying Billie ...",
+            "snippet": "Trump Administration Wrongly Quoted as Saying Billie Eilish Is 'Destroying Our Country' (UPDATE). What was supposed to be a public health ...",
+            "url": "https://www.complex.com/music/a/tracewilliamcowen/leaked-trump-admin-document-billie-eilish-destroying-our-country"
+          },
+          {
+            "title": "No, the Trump administration didn't accuse Billie Eilish of “ ...",
+            "snippet": "Leaked internal documents obtained by the Post show an exhaustive list of celebrities who were approached to participate in the ad campaign, and ...",
+            "url": "https://medium.com/everythings-interesting/no-the-trump-administration-didnt-accuse-billie-eilish-of-destroying-our-country-3771ad9361b6"
+          },
+          {
+            "title": "Rescue of the Papers of State During the Burning ...",
+            "snippet": "The British column was led by Major General Robert Ross from Benedict, Maryland, into the City of Washington where they would burn the Capitol, the White House, ...",
+            "url": "https://www.whitehousehistory.org/rescue-of-the-papers-of-state-during-the-burning-of-washington"
+          },
+          {
+            "title": "Executive Order Blocking the Property of Persons Involved in ...",
+            "snippet": "The United States seeks to impose tangible and significant consequences on those who commit serious human rights abuse or engage in corruption, ...",
+            "url": "https://trumpwhitehouse.archives.gov/presidential-actions/executive-order-blocking-property-persons-involved-serious-human-rights-abuse-corruption/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-001-deepseek-candidate",
+  "timestamp": "2026-11-06T03:55:10.372307+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4499.687
+}

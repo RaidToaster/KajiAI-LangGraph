@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "query": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received. counterevidence",
+        "candidates": [
+          {
+            "title": "Is your ballot disqualified if poll workers mark it? Here's the truth",
+            "snippet": "Many election officials have clarified that a poll worker marking a ballot does not disqualify it. It was not possible to find any evidence of a ...",
+            "url": "https://www.snopes.com/fact-check/ballot-disqualified-poll-workers/"
+          },
+          {
+            "title": "Fact check: Why are there initials on your 2026 MS ballot?",
+            "snippet": "A viral social media post has suggested that a poll worker writing on your ballot will invalidate it. Here is the truth.",
+            "url": "https://www.sunherald.com/news/politics-government/election/article317889163.html"
+          },
+          {
+            "title": "Election officials debunk a persistent false claim about poll ...",
+            "snippet": "Election officials debunk a persistent false claim about poll workers and ballots. From Florida to Illinois to New Mexico, state and local ...",
+            "url": "https://www.nbcnews.com/politics/2026-election/election-officials-debunk-persistent-false-claim-poll-workers-ballots-rcna603676"
+          },
+          {
+            "title": "Social media posts falsely claim that ballots marked by poll ...",
+            "snippet": "But some jurisdictions require poll workers to mark ballots and election officials say that ballots will not be disqualified because of this.",
+            "url": "https://apnews.com/article/fact-check-election-midterms-ballot-markings-disqualify-e3e754bf60becd7af84868e24ac1d356"
+          },
+          {
+            "title": "Fact check: poll worker marks do not disqualify ballot - Facebook",
+            "snippet": "RUMOR IS FALSE. A poll worker's initials or administrative mark do NOT disqualify your ballot. In many states, those marks are required by law.",
+            "url": "https://www.facebook.com/authorjaymesdavis/posts/itan-news-fact-check-the-ballot-rumor-is-false-a-poll-workers-initials-or-admini/1116595377394746/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:38:11.368735+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7080.687
+}

@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "Job Support Scheme October 2020 policy paper wage replacement rate minimum hours eligibility official gov.uk",
+        "candidates": [
+          {
+            "title": "Job Support Scheme",
+            "snippet": "The Job Support Scheme has been postponed. The Government will pay 61.67% of hours not worked up to a cap of £1,541.75 per month, cap of £125 per month).",
+            "url": "https://www.local.gov.uk/job-support-scheme"
+          },
+          {
+            "title": "Job Support Scheme expanded to firms required to close ...",
+            "snippet": "The government will support eligible businesses by paying two thirds of each employees' salary (or 67%), up to a maximum of £2,100 a month.",
+            "url": "https://www.gov.uk/government/news/job-support-scheme-expanded-to-firms-required-to-close-due-to-covid-restrictions"
+          },
+          {
+            "title": "UK Government Announces New Job Support Scheme",
+            "snippet": "Use of the JSS will mean that employees can potentially earn a minimum of 77% of their normal wages for working 33% of their normal hours.",
+            "url": "https://www.cooley.com/news/insight/2020/2020-09-28-uk-new-job-support-scheme"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-candidate",
+  "timestamp": "2026-11-06T08:34:22.515230+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21251.812
+}

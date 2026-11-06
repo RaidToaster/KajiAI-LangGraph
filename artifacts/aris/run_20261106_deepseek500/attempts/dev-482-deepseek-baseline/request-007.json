@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald trump said: \"Joe Biden recently raised his hand on the debate stage and promised he was going to give it away, your health care dollars to illegal immigrants, which is going to bring massive number of immigrants into our country.\"",
+        "query": "Donald trump said: \"Joe Biden recently raised his hand on the debate stage and promised he was going to give it away, your health care dollars to illegal immigrants, which is going to bring massive number of immigrants into our country.\" counterevidence",
+        "candidates": [
+          {
+            "title": "Blue Wave Democrats Take Back 2026 | Trump said he will work ...",
+            "snippet": "Trump said he will work as a political commentator, analyzing both good and bad aspects of campaigns and why candidates win or lose. CBS reported that U.S. President Trump congratulated Democrats.",
+            "url": "https://www.facebook.com/groups/209124056486312/posts/2282561242475906/"
+          },
+          {
+            "title": "VA ordered to restore AFGE contract under federal judge’s ...",
+            "snippet": "A federal judge in Rhode Island is ordering the Department of Veterans Affairs to restore its collective bargaining agreement with one of its unions while the case continues. U.S. District Judge Melissa DuBose granted a preliminary injunction on Friday, requiring the VA to recognize the collective ...",
+            "url": "https://federalnewsnetwork.com/veterans-affairs/2026/03/va-ordered-to-restore-afge-contract-under-federal-judges-temporary-order/"
+          },
+          {
+            "title": "LOUIS VUITTON | Select Your Country/Region",
+            "snippet": "LOUIS VUITTON Official Website: Choose your country or region, pick-up your language and find the right version for you",
+            "url": "https://www.louisvuitton.com/dispatch"
+          },
+          {
+            "title": "Trump administration updates: Jeanine Pirro’s exit over the ...",
+            "snippet": "Nominally, Jeanine Pirro is the U.S. attorney for D.C., appointed by Donald Trump and tasked with enforcing the law in the nation’s capital. In reality, Pirro’s job—like that of everyone ...",
+            "url": "https://slate.com/news-and-politics/2026/08/trump-jeanine-pirro-reflecting-pool.html"
+          },
+          {
+            "title": "Blaze News Tonight | BlazeTV",
+            "snippet": "Trump Orchestrated AOC & Pelosi’s BATTLE for the Democrat Throne Trump’s shutdown master plan exposed Democrats’ fight over illegal alien Medicaid eligibility, illegal immigrant health care costs, and AOC versus Pelosi chaos. Plus, Vice President JD Vance’s fungible money warning, Musk’s Netflix battle, and Blaze Media national correspondent Julio Rosas on violent ICE protests.",
+            "url": "https://www.blazetv.com/series/c6J5kZU9NEFe-blaze-news-tonight"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-482-deepseek-baseline",
+  "timestamp": "2026-11-06T05:12:07.663180+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9116.984
+}

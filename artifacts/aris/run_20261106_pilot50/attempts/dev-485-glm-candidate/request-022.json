@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "Search C-SPAN or official 2020 Republican National Convention video archives for footage of Trump's August 27, 2020 acceptance speech containing \"signed orders that would massively lower the cost of your prescription drugs.\"",
+        "candidates": [
+          {
+            "title": "User Clip: uh ok | Video | C-SPAN.org",
+            "snippet": "President Trump announces a new initiative to lower prescription drug costs. He also speaks about the war with Iran amid renewed attacks, calling it a ... Missing: 2020 Republican Convention archives massively",
+            "url": "https://www.c-span.org/clip/white-house-event/user-clip-uh-ok/4825875"
+          },
+          {
+            "title": "Congressional Chronicle - Members of Congress, Hearings and More",
+            "snippet": "Feb 5, 2020 · ... ADDRESS ADDRESS THE CONCERNS OF AMERICAN PEOPLE. HE SAID HE'S TAKING CARE OF PRESCRIPTION DRUGS. YEAH. THEY HAVEN'T DONE A DAMN THING. HE ... Missing: Convention footage",
+            "url": "https://www.c-span.org/congress/?date=2020-02-05"
+          },
+          {
+            "title": "- PROTECTING THE INTERNET AND CONSUMERS THROUGH ...",
+            "snippet": "And I would like to bring to your attention three issues, and my statement ... While the NPRM cites examples of disclosure requirements from the food, drug ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-114shrg98593/html/CHRG-114shrg98593.htm"
+          },
+          {
+            "title": "Event Programs - C-SPAN",
+            "snippet": "Nov 18, 2021 · Find your point and click \"Set start/end at video time\" under the ... DRUGS. WHEN I GOT HERE SIX YEARS AGO, THAT NUMBER WAS 47,000. BY ... Missing: Convention archives footage",
+            "url": "https://www.c-span.org/congress/?chamber=house&date=2021-11-18&t=1637284518"
+          },
+          {
+            "title": "October 2, 2026 (Friday) Trump held a campaign rally tonight in ...",
+            "snippet": "Oct 3, 2026 · ... and allowing the federal government to negotiate with pharmaceutical companies over drug prices. ... prescription drugs thanks to the drug ... Missing: archives footage",
+            "url": "https://www.facebook.com/heathercoxrichardson/posts/october-2-2026-fridaytrump-held-a-campaign-rally-tonight-in-mobile-alabama-the-c/1641451394016753/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-glm-candidate",
+  "timestamp": "2026-11-06T01:35:23.259298+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8388.562
+}

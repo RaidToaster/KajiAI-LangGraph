@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "An 'anti-Black Lives Matter' flag replaced the American flag behind President Trump during a Waukesha campaign rally.",
+        "query": "What specific flag design or symbol is being described as 'anti-Black Lives Matter,' and was such a flag present at the Waukesha rally?",
+        "candidates": [
+          {
+            "title": "Flags with blue lines have been closely associated ...",
+            "snippet": "Flags with blue lines have been closely associated with the Blue Lives Matter movement, a national organization formed largely as a response to the Black ...",
+            "url": "https://www.facebook.com/cnn/posts/flags-with-blue-lines-have-been-closely-associated-with-the-blue-lives-matter-mo/10160083307241509/"
+          },
+          {
+            "title": "Far-right symbols seen at the U.S. Capitol riot",
+            "snippet": "The flags seen throughout the sea of rioters symbolize their support for far-right causes, white supremacy and anti-government militias. Watch ...",
+            "url": "https://www.washingtonpost.com/nation/interactive/2021/far-right-symbols-capitol-riot/"
+          },
+          {
+            "title": "Thin Blue Line Flags Stir Controversy In Mass. Coastal ...",
+            "snippet": "No matter what its original intent was, Oppong said, the thin blue line symbol has come to represent a counterforce to Black Lives Matter, and ...",
+            "url": "https://www.npr.org/2020/07/31/897615425/thin-blue-line-flags-stir-controversy-in-mass-coastal-community"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-042-deepseek-candidate",
+  "timestamp": "2026-11-06T07:42:35.399816+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18144.703
+}

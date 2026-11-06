@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "India’s imports from China increased by 27% in April-August 2020",
+        "query": "India’s imports from China increased by 27% in April-August 2020 counterevidence",
+        "candidates": [
+          {
+            "title": "This claim is #Fake. India's imports from China decreased by 27.63% ...",
+            "snippet": "India's imports from China have increased by 27% during April-August. This claim is #Fake. India's imports from China decreased by 27.63% India ...",
+            "url": "https://x.com/PIBFactCheck/status/1318466154302599168"
+          },
+          {
+            "title": "Deciphering India's Dependency on Chinese Imports",
+            "snippet": "by S Pai · Cited by 2 — India's imperative to reduce dependency on imports from China also peaked in 2020. Twenty years of prolific yet unbalanced growth in bilateral ...",
+            "url": "https://www.icsin.org/uploads/2020/10/26/af20f760b3644df1571b4e8e8e98b876.pdf"
+          },
+          {
+            "title": "How India became dangerously addicted to Chinese imports",
+            "snippet": "\"China now supplies over 30% of India's industrial imports, and India depends on it for more than 100 critical products. And the imbalance is ...",
+            "url": "https://www.bbc.com/news/articles/c5pve834grpno"
+          },
+          {
+            "title": "COVID-19, Supply Chains and Dependence on China: The Indian ...",
+            "snippet": "by A Palit · Cited by 2 — China is India's largest source of imports, nearly 15 percent of which are sourced from China. Many of India's major imports—electrical machinery, ...",
+            "url": "https://keia.org/wp-content/uploads/2021/07/KEI_JointUS-Korea_2021_3_15-1.pdf"
+          },
+          {
+            "title": "India's imports from China rose to $65.49 billion during April-August ...",
+            "snippet": "India's imports from China rose to $65.49 billion during April-August 2026-27, highlighting the country's continued dependence on goods and ...",
+            "url": "https://www.facebook.com/marketingmotivation.in/posts/indias-imports-from-china-rose-to-6549-billion-during-april-august-2026-27-highl/1713180880813722/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-054-deepseek-baseline",
+  "timestamp": "2026-11-06T08:17:38.670708+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20247.968
+}

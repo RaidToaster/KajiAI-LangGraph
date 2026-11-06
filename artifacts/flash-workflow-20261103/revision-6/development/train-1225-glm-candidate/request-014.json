@@ -1,0 +1,48 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Jacobin repeats the same People's Policy Project analysis and Forbes figure, so it is not independent of S2.",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+            "quote": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ...",
+            "context": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ..."
+          },
+          {
+            "finding": "The Standard reports Sanders made the statement at the Nevada debate, establishing provenance of the claim but not verifying it.",
+            "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+            "quote": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth.",
+            "context": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T08:54:28.031429+00:00",
+  "status": "reserved_outcome_unknown"
+}

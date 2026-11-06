@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A Maryland man was sentenced to a year in jail for throwing parties.",
+        "query": "A Maryland man was sentenced to a year in jail for throwing parties. original source fact check",
+        "candidates": [
+          {
+            "title": "A Maryland man was sentenced to a year in jail ...",
+            "snippet": "A Maryland man was sentenced to a year in jail for throwing parties at his home that violated the governor's coronavirus restrictions on ...",
+            "url": "https://www.facebook.com/KMOVStLouis/posts/a-maryland-man-was-sentenced-to-a-year-in-jail-for-throwing-parties-at-his-home-/10164295137255603/"
+          },
+          {
+            "title": "Maryland Man Gets Year in Jail for Hosting Parties ...",
+            "snippet": "A judge sentenced a Maryland man to a year in the Charles County Detention Center for throwing parties that exceeded capacity restrictions ...",
+            "url": "https://www.nbcwashington.com/news/local/maryland-man-gets-year-in-jail-for-hosting-parties-violating-covid-19-crowd-restrictions/2428432/"
+          },
+          {
+            "title": "Maryland man sentenced to year in jail for holding large ...",
+            "snippet": "Shawn Marshall Myers, 42, threw a large party at a home in Hughesville, Maryland in March, according to a press release from the Charles County ...",
+            "url": "https://www.cbsnews.com/news/coronavirus-maryland-parties-shawn-myers-sentenced-one-year/"
+          },
+          {
+            "title": "Maryland Man Sentenced After Holding Large Parties ...",
+            "snippet": "A Maryland man has been sentenced to one year in jail and fined $5,000 for throwing two large parties in violation of the state's ban on ...",
+            "url": "https://www.nytimes.com/2020/09/28/us/maryland-coronavirus-parties-jail.html"
+          },
+          {
+            "title": "Brady v. Maryland | 373 U.S. 83 (1963)",
+            "snippet": "Brady v. Maryland: The government's withholding of evidence that is material to the determination of either guilt or punishment of a criminal defendant ...",
+            "url": "https://supreme.justia.com/cases/federal/us/373/83/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-257-deepseek-baseline",
+  "timestamp": "2026-11-06T04:37:11.482915+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7020.796
+}

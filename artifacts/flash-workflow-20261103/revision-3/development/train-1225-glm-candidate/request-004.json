@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans. evidence",
+        "candidates": [
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "Gross found that the bottom 38% had about $6 billion in wealth, rather than Bruenig's $11.4 billion, but either way, this was enough to verify ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          },
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ...",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Michael Bloomberg Has Six Times More Wealth Than the ...",
+            "snippet": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that ...",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary"
+          },
+          {
+            "title": "Bloomberg: I've earned my $60 billion net worth",
+            "snippet": "According to Forbes, Bloomberg's net worth currently stands at $64.2 billion. His fortune was made via his financial information and media ...",
+            "url": "https://finance.yahoo.com/news/iveearnedmyweatlth-bloomberg-debate-billionaire-nevada-041307205.html"
+          },
+          {
+            "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth ...",
+            "snippet": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth.",
+            "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T05:43:10.436797+00:00",
+  "status": "reserved_outcome_unknown"
+}

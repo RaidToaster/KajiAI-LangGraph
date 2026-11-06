@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "49 percent of Nigerians are in extreme poverty.",
+        "query": "What data source and year does the 49 percent figure for Nigerians in extreme poverty come from?",
+        "candidates": [
+          {
+            "title": "Report: Sub-Saharan Africa has world's highest levels of ...",
+            "snippet": "It reduced extreme poverty from 86% in 2000 to 49% in 2011, cutting its extreme poverty rate by 3.2 percentage points per year. This is ...",
+            "url": "https://www.facebook.com/cgtnafrica/posts/report-sub-saharan-africa-has-worlds-highest-levels-of-multidimensional-povertyt/1608308904668821/"
+          },
+          {
+            "title": "Poverty",
+            "snippet": "Hundreds of millions will remain in extreme poverty on current trends. Extreme poverty declined during the last generation because the majority of people living ...",
+            "url": "https://ourworldindata.org/poverty"
+          },
+          {
+            "title": "Nigeria Launches its Most Extensive National Measure of ...",
+            "snippet": "In Nigeria, 40.1% of people are poor according to the 2018/19 national monetary poverty line, and 63% are multidimensionally poor according to the National MPI ...",
+            "url": "https://nigerianstat.gov.ng/news/78"
+          },
+          {
+            "title": "Nigerians are fighting for better rights outcomes",
+            "snippet": "If Nigeria were operating at its full potential given its current resources, it could lift 118 million people out of absolute poverty. If ...",
+            "url": "https://humanrightsmeasurement.org/data-in-action-spotlight-on-nigeria-2/"
+          },
+          {
+            "title": "Nigeria leads a 2026 global extreme poverty ranking ...",
+            "snippet": "Nigeria leads a 2026 global extreme poverty ranking with an estimated 73.1 million people affected, followed by DR Congo with 71.6 million. 🇳🇬 ...",
+            "url": "https://www.facebook.com/africanfolder/posts/nigeria-leads-a-2026-global-extreme-poverty-ranking-with-an-estimated-731-millio/1105861925389646/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-166-deepseek-candidate",
+  "timestamp": "2026-11-06T00:01:54.569194+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2779.875
+}

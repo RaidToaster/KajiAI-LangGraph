@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sleeping under a mosquito bed net treated (or not treated) with insecticide is ineffective and harmful to human health.",
+        "query": "What evidence exists on the effectiveness of insecticide-treated mosquito bed nets in preventing mosquito bites or malaria, and under what conditions and populations was it measured?",
+        "candidates": [
+          {
+            "title": "Insecticide-Treated Nets | Malaria - CDC",
+            "snippet": "The insecticides used for treating bed nets kill and repel mosquitoes, reducing the number that enter the house and attempt to feed on people ...",
+            "url": "https://www.cdc.gov/malaria/php/public-health-strategy/insecticide-treated-nets.html"
+          },
+          {
+            "title": "Articles Effectiveness of insecticide-treated bednets in malaria ...",
+            "snippet": "Insecticide-treated bednets (ITNs) are effective in preventing malaria where vectors primarily bite indoors and late at night, but their effectiveness is ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S2214109X16302388"
+          },
+          {
+            "title": "Quantifying the direct and indirect protection provided by ...",
+            "snippet": "Many experimental hut trial have shown that mosquito feeding attempts are altered by the presence of insecticide treated nets in rooms and ...",
+            "url": "https://www.nature.com/articles/s41467-023-36356-9"
+          },
+          {
+            "title": "Insecticide‐treated nets for preventing malaria - PMC - NIH",
+            "snippet": "In areas of stable malaria transmission, ITNs also reduced parasite prevalence by 13%, uncomplicated malaria episodes by 50%, and severe malaria by 45% compared ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6418392/"
+          },
+          {
+            "title": "Bed Nets Treated With Two Insecticides Instead Of One Are ...",
+            "snippet": "Bed nets treated with an additional insecticide are between 20% and 50% more effective in preventing malaria than those treated with the ...",
+            "url": "https://healthpolicy-watch.news/bed-nets-treated-with-two-insecticides-instead-of-one-are-much-more-effective-against-malaria/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-027-deepseek-candidate",
+  "timestamp": "2026-11-06T06:59:46.702847+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15576.015
+}

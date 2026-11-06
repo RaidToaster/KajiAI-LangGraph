@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Find a verbatim transcript or video recording of the February 25, 2020 Democratic presidential debate in South Carolina to independently confirm Klobuchar's exact words",
+        "candidates": [
+          {
+            "title": "Read the full transcript of the South Carolina Democratic ...",
+            "snippet": "Read the full transcript of the South Carolina Democratic debate. February 25, 2020 / 11:35 PM EST / CBS News. Add CBS News on Google. Seven ...",
+            "url": "https://www.cbsnews.com/news/south-carolina-democratic-debate-full-transcript-text/"
+          },
+          {
+            "title": "Watch full South Carolina Democratic debate | CBS News",
+            "snippet": "Debate starts at 1:00:00 CBS News hosted the 10th Democratic presidential primary debate on Feb. 25 from 8 p.m. to 10 p.m. ET in Charleston, ...",
+            "url": "https://www.youtube.com/watch?v=klDbFuxmXrA"
+          },
+          {
+            "title": "CBS Hosts Democratic Presidential Debate in South Carolina",
+            "snippet": "CBS Hosts Democratic Presidential Debate in South Carolina. 2020 Democratic presidential candidates Senators Bernie Sanders, Amy Klobuchar, and ...",
+            "url": "https://www.c-span.org/program/campaign-2020/cbs-hosts-democratic-presidential-debate-in-south-carolina/541754"
+          },
+          {
+            "title": "Candidates lay out coronavirus proposals at South ...",
+            "snippet": "1:47 · Candidates lay out coronavirus proposals at South Carolina Democratic debate. February 25, 2020 ; 0:38 · 'We got attacked': Canada says it ...",
+            "url": "https://www.washingtonpost.com/video/politics/candidates-lay-out-coronavirus-proposals-at-south-carolina-democratic-debate/2020/02/25/f866a23c-be37-464f-8a2c-fd84e1777973_video.html"
+          },
+          {
+            "title": "2020 Democratic debate recap: Highlights from South ...",
+            "snippet": "Democratic 2020 U.S. presidential candidate Senator Amy Klobuchar speaks at the tenth Democratic 2020 presidential debate at the Gaillard Center ...",
+            "url": "https://www.cnbc.com/2020/02/25/democratic-debate-recap-highlights-from-south-carolina.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-05T10:18:47.357925+00:00",
+  "status": "reserved_outcome_unknown"
+}

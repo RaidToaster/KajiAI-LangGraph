@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The FBI is in possession of the president of the US's son  Hunter Biden's laptop.",
+        "query": "Search for the actual federal subpoena or court filing (e.g., in the Hunter Biden tax/gun cases) that documents FBI seizure or custody of the laptop, with dates and custodian names.",
+        "candidates": [
+          {
+            "title": "Find a Case | PACER: Federal Court Records",
+            "snippet": "Anyone can access PACER to view federal court records, but first you need to register for a PACER account. Case information is available through PACER 24 hours a day, including weekends and holidays. Each court maintains its own case information. If you know the district or circuit in which the case is filed, search that court directly.",
+            "url": "https://pacer.uscourts.gov/find-case"
+          },
+          {
+            "title": "Court Records - United States Courts",
+            "snippet": "The main type of record the federal courts create and maintain is a case file, which contains a docket sheet and all documents filed in a case. Case files and court records can be found on PACER.uscourts.gov.",
+            "url": "https://www.uscourts.gov/court-records"
+          },
+          {
+            "title": "FBI — Federal Bureau of Investigation",
+            "snippet": "The Vault is our new FOIA Library, containing 6,700 documents and other media that have been scanned from paper into digital copies so you can read them in the comfort of your home or office.",
+            "url": "https://vault.fbi.gov/search"
+          },
+          {
+            "title": "United States v. Biden, 1:23-cr-00061 – CourtListener.com",
+            "snippet": "Docket for United States v. Biden, 1:23-cr-00061 — Brought to you by Free Law Project, a non-profit dedicated to creating high quality open legal information.",
+            "url": "https://www.courtlistener.com/docket/67511701/united-states-v-biden/"
+          },
+          {
+            "title": "Federal Court Records | PACER Case Search - UniCourt",
+            "snippet": "Search federal court records online from U.S. appellate, circuit, district, bankruptcy courts, and the PACER Case Locator for free. Lookup federal court cases by name, case number, party, attorney, judge, case type, docket entry & more.",
+            "url": "https://unicourt.com/courts/federal"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-053-deepseek-candidate",
+  "timestamp": "2026-11-06T08:15:40.049060+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20129.359
+}

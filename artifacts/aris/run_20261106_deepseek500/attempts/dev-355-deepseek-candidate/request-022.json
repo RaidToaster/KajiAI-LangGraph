@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ignat Shchetinin And Sammy Scott Piatt, charged with arson connected to Clackamas County, Oregon wildfires.",
+        "query": "Clackamas County Circuit Court docket search for Sammy Scott Piatt arson charge 2020",
+        "candidates": [
+          {
+            "title": "https://pacer.uscourts.gov/file-case/court-cmecf-lookup/data ...",
+            "snippet": "Federal Court Records</credit>. Court of Appeals, First Circuit BAP</title>. Court of Appeals For the First Circuit</court_name>",
+            "url": "https://pacer.uscourts.gov/file-case/court-cmecf-lookup/data.xml"
+          },
+          {
+            "title": "Clackamas fire department praises partners for securing ...",
+            "snippet": "Christian Gannon Dukes, aged 22, pleaded. Clackamas County Circuit Court, where Dukes faced charges for Arson in the First Degree, while other ...",
+            "url": "https://www.facebook.com/clackamasfire/posts/hat-tip-to-our-partners-at-the-oregon-city-police-department-and-the-clackamas-c/1245812607575861/"
+          },
+          {
+            "title": "Man arrested on arson charge after lighting leaf pile on fire ...",
+            "snippet": "53-year-old Sammy Piatt, standing near the fire. He was arrested on charges of second-degree arson and on a probation violation. Clackamas ...",
+            "url": "https://katu.com/news/local/man-arrested-on-arson-charge-after-lighting-leaf-pile-on-fire-in-oregon-city"
+          },
+          {
+            "title": "Clackamas County: 2 arson arrests not connected to wildfires",
+            "snippet": "Sammy Piatt, 53, and Ignat Shchetinin, 37, were both arrested and booked Friday on charges that included arson. Word quickly spread on social ...",
+            "url": "https://www.koin.com/news/crime/clackamas-county-2-arson-arrests-not-connected-to-wildfires/"
+          },
+          {
+            "title": "Exhibit A",
+            "snippet": "Circuit Court Cases. Exhibit A: Page 4. Name. Court. CaseNumber SanctionType. Circuit Court Cases. Exhibit A: JEANETTE MARIE DOOR-HAAG. BENTON. 16VI115139. FTA.",
+            "url": "https://www.courts.oregon.gov/Documents/RemissionOrderWithExhibit.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-355-deepseek-candidate",
+  "timestamp": "2026-11-06T04:18:30.842929+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5900.156
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+        "query": "prospective cohort or surveillance study clinical staphylococcal infection rates among face mask wearers versus non-wearers",
+        "candidates": [
+          {
+            "title": "Impact of a surveillance screening program on rates of ...",
+            "snippet": "A retrospective cohort study was performed to evaluate the impact of a surveillance screening program on the rates of health care–associated MRSA infection (HA-MRSA-I) at a single institution. A subset of surgical patients was analyzed separately. Multivariate regression techniques were used to identify predictors of the desired outcomes.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3954652/"
+          },
+          {
+            "title": "Invasive Staphylococcus aureus Infection Surveillance",
+            "snippet": "The Invasive Staphylococcus aureus Infection Surveillance Program collects data for describing incidence and trends of these infections. Public health professionals and healthcare providers can use these data to further public health research and improve health outcomes.",
+            "url": "https://www.cdc.gov/healthcare-associated-infections/php/haic-eip/invasive-staphylococcus.html"
+          },
+          {
+            "title": "The bacterial burden of worn face masks ... - Frontiers",
+            "snippet": "Effect of use of face mask on hajj related acute respiratory infection among hajjis from Riyadh-a health promotion intervention study. FETP Saudi Epidemiol Bull. (2005) 12: 27 – 8.",
+            "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1460981/full"
+          },
+          {
+            "title": "Bacterial contamination on used face masks among nursing home ...",
+            "snippet": "Prolonged duration of face mask wearing, however, was not associated with increased contamination rates, and neither with profession (clinical vs nonclinical), whether the user provided care to a patient with a known MDRO infection, or age (<45 vs >45 years).",
+            "url": "https://www.cambridge.org/core/journals/antimicrobial-stewardship-and-healthcare-epidemiology/article/bacterial-contamination-on-used-face-masks-among-nursing-home-healthcare-personnel/D64B1E08179F10785BC0CCD57BFED2C4"
+          },
+          {
+            "title": "Evaluation of the penetration capacity of bacteria through ...",
+            "snippet": "Interestingly, our study is one of the first to investigate the distribution of non-airborne bacteria through the layers of masks over time for different mask types and wearing conditions.",
+            "url": "https://www.nature.com/articles/s41598-024-76744-9"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-041-deepseek-candidate",
+  "timestamp": "2026-11-06T07:37:08.229915+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17817.546
+}

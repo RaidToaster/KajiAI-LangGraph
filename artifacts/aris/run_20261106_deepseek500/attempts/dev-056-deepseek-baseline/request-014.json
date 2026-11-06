@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19 original source fact check",
+        "candidates": [
+          {
+            "title": "Fact check: Donald Trump's past flu shots, COVID-19 risk aren't linked",
+            "snippet": "An Instagram post falsely speculates that President Donald Trump's prior flu vaccinations put him at risk for COVID-19.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/21/fact-check-donald-trumps-flu-shots-covid-risk-arent-linked/3623699001/"
+          },
+          {
+            "title": "False claim: The flu shot contains COVID-19",
+            "snippet": "Social media users have been sharing posts online that claim the novel coronavirus (implying COVID-19) is incorporated into the seasonal ...",
+            "url": "https://www.reuters.com/article/world/false-claim-the-flu-shot-contains-covid-19-idUSKBN22V294/"
+          },
+          {
+            "title": "influenza Archives",
+            "snippet": "In sweeping changes to the childhood vaccine schedule, the Centers for Disease Control and Prevention no longer recommends universal vaccination against six ...",
+            "url": "https://www.factcheck.org/issue/influenza/"
+          },
+          {
+            "title": "Fact check: Getting flu shot doesn't make you more (or less) likely to get ...",
+            "snippet": "The claim: The flu vaccine can cause people to test positive for coronavirus. As the novel coronavirus continues to spread across the United ...",
+            "url": "https://med.fsu.edu/sites/default/files/news-publications/print/Fact%20check_%20Flu%20shot%2C%20coronavirus%20not%20connected%2C%20medical%20experts%20say.pdf"
+          },
+          {
+            "title": "Fact-Checking Trump's Claim COVID-19 Vaccine Could Come By 'End ...",
+            "snippet": "NBC News' Jane Timm fact checks President Trump's claim about a potential coronavirus vaccine that he says could be available by the “end of ...",
+            "url": "https://www.youtube.com/watch?v=GXW627dqoSg"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-baseline",
+  "timestamp": "2026-11-06T08:25:35.769487+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20725.078
+}

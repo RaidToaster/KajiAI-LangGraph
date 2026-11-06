@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime.",
+        "query": "Bryant Johnson Ruth Bader Ginsburg personal trainer interview workout routine details",
+        "candidates": [
+          {
+            "title": "Justice Ruth Bader Ginsburg's personal trainer, Bryant Johnson ...",
+            "snippet": "PUSH-UPS FOR RBG: Justice Ruth Bader Ginsburg's personal trainer, Bryant Johnson, did push-ups in front of her casket as she lay in state at the ...",
+            "url": "https://www.facebook.com/kcci8/videos/push-ups-for-rbg-justice-ruth-bader-ginsburgs-personal-trainer-bryant-johnson-di/363774678159935/"
+          },
+          {
+            "title": "Episode 68: The RBG Workout with Ruth Bader Ginsburg's ...",
+            "snippet": "Don't miss our fun interview with Bryant Johnson, a trainer I wholeheartedly recommend because he works with the Justice of my dreams, Ruth ...",
+            "url": "https://www.bodykindnessbook.com/2018/02/06/episode-68-rbg-workout-ruth-bader-ginsburgs-trainer-bryant-johnson/"
+          },
+          {
+            "title": "Bryant Johnson - Careers Podcasts",
+            "snippet": "He has been training Supreme Court Justice Ruth Bader Ginsburg for 20 years. He's also the author of the RBG Workout. He's a records manager at the U.S. ...",
+            "url": "https://www.orrick.com/en/Careers/Careers-Podcasts/Bryant-Johnson"
+          },
+          {
+            "title": "Bryant Johnson, Justice Ginsburg's Personal Trainer",
+            "snippet": "The RBG Workout: How She Stays Strong . . . and You Can Too! walks you through how to do Justice Ginsburg's workout—from planks to squats to ...",
+            "url": "https://www.sixthandi.org/event/bryant-johnson/"
+          },
+          {
+            "title": "Bryant Johnson",
+            "snippet": "Bryant Johnson has worked as a personal trainer for twenty years and was the personal trainer for Justice Ruth Bader Ginsburg from 1999 until her passing in ...",
+            "url": "https://2unstoppable.org/bryant-johnson/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-candidate",
+  "timestamp": "2026-11-06T04:28:11.886451+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6481.203
+}

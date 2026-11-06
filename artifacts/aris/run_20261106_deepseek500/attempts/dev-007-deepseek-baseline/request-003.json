@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’",
+        "query": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’ evidence",
+        "candidates": [
+          {
+            "title": "Odds Are You Paid More In Federal Taxes Than Trump Did ...",
+            "snippet": "Donald Trump paid $750 a year in taxes his first two years in office, according to tax returns obtained by The New York Times.",
+            "url": "https://www.npr.org/2020/09/30/918572938/odds-are-you-paid-more-in-federal-taxes-than-trump-did-the-year-he-took-office"
+          },
+          {
+            "title": "Here's Why You Pay More In Taxes Than Donald Trump",
+            "snippet": "\"I bet you pay more taxes than Donald Trump, who is the President of the United States.\" Bloomberg Opinion's Tim O'Brien explains why ...",
+            "url": "https://www.youtube.com/watch?v=YG5VFv8Y8qQ"
+          },
+          {
+            "title": "The $750 Question: How Trump's Taxes Reveal The Deep ...",
+            "snippet": "Trump's shockingly low tax bill confirms what many of us already know—the U.S. tax code tends to favor the wealthy and shines a light on our ...",
+            "url": "https://www.forbes.com/sites/advisor/2020/10/02/the-750-question-how-trumps-taxes-reveal-the-deep-unfairness-of-the-us-tax-code/"
+          },
+          {
+            "title": "Do you pay more than $750 in taxes? You've given ...",
+            "snippet": "Trump considers himself much smarter than regular tax-paying folk, who cannot afford the fancy lawyers or use the tax loopholes which allow him ...",
+            "url": "https://www.theguardian.com/commentisfree/2020/sep/29/donald-trump-president-taxes-politics"
+          },
+          {
+            "title": "Why do people believe in the NYT quote of Trump only ...",
+            "snippet": "Why do people believe in the NYT quote of Trump only paying $750 in federal taxes when in the very article it says that he actually paid $1 million in ...",
+            "url": "https://www.quora.com/Why-do-people-believe-in-the-NYT-quote-of-Trump-only-paying-750-in-federal-taxes-when-in-the-very-article-it-says-that-he-actually-paid-1-million-in-16-and-4-2-million-in-17"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-007-deepseek-baseline",
+  "timestamp": "2026-11-06T05:44:27.137675+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11056.453
+}

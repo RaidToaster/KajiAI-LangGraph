@@ -1,0 +1,81 @@
+{
+  "review_task": "/root/literal_proof_review",
+  "date": "2026-11-05",
+  "requested_reviewer_model": "gpt-6.1-sol",
+  "requested_reviewer_effort": "high",
+  "actual_runtime_model": null,
+  "actual_runtime_effort": null,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_scope_complete": true,
+  "verdict": "NEW bounded native-fidelity diagnostic justified; no material blocker found; not a fidelity or efficacy pass",
+  "native_diagnostic_justified": true,
+  "material_defects": [],
+  "nonblocking_cleanup": [],
+  "resolved_receipt_note": "Identified inherited current27/8 wording alongside latest29/9; executor reports correcting the historical usage note and labeling older native sends historical before freeze. User-reported balances remain distinct from independently viewed dashboard verification.",
+  "assumptions": [
+    {
+      "id": "L1",
+      "status": "supported_as_interface_invariant",
+      "judgment": "Compiler checks exact contiguous extraction membership in selected passage; failed extraction is retained and adds a blocking gap. Full intact quote remains evidence.",
+      "evidence": ["src/kaji_langgraph/literal_proof_assessment.py:compile_literal_proof", "tests/test_literal_proof_assessment.py", "artifacts/bound-proof-native-20261105/glm-anchor-audit.json"],
+      "limit": "Literal membership does not establish correct stance, referent, qualifications or whole-claim support. A quotation of the fabricated claim is not proof the words were said."
+    },
+    {
+      "id": "L2",
+      "status": "conditional_scientific_justification",
+      "judgment": "Client attribution correctly reports what a source states. Jev local support is easier by construction and has a narrower semantic meaning; unchanged numeric threshold is not equivalent checking strength.",
+      "evidence": ["src/kaji_langgraph/literal_proof_assessment.py", "src/kaji_langgraph/jev.py:check_citations", "src/kaji_langgraph/graph.py:check_evidence", "evaluation/analyze_flash_study.py:screen"],
+      "required": "Whole-claim/class/stance/context/origin/independence audit even on abstention; original correct-supported-acceptance gain guards. No Jev score gain as efficacy claim."
+    },
+    {
+      "id": "L3",
+      "status": "supported_as_preservation_invariant",
+      "judgment": "Arbitrary custom_question survives every dependency; other_uncertainty requires nonempty custom text; every material declaration remains blocking without category filtering.",
+      "evidence": ["src/kaji_langgraph/literal_proof_assessment.py:LiteralIssue", "src/kaji_langgraph/literal_proof_assessment.py:compile_literal_proof", "src/kaji_langgraph/bound_proof_assessment.py:compile_bound_proof", "src/kaji_langgraph/proof_assessment.py:compile_proof"],
+      "limit": "Model may still omit or misclassify issues or put false premises into questions. Audit basis relevance and neutrality; do not clear issues to fit six findings."
+    },
+    {
+      "id": "L4",
+      "status": "supported_as_exposure_invariant",
+      "judgment": "Selector only binds component/passage and unanswered components. Client-neutral questions add no source facts. Original planning questions/statements, prior gaps and all exposed original records remain available at adjudication and retained.",
+      "evidence": ["src/kaji_langgraph/literal_proof_assessment.py:literal_selector_prompt", "src/kaji_langgraph/literal_proof_assessment.py:catalogue_leads", "src/kaji_langgraph/catalogued_assessment.py:analyze_catalogued"],
+      "limit": "Selection is guidance, not proof of exhaustive evidence or uncertainty coverage. Native completeness still requires audit."
+    },
+    {
+      "id": "original_guards",
+      "status": "supported_in_inspected_code",
+      "judgment": "Acceptance gate retains material blockers and provenance requirements. Advancement retains original8/12 supported acceptance gains, safety, raw performance and execution checks.",
+      "evidence": ["src/kaji_langgraph/gate.py:evidence_gaps", "src/kaji_langgraph/graph.py:check_evidence", "evaluation/flash_study.py:check_advancement", "evaluation/analyze_flash_study.py:screen"],
+      "limit": "This review does not release confirmation or final attempts, or establish scientific-screen success."
+    }
+  ],
+  "allowed_route": {
+    "fresh_phase_only": true,
+    "assessment_mode": "literal_proof",
+    "models": {"glm": "glm-5.3-flash:cloud", "deepseek": "deepseek-v4.1-flash:cloud"},
+    "reasoning": {"glm": "high", "deepseek": false},
+    "sequence": ["GLM native2calls then full audit", "DeepSeek source-blind plan then audit", "DeepSeek native2calls then full audit"],
+    "max_sends": {"flash": 5, "jev": 4, "search": 0, "fetch": 0},
+    "requested_output_token_cap_total": 26624,
+    "worker_count": 1,
+    "numerical_threads": 2,
+    "job_seconds_cap": 300,
+    "aggregate_seconds_cap": 900,
+    "retries": 0,
+    "semantic_repairs": 0,
+    "first_binding_failure_stop": true,
+    "both_model_faithful_abstention": "engineering entry only; promptly original eight-case/model efficacy screen",
+    "confirmation_final_released": false
+  },
+  "verification": {
+    "local_scoped_tests_passed": 32,
+    "exit_code": 0,
+    "full_suite_187": "executor-reported, not independently rerun",
+    "service_calls": 0,
+    "source_edits": 0,
+    "protected_case_reads": 0,
+    "subagents_spawned": 0
+  },
+  "claims_excluded": ["improved semantic checking from higher Jev scores", "efficacy", "native-fidelity success before actual outputs", "causal component isolation", "completed requested S/Q/QL comparison", "independent human or cross-family validation", "global scientific futility", "final-study release"]
+}

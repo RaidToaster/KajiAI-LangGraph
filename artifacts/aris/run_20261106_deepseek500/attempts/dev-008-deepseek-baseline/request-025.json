@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3. original source fact check",
+        "candidates": [
+          {
+            "title": "Fact check: False accusations, unverified claims quickly ...",
+            "snippet": "CLAIM: Issues with voting machines in Westchester County are evidence of Democrats cheating. ... have nothing to do with the alleged fraud ...",
+            "url": "https://www.mercurynews.com/2026/11/03/fact-check-election-2026-voting/"
+          },
+          {
+            "title": "FACT FOCUS: False accusations and unverified claims ...",
+            "snippet": "CLAIM: Issues with voting machines in Westchester County are evidence of Democrats cheating. THE FACTS: There is no credible evidence to suggest ...",
+            "url": "https://ca.finance.yahoo.com/news/fact-focus-false-accusations-unverified-021631365.html"
+          },
+          {
+            "title": "FACT FOCUS: Misinformation about voting spreads less ...",
+            "snippet": "False and misleading claims about voting are spreading online as voters cast their ballots in the 2026 midterms, with Election Day less than ...",
+            "url": "https://apnews.com/article/fact-check-midterms-election-voting-ballot-5933df3747ceaf6091324959d8b9c59b"
+          },
+          {
+            "title": "Election Day social media post claiming 20000 fraudulent ...",
+            "snippet": "KHOU 11's Jeremy Rogalski take a deeper look at a social media post made on Election Day falsely claiming that 20000 fraudulent ballots were ...",
+            "url": "https://www.youtube.com/watch?v=ZV9iWF_gXFI"
+          },
+          {
+            "title": "FACT FOCUS: False claims of rigged elections are limited ...",
+            "snippet": "Voters were instructed to put completed ballots in bags that would be safeguarded to be processed later. Patently false fraud accusations arose.",
+            "url": "https://www.thecanadianpressnews.ca/world/fact-focus-false-claims-of-rigged-elections-are-limited-as-midterm-vote-heavily-favors-democrats/article_cc5b13cc-f8d8-57f1-9b49-9df205fcab1a.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-baseline",
+  "timestamp": "2026-11-06T05:50:18.413250+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11407.718
+}

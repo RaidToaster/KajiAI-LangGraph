@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Hunter Biden, son of US President Joe Biden has died. evidence",
+        "candidates": [
+          {
+            "title": "No, Hunter Biden Did Not Die From a Drug Overdose",
+            "snippet": "In October 2020, a false and distasteful rumor emerged online that Hunter Biden, the 50-year-old son of Democratic presidential candidate ...",
+            "url": "https://www.snopes.com/fact-check/hunter-biden-dead-overdose-hoax/"
+          },
+          {
+            "title": "Fact check: Rumors that Hunter Biden is dead are a 4chan hoax",
+            "snippet": "A false rumor that Hunter Biden — the son of former Vice President Joe Biden — has died originated on 4chan.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/27/fact-check-rumors-hunter-biden-dead-4-chan-hoax/3754066001/"
+          },
+          {
+            "title": "Rumors that Hunter Biden — the son of former Vice President ...",
+            "snippet": "Rumors that Hunter Biden — the son of former Vice President Joe Biden — has died of an overdose have appeared on Facebook this week.",
+            "url": "https://www.facebook.com/asburyparkpress/posts/rumors-that-hunter-biden-the-son-of-former-vice-president-joe-biden-has-died-of-/10164404070820322/"
+          },
+          {
+            "title": "Fact Check: NO Evidence That Hunter Biden Is Dead",
+            "snippet": "Did Hunter Biden die of a crack overdose? No, that's not true: There is absolutely zero evidence to support the...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-no-evidence-that-hunter-biden-is-dead.html"
+          },
+          {
+            "title": "[PDF] Epstein File Says Biden Was Replaced in 2019!",
+            "snippet": "The text, which appears as part of a raw, unverified submission within the broader document dump, describes the current president as “an ... Missing:  son  | Show results with:",
+            "url": "https://docs.house.gov/meetings/JU/JU00/20260211/118951/HHRG-119-JU00-20260211-SD019.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-baseline",
+  "timestamp": "2026-11-06T07:31:54.363318+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17503.671
+}

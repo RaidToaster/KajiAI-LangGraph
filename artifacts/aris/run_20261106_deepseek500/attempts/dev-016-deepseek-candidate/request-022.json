@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The plentiful evidence we have indicates that masks would not meaningfully help with aerosol transmission of COVID 19.",
+        "query": "Search for systematic reviews or meta-analyses registered and published on or before 2020-10-29 specifically assessing mask effectiveness against aerosol or airborne transmission of SARS-CoV-2.",
+        "candidates": [
+          {
+            "title": "Efficacy of face mask in preventing respiratory virus transmission",
+            "snippet": "by M Liang · 2020 · Cited by 683 — Meta - analyses suggest that mask use provided a significant protective effect. Use of masks by healthcare workers … can reduce the risk of respiratory virus ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7253999/"
+          },
+          {
+            "title": "Face masks to prevent transmission of COVID-19",
+            "snippet": "by Y Li · 2021 · Cited by 378 — The results of this systematic review and meta - analysis support the conclusion that wearing a mask could reduce the risk of COVID-19 infection. Read more",
+            "url": "https://www.ajicjournal.org/article/S0196-6553(20)31043-9/fulltext"
+          },
+          {
+            "title": "Airborne transmission of COVID-19 and the role of face mask ...",
+            "snippet": "by SA Tabatabaeizadeh · 2021 · Cited by 236 — The result of this meta - analysis has shown significant reduction in infection with face mask use; the pooled RR (95%CI) was 0.12 [0.06, 0.27] ( ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7776300/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-016-deepseek-candidate",
+  "timestamp": "2026-11-06T06:25:44.939096+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13534.265
+}

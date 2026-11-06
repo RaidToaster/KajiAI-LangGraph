@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime.",
+        "query": "What specific elements of Ruth Bader Ginsburg's exercise routine have been described in interviews, biographies, or court records, and by whom?",
+        "candidates": [
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Ruth Bader Ginsburg became the second woman—and first Jewish woman—to serve on the Supreme Court. Read more at womenshistory.org.",
+            "url": "https://www.womenshistory.org/education-resources/biographies/ruth-bader-ginsburg"
+          },
+          {
+            "title": "Ruth Bader Ginsberg: superhero, supreme court justice ...",
+            "snippet": "This video provides a biographical overview of Ruth Bader Ginsburg, focusing on her perseverance against systemic gender bias and personal ...",
+            "url": "https://www.facebook.com/weitzmanmuseum/videos/family-time-shes-a-hero-on-the-bench-and-in-the-gym/507483943461504/"
+          },
+          {
+            "title": "On Ruth Bader Ginsburg, Exercise and Personal Inspiration",
+            "snippet": "Justice Ginsburg famously began a rigorous workout regime after being diagnosed with cancer decades ago, and continues her ferocious workouts to ...",
+            "url": "https://www.jewishboston.com/read/on-ruth-bader-ginsburg-exercise-and-personal-inspiration-an-interview-with-my-grandmother/"
+          },
+          {
+            "title": "Ruth Bader Ginsburg",
+            "snippet": "Bader never pursued a career of her own, she encouraged Ruth's scholarly and professional ambitions, taking her to the library every week to keep her supplied ...",
+            "url": "https://achievement.org/achiever/ruth-bader-ginsburg/"
+          },
+          {
+            "title": "How Ruth Bader Ginsburg stays in shape",
+            "snippet": "Ruth Bader Ginsburg, the oldest. She attributes her long career to her fitness routine. Seeing The Justice lifting weights or seeing her ...",
+            "url": "https://www.facebook.com/cnn/videos/how-ruth-bader-ginsburg-stays-in-shape/262077844413565/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-candidate",
+  "timestamp": "2026-11-06T04:27:51.975743+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6461.296
+}

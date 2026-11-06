@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "There is a scam involving Santander customers being sent fake bank cards.",
+        "query": "There is a scam involving Santander customers being sent fake bank cards. evidence",
+        "candidates": [
+          {
+            "title": "Santander bank card ‘scam’ probably doesn’t exist – Full Fact",
+            "snippet": "We can’t find any evidence that this scam exists. Posts warning people about a possible scam involving Santander bank cards have been shared tens of thousands of times on Facebook. The posts largely use the same text, which was being shared at least as early as October 2020.",
+            "url": "https://fullfact.org/online/santander-card-scam/"
+          },
+          {
+            "title": "New payment set up? Get in touch! The bank scam where your ...",
+            "snippet": "Meanwhile, Santander says more than £3m has been stolen from its customers through bank impersonation scams so far this year, with an average loss of £6,000. Because the messages are being...",
+            "url": "https://www.theguardian.com/money/2026/aug/30/new-payment-set-up-get-in-touch-the-bank-scam-where-your-bank-is-the-scammer"
+          },
+          {
+            "title": "Massachusetts police issue warning to public after residents ...",
+            "snippet": "A Massachusetts police department is warning the public of a new scam that has already left victims. The Barnstable Police Department have announced that victims are being contacted by their “Santander Bank Fraud Department” via a text message.",
+            "url": "https://fallriverreporter.com/massachusetts-police-issue-warning-to-public-after-residents-victimized-in-new-scam-that-resulted-in-withdrawals-from-bank-account/"
+          },
+          {
+            "title": "What You Can Do to Protect Your Information | Santander Bank",
+            "snippet": "Protect yourself from fraud with Santander Bank security tools. Discover how to report scams, set alerts, lock your card, and keep your accounts secure.",
+            "url": "https://www.santanderbank.com/personal/security-center/what-you-can-do-to-prevent-fraud"
+          },
+          {
+            "title": "Santander issues advice after ‘realistic’ scam email included ...",
+            "snippet": "A Santander customer warned others about a highly convincing scam where the fraudsters knew his card details.",
+            "url": "https://www.express.co.uk/finance/personalfinance/1740974/Santander-scam-warning-banking-fraud"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-059-deepseek-baseline",
+  "timestamp": "2026-11-06T08:29:28.379920+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20957.687
+}

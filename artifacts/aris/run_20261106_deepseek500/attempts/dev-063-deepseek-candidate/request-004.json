@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Officer who wore Trump 2020 mask to polls to face disciplinary action",
+        "query": "Which law enforcement agency or department employed the officer, and in what jurisdiction did the alleged conduct occur?",
+        "candidates": [
+          {
+            "title": "NRS: CHAPTER 289 - PEACE OFFICERS AND OTHER LAW ...",
+            "snippet": "A law enforcement agency shall not conduct an investigation pursuant to this subsection if the complaint or allegation is filed with the law enforcement agency ...",
+            "url": "https://www.leg.state.nv.us/nrs/nrs-289.html"
+          },
+          {
+            "title": "Law Enforcement Misconduct - Department of Justice",
+            "snippet": "The Department of Justice (\"The Department\") vigorously investigates and, where the evidence permits, prosecutes allegations of Constitutional ...",
+            "url": "https://www.justice.gov/crt/law-enforcement-misconduct"
+          },
+          {
+            "title": "Law Enforcement Misconduct Investigative Office | New York ...",
+            "snippet": "LEMIO has jurisdiction over New York's more than 500 local law enforcement agencies. LEMIO investigates alleged wrongdoing, examines departmental policies ...",
+            "url": "https://ag.ny.gov/law-enforcement-misconduct-investigative-office"
+          },
+          {
+            "title": "Peace Officer Bill of Rights - PORAC",
+            "snippet": "The superior court shall have initial jurisdiction over any proceeding brought by any public safety officer against any public safety department for alleged ...",
+            "url": "https://porac.org/members/peace-officer-bill-of-rights/"
+          },
+          {
+            "title": "Responding to Hate Crimes: A Police Officer's Guide to ...",
+            "snippet": "In 1997, 11,211 state and local law enforcement agencies voluntarily reported 9,861 hate crime offenses to the FBI. Officers should thoroughly document ...",
+            "url": "https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-063-deepseek-candidate",
+  "timestamp": "2026-11-06T08:40:04.385244+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21593.687
+}

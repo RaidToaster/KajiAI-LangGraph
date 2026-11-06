@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trash Can Plastered With 'Ballot Box' Sign In Philadelphia Was Intended To Get People To Toss Their Ballots In The Trash.",
+        "query": "Trash Can Plastered With 'Ballot Box' Sign In Philadelphia Was Intended To Get People To Toss Their Ballots In The Trash. evidence",
+        "candidates": [
+          {
+            "title": "Fact Check: Trash Can Plastered With 'Ballot Box' Sign In Philadelphia Was ...",
+            "snippet": "Fact Check: Trash Can Plastered With 'Ballot Box' Sign In Philadelphia Was NOT Intended To Get People To Toss Their Ballots In The Trash.",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-a-worker-did-not-intend-to-direct-people-to-toss-their-ballots-in-the-trash.html"
+          },
+          {
+            "title": "Fact check: 'Ballot box' signs on trash cans were not meant to fool voters",
+            "snippet": "Social media users are sharing posts which say that a man plastered signs saying 'ballot box' onto trash cans in Philadelphia, ...",
+            "url": "https://www.reuters.com/article/world/fact-check-ballot-box-signs-on-trash-cans-were-not-meant-to-fool-voters-idUSKBN27E2VM/"
+          },
+          {
+            "title": "Instagram Post Misleads on 'Ballot Box' Posters",
+            "snippet": "A popular Instagram post suggests nefarious actors are misrepresenting trash cans in Philadelphia as ballot boxes. The signs seen in the ...",
+            "url": "https://www.factcheck.org/2020/11/instagram-post-misleads-on-ballot-box-posters/"
+          },
+          {
+            "title": "Ad for history exhibit in Philadelphia is mistaken for attempt to suppress votes",
+            "snippet": "Says someone tried to suppress votes by disguising trash cans as ballot boxes. We rate this claim False.",
+            "url": "https://politifact.com/factchecks/2020/oct/28/instagram-posts/ad-history-exhibit-philadelphia-mistaken-attempt-s/"
+          },
+          {
+            "title": "VERIFY: No, trash cans were not intentionally disguised as ballot boxes",
+            "snippet": "'BALLOT BOX' was plastered on the sides of two garbage cans in Philadelphia, but it was a promotion for an exhibit on voting rights, not an ...",
+            "url": "https://www.youtube.com/watch?v=-8Z5Ryh3wCI"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-022-deepseek-baseline",
+  "timestamp": "2026-11-06T06:46:54.082037+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14803.39
+}

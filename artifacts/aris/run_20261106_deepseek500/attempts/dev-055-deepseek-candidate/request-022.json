@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve.",
+        "query": "State health department weekly COVID-19 death reports for September–October 2020, e.g., archived dashboards from California, Texas, Florida, and New York",
+        "candidates": [
+          {
+            "title": "COVID-19 Time-Series Metrics by County and State (ARCHIVED)",
+            "snippet": "Access current COVID-19 data on the CDPH respiratory virus dashboard (https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Respiratory-Viruses/ ...",
+            "url": "https://data.chhs.ca.gov/dataset/covid-19-time-series-metrics-by-county-and-state"
+          },
+          {
+            "title": "Provisional Death Counts for COVID-19",
+            "snippet": "Tabulated data on provisional COVID-19 deaths by age, sex, race and Hispanic origin, and comorbidities. Data are updated weekly, and users can query data by a ...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm"
+          },
+          {
+            "title": "State COVID-19 Data Dashboards",
+            "snippet": "As of April 6, all 50 states and DC are publicly reporting some type of data related to COVID-19, such as the number of positive tests and/or ...",
+            "url": "https://shvs.org/resources/state-covid-19-data-dashboards/"
+          },
+          {
+            "title": "How did COVID-19 affect people in the US?",
+            "snippet": "California recorded the most COVID-19 cases and deaths from January 2020 to July 2023. California also had the largest state population, as of 2023. Total cases ...",
+            "url": "https://usafacts.org/answers/how-did-covid-19-affect-people-in-the-us/country/united-states/"
+          },
+          {
+            "title": "WHO COVID-19 dashboard: COVID-19 cases",
+            "snippet": "WHO COVID-19 Dashboard is updated every Tuesday for the period of two full weeks prior. Counts primarily reflect laboratory-confirmed cases and deaths, based ...",
+            "url": "https://covid19.who.int/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-055-deepseek-candidate",
+  "timestamp": "2026-11-06T08:21:46.775238+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20496.078
+}

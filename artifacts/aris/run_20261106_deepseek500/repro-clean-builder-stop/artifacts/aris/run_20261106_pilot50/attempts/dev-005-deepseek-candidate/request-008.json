@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "What evidence is offered that the information in those articles was fabricated rather than sourced from official, independent, or documentary records?",
+        "candidates": [
+          {
+            "title": "Rule 803. Exceptions to the Rule Against Hearsay - LII",
+            "snippet": "The following are not excluded by the rule against hearsay, regardless of whether the declarant is available as a witness: (1) Present Sense Impression.",
+            "url": "https://www.law.cornell.edu/rules/fre/rule_803"
+          },
+          {
+            "title": "How to Know if a Source Is Credible",
+            "snippet": "Simply put, reliable information is based on demonstrable, objective facts and evidence rather than conjecture, opinion, or unproven figures.",
+            "url": "https://www.purdueglobal.edu/blog/online-learning/credible-academic-sources/"
+          },
+          {
+            "title": "Cross-checking journalistic fact-checkers: The role of ... - PMC",
+            "snippet": "by DM Markowitz · 2023 · Cited by 39 — Most people are poor “fake news” detectors [30], suggesting Trump's repeated falsehoods may have subtly undermined the public's ability to discriminate truths ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10368232/"
+          },
+          {
+            "title": "Evaluating Sources: Misinformation, Disinformation & Fake ...",
+            "snippet": "Disinformation is fabricated or deliberately manipulated audio or visual content, including intentionally created conspiracy theories or rumors.",
+            "url": "https://libguides.csun.edu/evaluating-sources/misinformation-disinformation-and-fake-news"
+          },
+          {
+            "title": "FERPA | Protecting Student Privacy - Department of Education",
+            "snippet": "The purpose of this part is to set out requirements for the protection of privacy of parents and students under section 444 of the General Education Provisions ...",
+            "url": "https://studentprivacy.ed.gov/ferpa"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-candidate",
+  "timestamp": "2026-11-06T00:43:52.339823+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5297.64
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Re-run assessment once draft content is provided.",
+        "candidates": [
+          {
+            "title": "Understanding the Simplified Assessment Workflow",
+            "snippet": "The new assessment workflow is simplified into six stages: Not Started, In Progress, Pending Approval, Approved, Failed, and Approved Pending Remediation. ... The ...",
+            "url": "https://trustarchelp.zendesk.com/hc/en-us/articles/14435867491347-Understanding-the-Simplified-Assessment-Workflow"
+          },
+          {
+            "title": "Assessments Page (Drafts and Published)",
+            "snippet": "A draft assessment can always be published by its owner. A draft assessment that is shared with a school or district can be published by its owner or a district ...",
+            "url": "https://support.renaissance.com/s/article/Assessments-Page-Drafts-and-Published-1752673901446?language=en_US"
+          },
+          {
+            "title": "Adding Drafting to an Assessment",
+            "snippet": "In this help guide, learn how to: Add drafting to an assessment; Configure drafting with Cadmus Marker. NOTE: Drafting feature is only available for Cadmus ...",
+            "url": "https://support.cadmus.io/teachers/adding-drafting-to-an-assessment"
+          },
+          {
+            "title": "Assessment Authoring User Guide - Ohio's State Tests Portal",
+            "snippet": "You can modify the content of any test you created if it has a Draft status. After you publish a test, you cannot edit that test. When another ...",
+            "url": "https://oh-ost.portal.cambiumast.com/content/contentresources/en/OH_AuthoringGuide23-24.pdf"
+          },
+          {
+            "title": "About Open Response Assessments (ORA)",
+            "snippet": "If a staff assessment step is included in an assignment, learners do not receive final grades until the staff assessment step has been completed. The scores ...",
+            "url": "https://docs.openedx.org/en/latest/educators/concepts/exercise_tools/about_OpenResponseAssessments.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-baseline",
+  "timestamp": "2026-11-03T05:20:40.829696+00:00",
+  "status": "reserved_outcome_unknown"
+}

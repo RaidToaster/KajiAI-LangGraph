@@ -1,0 +1,382 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "sources": [
+          {
+            "url": "https://data.worldbank.org/indicator/NY.GNP.PCAP.PP.CD",
+            "text": "# GNI per capita, PPP (current international $)\n\nInternational Comparison Program ( ICP ), World Bank ( WB ), uri: worldbank.org/en/programs/icp/data, note: This information is for ICP’s PPPs utilized in WDI, publisher: International Comparison Program ( ICP ), date accessed: May 30, 2024, date published: May 30, 2024;\nThe Eurostat PPP Programme, Eurostat ( ESTAT ), uri: ec.europa.eu/eurostat/databrowser/explore/all/all\\_themes, publisher: Eurostat;\nThe OECD PPP Programme, Organisation for Economic Co-operation and Development ( OECD ), uri: data-explorer.oecd.org, publisher: OECD;\nStaff estimates, World Bank ( WB );\nNational Accounts data files, Organisation for Economic Co-operation and Development ( OECD );\nWorld Economic Outlook database, International Monetary Fund ( IMF )\n\n*License*  : CC BY-4.0\n\nLabel"
+          },
+          {
+            "url": "https://data.worldbank.org/indicator/NY.GNP.PCAP.CD",
+            "text": "# GNI per capita, Atlas method (current US$)\n\nCountry official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development ( OECD );\nStaff estimates, World Bank ( WB )\n\n*License*  : CC BY-4.0\n\nLabel"
+          },
+          {
+            "url": "https://www.facebook.com/channelsforum/posts/according-to-the-world-bank-collection-of-development-indicators-nigeria-is-amon/579004610253961/",
+            "text": "... gross national income ( GNI ) per capita of $2,157 in 2019 . Nigeria , Others To Benefit As IMF Unveils $45b Fund. CHANNELSTV.COM. Nigeria , Others ... Read more"
+          },
+          {
+            "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups",
+            "text": "... GNI per capita between $4,636 and $14,375; high-income economies are those with more than a GNI per capita of $14,375. Please note: Regions in this table ... Read more"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/List_of_countries_by_GNI_(nominal)_per_capita",
+            "text": "This is a list of countries by gross national income per capita in 2025 at nominal values, according to the Atlas method, an indicator of income developed ... Read more"
+          },
+          {
+            "url": "https://www.nigerianstat.gov.ng/",
+            "text": "GDP -; Gross Domestic Product (GDP) grew by 3.89% (year-on-year) in real terms in the first quarter of 2026, higher than the 3.13% recorded in the first ..."
+          },
+          {
+            "url": "https://www.facebook.com/straightfromnaija/posts/consumption-expenditure-across-zones-in-nigeria-20191-south-west-n1204trn2-south/1169140228555031/",
+            "text": "AMAECHI SAYS NIGERIANS, NOT TINUBU, ARE RESPONSIBLE FOR THE COUNTRY'S PROBLEMS - WHO REALLY BEARS THE RESPONSIBILITY?\n\nBy The Insight Lens Project Political Intelligence Desk\n\nRotimi Amaechi, the African Democratic Congress (ADC) vice-presidential candidate, has stirred political debate by declaring that Nigerians, rather than President Bola Tinubu, are responsible for the country's problems amid prevailing economic hardship. He has urged citizens to take responsibility by voting against Tinubu in the 2027 general elections.\n\nAmaechi's argument raises an important question about political accountability. While Nigerians have a responsibility to choose their leaders wisely, hold them accountable and participate in democratic processes, they cannot be held responsible for every policy decision or economic outcome of the government they elect.\n\nThe argument, however, becomes more complicated when viewed against the realities of governance. Citizens elect governments, but elected leaders make policy decisions, manage public resources and bear responsibility for the consequences of their administration. Rising living costs, unemployment, insecurity and economic pressures cannot simply be transferred to voters because they elected a particular president. Democratic accountability must work both ways.\n\nInterestingly, Amaechi's position also invites scrutiny of his own political history. He was a prominent member of the APC-led political movement that defeated an incumbent government in 2015, served as Minister of Transportation under Muhammadu Buhari and is now seeking power under the ADC. His experience in government makes it reasonable to ask what lessons he has drawn from the policies and decisions of the administrations in which he participated.\n\nNevertheless, his central message about electoral accountability is worth separating from the controversy surrounding his choice of words. Nigerians have the constitutional right to retain or replace their leaders through elections. But opposition politicians seeking public trust must go beyond blaming voters or criticising the incumbent. They must explain what they would do differently, how they would finance their promises and how their proposed policies would improve the lives of ordinary Nigerians. Ultimately, 2027 should be about accountability for both those who seek to retain power and those who seek to replace them."
+          },
+          {
+            "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=NG",
+            "text": "GDP per capita (current US$) - Nigeria from The World Bank: Data. Nigeria Country official statistics, National Statistical Organizations and/or Central Banks; ..."
+          },
+          {
+            "url": "https://www.statista.com/topics/6440/key-indicators-of-nigeria-s-economy/?srsltid=AYCX9vLoyzU6GRSdrDe5XUN0VDaSeZoj7DmTfGAkDZa83cAvuEHSyEA-",
+            "text": "Nigeria's GDP was worth 252.7 billion U.S. dollars, while the gross domestic product per capita equalled 1,100 U.S. is the 23rd African country with the ..."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Economy_of_Nigeria",
+            "text": "According to the National Bureau of Statistics (NBS) Nigeria's GDP grew by 3.19% in Q2 2024. The non-oil sector drove growth, expanding by 4.13%, while the oil ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "source_0_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_0_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_0_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_0_injection": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_1_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_1_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_1_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_1_injection": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_2_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_2_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_2_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_2_injection": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_3_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_3_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_3_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_3_injection": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_4_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_4_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_4_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_4_injection": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_5_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_5_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_5_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_5_injection": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_6_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_6_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_6_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_6_injection": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_7_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[7]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_7_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[7]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_7_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[7]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_7_injection": {
+          "type": "noul",
+          "instructions": "For `sources[7]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_8_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[8]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_8_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[8]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_8_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[8]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_8_injection": {
+          "type": "noul",
+          "instructions": "For `sources[8]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_9_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[9]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_9_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[9]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_9_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[9]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_9_injection": {
+          "type": "noul",
+          "instructions": "For `sources[9]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-baseline",
+  "timestamp": "2026-11-05T23:47:36.201146+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1921.5
+}

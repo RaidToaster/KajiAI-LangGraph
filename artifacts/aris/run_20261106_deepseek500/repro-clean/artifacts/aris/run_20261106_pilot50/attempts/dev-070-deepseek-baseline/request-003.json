@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks.",
+        "query": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks. evidence",
+        "candidates": [
+          {
+            "title": "Predominant Role of Bacterial Pneumonia as a Cause ... - PMC",
+            "snippet": "by DM Morens · 2008 · Cited by 2275 — ... 1918–1919 pandemic), histological and bacteriologic evidence suggests that the vast majority of influenza deaths resulted from secondary bacterial pneumonia.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2599911/"
+          },
+          {
+            "title": "A study by Fauci and colleagues didn't blame 1918 ...",
+            "snippet": "Anthony Fauci showed that “most of the deaths” during the 1918-1919 Spanish flu pandemic were actually due to infections from face masks. AP'S ...",
+            "url": "https://apnews.com/article/fact-check-fauci-study-1918-spanish-flu-masks-deaths-998351571536"
+          },
+          {
+            "title": "Dr. Fauci Didn't Write Paper Blaming Most Spanish Flu ...",
+            "snippet": "Anthony Fauci \"wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia ...",
+            "url": "https://www.voanews.com/a/covid-19-pandemic_infodemic_infodemic-dr-fauci-didnt-write-paper-blaming-most-spanish-flu-deaths/6197476.html"
+          },
+          {
+            "title": "Fact check: Fauci study did not attribute 1918 Spanish flu ...",
+            "snippet": "One caption reads, “Here is the Dr Fauci article from 2008 saying that most deaths from the 1918 Spanish Flu were caused by Bacterial pneumonia!",
+            "url": "https://www.reuters.com/article/world/fact-check-fauci-study-did-not-attribute-1918-spanish-flu-deaths-to-bacterial-p-idUSKBN2771ZO/"
+          },
+          {
+            "title": "Debunking claim Fauci co-authored paper saying masks ...",
+            "snippet": "Dr. Anthony Fauci co-authored a paper that found masks caused most deaths during the 1918 Spanish flu pandemic. Rating:.",
+            "url": "https://www.snopes.com/fact-check/fauci-spanish-flu-masks/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-070-deepseek-baseline",
+  "timestamp": "2026-11-06T01:41:43.418977+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8768.734
+}

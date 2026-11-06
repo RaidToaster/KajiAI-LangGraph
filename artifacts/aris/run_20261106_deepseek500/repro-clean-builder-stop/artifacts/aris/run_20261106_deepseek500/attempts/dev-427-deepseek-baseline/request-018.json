@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "query": "cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received. evidence",
+        "candidates": [
+          {
+            "title": "Is voting by mail secure, and how can I know my mail-in ...",
+            "snippet": "Many jurisdictions allow voters to track their mailed ballot to see when it has been received and accepted. · Before a mail-in ballot is counted, election ...",
+            "url": "https://electioninnovation.org/update/is-voting-by-mail-secure-and-how-can-i-know-my-mail-in-vote-is-counted/"
+          },
+          {
+            "title": "Are Voting Ballots Marked by Poll Workers Disqualified?",
+            "snippet": "Ballots are not disqualified at the polling place. If a tabulator cannot read a ballot, the voter is offered a new ballot. If they do not want ...",
+            "url": "https://www.snopes.com/fact-check/poll-workers-writing-on-ballots/"
+          },
+          {
+            "title": "MYTH: If you're not on the voter roll, you can't vote. FACT ...",
+            "snippet": "FACT: If you believe you're registered and eligible, you can cast a provisional ballot while the county confirms your eligibility. When is a ...",
+            "url": "https://www.facebook.com/LWVTexas/posts/myth-if-youre-not-on-the-voter-roll-you-cant-vote-fact-if-you-believe-youre-regi/1551903730306220/"
+          },
+          {
+            "title": "Election Protection: Know your Rights as a Voter",
+            "snippet": "Cast a provisional ballot only if you have no other option. Be sure the poll worker gives you information on how to follow up to find out if your provisional ...",
+            "url": "https://www.vote.org/election-protection/"
+          },
+          {
+            "title": "Can poll workers write on your ballot? Election officials debunk ...",
+            "snippet": "NBC Chicago's Rose Schmidt asked election officials about a viral claim saying they cannot. Election officials debunk viral claim. Mail-in ...",
+            "url": "https://www.youtube.com/watch?v=Mq-MXHMb3nk"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:38:48.072005+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7117.39
+}

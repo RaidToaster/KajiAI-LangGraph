@@ -1,0 +1,12 @@
+# DeepSeek preflight budget and quota
+
+The current user confirmed $60 in existing Ollama credits and $4.67 in Jev credits. The fresh-send caps are $30 and $2.50. TinyFish's authenticated wallet lookup returned $12, auto-reload unconfigured, and zero Search and Fetch rates. The account confirmation and timestamp-only usage receipts are preserved beside this file.
+
+Ollama DeepSeek peak input/output rates are $0.30/$1.20 per million tokens. Peak cached input is $0.006 per million. Published off-peak input/output are $0.15/$0.60, with $0.003 cached input. Jev 1.13 costs $0.042 per million input tokens with free output. The coordinator reserves $1.572864 per Ollama send and $0.002752512 per Jev send. Estimates assume peak uncached traffic. Billing totals remain unknown. [Ollama pricing](https://ollama.com/pricing) [TypeSafe model rates](https://docs.typesafe.ai/models) [TinyFish pricing](https://www.tinyfish.ai/pricing)
+
+The 47 reused cells contributed 185 searches, 366 Fetch URLs, 4,224.6 seconds of worker time, and $0.9356/$0.0629 in rate-derived Ollama/Jev cost. Baseline and candidate separately scaled by their remaining 476 and 477 cells give approximately 3,745 searches, 7,411 Fetch URLs, 23.7 worker hours, and $18.81/$1.29. This partial-pilot estimate includes the retained failures. A 900-URL rolling cap suggests approximately 8–10 calendar days under sustained operation. Prior use, waits, outages, drift and cost limits can extend or stop the run.
+
+The timestamp-only TinyFish history contains 891 Fetch records in the preceding 24 hours and zero Search records in the preceding hour. The local journal also reserves the historical unknown Fetch outcome. The coordinator checks the maximum of the local and provider-derived expiry times separately. The first untouched cell is dev-296-deepseek-candidate. Reserving all 12 Fetch URL slots places earliest eligibility at 2026-11-06 17:04:49 WIB. No model, Jev, Search or Fetch calls were issued for the new study before this checkpoint.
+
+If quota binds again, the launcher records the next cell and an earliest resume timestamp and exits between attempts. The operator can restart with the same frozen launcher after the checkpoint. A stop marker or a nonterminal started journal requires reconciliation before proceeding. Existing-credit confirmations and account traffic must be reassessed if the account state changes during a long wait.
+

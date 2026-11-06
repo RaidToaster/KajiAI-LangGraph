@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The FBI is in possession of the president of the US's son  Hunter Biden's laptop.",
+        "query": "Search for sworn congressional testimony or DOJ/FBI statements specifically describing when and how the FBI obtained the laptop and its chain of custody.",
+        "candidates": [
+          {
+            "title": "FBI — Federal Bureau of Investigation",
+            "snippet": "The Vault is our new FOIA Library, containing 6,700 documents and other media that have been scanned from paper into digital copies so you can read them in the comfort of your home or office.",
+            "url": "https://vault.fbi.gov/search"
+          },
+          {
+            "title": "FBI — Federal Bureau of Investigation",
+            "snippet": "The FBI's mission demands organizational accountability. Public trust must be earned, and transparency is not optional—it is essential. To that end, the FBI Vault features a collection of documents and other media that have been processed under the Freedom of Information Act (FOIA). These files have been released either as proactive disclosures or as frequently requested FBI records.",
+            "url": "https://vault.fbi.gov/"
+          },
+          {
+            "title": "Johnson, Grassley to FBI - Hunter Biden Laptop, FBI Messages",
+            "snippet": "Since 2020, we have conducted oversight of the Federal Bureau of Investigation's (FBI) corrupt handling of Hunter Biden's laptop. While your predecessor opted to stonewall and ignore our multiple requests for information on the matter, we expect that under your leadership the FBI will be transparent with Congress. The American people deserve to see every document, along with a detailed ...",
+            "url": "https://www.grassley.senate.gov/imo/media/doc/johnson_grassley_to_fbi_-_hunter_biden_laptop_fbi_messages.pdf"
+          },
+          {
+            "title": "FBI Vault — FBI",
+            "snippet": "The Vault is the FBI's electronic FOIA Library, containing nearly 7,000 documents and other media that have been scanned from paper into digital copies so you can read them in the comfort of your ...",
+            "url": "https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/freedom-of-information-privacy-act/vault"
+          },
+          {
+            "title": "Testimony Reveals FBI Employees Who Warned Social Media ...",
+            "snippet": "Put simply, after the FBI conditioned social media companies to believe that the laptop was the product of a hack-and-dump operation, the Bureau stopped its information sharing, allowing social media companies to conclude that the New York Post story was Russian disinformation. The Post published its story early in the morning on October 14.",
+            "url": "https://judiciary.house.gov/media/press-releases/testimony-reveals-fbi-employees-who-warned-social-media-companies-about-hack"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-053-deepseek-candidate",
+  "timestamp": "2026-11-06T08:15:57.796597+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20147.093
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "Nigerian National Bureau of Statistics household survey income or asset data disaggregated by state or geopolitical zone including the southeast",
+        "candidates": [
+          {
+            "title": "Nigeria General Household Survey-Panel (Wave 5) 2023/ ...",
+            "snippet": "A Report by the Nigerian National Bureau of Statistics ... National Bureau of Statistics. Page 9. General Household Survey - Panel Wave 5 viii.",
+            "url": "https://www.nigerianstat.gov.ng/pdfuploads/GHS-Panel%20Wave%205%20-%20Survey%20Report.pdf"
+          },
+          {
+            "title": "Nigeria - Living Standards Survey 2018-2019",
+            "snippet": "The survey covered all de jure households excluding prisons, hospitals, military barracks, and school dormitories. Producers and sponsors.",
+            "url": "https://microdata.worldbank.org/index.php/catalog/3827"
+          },
+          {
+            "title": "Epidemiology of Hepatitis B Virus Infection in Nigeria - PMC",
+            "snippet": "by BO Olakunde · 2025 · Cited by 20 — Available data indicate sociodemographic disparities in HBV prevalence, with higher rates among men, adults (> 18 years), and rural dwellers.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12494470/"
+          },
+          {
+            "title": "Nigeria: Overview and U.S. Policy",
+            "snippet": "Summary. Overview. Nigeria is Africa's most populous country, largest democracy, top oil producer, and one of its largest economies.",
+            "url": "https://www.congress.gov/crs-product/R47052"
+          },
+          {
+            "title": "Multiple Indicator Cluster Survey (Mics) 2016/2017",
+            "snippet": "Abuja, Nigeria: National Bureau of Statistics and United. Nations ... The survey provides estimated disaggregation of Nigeria by states, geo political zones ...",
+            "url": "https://www.unicef.org/nigeria/sites/unicef.org.nigeria/files/2018-09/Nigeria-MICS-2016-17.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-glm-candidate",
+  "timestamp": "2026-11-05T23:49:25.433048+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2030.75
+}

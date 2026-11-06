@@ -1,0 +1,66 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "A 2020 fact-check directly refutes the universal claim and states that 22 states extended mail-in ballot receipt deadlines beyond Election Day.",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-it-is-not-true-that-all-ballots-arriving-after-election-day-will-be-thrown-out.html",
+            "quote": "No, that's not true: 22 states have extended mail-in ballot receipt deadlines beyond Election Day.",
+            "context": "Not All States\n\nIs it true that all mail-in ballots received after Election Day will not be counted in the upcoming election? No, that's not true: 22 states have extended mail-in ballot receipt deadlines beyond Election Day. However, almost all other states require mail-in ballots to be received by Election Day -- Tuesday, November 3, 2020 -- to be counted\n\nThe claim appeared in a Facebook post (archived here) where it was published by author and journalist Elizabeth Gilbert on October 28, 2020. Gilbert posted a screenshot of a tweet from Eric Holder, U.S. attorney general from 2009-2015, with Holder saying, \"Given Supreme Court rulings on mail ballots and Trump's effort to undermine the Postal Service, I strongly suggest that you now vote in person - try early voting or find a drop box. Protect your health but don't let anyone deprive you of your most precious right. Have a plan.\"\n\nThe caption on Gilbert's Facebook post started:\n\n> Even if your mail-in ballot is postmarked today, if it arrives after Election Day, it will be thrown out. Discounted. Ignored. (Thanks, Supreme Court. Thanks, GOP. Thanks for your constant, tireless work to disenfranchise hundreds of thousands of American voters. You are literally the worst.)\n\nThis is what the post looked like on Facebook at the time of writing:\n\n*(Source: Facebook screenshot taken on Wed Oct 28 20:38:59 2020 UTC)*\n\nHolder's tweet does not contain misinfor"
+          },
+          {
+            "finding": "The same 2020 fact-check lists specific states, such as Alaska, where ballots postmarked by Election Day could be received and counted afterward.",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-it-is-not-true-that-all-ballots-arriving-after-election-day-will-be-thrown-out.html",
+            "quote": "**Alaska:** Mail-in ballots must be postmarked by November 3 and received by November 13.",
+            "context": "reenshot of a tweet from Eric Holder, U.S. attorney general from 2009-2015, with Holder saying, \"Given Supreme Court rulings on mail ballots and Trump's effort to undermine the Postal Service, I strongly suggest that you now vote in person - try early voting or find a drop box. Protect your health but don't let anyone deprive you of your most precious right. Have a plan.\"\n\nThe caption on Gilbert's Facebook post started:\n\n> Even if your mail-in ballot is postmarked today, if it arrives after Election Day, it will be thrown out. Discounted. Ignored. (Thanks, Supreme Court. Thanks, GOP. Thanks for your constant, tireless work to disenfranchise hundreds of thousands of American voters. You are literally the worst.)\n\nThis is what the post looked like on Facebook at the time of writing:\n\n*(Source: Facebook screenshot taken on Wed Oct 28 20:38:59 2020 UTC)*\n\nHolder's tweet does not contain misinformation, saying only, \"I strongly suggest that you now vote in person.\" It is Gilbert's caption, posted to her 1.7 million followers, that contains misinformation. Here are the states with extensions to ballot receipt deadlines where ballots will still be counted if received after Election Day:\n\n**Alaska:** Mail-in ballots must be postmarked by November 3 and received by November 13.\n\n**California:** Mail-in ballots must be postmarked by November 3 and received by November 20.\n\n**District of Columbia:** Mail-in Ballots must be postmarked by November 3 and received by November 13.\n\n**Illinois:** Mail-in ballots must be postmarked by November 3 and received by November 17.\n\n**Iowa:** Mail-in ballots must be postmarked by November 2 and received by 12 p.m. on November 9.\n\n**Kansas:** Mail-in ballots must be postmarked by November 3 and received by November 6.\n\n**Kentucky:** Mail-in ballots must be postmarked by November 3 and received by November 6.\n\n**Maryland:** Mail-in ballots must be postmarked by November 3 and received by 10 a.m. on November 13.\n\n**Massachusetts:** Mail-in ballots must be postmarked by November 3 and received by November 6.\n\n**Minnesota:** Mail-in ballots must be postmarked by November 3 and received by November 10. A federal judge upheld the decision to count ballots that arrive a week after election day. However, Minnesota's GOP appealed this ruling to a three-judge panel of the 8th U.S. Circuit Court of Appeals. There has been no ruling as of this writing.\n\n**Mississippi**: Mail-in ballots must be postmarked by November 3 and received by"
+          },
+          {
+            "finding": "An AFP fact-check likewise labels as false the claim that the Supreme Court had indicated it would invalidate state laws permitting ballots received after November 3 to be counted.",
+            "url": "https://factcheck.afp.com/doc.afp.com.D4YN3T6",
+            "quote": "Supreme Court has indicated it will invalidate state laws permitting ballots received after November 3 to be counted. This is false;",
+            "context": "Supreme Court has indicated it will invalidate state laws permitting ballots received after November 3 to be counted. This is false;"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-017-deepseek-baseline",
+  "timestamp": "2026-11-06T06:28:07.244864+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13676.562
+}

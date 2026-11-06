@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism.",
+        "query": "What did French President Macron say about Islamist terrorism, and when were those comments made?",
+        "candidates": [
+          {
+            "title": "Letter: France is against 'Islamist separatism' — never Isla",
+            "snippet": "France has been attacked by Islamist terrorists because it embodies freedom of expression, the right to believe or not to believe and a certain ...",
+            "url": "https://www.elysee.fr/en/emmanuel-macron/2020/11/04/letter-france-is-against-islamist-separatism-never-islam"
+          },
+          {
+            "title": "What has French president Macron said to outrage the Muslim world?",
+            "snippet": "His targets, he said, were terrorism and those who promote \"radical Islam\". ... French protests · Macron seeks Schengen changes as part of ...",
+            "url": "https://www.euronews.com/2020/11/02/macron-and-islam-what-has-the-french-president-actually-said-to-outrage-the-muslim-world"
+          },
+          {
+            "title": "France unveils draft law to fight Islamist radicalism",
+            "snippet": "... Macron to root out what he calls \"separatists\" undermining the nation. France has suffered numerous Islamist terrorist attacks, including the ...",
+            "url": "https://www.pbs.org/newshour/politics/france-unveils-draft-law-to-fight-islamist-radicalism"
+          },
+          {
+            "title": "🔵 Macron Rejects Claims of a “Migrant and Islamist Invasion” of France ...",
+            "snippet": "... Islamist extremism as disloyal or manipulated. This comes after years of terrorist attacks, rising knife crime, and parallel communities in ...",
+            "url": "https://www.facebook.com/eumuslims.org/posts/-macron-rejects-claims-of-a-migrant-and-islamist-invasion-of-francefrench-presid/1532953842192255/"
+          },
+          {
+            "title": "In French City Hit by Terrorist Attack, Residents Blame Far-Right Rhetoric",
+            "snippet": "He called it a “terrorist crime fueled by racist hatred.” But at the same time, he said that expressing his views did not make him responsible ...",
+            "url": "https://www.nytimes.com/2026/11/06/world/europe/france-shooting-trappes.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-030-deepseek-candidate",
+  "timestamp": "2026-11-06T07:12:17.824353+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16327.14
+}

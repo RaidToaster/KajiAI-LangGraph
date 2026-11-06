@@ -1,0 +1,46 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Search Snopes (S4) and Check Your Fact (S5) full-text articles to confirm their conclusions match PolitiFact, Reuters, and Newsweek, since only snippets were retrieved.",
+        "candidates": [
+          {
+            "title": "Snopes.com | The definitive fact-checking site and reference ...",
+            "snippet": "The definitive Internet reference source for researching urban legends, folklore, myths, rumors, and misinformation.",
+            "url": "https://www.snopes.com/"
+          },
+          {
+            "title": "Fact Checks Archive",
+            "snippet": "Rumors and questionable claims we have researched recently. A fake social media post attributed to U.S. President",
+            "url": "https://www.snopes.com/fact-check/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-03T15:24:23.073114+00:00",
+  "status": "reserved_outcome_unknown"
+}

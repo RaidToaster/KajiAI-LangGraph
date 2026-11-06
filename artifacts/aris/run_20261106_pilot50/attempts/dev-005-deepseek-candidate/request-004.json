@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "Which specific media outlets, articles, dates, and countries are cited or implied by the claim as examples of publishing allegations of Chemical Weapons Convention non-compliance?",
+        "candidates": [
+          {
+            "title": "Chemical Weapons Convention | OPCW",
+            "snippet": "The Convention aims to eliminate an entire category of weapons of mass destruction by prohibiting the development, production, acquisition, stockpiling, ...",
+            "url": "https://www.opcw.org/chemical-weapons-convention"
+          },
+          {
+            "title": "Bluebook Guide: International Materials",
+            "snippet": "Examples of citation of a convention published by an international organization follow. Organization of American States, American Convention ...",
+            "url": "https://libraryguides.law.uic.edu/c.php?g=1386543&p=11475368"
+          },
+          {
+            "title": "OFAC Consolidated Frequently Asked Questions",
+            "snippet": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) administers and enforces economic and trade sanctions against targeted foreign ...",
+            "url": "https://ofac.treasury.gov/faqs/all-faqs"
+          },
+          {
+            "title": "Citations-to-International-Agreements-Bluebook-Rule-21. ...",
+            "snippet": "Citation of a treaty or other international agreement generally includes the following information: (1) name of the agreement, (2) parties to the agreement, if ...",
+            "url": "https://www.law.georgetown.edu/wp-content/uploads/2018/07/Citations-to-International-Agreements-Bluebook-Rule-21.pdf"
+          },
+          {
+            "title": "Chemical Weapons Convention",
+            "snippet": "The Chemical Weapons Convention (CWC), officially the Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons ...",
+            "url": "https://en.wikipedia.org/wiki/Chemical_Weapons_Convention"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-candidate",
+  "timestamp": "2026-11-06T00:43:45.414187+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5290.718
+}

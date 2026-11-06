@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wildfires do not Affect Mexico And Canada",
+        "query": "Do primary records from Mexican or Canadian wildfire agencies document any effects of wildfires on those countries, such as property damage, health impacts, evacuations, or economic losses?",
+        "candidates": [
+          {
+            "title": "FACT SHEET: Climate change and wildfires in Canada",
+            "snippet": "Fire suppression has increased wildfire risk in parts of the country by allowing fuel to build up in some forested areas, but this is a localized effect.",
+            "url": "https://climateinstitute.ca/news/fact-sheet-wildfires/"
+          },
+          {
+            "title": "The regional economic impact of wildfires: Evidence from ...",
+            "snippet": "by S Meier · 2023 · Cited by 140 — We estimate the impact of wildfires on the growth rate of gross domestic product (GDP) and employment of regional economies in Southern Europe from 2011 to ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0095069623000050"
+          },
+          {
+            "title": "Wildfires in Canada: Toolkit for Public Health Authorities",
+            "snippet": "Wildfire evacuations have been associated with mental health outcomes, disrupted access to health care, and social well being impact (for more information, see ...",
+            "url": "https://www.canada.ca/en/public-health/services/publications/healthy-living/wildfires-canada-toolkit-public-health-authorities.html"
+          },
+          {
+            "title": "Canada wildfires, 2023 - Forensic analysis",
+            "snippet": "The wildfires also caused significant property damage and economic losses. Homes, businesses, and infrastructure were expensive to rebuild ...",
+            "url": "https://www.undrr.org/resource/canada-wildfires-2023-forensic-analysis"
+          },
+          {
+            "title": "Climate-exacerbated wildfires cost the U.S. between $394 ...",
+            "snippet": "The underlying report uses physical risk data and a variety of realized insurance claims from FEMA and other sources to calculate damages.",
+            "url": "https://www.jec.senate.gov/public/_cache/files/9220abde-7b60-4d05-ba0a-8cc20df44c7d/jec-report-on-total-costs-of-wildfires.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-348-deepseek-candidate",
+  "timestamp": "2026-11-06T03:54:22.349981+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4451.656
+}

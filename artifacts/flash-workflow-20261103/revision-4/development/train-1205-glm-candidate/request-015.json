@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Snopes final rating for Lindsey Graham Trump viruses quote",
+        "candidates": [
+          {
+            "title": "Did US Sen. Graham Say Trump Knows More Than CDC About ...",
+            "snippet": "The senator defended President Donald Trump's handling of the new coronavirus outbreak, but he didn't go this far.",
+            "url": "https://www.snopes.com/fact-check/lindsey-graham-trump-cdc/"
+          },
+          {
+            "title": "That Viral Lindsey Graham Quote Saying Trump Knows More ...",
+            "snippet": "The quote, which cites Graham saying that Trump will \"eradicate this plague,\" originated from a satire Twitter account. Missing:  rating  | Show results with:",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087"
+          },
+          {
+            "title": "Trump said part of Lindsey Graham's body 'literally blew up'",
+            "snippet": "The Republican senator died on July 11, 2026, after a \"brief and sudden illness.\" Missing:  viruses  | Show results with:",
+            "url": "https://www.snopes.com/fact-check/lindsey-graham-trump-quote/"
+          },
+          {
+            "title": "Lindsey Graham quote on Trump knowing more about viruses ...",
+            "snippet": "Quotes Sen. Lindsey Graham as saying President Trump “probably knows more about medicine and specifically viruses than any of the so-called ...",
+            "url": "https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/"
+          },
+          {
+            "title": "Archives | Page 2 | Snopes.com",
+            "snippet": "This rating indicates quoted material (speech or text) is correctly attributed to the person who allegedly spoke or wrote it.",
+            "url": "https://www.snopes.com/fact-check/rating/correct_attribution/?pagenum=2"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-03T08:27:30.430794+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,274 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "sources": [
+          {
+            "url": "https://www.timesherald.com/2026/10/29/election-2026-fact-check-voting-misinformation/",
+            "text": "If they've already printed a ballot that doesn't reflect their intended selections, “they should notify a poll worker rather than cast it so the ..."
+          },
+          {
+            "url": "https://www.reuters.com/fact-check/poll-worker-markings-dont-void-us-ballots-2026-10-22/",
+            "text": "Fact Check: Poll worker markings don't void US ballots ... US election officials and experts say ballots are not automatically invalidated if poll ..."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=Mq-MXHMb3nk",
+            "text": "Can poll workers write on your ballot? Election officials debunk viral claim. @NBCChicago35 likes3.1K views2 weeks ago"
+          },
+          {
+            "url": "https://www.nbcchicago.com/news/local/election-officials-debunk-viral-claim-about-poll-workers-writing-on-ballots/4003553/",
+            "text": "A false social media rumor about poll workers writing on ballots is spreading online again, and election officials insist it isn't true."
+          },
+          {
+            "url": "https://www.wral.com/news/ap/4eb6d-fact-focus-false-accusations-and-unverified-claims-quickly-spread-about-election-day-voting/",
+            "text": "# FACT FOCUS: False accusations and unverified claims quickly spread about Election Day voting\n\nElection Day was barely underway before misinformation about voting irregularities surfaced online. One actual ballot-counting malfunction Tuesday, in a suburban county north of New York City, gave rise to theories about activities by Democrats or their allies to rig the vote. But there was no in...\n\nPosted\n11/4/2026, 2:18:14 AM\n\nUpdated\n11/4/2026, 6:24:50 AM\n\n* Related\n* Associated Press\n* AP Politics\n* AP Washington news\n* AP Business\n* AP Entertainment\n\nA poll worker closes a secure bag after transferring ballots from their emergency ballot bags in Pelham, N.Y., Tuesday, Nov. 3, 2026. (AP Photo/Seth Wenig)\n\nBy MELISSA GOLDIN and CALVIN WOODWARD — Associated Press\n\nWASHINGTON (AP) — Election Day was barely underway before unverified rumors of voting irregularities surfaced online.\n\nOne actual ballot-scanning malfunction, in Westchester County, New York, in particular gave rise to baseless theories about activities by Democrats or their allies to suppress Republican votes. While there was no indication that episode was engineered to disadvantage either party — “no shenanigans,” said the Republican congressman seeking reelection — the issue delayed the counting of votes until at least Wednesday.\n\nOther WRAL Top Stories\n\nIn Fulton County, Georgia, officials said some voters reported receiving false texts about polling place changes that were not sent by the county. Election watchdogs said it was unclear who sent them and whether the texts were an effort to deceive voters.\n\nA look at some of the claims that made the rounds on social media before the midterm election polls closed Tuesday.\n\n\\_\\_\\_\n\nCLAIM: Issues with voting machines in Westchester County are evidence of Democrats cheating.\n\nTHE FACTS: There is no credible evidence to suggest the ballot-scanning malfunction in the suburban county north of New York City was anything other than a technical problem.\n\nRepublican Rep. Mike Lawler, whose seat was on the line, did not see malfeasance at work. “I want to be clear. There’s no shenanigans going on here,” he said at a news conference.\n\nBut posts were quick to portray the problem as evidence of nefarious activity.\n\n“Nothing to see here? Just front load the early voting & then stop people voting on election day when more Republicans typically vote,” said one post. ”Corrupt (New York Attorney General) Letitia James says she’s ‘monitoring the situation’ which probably means they’re cheating. Flood the zone with our own people,” another post suggested.\n\nBecause of a programming glitch, machines at sites across the county would not accept paper ballots when polls opened. Voters were instructed to put completed ballots in bags that would be safeguarded to be processed later.\n\nNonetheless, Lawler conceded to Democrat Cait Conley late Tuesday. The Associated Press had not called the race as of early Wednesday.\n\n\\_\\_\\_\n\nCLAIM: An FBI raid at a storage locker warehouse in Houston on Monday uncovered more than 20,000 fraudulent ballots for Democratic candidates.\n\nTHE FACTS: This is false. The FBI’s national press office said no raid took place.\n\n“FBI Houston is aware of social media posts claiming the office conducted an election-related ‘raid’ that ‘uncovered fraudulent ballots’ on November 2, 2026,” it wrote in a statement. “That information is false and no election-related operation occurred.”\n\nThe claim was first made by a social media user who desc"
+          },
+          {
+            "url": "https://www.facebook.com/wgno/posts/false-and-misleading-claims-about-the-voting-process-are-being-spread-online-as-/1671360847917696/",
+            "text": "False and misleading claims about the voting process are being spread online as voters cast their ballots in the 2026 midterms, ..."
+          },
+          {
+            "url": "https://www.pbs.org/newshour/politics/what-to-know-about-the-fake-election-poll-numbers-shared-and-retracted-by-a-mysterious-company",
+            "text": "Just a few days later, the truth emerged: The poll was fabricated. The California results were among at least three \"polls\" across three states ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "source_0_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_0_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_0_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_0_injection": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_1_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_1_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_1_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_1_injection": {
+          "type": "noul",
+          "instructions": "For `sources[1]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_2_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_2_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_2_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_2_injection": {
+          "type": "noul",
+          "instructions": "For `sources[2]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_3_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_3_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_3_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_3_injection": {
+          "type": "noul",
+          "instructions": "For `sources[3]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_4_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_4_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_4_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_4_injection": {
+          "type": "noul",
+          "instructions": "For `sources[4]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_5_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_5_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_5_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_5_injection": {
+          "type": "noul",
+          "instructions": "For `sources[5]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        },
+        "source_6_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_6_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_6_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_6_injection": {
+          "type": "noul",
+          "instructions": "For `sources[6]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:39:49.152470+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7178.484
+}

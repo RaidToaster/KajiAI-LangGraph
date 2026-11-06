@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "FDA CIMAvax Roswell Park clinical trial approval 2016",
+        "candidates": [
+          {
+            "title": "CIMAvax Lung Cancer Vaccine - Buffalo",
+            "snippet": "Roswell Park is currently the only U.S. institution with clearance from the U.S. Food and Drug Administration (FDA) to conduct clinical trials with this ...",
+            "url": "https://www.roswellpark.org/cimavax"
+          },
+          {
+            "title": "FDA Approves US Trial of Cuban Lung Cancer Vaccine",
+            "snippet": "The US Food and Drug Administration has approved a US clinical trial of a lung cancer vaccine developed in Cuba.",
+            "url": "https://www.medscape.com/viewarticle/871110"
+          },
+          {
+            "title": "Roswell Park Cancer Institute to Conduct First CimaVax Trial ...",
+            "snippet": "In clinical trials in Cuba, CimaVax improved overall survival in patients with advanced NSCLC compared with controls. Development of the CimaVax ...",
+            "url": "https://www.ilcn.org/roswell-park-cancer-institute-to-conduct-first-cimavax-trial-in-the-united-states/"
+          },
+          {
+            "title": "FDA approves 'CimaVax' trial at Roswell Park",
+            "snippet": "Roswell Park has received approval from the U.S. Federal Drug Administration to conduct the first-ever U.S. based clinical trial of the lung ...",
+            "url": "https://www.wgrz.com/article/news/local/buffalo/fda-approves-cimavax-trial-at-roswell-park/71-342116074"
+          },
+          {
+            "title": "Cuba's Molecular Immunology Center and Roswell Park ...",
+            "snippet": "by R Evans · 2018 · Cited by 9 — Thus, the opening of the phase I/II CIMAvax-EGF vaccine clinical trial at Roswell Park is only the beginning, and should lead to FDA approval ...",
+            "url": "https://www.scielosp.org/article/medicc/2018.v20n2/35-39/en/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-03T06:04:45.662864+00:00",
+  "status": "reserved_outcome_unknown"
+}

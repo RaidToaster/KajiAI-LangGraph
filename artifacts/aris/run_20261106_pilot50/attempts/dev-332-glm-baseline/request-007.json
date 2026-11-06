@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers. counterevidence",
+        "candidates": [
+          {
+            "title": "Examining the Impact of Technology on America's Youth",
+            "snippet": "WASHINGTON, D.C. – U.S. Senator Ted Cruz (R-Texas), Chairman of the Senate Committee on Commerce, Science, and Transportation, will convene ...",
+            "url": "https://www.youtube.com/watch?v=JRZWj5IyACQ"
+          },
+          {
+            "title": "No, Netflix's CEO wasn't charged with child pornography",
+            "snippet": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography”",
+            "url": "https://politifact.com/factchecks/2020/sep/18/viral-image/no-netflixs-ceo-wasnt-charged-15-counts-child-porn/"
+          },
+          {
+            "title": "People v. Martin, 2016 IL App (3d) 140598-U",
+            "snippet": "1. Held: The trial court properly admonished defendant in substantial compliance with. Illinois Supreme Court Rule 402(a) prior to accepting ...",
+            "url": "https://www.illinoiscourts.gov/files/3140598_R23.pdf/opinion"
+          },
+          {
+            "title": "A Martin County judge has ordered a sentence equal to life ...",
+            "snippet": "A Martin County judge has ordered a sentence equal to life in prison for a man who used artificial intelligence to create child pornography, ...",
+            "url": "https://www.facebook.com/WFLXFOX29/posts/a-martin-county-judge-has-ordered-a-sentence-equal-to-life-in-prison-for-a-man-w/1725150036284085/"
+          },
+          {
+            "title": "House Report 105-775 -- Child Online Protection Act",
+            "snippet": "105th Congress Report HOUSE OF REPRESENTATIVES 2d Session 105 775 CHILD ONLINE PROTECTION ACT October 5, 1998.--Committed to the Committee of the Whole ...",
+            "url": "https://archive.epic.org/free_speech//censorship/hr3783-report.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-glm-baseline",
+  "timestamp": "2026-11-05T17:57:26.392062+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 51865.984
+}

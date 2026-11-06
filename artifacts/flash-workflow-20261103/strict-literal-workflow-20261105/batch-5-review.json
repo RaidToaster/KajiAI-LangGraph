@@ -1,0 +1,105 @@
+{
+  "completed_new": 11,
+  "candidate_acceptances": 0,
+  "guard_reachable": true,
+  "latest": [
+    {
+      "case": "train-1217",
+      "model": "glm",
+      "arm": "candidate",
+      "gold_label": "Not Enough Evidence",
+      "failed": true,
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "execution_error",
+      "gaps": [
+        "The model did not return a valid evidence assessment.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "This domain requires peer-reviewed evidence.",
+        "Resolve and cite the assertion: Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": [
+        "Page fetch failed for https://www.scielosp.org/article/medicc/2018.v20n2/35-39/en/: target_http_error",
+        "Analysis failed: ValueError: No valid LiteralSelection JSON object found"
+      ]
+    },
+    {
+      "case": "train-1217",
+      "model": "deepseek",
+      "arm": "candidate",
+      "gold_label": "Not Enough Evidence",
+      "failed": false,
+      "prediction": "Conflicting Evidence/Cherrypicking",
+      "accepted": "ABSTAIN",
+      "citations": 6,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "How does opposing evidence affect this component? Model dependency: opposing_evidence; basis finding IDs: F2, F3, F4.",
+        "Is independent verification established? Model dependency: independence_unresolved; basis finding IDs: F1, F2, F3, F4, F5, F6.",
+        "What other uncertainty remains? Do the records establish that any lack of U.S. access to CimaVax was caused by U.S. sanctions on Cuba rather than by the vaccine's U.S. regulatory status or other factors? Model dependency: other_uncertainty; basis finding IDs: F2, F3, F4, F5, F6.",
+        "Is evidence still missing for this component? Model dependency: support_missing; basis finding IDs: F1, F2, F3, F4, F5, F6.",
+        "Evidence confidence remains below High.",
+        "This domain requires peer-reviewed evidence.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": [
+        "Page fetch failed for https://connection.asco.org/do/short-term-goals-and-long-term-implications-first-us-based-clinical-trial-cuban: bot_blocked"
+      ]
+    },
+    {
+      "case": "train-1205",
+      "model": "deepseek",
+      "arm": "candidate",
+      "gold_label": "Refuted",
+      "failed": false,
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN",
+      "citations": 6,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "Establish source independence; copied reporting is not corroboration.",
+        "Citation support is uncertain for https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/.",
+        "Citation support is uncertain for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/."
+      ],
+      "errors": [
+        "Page fetch failed for https://journals.sagepub.com/doi/10.1177/1365712718798656: bot_blocked",
+        "Page fetch failed for https://www.lgraham.senate.gov/public/index.cfm/video-posts?page=12: target_http_error"
+      ]
+    }
+  ],
+  "usage": {
+    "jev": 135,
+    "jev_input_tokens": 388309,
+    "jev_output_tokens": 38424,
+    "ollama": 75,
+    "ollama_input_tokens": 1117306,
+    "ollama_output_tokens": 93995,
+    "ollama_estimated_usd": 0.323576,
+    "tinyfish_search": 65,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 125,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "jev_estimated_usd": 0.016308978000000002
+  },
+  "next": [
+    {
+      "case": "train-1205",
+      "model": "glm",
+      "arm": "candidate"
+    },
+    {
+      "case": "train-1201",
+      "model": "glm",
+      "arm": "baseline"
+    }
+  ],
+  "pause_resume": "Userpausedafterbatchterminalandresumed; nostartedcellrepeated; finalexperimentinadifferentchat."
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme original source fact check",
+        "candidates": [
+          {
+            "title": "FAR Overhaul - Part 52",
+            "snippet": "This part-. (a) Gives instructions for using provisions and clauses in solicitations and/or contracts;. (b) Sets forth the solicitation provisions and ...",
+            "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52"
+          },
+          {
+            "title": "Connect to Work: Grant Guidance for England",
+            "snippet": "The ambition is to help people get a job, stay in work, and progress in their careers, with good employment opportunities across the country.",
+            "url": "https://www.gov.uk/government/publications/connect-to-work/connect-to-work-grant-guidance-for-england"
+          },
+          {
+            "title": "3 FAM 2530 REDUCTION-IN-FORCE CIVIL SERVICE",
+            "snippet": "In accordance with 5 CFR 351, Subpart B, these regulations apply to all Civil Service employees in the Department, including those in the competitive and the ...",
+            "url": "https://fam.state.gov/fam/03fam/03fam2530.html"
+          },
+          {
+            "title": "Employer's guide to right to work checks: 1 October 2026",
+            "snippet": "Scheme applies will depend on the individual facts and circumstances of each arrangement and how it operates in practice. Example 5: Self ...",
+            "url": "https://assets.publishing.service.gov.uk/media/6ad9dfe29ea4857e15ab3294/Employer_s_guide_to_right_to_work_checks.pdf"
+          },
+          {
+            "title": "Technical Guidance for Calculating Scope 3 Emissions",
+            "snippet": "This guidance document serves as a companion to the Scope 3 Standard to offer companies practical guidance on calculating their scope 3 emissions. It provides ...",
+            "url": "https://ghgprotocol.org/sites/default/files/standards/Scope3_Calculation_Guidance_0.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-baseline",
+  "timestamp": "2026-11-06T08:32:51.393330+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21160.703
+}

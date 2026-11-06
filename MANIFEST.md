@@ -1,5 +1,11 @@
 # Research Output Manifest
 
+## Frozen DeepSeek comparison, 2026-11-06
+
+[Interim PDF](evaluation/paper.pdf), [editable manuscript](evaluation/paper.tex), [source archive](evaluation/paper-source.zip), [evaluation report](artifacts/aris/run_20261106_deepseek500/REPORT.md), [verification](artifacts/aris/run_20261106_deepseek500/VERIFICATION.md), and [reproducibility archive](artifacts/aris/run_20261106_deepseek500/deepseek500-reproducibility.zip).
+
+The report covers 47 reused and 33 fresh terminal cells. The stopped Search request and its reservation remain in the raw ledger. The historical Gemma and Flash study artifacts below retain their original scopes.
+
 | Timestamp | Skill | File | Stage | Description |
 |---|---|---|---|---|
 | 20261102_120247 | /auto-review-loop | evaluation/aris/20261102_120247/CHANGELOG.md | review | Initial preservation and run records |
@@ -206,3 +212,9 @@
 | 20261102_222005 | continuation-context | evaluation/aris/20261102_120247/RESEARCH_STATE_20261102_221921.md | review | Current execution context or preserved context version |
 | 20261102_222005 | continuation-context | evaluation/aris/20261102_120247/RESUME_20261102_221921.md | review | Current execution context or preserved context version |
 | 20261102_222005 | continuation-context | evaluation/aris/20261102_120247/TOOLING_20261102_221921.md | review | Current execution context or preserved context version |
+| 20261102_225959 | model-preference | .aris/reviewer.json | review | User-prohibited Astra; pin Sol/high and preserve history |
+| 20261102_225959 | model-preference | CONTINUATION.md | review | User-prohibited Astra; pin Sol/high and preserve history |
+| 20261102_225959 | model-preference | CONTINUE_RESEARCH_PROMPT.md | review | User-prohibited Astra; pin Sol/high and preserve history |
+| 20261102_225959 | model-preference | review-stage/CONTINUATION_STATE.json | review | User-prohibited Astra; pin Sol/high and preserve history |
+| 20261102_225959 | model-preference | evaluation/aris/20261102_225959_model_preference/previous-model-context.zip | review | User-prohibited Astra; pin Sol/high and preserve history |
+| 20261102_225959 | model-preference | evaluation/aris/20261102_225959_model_preference/MODEL_PREFERENCE_FIX.md | review | User-prohibited Astra; pin Sol/high and preserve history |

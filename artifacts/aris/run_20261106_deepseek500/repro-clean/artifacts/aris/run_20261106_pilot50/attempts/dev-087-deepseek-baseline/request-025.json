@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps original source fact check",
+        "candidates": [
+          {
+            "title": "The Hyderabad Metropolitan Water Supply and Sewerage ...",
+            "snippet": "This news report covers a vigilance action by the Hyderabad Water Board against 12 illegally installed water motors.",
+            "url": "https://www.facebook.com/siasatdaily/posts/the-hyderabad-metropolitan-water-supply-and-sewerage-board-hmwssb-seized-eight-i/1535707188597041/"
+          },
+          {
+            "title": "Hyderabad Metropolitan Water Supply and Sewerage ...",
+            "snippet": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) has imposed a ₹5,000 fine on a Jubilee Hills resident for misusing drinking ...",
+            "url": "https://www.facebook.com/thesiasattv/posts/hyderabad-metropolitan-water-supply-and-sewerage-board-hmwssb-has-imposed-a-5000/1609523377856436/"
+          },
+          {
+            "title": "The Hyderabad Metropolitan Water Supply and Sewerage ...",
+            "snippet": "The Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is preparing to launch green water tanker services from November 1, ...",
+            "url": "https://www.facebook.com/61587172108395/posts/the-hyderabad-metropolitan-water-supply-and-sewerage-board-hmwssb-is-preparing-t/122143047801239070/"
+          },
+          {
+            "title": "Metro Board rolls out spl steps to prevent water ...",
+            "snippet": "To address this, the department has implemented a three-step chlorination process. In the first phase, chlorination occurs at the Water ...",
+            "url": "https://www.thehansindia.com/telangana/metro-board-rolls-out-spl-steps-to-prevent-water-contamination-904311"
+          },
+          {
+            "title": "Hyderabad: Drinking water samples being tested across city",
+            "snippet": "Households are called upon to clear and sanitise all the water contained in sumps and tanks with bleaching powder. In addition, chlorine tabs ...",
+            "url": "https://www.thehansindia.com/news/cities/hyderabad/hyderabad-drinking-water-samples-being-tested-across-city-651911"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-deepseek-baseline",
+  "timestamp": "2026-11-06T01:53:55.444749+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9500.75
+}

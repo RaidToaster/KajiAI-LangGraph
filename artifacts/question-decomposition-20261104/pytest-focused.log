@@ -1,0 +1,50 @@
+......F.................                                                 [100%]
+================================== FAILURES ===================================
+____________ test_pending_question_prevents_query_exhaustion_stop _____________
+
+config = {'model': {'provider': 'ollama', 'name': 'gemma4:31b-cloud', 'base_url': 'http://localhost:11434', 'temperature': 0.0,...tion_standard': 'Apply a strict medical evidence standard and do not generalize beyond the studied population.'}}, ...}
+
+    def test_pending_question_prevents_query_exhaustion_stop(config):
+        from kaji_langgraph.graph import _unused_queries
+        state = {"claim": CLAIM, "assertions": [CLAIM], "policy": config["policy"]}
+        state["search_queries"] = _unused_queries(state)
+        state["verification_questions"] = [QUESTIONS[0]]
+        state.update(gaps=["Need evidence"], sources=[], semantic_gaps=[],
+                     research_round=1, stagnant_rounds=0,
+                     budgets=BudgetState(started_at_monotonic=time.monotonic()))
+        state["policy"]["stop_on_query_exhaustion"] = True
+>       assert WorkflowNodes(DeterministicBackend(), StaticRetriever(), config).route_research(state)["route"] == "research"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_question_decomposition.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <kaji_langgraph.graph.WorkflowNodes object at 0x00000121E5A52840>
+state = {'claim': 'The agency published the report in 2020 and the minister approved its release in 2020', 'assertions': ['The...he agency published the report in 2020 and the minister approved its release in 2020 original source fact check'], ...}
+
+    def route_research(self, state: ClaimState) -> dict[str, Any]:
+        if not state.get("gaps"):
+            stop_reason, route = "evidence_sufficient", "finalize"
+        elif state.get("fatal_error"):
+            stop_reason, route = "execution_error", "finalize"
+        elif state.get("stagnant_rounds", 0) >= state["policy"].get("max_stagnant_rounds", 2):
+            stop_reason, route = "stagnant_research", "finalize"
+        elif reason := _budget_reason(state):
+            stop_reason, route = reason, "finalize"
+        elif (
+            state["policy"].get("stop_on_query_exhaustion", False)
+            and not self._research_queries(state)
+            # A no-search round can still finish pending source/citation work.
+            and not (self.jev and any(not s.jev_scores for s in state.get("sources", [])))
+            and not state.get("semantic_gaps")
+        ):
+            stop_reason, route = "query_exhausted", "finalize"
+        else:
+            stop_reason, route = "", "research"
+>       history = list(state["research_history"])
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'research_history'
+
+src\kaji_langgraph\graph.py:646: KeyError
+=========================== short test summary info ===========================
+FAILED tests/test_question_decomposition.py::test_pending_question_prevents_query_exhaustion_stop

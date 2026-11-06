@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Senate.gov, Roll call on H.R. 3590 (Patient Protection and Affordable Care Act), Dec. 24, 2009",
+        "candidates": [
+          {
+            "title": "Roll Call Votes 111th Congress-1st session (2009)",
+            "snippet": "H.R. 3590 as Amended; An act entitled The Patient Protection and Affordable Care Act. H.R. 3590 Dec 24. To protect middle class families from tax increases.",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "Cloture Motion Agreed to. Measure Number: H.R. 3590 (Patient Protection and Affordable Care Act ). Measure Title: An act entitled The Patient ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00395.htm"
+          },
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient ...",
+            "snippet": "Patient Protection and Affordable Care Act. Roll Call Votes: There have been 36 roll call votes … the Senate on December 24, 2009. Patient Protection and ...",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          },
+          {
+            "title": "Senate Roll Call Vote #00396",
+            "snippet": "Senate Roll Call Vote #00396. On Passage of the Bill: H.R. 3590 as Amended; An act entitled The Patient Protection and Affordable Care Act.",
+            "url": "https://www.democrats.senate.gov/12/24/2009/senate-roll-call-vote-00396-8"
+          },
+          {
+            "title": "Patient Protection and Affordable Care Act 111th ...",
+            "snippet": "H.R.3590 - 111th Congress (2009-2010): Patient Protection and Affordable Care Act. Roll Call Votes: There have been 36 roll call votes … referred to as the ...",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590/text"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T15:13:18.426909+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "All USA Ballots Arriving After Election Day Will Be Thrown Out original source fact check",
+        "candidates": [
+          {
+            "title": "Ballots received after November 3 will be counted in 22 US ...",
+            "snippet": "As of October 31, AFP noted 22 states that count ballots received at least one day after November 3 (Texas), and right up to November 23 ( ...",
+            "url": "https://factcheck.afp.com/ballots-received-after-november-3-will-be-counted-22-us-states"
+          },
+          {
+            "title": "Fact Check: It is NOT True That All Ballots Arriving After ...",
+            "snippet": "Is it true that all mail-in ballots received after Election Day will not be counted in the upcoming election? No, that's not true: 22 states ...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-it-is-not-true-that-all-ballots-arriving-after-election-day-will-be-thrown-out.html"
+          },
+          {
+            "title": "Counting Mail-In Ballots Delays Results, But Doesn't ...",
+            "snippet": "But the unfounded claim persists that mail ballots lead to rampant fraud and, if counted after Election Day, they are suspect.",
+            "url": "https://www.factcheck.org/2022/11/counting-mail-in-ballots-delays-results-but-doesnt-denote-fraud/"
+          },
+          {
+            "title": "FACT FOCUS: Misinformation about voting spreads less ...",
+            "snippet": "False and misleading claims about voting are spreading online as voters cast their ballots in the 2026 midterms, THE FACTS: This is false.",
+            "url": "https://apnews.com/article/fact-check-midterms-election-voting-ballot-5933df3747ceaf6091324959d8b9c59b"
+          },
+          {
+            "title": "Claims of voting machines \"flipping\" votes are spreading online ...",
+            "snippet": "Cohen debunks viral claims that voting machines are 'flipping' votes. not only are ballots being counted that should be invalid and thrown out, ...",
+            "url": "https://www.facebook.com/cnn/videos/claims-of-voting-machines-flipping-votes-are-spreading-online-cnns-gabe-cohen-ex/28838548349106649/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "17-query_exhaustion",
+  "timestamp": "2026-11-02T15:37:01.225654+00:00",
+  "status": "reserved_outcome_unknown"
+}

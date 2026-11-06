@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Search for a primary court filing or docket entry (e.g., the April 6 filing by Barry Coburn) that independently documents Hunter Biden's living status, rather than news retellings of it.",
+        "candidates": [
+          {
+            "title": "Hunter Biden now living abroad as legal troubles mount, court ...",
+            "snippet": "His attorney, Barry Coburn, disclosed Biden's current living situation in an April 6 court filing tied to a civil lawsuit over unpaid legal fees ... Missing:  primary  docket  entry  (eg,  independently  retellings",
+            "url": "https://www.wfmd.com/2026/04/15/hunter-biden-now-living-abroad-as-legal-troubles-mount-court-filing-reveals/"
+          },
+          {
+            "title": "Hunter Biden moved overseas, attorney reveals in court filing",
+            "snippet": "His attorney, Barry Coburn, disclosed Biden's current living situation in an April 6 court filing tied to a civil lawsuit over unpaid legal fees ... Missing:  primary  docket  entry  (eg,  independently  retellings",
+            "url": "https://www.foxnews.com/politics/hunter-biden-now-living-abroad-legal-troubles-mount-court-filing-reveals"
+          },
+          {
+            "title": "A court filing submitted on April 6, 2026, by Hunter Biden's ...",
+            "snippet": "A court filing submitted on April 6, 2026, by Hunter Biden's attorney Barry Coburn in a Washington, D.C. lawsuit from his former law firm ... Missing:  docket  entry  (eg,  independently  retellings",
+            "url": "https://www.facebook.com/61581297060581/posts/a-court-filing-submitted-on-april-6-2026-by-hunter-bidens-attorney-barry-coburn-/122128332639043235/"
+          },
+          {
+            "title": "Hunter Biden Moved Out of United States After Dad Joe ... - IMDb",
+            "snippet": "Hunter's attorney, Barry Coburn, filed a 14-page document in a civil lawsuit over unpaid legal fees on April 6, according to People. In the filing, it mentions, ... Missing:  primary  docket  entry  (eg,  independently  retellings",
+            "url": "https://www.imdb.com/news/ni65798742/"
+          },
+          {
+            "title": "Hunter Biden No Longer Lives In the U.S. 1 Year After His Dad ...",
+            "snippet": "According to People, his attorney, Barry Coburn, mentioned \"Mr. Biden lives abroad\" in a court filing on April 6. Per the outlet, the ... Missing:  primary  docket  entry  (eg,  independently  retellings",
+            "url": "https://www.yahoo.com/news/articles/hunter-biden-no-longer-lives-222359298.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-candidate",
+  "timestamp": "2026-11-06T07:30:43.878161+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17433.187
+}

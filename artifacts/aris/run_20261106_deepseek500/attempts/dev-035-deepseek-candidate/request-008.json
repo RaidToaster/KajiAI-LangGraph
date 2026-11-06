@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "COVID-19 pandemic pre-planned with the help from Bill Gates.",
+        "query": "What specific actions, funding, meetings, or communications are alleged to constitute Bill Gates's help in pre-planning the COVID-19 pandemic?",
+        "candidates": [
+          {
+            "title": "Collaborating against COVID-19: A timeline - Gates Foundation",
+            "snippet": "In January 2020, as details began emerging about the potential global threat of a novel coronavirus, the Bill & Melinda Gates Foundation pivoted its work ...",
+            "url": "https://www.gatesfoundation.org/ideas/a-timeline-of-gates-foundations-fight-against-covid-19"
+          },
+          {
+            "title": "Event 201 | Johns Hopkins Center for Health Security",
+            "snippet": "The Event 201 pandemic exercise, conducted on October 18, 2019, vividly demonstrated a number of these important gaps in pandemic preparedness as well as some ...",
+            "url": "https://centerforhealthsecurity.org/our-work/tabletop-exercises/event-201-pandemic-tabletop-exercise"
+          },
+          {
+            "title": "“My first thought was Africa”: Gates as a floating signifier in ...",
+            "snippet": "Nevertheless, online conspiracy theories featuring Bill Gates saw a rapid and global increase beyond the African continent around the COVID-19 pandemic (A.",
+            "url": "https://www.sciencedirect.com/science/article/pii/S2590291125007636"
+          },
+          {
+            "title": "How Bill Gates and partners used their clout to control ... - Politico",
+            "snippet": "Four health organizations, working closely together, spent almost $10 billion on responding to Covid across the world.",
+            "url": "https://www.politico.com/news/2022/09/14/global-covid-pandemic-response-bill-gates-partners-00053969"
+          },
+          {
+            "title": "4: Bill Gates Conspiracy Theories as Ideology in the Context of ...",
+            "snippet": "Abstract. This chapter asks: How do COVID-19 conspiracy theories about Bill Gates work? In order to provide an answer, it analyses social media artefacts t.",
+            "url": "https://www.emerald.com/books/monograph/10843/chapter/80484830/Bill-Gates-Conspiracy-Theories-as-Ideology-in-the"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-035-deepseek-candidate",
+  "timestamp": "2026-11-06T07:23:32.125441+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17001.437
+}

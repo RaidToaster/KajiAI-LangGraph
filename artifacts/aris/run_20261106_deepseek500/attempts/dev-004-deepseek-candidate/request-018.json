@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Republican Matt Gaetz was part of a company that had to pay 75 million in hospice fraud. They stole from dying people.",
+        "query": "DOJ press release or court docket for United States v. Vitas Hospice / Chemed False Claims Act settlement amount and final disposition",
+        "candidates": [
+          {
+            "title": "Chemed Corp. and Vitas Hospice Services Agree to Pay ...",
+            "snippet": "Chemed Corp. and Vitas Hospice Services Agree to Pay $75 Million to Resolve False Claims Act Allegations Relating to Billing for Ineligible ...",
+            "url": "https://www.justice.gov/archives/opa/pr/chemed-corp-and-vitas-hospice-services-agree-pay-75-million-resolve-false-claims-act"
+          },
+          {
+            "title": "Vitas Hospice Services, LLC, , VITAS Healthcare Corporation",
+            "snippet": "AGREEMENT PRESS RELEASE. Chemed Corp. and Vitas Hospice Services Agree to Pay $75 Million to Resolve False Claims Act Allegations Relating to ...",
+            "url": "https://oig.hhs.gov/compliance/corporate-integrity-agreements/browse-cias/vitas-hospice-services-llc-vitas-healthcare-corporation/"
+          },
+          {
+            "title": "Chemed Settles DOJ Litigation",
+            "snippet": "Although VITAS and Chemed dispute the DOJ's allegations, VITAS elected to settle to avoid the cost and uncertainty of continued litigation. This.",
+            "url": "https://www.chemed.com/node/16921/pdf"
+          },
+          {
+            "title": "Settlement Agreement Among United States, VITAS ...",
+            "snippet": "The United States alleged that VITAS and Chemed submitted false Medicare claims for unnecessary hospice services between 2002 and 2013.",
+            "url": "https://contracts.justia.com/companies/chemed-corp-276/contract/497540/"
+          },
+          {
+            "title": "VITAS Hospice Lawsuit | WJN",
+            "snippet": "Chemed and VITAS agreed to pay $75 million to resolve allegations that they billed Medicare for ineligible patients and for crisis care ...",
+            "url": "https://whistleblowerjustice.net/vitas-hospice-lawsuit/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-004-deepseek-candidate",
+  "timestamp": "2026-11-06T05:22:33.982580+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9743.281
+}

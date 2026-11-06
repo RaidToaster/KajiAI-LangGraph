@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The large image of the Joe Biden and Kamala Harris logo projected onto a Harley-Davidson location in Milwaukee US indicates the motorcycle manufacturer's endorsement of the US Democratic presidential nominee.",
+        "query": "The large image of the Joe Biden evidence",
+        "candidates": [
+          {
+            "title": "Fact check: No evidence viral photo of the Bidens and Carters is fake",
+            "snippet": "Posts online speculate the photo of the Bidens with the Carters is not real due to apparent size differences between the couples.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2021/05/06/fact-check-no-evidence-viral-photo-bidens-and-carters-fake/4958952001/"
+          },
+          {
+            "title": "Fact Check: Explaining the optical illusion in the Biden-Carter photo",
+            "snippet": "The photograph of Joe Biden and Jill Biden with Jimmy Carter and former First Lady Rosalynn Carter appears distorted most likely due to the wide ...",
+            "url": "https://www.reuters.com/article/fact-check/explaining-the-optical-illusion-in-the-biden-carter-photo-idUSL1N2MU1QG/"
+          },
+          {
+            "title": "Joe and Jill Biden looked, well, giant in a photo recently taken with former ...",
+            "snippet": "Joe and Jill Biden looked, well, giant in a photo recently taken with former President Jimmy Carter and former first lady Rosalyn Carter, ...",
+            "url": "https://www.facebook.com/KTSM9News/posts/joe-and-jill-biden-looked-well-giant-in-a-photo-recently-taken-with-former-presi/4327492943951801/"
+          },
+          {
+            "title": "ICYMI: Comer Reveals Evidence of President Biden's Involvement in ...",
+            "snippet": "To be clear: Joe Biden is the “Big Guy.” This evidence raises troubling questions about whether President Biden is a national security risk.",
+            "url": "https://oversight.house.gov/release/icymi-comer-reveals-evidence-of-president-bidens-involvement-in-his-familys-business-schemes/"
+          },
+          {
+            "title": "Biden looks like a giant in viral photo with the Carters, The Pfizer vaccine is ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/FallonTonight/videos/bidens-viral-photo-with-jimmy-carter-pfizer-vaccine-to-be-approved-for-kids/734801957216720/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-061-deepseek-baseline",
+  "timestamp": "2026-11-06T08:36:54.796793+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21404.093
+}

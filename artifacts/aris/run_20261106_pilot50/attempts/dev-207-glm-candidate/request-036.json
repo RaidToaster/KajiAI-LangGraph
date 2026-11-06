@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "United Nations World Population Prospects Nigeria population estimate 1960 historical series value",
+        "candidates": [
+          {
+            "title": "World Population Prospects 2024",
+            "snippet": "It presents population estimates from 1950 to the present for 237 countries or areas, underpinned by analyses of historical demographic trends.",
+            "url": "https://population.un.org/wpp/"
+          },
+          {
+            "title": "World Population Prospects 2024: Summary of Results",
+            "snippet": "World Population Prospects 2024 is the twenty-eighth edition of estimates and projections of the global population published by the United Nations since 1951. Read more 80 pages",
+            "url": "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf"
+          },
+          {
+            "title": "The UN has made population projections for more than 50 ...",
+            "snippet": "by H Ritchie · 2023 · Cited by 15 — Many of the UN's historical projections – even as far back as the 1960s – have been remarkably close to the truth. none differed by more than 5 ...",
+            "url": "https://ourworldindata.org/population-projections"
+          },
+          {
+            "title": "Nigeria Population 2025",
+            "snippet": "The World Population Dashboard showcases global population data, including fertility rate, gender parity in school enrolment, information on sexual and ...",
+            "url": "https://www.unfpa.org/data/world-population/NG"
+          },
+          {
+            "title": "Population, total - Nigeria",
+            "snippet": "Nigeria World Population Prospects , United Nations ( UN ), Statistical databases and publications from national statistical offices, Recent Year Most Recent  ...",
+            "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=NG"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-glm-candidate",
+  "timestamp": "2026-11-06T00:05:41.414858+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3006.718
+}

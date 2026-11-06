@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "HMWSSB official order or circular October 2020 doorstep distribution chlorine tablets bleaching powder households quantity",
+        "candidates": [
+          {
+            "title": "Chlorination in Emergencies",
+            "snippet": "Feb 14, 2022 — It is stronger than bleaching powder , containing 65% to 70% active chlorine . It is also easier to use as it comes in granular form, and is ... Read more",
+            "url": "https://www.oxfamwash.org/chlorination-in-emergencies/"
+          },
+          {
+            "title": "National Symposium on Safe Water and Disinfection",
+            "snippet": "Size and Weight: 3 inches and 200 gram tablets ・ standard bleaching powder and chlorine tablets . HHs served Chlorine consumption per month 1 Chlorination with ... 328 pages",
+            "url": "https://master-jalshakti-ddws.digifootprint.gov.in/static/uploads/2024/05/National-Symposium-on-Safe-Water-and-Disinfection-Chlorination-Initiatives-1.pdf"
+          },
+          {
+            "title": "guide to promotion of drinking-water disinfection in ...",
+            "snippet": "by World Health Organization · 2004 · Cited by 1 — This product is a white powder commercially available at 30%–35 % available chlorine . Bleaching powder will lose strengthen with time.",
+            "url": "https://applications.emro.who.int/dsaf/dsa605.pdf"
+          },
+          {
+            "title": "Government distributes chlorine tablets in flood-hit areas",
+            "snippet": "Aug 8, 2017 — Health department officials are now distributing chlorine tablets and bleaching powder in panchayats so that people would get clean water for ...",
+            "url": "https://reliefweb.int/report/india/government-distributes-chlorine-tablets-flood-hit-areas"
+          },
+          {
+            "title": "How to Make Water Safe in an Emergency",
+            "snippet": "Sep 19, 2024 — You can kill most germs in water with chemical disinfectants, such as unscented household chlorine bleach , iodine, or chlorine dioxide tablets . Read more",
+            "url": "https://www.cdc.gov/water-emergency/about/index.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-deepseek-candidate",
+  "timestamp": "2026-11-06T01:51:54.176080+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9379.484
+}

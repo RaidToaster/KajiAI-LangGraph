@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Republican Matt Gaetz was part of a company that had to pay 75 million in hospice fraud. They stole from dying people.",
+        "query": "Which company is alleged to have paid 75 million in hospice fraud, and what was Matt Gaetz's role or association with that company?",
+        "candidates": [
+          {
+            "title": "Misleading Posts Target GOP Rep. Matt Gaetz",
+            "snippet": "Oct 31, 2019 — “He was part of a company that had to pay 75 million in hospice fraud . They stole from dying people. He is the swamp.” Like many claims that ... Read more",
+            "url": "https://www.factcheck.org/2019/10/misleading-posts-target-gop-rep-matt-gaetz/"
+          },
+          {
+            "title": "Nation's Largest Hospice Chain Faces False Claims Act ...",
+            "snippet": "May 22, 2013 — The government estimates that Vitas received up to $1 billion or more each year as a result of the Medicare fraud scheme. Do you know of someone ... Read more",
+            "url": "https://bergermontague.com/nations-largest-hospice-chain-faces-false-claims-act-lawsuit-for-medicare-fraud/"
+          },
+          {
+            "title": "Largest US hospice company sued for Medicare fraud",
+            "snippet": "May 9, 2013 — Gaetz was vice chairman of the board during part of the time that federal investigators allege the fraud took place, but he said he had no \" role ... Read more",
+            "url": "https://www.gainesville.com/story/news/politics/2013/05/09/largest-us-hospice-company-sued/31199121007/"
+          },
+          {
+            "title": "Firm Started By Sen. President Gaetz Accused Of Medicare ...",
+            "snippet": "May 10, 2013 — The U.S. Department of Justice is suing the hospice company founded by Senate President Don Gaetz , accusing it of Medicare fraud , ...",
+            "url": "https://news.wfsu.org/politics/2013-05-10/firm-started-by-sen-president-gaetz-accused-of-medicare-fraud"
+          },
+          {
+            "title": "Feds accuse Gaetz's former company of Medicare fraud ...",
+            "snippet": "May 8, 2013 — Feds accuse Gaetz's former company of Medicare fraud , including during his tenure ... The U.S. Department of Justice has filed suit against the ... Read more",
+            "url": "https://www.tampabay.com/feds-accuse-gaetzs-former-company-of-medicare-fraud-including-during-his/2120014/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-004-deepseek-candidate",
+  "timestamp": "2026-11-06T05:22:05.278374+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9714.593
+}

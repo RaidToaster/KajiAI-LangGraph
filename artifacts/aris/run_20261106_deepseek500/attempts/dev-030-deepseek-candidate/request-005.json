@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism.",
+        "query": "Did Paul Pogba announce or otherwise retire from international football, and on what date?",
+        "candidates": [
+          {
+            "title": "Paul Pogba - Wikipedia",
+            "snippet": "On 3 July 2012, Manchester United manager Alex Ferguson confirmed that Pogba had left the club after not signing a new contract. Ferguson stated that Pogba had ... · ·",
+            "url": "https://en.wikipedia.org/wiki/Paul_Pogba"
+          },
+          {
+            "title": "What happened to Paul Pogba? Why French superstar no ...",
+            "snippet": "Juventus and Pogba reached a mutual termination agreement in November 2024 before the ban was over. Pogba signed with Monaco in June 2025",
+            "url": "https://sports.yahoo.com/articles/happened-paul-pogba-why-french-171101191.html"
+          },
+          {
+            "title": "Paul Pogba to take legal action over reports he was quitting ...",
+            "snippet": "Paul Pogba initial four-year ban was reduced to 1year 11months (23 months), which allowing him return to competitive football in March 2025. But ...",
+            "url": "https://www.facebook.com/fijivillage/posts/paul-pogba-to-take-legal-action-over-reports-he-was-quitting-france-national-tea/3826002924124353/"
+          },
+          {
+            "title": "Paul Pogba set for football return after two years out - sources",
+            "snippet": "Pogba, 32, has not played a single game in 26 months, since he featured for 28 minutes on Sept. 3, 2023 for Juventus against Empoli (2-0). He ...",
+            "url": "https://www.espn.com/soccer/story/_/id/47035642/paul-pogba-set-football-return-two-years-sources"
+          },
+          {
+            "title": "32 year old, 5 star Paul Pogba just retired 8 days before our ...",
+            "snippet": "I've had players retire in between the semi-final and final of the world cup in older games.",
+            "url": "https://www.reddit.com/r/footballmanagergames/comments/d5rq74/32_year_old_5_star_paul_pogba_just_retired_8_days/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-030-deepseek-candidate",
+  "timestamp": "2026-11-06T07:12:06.028159+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16315.343
+}

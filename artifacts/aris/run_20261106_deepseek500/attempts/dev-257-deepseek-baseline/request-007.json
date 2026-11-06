@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A Maryland man was sentenced to a year in jail for throwing parties.",
+        "query": "A Maryland man was sentenced to a year in jail for throwing parties. counterevidence",
+        "candidates": [
+          {
+            "title": "A Maryland man has been sentenced to one year in jail ...",
+            "snippet": "A Maryland man has been sentenced to one year in jail after he hosted two parties against the governor's COVID-19 large gathering orders, ...",
+            "url": "https://www.facebook.com/25NewsKXXV/posts/a-maryland-man-has-been-sentenced-to-one-year-in-jail-after-he-hosted-two-partie/3897830240246676/"
+          },
+          {
+            "title": "Maryland Man Gets Year in Jail for Hosting Parties ...",
+            "snippet": "Shawn Marshall Myers, 42, of Hughesville was arrested in March when officers found more than 50 people hanging out around a bonfire at his home.",
+            "url": "https://www.nbcwashington.com/news/local/maryland-man-gets-year-in-jail-for-hosting-parties-violating-covid-19-crowd-restrictions/2428432/"
+          },
+          {
+            "title": "Coronavirus violations get Maryland man sentenced to ...",
+            "snippet": "Shawn Marshall Myers, 42, was arrested in March after having two parties at his home in Hughesville in southern Maryland that each had at least ...",
+            "url": "https://www.nbcnews.com/news/us-news/coronavirus-violations-get-maryland-man-sentenced-year-jail-n1241182"
+          },
+          {
+            "title": "Maryland man gets a year in jail after throwing parties ...",
+            "snippet": "Shawn Marshall Myers, 41, of Charles County. He has been charged with violating Gov. Hogan's executive order that limits crowd size to 10 people ...",
+            "url": "https://www.baltimoresun.com/2020/09/27/maryland-man-gets-a-year-in-jail-after-throwing-parties-during-pandemic/"
+          },
+          {
+            "title": "Maryland man sentenced to year in jail for holding large ...",
+            "snippet": "Shawn Marshall Myers, 42, threw a large party at a home in Hughesville, Maryland in March, a $5,000 fine.",
+            "url": "https://www.cbsnews.com/news/coronavirus-maryland-parties-shawn-myers-sentenced-one-year/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-257-deepseek-baseline",
+  "timestamp": "2026-11-06T04:36:45.020015+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6994.343
+}

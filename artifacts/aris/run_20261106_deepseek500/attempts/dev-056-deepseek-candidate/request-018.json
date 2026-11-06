@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "Trump White House medical records 2017 2018 2019 influenza vaccination dates products",
+        "candidates": [
+          {
+            "title": "President Donald J. Trump Is Working to Modernize and Improve Influenza ...",
+            "snippet": "Today, President Trump signed an executive order to modernize influenza vaccines and help protect more Americans through vaccination. At ...",
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/president-donald-j-trump-working-modernize-improve-influenza-vaccines/"
+          },
+          {
+            "title": "The White House announced a new health data tracking system. How ...",
+            "snippet": "President Donald Trump's announcement of a new private health tracking system to help patients access their health records and monitor ...",
+            "url": "https://www.pbs.org/newshour/health/the-white-house-announced-a-new-health-data-tracking-system-how-would-it-work"
+          },
+          {
+            "title": "What we know about Trump and Harris' medical records after VP releases ...",
+            "snippet": "Harris releases medical records, Trump has not. On Saturday, the White House released a summary of Harris' health status and medical history ...",
+            "url": "https://abc7ny.com/post/what-know-trump-harris-medical-records-after-vp-releases-doctors-report/15434899/"
+          },
+          {
+            "title": "President Trump Makes an Announcement on Medical and ...",
+            "snippet": "President Trump Makes an Announcement on Medical and Scientific Findings for America's Children. @WhiteHouse 11K likes 397K views Streamed ...",
+            "url": "https://www.youtube.com/watch?v=Y3iaOfk58cU"
+          },
+          {
+            "title": "Healthcare – The White House",
+            "snippet": "President Trump's healthcare vision put American patients, families, and seniors first by providing more choice, better care, and lower costs.",
+            "url": "https://trumpwhitehouse.archives.gov/issues/healthcare/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-candidate",
+  "timestamp": "2026-11-06T08:23:32.797999+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20602.093
+}

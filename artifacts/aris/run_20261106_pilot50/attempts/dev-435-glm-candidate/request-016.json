@@ -1,0 +1,81 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://www.marines.mil/Portals/1/Publications/Nigeria%20Study_2.pdf contains verbatim: Nigeria ranked 148th among 173 countries—were consistent with Nigeria's low ranking in income per capita.",
+            "url": "https://www.marines.mil/Portals/1/Publications/Nigeria%20Study_2.pdf",
+            "quote": "Nigeria ranked 148th among 173 countries—were consistent with Nigeria's low ranking in income per capita.",
+            "context": "Nigeria ranked 148th among 173 countries—were consistent with Nigeria's low ranking in income per capita."
+          },
+          {
+            "finding": "Retained snippet record for https://www.facebook.com/WIONews/posts/nigeria-and-several-african-countries-feature-prominently-among-the-worlds-60-po/1430693579169812/ contains verbatim: Nigeria's GDP per capita at $807, South Sudan tops the list as the world's poorest country with a GDP per capita of $251, Nigeria as the 12th ...",
+            "url": "https://www.facebook.com/WIONews/posts/nigeria-and-several-african-countries-feature-prominently-among-the-worlds-60-po/1430693579169812/",
+            "quote": "Nigeria's GDP per capita at $807, South Sudan tops the list as the world's poorest country with a GDP per capita of $251, Nigeria as the 12th ...",
+            "context": "Nigeria's GDP per capita at $807, South Sudan tops the list as the world's poorest country with a GDP per capita of $251, Nigeria as the 12th ..."
+          },
+          {
+            "finding": "Retained full_page record for https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=NG contains verbatim: GDP per capita (current US$) - NigeriaCountry official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, Organisation for Economic Co-operation and Development ( OECD ); Staff estimates, World Bank ( WB )License : CC BY-4.0 LineBarMapAlso ShowNoneAggregatesSame regionSimilar valuesHighest valuesLowest valuesShareDetailsLabel",
+            "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=NG",
+            "quote": "GDP per capita (current US$) - NigeriaCountry official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, Organisation for Economic Co-operation and Development ( OECD ); Staff estimates, World Bank ( WB )License : CC BY-4.0 LineBarMapAlso ShowNoneAggregatesSame regionSimilar valuesHighest valuesLowest valuesShareDetailsLabel",
+            "context": "GDP per capita (current US$) - NigeriaCountry official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, Organisation for Economic Co-operation and Development ( OECD ); Staff estimates, World Bank ( WB )License : CC BY-4.0 LineBarMapAlso ShowNoneAggregatesSame regionSimilar valuesHighest valuesLowest valuesShareDetailsLabel"
+          },
+          {
+            "finding": "Retained snippet record for https://pmc.ncbi.nlm.nih.gov/articles/PMC4335263/ contains verbatim: by HE Reed · 2014 · Cited by 112 — The states of Kano (in the north) and Lagos (in the south) were by far the largest in terms of population, with 9.4 million and 9.1 million people, respectively ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4335263/",
+            "quote": "by HE Reed · 2014 · Cited by 112 — The states of Kano (in the north) and Lagos (in the south) were by far the largest in terms of population, with 9.4 million and 9.1 million people, respectively ...",
+            "context": "by HE Reed · 2014 · Cited by 112 — The states of Kano (in the north) and Lagos (in the south) were by far the largest in terms of population, with 9.4 million and 9.1 million people, respectively ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-glm-candidate",
+  "timestamp": "2026-11-05T23:49:22.467417+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2027.765
+}

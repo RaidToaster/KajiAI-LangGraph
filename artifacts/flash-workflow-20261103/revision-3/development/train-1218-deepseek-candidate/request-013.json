@@ -1,0 +1,33 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Sanders voted repeatedly against Republican efforts to repeal the ACA.",
+            "url": "https://prospect.org/2019/11/19/bernie-voted-for-obamacare-medicare-for-all/",
+            "quote": "well. Such a plan would mark a massive expansion of the public responsibility for Americans’ health care; it would be, in André Gorz’s phrase, a non-reformist reform.\n\nIf that was the most that a President Bernie Sanders could get out of Congress, would he accept it? Given that he voted to establish the Affordable Care Act and voted repeatedly against Republican efforts to repeal it, of course he would. Would Elizabeth Warren",
+            "context": "ite) put on it. Same story with the federal minimum wage, first enacted in 1938, which pointedly excluded agricultural and domestic (and for a time, even retail) workers from the list of beneficiaries.\n\nIn the 1940s, when Harry Truman proposed national health insurance, paid for by federal tax dollars, it sank like a stone. A decade and a half later, Lyndon Johnson got half a loaf—Medicare and Medicaid, federally paid health coverage for seniors and the poor—through Congress. As you’ve doubtless noticed, we’ve made some progress toward getting the other half, but we’re still working on it.\n\nGiven the lack of anything like consensual support—not just in the nation, but in the Democratic Party itself—for Medicare for All, how should supporters of Medicare for All (like myself) respond? The most sensible course is to push for the most we can get, which, if we have a Democratic president and Congress in 2021, should be along the lines of taxpayer-supported Medicare for anyone over 50 or under 26, raising the income threshold for eligibility for those between 26 and 50, allowing individuals still not eligible to buy into the plan, and allowing employers to buy in for their employees as well. Such a plan would mark a massive expansion of the public responsibility for Americans’ health care; it would be, in André Gorz’s phrase, a non-reformist reform.\n\nIf that was the most that a President Bernie Sanders could get out of Congress, would he accept it? Given that he voted to establish the Affordable Care Act and voted repeatedly against Republican efforts to repeal it, of course he would. Would Elizabeth Warren accept it? The timetable she unveiled last week actually featured an initial plan fairly close to the one I just outlined.\n\nBut doesn’t proposing a one-fell-swoop conversion to Medicare for All, and rallying public support for it, increase the pressure on a Congress not prepared to go that far to enact at least something like my halfway house? After all, one of the largely justifiable critiques of Barack Obama’s presidency is that he often “negotiated with himself”—scaling back his initial proposals to, in theory, meet the Republicans halfway, only to see the Republicans take his compromise as the extreme left wing of the debate and counterpose something well to its right.\n\nIsn’t that what Warren’s proposal of last week amounts to? An Obama-esque negotiation with herself?\n\nIf she were already president, it would be. But she’s not, nor is Bernie. And for now, both are negotiating, as it were, with voters, a majority of whom keep telling pollsters they don’t want a plan that eliminates private insurers—not yet, anyway.\n\nMy sense, then, is that the way to get to Medicare for All—a consummation devoutly to be wished—is to propose a radical enlargement of the program such as the one I’"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:36:39.428568+00:00",
+  "status": "reserved_outcome_unknown"
+}

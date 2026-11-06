@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sleeping under a mosquito bed net treated (or not treated) with insecticide is ineffective and harmful to human health.",
+        "query": "Search for primary randomized trials or cohort studies reporting independent original data on untreated bed net effectiveness and harms, not reviews or news summaries.",
+        "candidates": [
+          {
+            "title": "Insecticide‐treated nets for preventing malaria - PMC - NIH",
+            "snippet": "Incorporating information from 22 randomized controlled trials (RCTs), the review found that ITNs reduced child mortality by 17%.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6418392/"
+          },
+          {
+            "title": "Mass Distribution of Insecticide-Treated Nets (ITNs) - GiveWell",
+            "snippet": "We estimate that sleeping under nets reduces malaria mortality by around 40% to 55% This is based on a meta-analysis of randomized controlled trials (RCTs), ...",
+            "url": "https://www.givewell.org/international/technical/programs/insecticide-treated-nets"
+          },
+          {
+            "title": "Insecticide-Treated Nets | Malaria - CDC",
+            "snippet": "In community-wide trials in several African settings, ITNs reduced the death of children under 5 years from all causes by about 20%.",
+            "url": "https://www.cdc.gov/malaria/php/public-health-strategy/insecticide-treated-nets.html"
+          },
+          {
+            "title": "Reasons for mosquito net non-use in malaria-endemic countries",
+            "snippet": "Results suggest that participants do not always consider ITNs to be effective or considered other preventive methods to be more effective.",
+            "url": "https://www.medrxiv.org/content/10.1101/2023.05.16.23290037v1.full-text"
+          },
+          {
+            "title": "No flight, no bite - 'Mosquito grounding' bed net nearly halves ...",
+            "snippet": "The two-year community randomised trial involved more than 39,000 households and followed over 4,500 children aged 6 months to 14 years in ...",
+            "url": "https://www.lshtm.ac.uk/newsevents/news/2022/no-flight-no-bite-mosquito-grounding-bed-net-nearly-halves-malaria-infection"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-027-deepseek-candidate",
+  "timestamp": "2026-11-06T07:00:09.018929+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15598.328
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Is Grand Island, Nebraska, a town with a Town Supervisor form of government, or is it a city or village with a different structure?",
+        "candidates": [
+          {
+            "title": "AAA locations in Grand Island",
+            "snippet": "Browse all AAA locations in Grand Island to find services insurance, auto repair and more. Opens at 8:30 am 3359 West Capital Avenue Grand Island, NE 68803 ( ...",
+            "url": "https://locator.acg.aaa.com/ne/grand-island"
+          },
+          {
+            "title": "American Automobile Association",
+            "snippet": "The American Automobile Association (AAA) is a federation of motor clubs throughout North America. AAA is a privately held not-for-profit national member ...",
+            "url": "https://en.wikipedia.org/wiki/American_Automobile_Association"
+          },
+          {
+            "title": "Nebraska AAA and ADRC Map",
+            "snippet": "Nebraska AAA and ADRC Map. GRAND ISLAND SYRACUSE. Area Agencies on Aging (AAAs) and Aging and Disability Resource Centers (ADRCs) 844-843-6364",
+            "url": "https://dhhs.ne.gov/Medicaid%20SUA/AAA-ADRC%20Map.pdf"
+          },
+          {
+            "title": "AAA Housing and Homelessness Programs and Partnerships",
+            "snippet": "Area Agencies on Aging (AAAs) provide a variety of supportive services that enable older adults to live independently at home, yet the root of that ...",
+            "url": "https://www.usaging.org/Files/Fast%20Facts-AAA-Housing-508.pdf"
+          },
+          {
+            "title": "AAA Membership Levels Breakdown: Which One is for You?",
+            "snippet": "Join us as we explain the benefits of each AAA Membership tier. From roadside assistance to travel perks, discover which level unlocks the ...",
+            "url": "https://www.youtube.com/watch?v=Knd234KreS8"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-candidate",
+  "timestamp": "2026-11-06T01:08:01.537624+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6746.843
+}

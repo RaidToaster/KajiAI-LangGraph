@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons and seven other underage girls were featured on Hunter Biden's laptop.",
+        "query": "Search Breitbart.com archives for October 2020 articles or radio/podcast transcripts mentioning Chris Coons's daughter, Hunter Biden's laptop, or Lauren Witzke.",
+        "candidates": [
+          {
+            "title": "Hunter Biden Articles",
+            "snippet": "... citing his defense of the Hunter Biden laptop bombshell. Sean Moran. 15 ... Chris Coons (D-DE) said that “As a father, I can understand” President Joe ...",
+            "url": "https://www.breitbart.com/tag/hunter-biden/"
+          },
+          {
+            "title": "Ex-FBI officials charged in the case about Hunter Biden's ...",
+            "snippet": "Two former FBI officials charged with lying to Congress about their participation in investigations involving Hunter Biden, ...",
+            "url": "https://www.breitbart.com/news/ex-fbi-officials-charged-in-the-case-about-hunter-bidens-laptop-are-due-back-in-court/"
+          },
+          {
+            "title": "Judge tosses charges filed against ex-FBI agents in Hunter ...",
+            "snippet": "Oct. 27 (UPI) -- A federal judge on Tuesday tossed new obstruction charges the Justice Department filed against two former FBI agents ...",
+            "url": "https://www.breitbart.com/news/judge-tosses-charges-filed-against-ex-fbi-agents-in-hunter-biden-probe/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-037-deepseek-candidate",
+  "timestamp": "2026-11-06T07:29:42.237481+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17371.546
+}

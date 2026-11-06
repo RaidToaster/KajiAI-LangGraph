@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "Under the Job Support Scheme as designed in October 2020, what percentage of wages did the scheme itself cover, and did it require employees to work a minimum proportion of hours?",
+        "candidates": [
+          {
+            "title": "Fact Sheet #56A: Overview of the Regular Rate of Pay Under the Fair ...",
+            "snippet": "This fact sheet provides general information regarding the regular rate of pay under the FLSA. The FLSA requires that most employees in the United States be ...",
+            "url": "https://www.dol.gov/agencies/whd/fact-sheets/56a-regular-rate"
+          },
+          {
+            "title": "Minimum wage in the United States",
+            "snippet": "843,000 hourly paid workers earned the federal minimum wage or less, representing 1.0 percent of hourly paid workers.",
+            "url": "https://en.wikipedia.org/wiki/Minimum_wage_in_the_United_States"
+          },
+          {
+            "title": "Raising the federal minimum wage to $15 by 2025 would lift the pay of 32 ...",
+            "snippet": "The Raise the Wage Act of 2021 would help eliminate poverty-level wages by raising the national minimum wage to $15 per hour by 2025. This ...",
+            "url": "https://www.epi.org/publication/raising-the-federal-minimum-wage-to-15-by-2025-would-lift-the-pay-of-32-million-workers/"
+          },
+          {
+            "title": "Building Better Jobs in an Age of Intelligent Machines",
+            "snippet": "Any unemployed worker who searches for part-time work of 20 hours or more per week qualifies for unemployment insurance benefits “To Reduce Racial Inequality, ...",
+            "url": "https://workofthefuture-taskforce.mit.edu/wp-content/uploads/2021/01/2020-Final-Report4.pdf"
+          },
+          {
+            "title": "Questions and answers on employer shared responsibility provisions ...",
+            "snippet": "Find answers to commonly asked questions about employer shared responsibility provisions under the Affordable Care Act (ACA).",
+            "url": "https://www.irs.gov/affordable-care-act/employers/questions-and-answers-on-employer-shared-responsibility-provisions-under-the-affordable-care-act"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-candidate",
+  "timestamp": "2026-11-06T08:33:39.282782+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21208.578
+}

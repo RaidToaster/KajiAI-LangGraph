@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+        "query": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents evidence",
+        "candidates": [
+          {
+            "title": "No, the Trump administration didn't accuse Billie Eilish of “ ...",
+            "snippet": "No, the Trump administration didn't accuse Billie Eilish of “destroying our country” The dangers of aggregate journalism in the age of “fake ...",
+            "url": "https://medium.com/everythings-interesting/no-the-trump-administration-didnt-accuse-billie-eilish-of-destroying-our-country-3771ad9361b6"
+          },
+          {
+            "title": "Trump Administration Wrongly Quoted as Saying Billie ...",
+            "snippet": "What was supposed to be a public health campaign about the COVID-19 pandemic apparently turned into more of an attempted boost of Trumpism.",
+            "url": "https://www.complex.com/music/a/tracewilliamcowen/leaked-trump-admin-document-billie-eilish-destroying-our-country"
+          },
+          {
+            "title": "Report: Trump admin reached out to Billie Eilish for COVID ...",
+            "snippet": "The Trump administration thinks Billie Eilish is an existential threat to the United States, according to leaked documents.",
+            "url": "https://www.thefader.com/2020/10/29/report-trump-admin-document-says-billie-eilish-is-destroying-our-country-and-everything-we-care-about"
+          },
+          {
+            "title": "Washington Post wrongly claims Trump officials said Billie ...",
+            "snippet": "A Washington Post story wrongly claimed the Trump administration accused Billie Eilish of \"destroying our country.\"",
+            "url": "https://nypost.com/2020/10/30/washington-post-wrongly-claims-trump-officials-criticized-billie-eilish/"
+          },
+          {
+            "title": "Billie Eilish Is “Destroying Our Country” Claims Leaked ...",
+            "snippet": "A document has been leaked from Trump's administration team, detailing problems with an assortment of “at least” 274 artists and celebrities ...",
+            "url": "https://www.gq.com.au/culture/entertainment/billie-eilish-is-destroying-our-country-claims-leaked-trump-administration-document/news-story/7debcb8921413b915d1033629e962721"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-001-deepseek-baseline",
+  "timestamp": "2026-11-06T04:00:26.843254+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4816.156
+}

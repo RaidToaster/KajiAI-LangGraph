@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "the Indian Government set up 5 coaching centres for UPSC exams, 4 of which were in Muslim universities.",
+        "query": "the Indian Government set up 5 coaching centres for UPSC exams, 4 of which were in Muslim universities. counterevidence",
+        "candidates": [
+          {
+            "title": "COACHING INSTITUITES FOR UPSC CIVIL SERVICES",
+            "snippet": "ANJUMAN-I-ISLAM UPSC. CIVIL SRVICES. EXAMINATION. Badruddin Tyabji Marg ... Islamic Centre of India,. Eidgah Aishbagh, Lucknow -. 226004. info@zakatindia ...",
+            "url": "https://hajcommittee.gov.in/uploads/assets/ias-coaching-instituites.pdf"
+          },
+          {
+            "title": "Modi govt has decided to give Free Coaching for UPSC ...",
+            "snippet": "Modi govt has decided to give Free Coaching for UPSC to more and more Muslims. Hostels will be set up for them. And what after they become ...",
+            "url": "https://www.facebook.com/TheSantoshKumar/posts/modi-govt-has-decided-to-give-free-coaching-for-upsc-to-more-and-more-muslims-ho/2882158955191152/"
+          },
+          {
+            "title": "Increasing Muslim participation in UPSC a complex reality, it's ...",
+            "snippet": "'UPSC pursuit must be driven by better reasons, not by fear of exclusion, marginalisation, or desire for privileges,' opines columnist Amana ...",
+            "url": "https://www.youtube.com/watch?v=Xq65mv5prcs"
+          },
+          {
+            "title": "Muslims in Indian Administrative Service",
+            "snippet": "Aftab Kola Muslim students in India mainly aspire to be doctors, engineers and MBAs which has led to severe shortage of Muslim professionals ...",
+            "url": "https://www.milligazette.com/news/4-national/14327-muslims-in-indian-administrative-service/"
+          },
+          {
+            "title": "GOVERNMENT OF INDIA MINISTRY OF EDUCATION ...",
+            "snippet": "Will the Minister of EDUCATION be pleased to state: (a) the number of coaching centers authorised by the Central Government for UPSC exam in the.",
+            "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/185/AU57_62NgO2.pdf?source=lsapps"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-373-deepseek-baseline",
+  "timestamp": "2026-11-06T04:50:42.790905+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7832.109
+}

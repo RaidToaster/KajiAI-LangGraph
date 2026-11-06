@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba. original source fact check",
+        "candidates": [
+          {
+            "title": "When the U.S. trade embargo left Cuba isolated from medical ...",
+            "snippet": "Yet one of the strangest stories in modern healthcare comes from the same island. Since 2011, Cuba has offered a lung cancer treatment vaccine ...",
+            "url": "https://www.facebook.com/PBSSoCal/posts/when-the-us-trade-embargo-left-cuba-isolated-from-medical-resources-cuban-scient/10157461003780674/"
+          },
+          {
+            "title": "This Cuban lung cancer drug is giving some U.S. patients ...",
+            "snippet": "A promising lung cancer treatment from Cuba is getting attention from U.S. patients, some of whom are already traveling there to try the ...",
+            "url": "https://www.pbs.org/newshour/show/cuban-lung-cancer-drug-giving-u-s-patients-hope"
+          },
+          {
+            "title": "Cuba Myths and Facts",
+            "snippet": "Life expectancy increased, infant mortality declined, and access to medical care expanded. Cuba began to resemble the developed nations in health care figures.",
+            "url": "https://www.wola.org/sites/default/files/downloadable/Cuba/past/cuba_myths_facts.pdf"
+          },
+          {
+            "title": "Implications of Repealing the Cuban Embargo for US ... - PMC",
+            "snippet": "by PK Drain · 2015 · Cited by 10 — In 1989, Cuba produced a serogroup B meningococcal vaccine, based on the outer membrane vesicles of specific outbreak strains, to prevent childhood meningitis.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4605162/"
+          },
+          {
+            "title": "Cuba Sanctions - United States Department of State",
+            "snippet": "In February 1962, President John F. Kennedy proclaimed an embargo on trade between the United States and Cuba, in response to certain actions taken by the Cuban ...",
+            "url": "https://www.state.gov/cuba-sanctions"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-baseline",
+  "timestamp": "2026-11-03T05:59:43.270486+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "CBP or GAO records matching specific barrier segments and deployment dates to drug seizure, apprehension, and smuggling case data in those same areas versus comparable non-barrier areas",
+        "candidates": [
+          {
+            "title": "Drug Seizure Statistics - U.S. Customs and Border Protection",
+            "snippet": "Drug Seizure Statistics. Data is extracted from live CBP systems and data sources. Final statistics are available at the conclusion of each fiscal year.",
+            "url": "https://www.cbp.gov/newsroom/stats/drug-seizure-statistics"
+          },
+          {
+            "title": "CBP Could Improve How It Categorizes Drug Seizure Data and ...",
+            "snippet": "GAO found that the number of CBP drug seizures increased from about 65,000 in fiscal year 2016 to 99,000 in fiscal year 2021.",
+            "url": "https://www.gao.gov/products/gao-22-104725"
+          },
+          {
+            "title": "Border Patrol: Available Data on Interior Checkpoints Suggest ...",
+            "snippet": "GAO developed an apprehension per agent work year measure to assess performance. The data suggest that the performance of the Tucson sector interior ...",
+            "url": "https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-05-435/html/GAOREPORTS-GAO-05-435.htm"
+          },
+          {
+            "title": "[PDF] Border Patrol: Key Elements of New Strategic Plan Not ... - TRAC",
+            "snippet": "This report addresses the following questions: (1) What do data show about apprehensions across the southwest border, and in the Tucson sector ...",
+            "url": "https://tracreports.org/tracker/dynadata/2013_01/650730.pdf"
+          },
+          {
+            "title": "Illicit Drug Smuggling Between Ports of Entry and Border Barriers",
+            "snippet": "CBP seizure data indicate that, like cocaine, methamphetamine, heroin, and fentanyl, more marijuana was seized at POEs than between them in FY ...",
+            "url": "https://www.everycrsreport.com/reports/R46218.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-candidate",
+  "timestamp": "2026-11-06T06:22:54.708762+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13364.015
+}

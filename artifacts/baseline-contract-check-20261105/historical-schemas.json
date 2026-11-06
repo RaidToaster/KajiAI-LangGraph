@@ -1,0 +1,398 @@
+{
+  "BenchmarkAssessment": {
+    "$defs": {
+      "AssertionAssessment": {
+        "properties": {
+          "assertion": {
+            "title": "Assertion",
+            "type": "string"
+          },
+          "rationale": {
+            "default": "",
+            "title": "Rationale",
+            "type": "string"
+          },
+          "resolved": {
+            "default": false,
+            "title": "Resolved",
+            "type": "boolean"
+          },
+          "source_urls": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Urls",
+            "type": "array"
+          }
+        },
+        "required": [
+          "assertion"
+        ],
+        "title": "AssertionAssessment",
+        "type": "object"
+      },
+      "EvidenceItem": {
+        "properties": {
+          "finding": {
+            "default": "",
+            "title": "Finding",
+            "type": "string"
+          },
+          "quotes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Quotes",
+            "type": "object"
+          },
+          "source_urls": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Urls",
+            "type": "array"
+          },
+          "stance": {
+            "default": "context",
+            "enum": [
+              "supports",
+              "refutes",
+              "context"
+            ],
+            "title": "Stance",
+            "type": "string"
+          }
+        },
+        "title": "EvidenceItem",
+        "type": "object"
+      }
+    },
+    "description": "A factual four-class decision; operational failures stay outside this schema.",
+    "properties": {
+      "assertions": {
+        "items": {
+          "$ref": "#/$defs/AssertionAssessment"
+        },
+        "title": "Assertions",
+        "type": "array"
+      },
+      "confidence": {
+        "default": "Low",
+        "enum": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "title": "Confidence",
+        "type": "string"
+      },
+      "contradictions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Contradictions",
+        "type": "array"
+      },
+      "counterevidence_searched": {
+        "default": false,
+        "title": "Counterevidence Searched",
+        "type": "boolean"
+      },
+      "evidence": {
+        "items": {
+          "$ref": "#/$defs/EvidenceItem"
+        },
+        "title": "Evidence",
+        "type": "array"
+      },
+      "gaps": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Gaps",
+        "type": "array"
+      },
+      "next_queries": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Next Queries",
+        "type": "array"
+      },
+      "peer_reviewed_sources": {
+        "default": false,
+        "title": "Peer Reviewed Sources",
+        "type": "boolean"
+      },
+      "proposed_verdict": {
+        "enum": [
+          "TRUE",
+          "FALSE",
+          "CONFLICTING",
+          "NOT_ENOUGH_EVIDENCE"
+        ],
+        "title": "Proposed Verdict",
+        "type": "string"
+      },
+      "sources_independent": {
+        "default": false,
+        "title": "Sources Independent",
+        "type": "boolean"
+      },
+      "summary": {
+        "default": "",
+        "title": "Summary",
+        "type": "string"
+      }
+    },
+    "required": [
+      "proposed_verdict"
+    ],
+    "title": "BenchmarkAssessment",
+    "type": "object"
+  },
+  "EvidenceAssessment": {
+    "$defs": {
+      "AssertionAssessment": {
+        "properties": {
+          "assertion": {
+            "title": "Assertion",
+            "type": "string"
+          },
+          "rationale": {
+            "default": "",
+            "title": "Rationale",
+            "type": "string"
+          },
+          "resolved": {
+            "default": false,
+            "title": "Resolved",
+            "type": "boolean"
+          },
+          "source_urls": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Urls",
+            "type": "array"
+          }
+        },
+        "required": [
+          "assertion"
+        ],
+        "title": "AssertionAssessment",
+        "type": "object"
+      },
+      "EvidenceItem": {
+        "properties": {
+          "finding": {
+            "default": "",
+            "title": "Finding",
+            "type": "string"
+          },
+          "quotes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Quotes",
+            "type": "object"
+          },
+          "source_urls": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Urls",
+            "type": "array"
+          },
+          "stance": {
+            "default": "context",
+            "enum": [
+              "supports",
+              "refutes",
+              "context"
+            ],
+            "title": "Stance",
+            "type": "string"
+          }
+        },
+        "title": "EvidenceItem",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "assertions": {
+        "items": {
+          "$ref": "#/$defs/AssertionAssessment"
+        },
+        "title": "Assertions",
+        "type": "array"
+      },
+      "confidence": {
+        "default": "Low",
+        "enum": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "title": "Confidence",
+        "type": "string"
+      },
+      "contradictions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Contradictions",
+        "type": "array"
+      },
+      "counterevidence_searched": {
+        "default": false,
+        "title": "Counterevidence Searched",
+        "type": "boolean"
+      },
+      "evidence": {
+        "items": {
+          "$ref": "#/$defs/EvidenceItem"
+        },
+        "title": "Evidence",
+        "type": "array"
+      },
+      "gaps": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Gaps",
+        "type": "array"
+      },
+      "next_queries": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Next Queries",
+        "type": "array"
+      },
+      "peer_reviewed_sources": {
+        "default": false,
+        "title": "Peer Reviewed Sources",
+        "type": "boolean"
+      },
+      "proposed_verdict": {
+        "default": "UNVERIFIED",
+        "enum": [
+          "TRUE",
+          "FALSE",
+          "MISLEADING",
+          "CONFLICTING",
+          "NOT_ENOUGH_EVIDENCE",
+          "UNVERIFIED"
+        ],
+        "title": "Proposed Verdict",
+        "type": "string"
+      },
+      "sources_independent": {
+        "default": false,
+        "title": "Sources Independent",
+        "type": "boolean"
+      },
+      "summary": {
+        "default": "",
+        "title": "Summary",
+        "type": "string"
+      }
+    },
+    "title": "EvidenceAssessment",
+    "type": "object"
+  },
+  "SourceRecord": {
+    "properties": {
+      "cached": {
+        "default": false,
+        "title": "Cached",
+        "type": "boolean"
+      },
+      "content_hash": {
+        "title": "Content Hash",
+        "type": "string"
+      },
+      "jev_scores": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "title": "Jev Scores",
+        "type": "object"
+      },
+      "lineage_id": {
+        "default": "",
+        "title": "Lineage Id",
+        "type": "string"
+      },
+      "page_text": {
+        "default": "",
+        "title": "Page Text",
+        "type": "string"
+      },
+      "possible_duplicate_of": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Possible Duplicate Of",
+        "type": "array"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "query": {
+        "title": "Query",
+        "type": "string"
+      },
+      "retrieval_kind": {
+        "default": "snippet",
+        "enum": [
+          "snippet",
+          "full_page"
+        ],
+        "title": "Retrieval Kind",
+        "type": "string"
+      },
+      "retrieved_at": {
+        "title": "Retrieved At",
+        "type": "string"
+      },
+      "snippet": {
+        "default": "",
+        "title": "Snippet",
+        "type": "string"
+      },
+      "status_code": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Status Code"
+      },
+      "title": {
+        "default": "",
+        "title": "Title",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "type": "string"
+      }
+    },
+    "required": [
+      "url",
+      "retrieved_at",
+      "content_hash",
+      "query",
+      "provider"
+    ],
+    "title": "SourceRecord",
+    "type": "object"
+  }
+}

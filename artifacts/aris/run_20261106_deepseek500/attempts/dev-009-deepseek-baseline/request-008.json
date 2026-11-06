@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent.",
+        "query": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent. counterevidence",
+        "candidates": [
+          {
+            "title": "When was the US economy at its best ever? - Reddit",
+            "snippet": "WW1 got America's foot in the door as a global production power and you can thank it for being the dawn of globalized economy and American ...",
+            "url": "https://www.reddit.com/r/EconomicHistory/comments/12qv93f/when_was_the_us_economy_at_its_best_ever/"
+          },
+          {
+            "title": "Which countries achieved economic growth? And why does it ...",
+            "snippet": "Some countries have grown a lot, while others remained poor. We look at how incomes have changed around the world and why it matters.",
+            "url": "https://ourworldindata.org/economic-growth-since-1950"
+          },
+          {
+            "title": "⁣The U.S. is the world's largest economy by nominal GDP, and ...",
+            "snippet": "⁣The U.S. is the world's largest economy by nominal GDP, and its influence on the global economy is quite remarkable.",
+            "url": "https://www.instagram.com/p/CKUK03tBQ_J/"
+          },
+          {
+            "title": "US 2020 election: The economy under Trump in six charts - BBC",
+            "snippet": "Mr Trump has said the recent recovery in growth is \"the biggest in the history of our country by almost triple...that's bigger than any nation\".",
+            "url": "https://www.bbc.com/news/world-45827430"
+          },
+          {
+            "title": "GDP growth (annual %) - United States - World Bank Open Data",
+            "snippet": "GDP growth (annual %) - United States from The World Bank: 2025 3.1 Costa Rica Ecuador 2025 3.7 Egypt, Arab Rep.",
+            "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=US"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-009-deepseek-baseline",
+  "timestamp": "2026-11-06T05:54:39.848958+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11669.156
+}

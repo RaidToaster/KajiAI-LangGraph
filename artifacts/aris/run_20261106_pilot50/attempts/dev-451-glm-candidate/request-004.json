@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "PEDOPHILIA is now LEGAL in CALIFORNIA",
+        "query": "Does any California statute, ballot measure, or court decision in effect as of September 2020 state that sexual acts between adults and minors are legal?",
+        "candidates": [
+          {
+            "title": "Parental Notification, Child and Teen Safety, and Stop ...",
+            "snippet": "In 1987, the Legislature amended this law to require minors to obtain the consent of either a parent or a court before obtaining an abortion. However, due to ... Read more",
+            "url": "https://lao.ca.gov/BallotAnalysis/Initiative/2014-014"
+          },
+          {
+            "title": "Laws governing local ballot measures in California",
+            "snippet": "This page describes the state constitutional provisions and statutes that govern local ballot measures in California . Jurisdictions often establish ... Read more",
+            "url": "https://ballotpedia.org/Laws_governing_local_ballot_measures_in_California"
+          },
+          {
+            "title": "2024 California ballot measures: What you need to know",
+            "snippet": "Jul 3, 2024 — Voters will decide 10 propositions on the California ballot in November . What you need to know about them and how they got on the ballot .",
+            "url": "https://calmatters.org/explainers/california-ballot-measures-2024/"
+          },
+          {
+            "title": "What Is SB-145: California's “Pedophile Bill”?",
+            "snippet": "Fact: SB-145 has very little to do with the permissions of anyone engaging in sexual conduct , especially minors . Instead, it aims to protect the rights of ... Read more",
+            "url": "https://brookslawgroup.com/faqs/what-is-sb-145-californias-pedophile-bill/"
+          },
+          {
+            "title": "Status of State Medicaid Expansion Decisions",
+            "snippet": "Oct 16, 2026 — This page displays an interactive map of the current status of state decisions on the Affordable Care Act's Medicaid expansion.",
+            "url": "https://www.kff.org/medicaid/status-of-state-medicaid-expansion-decisions/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-451-glm-candidate",
+  "timestamp": "2026-11-06T00:32:52.718294+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4638.031
+}

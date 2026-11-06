@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s take down American flags at their fast-food restaurants in support of Black Lives Matter and antifa (an umbrella term for far-left anti-fascism groups).",
+        "query": "antifa (an umbrella term for far-left anti-fascism groups). evidence",
+        "candidates": [
+          {
+            "title": "What is antifa? A look at the movement Trump is blaming ...",
+            "snippet": "Jun 1, 2020 — ... groups , publicize the personal information of ... Left : Members of an anti -fascist organization fly flags during a protest against ... Read more",
+            "url": "https://www.pbs.org/newshour/nation/what-is-antifa-a-look-at-the-movement-trump-is-blaming-for-violence-at-protests"
+          },
+          {
+            "title": "President Donald Trump said he is designating far-left anti- ...",
+            "snippet": "President Donald Trump said he is designating far - left anti - fascism group ... Antifa is a shorthand term for \"anti-fascist\" used to describe ... Read more",
+            "url": "https://www.facebook.com/cnninternational/posts/president-donald-trump-said-he-is-designating-far-left-anti-fascism-group-antifa/1162425905752459/"
+          },
+          {
+            "title": "Antifa (United States)",
+            "snippet": "Antifa is a left -wing anti -fascist and anti -racist political movement. It is a highly decentralized array of autonomous groups in the United States. Read more",
+            "url": "https://en.wikipedia.org/wiki/Antifa_(United_States)"
+          },
+          {
+            "title": "What is antifa? Is it a group or an idea, and what do ...",
+            "snippet": "Antifa is a loose affiliation of local activists scattered across the United States and a few other countries. The term \" antifa \" is short for anti -fascist; it's ... Read more",
+            "url": "https://docs.house.gov/meetings/GO/GO00/20210512/112524/HHRG-117-GO00-20210512-SD006.pdf"
+          },
+          {
+            "title": "“It Can't Happen Here”? Designating Antifa as a Terrorist ...",
+            "snippet": "Oct 29, 2025 — What is Antifa ? Antifa is an umbrella term not only for the anti -fascist ideology but also for those against white supremacism, neo-Nazism ... Read more",
+            "url": "https://icct.nl/publication/it-cant-happen-here-designating-antifa-terrorist-organisation-europe"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-343-glm-baseline",
+  "timestamp": "2026-11-06T00:40:34.990159+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5100.296
+}

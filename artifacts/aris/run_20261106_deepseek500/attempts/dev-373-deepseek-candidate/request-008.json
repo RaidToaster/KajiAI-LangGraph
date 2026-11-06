@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "the Indian Government set up 5 coaching centres for UPSC exams, 4 of which were in Muslim universities.",
+        "query": "What primary records or official announcements list the number of UPSC coaching centres set up by the Indian Government, and do they state a total of 5?",
+        "candidates": [
+          {
+            "title": "Ask us Anything! | UPSC Form Filling 2025",
+            "snippet": "UPSC Form Filling 2025 | OTR, Reservation, Qualification, Documents Full Guide",
+            "url": "https://www.youtube.com/watch?v=2jKx_nUxjaY"
+          },
+          {
+            "title": "Civil Services Examination",
+            "snippet": "The Civil Services Examination (abbr. CSE) is a standardised test in India conducted by the Union Public Service Commission (UPSC) for recruitment to higher ...",
+            "url": "https://en.wikipedia.org/wiki/Civil_Services_Examination"
+          },
+          {
+            "title": "examination notice no 05/2026-cse date",
+            "snippet": "The Online Application Portal of Union Public Service Commission for registration and filling up of application form online, has four cards/modules, ...",
+            "url": "https://www.upsc.gov.in/sites/default/files/Notif-CSP-2026-Engl-060226Rev.pdf"
+          },
+          {
+            "title": "UPSC CSE Posts List (All 21 Total Services & Cadre ...",
+            "snippet": "The UPSC conducts the Civil Service Examination (CSE) to recruit candidates for 21 types of UPSC Posts. The successful candidates are allotted ...",
+            "url": "https://www.nextias.com/upsc-cse-posts"
+          },
+          {
+            "title": "FAQs.pdf",
+            "snippet": "Brief information containing the extracts of the examination which is being notified is published in the leading News Papers.",
+            "url": "https://upsconline.gov.in/upsc/OTRP/candidate/FAQs.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-373-deepseek-candidate",
+  "timestamp": "2026-11-06T04:52:36.269346+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7945.578
+}

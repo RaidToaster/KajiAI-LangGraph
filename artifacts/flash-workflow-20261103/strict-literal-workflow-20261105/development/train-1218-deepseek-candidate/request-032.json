@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "What was Sanders's recorded vote on the December 2009 Senate passage of H.R. 3590?",
+        "candidates": [
+          {
+            "title": "H.R.3590 - 111th Congress (2009-2010): Patient ...",
+            "snippet": "Shown Here: Public Law No: 111-148 (03/23/2010). (This measure has not been amended since it was passed by the Senate on December 24, 2009.",
+            "url": "https://www.congress.gov/bill/111th-congress/house-bill/3590"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "December 3, 2009, 03:10 PM. Required For Majority: 3/5. Vote Result: Motion Rejected. Measure Number: H.R. 3590 (Service Members Home Ownership Tax Act of 2009 ).",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00358.htm"
+          },
+          {
+            "title": "Senate Session | December 24, 2009",
+            "snippet": "The Senate passed the $871 billion health care bill, H.R. 3590, by a vote of 60 to 39. Senator Bunning (R-KY) was the only Senator not voting.",
+            "url": "https://www.c-span.org/program/us-senate/senate-session/217353"
+          },
+          {
+            "title": "Senate Democrats on Final Health Care Legislation Vote",
+            "snippet": "Senate Majority Leader Reid and other Senate Democratic leaders talked about their reaction to the passage of H.R. 3590 Patient Protection and ...",
+            "url": "https://www.c-span.org/program/news-conference/senate-democrats-on-final-health-care-legislation-vote/217366"
+          },
+          {
+            "title": "Sanders amendment withdrawn after opponents force oral ...",
+            "snippet": "Sanders withdrew his amendment in order to allow the Senate to proceed with other business in the dwindling days before the Christmas recess – but he then gave ...",
+            "url": "https://www.citizen.org/news/sanders-amendment-withdrawn-after-opponents-force-oral-reading-of-bill-what-happens-now/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-05T10:09:03.642611+00:00",
+  "status": "reserved_outcome_unknown"
+}

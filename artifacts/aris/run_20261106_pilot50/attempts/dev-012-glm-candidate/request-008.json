@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "What is the exact text of the bill's clauses concerning growing, producing, or selling food, and do any use words like 'ban', 'prohibit', or 'unlawful' with respect to gardening or home food production?",
+        "candidates": [
+          {
+            "title": "Indiana House Bill 1424 supports small farms and food ...",
+            "snippet": "For homesteaders and small farms (defined as under $1.5 million in annual sales), this bill would: • Repeal restrictive home -based vendor rules ... Read more",
+            "url": "https://www.facebook.com/SarahEvaJanisseBrown/posts/yes-too-real-food-indiana-house-bill-1424-changes-everything-for-indianas-farmin/1227326046042436/"
+          },
+          {
+            "title": "Thanks to Outdated Laws, Growing Your Own Food Can ...",
+            "snippet": "Oct 9, 2020 — But some cities and counties have restrictions that prevent people from gardening at home . In one Midwestern town, a temporary greenhouse ... Read more",
+            "url": "https://www.sierraclub.org/sierra/thanks-outdated-laws-growing-your-own-food-can-be-illegal"
+          },
+          {
+            "title": "The 2026 Farm Bill: Comparison of the House and Senate ...",
+            "snippet": "Jul 29, 2026 — The farm bill is an omnibus, multiyear law and is the primary piece of legislation that governs an array of agricultural and food programs. Read more",
+            "url": "https://www.congress.gov/crs-product/R48918"
+          },
+          {
+            "title": "What is the Farm Bill?",
+            "snippet": "The farm bill connects the food on our plates, the farmers and ranchers who produce that food , and the natural resources – our soil, air and water – that ... Read more",
+            "url": "https://sustainableagriculture.net/our-work/campaigns/fbcampaign/what-is-the-farm-bill/"
+          },
+          {
+            "title": "Only Two States Have Passed 'Right to Garden' Laws. Will ...",
+            "snippet": "Aug 20, 2022 — Vegetable Gardens bill , which prohibits local governments from banning vegetable gardens on any part of residential properties.",
+            "url": "https://civileats.com/2022/08/20/two-states-right-to-garden-laws-local-food-community-nutrition-security-illinois-florida/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-glm-candidate",
+  "timestamp": "2026-11-06T00:49:34.448319+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5639.75
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans. original source fact check",
+        "candidates": [
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "... Michael Bloomberg owns nearly 6 times as much wealth as they do. The bottom 38 percent of households is equal to around 47.8 million households.",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Wall Street tycoon, philanthropist and mayor. Here's how ...",
+            "snippet": "Former New York City Mayor Michael Bloomberg is the wealthiest billionaire in New York, He's just one of New York's 113 billionaires.",
+            "url": "https://www.facebook.com/forbes/videos/new-yorks-richest-resident-2024/506401848540138/"
+          },
+          {
+            "title": "Could Bloomberg Give Each American $1M with Money He ...",
+            "snippet": "On March 3, 2020, a Twitter user posted a message that claimed former New York City Mayor Michael Bloomberg could have given each American $1 million ...",
+            "url": "https://www.facebook.com/AllSidesNow/posts/on-march-3-2020-a-twitter-user-posted-a-message-that-claimed-former-new-york-cit/2686165238099031/"
+          },
+          {
+            "title": "1 Mike Bloomberg equals 660000 American households ...",
+            "snippet": "Bloomberg owns homes in Bermuda, London and New York, where he was mayor from 2002 to 2013. assets of just under $9 billion,",
+            "url": "https://www.cbsnews.com/news/mike-bloomberg-net-worth-media-company-finance-terminals-revenue/"
+          },
+          {
+            "title": "Top 50 Richest People in the US Are Worth as Much ...",
+            "snippet": "The 50 Richest Americans Are Worth as Much as the Poorest 165 Million. A look at U.S. wealth data through the first half of 2020 shows stark ...",
+            "url": "https://www.bloomberg.com/news/articles/2020-10-08/top-50-richest-people-in-the-us-are-worth-as-much-as-poorest-165-million"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T08:54:44.080254+00:00",
+  "status": "reserved_outcome_unknown"
+}

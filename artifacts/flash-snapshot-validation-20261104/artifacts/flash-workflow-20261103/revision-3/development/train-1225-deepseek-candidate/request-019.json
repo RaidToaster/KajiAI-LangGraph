@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "PolitiFact Bloomberg bottom 125 million Americans fact-check methodology",
+        "candidates": [
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate. “Mike Bloomberg owns ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          },
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "Michael Bloomberg's net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America.",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Bad math at MSNBC on Bloomberg ad spending",
+            "snippet": "Bloomberg spent $500 million on ads. The U.S. population is 327 million. He could have given each American $1 million and still have money ...",
+            "url": "https://politifact.com/factchecks/2020/mar/06/msnbc/bad-math-msnbc-bloombergs-ad-spending-wasnt-enough/"
+          },
+          {
+            "title": "Fact-check: President Trump's speech on inflation, wages ...",
+            "snippet": "17. He said the U.S. would be sending $1,776 checks to 1.45 million U.S. military personnel, a new “warrior dividend.” “The checks are already ...",
+            "url": "https://politifact.com/article/2025/dec/18/fact-checking-trump-speech-warrior-dividend/"
+          },
+          {
+            "title": "Analysis of 10000+ fact checks on Politifact",
+            "snippet": "Politifact is a handy nonprofit organization that rates the truth value of political statements, mostly by American politicians.",
+            "url": "https://srcole.github.io/2019/07/20/politifact/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T05:38:44.433455+00:00",
+  "status": "reserved_outcome_unknown"
+}

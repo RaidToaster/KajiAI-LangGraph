@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Pogba Has Quit The French National Team Over Macron's Remarks on Islam.",
+        "query": "French Football Federation or Didier Deschamps statement on Paul Pogba national team status 2020",
+        "candidates": [
+          {
+            "title": "Paul Pogba has been left out of France's national team after ...",
+            "snippet": "Paul Pogba has been left out of France's national team after testing positive for the coronavirus, manager Didier Deschamps has confirmed.",
+            "url": "https://www.facebook.com/photo.php?fbid=1205601286474579&id=334949410206442&set=a.910947089273335&locale=bs_BA"
+          },
+          {
+            "title": "Will Paul Pogba return to the France squad? Didier Deschamps ...",
+            "snippet": "France head coach Didier Deschamps admitted that he has no doubt that Paul Pogba's goal is to return to the national team ahead of next year's ...",
+            "url": "https://www.goal.com/en/lists/paul-pogba-return-france-squad-didier-deschamps-midfielder-receive-call-up-long-awaited-monaco-debut-nears/blt3a23e982099324b5"
+          },
+          {
+            "title": "Didier Deschamps - Wikipedia",
+            "snippet": "French professional football manager and former player. Deschamps was appointed as head coach of the France national football team on a two-year contract,",
+            "url": "https://en.wikipedia.org/wiki/Didier_Deschamps"
+          },
+          {
+            "title": "Deschamps to stay as France coach until 2026 - FIFA",
+            "snippet": "Didier Deschamps has agreed to stay on as France coach until June 2026. The French Football Federation (FFF) confirmed the news on Saturday.",
+            "url": "https://www.fifa.com/en/articles/didier-deschamps-renews-his-contract-as-france-coach-until-2026-world-cup"
+          },
+          {
+            "title": "He has the ability and mentality to get back to the highest level",
+            "snippet": "Deschamps told journalists that he feels Pogba can make a comeback to the very highest level, potentially leaving the door open to a France ...",
+            "url": "https://sports.yahoo.com/article/ability-mentality-back-highest-level-145300690.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-028-deepseek-candidate",
+  "timestamp": "2026-11-06T07:06:09.094392+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15958.421
+}

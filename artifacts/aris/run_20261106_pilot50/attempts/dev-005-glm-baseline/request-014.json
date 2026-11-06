@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "The United States of America evidence",
+        "candidates": [
+          {
+            "title": "Federal Rules of Evidence",
+            "snippet": "The Federal Rules of Evidence govern the admission or exclusion of evidence in most proceedings in the United States courts.",
+            "url": "https://www.uscourts.gov/forms-rules/current-rules-practice-procedure/federal-rules-evidence"
+          },
+          {
+            "title": "List of states and territories of the United States",
+            "snippet": "The United States of America is a federal republic [1] consisting of 50 states and a federal district (Washington, D.C., the capital city of the United States).",
+            "url": "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States"
+          },
+          {
+            "title": "50 United States Facts Covering Each US State",
+            "snippet": "You'll learn facts about the United States of America, from Alabama to Wyoming. The List Show is a weekly show hosted by John Green, 50 United ...",
+            "url": "https://www.youtube.com/watch?v=vyYy7dmAnM8"
+          },
+          {
+            "title": "Evidence, Evaluation, and Learning",
+            "snippet": "The Foundations for Evidence-Based Policymaking Act of 2019, also known as the Evidence Act, requires federal agencies to develop evidence to support ...",
+            "url": "https://2021-2025.state.gov/evidence-evaluation-and-learning/"
+          },
+          {
+            "title": "Learn about the United States' founding documents",
+            "snippet": "Learn about the United States' founding documents, known as the Charters of Freedom: the Declaration of Independence, U.S. Constitution, ...",
+            "url": "https://www.usa.gov/historical-documents"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-baseline",
+  "timestamp": "2026-11-06T00:42:17.188653+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5202.484
+}

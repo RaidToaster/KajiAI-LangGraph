@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+        "query": "Taylor Zundel claimed on Instagram that she original source fact check",
+        "candidates": [
+          {
+            "title": "Taylor Swift and Travis Kelce's engagement is real, but the couple is ...",
+            "snippet": "Taylor Swift and Travis Kelce's engagement is real, but the couple is often targeted by false claims. But PolitiFact found no evidence Kelce ...",
+            "url": "https://www.poynter.org/fact-checking/2025/is-it-true-that-taylor-swift-travis-kelce/"
+          },
+          {
+            "title": "Debunking Viral Claims Archives",
+            "snippet": "Debunking Viral Claims. These articles debunk misinformation shared on social media. We also provide resources for readers: an article and a video on how to ...",
+            "url": "https://www.factcheck.org/fake-news/"
+          },
+          {
+            "title": "Please FACT CHECK things before you post them!!! And be careful what ...",
+            "snippet": "Please FACT CHECK things before you post them!!! And be careful what information you share. 95% of inflammatory viral claims that “feel ...",
+            "url": "https://www.instagram.com/reel/DL3Sqc-y2xo/?hl=en"
+          },
+          {
+            "title": "Fact-checking claims targeting Taylor Swift and Travis Kelce",
+            "snippet": "",
+            "url": "https://www.wral.com/archive/22136185/"
+          },
+          {
+            "title": "Former Meta engineer says Instagram took a 'don't ask, don't tell' approach ...",
+            "snippet": "A former Meta engineer told jurors Wednesday that the company took a \"don't ask, don't tell\" approach on kids under 13 on its platforms.",
+            "url": "https://abc7news.com/post/former-meta-engineer-says-instagram-took-dont-ask-tell-approach-kids-13-lawsuit-testimony/19705836/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-021-deepseek-baseline",
+  "timestamp": "2026-11-06T06:44:58.448784+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14687.75
+}

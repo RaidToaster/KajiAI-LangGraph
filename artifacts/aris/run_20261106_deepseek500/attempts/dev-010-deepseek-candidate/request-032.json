@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports.",
+        "query": "Search for a primary transcript, recording, or contemporaneous report of Trump's remarks about the Revolutionary War and airports, with date and venue.",
+        "candidates": [
+          {
+            "title": "Trump Says Revolutionary War Troops 'Took Over the Airports'",
+            "snippet": "President Trump made a bit of a historical blunder during his Fourth of July “Salute to America” speech Thursday when he said that the ... Missing:  transcript,  recording,  contemporaneous  date",
+            "url": "https://time.com/5620936/donald-trump-revolutionary-war-airports/"
+          },
+          {
+            "title": "Did Trump Say Revolutionary War Troops Took Over Airports?",
+            "snippet": "Trump made a statement erroneously indicating that American rebels had taken over not-yet-existent airports during the Revolutionary War:",
+            "url": "https://www.snopes.com/fact-check/trump-revolutionary-war-airports/"
+          },
+          {
+            "title": "User Clip: Trump on Revolutionary War and airports - C-SPAN",
+            "snippet": "Trump address on July 4, 2019. Claims Revolutionary War army seized airports. Also mispronounces Fort McHenry as McHendry. Missing:  primary  transcript,  recording,  contemporaneous  venue.",
+            "url": "https://www.c-span.org/clip/white-house-event/user-clip-trump-on-revolutionary-war-and-airports/4805671"
+          },
+          {
+            "title": "President Donald J. Trump's speech contained historical errors ...",
+            "snippet": "Trump's speech contained historical errors. In outlining the history of Independence Day, Trump claimed the Army \"took over the airports\" during ... Missing:  recording,  contemporaneous  date",
+            "url": "https://www.facebook.com/nbcphiladelphia/posts/president-donald-j-trumps-speech-contained-historical-errors-in-outlining-the-hi/10157368580632232/"
+          },
+          {
+            "title": "In Fourth of July speech, Trump praises Revolutionary War ...",
+            "snippet": "In Fourth of July speech, Trump praises Revolutionary War Army that 'took over the airports' in 1775. Politics. Published July 5, 2019 8:28 PM ... Missing:  transcript,  recording,  contemporaneous  report  date  venue.",
+            "url": "https://www.fox29.com/news/in-fourth-of-july-speech-trump-praises-revolutionary-war-army-that-took-over-the-airports-in-1775"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-010-deepseek-candidate",
+  "timestamp": "2026-11-06T06:02:56.979058+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12166.296
+}

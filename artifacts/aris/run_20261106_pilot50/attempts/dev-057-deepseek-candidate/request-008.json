@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Did any vote in which Nate McMurray participated as Town Supervisor concern raising taxes on homeowners, and what was the specific measure, date, and vote outcome?",
+        "candidates": [
+          {
+            "title": "ERIE COUNTY-WIDE",
+            "snippet": "This is calculated by estimating the percentage that property taxes are expected to increase for all local governments participating in the Plan.",
+            "url": "https://www4.erie.gov/sites/default/files/2021-06/ECWSSP%20Report.pdf"
+          },
+          {
+            "title": "Election 2015: McMurray wins Grand Island town supervisor race",
+            "snippet": "Nathan McMurray won the Town of Grand Island supervisor's race after a canvas of votes Wednesday. The two-vote lead McMurray held over incumbent ...",
+            "url": "https://www.wnypapers.com/news/article/2015/11/20/122665/election-2015-mcmurray-wins-grand-island-town-supervisor-race"
+          },
+          {
+            "title": "FINANCIAL CRISIS",
+            "snippet": "... any appropriate state attorney general any person that the Commission found may have violated the laws of the United States in relation to the crisis. Where ...",
+            "url": "https://www.govinfo.gov/content/pkg/GPO-FCIC/pdf/GPO-FCIC.pdf"
+          },
+          {
+            "title": "fcic_final_report_full.pdf",
+            "snippet": "... any appropriate state attorney general any person that the Commission found may have violated the laws of the United States in relation to the crisis. Where ...",
+            "url": "https://fcic-static.law.stanford.edu/cdn_media/fcic-reports/fcic_final_report_full.pdf"
+          },
+          {
+            "title": "Voters' Pamphlet",
+            "snippet": "This pamphlet contains information for several districts and there may be candidates/measures that are not included on your ballot. If you have ...",
+            "url": "https://www.washingtoncountyor.gov/elections/documents/november-3-2026-voters-pamphlet/download?inline"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-deepseek-candidate",
+  "timestamp": "2026-11-06T01:12:48.071160+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7033.375
+}

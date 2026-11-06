@@ -1,0 +1,1047 @@
+Evidence Gates and Failure-Inclusive Evaluation for
+Claim V eriﬁcation with KajiAI
+Anonymous review draft
+Abstract—KajiAI is a LangGraph workﬂow that separates
+proposed factual labels from evidence acceptance and retains
+retrieved text versions for audit. We froze a comparison of
+the current workﬂow and an evidence-adjudicated candidate
+on 500 A V eriTeC development claims with DeepSeek and a
+ﬁxed Jev veriﬁer . This interim analysis accounts for 47 of 1,000
+scheduled cells, all carried forward from a resource pilot. The
+baseline proposed 6 correct labels in 24 cells and accepted one.
+The candidate proposed 3 correct labels in 23 cells, had 15
+execution failures and accepted zero. Across 23 terminal pairs,
+the candidate-minus-baseline proposal agreement difference was
+−8.7 percentage points (95% paired bootstrap interval −30.4
+to +13.0). The other 450 claims remain untouched in this
+comparison. The separate historical Gemma study measured
+a 13.6-point gain over a model-only control, and a controlled
+stopping challenge forfeited two correct acceptances when it
+skipped reassessment. These studies use different conﬁgurations
+and answer different questions. Pilot-based model selection, live
+retrieval, incomplete coverage and outstanding human citation
+adjudication limit inference.
+Index Terms —automated fact-checking, retrieval-augmented
+generation, LangGraph, citation provenance, selective prediction,
+A V eriTeC
+I. I NTRODUCTION
+Automated fact-checking requires more than assigning a
+plausibly correct label. A system should identify evidence,
+connect that evidence to the claim, disclose uncertainty and
+preserve enough provenance for inspection. FEVER estab-
+lished an evidence-oriented task using claims derived from
+Wikipedia [1]. A V eriTeC extends this setting to real-world
+claims and web evidence [2]. Its shared-task score combines
+verdict correctness with evidence quality [3], emphasizing that
+label agreement alone is an incomplete account of veriﬁcation.
+Retrieval-augmented generation provides external informa-
+tion to a language model [4], but retrieved documents, cita-
+tions and repeated reasoning do not themselves guarantee an
+evidence-supported verdict. Citation evaluation distinguishes
+answer correctness from citation quality [5]. This distinction
+motivates an architecture in which prediction and acceptance
+are observable, separate decisions.
+We present KajiAI, an auditable workﬂow implemented
+with LangGraph. A model proposes a factual label and an
+evidence assessment. A gate checks retrieved citations, exact
+quotations, assertion coverage, source-host diversity and do-
+main requirements, followed by automated semantic citation
+review. Failed checks preserve the prediction while withhold-
+ing an accepted verdict. Unresolved gaps can trigger further
+research, subject to limits on rounds, searches, page fetches,
+elapsed time and reported tokens.
+The frozen DeepSeek comparison asks how an evidence-
+adjudicated candidate changes proposal agreement, acceptance
+coverage, execution failures and resource use relative to the
+standard workﬂow. We report the exposed pilot stratum sep-
+arately from the other 450 cases. Historical studies give two
+different comparisons: Gemma with and without the workﬂow,
+and three cloud models under scripted ﬁxed-evidence stopping.
+The evaluation treats operational failure as a result. It
+preserves each started cell and the service reservations asso-
+ciated with it. Source versions and saved assessments support
+inspection of disagreements among label agreement, evidence
+checks and resource use.
+II. R ELATED WORK
+A. Evidence-Based Fact-Checking
+FEVER pairs supported and refuted claims with annotated
+evidence sentences [1]. A V eriTeC uses real-world claims,
+question–answer evidence and textual justiﬁcations from web
+sources [2]. The A V eriTeC shared task evaluates evidence
+retrieval and veracity prediction jointly [3]. We use its de-
+velopment labels for a local four-class study; our scores are
+not ofﬁcial A V eriTeC scores and cannot be directly compared
+with shared-task rankings.
+The 2025 A V eriTeC shared task instead speciﬁes open-
+weight models, a precompiled evidence store, a single-GPU
+resource constraint and a one-minute processing limit [6]. Our
+cloud-assisted, contemporary-web protocol does not reproduce
+those conditions.
+B. Retrieval and Citation Evaluation
+RAG combines parametric generation with external doc-
+ument memory [4]; Self-RAG learns retrieval and critique
+through reﬂection tokens [7]. KajiAI instead uses structured
+assessments, query templates and explicit routing rules, allow-
+ing inspection of query generation and stopping behavior.
+FIRE integrates retrieval and veriﬁcation iteratively, choos-
+ing a ﬁnal judgment or another search query using conﬁdence
+[8]. EMULA TE distributes search-result ranking and webpage-
+content assessment across agents [9]. Iterative research and
+role separation therefore precede KajiAI. Our empirical focus
+is preserving source versions, separating provisional prediction
+from rule-based acceptance, and measuring changes across
+frozen trajectories.
+ALCE evaluates generated answers along ﬂuency, correct-
+ness and citation quality dimensions [5]. Our literal-quote
+check addresses a narrower property: whether a quoted string
+occurs in stored text for its cited URL. A separate model
+V alidate claim and initialize state
+Classify domain and select policy
+Decompose; retain original claim
+Retrieve and record versioned evidence
+Generate structured
+evidence assessment
+Check structural rules
+and citation support
+Route by gaps, failures and budgets
+Finalize: prediction, acceptance status,
+evidence and execution audit
+accept or stop
+gaps
++ budget
+invalid input
+Fig. 1. Explicit stateful workﬂow. Remaining gaps can trigger retrieval;
+failures, stagnation and budgets stop research. Finalization independently
+rechecks acceptance conditions.
+reviews whether that quotation supports its attached ﬁnding.
+Neither mechanism independently establishes the truth of the
+overall verdict.
+C. Selective Prediction
+Selective classiﬁcation trades coverage for accuracy through
+rejection [10]. KajiAI selects outputs through evidence re-
+quirements; its conﬁdence categories and citation-review
+scores lack independent calibration, so the reported coverage
+and conditional label accuracy carry no statistical risk guaran-
+tee.
+III. S YSTEM DESIGN
+A. Stateful Graph and Execution
+LangGraph supports stateful workﬂows combining deter-
+ministic operations and model calls [11]. Eight nodes execute
+KajiAI’s process in Fig. 1. The shared state includes the origi-
+nal claim, optional reference date, domain, assertions, retrieval
+ledger, research history, proposed assessment, evidence gaps,
+budgets and stop reason. Individual claims follow a sequential
+graph. The frozen DeepSeek comparison uses one worker. The
+historical Gemma runner used up to three.
+The DeepSeek comparison uses the exact Ollama tag
+deepseek-v4.1-flash:cloud through a loopback ser-
+vice and checks the returned model ID. TinyFish Search and
+Fetch and TypeSafe Jev supply the other network services.
+Within one attempt the retriever reuses fetched pages. Each
+arm starts a fresh workﬂow state. The coordinator saves
+checkpoints at attempt boundaries. The graph itself has no
+persistent checkpoint store.
+Jev, accessed through the TypeSafe SDK, supplies the work-
+ﬂow’s domain, search-ranking, source-review and citation-
+support judgments. Domain classiﬁcation uses Jev when its
+conﬁdence is at least 0.6, with an Ollama classiﬁer and
+then keyword scoring as fallbacks. The proﬁles are general,
+scientiﬁc, political and health/medical. The baseline uses a
+deterministic conjunction heuristic limited to six fragments.
+Fragments act as coverage obligations within the assessment.
+The candidate uses neutral research questions as guidance and
+retains the original claim as the decision target.
+B. Query Construction and Retrieval
+At round t, the standard workﬂow constructs an ordered
+list from (i) follow-up queries proposed in the previous as-
+sessment, (ii) the claim plus “evidence,” (iii) the claim plus
+“counterevidence,” (iv) each assertion plus “evidence,” and
+(v) each assertion plus “original source fact check.” It trims
+and deduplicates strings, excludes previously used queries and
+selects the ﬁrst two remaining candidates when the budget
+permits.
+The standard workﬂow combines model suggestions with
+hardcoded templates. The candidate places veriﬁcation ques-
+tions after prior follow-up queries, prepends primary-source
+queries when a provenance gap is active, and can move an
+eligible source-reference query into the second slot. No learned
+optimizer chooses the best query. Jev ranks returned URLs for
+fetching, a separate decision from choosing a query. TinyFish
+supplies up to ﬁve results per search and up to two full-
+page fetch attempts per search. Failed fetches leave available
+snippets in the ledger.
+A source record stores the URL, query, provider, retrieval
+time, snippet or page text, content hash and review scores.
+Full-page text is preferred to a snippet for the same URL,
+truncated to 20,000 characters and hashed after truncation. The
+canonical record used in an assessment is retained by URL
+and hash, permitting replay against the same text version. Jev
+source review estimates relevance, evidence value, counterevi-
+dence value and injection risk. Reviewed records with injection
+score at least 0.9, or all three relevance/evidence scores below
+0.1, are excluded from usable evidence. Unreviewed records
+retain permissive defaults; this ﬁlter is not a demonstrated
+injection defense.
+C. Prediction and Acceptance
+The analyzer returns a structured assessment containing a
+verdict, conﬁdence category, ﬁndings, cited URLs, quotations,
+assertion resolutions, contradictions, gaps and next queries. It
+also reports source independence, counterevidence search and,
+where required, peer-reviewed support. These model-reported
+ﬂags are policy inputs rather than independently veriﬁed facts.
+Let ˆyi be the proposed label for claim i, and Gs,i and Gm,i
+its structural and semantic gap sets. Acceptance is
+ai = 1{Gs,i = ∅, G m,i = ∅, F i = 0}, (1)
+where Fi indicates execution failure. The accepted output is
+˜yi =
+{
+ˆyi, a i = 1,
+⊥, a i = 0, (2)
+where ⊥ is operational abstention, not the factual NEI class.
+Structural acceptance requires a decisive verdict and High
+conﬁdence; nonempty retrieved citations for every ﬁnding;
+literal quotations in canonical source text; complete assertion
+coverage; at least two cited hosts; no ﬂagged duplicate lineage
+among cited sources; and no unresolved gaps or contradic-
+tions. A token-set Jaccard threshold of 0.85 ﬂags substantially
+similar source text. Counterevidence and independence ﬂags
+must be positive. Scientiﬁc claims require HTTPS citations;
+health/medical claims require the peer-review ﬂag. A con-
+ﬂicting verdict additionally requires supporting and refuting
+ﬁndings. Established disagreement belongs in those ﬁndings
+and the summary; the contradictions ﬁeld instead records
+unresolved objections to the proposed verdict. Distinct hosts,
+text dissimilarity and model ﬂags do not prove actual inde-
+pendence.
+For each eligible ﬁnding–URL–quotation triple, Jev reviews
+the quotation and up to 1,200 surrounding characters on each
+side. Semantic acceptance requires a “supports” relation with
+conﬁdence at least 0.8 for every citation. Missing or failed
+citation checks block acceptance. Review identity includes
+ﬁnding, URL, quotation and content hash; ﬁnalization repeats
+structural checks and conﬁrms review coverage. This tests quo-
+tation support for an attached ﬁnding, not the entire inferential
+chain from documents to verdict.
+D. Bounded Research and Auditability
+When gaps remain, routing allows further research if exe-
+cution has not failed and resource and stagnation limits permit
+it. Two consecutive rounds with no new ledger records trigger
+a stagnation stop. A new record can be a changed snippet for
+an already fetched URL, so ledger growth is not equivalent to
+new usable evidence.
+Each round retains its raw assessment, exact usable source
+versions, gaps, budget snapshot, elapsed time and stop deci-
+sion. Reported token usage is aggregated, with a completeness
+ﬂag when accounting is unavailable. Time and token limits
+govern scheduling; an in-ﬂight request can ﬁnish after the
+soft deadline or exceed the reported-token threshold. Missing
+usage prevents a guaranteed spend cap. The report preserves
+proposed and accepted verdicts separately and distinguishes
+insufﬁcient evidence from execution errors.
+E. Evidence-Adjudicated Candidate
+The candidate ﬁrst selects literal passages by ID and pro-
+poses a factual class. It evaluates passage stance and checks
+source paths separately, using source-bound anchors from a
+predecision review. The origin-review head adjudicates the
+acceptance materiality of each lead. A material or unresolved
+class-undermining issue blocks acceptance. The compiler re-
+solves selected IDs to their original retained text and rejects in-
+valid bindings. An additional independent-provenance review
+TABLE I
+FROZEN SETTINGS FOR THE TWO DEEP SEEK ARMS
+Setting V alue
+Shared DeepSeek V4.1 Flash cloud at temperature
+zero; Jev 1.13; three rounds; one worker; 270 s
+graph budget and 300 s worker limit
+Standard arm Standard assessment; 4,096-token output limit;
+original reasoning behavior
+Candidate arm Evidence adjudication, bound anchors, separate
+materiality judgment and provenance review;
+6,144-token assessment and 2,048-token plan-
+ning limits; reasoning disabled on both request
+types
+Transport Per cell, at most 8 Ollama, 40 Jev, 6 Search and
+12 Fetch URLs; zero external retries
+Retrieval pacing 27 searches/min and 450/hour; 135 Fetch
+URLs/min and 900/rolling 24 h
+is required before acceptance. Source references found during
+research can supply a follow-up query within the existing
+round budget.
+The executable path is the archived flash_study.
+py worker and graph.py runtime. The candidate uses
+evidence_adjudicated.py, source_paths.py and
+passage_decision.py. The current command-line de-
+faults in config/default.yaml use standard assessment
+and Gemma. Query-exhaustion stopping is opt-in and dis-
+abled in both DeepSeek arms. The current tree’s unﬁnished
+semantic_evidence.py integration is outside the frozen
+archive. The companion code audit maps these paths to the
+archived versions and ﬁxture tests.
+IV. E VALUATION PROTOCOL
+A. Frozen DeepSeek Comparison
+The shared manifest contains 500 distinct A V eriTeC devel-
+opment claims. We preserved the earlier seeded 50-case pilot
+order and each case’s relative DeepSeek arm order. The other
+450 follow manifest order and alternate the ﬁrst arm. Both
+arms receive only claim text and date. The analysis joins labels
+ofﬂine. The retained early pilot records were bound to the
+frozen source, conﬁguration and raw journal hashes. A started
+cell remains in the ledger even if its workﬂow fails.
+Table I lists the combined intervention. Generic classiﬁca-
+tion can retain original reasoning behavior in the candidate and
+uses its 6,144-token ceiling. The archived native GLM trial
+of the candidate failed its source-ﬁdelity check on an unsup-
+ported scope and materiality concern. The native check closed
+before the planned eight-case development and twelve-case
+conﬁrmation screens were released. The DeepSeek comparison
+waived qualiﬁcation for entry while retaining the acceptance
+checks. Early outcomes inﬂuenced the choice of DeepSeek.
+On 23 paired cases shared with the pilot’s GLM arm, baseline
+proposals agreed with gold on 5 cases for DeepSeek and 3 for
+GLM, and candidate proposals agreed on 3 and 2. Execution
+failures were 0 and 2 for the baseline and 15 and 18 for the
+candidate, in the same model order. The earlier Gemma run
+used different conditions.
+TABLE II
+FROZEN EVALUATION CONFIGURATION
+Setting V alue
+Main model / temperature gemma4:31b-cloud / 0
+Review model / threshold jev-1.13.0 / 0.8
+Research limits per claim 3 rounds; 300 s soft deadline
+Search / fetch ceilings 20 logical searches; 20 fetches
+Budgeted reported tokens 250,000 aggregate reported tokens
+Per-round retrieval Up to 2 queries; 2 fetches/query
+Study scheduling 3 workers; seed 20261009
+Installed libraries LangGraph 1.2.11; Pydantic 2.13.5; Type-
+Safe SDK 0.7.1
+We count execution failures as disagreement and with-
+hold acceptance on failures. We report the proportions over
+observed terminal cells, plus candidate-minus-baseline dif-
+ferences from terminal pairs with a case-level percentile
+bootstrap. Correct acceptance refers to label agreement after
+the automated gate. Independent human evidence annotation
+remains outstanding. The ofﬁcial A V eriTeC evidence score is
+outside this protocol.
+B. Historical Gemma Dataset and Conditions
+The completed study assesses all 500 A V eriTeC devel-
+opment claims in two conditions. The split contains 122
+Supported, 305 Refuted, 35 Not Enough Evidence and 38
+Conﬂicting Evidence/Cherrypicking labels. Only claim text
+and claim date are supplied as dataset inputs to inference.
+Gold labels, justiﬁcations and annotated evidence are reserved
+for scoring and post hoc audit. Both conditions use the same
+model, temperature and structured-output adapter.
+The model-only control produces one verdict from ex-
+isting model knowledge without search, domain routing or
+an evidence gate. The full workﬂow applies the architecture
+above. Their comparison measures the combined workﬂow,
+including its different prompt and evidence context; it does
+not isolate retrieval, Jev or LangGraph individually. The ﬁrst-
+round analysis truncates saved full-workﬂow trajectories rather
+than constituting a separately executed system.
+Table II summarizes the protocol. Claim-condition tasks
+were shufﬂed with a ﬁxed seed, but contemporary search
+and cloud-model responses remain externally variable. Source,
+conﬁguration, package versions, dataset bytes and hashes
+are archived. Earlier exploratory runs used different source
+versions and are excluded. Resume checks reject changes to
+the frozen inference conﬁguration.
+The local reproducibility bundle, study-20261009-v3,
+contains the run manifest, source archive, dataset snapshot,
+raw JSONL records and per-claim replay results. Source
+and dataset SHA-256 preﬁxes are 624a8d2fa125 and
+499793726b4a, respectively; the manifest retains their com-
+plete hashes. The plotting script reads saved metrics, without
+issuing additional service calls.
+The study retains all 1,000 planned claim-condition at-
+tempts, including 8 workﬂow and 5 control execution failures.
+A monthly quota limit interrupted execution after 302 work-
+ﬂow and 283 control attempts; seven quota failures remain
+recorded. Later concurrent-slot timeouts and a local Ollama
+restart interrupted two pending control requests. Only unat-
+tempted tasks were resumed, with the original model, source,
+dataset and settings; recorded failures were never retried or
+replaced. Full incident details accompany the reproducibility
+bundle.
+C. Metrics and Uncertainty
+The evaluation schema maps TRUE, FALSE,
+NOT_ENOUGH_EVIDENCE and CONFLICTING to
+the four dataset labels. Generic MISLEADING predictions
+are not equated with the conﬂicting-evidence class. The
+evidence gate accepts decisive labels only, excluding NEI by
+design. Accepted NEI recall is therefore zero even when raw
+predictions are correct.
+For n attempted claims and gold labels yi, raw accuracy,
+coverage and selective accuracy are
+A = 1
+n
+n∑
+i=1
+1{ˆyi = yi}, (3)
+C = 1
+n
+n∑
+i=1
+ai, (4)
+Asel =
+∑n
+i=1 ai1{ˆyi = yi}∑n
+i=1 ai
+. (5)
+Selective accuracy is undeﬁned when no output is accepted.
+Macro F1 averages F1 across the four gold classes; abstentions
+contribute missed predictions without becoming a ﬁfth gold
+class. End-to-end accepted-label accuracy is CA sel, preventing
+conditional accuracy from obscuring low coverage.
+Fatal errors remain in the denominator. Failure-inclusive
+scoring treats them as abstentions; raw scoring can preserve
+an earlier prediction if a later service fails. Raw and failure-
+inclusive accuracies coincide. We report 95% Wilson intervals
+for proportions, a paired accuracy bootstrap with 2,000 claim-
+level resamples and seed 20261009, and an exact two-sided
+McNemar test. These intervals treat claims as sampling units;
+they do not capture correlated topics, shared-source effects,
+model drift, service availability or web changes.
+D. Ofﬂine Policy Replay and Citation Audit
+Policy replay applies alternative acceptance rules to the
+same saved ﬁnal assessments and source versions. We compare
+structural-only acceptance with the full gate and semantic
+thresholds from 0.5 to 0.95. Replay cannot show how changing
+a gate would alter later retrieval or reasoning. Removing
+exact-quote requirements also changes eligibility for semantic
+review, so it is not an isolated semantic ablation.
+Citation measurements count ﬁnding–URL occurrences in
+ﬁnal assessments, including repeated URLs across ﬁndings.
+A blinded human-audit worksheet contains 454 citation rows
+from 44 accepted and 50 sampled rejected claims; labels and
+acceptance status are stored separately. Human annotation
+ﬁelds remain blank. Automated Jev judgments are measure-
+ments rather than independent human ground truth.
+V. R ESULTS
+A. Interim DeepSeek Comparison
+The interim snapshot retains 47 of the 1,000 scheduled
+cells. The fresh run is checkpointed before its ﬁrst new
+cell because the earlier pilot left fewer than the 12 Fetch
+URL slots reserved for a new cell. The other 450 claims
+contribute zero terminal cells. Table III uses observed cells
+as denominators for agreement and reports terminal counts
+against the target. All 24 baseline cells completed. Eight
+candidate cells completed and 15 failed. Neither arm timed
+out. Baseline acceptance coverage was 1/24, with one correct
+acceptance on the unpaired baseline cell. Candidate coverage
+was 0/23. Across the 23 terminal pairs, baseline and candidate
+correctly proposed 5 and 3 labels. The paired difference was
+−8.7 percentage points (95% paired bootstrap interval −30.4
+to +13.0). No correct or incorrect acceptance occurred on the
+matched pairs.
+The reused cells generated 1,536,161 input and 395,590
+output tokens on Ollama and 1,496,816 input and 185,349 out-
+put tokens on Jev. They reserved 185 searches and 366 Fetch
+URLs. Worker time including startup was about 70.4 minutes.
+At peak uncached list rates these tokens imply estimated costs
+of $0.936 for Ollama and $0.063 for Jev. Provider charges
+and cache or reasoning counts remain unavailable where the
+response does not report them. The journal separates worker
+time from quota waits and calendar time. Fresh usage is zero
+at this checkpoint.
+B. Historical Gemma Paired Label Prediction
+Both conditions assess the same 500 claims: 122 Supported,
+305 Refuted, 35 NEI and 38 Conﬂicting labels. Table IV
+reports the paired label results, including failed attempts.
+Full predictions are correct on 337 claims, compared with
+269 for the control. The workﬂow is correct on 117 claims
+missed by the control, while the control is correct on 49 missed
+by the workﬂow; both are correct on 220 and both are wrong
+on 114. The paired accuracy difference is 13.60 percentage
+points (bootstrap 95% CI: 8.60–18.60); exact McNemar p =
+1.35 × 10−7.
+The majority baseline achieves 61.0% accuracy because
+Refuted dominates the split, but its macro F1 is only 0.189.
+The workﬂow improves accuracy and macro F1 over the
+model-only control. It predicts the conﬂicting class 98 times,
+compared with 38 gold conﬂicting labels. Its NEI recall is
+17.1%, compared with 40.0% for the control. Improvement is
+therefore not uniform across classes.
+C. Selective Acceptance
+Table V compares acceptance rules on all 500 saved ﬁnal
+assessments. Raw prediction accuracy and accepted-label ac-
+curacy represent different outcomes.
+The full gate withholds 6 outputs accepted by structural-
+only replay: 3 wrong labels and 3 correct labels. It accepts
+35 Refuted and 9 Supported. Its coverage interval is 6.6–
+11.6%, and end-to-end accepted-label accuracy is 8.4%. The
+gate leaves 295 correct predictions and 161 other attempts
+0.50 0.60 0.70 0.80 0.90 0.95
+Citation-review confidence threshold
+0
+20
+40
+60
+80
+100Percentage
+Coverage
+Accuracy among accepted
+Fig. 2. Semantic-threshold replay on 500 ﬁnal assessments, holding evidence
+and structural rules ﬁxed. Accepted counts at thresholds 0.50, 0.60, 0.70, 0.80,
+0.90 and 0.95 are 46, 45, 44, 44, 30 and 24. The curve does not establish an
+optimal threshold.
+unaccepted. Its 95.5% conditional accuracy describes a small
+selected subset.
+The selected gold labels are 33 Refuted, 9 Supported
+and 2 Conﬂicting; the 35 Refuted and 9 Supported counts
+above describe predictions. On these same 44 IDs, the model-
+only control matches 30 labels (68.2%), while the workﬂow
+matches 42. This is a descriptive comparison on a workﬂow-
+selected subset, not an independent test of the gate’s causal
+beneﬁt. Selecting only High-conﬁdence assessments instead
+retains 429 claims with 326 matching labels (76.0%); these
+differently selected cohorts do not establish a calibrated risk
+guarantee.
+Both accepted errors, IDs 353 and 404, have gold
+conﬂicting-evidence labels but receive Refuted predictions.
+In ID 353, the saved assessment uses ﬁndings about com-
+pensation and legal action to adjudicate a claim speciﬁcally
+about unlicensed vaccines. In ID 404, it combines ofﬁcial
+denials of complete railway privatization and job losses with
+reporting about employees’ future job-security fears. These
+illustrative records expose a gap between supporting individual
+ﬁndings and resolving the claim’s qualiﬁcations and temporal
+scope. They are case inspections rather than completed human
+citation annotations.
+Figure 2 shows descriptive threshold replay. Stricter thresh-
+olds reduce coverage, while lower thresholds can admit ad-
+ditional outputs. Selecting a threshold from this development
+analysis would require separate validation.
+D. Changes Across Saved Research Rounds
+First-round accuracy is 68.8%, compared with 67.4% for
+ﬁnal predictions. Additional rounds change 62 predictions:
+18 wrong-to-correct, 25 correct-to-wrong and 19 between
+incorrect labels. The ﬁnal-minus-ﬁrst difference is −1.40 per-
+centage points (bootstrap 95% CI: −4.00 to 1.20). Excluding
+8 fatal attempts yields −0.81 points on 492 nonfatal attempts,
+with an interval of −3.25 to 1.63.
+TABLE III
+INTERIM DEEP SEEK OUTCOMES . A CCEPTED COUNTS SHOW CORRECT /INCORRECT LABELS . U NTOUCHED CELLS CONTRIBUTE TO THE PLANNED
+COUNTS ONLY .
+Stratum Arm Terminal/planned Failed Correct proposals Accepted
+Selected 50 Baseline 24/50 0 6/24 1/0
+Selected 50 Candidate 23/50 15 3/23 0/0
+Other 450 Baseline 0/450 0 – 0/0
+Other 450 Candidate 0/450 0 – 0/0
+Pooled 500 Baseline 24/500 0 6/24 1/0
+Pooled 500 Candidate 23/500 15 3/23 0/0
+TABLE IV
+PREDICTION RESULTS ON ALL 500 C LAIMS
+Condition Accuracy (%) 95% CI Macro F1
+Always Refuted 61.0 56.7–65.2 0.189
+Model only 53.8 49.4–58.1 0.417
+First round † 68.8 64.6–72.7 0.530
+Final workﬂow 67.4 63.2–71.4 0.500
+†Saved-trajectory truncation, not a separate live one-round condition. Wilson
+intervals; local label metrics, not ofﬁcial A V eriTeC evidence scores.
+TABLE V
+ACCEPTANCE REPLAY ON 500 F INAL ASSESSMENTS
+Policy Accepted Coverage (%) Correct / accepted
+Structural only 50 10.0 45/50 (90.0%)
+Structural + Jev 44 8.8 42/44 (95.5%)
+Conditional accuracy 95% CI: 78.6–95.7% for structural-only replay; 84.9–
+98.7% for the full gate.
+These saved trajectories quantify within-run changes across
+later rounds; a separately deployed one-round system can
+behave differently because timing and search responses can
+change. Of the attempted workﬂows, 452 use 3 rounds, 30
+use 2 rounds, 18 use 1 round. The prevalence of the round
+limit warrants evaluating stopping behavior.
+Acceptance also changes across the saved trajectories: the
+ﬁrst round accepts 14 labels, all matching gold, whereas the
+ﬁnal outputs accept 44, with 42 matching gold. Higher ﬁnal
+acceptance therefore accompanies lower raw label accuracy in
+this run. The paired accuracy intervals include zero, so the
+negative point estimate does not establish an average harmful
+effect of iteration.
+A post hoc query-exhaustion audit identiﬁes 252 third
+rounds with no additional searches, empty prior follow-up
+queries and unchanged usable-source versions. These repeated
+assessments consume 4,154,865 observed tokens. They correct
+two labels, change one correct label to an incorrect one, and
+add two acceptances. Truncating those saved rounds would
+lose one net correct prediction and two acceptances. This
+motivates testing an explicit stopping policy, while preserving
+reassessment as a potentially useful operation; it does not
+demonstrate a cost-only improvement.
+TABLE VI
+OPERATIONAL MEASUREMENTS ON 500 T ASKS PER CONDITION
+Measurement Full workﬂow Model only
+Attempted tasks 500 500
+Fatal execution errors 8 5
+Mean elapsed time (s) 79.2 7.7
+Median elapsed time (s) 72.1 3.4
+90th percentile time (s) 120.1 9.0
+Logical search calls 2,049 0
+Page-fetch attempts 3,953 0
+Observed model tokens 34,452,832 183,416
+Same 500 claim inputs; tokens aggregate providers and accounting is incom-
+plete. Concurrent task durations are not study wall-clock time.
+E. Citation Diagnostics and Resource Use
+Final assessments contain 2,611 citation occurrences. Of
+these, 1,914 have literal quotes present in canonical text
+and 1,914 have Jev reviews. 34 reviewed quotes receive a
+relation other than “supports,” and 158 receive supporting con-
+ﬁdence below 0.8. The remaining 697 occurrences fail literal
+provenance matching. They are not automatically counted as
+hallucinations: a quotation can refer to a snippet differing
+from the preferred full-page text, or exhibit another provenance
+mismatch.
+Final structural gaps include missing exact quotations on
+353 claims and insufﬁcient independence ﬂags on 357; these
+categories overlap. A host-exposure audit unwraps Wayback
+Machine URLs before comparison. On 208 of 500 claims, a
+cited host matches the host of the dataset’s fact-check article.
+Host equality does not prove exact-article exposure, and an
+unmatched host does not exclude other exposure routes.
+In the post hoc host-match group, workﬂow and control ac-
+curacies are 77.9% and 50.5% (208 claims); in the unmatched
+group they are 59.9% and 56.2% (292 claims). Groups depend
+on workﬂow citations and differ in class composition. This
+is a descriptive exposure audit, not a causal comparison or
+contamination-free score.
+Table VI reports operational totals. There are 551 recorded
+fetch failures and 2 Jev ranking failures, distinct from fatal
+execution errors. The 934 rounds after the ﬁrst consume
+1,049 searches, 2,013 fetch attempts and 23,546,637 observed
+tokens; 263 add no new ledger records. Incomplete provider-
+level accounting prevents an exact monetary-cost estimate.
+Iteration cost and the saved accuracy changes support investi-
+gating evidence novelty and stopping rules.
+F . Separate Runtime Development Pilot
+After freezing the historical study, we implemented an opt-
+in query-exhaustion stop that retains the prior assessment and
+leaves acceptance rules unchanged. Pending source review or
+semantic citation gaps preserve reassessment. Focused ﬁxtures
+reduce provider invocations from three to two (six to four with
+a repair per assessment), while also demonstrating a possible
+lost acceptance. The baseline remains the default.
+A live development pilot paired both policies on claims 17
+and 246 with tighter output limits and service retries disabled.
+The 75 requests comprised 11 Ollama, 31 Jev, 11 search and
+22 fetch requests, including a smoke check and the retained
+baseline failure caused by local UTF-8 logging. Transport
+records contain 190,142 Ollama and 79,658 Jev tokens. Three
+workﬂows completed, all proposed Refuted and none passed
+the gate. Both candidate trajectories exhausted queries after
+round two, but semantic citation gaps kept reassessment active.
+The only complete pair used three model assessments per
+policy. The live pilot therefore exercised no early stop.
+G. Controlled Stopping Challenge
+We froze eight synthetic cases and exercised both policies
+through the production graph with identical scripted retrieval
+and ﬁrst two assessments. All exhausted their queries after
+round two. The candidate stopped in all four cases with
+completed citation review, preserved the preceding proposal
+and two literal citations in each, and used two assessments
+against three for the baseline. All four unresolved-review cases
+continued and matched the baseline under shared scripted
+continuations. Among the four early stops, the designed third-
+round outcomes included two correct gate acceptances that
+stopping forfeited, one wrong verdict that stopping avoided,
+and one unchanged decision. A wrong verdict also passed
+both policies in one unresolved case under the permissive
+scripted ﬁnal review. These are controlled reachability results.
+The scripts specify the outcomes, so the counts do not estimate
+model behavior or real-world event rates.
+An exploratory eligibility screen reuses the 252 historical
+no-search rounds. Round-two semantic gaps would block
+stopping in 77, including both recovered correct acceptances.
+The remaining 175 contain two label corrections, one degra-
+dation and no new acceptances. Round-two pending source
+review is unavailable for reconstruction. Even if stopping only
+affects this latter stratum, the compatible change in correct
+predictions in the saved subset ranges from losing two to
+gaining one, depending on which transitions were eligible.
+This is a descriptive bound on saved outcomes. The synthetic
+counterexamples establish that completed citation review can
+coexist with useful reassessment.
+We froze two four-case batches before live inference. Each
+included two completed-review and two unresolved-review
+cases. The scripted preﬁxes held a correct, Medium-conﬁdence
+proposal after round two, below the gate’s High requirement.
+Each baseline received a live third assessment at temperature
+zero with a 2,048-token requested generation cap and up to
+TABLE VII
+CONTROLLED LIVE CONTINUATIONS , F OUR PAIRED CASES PER MODEL
+Model Correct labels Correct accepts Sends Tokens
+B / C B / C skipped skipped
+Gemma 4 31B 4 / 4 3 / 1 2 4,446
+GLM 5.3 Flash 1 / 2 0 / 0 3 9,086
+DeepSeek V4.1 Flash 4 / 4 0 / 0 2 7,461
+B is the baseline and C is the candidate. Skipped costs are observed on
+baseline continuations bypassed by C.
+one schema repair. If the candidate continued, it reused the as-
+sessment after an exact match of continuation inputs. Scripted
+retrieval and citation review required zero search, fetch or Jev
+requests. The ﬁnal reviewer stub permitted literal quotes, so
+we separately adjudicated each gate acceptance against the
+authored ﬁnding, stance and source text. The predeclared zero-
+loss guard was evaluated at the batch boundary.
+The ﬁrst batch completed all 12 model–case pairs and
+passed every trace check. Each model’s candidate stopped on
+both completed-review cases, preserving the exact proposal
+and two literal quotes in each. Both unresolved cases per
+model continued and matched their coupled baselines. Ta-
+ble VII reports the within-model outcomes.
+In case e01, a ﬁrsthand account and a committee record
+both place the inaugural lantern fair on Thursday. Gemma’s
+reassessment accepted the correct verdict with both exact
+quotes, while the stopped candidate retained the proposal and
+quotes but abstained. In e02, an August 2 public-opening
+record and an independent diary of the August opening cere-
+mony refute a June opening under the authored case’s single-
+event interpretation. The diary corroborates the month without
+establishing the exact day. Both acceptances were lost under
+stopping. The e01 loss alone crossed the guard. Batch two was
+therefore left unrun and reassessment remains the default.
+The requested tags were gemma4:31b-cloud,
+glm-5.3-flash:cloud and
+deepseek-v4.1-flash:cloud. Responses identiﬁed
+the corresponding models without the cloud tag sufﬁx. The
+batch used 15 actual sends and 42,447 observed tokens,
+including three GLM schema repairs. Four GLM replies
+and one DeepSeek reply reached the output cap. GLM’s
+candidate retained four literal quotes across the four cases,
+while its baseline retained zero. Gemma and DeepSeek each
+retained eight under either policy. Each model had only two
+eligible cases and the Flash baselines accepted none. The
+shared synthetic cases and scripted correct preﬁxes limit
+interpretation to the tested continuations. Harm rates and net
+savings under live web deployment remain undetermined.
+H. Flash Workﬂow Development
+The historical Gemma study recorded 42 cases whose
+only ﬁnal gate gap was an invalid or missing literal quote.
+Thirty-six had the correct proposed label. This identiﬁes a
+potential coverage bottleneck before semantic veriﬁcation. We
+tested presenting only canonical text and asking the analyzer
+TABLE VIII
+COMPACT -PASSAGE DEVELOPMENT RESULTS
+Model Arm Correct Macro F1 Accepted Failed
+GLM Current 1/6 0.100 0/6 2/6
+GLM Compact 0/6 0.000 0/6 6/6
+DeepSeek Current 1/6 0.167 0/6 1/6
+DeepSeek Compact 2/6 0.350 0/6 0/6
+to ground each ﬁnding in a contiguous passage. The ﬁrst
+paired batch used one A V eriTeC training claim in each arm
+on each Flash model. All 12 initial assessments reached
+the requested 4,096-token generation cap before returning
+answer text. Schema repairs received empty drafts, and all
+four attempts returned incorrect NEI labels and abstained. A
+second candidate reused the repair slot for the full original
+evidence with thinking disabled. It produced eight exact ﬁnal
+citations on DeepSeek, seven supported by Jev, but the label
+was incorrect and the gate abstained. GLM emitted prose
+through the cap and failed schema validation.
+We then supplied up to two contiguous excerpts of up
+to 72 words for each of at most 12 sources, ranked by
+source review and lexical overlap. The model returned passage
+identiﬁers, which the adapter resolved to text from the exact
+source versions. The original structural and semantic gate still
+checked the assembled evidence. An ofﬂine replay retained
+four of 19 prior DeepSeek quote strings across the three
+saved rounds of the ﬁrst case, showing that compression can
+discard potential evidence. On a separate three-case authored
+diagnostic per model, all six replies contained the expected
+short verdict and passage object. GLM added prose around the
+object in each reply, which the existing parser could recover.
+The paired protocol drew eight development and twelve
+disjoint conﬁrmation cases from the A V eriTeC training split
+with class stratiﬁcation. Only claim text and date entered
+inference. Before live evaluation, the release screen required at
+least one net gain in correct supported acceptances per model,
+no added incorrect acceptances or execution failures, preserved
+raw accuracy, and a macro-F1 loss of at most 0.02. Candidate
+acceptances also required exact citations, passing semantic
+checks and a separate evidence audit. The comparison used
+the current workﬂow as the control within each model, with
+the same three-round budget and generation cap. Search and
+Fetch were live, so evidence could vary across arms. Both
+arms kept query-exhaustion stopping off.
+Table VIII retains six paired attempts per model, including
+every failure. Two matching current-workﬂow records came
+from the ﬁrst batch. Both models had zero correct and zero
+incorrect acceptances, so accuracy among accepted verdicts is
+undeﬁned. On DeepSeek the exact ﬁnal citation counts were
+6/8 for the current arm and 34/34 for the compact arm, with
+6 and 29 passing Jev respectively. These are citation-level
+diagnostics. They do not show that the overall verdicts were
+supported. Source independence and missing primary context
+prevented acceptance even when the raw label was correct.
+Two compact DeepSeek assessments used Refuted on claims
+whose gold labels were Conﬂicting Evidence/Cherrypicking,
+despite identifying some of the omitted qualiﬁcations.
+The GLM compact arm had ﬁve failures by the ﬁfth
+pair, against one current-workﬂow failure. Three remaining
+current-workﬂow attempts could not erase that difference. The
+scheduled batch ﬁnished at six pairs and the last two planned
+case blocks were left untouched. A controlled replay shortened
+only the response contract on saved compact prompts. Two
+of three previously unparseable GLM replies then yielded
+valid assessments with resolvable passage IDs. The third still
+exhausted generation without a parseable result. The DeepSeek
+check retained its Supported proposal. The replay therefore
+missed its all-four output guard.
+The two longer-cap GLM replays recovered parseable an-
+swers on identical prompts. One label matched the benchmark.
+The other treated later or restricted access as refuting a
+historical causal claim. A paired revision used one 8,192-token
+assessment in place of the possible assessment and repair.
+Its ﬁrst GLM candidate accepted a correct Refuted verdict
+with four exact citations and four automated support passes.
+The research-agent audit withheld credit because the sources
+did not demonstrate distinct evidentiary origins. The revision
+closed after this audit failure. A subsequent candidate added
+a provenance check before acceptance. It vetoed a would-be
+incorrect Supported acceptance on an attribution claim, but
+GLM failed ﬁve times in six pairs. Even two additional control
+failures would leave the control with at most four failures.
+The sixth revision used a line-format assessment with the
+provenance check. Across four GLM pairs, correct labels
+changed from 0/4 to 1/4 and each arm failed twice. Across
+ﬁve DeepSeek pairs, correct labels changed from 1/5 to 0/5
+and failures rose from 1/5 to 4/5. Neither arm accepted a
+verdict on either model. Two DeepSeek failures followed a free
+Fetch read timeout and a refused local Ollama connection. We
+retained both started cells. The eight-case control could incur
+at most three DeepSeek failures, so the candidate closed at
+the frozen guard. This phase recorded 20 Ollama reservations
+with 19 terminal replies, 80 Jev sends, 35 searches and 69
+Fetch reservations. One Ollama reservation had no returned
+usage.
+A separate two-send diagnostic gave the exact Flash models
+manually selected primary records of a senator’s conditional
+opposition during negotiations and his subsequent afﬁrmative
+ﬁnal vote. The required Conﬂicting label at High conﬁdence
+was missing in both replies. GLM emitted a duplicated Refuted
+response that failed the parser. DeepSeek returned Conﬂicting
+at Medium conﬁdence. The remaining diagnostic cases stayed
+untouched. This exercise tested verdict generation on selected
+passages. Retrieval effectiveness and automated acceptance
+were outside its scope.
+1) Reference retrieval and the eighth revision: A follow-
+up queried dated references already present in retrieved arti-
+cles, within the existing search ceiling. The seventh revision
+recovered contemporaneous reports of a stayed voter purge,
+but both DeepSeek proposals still disagreed with the bench-
+mark’s Conﬂicting label. Both GLM attempts failed their ﬁrst
+TABLE IX
+REVISION 8: C OMPLETED MATCHED DEVELOPMENT PAIRS
+Model Arm Correct Macro F1 Accepted Failed
+GLM Current 1/6 0.100 0/6 2/6
+GLM Candidate 0/6 0.000 0/6 5/6
+DeepSeek Current 1/5 0.167 0/5 1/5
+DeepSeek Candidate 2/5 0.350 0/5 1/5
+assessments. This incomplete revision was superseded while
+its screen remained reachable; it did not establish a retrieval-
+to-acceptance gain.
+The eighth revision combined the reference route with
+native low reasoning effort on GLM and conservative retention
+of an explicitly unresolved assertion with omitted wording.
+DeepSeek’s settings were unchanged, allowing two identical
+candidate cells to carry forward. Twelve identical baseline cells
+were also reused. Table IX reports only completed pairs; one
+additional DeepSeek baseline remained unmatched. Historical
+baseline reuse and time separation are disclosed, and reused
+records are not counted as new service trafﬁc.
+Revision 8 closed with 23 of 32 cells accounted for:
+nine new attempts and fourteen reused records. Its GLM
+candidate had ﬁve execution failures, while the six retained
+controls had two. Even if both untouched controls failed,
+the eight-case control would have at most four failures. The
+inequality 5 > 2 + 2 makes the frozen no-increase guard
+unreachable. Nine remaining cells stayed untouched. All arms
+had zero acceptances; accepted-label accuracy is undeﬁned.
+Final candidate citation diagnostics were 5/5 exact and 5/5 Jev-
+supported on GLM, and 22/22 exact and 20/22 Jev-supported
+on DeepSeek. A failed ﬁnal assessment can leave earlier
+citations in the trace; those counts do not confer acceptance.
+The last new GLM attempt concerned sanctions-related
+access to a Cuban lung-cancer vaccine. Both replies stopped
+normally, at 522 and 798 generated tokens, and returned
+the expected model identity. Round one proposed Refuted
+at Medium conﬁdence; round two proposed Conﬂicting at
+Medium but omitted its opening assessment marker. The parser
+retained an execution failure against the benchmark’s NEI
+label. Repairing the marker retrospectively would not establish
+a correct supported acceptance: the visible proposal still had
+unresolved assertions, uncertainty and a scope conﬂict. All
+service responses reconciled; this attempt was not a quota or
+transport stop. New revision-8 trafﬁc comprised 22 Ollama, 82
+Jev, 40 Search and 75 Fetch reservations. Uncached list-price
+estimates were $0.01963 and $0.00811 for Ollama and Jev,
+respectively; these are estimates, not billed charges or current
+balances.
+2) Restoring a hidden veriﬁcation method: A fresh
+research-agent review found a concrete lossy transformation.
+The retained Bloomberg PolitiFact page described an ad-
+ditional calculation by Matthew Gross, reporting about $6
+billion rather than the original analyst’s $11.4 billion for the
+bottom 38% of households. The compact analyzer windows
+instead repeated the claim and omitted this replication account.
+DeepSeek then explicitly identiﬁed absent methodology as a
+gap. Separate calculation actions from the same SCF dataset
+are distinct from independent underlying data; neither a new
+host nor a replication keyword automatically proves eviden-
+tiary independence.
+A post hoc deterministic diagnostic kept the ﬁrst overlap-
+ranked passage and reserved the second only for explicit repli-
+cation, recomputation or recalculation language absent from
+the original selections. It used the same 72-word windows
+with 56-word strides and the same source order. All 26 saved
+candidate request packets reconstructed exactly from their ver-
+sioned source records. Six packets changed, all the Bloomberg
+PolitiFact excerpts across three rounds in each model. Cuba
+and Graham controls remained identical. The complete revised
+packet retained the $64.2 billion wealth estimate, 47.8 million
+households, 2.63-person conversion and 125.7 million people.
+The replacement omitted the old publication/byline header;
+its date remained in the source URL and retained full text.
+This diagnostic establishes restored visibility, not prospective
+retrieval success or improved acceptance.
+A separately frozen four-send ﬁxed-packet diagnostic sched-
+uled original and revised windows within each exact model,
+with unchanged generation settings, parser and scientiﬁc gate.
+The two GLM sends completed and reconciled; both parsed
+as Supported at High conﬁdence. The revised reply explic-
+itly cited the reported additional calculation. It nevertheless
+retained a methodology/counterevidence gap, and a redundant
+lineage ﬁnding received Jev support conﬁdence 0.79, below
+the unchanged 0.80 cutoff. Neither packet qualiﬁed for accep-
+tance. The diagnostic required qualifying revised responses on
+both models, so the two DeepSeek sends remained untouched
+after this binding failure. These are two started diagnostic
+sends, not four completed attempts, and none belongs to
+the prospective development or ﬁnal denominator. Four sends
+were planned; two Ollama and two Jev sends were actually
+used. The failure supports closing this tested intervention; it
+does not prove every possible future workﬂow futile.
+The requested cloud tags glm-5.3-flash:cloud and
+deepseek-v4.1-flash:cloud returned the correspond-
+ing sufﬁx-free model IDs in recorded replies. No candidate
+reached conﬁrmation. The frozen ﬁnal manifest contains all
+500 claims from the A V eriTeC development split used pre-
+viously for Gemma. The earlier four-arm release remained
+unstarted at that development checkpoint. The later resource
+pilot and one-model study have separate entry protocols.
+VI. D ISCUSSION AND LIMITATIONS
+A. What the Results Support
+The historical Gemma comparison shows higher label accu-
+racy for its combined workﬂow than for its model-only control.
+The interim DeepSeek pairs have lower candidate proposal
+agreement and more candidate failures. The adaptive sample,
+wide interval and incomplete coverage limit that comparison.
+Semantic replay withholds both correct and incorrect labels;
+saved trajectories expose costly reassessment with mixed
+prediction changes. Prediction, acceptance and resource use
+therefore warrant separate measurement.
+The study includes no independently executed retrieval-
+only, Jev-disabled or alternative-framework comparison. Its ev-
+idence supports neither framework superiority, a hallucination-
+reduction percentage nor benchmark-leading performance.
+B. Threats to V alidity
+Service availability: Quota and concurrent-slot interruptions
+required resumption across time. A post hoc sensitivity analy-
+sis on 487 pairs without fatal errors gives a workﬂow-minus-
+control difference of 14.37 points (bootstrap 95% CI: 9.45–
+19.10). Remote responses and current web results can drift.
+Temporal and verdict exposure: Retrieval uses the con-
+temporary web without a historical publication cutoff. Later
+reports and published verdicts can help predict older claims.
+Original A V eriTeC annotations address temporal evidence con-
+cerns [2], but our protocol does not reproduce that constraint.
+Pretraining exposure is unknown, and the repeatedly used
+development split is not a pristine held-out test.
+Evidence validity: Literal checks verify provenance only.
+Jev support judgments lack independent calibration and human
+entailment labels. Model-reported independence and peer-
+review ﬂags can be wrong. Text similarity can miss para-
+phrased copying or ﬂag legitimate overlap; snippets can omit
+qualifying context. The prepared human audit has not been
+performed.
+Task and control scope: Different prompts make the model-
+only comparison a combined-workﬂow effect. Heuristic de-
+composition can create incomplete fragments. Excluding NEI
+from acceptance restricts task coverage. Multilingual, mul-
+timodal, adversarial and user-facing behavior has not been
+evaluated.
+Reproducibility: Hosted model revisions and complete
+provider-speciﬁc usage are unavailable for the historical study.
+Soft deadlines, quotas and web changes limit repeatability.
+The companion artifact documents the historical records and
+includes the controlled protocol, authored cases, assessment
+harness, saved traces and request ledgers. The DeepSeek
+companion includes the case and conﬁguration freeze, journal
+hashes and records, a separate attempt and service ledger,
+and the ofﬂine scorer and table commands. Historical records
+and their provenance remain separate. The artifact permits a
+recount without service calls. Provider revisions and live web
+state may differ in a new execution.
+C. Next Evaluation Steps
+Independent human review should assess citation support
+and source credibility, retaining separate annotations and ad-
+judication for the accepted and rejected strata. An independent,
+temporally constrained evaluation could measure naturally
+occurring stopping eligibility. Executed retrieval-only and Jev-
+disabled conditions would help isolate the contribution of each
+mechanism.
+VII. C ONCLUSION
+KajiAI preserves proposed verdicts, evidence decisions and
+research traces as separate records. The historical Gemma
+comparison measured higher proposal agreement than its
+model-only control, and the controlled stopping challenge
+lost correct acceptances when it skipped reassessment. The
+interim DeepSeek comparison retains the candidate’s failures
+and sparse acceptance without establishing a qualiﬁed im-
+provement. A quota checkpoint leaves 953 cells untouched.
+Completion requires accounting for those cells under the same
+freeze and auditing the resulting evidence and costs.
+ACKNOWLEDGMENT
+OpenAI Codex assisted with drafting and revision, creating
+the architecture diagram and plotting code, developing the
+controlled evaluation harness, and auditing scripts and re-
+sults. Numerical results were computed from saved execution
+records.
+REFERENCES
+[1] J. Thorne, A. Vlachos, C. Christodoulopoulos, and A. Mittal, “FEVER:
+A large-scale dataset for fact extraction and veriﬁcation,” in Proc.
+NAACL-HLT, vol. 1, 2018, pp. 809–819, doi: 10.18653/v1/N18-1074.
+[2] M. Schlichtkrull, Z. Guo, and A. Vlachos, “A V eriTeC: A dataset for
+real-world claim veriﬁcation with evidence from the web,” in Advances
+in Neural Information Processing Systems , vol. 36, 2023. [Online].
+Available: https://arxiv.org/abs/2305.13117
+[3] M. Schlichtkrull et al., “The Automated V eriﬁcation of Textual Claims
+(A V eriTeC) shared task,” inProc. Seventh Fact Extraction and VERiﬁ-
+cation Workshop, 2024, pp. 1–26, doi: 10.18653/v1/2024.fever-1.1.
+[4] P . Lewis et al., “Retrieval-augmented generation for knowledge-intensive
+NLP tasks,” in Advances in Neural Information Processing Systems , vol.
+33, 2020. [Online]. Available: https://arxiv.org/abs/2005.11401
+[5] T. Gao, H. Y en, J. Y u, and D. Chen, “Enabling large language models
+to generate text with citations,” in Proc. EMNLP, 2023, pp. 6465–6488,
+doi: 10.18653/v1/2023.emnlp-main.398.
+[6] M. Akhtar et al., “The 2nd Automated V eriﬁcation of Textual Claims
+(A V eriTeC) shared task: Open-weights, reproducible and efﬁcient sys-
+tems,” in Proc. Eighth Fact Extraction and VERiﬁcation Workshop ,
+2025, pp. 201–223, doi: 10.18653/v1/2025.fever-1.15.
+[7] A. Asai, Z. Wu, Y . Wang, A. Sil, and H. Hajishirzi, “Self-RAG: Learning
+to retrieve, generate, and critique through self-reﬂection,” in Proc.
+International Conference on Learning Representations , 2024. [Online].
+Available: https://arxiv.org/abs/2310.11511
+[8] Z. Xie et al., “FIRE: Fact-checking with iterative retrieval and veriﬁ-
+cation,” in Findings of the Association for Computational Linguistics:
+NAACL 2025 , 2025, pp. 2901–2914, doi: 10.18653/v1/2025.ﬁndings-
+naacl.158.
+[9] S. Hong, M. Luo, and X. Wan, “EMULA TE: A multi-agent framework
+for determining the veracity of atomic claims by emulating human
+actions,” in Proc. Eighth Fact Extraction and VERiﬁcation Workshop ,
+2025, pp. 179–183, doi: 10.18653/v1/2025.fever-1.13.
+[10] Y . Geifman and R. El-Y aniv, “Selective classiﬁcation for deep neural
+networks,” in Advances in Neural Information Processing Systems , vol.
+30, 2017. [Online]. Available: https://arxiv.org/abs/1705.08500
+[11] LangChain, “LangGraph overview.” Accessed: Oct. 10, 2026. [Online].
+Available: https://docs.langchain.com/oss/python/langgraph/overview

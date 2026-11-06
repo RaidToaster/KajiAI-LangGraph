@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime.",
+        "query": "The recently deceased US Supreme Court Justice Ruth Bader Ginsburg was known for her gruelling fitness regime. counterevidence",
+        "candidates": [
+          {
+            "title": "How Cancer Shaped Justice Ruth Bader Ginsburg's Life",
+            "snippet": "Justice Ruth Bader Ginsburg struggled with cancer for more than 20 years. Here's how cancer shaped Ginsburg's life.",
+            "url": "https://time.com/5507530/ruth-bader-ginsburg-cancer-history/"
+          },
+          {
+            "title": "Ruth Bader Ginsburg, Supreme Court Justice Since 1993 ...",
+            "snippet": "Ruth Bader Ginsburg, Supreme Court Justice Since 1993, Dies at 87. Known for her judicial restraint and sharp legal mind, Ginsburg delivered ...",
+            "url": "https://www.history.com/articles/ruth-bader-ginsburg-death"
+          },
+          {
+            "title": "I Did Ruth Bader Ginsburg's Workout. It Nearly Broke Me.",
+            "snippet": "Personal trainer Bryant Johnson takes POLITICO's Ben Schreckinger through the workout routine he designed for Supreme Court Justice Ruth Bader ...",
+            "url": "https://www.politico.com/magazine/story/2017/02/rbg-ruth-bader-ginsburg-workout-personal-trainer-elena-kagan-stephen-breyer-214821"
+          },
+          {
+            "title": "Ruth Bader Ginsburg bodyweight strength-training exercises",
+            "snippet": "U.S. Supreme Court Justice Ruth Bader Ginsburg is serious about her workouts. Since 1999, she's worked out with the same personal trainer ...",
+            "url": "https://www.cnbc.com/make-it/2020/06/20/ruth-bader-ginsburg-bodyweight-strength-training-exercises.html"
+          },
+          {
+            "title": "The Death of Justice Ruth Bader Ginsburg: Initial ...",
+            "snippet": "On September 18, 2020, Justice Ruth Bader Ginsburg, the second woman to serve on the Supreme Court of the United States, passed away at the ...",
+            "url": "https://www.congress.gov/crs-product/LSB10537"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-293-deepseek-baseline",
+  "timestamp": "2026-11-06T04:29:02.831317+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6532.14
+}

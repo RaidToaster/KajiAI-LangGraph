@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Govt of India is providing money to bereaved families of COVID-19 - Insurance benefits for Covid-19 deaths can be claimed under the schemes of PMJJBY and PMSBY.",
+        "query": "What official Government of India announcements, notifications, or scheme guidelines state that money is provided to bereaved families of COVID-19 deceased?",
+        "candidates": [
+          {
+            "title": "Final-Guidelines-on-Ex-Gratia-Assistance-to-Covid-19- ...",
+            "snippet": "Continuous scheme: The Ex Gratia assistance to families affected by Covid-19 deaths will continue to be provided for deaths that may occur in the future ...",
+            "url": "https://ndma.gov.in/sites/default/files/PDF/Final-Guidelines-on-Ex-Gratia-Assistance-to-Covid-19-Victims.pdf"
+          },
+          {
+            "title": "When a family loses a loved one, social security can ...",
+            "snippet": "... India. 1y ... Covid-19 Relief Scheme dated 03-06-2021. This Scheme will provide help to the families of the IPs who died due to Covid-19.",
+            "url": "https://www.facebook.com/ESICHQ/videos/when-a-family-loses-a-loved-one-social-security-can-provide-a-measure-of-support/1891922648855434/"
+          },
+          {
+            "title": "National Disaster Management Authority, India",
+            "snippet": "The ex-gratia assistance will be given subject to the cause of death being certified as COVID-19 as per the guidelines issued by Ministry of ...",
+            "url": "https://www.facebook.com/NDMA.in/posts/national-disaster-management-authority-india-issues-a-public-notice-regarding-fi/359157512905189/"
+          },
+          {
+            "title": "Covid-19: India to pay $674 compensation for every death",
+            "snippet": "India's top court has approved the government's decision to pay 50,000 rupees ($674; £498) as compensation for every death due to Covid-19.",
+            "url": "https://www.bbc.com/news/world-asia-india-58731158"
+          },
+          {
+            "title": "Major Notifications",
+            "snippet": "Guideline for the Provision of FP services during and post COVID-19 ... COVID-19 - guidelines regarding attendance of government officials.",
+            "url": "https://prsindia.org/covid-19/notifications"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-259-deepseek-candidate",
+  "timestamp": "2026-11-06T04:20:32.602100+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6021.921
+}

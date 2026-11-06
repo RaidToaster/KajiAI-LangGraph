@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ignat Shchetinin And Sammy Scott Piatt, charged with arson connected to Clackamas County, Oregon wildfires.",
+        "query": "Clackamas County Circuit Court docket search for Ignat Shchetinin arson charge 2020",
+        "candidates": [
+          {
+            "title": "Clackamas County: 2 arson arrests not connected to wildfires",
+            "snippet": "Sammy Piatt, 53, and Ignat Shchetinin, 37, were both arrested and booked Friday on charges that included arson. Word quickly spread on social ...",
+            "url": "https://www.koin.com/news/crime/clackamas-county-2-arson-arrests-not-connected-to-wildfires/"
+          },
+          {
+            "title": "Fact Check: Ignat Shchetinin And Sammy Scott Piatt Not ...",
+            "snippet": "Ignat Shchetinin was transported to Clackamas County Jail on charges including: ORS.164.325 - ARSON I; ORS.475.894-1 - PCS-METH. Bail was set at ...",
+            "url": "https://leadstories.com/hoax-alert/2020/09/fact-check-arson-charges-in-clackamas-county-not-related-to-wildfires.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-355-deepseek-candidate",
+  "timestamp": "2026-11-06T04:18:20.943959+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5890.25
+}

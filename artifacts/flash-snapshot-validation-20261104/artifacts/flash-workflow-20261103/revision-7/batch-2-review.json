@@ -1,0 +1,118 @@
+{
+  "attempted_new": 4,
+  "matched_cases_per_model": 2,
+  "candidate_rows": [
+    {
+      "case": "train-1209",
+      "model": "glm",
+      "arm": "candidate",
+      "gold_label": "Conflicting Evidence/Cherrypicking",
+      "failed": true,
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "execution_error",
+      "gaps": [
+        "The model did not return a valid evidence assessment.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": [
+        "Analysis failed: ValueError: Expected one complete assessment block"
+      ]
+    },
+    {
+      "case": "train-1209",
+      "model": "deepseek",
+      "arm": "candidate",
+      "gold_label": "Conflicting Evidence/Cherrypicking",
+      "failed": false,
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN",
+      "citations": 7,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "The records do not quantify the exact number of voters at issue or confirm the final disposition after the Feb. 28, 2020 ruling.",
+        "The quote is confirmed by the transcript, but its factual content is contradicted by reporting that the voters remained on the rolls.",
+        "Citation support is uncertain for https://www.pbs.org/newshour/politics/wisconsin-supreme-court-says-dont-purge-voters-from-rolls."
+      ],
+      "errors": [
+        "Page fetch failed for https://www.nytimes.com/2020/01/13/us/wisconsin-voter-purge.html: target_http_error"
+      ]
+    },
+    {
+      "case": "train-1218",
+      "model": "glm",
+      "arm": "candidate",
+      "gold_label": "Conflicting Evidence/Cherrypicking",
+      "failed": true,
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "execution_error",
+      "gaps": [
+        "The model did not return a valid evidence assessment.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: US Senator Bernie Sanders was opposed to Obamacare.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": [
+        "Analysis failed: ValueError: Expected one complete assessment block"
+      ]
+    },
+    {
+      "case": "train-1218",
+      "model": "deepseek",
+      "arm": "candidate",
+      "gold_label": "Conflicting Evidence/Cherrypicking",
+      "failed": false,
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN",
+      "citations": 6,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "No member-level primary roll-call text naming Sanders was retrieved beyond the snippet in S3; S1, S2, S4, S5, S6, S10 largely repeat the same PolitiFact reporting rather than providing independent corroboration.",
+        "Biden's claim that Sanders \"opposed Obamacare\" conflicts with the recorded Yea vote and Sanders' defense of the law against repeal; the pre-vote hesitance is context, not evidence of opposition to the law's passage.",
+        "Resolve and cite the assertion: US Senator Bernie Sanders was opposed to Obamacare.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": [
+        "Page fetch failed for https://www.democrats.senate.gov/12/24/2009/senate-roll-call-vote-00396-8: bot_blocked",
+        "Page fetch failed for https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm: bot_blocked",
+        "Page fetch failed for https://www.democrats.senate.gov/12/24/2009/senate-roll-call-vote-00396-8: bot_blocked",
+        "Page fetch failed for https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00395.htm: bot_blocked",
+        "Page fetch failed for https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm: bot_blocked",
+        "Page fetch failed for https://www.congress.gov/bill/111th-congress/house-bill/3590: bot_blocked"
+      ]
+    }
+  ],
+  "reference_query_finding": "DeepSeek ran two citation-derived queries on each claim. The Wisconsin stay extracts were retrieved. On Sanders, neither the roll-call query nor the model's exact vote-detail query retrieved the individual vote.",
+  "failures": "GLM had one cap finish on the Wisconsin claim and one normal finish with incomplete line structure on Sanders. All recorded service responses reconciled.",
+  "scoring": "Both DeepSeek proposals were Refuted on benchmark Conflicting claims. Neither arm accepted a verdict on the matched claims. The development guard remains mathematically reachable and confirmation is untouched.",
+  "actual_usage": {
+    "jev": 35,
+    "jev_input_tokens": 89563,
+    "jev_output_tokens": 9234,
+    "tinyfish_search": 16,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 32,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "ollama": 8,
+    "ollama_input_tokens": 22714,
+    "ollama_output_tokens": 16908,
+    "ollama_estimated_usd": 0.01660575,
+    "jev_estimated_usd": 0.003761646
+  },
+  "analysis_sha256": "f7a514414dcc2d3621a6d18a13ed707f979a1b96d96c2fc0dabcc57cb3685f6a"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The large image of the Joe Biden and Kamala Harris logo projected onto a Harley-Davidson location in Milwaukee US indicates the motorcycle manufacturer's endorsement of the US Democratic presidential nominee.",
+        "query": "The large image of the Joe Biden and Kamala Harris logo projected onto a Harley-Davidson location in Milwaukee US indicates the motorcycle manufacturer's endorsement of the US Democratic presidential nominee. original source fact check",
+        "candidates": [
+          {
+            "title": "Fact Check: Projection Of The Biden-Harris Logo On A Harley-Davidson ...",
+            "snippet": "Fact Check: Projection Of The Biden-Harris Logo On A Harley-Davidson Building Was NOT An Endorsement By The Business. Fact Check. Oct 20, 2020 ...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/projection-of-the-biden-harris-logo-on-a-harley-davidson-building-was-not-an-endorsement-by-the-business.html"
+          },
+          {
+            "title": "The Biden-Harris logo is here",
+            "snippet": "The Biden-Harris logo is here. Former Vice President Joe Biden announced Sen. Kamala Harris (D-Calif.) as his running mate Tuesday afternoon ...",
+            "url": "https://www.yellopolitics.com/p/the-biden-harris-logo-is-here"
+          },
+          {
+            "title": "Download file 4.75 MB",
+            "snippet": "The letter was a spoof created as a prank. users later identified it as fake,",
+            "url": "https://huggingface.co/datasets/fever/AVeriTeCFever8Dev/resolve/ad4871c74f79c951de161a72304baa9dfd59abeb/submissions/cca1ff1a-d404-4736-9179-00ada5e89ee0-ce3dd108-e8ac-483b-8eed-5b73da2e24e1.csv?download=true"
+          },
+          {
+            "title": "Biden Harris Logo and symbol, meaning, history, PNG, brand",
+            "snippet": "Biden Harris is the political tandem consisting of Democrats Joe Biden and Kamala Harris created to campaign for the U.S. presidency.",
+            "url": "https://1000logos.net/biden-harris-logo/"
+          },
+          {
+            "title": "❌ No, this isn't real Kamala Harris 2028 campaign art. Here's where it ...",
+            "snippet": "THIS IS FALSE. IT'S BEEN FACT CHECKED AND NO RECORD OF HARRIS EVER SAYING IT. The quote in the image is not accurate. There is no record of ...",
+            "url": "https://www.facebook.com/snopes/posts/-no-this-isnt-real-kamala-harris-2028-campaign-art-heres-where-it-originated/1114116730752381/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-061-deepseek-baseline",
+  "timestamp": "2026-11-06T08:37:32.780014+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21442.093
+}

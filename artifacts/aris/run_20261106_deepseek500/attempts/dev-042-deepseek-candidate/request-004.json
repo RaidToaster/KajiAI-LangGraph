@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "An 'anti-Black Lives Matter' flag replaced the American flag behind President Trump during a Waukesha campaign rally.",
+        "query": "What date and location was the Waukesha campaign rally involving President Trump, and what flags were displayed behind him during the event?",
+        "candidates": [
+          {
+            "title": "Fact check: U.S. and 'Thin Blue Line' flags were displayed at Trump Wisconsin rally",
+            "snippet": "... flag, was displayed behind the stage of President Donald Trump's rally at Waukesha County Airport, Wisconsin on Oct. 24. Some users on ...",
+            "url": "https://www.reuters.com/article/world/fact-check-us-and-thin-blue-line-flags-were-displayed-at-trump-wisconsin-ra-idUSKBN27C21L/"
+          },
+          {
+            "title": "Donald Trump Campaign Rally in Waukesha, Wisconsin",
+            "snippet": "",
+            "url": "https://www.c-span.org/program/campaign-2016/donald-trump-campaign-rally-in-waukesha-wisconsin/455858"
+          },
+          {
+            "title": "The Rise of the Thin Blue Line at Trump Rallies - Medium",
+            "snippet": "On October 24, a Trump rally in Waukesha, Wisconsin, featured a very noticeable backdrop: flying prominently behind the President as he ...",
+            "url": "https://towcenter.medium.com/the-rise-of-the-thin-blue-line-at-trump-rallies-8f10aed379e1"
+          },
+          {
+            "title": "FULL EVENT: Donald Trump Holds Rally in Waukesha, WI 9/28/16",
+            "snippet": "Wednesday, September 28, 2016: Live stream coverage of the Donald J. Trump for President rally in Waukesha, WI at the Waukesha County Expo ...",
+            "url": "https://www.youtube.com/watch?v=55w7B8rq-3Y"
+          },
+          {
+            "title": "President Trump Holds Rally in Waukesha, Wisconsin",
+            "snippet": "",
+            "url": "https://www.c-span.org/program/white-house-event/president-trump-holds-rally-in-waukesha-wisconsin/555346"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-042-deepseek-candidate",
+  "timestamp": "2026-11-06T07:42:13.738599+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18123.046
+}

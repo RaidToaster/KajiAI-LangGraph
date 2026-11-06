@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States, New Zealand, U.K., Australia, and the EU have not included the NDF in their official list of terrorist groups.",
+        "query": "the EU have not included the NDF in their official list of terrorist groups. evidence",
+        "candidates": [
+          {
+            "title": "Foreign Terrorist Organizations - United States Department of ...",
+            "snippet": "Foreign Terrorist Organizations (FTOs) are foreign organizations that are designated by the Secretary of. FTO designations play a critical role in our fight ...",
+            "url": "https://www.state.gov/foreign-terrorist-organizations"
+          },
+          {
+            "title": "Sanctions against terrorism - Consilium.europa.eu",
+            "snippet": "The EU has imposed sanctions against individuals, groups and entities involved in terrorist acts, including ISIL/Da'esh, Al-Qaida, Hamas and the Palestinian ...",
+            "url": "https://www.consilium.europa.eu/en/policies/sanctions-against-terrorism/"
+          },
+          {
+            "title": "Proscribed terrorist groups or organisations - GOV.UK",
+            "snippet": "Section 10 of the Terrorism Act 2000 provides that evidence of anything done in relation to a deproscription application is not admissible as evidence in ...",
+            "url": "https://www.gov.uk/government/publications/proscribed-terror-groups-or-organisations--2/proscribed-terrorist-groups-or-organisations-accessible-version"
+          },
+          {
+            "title": "The Base, and the Basis for Listing Far-Right Terror Groups",
+            "snippet": "On 26 July 2024, the European Union (EU) added the group The Base to its list of terrorist entities, which now counts 22 entities (all ...",
+            "url": "https://icct.nl/publication/base-and-basis-listing-far-right-terror-groups"
+          },
+          {
+            "title": "Currently listed entities - Public Safety Canada",
+            "snippet": "Introduction to the terms of reference and listing of terrorist entities according to Canada's Anti-Terrorism Act.",
+            "url": "https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/lstd-ntts/crrnt-lstd-ntts-en.aspx"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-034-deepseek-baseline",
+  "timestamp": "2026-11-06T07:21:00.022438+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16849.343
+}

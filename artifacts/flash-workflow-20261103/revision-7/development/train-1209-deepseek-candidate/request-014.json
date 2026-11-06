@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Wisconsin voter roll purge 2020 Ozaukee County ruling number of voters affected",
+        "candidates": [
+          {
+            "title": "Wisconsin Supreme Court says don't purge voters from rolls",
+            "snippet": "The list of voters affected by the ruling has shrunk from about 234,000 to 69,000 for a variety of reasons, according to the elections ...",
+            "url": "https://www.pbs.org/newshour/politics/wisconsin-supreme-court-says-dont-purge-voters-from-rolls"
+          },
+          {
+            "title": "Wisconsin judge orders 200000 voters be purged in blow to ...",
+            "snippet": "A Wisconsin judge has ruled that state election officials need to purge 200,000 people from state voter rolls immediately. Missing:  affected  | Show results with:",
+            "url": "https://www.theguardian.com/us-news/2020/jan/13/wisconsin-judge-orders-voters-purged-democrats-fined"
+          },
+          {
+            "title": "Elections Panel Split On Next Steps After Voter Purge Ruling",
+            "snippet": "The Wisconsin Elections Commission deadlocked Monday on how to address a judge's ruling ordering the state to remove up to 234,000 people ...",
+            "url": "https://www.wpr.org/justice/elections-panel-split-next-steps-after-voter-purge-ruling"
+          },
+          {
+            "title": "Wisconsin Judge Says 230,000 Voters Must Be Purged ... - Patch",
+            "snippet": "Ozaukee County Judge Paul Malloy ruled that the commission will be fined $50 per day until it starts removing the roughly 230,000 voters off the ...",
+            "url": "https://patch.com/wisconsin/milwaukee/wisconsin-judge-says-230-000-voters-must-be-purged-rolls"
+          },
+          {
+            "title": "Wisconsin judge orders up to 209K voter names be deleted",
+            "snippet": "Wisconsin judge orders up to 209K voter names be deleted ... PORT WASHINGTON, Wis. (AP) — A Wisconsin judge on Monday found the state's bipartisan ...",
+            "url": "https://apnews.com/article/cf306f8ffada6f356ec9f1c43e7ff0aa"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T15:10:03.088691+00:00",
+  "status": "reserved_outcome_unknown"
+}

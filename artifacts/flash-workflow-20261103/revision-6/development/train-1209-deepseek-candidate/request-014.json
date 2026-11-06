@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Wisconsin voter roll purge 2020 court ruling Ozaukee County voters removed",
+        "candidates": [
+          {
+            "title": "Supreme Court rules Ozaukee County judge erred in ...",
+            "snippet": "The state Supreme Court ruled today the Elections Commission has no power to remove from the rolls thousands of voters who may have moved, but ...",
+            "url": "https://www.wispolitics.com/2021/supreme-court-rules-ozaukee-county-judge-erred-in-ordering-elections-commission-to-purge-voter-rolls/"
+          },
+          {
+            "title": "Wisconsin Supreme Court says don't purge voters from rolls",
+            "snippet": "A Ozaukee County circuit court judge ruled in 2019 that the voters identified as possibly having moved must be removed from the rolls ...",
+            "url": "https://www.pbs.org/newshour/politics/wisconsin-supreme-court-says-dont-purge-voters-from-rolls"
+          },
+          {
+            "title": "Wisconsin judge orders 200000 voters be purged in blow ...",
+            "snippet": "Ozaukee county circuit judge also fined commission and its three Democratic commissioners for refusing to go ahead with purge.",
+            "url": "https://www.theguardian.com/us-news/2020/jan/13/wisconsin-judge-orders-voters-purged-democrats-fined"
+          },
+          {
+            "title": "Wisconsin Elections Board in Contempt for Inaction on ...",
+            "snippet": "Ozaukee County Circuit Court Judge Paul Malloy agreed with WILL's contention on Dec. 13 that the board must adhere to the 30-day limit ...",
+            "url": "https://www.courthousenews.com/wisconsin-elections-board-in-contempt-for-inaction-on-voter-rolls/"
+          },
+          {
+            "title": "Wisconsin Elections Commission",
+            "snippet": "“State law requires inactive voters to be removed from the statewide voter list if they do not request continuing their registration, which ...",
+            "url": "https://www.facebook.com/wisconsinelectionscommission/posts/today-the-wisconsin-elections-commission-announced-it-has-deactivated-192369-vot/1185027513652366/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T09:02:25.826073+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "What specific ACA provision or penalty does the claim refer to, and what is its statutory or regulatory basis?",
+        "candidates": [
+          {
+            "title": "Toward an \"Implied Warranty of Legality\" in Health Insurance",
+            "snippet": "Using the ACA as a basis would cabin judicial discretion and limit insurers' concerns about facing unpredictable obligations.92 But even if there were a ...",
+            "url": "https://yalelawjournal.org/note/private-enforcement-of-the-affordable-care-act-toward-an-implied-warrant-of-legality-in-health-insurance"
+          },
+          {
+            "title": "The Affordable Care Act 101",
+            "snippet": "The ACA prohibits abortion coverage from being required as part of the essential health benefits package. The premium subsidy does not cover non ...",
+            "url": "https://www.kff.org/affordable-care-act/health-policy-101-the-affordable-care-act/"
+          },
+          {
+            "title": "Employer shared responsibility provisions",
+            "snippet": "Learn about employer shared responsibility provisions for applicable large employers (ALEs) under the Affordable Care Act (ACA).",
+            "url": "https://www.irs.gov/affordable-care-act/employers/employer-shared-responsibility-provisions"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-candidate",
+  "timestamp": "2026-11-06T08:46:55.840106+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22005.156
+}

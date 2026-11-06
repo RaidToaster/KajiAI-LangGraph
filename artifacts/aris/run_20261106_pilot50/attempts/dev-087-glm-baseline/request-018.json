@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "Hyderabad Metropolitan Water Supply evidence",
+        "candidates": [
+          {
+            "title": "HMWSSB warns residents against water wastage, threatens to ...",
+            "snippet": "The water board's drinking water pipeline extends to 15,000 kilometres in the city, to plug leakages in which, a special action plan is being be ...",
+            "url": "https://www.thehindu.com/news/national/telangana/hmwssb-warns-residents-against-water-wastage-threatens-to-disconnect-services/article71491795.ece"
+          },
+          {
+            "title": "Drinking Water Wasted After Pipeline Damage Near Uppal Metro ...",
+            "snippet": "This news report covers a disruption in the drinking water supply in Hyderabad, India. The incident was caused by a car damaging an air ...",
+            "url": "https://www.facebook.com/ttvnewsupdates/posts/-drinking-water-wasted-after-pipeline-damage-near-uppal-metro-stationa-main-drin/1653227420148321/"
+          },
+          {
+            "title": "Hyderabad is rationing piped water to once every three days and ...",
+            "snippet": "His remarks come amid an acute drinking water shortage in Hyderabad. The HMWSSB has restricted piped water supply to once every three days in ...",
+            "url": "https://www.instagram.com/p/DfJ7X69EtRJ/"
+          },
+          {
+            "title": "Spatio-temporal dynamics of water resources of Hyderabad ...",
+            "snippet": "No significant evidence of groundwater depletion in the fringe areas of the metropolitan region. Abstract. Urbanization brings about changes in land use and ...",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264837719319805"
+          },
+          {
+            "title": "I raised the issue of water supply in Hyderabad city through the ...",
+            "snippet": "A recent groundwater assessment has flagged Hyderabad as the worst- affected metro in India for groundwater depletion with 26 mandals classified ...",
+            "url": "https://www.facebook.com/kausarmohiuddinkarwan/posts/i-raised-the-issue-of-water-supply-in-hyderabad-city-through-the-singur-and-kris/1614817693439620/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-glm-baseline",
+  "timestamp": "2026-11-06T01:49:33.409810+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9238.718
+}

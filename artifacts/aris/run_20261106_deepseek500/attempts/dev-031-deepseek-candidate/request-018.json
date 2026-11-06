@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amy Coney Barrett was confirmed as US Supreme Court Justice on October 26, 2020",
+        "query": "Search the official U.S. Senate roll call vote record (senate.gov) for the October 26, 2020 confirmation vote on Amy Coney Barrett, including the vote tally and date.",
+        "candidates": [
+          {
+            "title": "Roll call vote: Confirmation of the Barrett nomination (SCOTUS)",
+            "snippet": "7:52pm the Senate began a 15 minute roll call vote on confirmation of Executive Calendar #890, Amy Coney Barrett, of Indiana, ... Missing:  record  October  tally  date.",
+            "url": "https://www.democrats.senate.gov/2020/10/26/roll-call-vote-confirmation-of-the-barrett-nomination-scotus"
+          },
+          {
+            "title": "Roll Call Vote 116 th Congress - 2 nd Session - Senate.gov",
+            "snippet": "Amy Coney Barrett. Vote Number: 222. Vote Result: Cloture. Amy Coney Barrett, of Indiana, Vote Counts: YEAs51 NAYs 48 Not Voting 1 Missing:  tally  | Show results with:",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00222.htm"
+          },
+          {
+            "title": "PN2252 - Nomination of Amy Coney Barrett for Supreme Court ...",
+            "snippet": "Confirmed by the Senate by Yea-Nay Vote. 52 - 48. Record Vote Number: 224. Record Vote Number: 219. Roll Call Votes Constitution Missing:  tally  | Show results with:",
+            "url": "https://www.congress.gov/nomination/116th-congress/2252"
+          },
+          {
+            "title": "Amy Coney Barrett confirmation hearings and votes - Ballotpedia",
+            "snippet": "The Senate voted 52-48 to confirm Barrett to the Supreme Court on October 26, 2020. Expand the table below to view the Senate roll call vote. [show]Senate vote ... Missing:  record  tally",
+            "url": "https://ballotpedia.org/Amy_Coney_Barrett_confirmation_hearings_and_votes"
+          },
+          {
+            "title": "Roll Call Votes 116th Congress - 2nd Session (2020)",
+            "snippet": "Confirmation: Amy Coney Barrett, of Indiana, to be an Associate Justice of the Supreme Court of the United States PN2252 Oct 26 (00223) 223 (53-46)",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_116_2.htm"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-031-deepseek-candidate",
+  "timestamp": "2026-11-06T07:13:31.051657+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16400.359
+}

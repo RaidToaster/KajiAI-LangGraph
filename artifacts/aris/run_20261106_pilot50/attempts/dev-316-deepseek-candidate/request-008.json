@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Canada would like to reopen the border with the U.S",
+        "query": "What was the exact wording and date of any statement by Canadian officials about reopening the U.S.-Canada border?",
+        "candidates": [
+          {
+            "title": "Burgum statement on Biden administration delaying U.S. ...",
+            "snippet": "Canada reopened its border to vaccinated U.S. citizens for nonessential travel on Aug. 9.",
+            "url": "https://www.governor.nd.gov/news/burgum-statement-biden-administration-delaying-us-canada-border-reopening-another-month"
+          },
+          {
+            "title": "Government of Canada announces easing of border measures ...",
+            "snippet": "starting August 9, 2021, Canada plans to begin allowing entry to American citizens and permanent residents, ahead of September 7, 2021,",
+            "url": "https://www.canada.ca/en/public-health/news/2021/07/government-of-canada-announces-easing-of-border-measures-for-fully-vaccinated-travellers.html"
+          },
+          {
+            "title": "Border reminder checklist",
+            "snippet": "A checklist for residents returning to Canada to make border crossing easier.",
+            "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/checklist-aidememoire-eng.html"
+          },
+          {
+            "title": "United States travel advice",
+            "snippet": "Canadian visitors can usually stay in the United States for 6 months without a visa. You must declare your intended duration of stay upon entry ...",
+            "url": "https://travel.gc.ca/destinations/united-states"
+          },
+          {
+            "title": "US-Canada Border Crossing Guidelines for Train Travelers",
+            "snippet": "Amtrak services that cross the US-Canadian border are subject to inspection by Canadian and American law enforcement officials. country of citizenship,",
+            "url": "https://www.amtrak.com/crossing-the-us-canadian-border"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-316-deepseek-candidate",
+  "timestamp": "2026-11-05T23:44:52.512454+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1757.812
+}

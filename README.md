@@ -1,8 +1,8 @@
 # KajiAI-LangGraph
 
-Current continuation: [runtime implementation and a bounded live pilot](CONTINUATION.md). The previous offline review is complete; the broader research is unfinished. [Ready-to-paste prompt](CONTINUE_RESEARCH_PROMPT.md).
+The frozen DeepSeek comparison resumed from the 80-cell checkpoint. The interim artifacts cover 47 reused and 33 fresh cells. See the [current handoff](CONTINUATION.md). [Interim PDF](evaluation/paper.pdf), [editable manuscript](evaluation/paper.tex), [source archive](evaluation/paper-source.zip), [evaluation report](artifacts/aris/run_20261106_deepseek500/REPORT.md), [verification](artifacts/aris/run_20261106_deepseek500/VERIFICATION.md), and [reproducibility archive](artifacts/aris/run_20261106_deepseek500/deepseek500-reproducibility.zip).
 
-Completed research: [500-by-two paired study](evaluation/results/study-20261009-v3/RESULTS.md), [working manuscript](evaluation/paper.tex), and [November 2 offline audit](evaluation/aris/20261102_120247/RESEARCH_AUDIT.md). The authoritative frozen runtime and dataset remain archived with that study. Current scores measure development-set label agreement; independent citation annotation remains unfinished.
+Historical research: [completed 500-by-two Gemma study](evaluation/results/study-20261009-v3/RESULTS.md), [working manuscript](evaluation/paper.tex), and [November 2 offline audit](evaluation/aris/20261102_120247/RESEARCH_AUDIT.md). The authoritative frozen runtime and dataset remain archived with that study. Current scores measure development-set label agreement; independent citation annotation remains unfinished.
 
 Standalone Python/LangGraph implementation of KajiAI's evidence-driven
 claim-analysis workflow. It does not import from or execute the CrewAI reference
@@ -41,6 +41,43 @@ stop reason, verdict, and final report. Each retrieved record retains its URL,
 snippet/full-page text, UTC timestamp, SHA-256 content hash, originating query,
 provider, and lineage identifier. Similar text across hosts is flagged as
 possible copied lineage and cannot satisfy the acceptance gate.
+
+### Decomposition into statements and questions
+
+The default `statements` method keeps deterministic statement splitting. The
+optional `statements_and_questions` method asks the configured Ollama model for
+1-6 self-contained statements and 1-8 neutral verification questions. It preserves
+dates, quantities, attribution and causal scope, and asks questions that can find
+both supporting evidence and counterevidence. These are research leads; their
+contents are not established facts.
+
+```bash
+uv run --env-file .env kaji-langgraph "Claim to investigate" \
+  --decomposition-method statements_and_questions --format json
+```
+
+For an offline wiring check, use `--mock` with the same option. The mock backend
+uses deterministic question templates rather than a cloud model.
+
+For Python callers, set
+`config["model"]["decomposition_method"] = "statements_and_questions"` before
+calling `run_claim`. JSON output retains `assertions`, `verification_questions`
+and `decomposition_method`; the report also lists generated questions. Actual
+queries remain separately recorded in `search_queries` and each research round.
+
+Unused verification questions are searched before generic claim queries;
+targeted follow-ups from an evidence assessment take priority. Existing search,
+round, time and token budgets still apply. Questions do not become additional
+acceptance requirements or count as evidence. The original claim and all generated
+statements still require resolution through the unchanged gate. The optional
+method uses a structured model request and may use the adapter's existing single
+schema-repair request. Failed or malformed plans fall back to statement splitting,
+record an error and mark token accounting incomplete; output then reports
+`decomposition_method: statements_fallback`.
+
+This mode is an engineering addition, not a validated study improvement. Historical
+study manifests and source archives remain frozen; any live comparison using this
+mode needs a new source/settings freeze and its own development diagnostic.
 
 Retrieval failures use policy-controlled bounded retries with linear backoff;
 the deadline is checked before every attempt and before sleeping. Retries do

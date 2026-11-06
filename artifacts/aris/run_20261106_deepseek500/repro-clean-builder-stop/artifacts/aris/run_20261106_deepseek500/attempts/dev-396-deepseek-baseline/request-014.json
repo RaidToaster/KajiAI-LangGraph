@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Photo of three officers at the Indian Police Service who belong to the same family.",
+        "query": "Indian Police Service 2017 batch allocation list Tushar Gupta Pooja Vashisth Shrut Kirti Somavanshi home states",
+        "candidates": [
+          {
+            "title": "Notification for allocation of Cadre (IPS)",
+            "snippet": "... Services Examination, 2017. SI. CADRE. RANK NAME. CATEGORY ... POOJA VASHISTH. GENERAL. HARYANA. 6. 112. MR. PALASH BANSAL. 7. 113. MR. TUSHAR ...",
+            "url": "https://ips.gov.in/Empanelment/Cadreallocationcivil_201719122018.pdf"
+          },
+          {
+            "title": "civil services examination 2017 – service allocation list",
+            "snippet": "POOJA VASHISTH. General. IPS. 111. 112. 118395 MR. PALASH BANSAL. General. IPS. 112. 113. 261236 MR. TUSHAR GUPTA. General. IPS. 113. 114. 27484 ...",
+            "url": "https://documents.doptcirculars.nic.in/D2/D02ser/CSE-2017%20SA%20web%20copyOpwi1.pdf"
+          },
+          {
+            "title": "SERVICE ALLOCATION LIST",
+            "snippet": "CIVIL SERVICES EXAMINATION 2017 – SERVICE ALLOCATION LIST ... POOJA VASHISTH. General. IPS. 118395 MR. PALASH BANSAL. General. IPS. 113 113. 261236. MR. TUSHAR ...",
+            "url": "https://dtf.in/download/12225/"
+          },
+          {
+            "title": "Pic Shows Three IPS Officers From Same Family ...",
+            "snippet": "Fact Check of IPS Officers From One Family: One of the police officers seen in the viral image, Shrut Kirti Somavanshi, called out the claim ...",
+            "url": "https://www.thequint.com/news/webqoof/image-shows-three-ips-officers-belonging-to-same-family-no-false-claim"
+          },
+          {
+            "title": "UPSC 2017 Service Allocation List | PDF",
+            "snippet": "The document is a service allocation list that ranks 111 candidates based on their performance in the 2017 Civil Services Examination in ...",
+            "url": "https://www.scribd.com/document/385349601/CSE-2017-SA-Web-CopyOpwi1"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-396-deepseek-baseline",
+  "timestamp": "2026-11-06T04:13:57.095404+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5626.406
+}

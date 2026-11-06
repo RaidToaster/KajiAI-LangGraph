@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages. counterevidence",
+        "candidates": [
+          {
+            "title": "Benefits and financial support if you're temporarily unable to work",
+            "snippet": "Help if you're unable to work because you're ill or self-isolating. Includes Universal Credit and Employment and Support Allowance (ESA).",
+            "url": "https://www.gov.uk/browse/benefits/unable-to-work"
+          },
+          {
+            "title": "Check you're in the right Universal Credit work-related activity group",
+            "snippet": "There are 4 work-related activity groups for Universal Credit. Check you're in the right group, and what to do if you think you're in the ...",
+            "url": "https://www.citizensadvice.org.uk/benefits/universal-credit/what-youll-need-to-do-on-universal-credit/universal-credit-work-related-activity-group/"
+          },
+          {
+            "title": "Universal Credit: what you could get if you have a health condition or ...",
+            "snippet": "You may get more money on top of your standard allowance if you cannot work because of a health condition or disability.",
+            "url": "https://www.gov.uk/guidance/universal-credit-what-you-could-get-if-you-have-a-health-condition-or-disability"
+          },
+          {
+            "title": "Work Capability Assessment",
+            "snippet": "You will need to contact the Department for Work and Pensions (DWP), explain that your condition has recently got worse and tell them which of ...",
+            "url": "https://www.disabilityrightsuk.org/resources/work-capability-assessment?srsltid=AYCX9vJB80FYULY5gsDFIHzsOd4WJ-FZqQLyB0s0TPUhwszfp_og2qDD"
+          },
+          {
+            "title": "Universal Credit Limited Capability for Work - Entitledto",
+            "snippet": "In most cases you will be asked to attend a Work Capability Assessment to determine whether your health condition or disability affects your ability to work and ...",
+            "url": "https://www.entitledto.co.uk/help/universal_credit_work_capability_assessment"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-baseline",
+  "timestamp": "2026-11-06T08:31:15.794183+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21065.093
+}

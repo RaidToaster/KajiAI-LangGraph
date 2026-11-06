@@ -1,0 +1,79 @@
+{
+  "closed": true,
+  "passed": false,
+  "reason": "GLM QL fails predeclared ledger contract and its raw anchor independently retains Medium confidence, explicit gaps, and sources_independent=false. Required both-model QL gain cannot be met. Do not dispatch remaining DeepSeek cells.",
+  "binding_criteria": [
+    "all_six_parsed",
+    "QL_anchor_frozen_gate_eligible_both_models",
+    "substantive_gain_over_S_and_Q_both_models"
+  ],
+  "cells": [
+    {
+      "id": "glm-statements",
+      "started": true,
+      "parsed": true,
+      "anchor_gate_eligible": false,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 18.295999999998457,
+        "hard_stop": false,
+        "accounting_problem": false
+      },
+      "result_sha256": "e399366ab3a4aa44aa57004bfa6d1fa6f698ebdee57a0851cdf18513a80049b8"
+    },
+    {
+      "id": "glm-questions",
+      "started": true,
+      "parsed": true,
+      "anchor_gate_eligible": false,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 16.7970000000023,
+        "hard_stop": false,
+        "accounting_problem": false
+      },
+      "result_sha256": "1f0045a25ee72d267f8e8042777e9c3da08fb7e5e8a5f62ffb1910ab195e91c8"
+    },
+    {
+      "id": "glm-questions_ledger",
+      "started": true,
+      "parsed": false,
+      "anchor_gate_eligible": false,
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 40.96900000000096,
+        "hard_stop": false,
+        "accounting_problem": false
+      },
+      "result_sha256": "15f6020e770e5228e2330809b881d1ce068a6bf5c587a23d79d04220ce21791b"
+    },
+    {
+      "id": "deepseek-statements",
+      "started": false
+    },
+    {
+      "id": "deepseek-questions",
+      "started": false
+    },
+    {
+      "id": "deepseek-questions_ledger",
+      "started": false
+    }
+  ],
+  "actual_sends": {
+    "ollama": 3,
+    "ollama_input_tokens": 11171,
+    "ollama_output_tokens": 7725,
+    "jev": 2,
+    "jev_input_tokens": 7247,
+    "jev_output_tokens": 334
+  },
+  "planned_cells": 6,
+  "started_cells": 3,
+  "untouched_cells": 3,
+  "QL_jev_reviewed": false,
+  "QL_gate_measured": false,
+  "frozen_protocol_sha256": "b4e89ec71061241d8dfef2a456e06c29dba2a4f5b7b95457f085f8545c720c0d",
+  "no_study_wide_futility_claim": true,
+  "conditional_68_attempts_released": false
+}

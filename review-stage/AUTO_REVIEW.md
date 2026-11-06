@@ -1,302 +1,80 @@
-# Autonomous research review
+# Runtime continuation review
 
-> Current continuation: read [CONTINUATION.md](../CONTINUATION.md). The prior review is completed; runtime implementation and an approved live pilot remain unfinished. Human annotation is parallel and does not block engineering.
+Run run_20261102_222304_bdd31bb4; historical audit not repeated.
 
-Run: run_20261102_f991201b. Started 2026-11-02 (Asia/Jakarta). Two research rounds maximum. Same-family Codex review is provisional.
+# Runtime continuation review — round 1
 
-Working history: evaluation/aris/20261102_120247. Baseline preserved before editing; no live inference authorized.
+Score: **8/10 for bounded-pilot engineering readiness**. Verdict: **ready** for the explicitly approved frozen smoke/pilot after the fixes inspected below. Full-study readiness remains **NO GO**; no empirical quality gain is established.
 
-## Round 1 (2026-11-02)
+Review independence: **same-family**; acceptance status: **provisional**. Requested reviewer: GPT-6-Astra, xhigh. Actual model/effort are not independently exposed to this reviewer and are recorded as **unknown**, rather than inferred from the request.
 
-### Assessment (Summary)
-- Score: 5/10
-- Verdict: not ready
-- Key criticisms: independent citation validation and controlled mechanism evidence missing; empty-query reassessment cost; unsafe manuscript regeneration; stale diagnostics and temp-path setup.
+## Scope coverage
 
-### Reviewer Raw Response
+Inspected AGENTS.md, CONTINUATION.md, local ARIS desktop guidance, graph/state/default configuration, both targeted test files, pilot executor, frozen Markdown/JSON protocol, supplied test logs, authenticated Ollama metadata, and installed LangChain Ollama, HTTPX/HTTPX2 and TypeSafe client/retry/transport sources. Historical study audit was not repeated. The parent reported explicit approval during review; this reviewer did not launch inference, tests, experiments, or client processes.
 
-<details>
-<summary>Full reviewer response</summary>
+The documented project-venv command is plausible by inspection: `.venv/pyvenv.cfg` identifies Python 3.12.4; its editable `.pth` points to this repository's `src`; required installed client sources are present. The child command reuses `sys.executable` and inherits the project working directory. This is an invocation inspection, **not an independently executed fresh-environment check**.
 
-**Score: 5/10 for top-venue scientific readiness. Verdict: not ready.**
+The opt-in stop shares retrieval's unused-query inventory, preserves prior assessment/prediction, records `query_exhausted` on the last actual round, and retains baseline behavior when disabled. Acceptance, fatal-error, stagnation and budget precedence remain intact. Pending source reviews and citation semantic gaps prevent the new stop. Fixtures count adapter invoke boundaries, including repair calls, check trace serialization, and explicitly demonstrate that skipped reassessment can lose acceptance. These are fixture results, not remote provider measurements.
 
-This is a credible, carefully bounded development-study audit. The central results reproduce, and the manuscript avoids many common overclaims. Top-venue readiness is limited principally by the missing independent evidence validation and lack of an experiment identifying a scientific contribution beyond the combined workflow. These gaps cannot be resolved by polishing or offline calculations alone.
+The frozen two-claim protocol holds model, prompts and thresholds fixed across conditions and discloses shared limits differing from historical execution. It separates development findings from confirmatory claims. Request reservations precede sends; failed attempts and repairs consume the shared caps. Inspected SDK retry settings disable retries; redirects are disabled. The parent enforces 300-second children within the 900-second scheduling deadline. Remote cancellation and server enforcement of requested output tokens are correctly treated as unknown until observed. Durable request records preserve unknown outcomes and prevent automatic restart.
 
-Review metadata: native Codex; `review_independence: same-family`; `acceptance_status: provisional`. Actual model identity and reasoning effort were not independently observable to this reviewer.
+## Findings and minimum fixes
 
-### Authoritative evidence and verified findings
+Two concrete defects were reported to the parent before launch:
 
-The authoritative completed study is `evaluation/results/study-20261009-v3`, established from its records rather than its name:
+1. TinyFish delegated to unbounded `json.load(response)`, bypassing the promised 2 MB capture bound and losing original HTTP failure bodies/status. The inspected fix now reads at most 2,000,001 bytes, retains bounded raw bytes and actual status, stops on overflow/failure, and preserves the existing no-redirect/no-retry policy.
+2. Stream failure metadata was overwritten by the subsequent partial-response record. The inspected fix merges metadata, retaining both the error and partial-body/status evidence.
 
-- Its source archive reproduces manifest source digest `624a8d2fa125…`; the archived dataset reproduces `499793726b4a…`.
-- Both raw JSONL files contain exactly 500 unique selected IDs, with matching dataset claims and labels.
-- `status.json` records completion at `2026-10-10T06:31:25.613125+00:00`.
-- Comparing every archived file with the working tree found only the documented `study_analysis.py` hostname-audit correction. The inspected inference files are byte-identical.
-- The correction, original metrics, raw records, incident record and final postprocessing distinguish the original run from later analysis.
-- The October 21 gate/loop analysis is explicitly post hoc analysis of those saved trajectories, not another executed condition.
+No remaining must-fix defect was confirmed for this narrowly bounded pilot. Logs report 73 regression passes, 10 stopping-fixture passes, five transport/guard passes, and 16 focused passes after fixes. I inspected these records; I did not rerun them. The transport mocks exercise already-consumed responses; the actual streaming and TinyFish branches were inspected, not independently executed. Live output-cap support, integration validity and trace completeness remain smoke/pilot acceptance gates.
 
-Independent offline checks reproduced:
+## Memory update
 
-| Quantity | Verified result |
-|---|---:|
-| Full-workflow prediction correctness | 337/500 |
-| Model-only prediction correctness | 269/500 |
-| Workflow-only / control-only correct pairs | 117 / 49 |
-| Both correct / both wrong | 220 / 114 |
-| Full-gate acceptance | 44/500 |
-| Accepted label agreement | 42/44 |
-| First-round prediction correctness | 344/500 |
-| Fatal attempts | Full 8; control 5 |
-| Structural-only outputs withheld by semantic gate | 6: three correct, three wrong |
+This is the first new-run review; historical 5/10 is not superseded as a study-quality judgment. Two pilot transport defects were found and fixed during this round. Engineering is ready for the approved small pilot; larger inference remains unauthorized by this review. Retain every failure/incomplete pair. No triggering exhaustion pair means inconclusive. Human annotation stays parallel, and automated judgments remain explicitly nonhuman.
 
-Every saved replay metric matched recomputation. The seeded full-minus-control bootstrap matched the saved result. The per-claim CSV agreed with raw predictions and accepted labels.
 
-The manuscript correctly distinguishes four-class prediction from decisive-label acceptance, operational abstention from factual NEI, label agreement from citation validation, trajectory truncation from executed one-round experiments, and host matching from demonstrated contamination. Retaining all failed attempts is correct. The nonfatal sensitivity comparison is appropriately secondary.
+Live run subsequently exposed UTF-8 logging defect; failed attempt preserved, defect fixed and only unstarted conditions continued after all transmitted responses were verified. Original budget/deadline unchanged. Round 1 predates that live observation.
 
-### Prioritized weaknesses and minimum fixes
 
-**R1 — Independent citation correctness remains unmeasured. High scientific importance; requires human work.**
+# Final boundary: actual results and claims
 
-The paper’s distinctive evidence-gate component is evaluated using dataset labels and Jev’s own judgments, not independent citation-support annotations. The 95.5% accepted-label agreement therefore does not establish that accepted evidence supports the verdict. This is acknowledged at [paper.tex:197](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/paper.tex:197) and [paper.tex:309](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/paper.tex:309), but it remains a substantial missing outcome.
+Score: **4/10 for scientific readiness of the query-exhaustion benefit claim. Verdict: not ready. Full study: NO GO.** This is a scientific evidence judgment, distinct from round 1's 8/10 bounded-pilot engineering judgment; it does not replace the historical study review.
 
-Both accepted errors, claim IDs **353 and 404**, have gold conflicting-evidence labels and accepted Refuted predictions. Their saved findings and quotes illustrate the gap between support for individual findings and adjudication of the whole claim, including qualifications and temporal scope. I am not treating my reading as replacement human annotation.
+Requested reviewer: GPT-6-Astra, ultra. Actual model/effort: unknown, not independently exposed. Review independence: same-family. Acceptance status: provisional. Integrity status: unavailable as a separate formal experiment-integrity audit; the checks below are a limited primary-record reconciliation.
 
-Minimum supported action now: retain the limitation prominently and add a compact, clearly illustrative discussion of these two failures. The existing blinded worksheet and annotation instructions are a suitable starting point; do not fill them with model judgments. For a stronger scientific claim, obtain independent annotations, preferably two annotators with retained judgments and adjudication, reported separately by accepted/rejected strata. No additional historical inference is required.
+**claim_supported: no.** The intended claim combines resource reduction with acceptable retained quality. No live execution reached the candidate stopping branch, so this pilot did not test that tradeoff.
 
-**R2 — The study establishes a combined-workflow difference, not a distinctive mechanism’s benefit or generalization. High scientific importance.**
+**what_results_support:** The opt-in implementation shares retrieval's query inventory, preserves the preceding assessment, records the actual last-round decision, and retains pending-source/semantic-review safeguards. Inspected fixtures demonstrate three versus two adapter invocations, or six versus four with repairs, and explicitly demonstrate possible acceptance loss. The supplied final log reports 79 passing tests; I did not execute tests or inference.
 
-The same-model control changes prompting, evidence access, domain routing, review and call count together. The paper already admits this at [paper.tex:149](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/paper.tex:149) and [paper.tex:302](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/paper.tex:302). The reused development split and contemporary retrieval further constrain external validity.
+I independently counted 75 request/response pairs: 11 Ollama, 31 Jev, 11 searches and 22 fetches. NDJSON terminal metadata and decompressed Jev bodies reproduce 190,142 and 79,658 observed tokens, respectively, including failed-attempt usage and the Ollama smoke. All response records have HTTP 200, matching saved lengths and no transport-error metadata; application-level page failures remain in the results. Every Ollama stream terminates, all requests specify gemma4:31b-cloud, and generated counts range from 45 to 1,392, below the requested 4,096 ceiling. This observation does not prove future server-side cap enforcement.
 
-FIRE already integrates iterative retrieval and verification, while EMULATE uses agent roles for ranking and webpage evaluation; the manuscript’s related-work descriptions are supported by their primary sources. [FIRE](https://aclanthology.org/2025.findings-naacl.158.pdf), [EMULATE](https://aclanthology.org/2025.fever-1.13/).
+Four planned workflow records remain: three nonfatal completions and the UTF-8 harness failure in baseline claim 17. The three completed predictions match Refuted gold labels: 3/3 among completed workflows, or 3/4 counting the failure as incorrect; gate coverage is 0/4. Only claim 246 forms a complete pair, with three model assessments in each arm and no accepted verdict in either. Both candidate histories exhaust queries after round two, but recorded uncertain/contradicting citation judgments keep reassessment active. Neither has stop_reason=query_exhausted.
 
-Minimum action now: sharpen the contribution around **auditing selection and trajectories in a preserved workflow**, and phrase RQ2/RQ3 as observed policy-selection and saved-trajectory questions. Avoid implying that additional retrieval itself caused the reported changes.
+The approval receipt exactly matches the frozen JSON protocol. The first 12 requests belong only to smoke and failed baseline 17; the remaining 63 belong only to previously untouched conditions. Recovery preserves the failed workflow, cumulative counters and original deadline. All sends precede that deadline and remain within service caps. I found no confirmed numerical or authorization must-fix for the completed scope. Unused headroom does not authorize added tasks or reruns.
 
-A useful additional descriptive comparison is already computable: on the **same 44 gate-selected IDs**, the control is correct **30/44**, versus **42/44** for the full workflow. The selected gold composition is **33 Refuted, 9 Supported and 2 Conflicting**, rather than the accepted prediction composition of 35 Refuted and 9 Supported. These figures clarify selection but are not a randomized or unbiased generalization estimate.
+**what_results_dont_support:** Live stopping savings, quality noninferiority, acceptance preservation, generalization, model superiority, monetary savings, or human-validated citation correctness. The baseline failure cannot be repaired analytically by substituting its raw model response for the failed workflow outcome. The revised manuscript correctly separates fixture behavior from this inconclusive live pilot and makes no efficacy or human-annotation claim. Compilation success establishes artifact buildability only.
 
-Do not launch another full study merely to fill a checklist. A later bounded pilot should test one declared mechanism against a matched baseline, followed by held-out evaluation only if operational and scientific readiness are established.
+**missing_evidence:** Completed matched cases where the stop actually triggers; prespecified quality-loss and resource-benefit margins; sufficient independent validation cases and uncertainty estimates; independent citation-support annotations. The current zero-acceptance sample cannot establish retained useful coverage.
 
-**R3 — Many “additional research” rounds perform no retrieval. Confirmed operational issue with a measurable tradeoff.**
+**suggested_claim_revision:** “A conservative opt-in stopping implementation reduces calls in controlled fixtures. A two-claim live development pilot preserved semantic reassessment and triggered no early stops; its efficiency/quality effect remains unestablished.”
 
-At [graph.py:282](D:/Projects/!skripsi/KajiAI-LangGraph/src/kaji_langgraph/graph.py:282), exhausted candidate queries can leave `queries=[]`. Retrieval still increments the research round at line 433, followed by analysis and citation checks.
+**next_experiments_needed:** Protocol only: freeze a targeted eligibility challenge separating exhausted states with completed review from exhausted states requiring reassessment. Use controlled evidence to isolate stopping, retain all failures, measure actual sends/tokens plus label and acceptance changes, and declare tolerable losses before observing validation outcomes. Keep reused examples developmental and human annotation parallel. Any further inference requires a new concrete approval; do not launch the full study.
 
-The saved trajectories contain **252 third rounds** with:
+**confidence: high** that the intended benefit is unsupported; confidence in its true effect remains low.
 
-- No new search calls.
-- Empty prior `next_queries`.
-- No new ledger records.
-- **4,154,865 observed tokens** and **1,984.146 summed task-seconds** consumed after the preceding round.
+**Memory update:** Round 2 of 2 is complete. Accounting reconciles, recovery retained the failure, and neither candidate triggered. Preserve the baseline default, the NO GO decision and all raw records. Engineering progress and a compiled paper do not establish scientific readiness. No further review round or live execution is authorized by this verdict.
 
-Those rounds changed only three labels: ID 49 became wrong; IDs 55 and 389 became correct. Thus stopping them cannot be described as preserving historical accuracy: simple saved-trajectory truncation would lose one net correct prediction.
 
-Minimum action now: add this diagnosis to the results/discussion, distinguishing retrieval from repeated assessment. A focused future runtime change can stop before model calls when no query remains and preserve the previous assessment with an explicit reason. Test call counts, preserved output and trace behavior offline. Treat the changed stopping rule as a new condition; retain the historical runtime and results. Its quality/resource tradeoff requires a bounded authorized pilot before claiming improvement.
-
-No broad “novelty detector,” threshold tuning or routing framework is justified.
-
-**R4 — Regeneration can silently destroy revised manuscript prose. Confirmed maintenance defect; cheap offline fix.**
-
-[evaluation/update_paper_results.py:10](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/update_paper_results.py:10) reads the partial manuscript template, and line 204 unconditionally writes `paper.tex`; module import also executes this work. This conflicts directly with the requested preservation of later revisions.
-
-Minimum fix: place execution behind an import-safe entry point and generate to a separate default output, such as `paper-regenerated.tex`, with an explicit output argument. Preserve the original generator in the baseline archive. Verify that importing or running the default command leaves the working manuscript unchanged. This needs no live calls and does not alter historical results.
-
-**R5 — Historical documentation is presented without a sufficiently clear date/status boundary. Confirmed documentation mismatch; cheap fix.**
-
-The final paragraph of [DIAGNOSTIC_FINDINGS.md](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/DIAGNOSTIC_FINDINGS.md) still says the full 500-claim model evaluation has not run and cites 50 tests. That conflicts with the completed artifacts and current tests.
-
-Minimum fix: preserve the diagnostic document as historical, add its dated scope and a prominent link to the completed study/current audit, and distinguish historical test counts from current validation. Do not rewrite its earlier observations as though they were collected after the completed run.
-
-**R6 — The documented environment invocation fails in the present sandbox. Verified environment problem, not a scientific-result failure.**
-
-I ran the documented command verbatim after reading both environment documents:
-
-```text
-.venv/Scripts/python.exe evaluation/aris/20261102_120247/run_job.py baseline-tests .venv/Scripts/python.exe -m pytest
-```
-
-Outcome: **exit 1, 58 passed, 5 setup errors**, no timeout. All five errors arise while creating pytest temporary directories under sandbox `AC/Temp`; there were no failed assertions. The launcher recorded **4.828 seconds**. I did not modify or rerun this invocation.
-
-Minimum fix: document a workspace-owned pytest base directory and verify that invocation. The executor has reported such a successful rerun; that report should be retained as a separate run rather than replacing the failed baseline record.
-
-### Other checks and boundaries
-
-The 11 bibliography entries and their attached broad claims checked out against primary ACL, arXiv, ICLR, NeurIPS and LangChain records. In particular, the manuscript correctly describes the 2025 shared task’s different model, hardware, evidence-store and timing constraints. [2025 shared-task paper](https://aclanthology.org/2025.fever-1.15/). Its distinction between citation quality and answer correctness is supported by ALCE. [ALCE](https://aclanthology.org/2023.emnlp-main.398/). This was a citation check, not an exhaustive novelty search.
-
-Uncertainty reporting is generally sound for its stated scope: Wilson intervals, paired claim-level bootstrap, small accepted denominator and failure-inclusive reporting are explicit. The six semantic-gate removals are too few to establish a broad reliability advantage; the manuscript should retain their three-correct/three-wrong breakdown rather than emphasizing only the higher conditional percentage.
-
-The network-dependent runtime has no inspected path executing model-generated shell commands. TinyFish retrieval and the optional direct-fetch fallback were inspected. Prompt-injection scores and model-reported independence remain probabilistic, as the manuscript already states; no observed frozen-run evidence justifies claiming an injection defense or adding a broad security subsystem.
-
-Historical hosted model revisions, provider-specific usage and complete response metadata are unavailable. These cannot be reconstructed honestly. Future authorized pilots should record available endpoint/model response metadata and preserve failures; no existing result should acquire invented provenance.
-
-### Evidence coverage
-
-Directly inspected:
-
-- All six requested primary documents, including extracted text from the six-page PDF.
-- `study.py`, `study_analysis.py`, `evaluation.py`, `graph.py`, `gate.py`, `llm.py`, `config.py`, `models.py`, `jev.py`, and relevant retrieval implementation.
-- Study/evaluation, graph, gate, Jev, model-error, source-version, structured-output and verification-regression tests.
-- Manifest, status, correction record, runtime incidents, archived source, archived dataset, raw full/control records, metrics, final analysis script and per-claim CSV.
-- October 21 analysis script and saved output.
-- Environment specification, compute instructions and documented launcher.
-- Primary publication sources for all manuscript references.
-
-PDF text was inspected; visual layout verification remains with the executor. I made no research-artifact or implementation edits and made no live model calls. The requested baseline test invocation created its ordinary logs.
-
-Reviewer offline subprocess runtime: **9.072 seconds total**: archive/raw checks 0.524; baseline tests 4.828; PDF extraction 0.827; replay/matched-subset checks 2.893. Checks used two numerical threads and 300-second subprocess timeouts. Exact model-review tokens/cost are unknown.
-
-### Memory update
-
-Round 1 findings to carry forward:
-
-- **Verified, not suspect:** authoritative completed 500-by-two study; archived runtime provenance; central counts; replay metrics; paired bootstrap; failure denominators; CSV agreement; broad citation validity.
-- **Open scientific limitations:** independent citation validation, held-out generalization, and identification of a distinctive mechanism. Offline fixes cannot resolve these.
-- **Confirmed fixable defects:** manuscript regeneration overwrites revised prose; stale diagnostic status; documented pytest temporary-directory failure.
-- **Confirmed research opportunity:** 252 empty-query third rounds consume substantial resources. Preserve the observed two gains/one loss; do not claim a cost-only improvement.
-- **Next review:** inspect actual diffs and new output artifacts, verify preservation and regression checks, and ensure any stopping change is described as unevaluated future runtime behavior rather than a revision to historical scores.
-- **Readiness remains:** `not ready`, same-family/provisional.
-
-</details>
-
-### Actions Taken
-Baseline and historical outputs preserved; verified 21 metric sets and paired inference; fixed separate/import-safe manuscript generation with regression; documented workspace temp fix. Offline stopping replay confirms mixed outcomes. Additional scoped manuscript/documentation revisions are pending round 2.
-
-### Results
-63 tests pass under workspace temp; central study numbers reproduced; no new live inference.
-
-### Status
-Continuing to round 2 after offline revisions. No positive receipt: score 5 and not ready.
-
-## Round 2 (2026-11-02)
-
-### Assessment (Summary)
-- Score:5/10
-- Verdict:not ready
-- Offline interpretation/preservation fixes verified; independent citation validation and controlled/held-out evidence remain open.
-
-### Reviewer Raw Response
-
-<details>
-<summary>Full reviewer response</summary>
-
-**Score: 5/10 for top-venue scientific readiness. Verdict: not ready.**
-
-The offline revision materially improves the audit, interpretation and manuscript-preservation workflow. The score remains unchanged because independent citation validation, a controlled mechanism comparison and held-out evidence remain missing.
-
-This is the final research review, round **2/2**. Review independence is **same-family** and acceptance status is **provisional**. Actual model identity and reasoning effort were not independently observable.
-
-### Findings addressed
-
-**R1 — Citation validation: appropriately bounded, still scientifically unresolved.**  
-The manuscript now discusses accepted errors 353 and 404 as illustrative saved records, explicitly distinguishing those inspections from human annotation. The human-validation limitation remains prominent. This addresses the requested clarification; it does not supply the missing independent evidence.
-
-**R2 — Contribution and causal interpretation: substantially improved.**  
-The revised RQs and contribution at [paper.tex:49](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/paper.tex:49) now describe an empirical audit of policy selection and saved trajectories.
-
-The new comparison correctly reports **42/44** workflow versus **30/44** control matches on the same workflow-selected IDs. It distinguishes selected gold composition from prediction composition and labels the comparison descriptive. The **326/429** High-confidence result is also presented as a differently selected cohort, without calibration or causal claims.
-
-The analysis script selects claims from workflow acceptance and matches control predictions by claim ID. Its outputs agree with the independent counts established in round 1. No repeated raw-data recomputation was needed.
-
-**R3 — Query-exhaustion behavior: investigated without an unsupported runtime change.**  
-The stopping replay identifies **252** third rounds, **4,154,865 observed tokens**, two wrong-to-correct changes, one correct-to-wrong change and two new acceptances. The script verifies empty prior follow-up queries and unchanged usable-source keys.
-
-The manuscript explicitly states that truncating those saved rounds loses one net correct prediction and two acceptances. It makes no claim of cost-free quality preservation or an executed stopping ablation. Retaining the historical runtime while documenting a candidate prospective comparison is justified.
-
-**R4 — Generator overwrites: resolved by a focused implementation change.**  
-Both manuscript and notes generators now:
-
-- Execute through guarded entry points.
-- Accept explicit output destinations.
-- Default to separate regenerated files.
-- Preserve authored working files during import and generation.
-
-I inspected the implementations, regression script, success log and job record. The regression checks compare generated historical content with preserved baseline bytes and verify that authored files remain unchanged. The successful combined check exited zero in **0.125 seconds**. Earlier failed whitespace comparisons remain in the ledger.
-
-**R5 — Historical status ambiguity: resolved.**  
-The README and evaluation documentation identify the authoritative completed study. The diagnostic document retains its historical contents behind an explicit date/status boundary. Documentation also warns that historical analysis commands overwrite reports and annotation worksheets.
-
-**R6 — Test-environment failure: corrected execution path documented.**  
-The workspace test record shows **63 passed**, exit zero, with an explicit workspace pytest base directory. The failed original invocation remains preserved separately.
-
-The revised documented invocation still has its requested fresh final-stage invocation check pending. That is a bounded handoff task, not evidence of a remaining code assertion failure.
-
-### Remaining Weaknesses
-
-1. **Independent evidence validity remains unmeasured.**  
-   Label agreement and Jev judgments do not establish citation support, source credibility or claim-level evidential sufficiency. The worksheet remains blank.
-
-2. **Scientific identification and generalization remain limited.**  
-   The combined workflow/control comparison does not isolate the gate, retrieval, stopping policy or framework. Development reuse and contemporary-web exposure remain material constraints. The new subset analyses are useful descriptions, not substitutes for controlled or held-out evaluation.
-
-3. **The final handoff records need closure.**  
-   At inspection, several persistent records still contained initial “planned” or “awaiting verification” wording. The executor subsequently reported updating `CLAIM_EVIDENCE.md`, `EXPERIMENT_TRACKER.md` and `RESOURCE_USAGE.md`; those post-inspection changes were not rechecked. `RESEARCH_STATE.md` and `TOOLING.md` are explicitly reserved for final handoff completion.
-
-4. **One manuscript heading remains stronger than its contents.**  
-   “Effect of Additional Research” at [paper.tex:261](D:/Projects/!skripsi/KajiAI-LangGraph/evaluation/paper.tex:261) would read more accurately as “Changes Across Saved Research Rounds.” The surrounding body already uses the appropriate interpretation.
-
-A small audit wording error—“Gold NEI is excluded … by design”—was identified during review. The gate excludes **NEI predictions**, not gold-NEI inputs. The executor reported correcting this after inspection.
-
-### Minimum Fixes
-
-- Complete the already planned handoff updates and modest heading correction; no new research round is necessary.
-- Complete final PDF visual inspection and the documented invocation check, retaining their actual outcomes.
-- Prioritize independent annotation of the existing accepted/rejected citation strata. Preserve original annotator decisions, disagreement and adjudication.
-- Keep **FULL_EXPERIMENT_READINESS.md: NO GO**. Its staged proposal correctly separates a possible integration smoke from a scientific pilot and a full experiment.
-- Do not implement or advertise a stopping-policy improvement from this replay alone. A future authorized pilot must measure both resource use and prediction/evidence outcomes.
-- Do not infer candidate-model compatibility from public model availability. The integration document correctly notes that endpoint acceptance remains unverified and that current Ollama documentation says cloud structured outputs are unsupported. [Ollama structured outputs](https://docs.ollama.com/capabilities/structured-outputs). Model-specific thinking controls also require endpoint discovery. [Ollama thinking documentation](https://docs.ollama.com/capabilities/thinking).
-
-No broader runtime refactor, new scoring machinery or additional model sweep is justified by this review.
-
-### Evidence coverage and limits
-
-I read the complete persistent reviewer memory, the saved changes diff, actual revised generators and manuscript, new analysis scripts and outputs, regression/test logs, decision and resource records, audit, readiness decision and model-integration report.
-
-The revised six-page PDF’s text contains the updated contribution, selected-cohort comparison, query-exhaustion tradeoff and provenance limitations. This confirms content inclusion; it does not certify visual layout. Unchanged bibliography claims retain the primary-source checks from round 1.
-
-No research artifacts were edited, no new experiments or inference were launched, and unchanged statistical recomputations were not repeated. PDF document parsing took **0.024 seconds**; review tokens and cost are unknown.
-
-### Memory update
-
-- **Resolved:** manuscript/notes generator overwrite behavior; historical diagnostic status ambiguity; practical pytest temporary-directory execution problem.
-- **Verified improvement:** descriptive RQs/contribution, matched selected-cohort comparison, selected gold/prediction distinction, illustrative accepted-error cases and honest stopping tradeoff.
-- **Preserved:** historical inference runtime, predictions, failures, source archive and central results. No measured stopping-policy or candidate-model improvement is claimed.
-- **Still open:** independent citation validation; controlled mechanism evidence; held-out generalization; hosted-model drift and incomplete historical usage metadata.
-- **Final handoff:** finish state/tooling records, final PDF checks and fresh documented invocation check. Executor-reported post-inspection documentation corrections should be recorded as such.
-- **Final research verdict:** **5/10, not ready**, same-family/provisional. The authorized two research rounds are complete; further inference requires a separately justified and authorized stage.
-
-</details>
-
-### Actions Taken
-Both generators protected and checked; analysis/claim/resource trackers updated. Heading and final presentation fixes assigned to bounded paper-polishing stage. Historical inference unchanged.
-
-### Results
-63 workspace tests pass; fresh invocation independently passes63. All21 saved metric sets and core paired statistics reproduce. No new live inference.
-
-### Status
-Stop:maximum2 research rounds, no qualifying positive assessment. No acquittal receipt.
+## Score scope comparison
+8/10 concerns readiness to run a bounded engineering pilot; 4/10 concerns scientific readiness of its benefit claim after actual results. The scopes differ; this is not evidence of a regressing implementation. Full raw-response diff saved with traces.
 
 ## Method Description
+The graph classifies/decomposes a claim, retrieves source versions, assesses them with the existing Ollama model, checks deterministic and Jev citation gates, then routes to further research or finalization. The opt-in candidate shares retrieval query construction and stops only when no unused query remains and no pending source or semantic review work requires reassessment. It retains the last assessment and explicit stop reason; baseline remains default.
 
-KajiAI classifies a claim into a domain, retains the original alongside deterministic assertion fragments, retrieves TinyFish search results and canonical page text, and uses an Ollama-hosted model for structured evidence assessments. TypeSafe/Jev supplies classification, search ranking, source judgments and citation-support review. Deterministic checks cover quotations, citations, assertion coverage, source-host diversity and domain requirements; model-based citation review follows. The graph records assessment/source versions, gaps and budgets, repeating retrieval or assessment within bounded scheduling limits. Prediction is retained separately from acceptance and execution status.
+The bounded sequential development pilot used the historical model/config with common client output/deadline/retry controls, counterbalanced condition order for two seeded claims, durable actual-send reservations, complete raw replies and preserved failures. No candidate stopped early because citation gaps preserved reassessment. The authorized scope is finished; full study NO GO, intended claim unsupported, human annotation pending in parallel.
+# 2026-11-03 controlled follow-up
 
-The preserved development study compares this combined workflow with a same-model control on500 paired claims, including all13 execution failures. Offline replay keeps evidence fixed, describes policy selection and saved trajectory changes, and cannot replace independently executed mechanism studies. No runtime policy or historical output was changed in this review.
+Run `run_20261103_exhaustion_9c7e12bf` reached a predeclared no-go after the complete first live batch. The 8/10 scripted and historical review and the 9/10 live review both assessed the scoped no-go. Both were native Sol/high, same-family and provisional. The first identified the need to reconcile durable raw requests and adjudicate semantic support separately from the scripted review. The second checked both lost Gemma acceptances and reconciled 15 actual sends and 42,447 tokens. See the new run's `review-round1.response.md`, `review-round2.response.md` and `LIVE_DECISION.md`.
 
-## Research termination
+## 2026-11-03 manuscript handoff
 
-Score progression:5→5, both not ready. Same-family/provisional; no submission readiness inferred. Missing independent human citation validity and controlled/held-out evidence require human work or separately authorized studies. For the narrow historical description, the final claim gate requests no new experiment.
-
-## Final writing and claim judgment
-
-Writing score7→9; final writing/layout ready for author review, same-family/provisional. The first writing call failed at usage limit; a user-authorized continuation completed it. The research score remains5→5, not ready. Fresh claim gate:yes for the bounded historical description, medium confidence; integrity_status unavailable because no standalone experiment-audit was run. Stronger evidence-quality, causal-component and generalization claims remain unsupported.
-
-Final IEEE PDF:6 pages, all pages visually inspected; no overfull boxes.63 tests pass, including a fresh documented invocation. Generator defaults/imports preserve revised prose;21 historical metric sets reproduce. No new live inference or historical rerun. Full experiment:NO GO.
-
-## Remaining blockers and next action
-
-1. Human evidence validation: two annotators and adjudication remain needed for stronger evidence claims. Arrange this in parallel with the engineering/live-pilot continuation; effort requires annotation-time measurement.
-2. Scientific mechanism/generalization:separately declared controlled and held-out study; cost/sample size unknown until a bounded pilot, if still scientifically warranted.
-3. Ollama integration:local endpoint refused discovery; candidate auth/schema/thinking behavior unverified. Optional proposed smoke is bounded in FULL_EXPERIMENT_READINESS.md but not authorized.
-4. Author/venue requirements:human author information, venue selection, policies and final submission approval remain open.
-
-Resume from root CONTINUATION.md and evaluation/aris/20261102_120247/RESUME.md. Do not repeat completed analysis or use an AI presentation verdict as submission approval.
-
-## User-directed continuation correction
-
-The prior review remains completed at its two-round limit. The broader runtime/live-experiment objective is unfinished. Current instructions are in root CONTINUATION.md: restore Ollama, reproduce and implement a focused runtime change, prepare a specific live smoke/pilot approval request and execute the approved budget. Human annotation is parallel. Earlier human-first/offline-stop sequencing is superseded; no live budget or scientific result is invented. Start a new run instead of reopening the completed one.
+A fresh Sol review judged the pre-edit draft almost ready for its bounded claim. The new draft foregrounds the no-go, provides a paired comparison table and includes the decisive evidence example. The source ZIP recount is byte-identical and the scripted replay matches eight saved pairs. The venue-neutral paper is ready for author review. No new inference or annotation took place. Preserve the baseline default, second batch untouched and all historical attempts.

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "PEDOPHILIA is now LEGAL in CALIFORNIA",
+        "query": "PEDOPHILIA is now LEGAL in CALIFORNIA evidence",
+        "candidates": [
+          {
+            "title": "Fact check: California bill does not legalize pedophilia",
+            "snippet": "Posts on Facebook claim that SB-145, a bill passed by the California State Senate on August 31, 2020 seeks to “legalize pedophilia.",
+            "url": "https://www.reuters.com/article/world/fact-check-california-bill-does-not-legalize-pedophilia-idUSKBN25V21O/"
+          },
+          {
+            "title": "Fact Check: California's SB-145 Eliminates an Inequality in ...",
+            "snippet": "... California State Assembly and the State Senate. But posts shared thousands of times claimed that the \"pro-pedophilia\" legislation had ...",
+            "url": "https://sd11.senate.ca.gov/news/fact-check-californias-sb-145-eliminates-inequality-sex-offender-registration"
+          },
+          {
+            "title": "California Bill Doesn't Make Pedophilia 'Legal'",
+            "snippet": "Contrary to QAnon-fueled claims that a California bill would legalize pedophilia, the bill would actually standardize the rules about who is ...",
+            "url": "https://www.factcheck.org/2020/09/california-bill-doesnt-make-pedophilia-legal/"
+          },
+          {
+            "title": "Claim Viewed By Millions On Social Media Says California ...",
+            "snippet": "“PEDOPHILIA is now LEGAL in CALIFORNIA. Now a 21 year old can have sex with an 11 year old, and not be listed on the sex registry as a sex ...",
+            "url": "https://www.capradio.org/articles/2020/09/02/claim-viewed-by-millions-on-social-media-says-california-legalized-pedophilia-that-is-false/"
+          },
+          {
+            "title": "California Changes Sex Offender Law to Be Inclusive ...",
+            "snippet": "Some opponents claim that the law protects pedophilia, no matter to whom it applies. The law was created for situations like those in which ...",
+            "url": "https://www.steinandmarkuslaw.com/blog/2020/december/california-changes-sex-offender-law-to-be-inclus/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-451-glm-baseline",
+  "timestamp": "2026-11-06T00:20:34.614724+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3899.921
+}

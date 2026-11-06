@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+        "query": "President Trump physician statement influenza vaccination COVID-19 susceptibility",
+        "candidates": [
+          {
+            "title": "Fact check: Donald Trump's past flu shots, COVID-19 risk aren't ...",
+            "snippet": "A recent study found no link between the flu vaccine and COVID-19 susceptibility, morbidity or mortality. Scientists have suggested the vaccine ... Missing:  physician  statement",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/21/fact-check-donald-trumps-flu-shots-covid-risk-arent-linked/3623699001/"
+          },
+          {
+            "title": "Remarks by President Trump, Vice President Pence, and ...",
+            "snippet": "And his whole purpose in making the statement was to get a flu shot, so that next fall we don't have such a big season of flu — and we possibly ...",
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-30/"
+          },
+          {
+            "title": "Memorandum From the Physician to the President on the ...",
+            "snippet": "President Trump also received preventive health screenings and immunizations, including annual influenza and updated COVID-19 booster ... Missing:  susceptibility  | Show results with:",
+            "url": "https://www.presidency.ucsb.edu/documents/memorandum-from-the-physician-the-president-the-presidents-comprehensive-follow-evaluation"
+          },
+          {
+            "title": "VERIFY: Will a flu vaccine help combat coronavirus? | kvue.com",
+            "snippet": "Trump definitively, \"no,\" an influenza vaccine would would not have an impact on SARS-CoV-2, the novel coronavirus which causes COVID-19 ... Missing:  statement  susceptibility",
+            "url": "https://www.kvue.com/article/news/verify/verify-how-do-vaccines-work/507-504ba12b-c34b-4588-b636-f5a61632ccaa"
+          },
+          {
+            "title": "COVID-19 and Historic Influenza Vaccinations in the United ...",
+            "snippet": "Overall, in US counties the COVID-19 vaccination rate exceeded influenza vaccination rates amongst those aged 65 or older (69.4.0% vs. 44%, p < ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8625806/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-056-deepseek-candidate",
+  "timestamp": "2026-11-06T08:24:08.400387+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20637.718
+}

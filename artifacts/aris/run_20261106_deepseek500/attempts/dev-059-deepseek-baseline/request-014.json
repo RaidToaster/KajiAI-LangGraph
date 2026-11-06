@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "There is a scam involving Santander customers being sent fake bank cards.",
+        "query": "There is a scam involving Santander customers being sent fake bank cards. original source fact check",
+        "candidates": [
+          {
+            "title": "Beware of Fake Checks | FDIC.gov",
+            "snippet": "Fake bank checks are typically used in scams where the scammer tries to get you to cash or deposit the check. Once it is deposited, they ask that you send all ...",
+            "url": "https://www.fdic.gov/consumers/consumer/news/august2019.html"
+          },
+          {
+            "title": "Is someone claiming to be Santander saying a card payment for a meal has ...",
+            "snippet": "Is someone claiming to be Santander saying a card payment for a meal has been declined when in fact it was accepted and to click on an unknown phone number?",
+            "url": "https://www.facebook.com/groups/3073292852734365/posts/24150476464589364/"
+          },
+          {
+            "title": "“Spoofing”: Fake messages that look the part - Banco Santander",
+            "snippet": "\"Spoofing\": Communications that appear to be from a legitimate source, such as your bank, They might \"look the part\", but they're a scam. If they're pretending ...",
+            "url": "https://www.santander.com/en/stories/what-is-spoofing"
+          },
+          {
+            "title": "How To Spot, Avoid, and Report Fake Check Scams | Consumer Advice",
+            "snippet": "Fake checks might look like business or personal checks, cashier's checks, money orders, or a check delivered electronically.",
+            "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+          },
+          {
+            "title": "Is there a scam where people mail you a check, ostensibly from a real ...",
+            "snippet": "The bank claws back the money from the fake check, and you're out the real money that you sent them. The scam works because banks are required ...",
+            "url": "https://www.reddit.com/r/personalfinance/comments/1cjl8vu/is_there_a_scam_where_people_mail_you_a_check/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-059-deepseek-baseline",
+  "timestamp": "2026-11-06T08:30:09.322023+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20998.625
+}

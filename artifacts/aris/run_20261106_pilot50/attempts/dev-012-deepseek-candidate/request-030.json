@@ -1,0 +1,111 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://books.rsc.org/books/edited-volume/718/chapter/433219/Supporting-Food-Health-Claims-in-New-Zealand-s contains verbatim: Dec 6, 2019 — since 18 January 2016, all health and nutrition claims must comply with Standard 1.2.7. as of July 2018, this Bill has stalled, Standard 1.2.7 ...",
+            "url": "https://books.rsc.org/books/edited-volume/718/chapter/433219/Supporting-Food-Health-Claims-in-New-Zealand-s",
+            "quote": "Dec 6, 2019 — since 18 January 2016, all health and nutrition claims must comply with Standard 1.2.7. as of July 2018, this Bill has stalled, Standard 1.2.7 ...",
+            "context": "Dec 6, 2019 — since 18 January 2016, all health and nutrition claims must comply with Standard 1.2.7. as of July 2018, this Bill has stalled, Standard 1.2.7 ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www3.parliament.nz/en/pb/bills-and-laws/progress-of-legislation/ contains verbatim: The Progress of Legislation document provides a list of bills initiated in the current Parliament , and bills lapsed at the end of the previous Parliament ... Read more",
+            "url": "https://www3.parliament.nz/en/pb/bills-and-laws/progress-of-legislation/",
+            "quote": "The Progress of Legislation document provides a list of bills initiated in the current Parliament , and bills lapsed at the end of the previous Parliament ... Read more",
+            "context": "The Progress of Legislation document provides a list of bills initiated in the current Parliament , and bills lapsed at the end of the previous Parliament ... Read more"
+          },
+          {
+            "finding": "Retained full_page record for https://www.foodstandards.gov.au/food-standards-code contains verbatim: All food sold in Australia and New Zealand must comply with food standards. These standards are compiled in the Australia New Zealand Food Standards Code. FSANZ assesses applications to amend the Code and prepares proposals to vary existing standards or develop new ones.",
+            "url": "https://www.foodstandards.gov.au/food-standards-code",
+            "quote": "All food sold in Australia and New Zealand must comply with food standards. These standards are compiled in the Australia New Zealand Food Standards Code. FSANZ assesses applications to amend the Code and prepares proposals to vary existing standards or develop new ones.",
+            "context": "# Food Standards Code\n\nAll food sold in Australia and New Zealand must comply with food standards. These standards are compiled in the Australia New Zealand Food Standards Code. FSANZ assesses applications to amend the Code and prepares proposals to vary existing standards or develop new ones.\n\n### Title\n\n## Guidance and resources\n\n### Card"
+          },
+          {
+            "finding": "Retained snippet record for https://www.campdenbri.co.uk/blogs/australia-new-zealand-health-claims.php contains verbatim: Nov 11, 2022 — New Zealand Food Standards Code – Standard 1.2.7 – Nutrition, health and related claims . -approved high level health claims for food -health ...",
+            "url": "https://www.campdenbri.co.uk/blogs/australia-new-zealand-health-claims.php",
+            "quote": "Nov 11, 2022 — New Zealand Food Standards Code – Standard 1.2.7 – Nutrition, health and related claims . -approved high level health claims for food -health ...",
+            "context": "Nov 11, 2022 — New Zealand Food Standards Code – Standard 1.2.7 – Nutrition, health and related claims . -approved high level health claims for food -health ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.mpi.govt.nz/bring-send-to-nz/bringing-and-posting-items-to-nz/how-to-declare-items-when-arriving-in-nz contains verbatim: Everyone travelling into New Zealand must complete a New Zealand Traveller Declaration; declare all risk items – like food, plants, wooden ...",
+            "url": "https://www.mpi.govt.nz/bring-send-to-nz/bringing-and-posting-items-to-nz/how-to-declare-items-when-arriving-in-nz",
+            "quote": "Everyone travelling into New Zealand must complete a New Zealand Traveller Declaration; declare all risk items – like food, plants, wooden ...",
+            "context": "Everyone travelling into New Zealand must complete a New Zealand Traveller Declaration; declare all risk items – like food, plants, wooden ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.congress.gov/crs-product/R48918 contains verbatim: Jul 29, 2026 — The farm bill , an omnibus, multiyear law, is the primary piece of legislation governing agricultural and food programs.",
+            "url": "https://www.congress.gov/crs-product/R48918",
+            "quote": "Jul 29, 2026 — The farm bill , an omnibus, multiyear law, is the primary piece of legislation governing agricultural and food programs.",
+            "context": "Jul 29, 2026 — The farm bill , an omnibus, multiyear law, is the primary piece of legislation governing agricultural and food programs."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_4": {
+          "type": "choice",
+          "instructions": "Does `citations[4].context`, including the quote, support `citations[4].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_5": {
+          "type": "choice",
+          "instructions": "Does `citations[5].context`, including the quote, support `citations[5].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-candidate",
+  "timestamp": "2026-11-06T00:55:01.378377+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5966.687
+}

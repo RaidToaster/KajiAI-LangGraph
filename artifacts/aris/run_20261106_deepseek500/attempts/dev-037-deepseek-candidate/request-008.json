@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons and seven other underage girls were featured on Hunter Biden's laptop.",
+        "query": "What primary record (article URL, headline, byline, publication date) documents the Breitbart News report referenced in the claim?",
+        "candidates": [
+          {
+            "title": "- THE WEAPONIZATION OF THE FEDERAL GOVERNMENT",
+            "snippet": "Editor at Breitbart. I published a series of news stories three years ago in October 2020 about Hunter Biden's now infamous laptop, seen as some of the most ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-118hhrg53145/html/CHRG-118hhrg53145.htm"
+          },
+          {
+            "title": "Beyond “fake news”: Analytic thinking and the detection of false and ...",
+            "snippet": "by RM Ross · 2021 · Cited by 175 — We compiled a list of false, hyperpartisan, and true news headlines. These headlines were presented in the format of Facebook posts: a picture ...",
+            "url": "https://www.cambridge.org/core/journals/judgment-and-decision-making/article/beyond-fake-news-analytic-thinking-and-the-detection-of-false-and-hyperpartisan-news-headlines/AF9708DB3A92FCA2EA70D5057742C285"
+          },
+          {
+            "title": "Wikipedia:Reliable sources/Perennial sources",
+            "snippet": "Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. It can still be used as a primary source when ...",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+          },
+          {
+            "title": "- ENSURING FORCE READINESS: EXAMINING PROGRESSIVISM'S ...",
+            "snippet": "Article, Breitbart, ``Biden Defense Officials Defend Diversity, Equity, Inclusion in the Military''; submitted by Rep. Biggs.",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-118hhrg51720/html/CHRG-118hhrg51720.htm"
+          },
+          {
+            "title": "The former executive chairman of Breitbart news is the latest in a string ...",
+            "snippet": "Breitbart has previously published such headlines as: \"The Solution To Online 'Harassment' Is Simple: Women Should Log Off\" \"Bill Kristol: ...",
+            "url": "https://www.facebook.com/maltatoday/posts/the-former-executive-chairman-of-breitbart-news-is-the-latest-in-a-string-of-dis/10155714792941941/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-037-deepseek-candidate",
+  "timestamp": "2026-11-06T07:28:53.339004+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17322.64
+}

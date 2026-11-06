@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign.",
+        "query": "Search declassified NSA, CIA, and FBI records and congressional testimony for any program specifically authorized to surveil the Trump campaign, and for who authorized it.",
+        "candidates": [
+          {
+            "title": "Government Transparency & Election Integrity",
+            "snippet": "The White House Transparency Task Force was formed by President Trump to expose government weaponization, failed foreign policies, and election integrity.",
+            "url": "https://www.whitehouse.gov/transparency/"
+          },
+          {
+            "title": "Declassified Records Shed Light on FBI Efforts to Co-opt ...",
+            "snippet": "Declassified Records Shed Light on FBI Efforts to Co-opt Intel Briefings to Spy on 2016 Trump Campaign. Grassley, Johnson uncovered ...",
+            "url": "https://www.grassley.senate.gov/news/news-releases/declassified-records-shed-light-fbi-efforts-co-opt-intel-briefings-spy-2016-trump"
+          },
+          {
+            "title": "Trump's Wiretapping Accusations: Here's What the ...",
+            "snippet": "On Saturday morning, President Donald Trump posted a series of angry tweets, accusing former President Barack Obama of engaging in a ...",
+            "url": "https://www.aclu.org/news/national-security/trumps-wiretapping-accusations-heres-what-government"
+          },
+          {
+            "title": "Hearing of the House Judiciary Committee on Oversight ...",
+            "snippet": "Today's hearing will examine the statutory authorities that govern certain programs operated under the Foreign Intelligence Surveillance Act, or FISA. Since the ...",
+            "url": "https://www.intelligence.gov/ic-on-the-record-database/results/testimony/hearing-of-the-house-judiciary-committee-on-oversight-of-the-administrations-use-of-the-foreign-intelligence-surveillance-act-fisa-authorities"
+          },
+          {
+            "title": "Crossfire Hurricane (FBI investigation)",
+            "snippet": "Crossfire Hurricane was the code name for the counterintelligence investigation undertaken by the Federal Bureau of Investigation (FBI) from July 31, 2016, ...",
+            "url": "https://en.wikipedia.org/wiki/Crossfire_Hurricane_(FBI_investigation)"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-candidate",
+  "timestamp": "2026-11-06T04:33:56.125994+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6825.437
+}

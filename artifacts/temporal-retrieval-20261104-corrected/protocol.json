@@ -1,0 +1,44 @@
+{
+  "case_id": "train-1219",
+  "claim": "The majority of hunters and the majority of Trump voters now want universal background checks on gun buyers.",
+  "reference_date": "2020-02-20",
+  "case_metadata": {
+    "claim_date": "20-2-2020"
+  },
+  "source_sha256": "4af1ad05f10f28cd45bb3fdd8e9d3d42a5acbe5dcacd3c20a3f3e22acbac1a23",
+  "runner_sha256": "535789e77a87f2a07a0754d0586c2760b4de6dab9a6023c80779c77475a1074c",
+  "hypothesis": "Queries that retain the claim's distinct populations and historical reference period may find better-scoped evidence than long present-tense claim queries. No generated plan or retrieval gain is assumed.",
+  "schedule": [
+    {
+      "id": "baseline-1",
+      "query": "The majority of hunters and the majority of Trump voters now want universal background checks on gun buyers. evidence"
+    },
+    {
+      "id": "temporal-1",
+      "query": "hunters background checks all gun buyers survey poll exact question wording 2019 2020 before February 20 2020"
+    },
+    {
+      "id": "temporal-2",
+      "query": "2016 Trump voters background checks private gun sales gun shows 2019 poll exact question before February 20 2020"
+    },
+    {
+      "id": "baseline-2",
+      "query": "The majority of hunters and the majority of Trump voters now want universal background checks on gun buyers. counterevidence"
+    }
+  ],
+  "caps": {
+    "tinyfish_search": 1
+  },
+  "total_search_cap": 4,
+  "results_per_query": 5,
+  "retrieval_budget": "Two queries/arm, at most two Fetch slots/query later, identical ceilings. Fetch is not launched by this stage. Reuse identical returned URLs if a later frozen Fetch diagnostic follows; report actual versus logical slots.",
+  "prior_evidence": "Earlier first-query probe used claim/decomposed statements plus original-survey language, without historical reference-year constraints. Retained Marist lead is2019; hunter lead is2013 with exceptions. No current/historical sufficiency follows from those snippets.",
+  "controls": [
+    "Sufficient: source documents both populations, pre-reference field dates, actual support proportions and applicable purchase/exception wording.",
+    "Insufficient: a current or undated source, different population (all gun owners versus hunters), or only an attributed politician's statement.",
+    "Conflicting: poll questions/conditions or dates disagree; retain both rather than selecting favorable figures.",
+    "Shared lineage: several articles citing one poll remain one evidentiary origin."
+  ],
+  "screen": "Compare raw returned leads under the same top5 and2-query ceilings. A promising lead needs explicit population/date/question wording, not label agreement or a fact-check headline. Inspect before any later Fetch. No correct-acceptance/discovery-of-verified-evidence claim, no workflow release, no model calls.",
+  "operations": "One worker,two numerical threads,300s/job;15s request timeout;zero retries;preserve every started reservation. Existing free/included Search quota only; stop on authentication/quota/transport problems."
+}

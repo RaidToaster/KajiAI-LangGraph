@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh. evidence",
+        "candidates": [
+          {
+            "title": "Did McDonald's in Azerbaijan Make Pro-Military Posts on Instagram?",
+            "snippet": "This is a verified McDonald's Instagram account that posted pro-military pictures about Nagorno-Karabakh. The posts are now removed.",
+            "url": "https://www.voanews.com/a/did-mcdonald-s-in-azerbaijan-make-pro-military-posts-on-instagram-/6742646.html"
+          },
+          {
+            "title": "Azerbaijan and Armenia: The Nagorno-Karabakh Conflict",
+            "snippet": "The war has resulted in Azerbaijani control over much of the territory it lost to Armenian and Nagorno-Karabakh forces during previous fighting ...",
+            "url": "https://www.congress.gov/crs-product/R46651"
+          },
+          {
+            "title": "Azerbaijan holds military parade after Nagorno-Karabakh conflict",
+            "snippet": "The parade attended by Turkish President Recep Tayyip Erdogan, who strongly backed Azerbaijan, also involved dozens of military vehicles, and a ...",
+            "url": "https://www.pbs.org/newshour/world/azerbaijan-holds-military-parade-after-nagorno-karabakh-conflict"
+          },
+          {
+            "title": "A McDonald's franchise wades into the Nagorno-Karabakh conflict",
+            "snippet": "After military clashes between Azerbaijan and Armenia broke out last month, fast-food franchisees began to weigh in — on behalf of ...",
+            "url": "https://www.washingtonpost.com/world/2020/10/29/azerbaijan-mcdonalds-nagorno-karabakh/"
+          },
+          {
+            "title": "Tensions Between Armenia and Azerbaijan | Global Conflict Tracker",
+            "snippet": "Azerbaijan's September 2023 offensive ended the decades-long Nagorno-Karabakh conflict, forcing the enclave's dissolution and the flight of over one hundred ...",
+            "url": "https://www.cfr.org/global-conflict-tracker/conflict/nagorno-karabakh-conflict"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-baseline",
+  "timestamp": "2026-11-06T06:53:45.128017+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15214.437
+}

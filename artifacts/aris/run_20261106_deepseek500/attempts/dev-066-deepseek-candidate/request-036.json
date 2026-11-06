@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "UN World Food Programme official governance structure executive board chair 2020 Nobel Peace Prize",
+        "candidates": [
+          {
+            "title": "The Nobel Peace Prize 2020 - Press release",
+            "snippet": "The World Food Programme is the world's largest humanitarian organisation addressing hunger and promoting food security. In 2019, the WFP ...",
+            "url": "https://www.nobelprize.org/prizes/peace/2020/press-release/"
+          },
+          {
+            "title": "UN World Food Programme wins 2020 Nobel Peace Prize | Nations Unies",
+            "snippet": "UN World Food Programme wins 2020 Nobel Peace Prize. The UN World Food Programme (WFP), which provides lifesaving food assistance to millions across the world – ...",
+            "url": "https://www.un.org/fr/delegate/un-world-food-programme-wins-2020-nobel-peace-prize"
+          },
+          {
+            "title": "🇺🇳 On this day, 64 years ago, the World Food Programme (WFP) was ...",
+            "snippet": "On October 9 of this year, the 2020 #Nobel Peace Prize was awarded to the United Nations World Food Programme (#WFP) for its efforts to combat ...",
+            "url": "https://www.facebook.com/MIDRussia/posts/-on-this-day-64-years-ago-the-world-food-programme-wfp-was-established-by-un-gen/1203581161964942/"
+          },
+          {
+            "title": "World Food Programme",
+            "snippet": "WFP won the 2020 Nobel Peace Prize for its \"efforts for combating hunger\", its \"contribution to creating peace in conflicted-affected areas\", and for acting as ...",
+            "url": "https://en.wikipedia.org/wiki/World_Food_Programme"
+          },
+          {
+            "title": "Who we are | World Food Programme",
+            "snippet": "The World Food Programme is the world's largest humanitarian organization saving lives in emergencies and using food assistance to build a pathway to peace, ...",
+            "url": "https://www.wfp.org/who-we-are"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-candidate",
+  "timestamp": "2026-11-06T08:53:14.164823+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22383.484
+}

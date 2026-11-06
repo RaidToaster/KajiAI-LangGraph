@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trash Can Plastered With 'Ballot Box' Sign In Philadelphia Was Intended To Get People To Toss Their Ballots In The Trash.",
+        "query": "What primary records, photographs, or contemporaneous reports document a trash can in Philadelphia bearing a 'Ballot Box' sign, and when and where was it observed?",
+        "candidates": [
+          {
+            "title": "Instagram Post Misleads on 'Ballot Box' Posters - FactCheck.org",
+            "snippet": "A popular Instagram post suggests nefarious actors are misrepresenting trash cans in Philadelphia as ballot boxes. The signs seen in the images ... Missing:  records,  contemporaneous  document  bearing",
+            "url": "https://www.factcheck.org/2020/11/instagram-post-misleads-on-ballot-box-posters/"
+          },
+          {
+            "title": "'Ballot box' signs on trash cans were not meant to fool voters",
+            "snippet": "The signs were advertisements for an exhibition by the Union League Legacy Foundation (here), called, “Ballot Box: America's Fight for the Vote” ... Missing:  primary  records,  contemporaneous  document  bearing  observed?",
+            "url": "https://www.reuters.com/article/world/fact-check-ballot-box-signs-on-trash-cans-were-not-meant-to-fool-voters-idUSKBN27E2VM/"
+          },
+          {
+            "title": "Ballot boxes near me Philly: Trash bins disguised ULLF - WUSA9",
+            "snippet": "'BALLOT BOX' was plastered on the sides of two garbage cans in Philadelphia, but it was a promotion for an exhibit on voting rights, not an ... Missing:  records,  contemporaneous  reports  document  bearing",
+            "url": "https://www.wusa9.com/article/news/verify/verify-no-photos-do-not-show-trash-cans-disguised-as-ballot-boxes-in-philly-it-was-a-poorly-thought-out-ad-campaign/65-830b70b1-b5f1-457b-ab0c-40c3f07d4385"
+          },
+          {
+            "title": "'Ballot box' signs on Philadelphia trash cans were Union ...",
+            "snippet": "The bright-red signs took up the entire side of the two trash cans and read in large lettering: “BALLOT BOX.” It was an advertisement ... Missing:  contemporaneous  reports  document",
+            "url": "https://www.inquirer.com/politics/election/election-2020-ballot-box-trash-can-ad-philadelphia-union-league-foundation-20201023.html"
+          },
+          {
+            "title": "Ad for history exhibit in Philadelphia is mistaken for attempt to ...",
+            "snippet": "Photos uploaded on Instagram showed a man putting up posters with the words “BALLOT BOX” in large lettering, on the side of a trash bin. Missing:  records,  contemporaneous  document",
+            "url": "https://politifact.com/factchecks/2020/oct/28/instagram-posts/ad-history-exhibit-philadelphia-mistaken-attempt-s/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-022-deepseek-candidate",
+  "timestamp": "2026-11-06T06:46:06.459178+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14755.781
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "Treasury or DWP official guidance October 2020 Job Support Scheme tier 3 unable to work Universal Credit 80% wages",
+        "candidates": [
+          {
+            "title": "HMRC – Job Support Scheme (October 2020) - r3.org.uk",
+            "snippet": "HMRC have published further information on the Job Support Scheme – including how you can check if you’re eligible and when you can make your first claim.",
+            "url": "https://www.r3.org.uk/technical-library/hmrc-job-support-scheme-october-2020/"
+          },
+          {
+            "title": "Covid: Do all tier 3 area workers get 80% of their wages? - BBC",
+            "snippet": "The claim: Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages. Verdict: While that will be the ...",
+            "url": "https://www.bbc.co.uk/news/54633147"
+          },
+          {
+            "title": "Job Support Scheme – Guidance Published (30th October 2020)",
+            "snippet": "HMRC have published more details and guidance to assist employers in operating and claiming support through the new Job Support Scheme which commences from Sunday 1st November 2020.",
+            "url": "https://payadvice.uk/2020/10/30/job-support-scheme-guidance-published-30th-october-2020/"
+          },
+          {
+            "title": "22 October 2020 Job Support Scheme Expansion For Closed ...",
+            "snippet": "Similar to the Job Support Scheme, where employees receive two-thirds of their wages for time not worked, the grant per eligible employee available from the UK Government is two-thirds of their normal pay up to a limit of £2100 per month. Further detail on how normal pay is calculated will be set out in further guidance by the end of October. Your employer can claim under the rules announced ...",
+            "url": "https://bhp.co.uk/wp-content/uploads/2020/10/Job-support-scheme-tier-3-22.10.20.pdf"
+          },
+          {
+            "title": "Job Support Scheme - 22nd October 2020 - Lexology",
+            "snippet": "The government is providing support to help businesses retain employees through the Job Support Scheme (JSS). Announced initially on 24 September 2020, the government later announced that the ...",
+            "url": "https://www.lexology.com/library/detail.aspx?g=e787acc0-779d-4d1f-9560-9d4237ffcced"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-candidate",
+  "timestamp": "2026-11-06T08:34:06.590987+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21235.89
+}

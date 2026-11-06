@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Video shows attack of French embassy in Sudan counterevidence",
+        "candidates": [
+          {
+            "title": "2012 Embassy Attacks In Sudan Falsely Shared As Attack On French ...",
+            "snippet": "2012 Embassy Attacks In Sudan Falsely Shared As Attack On French Embassy ...",
+            "url": "https://www.boomlive.in/fake-news/2012-embassy-attacks-in-sudan-falsely-shared-as-attack-on-french-embassy-10392"
+          },
+          {
+            "title": "UN France Rep. Condemns Drone Strikes On Sudan, Calls The Attacks ...",
+            "snippet": "UN France Rep. Condemns Drone Strikes On Sudan, Calls The Attacks On Civilians 'War Crimes'. @ForbesBreakingNews4 likes91 views1 hour ago",
+            "url": "https://www.youtube.com/watch?v=ae_1gG59l-Y"
+          },
+          {
+            "title": "Fact Check: Video from 2012 being falsely shared as attack on French ...",
+            "snippet": "Fact Check: Video from 2012 being falsely shared as attack on French embassy in Sudan. By - Newsmeter Network |. Published on : 30 Oct 2020 6:11 ...",
+            "url": "https://newsmeter.in/fact-check-video-from-2012-being-falsely-shared-as-attack-on-french-embassy-in-sudan"
+          },
+          {
+            "title": "These videos are falsely attributed to the unrest in Sudan • FRANCE 24 ...",
+            "snippet": "Many viral videos being shared on Twitter and WhatsApp groups claim to show images of the current violence in Sudan.",
+            "url": "https://www.youtube.com/watch?v=pwCffxUVDEc"
+          },
+          {
+            "title": "Sudan: Video Footage Shows Extreme Violence, Abuse",
+            "snippet": "The forces have brazenly attacked hospitals and medical personnel, arresting dozens of doctors, and entering hospital compounds, as they did ...",
+            "url": "https://www.hrw.org/news/2019/02/10/sudan-video-footage-shows-extreme-violence-abuse"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-baseline",
+  "timestamp": "2026-11-06T06:36:05.431722+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14154.75
+}

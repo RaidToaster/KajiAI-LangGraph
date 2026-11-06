@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "International Monetary Fund. evidence",
+        "candidates": [
+          {
+            "title": "International Monetary Fund | IMF",
+            "snippet": "The International Monetary Fund (IMF) works to achieve sustainable growth and prosperity for all of its 191 member countries. +1 800 548 5384",
+            "url": "https://www.imf.org/"
+          },
+          {
+            "title": "The International Monetary Fund: A review of the recent evidence",
+            "snippet": "by MC Steinwand · 2008 · Cited by 302 — Judging by recent evidence, IMF programs are a mixed blessing. On the negative side, program participation appears to reduce economic growth and ...",
+            "url": "https://link.springer.com/article/10.1007/s11558-007-9026-x"
+          },
+          {
+            "title": "The Case against the International Monetary Fund",
+            "snippet": "The evidence, much of it supplied by the IMF, demonstrates that the fund does more harm than good. The Operations of International Monetary Fund Financing ...",
+            "url": "https://www.hoover.org/research/case-against-international-monetary-fund"
+          },
+          {
+            "title": "International Monetary Fund | U.S. Department of the Treasury",
+            "snippet": "The IMF is an organization of 189 member countries that works to foster global monetary cooperation, secure financial stability, facilitate international trade,",
+            "url": "https://home.treasury.gov/policy-issues/international/international-monetary-fund"
+          },
+          {
+            "title": "An evaluation of the International Monetary Fund's claims about public ...",
+            "snippet": "by D Stuckler · 2010 · Cited by 42 — First, the IMF claims that health spending either does not change or increases with IMF-supported programs, but there is substantial evidence to the contrary.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20440976/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-baseline",
+  "timestamp": "2026-11-06T08:12:36.807591+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19946.109
+}

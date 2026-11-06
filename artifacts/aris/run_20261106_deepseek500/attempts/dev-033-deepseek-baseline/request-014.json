@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "America went from 75,000 flu deaths last year in 2019 to almost 0 in 2020",
+        "query": "America went from 75,000 flu deaths last year in 2019 to almost 0 in 2020 original source fact check",
+        "candidates": [
+          {
+            "title": "Estimated Influenza-Related Illnesses, Medical Visits ...",
+            "snippet": "During the 2019-2020 influenza season, CDC estimates that influenza was associated with 38 million illnesses, 18 million medical visits, 405,000 hospitalizations, and 22,000 deaths.",
+            "url": "https://archive.cdc.gov/www_cdc_gov/flu/about/burden/2019-2020/archive-09292021.html"
+          },
+          {
+            "title": "Past Flu Seasons | CDC",
+            "snippet": "This page included links to past flu seasons’ summary reports, where you can find information on the season as well as past reports and publications released.",
+            "url": "https://archive.cdc.gov/www_cdc_gov/flu/season/past-flu-seasons.htm"
+          },
+          {
+            "title": "2019–2020 United States flu season - Wikipedia",
+            "snippet": "The unusually abrupt decline in cases by April 2020 was attributed to the effects of widespread social distancing and lockdowns aimed at COVID-19, shortening the influenza season by 5–6 weeks.",
+            "url": "https://en.wikipedia.org/wiki/2019%E2%80%932020_United_States_flu_season"
+          },
+          {
+            "title": "Influenza Disease Burden and Vaccine Impact Estimates, 2019 ...",
+            "snippet": "During the 2019–2020 season an estimated 38 million people were sick with flu, resulting in 18 million visits to a health care provider, 400,000 hospitalizations, and 22,000 deaths.",
+            "url": "https://stacks.cdc.gov/view/cdc/157600/cdc_157600_DS1.pdf"
+          },
+          {
+            "title": "Fact check: Donald Trump Jr.'s claim about flu deaths is false",
+            "snippet": "For the 2019-2020 season, the CDC has released a preliminary estimate of 22,000 influenza related deaths. Even combining those seasons, from late fall 2018 to early spring 2020, there...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/30/fact-check-donald-trump-jr-s-claim-flu-deaths-false/6055003002/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-033-deepseek-baseline",
+  "timestamp": "2026-11-06T07:19:14.471040+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16743.781
+}

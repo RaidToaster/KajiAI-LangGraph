@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography evidence",
+        "candidates": [
+          {
+            "title": "Netflix CEO Kim Martin Morrow was arrested on child ...",
+            "snippet": "FALSE: In general, despite the controversy over the Netflix film Cuties, Netflix CEOs (Reed Hastings and Ted Sarandos) have not been arrested.",
+            "url": "https://www.instagram.com/p/CFR80K_i9LQ/"
+          },
+          {
+            "title": "Federal agents arrest former CEO of child & adolescent ...",
+            "snippet": "COLUMBUS, Ohio – The former CEO of a Belmont County residential treatment facility for children and adolescents was arrested by federal ...",
+            "url": "https://www.justice.gov/usao-sdoh/pr/federal-agents-arrest-former-ceo-child-adolescent-residential-treatment-center-federal"
+          },
+          {
+            "title": "No, Netflix's CEO wasn't charged with child pornography",
+            "snippet": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography”",
+            "url": "https://politifact.com/factchecks/2020/sep/18/viral-image/no-netflixs-ceo-wasnt-charged-15-counts-child-porn/"
+          },
+          {
+            "title": "Netflix “Cheer” Star Charged with Child Pornography",
+            "snippet": "As for what exactly Jerry Harris did, he has pleaded guilty to two federal counts of sexual misconduct, including asking for child sexual abuse ...",
+            "url": "https://www.taylorring.com/blog/netflix-cheer-star-charged-with-child-pornography/"
+          },
+          {
+            "title": "A Martin County judge has ordered a sentence equal to life ...",
+            "snippet": "A Martin County judge has ordered a sentence equal to life in prison for a man who used artificial intelligence to create child pornography, ...",
+            "url": "https://www.facebook.com/WFLXFOX29/posts/a-martin-county-judge-has-ordered-a-sentence-equal-to-life-in-prison-for-a-man-w/1725150036284085/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-glm-baseline",
+  "timestamp": "2026-11-05T17:58:03.888171+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 51903.484
+}

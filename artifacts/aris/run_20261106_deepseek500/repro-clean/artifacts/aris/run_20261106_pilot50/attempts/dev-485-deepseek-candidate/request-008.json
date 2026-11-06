@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "What executive orders related to prescription drug costs did Donald Trump sign in the month preceding the statement's date, and what were their titles and signing dates?",
+        "candidates": [
+          {
+            "title": "Fact Sheet: President Donald J. Trump Announces Actions ...",
+            "snippet": "Trump signed an Executive Order to expand on the historic efforts of his first term to lower prescription drug prices. The Order directs the ...",
+            "url": "https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-announces-actions-to-lower-prescription-drug-prices/"
+          },
+          {
+            "title": "WATCH: Trump signs executive order on prescription drug prices",
+            "snippet": "President Donald Trump has been unable to land the big deal with Congress to curb drug costs. But now he's moving on his own to allow ...",
+            "url": "https://www.pbs.org/newshour/politics/watch-trump-signs-executive-order-on-prescription-drug-prices"
+          },
+          {
+            "title": "Trump Signs New Executive Order On Prescription Drug ...",
+            "snippet": "President Trump signed an executive order Sunday that he says lowers prescription drug prices \"by putting America first,\" but experts said ...",
+            "url": "https://www.npr.org/2020/09/13/912545090/trump-signs-new-executive-order-on-prescription-drug-prices"
+          },
+          {
+            "title": "Remarks by President Trump at Signing of Executive Orders ...",
+            "snippet": "The four orders that I'm signing today will completely restructure the prescription drug market, in terms of pricing and everything else, to ...",
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-signing-executive-orders-lowering-drug-prices/"
+          },
+          {
+            "title": "Trump signs executive order setting 30-day deadline for ...",
+            "snippet": "Trump signs executive order setting 30-day deadline for drugmakers to lower prescription drug costs ... President Donald Trump signs an executive order related to ...",
+            "url": "https://www.courthousenews.com/trump-signs-executive-order-setting-30-day-deadline-for-drugmakers-to-lower-prescription-drug-costs/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-deepseek-candidate",
+  "timestamp": "2026-11-06T01:31:48.717124+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8174.031
+}

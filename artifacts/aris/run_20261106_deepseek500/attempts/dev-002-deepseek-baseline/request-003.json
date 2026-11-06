@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country. evidence",
+        "candidates": [
+          {
+            "title": "Fact check: France did not deport Pakistanis after PM Imran ...",
+            "snippet": "\"183 visitor visas provided to our citizens[have] been found to be rejected by French authorities following the criticism by PM Imran Khan. 118 ...",
+            "url": "https://www.geo.tv/latest/316317-fact-check-france-cancellation-of-pakistani-nationals-visa-pm-imran-khans-remarks-fake"
+          },
+          {
+            "title": "Fact Check: Fake tweet on France deporting Pakistanis go ...",
+            "snippet": "Tourist visas of 183 Pak citizens were rejected by France after Imran Khan criticised Macron's comments on Islam. Some 118 Pak citizens with ...",
+            "url": "https://www.indiatoday.in/fact-check/story/fact-check-fake-tweet-france-deporting-pakistanis-go-viral-imran-slams-macron-1737276-2020-11-02"
+          },
+          {
+            "title": "France takes huge step against Pakistan; revokes visas of ...",
+            "snippet": "France takes huge step against Pakistan; revokes visas of 183 nationals. This action is directly linked to the anti-French rhetoric of Imran ...",
+            "url": "https://www.dnaindia.com/world/report-france-takes-huge-step-against-pakistan-revokes-visas-of-183-nationals-2853862"
+          },
+          {
+            "title": "Indian media outlets fall for impostor account claiming ...",
+            "snippet": "183 visitor visa provided to our citizens has been found to be rejected by french authorities following the criticism by PM Imran khan. 118 ...",
+            "url": "https://www.altnews.in/indian-media-outlets-fall-for-impostor-account-claiming-france-revoked-183-pakistani-visas/"
+          },
+          {
+            "title": "Fact Check: Did France cancel travel visas of 183 Pakistani ...",
+            "snippet": "“183 visitor visa provided to our citizens has been found to be rejected by French authorities following the criticism by PM Imran Khan. 118 ...",
+            "url": "https://www.opindia.com/2020/11/france-pakistan-visa-rejected-blasphemy-fact-check/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-baseline",
+  "timestamp": "2026-11-06T04:21:33.874135+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6083.187
+}

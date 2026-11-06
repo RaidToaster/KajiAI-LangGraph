@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UNESCO declared Nadar community as the most ancient race in the world.",
+        "query": "UNESCO declared Nadar community as the most ancient race in the world. evidence",
+        "candidates": [
+          {
+            "title": "World Heritage",
+            "snippet": "The 1972 World Heritage Convention protects sites of outstanding universal value for all humanity.",
+            "url": "https://www.unesco.org/en/world-heritage"
+          },
+          {
+            "title": "Anti-racism: UNESCO's early mental engineering",
+            "snippet": "It is true that even today, sixty-five years after the first UNESCO Statement on race, humanity still has to fight against racism and its ...",
+            "url": "https://courier.unesco.org/en/articles/anti-racism-unescos-early-mental-engineering"
+          },
+          {
+            "title": "A Race Against Time for UNESCO World Heritage Sites ...",
+            "snippet": "Its goal is to help countries work together through education, science, and culture. By sharing knowledge, UNESCO hopes to build peace around ...",
+            "url": "https://www.facebook.com/RoamingMyPlanet/posts/a-race-against-time-for-unesco-world-heritage-sitesunesco-stands-for-the-united-/1794535755813602/"
+          },
+          {
+            "title": "The Race question",
+            "snippet": "THE RACE QUESTION The importance which the problem of race has acquired in the modern world scarcely needs to be pointed out. Mankind will not soon forget ...",
+            "url": "https://unesdoc.unesco.org/ark:/48223/pf0000128291"
+          },
+          {
+            "title": "UNESCO statements on race",
+            "snippet": "In 1995, UNESCO published a Declaration of Principles on Tolerance to add to its dialogue about racial equality with recommendations for tolerant treatment of ...",
+            "url": "https://en.wikipedia.org/wiki/UNESCO_statements_on_race"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-003-deepseek-baseline",
+  "timestamp": "2026-11-05T23:38:56.748147+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1402.046
+}

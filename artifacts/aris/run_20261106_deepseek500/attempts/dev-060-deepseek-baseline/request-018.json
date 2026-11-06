@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "Universal Credit, which will mean they get 80% of their wages. evidence",
+        "candidates": [
+          {
+            "title": "Universal Credit: Welfare reform and mental health",
+            "snippet": "by M Brewer · 2024 · Cited by 42 — The UK Universal Credit (UC) welfare reform simplified the benefits system whilst strongly incentivising a return to sustainable employment.",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0167629624000857"
+          },
+          {
+            "title": "Universal Credit and earnings",
+            "snippet": "Your Universal Credit payment will reduce as your wages go up, and increase again if you stop working or your wages go down. For every £1 you ...",
+            "url": "https://www.gov.uk/guidance/universal-credit-and-earnings"
+          },
+          {
+            "title": "Universal Credit: A Primer",
+            "snippet": "As participants earn more in the workforce, their amount of Universal Credit will decrease at a rate of 65 pence for every additional £1 earned,",
+            "url": "https://www.americanprogress.org/article/universal-credit-a-primer/"
+          },
+          {
+            "title": "Universal Basic Income - Center for Hunger Free Communities",
+            "snippet": "Universal basic income (UBI), or basic income guarantee, is a government program that aims to address economic inequality and provide economic security ...",
+            "url": "https://drexel.edu/hunger-free-center/research/briefs-and-reports/universal-basic-income/"
+          },
+          {
+            "title": "Inadequate Universal Credit and barriers to work",
+            "snippet": "by I Porter · 2023 · Cited by 7 — With around nine in ten low-income households receiving Universal Credit unable to afford essentials, this summary draws on growing evidence ...",
+            "url": "https://www.jrf.org.uk/social-security/inadequate-universal-credit-and-barriers-to-work"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-baseline",
+  "timestamp": "2026-11-06T08:31:57.380966+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21106.687
+}

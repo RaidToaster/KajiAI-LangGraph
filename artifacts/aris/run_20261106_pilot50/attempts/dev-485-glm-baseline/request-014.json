@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\" original source fact check",
+        "candidates": [
+          {
+            "title": "RNC Day 4 fact check: Trump's claims about COVID-19 ...",
+            "snippet": "\"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\".",
+            "url": "https://www.pbs.org/newshour/politics/rnc-day-4-fact-check-trumps-claims-about-covid-19-drug-prices-preexisting-conditions"
+          },
+          {
+            "title": "Fact-checking Donald Trump's RNC speech",
+            "snippet": "\"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\" Misleading. Trump ...",
+            "url": "https://www.wral.com/archive/19258773/"
+          },
+          {
+            "title": "Fact-checking President Donald Trump's 2020 Republican ...",
+            "snippet": "... Trump. “Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs ...",
+            "url": "https://www.poynter.org/fact-checking/2020/fact-checking-president-donald-trumps-2020-republican-national-convention-speech/"
+          },
+          {
+            "title": "Mega-Thread: Trump Focused Discussion - Page 2618",
+            "snippet": "... Trump. \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs ...",
+            "url": "https://www.mmo-champion.com/threads/2316872-Mega-Thread-Trump-Focused-Discussion/page2618"
+          },
+          {
+            "title": "Untitled",
+            "snippet": "... check on Trump's ... “Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs ...",
+            "url": "https://www.littlebytesnews.com/2020/08/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-glm-baseline",
+  "timestamp": "2026-11-06T01:32:48.692977+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8234.0
+}

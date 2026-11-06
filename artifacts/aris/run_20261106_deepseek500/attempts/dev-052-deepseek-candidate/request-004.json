@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "What are the documented founding dates and founding participants of the World Bank and the International Monetary Fund?",
+        "candidates": [
+          {
+            "title": "Articles of Agreement of the International Monetary Fund",
+            "snippet": "The Articles of Agreement of the International Monetary Fund were adopted at the United Nations Monetary and Financial Conference (Bretton Woods, New Hampshire) ...",
+            "url": "https://www.imf.org/external/pubs/ft/aa/index.htm"
+          },
+          {
+            "title": "Bretton Woods Conference & the Birth of the IMF and World Bank",
+            "snippet": "The conference resulted in the creation of the International Monetary Fund (IMF) and the International Bank for Reconstruction & Development (IBRD)",
+            "url": "https://guides.loc.gov/this-month-in-business-history/july/bretton-woods-conference"
+          },
+          {
+            "title": "The IMF and the World Bank",
+            "snippet": "The IMF and the World Bank were created in July 1944 at an international conference in the United States (in Bretton Woods, New Hampshire) that established a ...",
+            "url": "https://www.imf.org/en/about/factsheets/sheets/2022/imf-world-bank-new"
+          },
+          {
+            "title": "History",
+            "snippet": "The Explore History describes the history of World Bank Group and provides access to a number of informative sites and resources, such as the Past ...",
+            "url": "https://documents.worldbank.org/en/archive/history"
+          },
+          {
+            "title": "The International Monetary Fund has been at the forefront of global ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/imf/posts/the-international-monetary-fund-has-been-at-the-forefront-of-global-economic-coo/883569483813842/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-candidate",
+  "timestamp": "2026-11-06T08:08:51.855188+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19721.171
+}

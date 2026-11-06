@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania. original source fact check",
+        "candidates": [
+          {
+            "title": "Bon Jovi did not play in front of just 12 people and 7 pumpkins at a Biden ...",
+            "snippet": "Fact check: Bon Jovi did not play in front of just 12 people and 7 pumpkins at a Biden campaign event. By Reuters. October 26, 20207:10 PM UTC ...",
+            "url": "https://www.reuters.com/article/world/fact-check-bon-jovi-did-not-play-in-front-of-just-12-people-and-7-pumpkins-at-a-idUSKBN27B2E9/"
+          },
+          {
+            "title": "VIDEO: Rock star Jon Bon Jovi performs ahead of Biden at rally in ...",
+            "snippet": "(AP) — Rock star Jon Bon Jovi gave a small concert at a drive-in rally in eastern Pennsylvania for Joe Biden on Saturday, performing three songs ...",
+            "url": "https://www.cbs17.com/news/your-local-election-hq/rock-star-jon-bon-jovi-performs-ahead-of-biden-at-rally-in-pennsylvania/"
+          },
+          {
+            "title": "Bon Jovi Plays at Biden Event After Candidate Visits Bucks County",
+            "snippet": "Rock star Jon Bon Jovi gave a small concert at a drive-in rally in eastern Pennsylvania for Joe Biden on Saturday, performing three songs ...",
+            "url": "https://www.nbcphiladelphia.com/news/local/bon-jovi-plays-at-biden-event-after-candidate-visits-bucks-county/2572756/"
+          },
+          {
+            "title": "Bon Jovi dismisses talk of running for office: 'Hell no'",
+            "snippet": "Don't expect Jon Bon Jovi to “Runaway” from music to run for political office — the rock star calls the life of a lawmaker a “shit existence ...",
+            "url": "https://thehill.com/blogs/in-the-know/535684-bon-jovi-dismisses-talk-of-running-for-office-hell-no/"
+          },
+          {
+            "title": "The Latest: Jon Bon Jovi does what he can at Biden rally",
+            "snippet": "5:25 p.m.. Rock star Jon Bon Jovi gave a small concert at a drive-in rally in eastern Pennsylvania for Joe Biden on Saturday, performing three ...",
+            "url": "https://columbiabasinherald.com/news/2020/oct/24/the-latest-jon-bon-jovi-does-what-he-can-at-2/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-baseline",
+  "timestamp": "2026-11-06T07:35:09.988365+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17699.296
+}

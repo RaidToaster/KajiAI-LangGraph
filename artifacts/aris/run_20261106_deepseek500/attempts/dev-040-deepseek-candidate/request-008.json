@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "What was the documented attendance count at the event where Jon Bon Jovi performed, and was it 12 people?",
+        "candidates": [
+          {
+            "title": "Bon Jovi",
+            "snippet": "Jon Bon Jovi began performing music live in 1975, at the age of 13, playing piano and guitar in New Jersey with his first band, Raze. At 16, Jon met David Bryan ...",
+            "url": "https://en.wikipedia.org/wiki/Bon_Jovi"
+          },
+          {
+            "title": "Elton John & Jon Bon Jovi at \"The Concert...20 Years With AIDS\" ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/robsonviannaeltonjohn/videos/elton-john-jon-bon-jovi-at-the-concert20-years-with-aidselton-john-and-jon-bon-j/788609203613371/"
+          },
+          {
+            "title": "Jon Bon Jovi told 20000 people he hadn't heard a roar like that in four years",
+            "snippet": "Jon Bon Jovi told 20,000 people he hadn't heard a roar like that in ... After 40 years they can still keep the crowd on their feet singing along.",
+            "url": "https://www.facebook.com/nj1015/posts/jon-bon-jovi-told-20000-people-he-hadnt-heard-a-roar-like-that-in-four-years-and/1064866492607690/"
+          },
+          {
+            "title": "On December 12, 2012, Bruce Springsteen and Jon Bon Jovi took ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/61574073939944/posts/on-december-12-2012-bruce-springsteen-and-jon-bon-jovi-took-the-stage-together-a/122181716408802464/"
+          },
+          {
+            "title": "Jon Bon Jovi Has 'Great Pride' in Band's 40-Year Legacy (Exclusive)",
+            "snippet": "Jon Bon Jovi reminisces on the band's impact — and future — ahead of the April 26 release of their Hulu documentary, 'Thank You, ...",
+            "url": "https://people.com/jon-bon-jovi-reflects-band-40-year-legacy-thank-you-goodnight-docuseries-exclusive-8637338"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-candidate",
+  "timestamp": "2026-11-06T07:35:58.437844+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17747.734
+}

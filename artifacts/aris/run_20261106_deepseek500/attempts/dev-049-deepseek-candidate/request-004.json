@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+        "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+        "candidates": [
+          {
+            "title": "CO₂ emissions per capita - Our World in Data",
+            "snippet": "Global CO2 emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in ...",
+            "url": "https://ourworldindata.org/grapher/co-emissions-per-capita"
+          },
+          {
+            "title": "Calculate Your Carbon Footprint - The Nature Conservancy",
+            "snippet": "Do you know your carbon footprint? What's a good carbon footprint? Use our tool to find out, compare it to the average, and take action.",
+            "url": "https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/"
+          },
+          {
+            "title": "Carbon Footprint Factsheet | Center for Sustainable Systems",
+            "snippet": "The U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest ...",
+            "url": "https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet"
+          },
+          {
+            "title": "CO2 Emissions - Global Energy Review 2025 - IEA",
+            "snippet": "Total energy-related CO2 emissions increased by 0.8% in 2024, hitting an all-time high of 37.8 Gt CO21. concentrations of 422.5 ppm in 2024,",
+            "url": "https://www.iea.org/reports/global-energy-review-2025/co2-emissions"
+          },
+          {
+            "title": "CO2 emissions (kt) - Glossary | DataBank",
+            "snippet": "Emission intensity is the average emission rate of a given pollutant from a given source relative to the intensity of a specific activity. Emission intensities ...",
+            "url": "https://databank.worldbank.org/metadataglossary/millennium-development-goals/series/EN.ATM.CO2E.KT"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-049-deepseek-candidate",
+  "timestamp": "2026-11-06T07:59:30.525759+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19159.843
+}

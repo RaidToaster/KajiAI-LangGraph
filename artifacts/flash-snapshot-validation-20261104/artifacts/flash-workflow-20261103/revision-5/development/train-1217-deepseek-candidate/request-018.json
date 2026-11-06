@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "US Treasury OFAC Cuba embargo medical travel authorization CIMAvax",
+        "candidates": [
+          {
+            "title": "Cuba Sanctions",
+            "snippet": "Effective September 30, 2026, OFAC amended § 515.564(a) to remove the authorization for persons subject to U.S. jurisdiction to travel to Cuba for purposes of ...",
+            "url": "https://ofac.treasury.gov/faqs/topic/1541"
+          },
+          {
+            "title": "774 | Office of Foreign Assets Control",
+            "snippet": "A separate provision of the CACR, § 515.560, authorizes the provision of health, life, and travel insurance-related services that are specific ...",
+            "url": "https://ofac.treasury.gov/faqs/774"
+          },
+          {
+            "title": "OFAC Issues New Cuba Sanctions Program and Amends ...",
+            "snippet": "OFAC issued new Cuba Sanctions Regulations and amended the CACR, expanding sanctions, restricting travel and increasing compliance risks for ...",
+            "url": "https://www.hklaw.com/en/insights/publications/2026/10/ofac-issues-new-cuba-sanctions-program-and-amends-the-cacr"
+          },
+          {
+            "title": "837 | Office of Foreign Assets Control",
+            "snippet": "OFAC issued an amendment to the CACR restricting imports of Cuban-origin alcohol and tobacco products, as well as specific categories of authorized travel to ...",
+            "url": "https://ofac.treasury.gov/faqs/837"
+          },
+          {
+            "title": "New Round of Cuba Sanctions Changes Expand ...",
+            "snippet": "OFAC's latest changes expand opportunities for U.S. persons to engage in medical research with Cuban nationals, authorize U.S. persons to ...",
+            "url": "https://www.akingump.com/en/insights/alerts/new-round-of-cuba-sanctions-changes-expand-opportunities-for"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-03T08:46:35.508215+00:00",
+  "status": "reserved_outcome_unknown"
+}

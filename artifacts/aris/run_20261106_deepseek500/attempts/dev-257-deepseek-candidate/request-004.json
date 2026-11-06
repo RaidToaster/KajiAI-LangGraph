@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A Maryland man was sentenced to a year in jail for throwing parties.",
+        "query": "Which court and jurisdiction imposed a one-year jail sentence on a Maryland man in connection with throwing parties?",
+        "candidates": [
+          {
+            "title": "Glossary of Court Terms",
+            "snippet": "Appellant -- The party who takes an appeal from one court to another. Appellate Court -- A court having jurisdiction to review the judgment or order of a lower ...",
+            "url": "http://www.mdcourts.gov/reference/glossary"
+          },
+          {
+            "title": "Frequently Asked Questions - Other",
+            "snippet": "You may file for divorce in Maryland if the grounds for divorce occurred in Maryland or if at least one spouse has lived in Maryland for one year prior to the ...",
+            "url": "http://www.courts.state.md.us/clerks/calvert/faqsother"
+          },
+          {
+            "title": "A Maryland man was sentenced to a year in jail ...",
+            "snippet": "A Maryland man was sentenced to a year in jail for throwing parties at his home that violated the governor's coronavirus restrictions on gatherings.",
+            "url": "https://www.facebook.com/KMOVStLouis/posts/a-maryland-man-was-sentenced-to-a-year-in-jail-for-throwing-parties-at-his-home-/10164295137255603/"
+          },
+          {
+            "title": "How The Sentencing Guidelines Work in Maryland",
+            "snippet": "Maryland has two trial levels, the District Court and the Circuit Court. The District Court handles most traffic cases, most criminal misdemeanor cases, and a ...",
+            "url": "https://www.maryland-defense-attorneys.com/articles/how-the-sentencing-guidelines-work-in-maryland/"
+          },
+          {
+            "title": "Peace Orders | The Maryland People's ...",
+            "snippet": "The Peace Order is a form of legal protection for anyone who is experiencing problems with an individual, including someone in a dating ...",
+            "url": "https://www.peoples-law.org/peace-orders"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-257-deepseek-candidate",
+  "timestamp": "2026-11-06T04:36:11.986986+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6961.296
+}

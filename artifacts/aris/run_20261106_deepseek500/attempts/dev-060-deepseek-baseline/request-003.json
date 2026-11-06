@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages. evidence",
+        "candidates": [
+          {
+            "title": "Covid: Do all tier 3 area workers get 80% of their wages?",
+            "snippet": "Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of ...",
+            "url": "https://www.bbc.com/news/54633147"
+          },
+          {
+            "title": "Inadequate Universal Credit and barriers to work",
+            "snippet": "by I Porter · 2023 · Cited by 7 — This note draws on growing evidence that inadequate income can act as a barrier to employment, explains how this happens and highlights recent ...",
+            "url": "https://www.jrf.org.uk/social-security/inadequate-universal-credit-and-barriers-to-work"
+          },
+          {
+            "title": "Universal Credit and earnings",
+            "snippet": "The amount you earn, and how often you're paid your wages, can affect your Universal Credit.",
+            "url": "https://www.gov.uk/guidance/universal-credit-and-earnings"
+          },
+          {
+            "title": "'If people who are capable of work refuse, then they'll get nothing' Long ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/TheLondonStandard/videos/%EF%B8%8F-if-people-who-are-capable-of-work-refuse-then-theyll-get-nothinglong-term-bene/906260602552632/"
+          },
+          {
+            "title": "Not so Universal: the two-tiered health element. How the Universal Credit ...",
+            "snippet": "Briefing by Victoria Anns on how the Universal Credit Bill will create a two-tiered system for disabled people.",
+            "url": "https://www.citizensadvice.org.uk/policy/publications/not-so-universal-the-two-tiered-health-element-how-the-universal-credit-bill/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-baseline",
+  "timestamp": "2026-11-06T08:31:06.470338+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21055.781
+}

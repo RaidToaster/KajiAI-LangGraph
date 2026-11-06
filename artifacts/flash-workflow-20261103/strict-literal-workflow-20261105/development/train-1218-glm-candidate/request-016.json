@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Senate roll call vote 111th Congress vote 396 individual senator votes including Sanders",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session - Senate.gov",
+            "snippet": "Roll Call Vote 111th Congress - 1st Session ; Question: On Passage of the Bill (H.R. 3590 as Amended ) ; Vote Number: 396 ; Vote Date: December 24, ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm"
+          },
+          {
+            "title": "Roll Call Votes by the U.S. Congress",
+            "snippet": "Senate floor votes are compiled through the Senate Legislative Information System by the Senate Bill Clerk under the direction of the Secretary of the Senate. Missing:  396  | Show results with:",
+            "url": "https://www.congress.gov/roll-call-votes"
+          },
+          {
+            "title": "Roll Call Votes 111th Congress-1st session (2009) - Senate.gov",
+            "snippet": "396 (60-39) Passed On Passage of the Bill: H.R. 3590 as Amended; An act entitled The Patient Protection and Affordable Care Act. Missing:  Sanders  | Show results with:",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session - Senate.gov",
+            "snippet": "The Voting Statistics section of the Votes page features facts and figures about votes made by Senators. Senate Logo · SENATORS. Missing:  396  individual",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00391.htm"
+          },
+          {
+            "title": "Browse the House Roll Call Votes by the U.S. Congress",
+            "snippet": "Roll Call Votes by the U.S. Congress | Show Senate House floor votes are compiled. Senate Legislative Information System. On passage Passed by the Yeas and ... Missing:  individual  | Show results with:",
+            "url": "https://www.congress.gov/votes/house/119th-congress/2nd-session"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-05T10:05:36.756703+00:00",
+  "status": "reserved_outcome_unknown"
+}

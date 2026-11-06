@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "parsed": true,
+  "valid_passage_ids": true,
+  "proposed_verdict": "TRUE",
+  "assessment": {
+    "proposed_verdict": "TRUE",
+    "confidence": "High",
+    "summary": "The claim is an attribution claim — that Klobuchar said these words — and both an independent debate transcript and a Politifact fact-check confirm she stated this exact sentence during the February 25, 2020 Charleston debate.",
+    "evidence": [
+      {
+        "finding": "The debate transcript in Charleston records Klobuchar saying: \"While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls.\"",
+        "source_urls": [
+          "S3"
+        ],
+        "quotes": {
+          "S3": "P1"
+        },
+        "stance": "supports"
+      },
+      {
+        "finding": "Politifact identifies the speaker as Amy Klobuchar stating the quoted sentence on February 25, 2020 in a debate.",
+        "source_urls": [
+          "S1"
+        ],
+        "quotes": {
+          "S1": "P1"
+        },
+        "stance": "supports"
+      },
+      {
+        "finding": "Politifact's fact-check evaluated the underlying factual claim and found it inaccurate (the targeted Wisconsin voters were not actually removed), but this concerns the statement's substance, not the attribution.",
+        "source_urls": [
+          "S1"
+        ],
+        "quotes": {
+          "S1": "P2"
+        },
+        "stance": "context"
+      }
+    ],
+    "assertions": [
+      {
+        "assertion": "\"US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls\"",
+        "resolved": true,
+        "source_urls": [
+          "S1",
+          "S3"
+        ],
+        "rationale": ""
+      }
+    ],
+    "gaps": [],
+    "contradictions": [
+      "If the claim were interpreted as asserting the substance of the statement (that Wisconsin actually removed hundreds of thousands of voters), S1 P2 would support FALSE; the text of the claim, however, is an attribution, which the records directly establish."
+    ],
+    "counterevidence_searched": true,
+    "sources_independent": true,
+    "peer_reviewed_sources": false,
+    "next_queries": [
+      "Search for the February 25, 2020 debate video or CBS/WISN broadcast records to independently confirm the quote beyond the UCSB transcript (which may share an underlying source with Politifact)."
+    ]
+  },
+  "usage": [
+    {
+      "service": "ollama",
+      "request_id": "001",
+      "sent_at": "2026-11-03T15:14:13.547535+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash:cloud",
+      "done": true,
+      "done_reason": "stop",
+      "input_tokens": 1723,
+      "output_tokens": 374,
+      "model_verified": true,
+      "incomplete": false
+    }
+  ]
+}

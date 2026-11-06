@@ -1,0 +1,1 @@
+S1(interface): Commonissue rejects customtext ratherthan ignoring; arbitraryotherneutralquestion remains. S2(semantic): Generic typedresponse_missing expresses lackresponse as uncertainty, neverdenial; allmodelmaterialitypreserved. S3(interface): Newstrictmode/sourcefreeze/nooldrawtranslations; sameguardednativeentryonly. Allbeforeimplementation.

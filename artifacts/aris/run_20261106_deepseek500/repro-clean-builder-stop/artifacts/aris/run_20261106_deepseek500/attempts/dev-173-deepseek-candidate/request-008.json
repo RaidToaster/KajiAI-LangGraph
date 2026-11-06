@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Carbon dioxide intoxication is caused by wearing face masks.",
+        "query": "What carbon dioxide exposure levels and durations are established as causing carbon dioxide intoxication, and how do they compare with levels measured inside worn face masks?",
+        "candidates": [
+          {
+            "title": "CO2 Levels Behind and in Front of Different Protective Mask ...",
+            "snippet": "by H Akhondi · 2022 · Cited by 5 — Elevated CO2 concentrations have historically caused symptoms of CO2 toxicity. Clinical symptoms of toxicity might occur when CO2 levels are above 2000 ppm, ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10324709/"
+          },
+          {
+            "title": "Effect of Wearing Face Masks on the Carbon Dioxide ...",
+            "snippet": "by O Geiss · 2021 · Cited by 90 — The measured concentrations were compared against existing threshold values for critical levels of carbon dioxide.",
+            "url": "https://aaqr.org/articles/aaqr-20-07-covid-0403"
+          },
+          {
+            "title": "Wearing a mask does not raise the carbon dioxide (CO2) ...",
+            "snippet": "The CO2 escapes into the air through the mask when you breathe out or talk. CO2 molecules are small enough to easily pass through mask material, ...",
+            "url": "https://www.facebook.com/CityofLaredoHealthDepartment/posts/wearing-a-mask-does-not-raise-the-carbon-dioxide-co2-level-in-the-air-you-breath/3926210314077969/"
+          },
+          {
+            "title": "Carbon Dioxide Health Hazard Information Sheet",
+            "snippet": "Breathing oxygen depleted air caused by extreme CO2 concentrations can lead to death by suffocation. What are the symptoms of different levels of exposure?",
+            "url": "https://www.fsis.usda.gov/sites/default/files/media_file/2020-08/Carbon-Dioxide.pdf"
+          },
+          {
+            "title": "Do Face Masks Cause CO2 Poisoning? And Other ...",
+            "snippet": "Find the truth behind mask myths and get factual answers on face mask safety and CO2 poisoning.",
+            "url": "https://www.zoomcare.com/blog/do-face-masks-cause-co2-poisoning-and-other-questions-answered"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-173-deepseek-candidate",
+  "timestamp": "2026-11-06T03:49:38.941641+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4168.25
+}

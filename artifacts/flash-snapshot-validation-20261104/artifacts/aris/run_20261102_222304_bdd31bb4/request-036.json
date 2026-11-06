@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A “new virus” disease called Novel Bunya V!rus that is caused by ticks is diagnosed as severe fever with thrombocytopenia syndrome (SFTS) is spreading in China.",
+        "query": "A “new virus” disease called Novel Bunya V!rus that is caused by ticks is diagnosed as severe fever with thrombocytopenia syndrome (SFTS) is spreading in China. evidence",
+        "candidates": [
+          {
+            "title": "Heartland Virus Disease—An Underreported Emerging Infection",
+            "snippet": "by ZF Dembek · 2024 · Cited by 22 — References. 1. Esguerra E.M. Heartland Virus: A New Virus Discovered in Missouri. ... Severe fever with thrombocytopenia syndrome virus: Emerging ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10892980/"
+          },
+          {
+            "title": "Mystery China pneumonia outbreak likely caused by new ...",
+            "snippet": "There is no licensed vaccine or specific treatments for the new virus. The new coronavirus outbreak is linked to a market in Wuhan, which ...",
+            "url": "https://theconversation.com/mystery-china-pneumonia-outbreak-likely-caused-by-new-human-coronavirus-129729"
+          },
+          {
+            "title": "(PDF) Analysis of the diversity of tick-borne viruses at ...",
+            "snippet": "Severe Fever with Thrombocytopenia Syndrome (SFTS) is a neglected tick ... new virus species in the identified viral genera. Besides, an ...",
+            "url": "https://www.researchgate.net/publication/370488284_Analysis_of_the_diversity_of_tick-borne_viruses_at_the_border_areas_in_Liaoning_Province_China"
+          },
+          {
+            "title": "Tick-Borne Viruses",
+            "snippet": "by J Shi · 2018 · Cited by 171 — ... tick rhabdovirus, a new virus identified in Amblyomma americanum ticks. ... called severe fever with thrombocytopenia syndrome (SFTS) with ...",
+            "url": "https://www.virosin.org/article/id/39a50ec3-d8f1-45a2-80f6-7adc028e68ca"
+          },
+          {
+            "title": "COVID-19: a novel zoonotic disease caused by a coronavirus ...",
+            "snippet": "by JS Mackenzie · 2020 · Cited by 698 — The virus rapidly spread to all provinces in China, as well as ... Based on established practice, the new virus was named SARS-CoV-2 by ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7086482/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "246-query_exhaustion",
+  "timestamp": "2026-11-02T15:37:25.231550+00:00",
+  "status": "reserved_outcome_unknown"
+}

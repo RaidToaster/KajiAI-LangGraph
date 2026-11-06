@@ -1,0 +1,279 @@
+{
+  "parsed": false,
+  "parse_error": "Ledger missing original whole claim",
+  "decisions": [
+    {
+      "id": "sufficient",
+      "proposed_verdict": "TRUE",
+      "confidence": "High",
+      "summary": "The council's roll-call minutes and an independent reporter's self-tallied account both record a seven-to-two approval of the bridge plan on 1 June 2024.",
+      "evidence": [
+        {
+          "finding": "Council minutes for the 1 June 2024 meeting record the bridge plan approved, seven votes in favor and two against, compiled by the clerk from the recorded roll call.",
+          "source": "N1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "An independent reporter who attended the 1 June 2024 meeting tallied the roll call himself and confirms the bridge plan passed seven to two, with no subsequent reversal at that meeting.",
+          "source": "N2",
+          "passage": "P1",
+          "stance": "supports"
+        }
+      ],
+      "resolved": true,
+      "gaps": [],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": [
+        {
+          "component": "Whole claim: bridge plan approved 7-2 by Northport council on 1 June 2024",
+          "question": "Was the bridge plan approved 7-2 on 1 June 2024?",
+          "findings": [
+            0,
+            1
+          ],
+          "event_or_data_date": "meeting 1 June 2024; reporter account published 2 June 2024",
+          "evidentiary_origin": "N1: council clerk's compiled minutes from recorded roll call; N2: reporter's self-conducted tally of the roll call at the meeting",
+          "unresolved_material_question": ""
+        }
+      ]
+    },
+    {
+      "id": "attribution",
+      "proposed_verdict": "TRUE",
+      "confidence": "High",
+      "summary": "The claim is only an attribution, and both the transcript and an independent recording confirm Mayor Imani made the stated remark on 2024-02-02.",
+      "evidence": [
+        {
+          "finding": "Interview transcript dated 2024-02-02 records Mayor Imani saying Eastport unemployment fell by 20 percent between 2022 and 2023; no dataset provided.",
+          "source": "I1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "Reporter B independently audio-recorded the interview on 2024-02-02 and the recording contains the same statement from Mayor Imani; Reporter B did not verify the statistic.",
+          "source": "I2",
+          "passage": "P1",
+          "stance": "supports"
+        }
+      ],
+      "resolved": true,
+      "gaps": [
+        "The embedded statistic itself is not verified by either record (addressed in case insufficient_content)."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": [
+        {
+          "component": "Whole claim: Mayor Imani said Eastport unemployment fell 20 percent 2022-2023",
+          "question": "Did Mayor Imani make this statement?",
+          "findings": [
+            0,
+            1
+          ],
+          "event_or_data_date": "interview 2024-02-02; recording same date",
+          "evidentiary_origin": "I1: interview transcript; I2: Reporter B's independent audio recording of the interview; neither verifies the statistic",
+          "unresolved_material_question": ""
+        }
+      ]
+    },
+    {
+      "id": "insufficient_content",
+      "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "Medium",
+      "summary": "The attribution is confirmed by two records, but the embedded 20 percent unemployment decline is only a repeated statement with no dataset or independent measurement supplied.",
+      "evidence": [
+        {
+          "finding": "The transcript attributes the 20 percent decline statement to Mayor Imani but explicitly provides no unemployment dataset.",
+          "source": "I1",
+          "passage": "P1",
+          "stance": "context"
+        },
+        {
+          "finding": "Reporter B's recording confirms the statement was made but states Reporter B did not verify the statistic; this distinguishes repetition from independent checking.",
+          "source": "I2",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "No measurement or labor-statistics data for Eastport unemployment in 2022 and 2023 is supplied.",
+        "No independently verified figure showing a 20 percent change in the stated direction exists among the records.",
+        "The mayor's statement, even if accurate, is not itself verification of the statistic."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": [
+        {
+          "component": "Whole claim: Eastport unemployment fell by 20 percent between 2022 and 2023",
+          "question": "Is the 20 percent decline measured and correct?",
+          "findings": [
+            0,
+            1
+          ],
+          "event_or_data_date": "statistic refers to 2022-2023; statement made 2024-02-02",
+          "evidentiary_origin": "not established: only the mayor's asserted figure is present; no dataset or independent measurement in either record",
+          "unresolved_material_question": "What do independent labor statistics show for Eastport unemployment in 2022 and 2023, and does any measurement confirm a 20 percent fall?"
+        }
+      ]
+    },
+    {
+      "id": "conflicting",
+      "proposed_verdict": "CONFLICTING",
+      "confidence": "High",
+      "summary": "Two independent 2023 citywide Westport delivery medians, 28 minutes and 34 minutes, straddle the 30-minute threshold and the discrepancy is unresolved.",
+      "evidence": [
+        {
+          "finding": "Lab A's independent citywide 2023 sample (order-confirmed to door-received) yields a median of 28 minutes, reviewed internally, supporting the less-than-30 claim.",
+          "source": "W1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "Lab B's independently collected citywide 2023 sample, same metric and period, yields a median of 34 minutes without using Lab A's observations; the discrepancy has not been resolved.",
+          "source": "W2",
+          "passage": "P1",
+          "stance": "refutes"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "The source of the divergence between the two medians (sampling, weighting, methodology, coverage) is unresolved in the supplied records."
+      ],
+      "contradictions": [
+        "Lab A median 28 minutes vs Lab B median 34 minutes for the same citywide 2023 population and metric; W2 states the discrepancy has not been resolved."
+      ],
+      "counterevidence_searched": false,
+      "sources_independent": true,
+      "ledger": [
+        {
+          "component": "Whole claim: 2023 independently measured Westport median delivery time < 30 minutes",
+          "question": "What does independent 2023 measurement show for the citywide median?",
+          "findings": [
+            0,
+            1
+          ],
+          "event_or_data_date": "samples cover calendar 2023",
+          "evidentiary_origin": "W1: Lab A's own sample and internally reviewed calculation; W2: Lab B's own sample, explicitly not using Lab A's observations or calculations",
+          "unresolved_material_question": "Why do the two independent medians differ, and which better represents the citywide population?"
+        }
+      ]
+    },
+    {
+      "id": "shared",
+      "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "Medium",
+      "summary": "The causal 15 percent reduction rests solely on the vendor's own press release, which admits no adjustment for traffic volume, construction, seasonality or other changes, and the Bulletin merely repeats the same origin without independent verification.",
+      "evidence": [
+        {
+          "finding": "The vendor press release (2024-06-01) asserts its signal system caused a 15 percent reduction in junction delays versus 2023, comparing observed before/after delays but with no adjustment for traffic volume, construction, seasonality or other changes.",
+          "source": "S1",
+          "passage": "P1",
+          "stance": "supports"
+        },
+        {
+          "finding": "The Southport Bulletin (2024-06-02) explicitly repeats the vendor's figures and collected or independently verified no measurements, so it is not an independent confirmation of the causal claim.",
+          "source": "S2",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": false,
+      "gaps": [
+        "No measurement by any party other than the vendor is supplied; apparent corroboration shares a single origin.",
+        "The stated causal condition is untested: confounders (traffic volume, construction, seasonality, other changes between 2023 and 2024) were not adjusted for by the vendor's own admission.",
+        "No independent study or official report attributing the delay change to the signal system versus alternative explanations is present."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": false,
+      "sources_independent": false,
+      "ledger": [
+        {
+          "component": "Whole claim: new signal system caused a 15 percent reduction in junction delays in 2024 vs 2023",
+          "question": "Is a 15 percent delay reduction attributable to the signal system?",
+          "findings": [
+            0,
+            1
+          ],
+          "event_or_data_date": "delay comparison refers to 2024 vs 2023; press release dated 2024-06-01, Bulletin 2024-06-02 (publication dates)",
+          "evidentiary_origin": "S1: vendor's own before/after comparison, unadjusted for confounders by its own statement; S2: repetition of vendor figures, no independent measurement",
+          "unresolved_material_question": "Do any non-vendor, confounder-controlled measurements attribute the delay change to the signal system specifically?"
+        }
+      ]
+    },
+    {
+      "id": "train-1225",
+      "proposed_verdict": "TRUE",
+      "confidence": "Medium",
+      "summary": "At the 19 February 2020 reference period, the SCF-derived calculation and an independent replication (PolitiFact) both support that Bloomberg's $64.2 billion net worth exceeded the collective wealth of the bottom 125 million Americans; the Jacobin piece appears to share textual origin with S1 and is not treated as independent.",
+      "evidence": [
+        {
+          "finding": "Peoples Policy Project calculation using SCF data: bottom 38 percent of US households (~47.8 million households, ~125.7 million people) had collective net worth of $11.4 billion, versus Bloomberg's $64.2 billion (per Forbes), i.e., Bloomberg owns nearly 6 times as much.",
+          "source": "S1",
+          "passage": "P2",
+          "stance": "supports"
+        },
+        {
+          "finding": "PolitiFact had an experienced analyst independently replicate the math; the replication obtained about $6 billion for the bottom 38 percent (versus $11.4 billion) but verified the calculation that Bloomberg had more wealth than the bottom 38 percent of households combined; PolitiFact also identifies Bloomberg as former mayor of New York.",
+          "source": "S2",
+          "passage": "P2",
+          "stance": "supports"
+        },
+        {
+          "finding": "Jacobin repeats the same SCF figures ($64.2 billion Forbes; $11.4 billion bottom 38 percent; ~125.7 million people) and its text closely tracks S1, so independence from S1 is not established.",
+          "source": "S3",
+          "passage": "P2",
+          "stance": "context"
+        },
+        {
+          "finding": "Sanders's debate statement (19 Feb 2020) and Common Dreams coverage report the claim as asserted; these establish attribution and timing but are not independent verification of the wealth comparison.",
+          "source": "S4",
+          "passage": "P1",
+          "stance": "context"
+        }
+      ],
+      "resolved": true,
+      "gaps": [
+        "PolitiFact's replication found the bottom 38 percent could hold closer to $6 billion (SCF sensitivity), which supports the claim a fortiori but shows the bottom-38% wealth figure is estimate-dependent.",
+        "The estimate depends on SCF self-reported household wealth and a 2.63 average household size conversion; no alternative wealth dataset is supplied.",
+        "S5, S6, S7 are snippets not bearing on the wealth comparison and add nothing beyond the debate attribution."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": true,
+      "sources_independent": false,
+      "ledger": [
+        {
+          "component": "Whole claim: former NYC mayor Mike Bloomberg owns more wealth than the bottom 125 million Americans",
+          "question": "Does the wealth comparison hold for the ~19 Feb 2020 reference period?",
+          "findings": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "event_or_data_date": "reference context 19 February 2020 (debate); SCF is the triennial survey's latest release at that time",
+          "evidentiary_origin": "S1: Peoples Policy Project calculation from Federal Reserve SCF plus Forbes net worth (Bruenig); S2: PolitiFact-commissioned analyst independently replicated the math using SCF; S3: repeats S1's figures and text (origin shared, not independent); S4: debate attribution only",
+          "unresolved_material_question": "None material for the claim as worded; the SCF-based figure for the bottom 38% is estimate-dependent ($6B-$11.4B, both far below $64.2B)."
+        },
+        {
+          "component": "Bloomberg identified as former mayor of New York, US",
+          "question": "Was Bloomberg a former NYC mayor at the reference time?",
+          "findings": [
+            1
+          ],
+          "event_or_data_date": "not established (publication dated March 2020)",
+          "evidentiary_origin": "S2: PolitiFact's own description of Bloomberg as 'the former mayor of New York'",
+          "unresolved_material_question": ""
+        }
+      ]
+    }
+  ],
+  "anchor_gate": null,
+  "anchor_gate_eligible": false,
+  "scope": "Prospective fixed development packet; authored controls are not empirical acceptances; no live retrieval/workflow result."
+}

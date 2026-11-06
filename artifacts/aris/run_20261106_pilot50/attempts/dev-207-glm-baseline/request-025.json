@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "Resubmit with the draft text to be assessed.",
+        "candidates": [
+          {
+            "title": "Revise and Resubmit an Application | NIAID",
+            "snippet": "Here we cover factors to consider for revising and resubmitting an application, then rules for resubmitting, and finally our advice for ...",
+            "url": "https://www.niaid.nih.gov/grants-contracts/revise-resubmit-application"
+          },
+          {
+            "title": "Achieve > Allow students to resubmit a Writing assignment",
+            "snippet": "Students can resubmit a draft on their own following the instructions in the help article Resubmit a Writing assignment. If a student needs to resubmit their ...",
+            "url": "https://mhe.my.site.com/macmillanlearning/s/article/Achieve-Allow-students-to-resubmit-a-Writing-assignment"
+          },
+          {
+            "title": "Return to Draft - Revisiting Guidance - Wiley",
+            "snippet": "Use the return to draft option when a manuscript might be suitable for publication, but some elements of the submission need to be addressed and resubmitted ...",
+            "url": "https://www.wiley.com/en-us/publishing/article/editors-and-reviewers/resources/return-to-draft-guidance"
+          },
+          {
+            "title": "Submitting Drafts - Cadmus Help Docs",
+            "snippet": "You'll also be able to resubmit your draft as many times as you like up until the draft due date. just click Submit, and follow the same process as above.",
+            "url": "https://support.cadmus.io/students/submitting-drafts"
+          },
+          {
+            "title": "Fake text messages are circulating about a military draft, and ...",
+            "snippet": "Don't fall for any text messages saying you've been selected for a military draft, U.S. Army Recruiting Command warned in an urgent news release ...",
+            "url": "https://www.facebook.com/ThisWeekABC/posts/fake-text-messages-are-circulating-about-a-military-draft-and-the-us-army-says-t/2766747350035356/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-glm-baseline",
+  "timestamp": "2026-11-06T00:12:07.672650+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3392.984
+}

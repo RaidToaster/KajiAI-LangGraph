@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "There is a scam involving Santander customers being sent fake bank cards.",
+        "query": "What primary records or reports from Santander or law enforcement describe a scam involving fake bank cards sent to Santander customers?",
+        "candidates": [
+          {
+            "title": "Case Examples - FinCEN.gov",
+            "snippet": "Financial data, collected from financial institutions by the Financial Crimes Enforcement Network under the Bank Secrecy Act (BSA), has proven to be of considerable value in money laundering, terrorist financing and other financial crimes investigations by law enforcement.",
+            "url": "https://www.fincen.gov/case-examples"
+          },
+          {
+            "title": "Santander Share",
+            "snippet": "During 2025, the Group submitted more than 311,000 suspicious activity reports to the relevant authorities, reflecting the scale and intensity of its efforts to identify, analyse and escalate potentially irregular activities across the markets in which it operates.",
+            "url": "https://www.santander.com/en/stories/preventing-and-detecting-unusual-transactions-across-santander-group-to-protect-customers-and-the-financial-system-in-all-markets"
+          },
+          {
+            "title": "What You Can Do to Protect Your Information | Santander Bank",
+            "snippet": "Protect yourself from fraud with Santander Bank security tools. Discover how to report scams, set alerts, lock your card, and keep your accounts secure.",
+            "url": "https://www.santanderbank.com/personal/security-center/what-you-can-do-to-prevent-fraud"
+          },
+          {
+            "title": "Investigations Assisted by Bank Secrecy Act Data - FinCEN.gov",
+            "snippet": "Every issue of the SAR Activity Review contains case examples in which Bank Secrecy Act (BSA) data supported law enforcement investigations. Law enforcement officials use BSA records to help investigate a variety of crimes, including tax evasion, narcotics trafficking and identity theft. Below is a list of all of the case examples that have been published in the current and previous editions ...",
+            "url": "https://www.fincen.gov/investigations-assisted-bank-secrecy-act-data"
+          },
+          {
+            "title": "What We Do to Protect Your Information | Santander Bank",
+            "snippet": "If you've already provided a passcode or PIN over the phone, please call us either at the number on your statement, or on the back of your card. Any suspicious emails that appear to be from Santander should be forwarded to reportabuse@Santander.us.",
+            "url": "https://www.santanderbank.com/personal/security-center/what-we-do"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-059-deepseek-candidate",
+  "timestamp": "2026-11-06T08:28:41.176627+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20910.484
+}

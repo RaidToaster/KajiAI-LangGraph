@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "Search IRS Form 8965 and individual shared responsibility payment assessment records for any taxpayer assessed $10,000 or more, by tax year and income level.",
+        "candidates": [
+          {
+            "title": "[PDF] 2018 Instructions for Form 8965 - IRS",
+            "snippet": "Form 8965 is used only to claim and report coverage exemptions. you may need to report a shared responsibility. Multiply $695 by the number of ... Missing:  records  | Show results with:",
+            "url": "https://www.irs.gov/pub/irs-prior/i8965--2018.pdf"
+          },
+          {
+            "title": "Questions and answers on the individual shared responsibility ...",
+            "snippet": "under the TCJA, you no longer need to make a shared responsibility payment or file Form 8965 with your tax return if you don't have minimum or all of 2019. Missing:  level.  | Show results with:",
+            "url": "https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-individual-shared-responsibility-provision"
+          },
+          {
+            "title": "[PDF] Form 8965 - IRS",
+            "snippet": "Complete this form if you have a Marketplace-granted coverage exemption or you are claiming a coverage exemption on your return.",
+            "url": "https://www.irs.gov/pub/irs-prior/f8965--2017.pdf"
+          },
+          {
+            "title": "IRS Form 8965 Explained: Health Coverage Exemptions ...",
+            "snippet": "IRS Form 8965 was used to claim or report exemptions from the Affordable Care Act's individual shared responsibility provision. Under the ...",
+            "url": "https://www.aimfinancial.com/irs-form-8965-explained-health-coverage-exemptions-affordable-care-act-rules-and-what-taxpayers-need-to-know/"
+          },
+          {
+            "title": "2018-2026 Form IRS 8965 - Blank Fillable Template | Fill Out ...",
+            "snippet": "The primary purpose of IRS Form 8965 is to document exemptions from the individual shared responsibility provision under the Affordable Care Act.",
+            "url": "https://irs-form-8965.pdffiller.com/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-candidate",
+  "timestamp": "2026-11-06T08:47:55.762274+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22065.078
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Has the vaccine been approved or registered by Cuban regulatory authorities, and for what indications and patient populations?",
+        "candidates": [
+          {
+            "title": "Cuban COVID-19 Vaccines for Children: Rinaldo Puga MD ...",
+            "snippet": "by G Reed · 2022 · Cited by 7 — both vaccines approved for emergency use in children and adolescents by Cuba's regulatory authority. More than 40 million doses have been ...",
+            "url": "https://www.scielosp.org/article/medicc/2022.v24n1/14-18/en/"
+          },
+          {
+            "title": "A Long Shot? Cuba's Vaccines and Medical Diplomacy",
+            "snippet": "Cuban authorities have developed, approved, and distributed two vaccines: Abdala and Soberana. Thus far, 87 percent of Cuba's population has ...",
+            "url": "https://www.power3point0.org/2022/03/17/a-long-shot-cubas-vaccines-and-medical-diplomacy/"
+          },
+          {
+            "title": "Cuban COVID-19 Vaccine Starts Stage III Trials in Havana",
+            "snippet": "The Cuban COVID-19 candidate vaccine #SOBERANA02 entered phase III clinical trials in Havana to prove its efficacy.",
+            "url": "https://www.facebook.com/AgenciaCubanaDeNoticias/posts/the-cuban-covid-19-candidate-vaccine-soberana02-entered-phase-iii-clinical-trial/3543204975778656/"
+          },
+          {
+            "title": "Vaccines Licensed for Use in the United States",
+            "snippet": "The product name and trade name of vaccines licensed for use in the United States.",
+            "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/vaccines-licensed-use-united-states"
+          },
+          {
+            "title": "Vaccines and Public Trust: Containing COVID-19 in Cuba",
+            "snippet": "by C Gorry · 2022 · Cited by 12 — Today, Cuba has three vaccines authorized for emergency use-Soberana 02 and Soberana Plus developed by IFV, and Abdala, developed by CIGB.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35157633/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-05T10:42:40.510216+00:00",
+  "status": "reserved_outcome_unknown"
+}

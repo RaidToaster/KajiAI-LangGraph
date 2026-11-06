@@ -1,0 +1,12 @@
+# Fresh Sol review
+
+Requested route: native Codex, gpt-6.1-sol, high. Observed model and effort: not independently exposed in the agent response. Review independence: same-family. Acceptance status: provisional. Review scope: scripted reachability, historical eligibility screen, and live harness preflight.
+
+**8/10 for the scoped no-go.** Keep the baseline default and query-exhaustion stopping opt-in. This is a same-family, provisional review.
+
+- **Scripted reachability is established.** In e01 and e04, both arms reached round two with the same correct prediction, two supporting authored records, exhausted queries, and no semantic gap. The baseline’s scripted third assessment raised confidence to High without retrieving anything and passed the production gate. The candidate preserved the prediction and quotes but returned `UNVERIFIED`. These cases establish that stopping can forfeit a correct acceptance. They provide no estimate of how often a live model would produce that outcome.
+- **The historical split is supported.** All 77 recorded blockers were semantic gaps, including both new correct acceptances. The other 175 selected trajectories had two wrong-to-right prediction changes, one right-to-wrong change, zero new acceptances, and 2,877,298 observed incremental tokens. The 175 have no recorded blocker. Pending round-two source reviews are unavailable, so eligibility, stopping incidence, and deployment savings remain unknown.
+- **Before live use, reconcile transport records even if the subprocess dies.** A request file records a reservation. A missing terminal response must remain unknown. `usage.json` is written at pair exit and can be lost on a hard timeout. The frozen hashes match, and the three local wire fixtures show no normal-path transport defect.
+- **Before applying the scientific stop rule, adjudicate every flagged live loss.** The scripted reviewer approves literal citations without assessing entailment. The e03 raw result shows that the gate can accept a verdict that conflicts with its cited finding. Require the raw finding, stance, exact quotations, and source origins to support the gold verdict before counting a verified loss.
+
+Reviewer memory should preserve the prior study score and no-go, record the new reachability witnesses and the retrospective eligibility boundary, and carry forward the evidence adjudication and transport reconciliation requirements. No edits or inference were performed in this review.

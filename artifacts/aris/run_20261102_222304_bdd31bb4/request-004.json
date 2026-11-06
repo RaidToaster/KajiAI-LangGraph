@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "All USA Ballots Arriving After Election Day Will Be Thrown Out evidence",
+        "candidates": [
+          {
+            "title": "Fact check: Mail-in ballots arriving after Election Day will ...",
+            "snippet": "“Even if your mail-in ballot is postmarked today, if it arrives after Election Day, it will be thrown out. Discounted. Ignored,” reads an Oct.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/30/fact-check-some-mail-ballots-arriving-post-election-day-count/6075311002/"
+          },
+          {
+            "title": "Understand the Supreme Court's 5-4 decision allowing ...",
+            "snippet": "Understand the Supreme Court's 5-4 decision allowing post-Election Day ballot counting.",
+            "url": "https://www.facebook.com/KIRO7Seattle/posts/understand-the-supreme-courts-5-4-decision-allowing-post-election-day-ballot-cou/1439092138253846/"
+          },
+          {
+            "title": "Supreme Court rules late-arriving ballots can be counted, a ...",
+            "snippet": "The Supreme Court has ruled that states can count mailed ballots that arrive after Election Day, preserving rules in nearly 30 states, and ...",
+            "url": "https://apnews.com/article/supreme-court-mailed-ballots-trump-elections-5f24f718ea92a33838485ce6302e079e"
+          },
+          {
+            "title": "What if Mail Ballots Arrive After Election Day Without a ...",
+            "snippet": "Postmarks are the primary evidence election officials use to verify ... ballots arriving after Election Day without a postmark are not suspicious.",
+            "url": "https://www.brennancenter.org/our-work/analysis-opinion/what-if-mail-ballots-arrive-after-election-day-without-postmark"
+          },
+          {
+            "title": "Supreme Court takes up major elections dispute over ...",
+            "snippet": "The Supreme Court will decide whether federal law prohibits states from counting mail-in ballots that arrive after Election Day.",
+            "url": "https://www.cbsnews.com/news/supreme-court-late-arriving-mail-ballots-election-day/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "17-baseline",
+  "timestamp": "2026-11-02T15:33:28.221849+00:00",
+  "status": "reserved_outcome_unknown"
+}

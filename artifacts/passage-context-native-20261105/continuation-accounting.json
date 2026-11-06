@@ -1,0 +1,92 @@
+{
+  "totals": {
+    "ollama": 123,
+    "ollama_input_tokens": 1485888,
+    "ollama_output_tokens": 186125,
+    "jev": 165,
+    "jev_input_tokens": 488862,
+    "jev_output_tokens": 46550
+  },
+  "flash_sends_by_requested_model": {
+    "glm-5.3-flash:cloud": 77,
+    "deepseek-v4.1-flash:cloud": 46
+  },
+  "new_workflow_search": 78,
+  "new_workflow_fetch": 144,
+  "source": "artifacts\\flash-workflow-20261103\\strict-literal-workflow-20261105\\usage-current.json",
+  "source_sha256": "9d773683591dd2d338e18a781b81e45c5b29ebffeb3872f940077393d5e8ae78",
+  "known_local_capture_failure": "artifacts\\flash-workflow-20261103\\strict-literal-workflow-20261105\\development\\train-1209-glm-candidate\\resume-review.json",
+  "historical_unknown": "One historical refused-loopback token usage remains UNKNOWN, never zero.",
+  "all_model_outcomes_known": true,
+  "confirmation_attempts": 0,
+  "final_attempts": 0,
+  "additional_phase": "artifacts/passage-decision-native-20261105",
+  "additional_phase_sends": [
+    {
+      "service": "ollama",
+      "request_id": "001",
+      "sent_at": "2026-11-05T11:11:13.156680+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash:cloud",
+      "done": true,
+      "done_reason": "stop",
+      "input_tokens": 8192,
+      "output_tokens": 2259,
+      "model_verified": true,
+      "incomplete": false
+    }
+  ],
+  "scope": "All continuation requests through this new native phase; historical study/unknown separate.",
+  "base_sha256": "196d2e14f23054048ed783953bf7b09c33c9a6f5beeca7a0369f8b7b2cbc6ecf",
+  "phase_attempts": [
+    {
+      "directory": "artifacts/passage-context-native-20261105/glm-anchor",
+      "task": {
+        "id": "glm-anchor",
+        "model": "glm",
+        "kind": "anchor",
+        "started_at": "2026-11-05T16:23:42.409216+00:00",
+        "protocol_sha256": "8ff3a958035672b1ed4223fba622dd18f7f61f5d9a6571a8979397d56401b54d"
+      },
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 20.75,
+        "accounting_problem": false,
+        "hard_stop": false
+      },
+      "sends": [
+        {
+          "service": "ollama",
+          "request_id": "001",
+          "sent_at": "2026-11-05T16:23:44.837303+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 8231,
+          "output_tokens": 1895,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "002",
+          "sent_at": "2026-11-05T16:24:02.413145+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4929,
+          "output_tokens": 249
+        }
+      ]
+    }
+  ],
+  "new_unknown_or_accounting_problems": [],
+  "final_launch_in_this_chat": false
+}

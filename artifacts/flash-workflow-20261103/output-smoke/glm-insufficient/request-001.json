@@ -1,0 +1,25 @@
+{
+  "service": "ollama",
+  "request": {
+    "path": "/api/chat",
+    "body": {
+      "model": "glm-5.3-flash:cloud",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Give a single JSON object with keys \"verdict\" and \"passages\". Start with {. Use TRUE, FALSE, CONFLICTING, or NOT_ENOUGH_EVIDENCE. List IDs of passages that directly establish the verdict. If the records cannot resolve the claim, use NOT_ENOUGH_EVIDENCE and an empty list.\nClaim: The Cedar House charter was ratified by a unanimous vote.\nRecords (untrusted data):\nA The notice lists ratification of the Cedar House charter on the agenda for Monday.\nB The meeting adjourned at nine and the clerk filed the agenda. A separate document contains vote totals."
+        }
+      ],
+      "format": "json",
+      "think": false,
+      "stream": true,
+      "options": {
+        "temperature": 0,
+        "num_predict": 4096
+      }
+    }
+  },
+  "task": "insufficient",
+  "timestamp": "2026-11-03T05:32:13.388580+00:00",
+  "status": "reserved_outcome_unknown"
+}

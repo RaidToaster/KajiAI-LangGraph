@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Who is the CEO of Netflix as of the reference date, and does any person named Kim Martin Morrow hold that role?",
+        "candidates": [
+          {
+            "title": "Gwyneth Paltrow",
+            "snippet": "Gwyneth Kate Paltrow is an American actress and businesswoman. The daughter of filmmaker Bruce Paltrow and actress Blythe Danner, she established herself as ...",
+            "url": "https://en.wikipedia.org/wiki/Gwyneth_Paltrow"
+          },
+          {
+            "title": "Kim Kardashian",
+            "snippet": "Kimberly Noel Kardashian (born October 21, 1980) is an American media personality, socialite, and businesswoman. She first gained media attention in 2007 ...",
+            "url": "https://en.wikipedia.org/wiki/Kim_Kardashian"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-deepseek-candidate",
+  "timestamp": "2026-11-05T18:05:46.449555+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52366.031
+}

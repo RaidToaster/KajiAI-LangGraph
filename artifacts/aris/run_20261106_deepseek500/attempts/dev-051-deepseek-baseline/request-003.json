@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost.",
+        "query": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost. evidence",
+        "candidates": [
+          {
+            "title": "Why BJP's 'Free COVID Vaccine for Votes' Offer for Bihar Is Just Unethical",
+            "snippet": "And if the announcement had to be made, why didn't incumbent chief minister Nitish Kumar do so? The BJP is after all allied with him as the NDA, ...",
+            "url": "https://science.thewire.in/health/bjp-bihar-assembly-polls-manifesto-free-covid-vaccines-questions-model-code-of-conduct/"
+          },
+          {
+            "title": "BJP's Free Covid Vaccine Promise Shows It's Discriminatory Nature: Sanjay Raut",
+            "snippet": "Shiv Sena leader Sanjay Raut slammed the Bharatiya Janata Party for promising free COVID-19 vaccine to those who vote for BJP in Bihar ...",
+            "url": "https://www.ndtv.com/india-news/coronavirus-bjps-free-covid-vaccine-promise-shows-its-discriminatory-nature-says-sanjay-raut-2314574"
+          },
+          {
+            "title": "Free COVID-19 vaccine promise not violation of poll code: EC",
+            "snippet": "BJP, in its manifesto for Bihar elections, had promised free COVID-19 vaccine once it is cleared by the ICMR.",
+            "url": "https://www.thehindu.com/elections/bihar-assembly/free-covid-19-vaccine-promise-not-violation-of-poll-code-ec/article32989522.ece"
+          },
+          {
+            "title": "India Covid: What are the claims around the 'free vaccine' policy?",
+            "snippet": "India has given out a record eight million vaccine doses in a single day - we've put that into context.",
+            "url": "https://www.bbc.com/news/57400891"
+          },
+          {
+            "title": "'Why No Covid Vaccine For All?,' Opposition Hits Out At Centre Over Fake Promises During Elections",
+            "snippet": "Will those who have recovered from or suffering from Covid-19 be vaccinated? Will the BJP provide covid vaccine to one and all?",
+            "url": "https://www.youtube.com/watch?v=8zgdlpsUq80"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-051-deepseek-baseline",
+  "timestamp": "2026-11-06T08:03:00.484115+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19369.796
+}

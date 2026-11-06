@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Search Sudanese government or independent fact-finding records (e.g., OHCHR FFM Sudan) for incidents at or near the French embassy in Khartoum, with dates and nature of incident.",
+        "candidates": [
+          {
+            "title": "Independent International Fact-Finding Mission for the Sudan",
+            "snippet": "Responding to the human rights and humanitarian crisis caused by the ongoing armed conflict in the Sudan, the Human Rights Council, ...",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/ffm-sudan/index"
+          },
+          {
+            "title": "Sudan: UN Fact-Finding Mission outlines extensive human ...",
+            "snippet": "GENEVA – Sudan's warring parties have committed an appalling range of harrowing human rights violations and international crimes, ...",
+            "url": "https://www.ohchr.org/en/press-releases/2024/09/sudan-un-fact-finding-mission-outlines-extensive-human-rights-violations"
+          },
+          {
+            "title": "A/HRC/57/CRP.6",
+            "snippet": "It provides a more detailed description of the patterns of human rights violations and abuses and violations of international humanitarian law ...",
+            "url": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session57/A-HRC-57-CRP-6-en.pdf"
+          },
+          {
+            "title": "Sudan: Extend the Fact-Finding Mission's mandate and ...",
+            "snippet": "As the warring parties continue to show utter disregard for international humanitarian law, international human rights law, and their ...",
+            "url": "https://www.globalr2p.org/publications/sudan-extend-the-fact-finding-missions-mandate-and-ensure-adequate-resources-for-investigations-and-reporting/"
+          },
+          {
+            "title": "A/HRC/61/77: Sudan: Hallmarks of Genocide in El-Fasher",
+            "snippet": "SummaryThe Independent International Fact-Finding Mission for the Sudan (“the Mission”) assesses that the mass killings and related ...",
+            "url": "https://www.ohchr.org/en/documents/thematic-reports/ahrc6177-sudan-hallmarks-genocide-el-fasher-report-independent"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-candidate",
+  "timestamp": "2026-11-06T06:40:28.710771+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14418.015
+}

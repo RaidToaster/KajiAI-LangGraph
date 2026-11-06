@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "Did Jon Bon Jovi perform at a campaign event for Joe Biden in Pennsylvania, and on what date and at what location did it occur?",
+        "candidates": [
+          {
+            "title": "VIDEO: Rock star Jon Bon Jovi performs ahead of Biden at rally ...",
+            "snippet": "(AP) — Rock star Jon Bon Jovi gave a small concert at a drive-in rally in eastern Pennsylvania for Joe Biden on Saturday, performing three songs ... Missing:  occur?  | Show results with:",
+            "url": "https://www.cbs17.com/news/your-local-election-hq/rock-star-jon-bon-jovi-performs-ahead-of-biden-at-rally-in-pennsylvania/"
+          },
+          {
+            "title": "Bon Jovi Plays at Biden Event After Candidate Visits Bucks ...",
+            "snippet": "Singer Jon Bon Jovi performs during a Biden-Harris Drive-In event at Dallas High School, in Dallas, Pennsylvania, on October 24, 2020. Missing:  occur?  | Show results with:",
+            "url": "https://www.nbcphiladelphia.com/news/local/bon-jovi-plays-at-biden-event-after-candidate-visits-bucks-county/2572756/"
+          },
+          {
+            "title": "Fact check: Bon Jovi did not play in front of just 12 people and 7 ...",
+            "snippet": "From a FB friend: “Bon Jovi was featured at a Biden event in PA. He played for 12 people and 7 pumpkins.” Biden and President Trump have had ... Missing:  occur?  | Show results with:",
+            "url": "https://www.reuters.com/article/world/fact-check-bon-jovi-did-not-play-in-front-of-just-12-people-and-7-pumpkins-at-a-idUSKBN27B2E9/"
+          },
+          {
+            "title": "Jon Bon Jovi to accompany Joe and Jill Biden in Pennsylvania ...",
+            "snippet": "Jill and Joe Biden will be joined by Jon Bon Jovi in Luzerne County, Pennsylvania on Saturday for a drive-in event, according to the Biden ... Missing:  occur?  | Show results with:",
+            "url": "https://www.wkrn.com/news/national/jon-bon-jovi-to-accompany-joe-and-jill-biden-in-pennsylvania-saturday/"
+          },
+          {
+            "title": "Jon Bon Jovi at a campaign event for Joe Biden presidential ...",
+            "snippet": "This video shows musician Jon Bon Jovi giving a speech at a Biden-Harris campaign rally in Pennsylvania on October 24, 2020. He is seen on stage ... Missing:  occur?  | Show results with:",
+            "url": "https://www.facebook.com/JohnFrancisBongiovi.fans.forever/posts/jon-bon-jovi-at-a-campaign-event-for-joe-biden-presidential-candidate-dallas-hig/2075190125946781/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-candidate",
+  "timestamp": "2026-11-06T07:35:52.327952+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17741.625
+}

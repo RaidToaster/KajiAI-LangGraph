@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The CDC has said over 98,000 people had non-COVID related deaths because of hospitals that were closed down for non-essential services",
+        "query": "The CDC has said over 98,000 people had non-COVID related deaths because of hospitals that were closed down for non-essential services counterevidence",
+        "candidates": [
+          {
+            "title": "Excess Deaths Associated with COVID-19 - CDC",
+            "snippet": "These deaths could represent misclassified COVID-19 deaths, or potentially could be indirectly related to the COVID-19 pandemic (e.g., deaths from other causes ...",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm"
+          },
+          {
+            "title": "Impact of Hospital Strain on Excess Deaths During the COVID ...",
+            "snippet": "This report describes excess deaths from hospital strain from the COVID-19 pandemic.",
+            "url": "https://www.cdc.gov/mmwr/volumes/70/wr/mm7046a5.htm"
+          },
+          {
+            "title": "The impact of the pandemic on non-COVID-19 causes of death ...",
+            "snippet": "The pandemic led to excess mortality for almost all non-COVID-19 causes in the US when measured as a multiple cause, being particularly high in ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145281/"
+          },
+          {
+            "title": "AHA continues to debunk false claims about COVID-19 deaths ...",
+            "snippet": "According to the Centers for Disease Control and Prevention, there have been as many as 299,028 more deaths this year compared to a typical year ...",
+            "url": "https://www.aha.org/news/blog/2020-11-02-aha-continues-debunk-false-claims-about-covid-19-deaths-and-payments"
+          },
+          {
+            "title": "How are COVID-19 deaths counted? It's complicated | AAMC",
+            "snippet": "As the U.S. death toll nears a half-million, confusion continues over whether people die “of” COVID-19 or “with” COVID-19.",
+            "url": "https://www.aamc.org/news/how-are-covid-19-deaths-counted-it-s-complicated"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-142-deepseek-baseline",
+  "timestamp": "2026-11-06T00:13:18.721514+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3464.031
+}

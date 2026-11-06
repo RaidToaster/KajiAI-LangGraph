@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "What is the original source and upload date of the video, and who first circulated it?",
+        "candidates": [
+          {
+            "title": "History of YouTube - Wikipedia",
+            "snippet": "The first YouTube video, titled Me at the zoo, was uploaded on April 23, 2005, and shows co-founder Jawed Karim at the San Diego Zoo and currently has over 355 ...",
+            "url": "https://en.wikipedia.org/wiki/History_of_YouTube"
+          },
+          {
+            "title": "How to find the origin of a video online - YouTube",
+            "snippet": "Description: You see a video of interest posted online and want to know where it came from – but how to get started? InVID -- a free tool ...",
+            "url": "https://www.youtube.com/watch?v=bHNimjTpxd8"
+          },
+          {
+            "title": "YouTube | History, Founders, Purchase, Google, Music, Videos ...",
+            "snippet": "YouTube was founded by Steve Chen, Chad Hurley, and Jawed Karim, by Steve Chen, Chad Hurley, and Jawed Karim, would become the first video uploaded",
+            "url": "https://www.britannica.com/topic/YouTube"
+          },
+          {
+            "title": "How to find the original source of a photo or video - DeepSearch",
+            "snippet": "Trace a photo or video through copies, crops, keyframes, dates, and archives without mistaking the first search result for the original.",
+            "url": "https://deepsearch.app/guides/how-to-find-the-original-source-of-a-photo-or-video"
+          },
+          {
+            "title": "How can I find out when a particular YouTube video was created?",
+            "snippet": "YouTube was founded exactly 21 years ago, on 14 February. On April 23, 2005 (20 years ago today), the very first YouTube video was uploaded.",
+            "url": "https://www.reddit.com/r/youtube/comments/106njpz/how_can_i_find_out_when_a_particular_youtube/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-candidate",
+  "timestamp": "2026-11-06T06:38:13.883578+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14283.203
+}

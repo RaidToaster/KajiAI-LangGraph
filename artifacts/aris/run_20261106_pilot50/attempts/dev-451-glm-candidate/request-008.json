@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "PEDOPHILIA is now LEGAL in CALIFORNIA",
+        "query": "What California legislation or court rulings around 2019–2020 changed how offenses involving adults and minors are charged, sentenced, or punished, and what do those changes actually cover?",
+        "candidates": [
+          {
+            "title": "Age Boundaries in Juvenile Justice Systems",
+            "snippet": "SB 823, passed in 2020, stipulates that young adults whose cases originated in juvenile courts can remain in juvenile facilities until they are 21, pending ...",
+            "url": "https://www.nga.org/wp-content/uploads/2021/08/Raise-the-Age-Brief_5Aug2021.pdf"
+          },
+          {
+            "title": "Legislation introduced aims to change how California ...",
+            "snippet": "... will retroactively impact both children and adults previously sentenced under the felony murder rule. Individuals impacted will have the ...",
+            "url": "https://www.facebook.com/ksbw8/posts/legislation-introduced-aims-to-change-how-california-handles-juvenile-offenders-/1372871611553231/"
+          },
+          {
+            "title": "A Primer: Three Strikes: The Impact After More Than a Decade",
+            "snippet": "As its name suggests, the law requires, among other things, a minimum sentence of 25 years to life for three-time repeat offenders with multiple prior serious ...",
+            "url": "https://lao.ca.gov/2005/3_strikes/3_strikes_102005.htm"
+          },
+          {
+            "title": "Youth Justice by the Numbers",
+            "snippet": "Between 2000 and 2023, there has been a 75% decline in youth incarceration. However, racial and ethnic disparities persist.",
+            "url": "https://www.sentencingproject.org/policy-brief/youth-justice-by-the-numbers/"
+          },
+          {
+            "title": "Rehabilitation vs. Punishment in Criminal Justice",
+            "snippet": "Proposition 57 focused on expanding parole eligibility for nonviolent offenders and increasing access to rehabilitation programs within prisons.",
+            "url": "https://www.collegesoflaw.edu/blog/2025/01/22/criminal-justice-reform-california-punishment-rehabilitation/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-451-glm-candidate",
+  "timestamp": "2026-11-06T00:32:58.314590+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4643.625
+}

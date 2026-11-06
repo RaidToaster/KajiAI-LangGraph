@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention. evidence",
+        "candidates": [
+          {
+            "title": "Assad Regime Groundlessly Claims US and Allies are Lying ...",
+            "snippet": "“The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information …",
+            "url": "https://www.voanews.com/a/assad-regime-groundlessly-claims-us-and-allies-are-lying-about-chemical-attacks/6742662.html"
+          },
+          {
+            "title": "Condition (10)(C) Annual Report on Compliance with ...",
+            "snippet": "In accordance with Article I, paragraph 2, each State Party “undertakes to destroy chemical weapons it owns or possesses.” Each State Party is ...",
+            "url": "https://www.state.gov/condition-10c-annual-report-on-compliance-with-the-chemical-weapons-convention-cwc"
+          },
+          {
+            "title": "Weapons of Mass Destruction Intelligence Capabilities",
+            "snippet": "We conclude that the Intelligence Community was dead wrong in almost all of its pre-war judgments about Iraq's weapons of mass destruction.",
+            "url": "https://policy.defense.gov/portals/11/Documents/hdasa/references/GPO-WMD.pdf"
+          },
+          {
+            "title": "Disincentivizing Bioweapons | Theory and Policy Approaches",
+            "snippet": "A collection of essays exploring theoretical and policy approaches to disincentivize the development and use of bioweapons.",
+            "url": "https://www.nti.org/analysis/articles/disincentivizing-bioweapons-theory-and-policy-approaches/"
+          },
+          {
+            "title": "Muddying the Waters: Official Russian Disinformation on ...",
+            "snippet": "International forums which oversee the ban on these weapons are being used to accuse Ukraine and its allies of violating their legal obligations.",
+            "url": "https://www.prif.org/fileadmin/Daten/Publikationen/PRIF_Spotlights/2023/Spotlight_3_2023_barrierefrei.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-baseline",
+  "timestamp": "2026-11-06T00:45:04.248290+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5369.562
+}

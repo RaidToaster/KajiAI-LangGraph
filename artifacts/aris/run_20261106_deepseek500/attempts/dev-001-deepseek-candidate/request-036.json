@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+        "query": "Locate a primary copy or screenshot of the leaked HHS/White House document entry for Billie Eilish and transcribe its exact wording and surrounding context.",
+        "candidates": [
+          {
+            "title": "Government Transparency & Election Integrity",
+            "snippet": "The White House Transparency Task Force was formed by President Trump to expose government weaponization, failed foreign policies, and election integrity.",
+            "url": "https://www.whitehouse.gov/transparency/"
+          },
+          {
+            "title": "Damning New Documents Obtained By Judiciary Democrats ...",
+            "snippet": "Previously Unseen Docs Reveal That Susie Wiles Witnessed Trump Showing a Classified Map to Unnamed Plane Passengers, and President Took ...",
+            "url": "http://democrats-judiciary.house.gov/media-center/press-releases/damning-new-documents-obtained-by-judiciary-democrats-reveal-trump-stole-classified-documents-to-advance-his-business-interests"
+          },
+          {
+            "title": "What we know about newly unsealed documents used in ...",
+            "snippet": "The National Archives had been asking President Trump about missing presidential papers since May 2021, just four months after he left office.",
+            "url": "https://www.pbs.org/newshour/show/what-we-know-about-the-newly-unsealed-documents-used-in-search-of-trumps-mar-a-lago-home"
+          },
+          {
+            "title": "S.146 - TAKE IT DOWN Act 119th Congress (2025-2026)",
+            "snippet": "Shown Here: Public Law No: 119-12 (05/19/2025). Tools to Address Known Exploitation by Immobilizing Technological Deepfakes on Websites and Networks Act or the ...",
+            "url": "https://www.congress.gov/bill/119th-congress/senate-bill/146"
+          },
+          {
+            "title": "Billie Eilish Leaks: The Unfiltered Truth Behind ...",
+            "snippet": "Explore the full scope of Billie Eilish leaks—from private conversations to leaked music—how they spread, their cultural impact, ...",
+            "url": "https://www.news.climate.columbia.edu/billie-eilish-leaks-1c25cf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-001-deepseek-candidate",
+  "timestamp": "2026-11-06T03:56:03.918549+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4553.234
+}

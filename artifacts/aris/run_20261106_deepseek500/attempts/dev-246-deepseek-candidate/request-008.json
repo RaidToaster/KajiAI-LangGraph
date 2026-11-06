@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A “new virus” disease called Novel Bunya V!rus that is caused by ticks is diagnosed as severe fever with thrombocytopenia syndrome (SFTS) is spreading in China.",
+        "query": "What is the established causative agent of severe fever with thrombocytopenia syndrome (SFTS), and is it a bunyavirus?",
+        "candidates": [
+          {
+            "title": "Severe fever with thrombocytopenia syndrome - Wikipedia",
+            "snippet": "Severe fever with thrombocytopenia syndrome (SFTS) is a tick-borne infection [1] caused by Dabie bandavirus also known as the SFTS virus, first reported between late March and mid-July 2009 in rural areas of Hubei and Henan provinces in Central China.",
+            "url": "https://en.wikipedia.org/wiki/Severe_fever_with_thrombocytopenia_syndrome"
+          },
+          {
+            "title": "Severe fever with thrombocytopenia syndrome virus: emerging ...",
+            "snippet": "An emerging infectious disease first identified in central China in 2009, severe fever with thrombocytopenia syndrome (SFTS) was found to be caused by a novel phlebovirus. Since SFTSV was first identified, epidemics have occurred in several East Asian countries.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8178303/"
+          },
+          {
+            "title": "Severe fever with thrombocytopenia syndrome: a newly ...",
+            "snippet": "Severe fever with thrombocytopenia syndrome (SFTS) is a newly discovered emerging infectious disease that has recently become epidemic in Asia. The causative agent of SFTS is a novel phlebovirus in the family Bunyaviridae, designated SFTS virus (SFTSV).",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1198743X15003225"
+          },
+          {
+            "title": "A highly pathogenic new bunyavirus emerged in China - PMC",
+            "snippet": "The causative agent has been identified as a new member of the Phlebovirus genus in the family Bunyaviridae and has been designated severe fever with thrombocytopenia virus (SFTSV). SFTSV infection can be transmitted person-to-person, and the average case fatality rate is approximately 10% in humans.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3630492/"
+          },
+          {
+            "title": "Severe fever with thrombocytopenia syndrome, an emerging tick ...",
+            "snippet": "Severe fever with thrombocytopenia syndrome (SFTS) is an emerging haemorrhagic fever that was first described in rural areas of China. The causative agent, SFTS virus (SFTSV), is a novel phlebovirus in the Bunyaviridae family.",
+            "url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099%2814%2970718-2/fulltext"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-246-deepseek-candidate",
+  "timestamp": "2026-11-06T04:58:46.087367+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8315.406
+}

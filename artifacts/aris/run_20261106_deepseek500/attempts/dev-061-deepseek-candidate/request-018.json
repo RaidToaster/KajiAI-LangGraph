@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The large image of the Joe Biden and Kamala Harris logo projected onto a Harley-Davidson location in Milwaukee US indicates the motorcycle manufacturer's endorsement of the US Democratic presidential nominee.",
+        "query": "Harley-Davidson Museum Milwaukee projection Biden Harris October 2020 permit organizer",
+        "candidates": [
+          {
+            "title": "TAX INCREMENTAL DISTRICTS ANNUAL STATUS REPORT ...",
+            "snippet": "the Harley-Davidson Museum. After cancelling its plans to develop ... In 2020 the Milwaukee Common Council approved Amendment No. 2 to ...",
+            "url": "https://city.milwaukee.gov/ImageLibrary/Groups/cityDCD/business/TIF/2024-Reports/FULL-2024-TID-REPORT.pdf"
+          },
+          {
+            "title": "Wisconsin election recap, results; Crowley wins in shocker over Hong",
+            "snippet": "... Harley-Davidson Museum. (Angela Peterson / Milwaukee Journal ... October 1, 2020 Milwaukee County Executive David Crowley gives his ...",
+            "url": "https://www.yahoo.com/news/politics/articles/wisconsin-election-live-updates-democratic-100053038.html"
+          },
+          {
+            "title": "Logistics of the 2024 Republican National Convention - Wikipedia",
+            "snippet": "The 2024 Republican National Convention was held in Milwaukee, Wisconsin July 15–18, 2024. A large-scale event, the organization and facilitation of the ...",
+            "url": "https://en.wikipedia.org/wiki/Logistics_of_the_2024_Republican_National_Convention"
+          },
+          {
+            "title": "Jeramey Jannene - Urban Milwaukee",
+            "snippet": "Redevelopment Plans Revealed For Site of 100,000 Parts. Developer working on library redevelopment plots new apartment complex on Kinnickinnic. Oct 13th, 2026 ...",
+            "url": "https://urbanmilwaukee.com/author/jeramey/"
+          },
+          {
+            "title": "Health and Human Services Archives - LinksInc.org",
+            "snippet": "She was tapped by the Biden-Harris campaign ... Demings enjoys spending her very limited free time riding her Harley-Davidson Road King Classic motorcycle.",
+            "url": "https://linksinc.org/category/health-and-human-services/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-061-deepseek-candidate",
+  "timestamp": "2026-11-06T08:35:41.785467+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21331.093
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ivermectin is a treatment for coronavirus.",
+        "query": "What primary clinical studies or regulatory assessments evaluate ivermectin as a treatment for coronavirus, and what outcomes do they measure?",
+        "candidates": [
+          {
+            "title": "The impact of ivermectin on COVID-19 outcomes - PMC - NIH",
+            "snippet": "by NS Yengu · 2025 · Cited by 9 — Two recent studies have conclusively demonstrated that ivermectin is not effective in treating COVID-19, with no significant differences in efficacy or safety ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11918548/"
+          },
+          {
+            "title": "Effect of Early Treatment with Ivermectin among Patients ...",
+            "snippet": "by G Reis · 2022 · Cited by 331 — More than 60 randomized trials of ivermectin for the treatment of Covid-19 have been registered, and findings have been reported for as many as ...",
+            "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2115869"
+          },
+          {
+            "title": "New study shows ivermectin lacks meaningful benefits in ...",
+            "snippet": "ivermectin does not lead to clinically significant improvements in COVID-19 recovery times, hospital admissions, or mortality rates.",
+            "url": "https://www.principletrial.org/news/new-study-shows-ivermectin-lacks-meaningful-benefits-in-covid-19-treatment"
+          },
+          {
+            "title": "Ivermectin Treatment Efficacy in Covid-19 High Risk Patients",
+            "snippet": "This is a multicenter study, which is aimed to investigate the efficacy of the Ivermectin drug in high risk COVID-19 patients.",
+            "url": "https://clinicaltrials.gov/study/NCT04920942"
+          },
+          {
+            "title": "WHO advises that ivermectin only be used to treat COVID- ...",
+            "snippet": "The current evidence on the use of ivermectin to treat COVID-19 patients is inconclusive. Until more data is available, WHO recommends that ...",
+            "url": "https://www.who.int/news-room/feature-stories/detail/who-advises-that-ivermectin-only-be-used-to-treat-covid-19-within-clinical-trials"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-026-deepseek-candidate",
+  "timestamp": "2026-11-06T06:57:32.205896+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15441.515
+}

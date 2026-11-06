@@ -1,0 +1,808 @@
+{
+  "generated_at": "2026-11-06T00:31:55.732018+00:00",
+  "pilot_attempts": 46,
+  "planned_attempts": 200,
+  "complete": false,
+  "model_arm": {
+    "glm/baseline": {
+      "500": {
+        "resources": {
+          "ollama_input_tokens": 4586800,
+          "ollama_output_tokens": 1624730,
+          "jev_input_tokens": 1847370,
+          "jev_output_tokens": 222000,
+          "ollama_calls": 670,
+          "jev_calls": 890,
+          "search_calls": 490,
+          "fetch_url_attempts": 980,
+          "active_seconds": 14946.579999999998,
+          "ollama_estimated_usd": 1.5003849999999999,
+          "jev_estimated_usd": 0.07758954
+        },
+        "based_on_attempts": 12,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      },
+      "450": {
+        "resources": {
+          "ollama_input_tokens": 4128120,
+          "ollama_output_tokens": 1462257,
+          "jev_input_tokens": 1662633,
+          "jev_output_tokens": 199800,
+          "ollama_calls": 603,
+          "jev_calls": 801,
+          "search_calls": 441,
+          "fetch_url_attempts": 882,
+          "active_seconds": 13451.921999999999,
+          "ollama_estimated_usd": 1.3503465,
+          "jev_estimated_usd": 0.069830586
+        },
+        "based_on_attempts": 12,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      }
+    },
+    "glm/candidate": {
+      "500": {
+        "resources": {
+          "ollama_input_tokens": 3069080,
+          "ollama_output_tokens": 1419240,
+          "jev_input_tokens": 5121590,
+          "jev_output_tokens": 591590,
+          "ollama_calls": 440,
+          "jev_calls": 1080,
+          "search_calls": 370,
+          "fetch_url_attempts": 740,
+          "active_seconds": 13309.986819999944,
+          "ollama_estimated_usd": 1.169982,
+          "jev_estimated_usd": 0.21510678000000003
+        },
+        "based_on_attempts": 11,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      },
+      "450": {
+        "resources": {
+          "ollama_input_tokens": 2762172,
+          "ollama_output_tokens": 1277316,
+          "jev_input_tokens": 4609431,
+          "jev_output_tokens": 532431,
+          "ollama_calls": 396,
+          "jev_calls": 972,
+          "search_calls": 333,
+          "fetch_url_attempts": 666,
+          "active_seconds": 11978.98813799995,
+          "ollama_estimated_usd": 1.0529838,
+          "jev_estimated_usd": 0.19359610200000002
+        },
+        "based_on_attempts": 11,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      }
+    },
+    "deepseek/baseline": {
+      "500": {
+        "resources": {
+          "ollama_input_tokens": 4902600,
+          "ollama_output_tokens": 1446190,
+          "jev_input_tokens": 1949550,
+          "jev_output_tokens": 223590,
+          "ollama_calls": 590,
+          "jev_calls": 920,
+          "search_calls": 480,
+          "fetch_url_attempts": 930,
+          "active_seconds": 13140.140000000012,
+          "ollama_estimated_usd": 3.2062079999999997,
+          "jev_estimated_usd": 0.0818811
+        },
+        "based_on_attempts": 11,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      },
+      "450": {
+        "resources": {
+          "ollama_input_tokens": 4412340,
+          "ollama_output_tokens": 1301571,
+          "jev_input_tokens": 1754595,
+          "jev_output_tokens": 201231,
+          "ollama_calls": 531,
+          "jev_calls": 828,
+          "search_calls": 432,
+          "fetch_url_attempts": 837,
+          "active_seconds": 11826.126000000011,
+          "ollama_estimated_usd": 2.8855872,
+          "jev_estimated_usd": 0.07369299
+        },
+        "based_on_attempts": 11,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      }
+    },
+    "deepseek/candidate": {
+      "500": {
+        "resources": {
+          "ollama_input_tokens": 2029020,
+          "ollama_output_tokens": 275150,
+          "jev_input_tokens": 4132990,
+          "jev_output_tokens": 519630,
+          "ollama_calls": 380,
+          "jev_calls": 1000,
+          "search_calls": 360,
+          "fetch_url_attempts": 720,
+          "active_seconds": 7095.780000000008,
+          "ollama_estimated_usd": 0.938886,
+          "jev_estimated_usd": 0.17358558
+        },
+        "based_on_attempts": 12,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      },
+      "450": {
+        "resources": {
+          "ollama_input_tokens": 1826118,
+          "ollama_output_tokens": 247635,
+          "jev_input_tokens": 3719691,
+          "jev_output_tokens": 467667,
+          "ollama_calls": 342,
+          "jev_calls": 900,
+          "search_calls": 324,
+          "fetch_url_attempts": 648,
+          "active_seconds": 6386.202000000007,
+          "ollama_estimated_usd": 0.8449974,
+          "jev_estimated_usd": 0.156227022
+        },
+        "based_on_attempts": 12,
+        "valid_50case_scaling": false,
+        "failed_attempts_included": true
+      }
+    }
+  },
+  "uncertainty": {
+    "method": "4000 paired-case bootstrap draws across all4 combinations; 95% percentile intervals; no guarantee of temporal or distributional stability",
+    "complete_case_blocks": 11,
+    "intervals": {
+      "glm/baseline": {
+        "ollama_input_tokens": {
+          "500": [
+            15535194.318181818,
+            25648234.090909094
+          ],
+          "450": [
+            13981674.886363637,
+            23083410.681818184
+          ]
+        },
+        "ollama_output_tokens": {
+          "500": [
+            7001993.181818183,
+            7349438.636363637
+          ],
+          "450": [
+            6301793.863636364,
+            6614494.7727272725
+          ]
+        },
+        "jev_input_tokens": {
+          "500": [
+            6875238.636363637,
+            9220654.545454547
+          ],
+          "450": [
+            6187714.7727272725,
+            8298589.090909092
+          ]
+        },
+        "jev_output_tokens": {
+          "500": [
+            821770.4545454544,
+            1117511.3636363638
+          ],
+          "450": [
+            739593.409090909,
+            1005760.2272727273
+          ]
+        },
+        "ollama_calls": {
+          "500": [
+            2863.636363636364,
+            3000.0
+          ],
+          "450": [
+            2577.2727272727275,
+            2700.0
+          ]
+        },
+        "jev_calls": {
+          "500": [
+            3363.636363636364,
+            4272.727272727272
+          ],
+          "450": [
+            3027.2727272727275,
+            3845.454545454545
+          ]
+        },
+        "search_calls": {
+          "500": [
+            1772.7272727272727,
+            2409.090909090909
+          ],
+          "450": [
+            1595.4545454545455,
+            2168.181818181818
+          ]
+        },
+        "fetch_url_attempts": {
+          "500": [
+            3545.4545454545455,
+            4818.181818181818
+          ],
+          "450": [
+            3190.909090909091,
+            4336.363636363636
+          ]
+        },
+        "active_seconds": {
+          "500": [
+            55442.78636363648,
+            73120.86704545462
+          ],
+          "450": [
+            49898.50772727283,
+            65808.78034090916
+          ]
+        },
+        "ollama_estimated_usd": {
+          "500": [
+            5.9189181818181815,
+            7.405581704545455
+          ],
+          "450": [
+            5.327026363636363,
+            6.665023534090909
+          ]
+        },
+        "jev_estimated_usd": {
+          "500": [
+            0.28876002272727275,
+            0.3872674909090909
+          ],
+          "450": [
+            0.2598840204545455,
+            0.34854074181818184
+          ]
+        }
+      },
+      "glm/candidate": {
+        "ollama_input_tokens": {
+          "500": [
+            8240598.863636363,
+            20160090.909090914
+          ],
+          "450": [
+            7416538.9772727275,
+            18144081.81818182
+          ]
+        },
+        "ollama_output_tokens": {
+          "500": [
+            4137563.636363636,
+            8787804.545454547
+          ],
+          "450": [
+            3723807.2727272725,
+            7909024.090909092
+          ]
+        },
+        "jev_input_tokens": {
+          "500": [
+            14503735.227272727,
+            32478210.22727273
+          ],
+          "450": [
+            13053361.704545455,
+            29230389.204545457
+          ]
+        },
+        "jev_output_tokens": {
+          "500": [
+            1735336.3636363638,
+            3641761.363636364
+          ],
+          "450": [
+            1561802.7272727275,
+            3277585.2272727275
+          ]
+        },
+        "ollama_calls": {
+          "500": [
+            1454.5454545454547,
+            2545.4545454545455
+          ],
+          "450": [
+            1309.0909090909092,
+            2290.909090909091
+          ]
+        },
+        "jev_calls": {
+          "500": [
+            3409.0909090909095,
+            6454.545454545455
+          ],
+          "450": [
+            3068.1818181818185,
+            5809.09090909091
+          ]
+        },
+        "search_calls": {
+          "500": [
+            1227.2727272727273,
+            2181.818181818182
+          ],
+          "450": [
+            1104.5454545454545,
+            1963.6363636363637
+          ]
+        },
+        "fetch_url_attempts": {
+          "500": [
+            2454.5454545454545,
+            4363.636363636364
+          ],
+          "450": [
+            2209.090909090909,
+            3927.2727272727275
+          ]
+        },
+        "active_seconds": {
+          "500": [
+            40137.370729545226,
+            81974.09272499937
+          ],
+          "450": [
+            36123.633656590704,
+            73776.68345249943
+          ]
+        },
+        "ollama_estimated_usd": {
+          "500": [
+            3.3132014204545452,
+            7.4054073863636365
+          ],
+          "450": [
+            2.9818812784090905,
+            6.664866647727273
+          ]
+        },
+        "jev_estimated_usd": {
+          "500": [
+            0.6091568795454545,
+            1.3640848295454546
+          ],
+          "450": [
+            0.5482411915909091,
+            1.2276763465909093
+          ]
+        }
+      },
+      "deepseek/baseline": {
+        "ollama_input_tokens": {
+          "500": [
+            18654230.68181818,
+            26306554.545454547
+          ],
+          "450": [
+            16788807.613636363,
+            23675899.09090909
+          ]
+        },
+        "ollama_output_tokens": {
+          "500": [
+            6321717.045454546,
+            6766438.636363637
+          ],
+          "450": [
+            5689545.340909092,
+            6089794.7727272725
+          ]
+        },
+        "jev_input_tokens": {
+          "500": [
+            7369727.272727273,
+            10378952.272727273
+          ],
+          "450": [
+            6632754.545454546,
+            9341057.045454545
+          ]
+        },
+        "jev_output_tokens": {
+          "500": [
+            833536.3636363636,
+            1214550.0
+          ],
+          "450": [
+            750182.7272727273,
+            1093095.0
+          ]
+        },
+        "ollama_calls": {
+          "500": [
+            2409.090909090909,
+            2909.0909090909095
+          ],
+          "450": [
+            2168.181818181818,
+            2618.1818181818185
+          ]
+        },
+        "jev_calls": {
+          "500": [
+            3500.0,
+            4863.636363636364
+          ],
+          "450": [
+            3150.0,
+            4377.272727272727
+          ]
+        },
+        "search_calls": {
+          "500": [
+            1818.181818181818,
+            2545.4545454545455
+          ],
+          "450": [
+            1636.3636363636363,
+            2290.909090909091
+          ]
+        },
+        "fetch_url_attempts": {
+          "500": [
+            3500.0,
+            4954.545454545454
+          ],
+          "450": [
+            3150.0,
+            4459.090909090909
+          ]
+        },
+        "active_seconds": {
+          "500": [
+            52778.36250000005,
+            66609.50227272752
+          ],
+          "450": [
+            47500.526250000046,
+            59948.55204545477
+          ]
+        },
+        "ollama_estimated_usd": {
+          "500": [
+            13.261582840909089,
+            15.882864545454545
+          ],
+          "450": [
+            11.93542455681818,
+            14.29457809090909
+          ]
+        },
+        "jev_estimated_usd": {
+          "500": [
+            0.3095285454545455,
+            0.43591599545454557
+          ],
+          "450": [
+            0.27857569090909096,
+            0.392324395909091
+          ]
+        }
+      },
+      "deepseek/candidate": {
+        "ollama_input_tokens": {
+          "500": [
+            4923977.272727273,
+            13595827.272727273
+          ],
+          "450": [
+            4431579.545454546,
+            12236244.545454545
+          ]
+        },
+        "ollama_output_tokens": {
+          "500": [
+            682397.7272727272,
+            1826663.6363636365
+          ],
+          "450": [
+            614157.9545454545,
+            1643997.272727273
+          ]
+        },
+        "jev_input_tokens": {
+          "500": [
+            11771346.59090909,
+            25040736.363636367
+          ],
+          "450": [
+            10594211.93181818,
+            22536662.72727273
+          ]
+        },
+        "jev_output_tokens": {
+          "500": [
+            1606136.3636363635,
+            2982455.6818181816
+          ],
+          "450": [
+            1445522.727272727,
+            2684210.1136363638
+          ]
+        },
+        "ollama_calls": {
+          "500": [
+            1090.909090909091,
+            2227.272727272727
+          ],
+          "450": [
+            981.8181818181819,
+            2004.5454545454545
+          ]
+        },
+        "jev_calls": {
+          "500": [
+            2772.7272727272725,
+            5954.545454545455
+          ],
+          "450": [
+            2495.454545454545,
+            5359.09090909091
+          ]
+        },
+        "search_calls": {
+          "500": [
+            1090.909090909091,
+            2000.0
+          ],
+          "450": [
+            981.8181818181819,
+            1800.0
+          ]
+        },
+        "fetch_url_attempts": {
+          "500": [
+            2181.818181818182,
+            4000.0
+          ],
+          "450": [
+            1963.6363636363637,
+            3600.0
+          ]
+        },
+        "active_seconds": {
+          "500": [
+            21485.74545454576,
+            42601.562499999825
+          ],
+          "450": [
+            19337.170909091183,
+            38341.40624999985
+          ]
+        },
+        "ollama_estimated_usd": {
+          "500": [
+            2.3079340909090913,
+            6.251560909090909
+          ],
+          "450": [
+            2.077140681818182,
+            5.626404818181817
+          ]
+        },
+        "jev_estimated_usd": {
+          "500": [
+            0.49439655681818184,
+            1.0517109272727276
+          ],
+          "450": [
+            0.44495690113636366,
+            0.9465398345454549
+          ]
+        }
+      },
+      "aggregate": {
+        "ollama_input_tokens": {
+          "500": [
+            53592313.63636364,
+            78635700.0
+          ],
+          "450": [
+            48233082.27272728,
+            70772130.0
+          ]
+        },
+        "ollama_output_tokens": {
+          "500": [
+            18802894.31818182,
+            24015970.454545453
+          ],
+          "450": [
+            16922604.886363637,
+            21614373.40909091
+          ]
+        },
+        "jev_input_tokens": {
+          "500": [
+            43911872.727272734,
+            73351300.0
+          ],
+          "450": [
+            39520685.45454546,
+            66016170.0
+          ]
+        },
+        "jev_output_tokens": {
+          "500": [
+            5438903.409090908,
+            8488067.045454547
+          ],
+          "450": [
+            4895013.068181817,
+            7639260.340909092
+          ]
+        },
+        "ollama_calls": {
+          "500": [
+            8454.545454545456,
+            10136.363636363636
+          ],
+          "450": [
+            7609.09090909091,
+            9122.727272727272
+          ]
+        },
+        "jev_calls": {
+          "500": [
+            14000.0,
+            20772.727272727276
+          ],
+          "450": [
+            12600.0,
+            18695.454545454548
+          ]
+        },
+        "search_calls": {
+          "500": [
+            6227.272727272728,
+            8772.727272727272
+          ],
+          "450": [
+            5604.545454545455,
+            7895.454545454545
+          ]
+        },
+        "fetch_url_attempts": {
+          "500": [
+            12363.636363636362,
+            17409.09090909091
+          ],
+          "450": [
+            11127.272727272726,
+            15668.18181818182
+          ]
+        },
+        "active_seconds": {
+          "500": [
+            180764.40486363636,
+            249906.53863636256
+          ],
+          "450": [
+            162687.96437727273,
+            224915.8847727263
+          ]
+        },
+        "ollama_estimated_usd": {
+          "500": [
+            26.89810926136364,
+            34.51048994318181
+          ],
+          "450": [
+            24.208298335227276,
+            31.05944094886363
+          ]
+        },
+        "jev_estimated_usd": {
+          "500": [
+            1.8442986545454545,
+            3.0807546
+          ],
+          "450": [
+            1.6598687890909092,
+            2.77267914
+          ]
+        }
+      }
+    }
+  },
+  "quota_limited_calendar": null,
+  "sensitivity": {
+    "deepseek_offpeak": "Half peak input/output rates outside12-18UTC weekdays and weekends; unknown cache usage not assumed",
+    "cache_input_rates": {
+      "glm": 0.03,
+      "deepseek": 0.006
+    },
+    "output_variability": "Bootstrap retains failures and measured variability; additional failures, latency and content drift may change scaling",
+    "all_attempts_timeout_processing_hours": {
+      "500": 166.66666666666666,
+      "450": 150.0
+    }
+  },
+  "measured_billing_usd": null,
+  "rates": {
+    "glm": [
+      0.15,
+      0.5
+    ],
+    "deepseek": [
+      0.3,
+      1.2
+    ],
+    "jev": [
+      0.042,
+      0
+    ]
+  },
+  "cost_assumption": "Peak uncached; provider cache/reasoning counters unknown unless explicitly in raw service-ledger provider fields",
+  "already_completed_not_double_counted": "200pilot+1800additional=2000 only if exact freeze continued after new approval",
+  "remaining450_released": false,
+  "limitations": [
+    "Unqualified candidate; adaptive/exposed benchmark; label agreement is not official AVeriTeC evidence scoring.",
+    "Codex/reviewer overhead tokens and account bill unobserved; workflow API counters only.",
+    "If fewer than50pergroup, linear figures are partial resource totals, not valid50case forecasts."
+  ],
+  "interruption_accounting": {
+    "interrupted_attempt": "dev-068-glm-candidate",
+    "duration_lower_bound_seconds": 8.156682,
+    "planned_duration_limit_seconds": 300,
+    "provider_fetch_outcome": "UNKNOWN",
+    "fetch_url_reservation_counted": 1,
+    "last_observed_activity_to_restart_seconds": 18072.751781
+  },
+  "reconciled_local_capture_failures": [
+    {
+      "attempt": "dev-451-glm-baseline",
+      "request_id": "016",
+      "provider_outcome": "COMPLETED",
+      "receipt": "fetch-reconciliation-dev-451-glm-baseline-016.json"
+    }
+  ],
+  "partial_totals_scaled_for_diagnosis_only": {
+    "500": {
+      "ollama_input_tokens": 14587500,
+      "ollama_output_tokens": 4765310,
+      "jev_input_tokens": 13051500,
+      "jev_output_tokens": 1556810,
+      "ollama_calls": 2080,
+      "jev_calls": 3890,
+      "search_calls": 1700,
+      "fetch_url_attempts": 3370,
+      "active_seconds": 48492.48681999997,
+      "ollama_estimated_usd": 6.815460999999999,
+      "jev_estimated_usd": 0.548163
+    },
+    "450": {
+      "ollama_input_tokens": 13128750,
+      "ollama_output_tokens": 4288779,
+      "jev_input_tokens": 11746350,
+      "jev_output_tokens": 1401129,
+      "ollama_calls": 1872,
+      "jev_calls": 3501,
+      "search_calls": 1530,
+      "fetch_url_attempts": 3033,
+      "active_seconds": 43643.23813799997,
+      "ollama_estimated_usd": 6.1339149,
+      "jev_estimated_usd": 0.49334669999999997
+    }
+  },
+  "aggregate": null,
+  "forecast_unavailable_reason": "Fewer than 200 attempts have terminal records."
+}

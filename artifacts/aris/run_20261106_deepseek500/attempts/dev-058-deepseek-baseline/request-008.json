@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Russia sent medical aid to the US, in the form of medical equipment to help coronavirus patients.",
+        "query": "Russia sent medical aid to the US, in the form of medical equipment to help coronavirus patients. counterevidence",
+        "candidates": [
+          {
+            "title": "Russia Sends Emergency Medical Aid to United States",
+            "snippet": "Russia has sent a planeload of medical aid to the United States. A military aircraft loaded with medical equipment and masks took off from ...",
+            "url": "https://www.courthousenews.com/russia-sends-emergency-medical-aid-to-united-states/"
+          },
+          {
+            "title": "\"From Russia With Love.\" But some Russians are exasperated at wh",
+            "snippet": "Russia is delivering lifesaving equipment to countries, including the U.S., to handle the COVID-19 outbreak. Moscow dubbed the effort: \"From ...",
+            "url": "https://www.facebook.com/NPR/posts/russia-is-delivering-lifesaving-equipment-to-countries-including-the-us-to-handl/10159175321746756/"
+          },
+          {
+            "title": "Russian plane with coronavirus medical gear lands in U.S. after ...",
+            "snippet": "Russia sent the United States medical equipment on Wednesday to help fight the coronavirus pandemic, a public relations coup for Russian ...",
+            "url": "https://www.nbcnews.com/politics/donald-trump/russian-plane-coronavirus-medical-gear-lands-u-s-after-trump-n1174436"
+          },
+          {
+            "title": "COVID-19 “Humanitarianism”: The Geopolitics of Russia's Coronavirus ...",
+            "snippet": "Russia began sending coronavirus test kits, masks, protective gear, ventilators, and medical personnel to virus-hit countries.",
+            "url": "https://www.ponarseurasia.org/covid-19-humanitarianism-the-geopolitics-of-russias-coronavirus-assistance/"
+          },
+          {
+            "title": "Russia sends aid to US to fight COVID-19 | Masks and medical equipment",
+            "snippet": "Russia has sent a cargo plane to the United States which is loaded with aid to fight the coronavirus. Masks and medical equipment has been sent ...",
+            "url": "https://www.youtube.com/watch?v=ES5kJfqJDwQ"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-058-deepseek-baseline",
+  "timestamp": "2026-11-06T08:26:27.812202+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20777.109
+}

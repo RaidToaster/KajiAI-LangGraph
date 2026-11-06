@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism.",
+        "query": "Paul Pogba, who plays for Manchester United original source fact check",
+        "candidates": [
+          {
+            "title": "Paul Pogba's top team-mates XI",
+            "snippet": "Paul Pogba's top team-mates XI · ATTACK Jesse Lingard (114), Anthony Martial (109), Marcus Rashford (122) Paul's front three is made up entirely ...",
+            "url": "https://www.manutd.com/en/news/paul-pogba-xi-based-on-most-commonly-occurring-team-mates"
+          },
+          {
+            "title": "Paul Pogba - Teammates | Transfermarkt",
+            "snippet": "Games played together ; Luke Shaw. Left-Back. 132, 1 ; Claudio Marchisio. Central Midfield. 131, 1 ; Jesse Lingard. Attacking Midfield. 129, 3 ; Victor Lindelöf.",
+            "url": "https://www.transfermarkt.us/paul-pogba/gemeinsamespiele/spieler/122153"
+          },
+          {
+            "title": "Paul Pogba",
+            "snippet": "Paul Labile Pogba (born 15 March 1993) is a French professional footballer who plays as a central midfielder. He is currently a free agent.",
+            "url": "https://en.wikipedia.org/wiki/Paul_Pogba"
+          },
+          {
+            "title": "Paul Pogba Facts, Worksheets, Early Life & Career For Kids",
+            "snippet": "Paul Labile Pogba is a French footballer who plays for the English club Manchester United. first team by then-manager Alex Ferguson.",
+            "url": "https://kidskonnect.com/people/paul-pogba/"
+          },
+          {
+            "title": "15 fun facts about Paul Pogba",
+            "snippet": "Paul Pogba is a French professional football player who currently plays as a central midfielder for Juventus and the France national team.",
+            "url": "https://www.goal.com/en-us/lists/fun-facts-about-paul-pogba/blt2b01bb062f33db21"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-030-deepseek-baseline",
+  "timestamp": "2026-11-06T07:11:28.169453+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16277.5
+}

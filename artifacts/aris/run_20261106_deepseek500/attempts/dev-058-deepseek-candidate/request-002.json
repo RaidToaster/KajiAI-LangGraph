@@ -1,0 +1,28 @@
+{
+  "service": "ollama",
+  "request": {
+    "path": "/api/chat",
+    "body": {
+      "model": "deepseek-v4.1-flash:cloud",
+      "stream": true,
+      "options": {
+        "num_predict": 6144,
+        "temperature": 0.0
+      },
+      "format": "json",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Classify the factual claim into exactly one domain: general, scientific,\npolitical, or health_medical. Return the requested structured object. Do not assess\nwhether the claim is true. Claim:\nRussia sent medical aid to the US, in the form of medical equipment to help coronavirus patients.\n\nReturn ONLY one JSON object matching this JSON Schema. Do not use Markdown fences or explanatory text. The first character must be '{' and the last must be '}'.\nJSON Schema:\n{\"properties\": {\"domain\": {\"default\": \"general\", \"enum\": [\"general\", \"scientific\", \"political\", \"health_medical\"], \"title\": \"Domain\", \"type\": \"string\"}, \"confidence\": {\"default\": 0.0, \"maximum\": 1.0, \"minimum\": 0.0, \"title\": \"Confidence\", \"type\": \"number\"}, \"reasoning\": {\"default\": \"\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"risk_level\": {\"default\": \"low\", \"enum\": [\"low\", \"medium\", \"high\"], \"title\": \"Risk Level\", \"type\": \"string\"}}, \"title\": \"Classification\", \"type\": \"object\"}"
+        }
+      ],
+      "tools": []
+    }
+  },
+  "task": "dev-058-deepseek-candidate",
+  "timestamp": "2026-11-06T08:27:58.408737+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 1.572864,
+  "input_upper_bound": 1048576,
+  "monotonic_started": 20867.718
+}

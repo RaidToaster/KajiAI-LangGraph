@@ -1,0 +1,81 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained full_page record for https://x.com/mdhmwssb/status/1316987375491239936 contains verbatim: If your household water storage sump is mixed with rain water, pl empty it and clean & disinfect with bleaching powder and refill sump with HMWSSB water. As precaution pl mix the water with chlorine tablets. Chlorine tablets are distributed by HMWSSB staff at your doorstep.",
+            "url": "https://x.com/mdhmwssb/status/1316987375491239936",
+            "quote": "If your household water storage sump is mixed with rain water, pl empty it and clean & disinfect with bleaching powder and refill sump with HMWSSB water. As precaution pl mix the water with chlorine tablets. Chlorine tablets are distributed by HMWSSB staff at your doorstep.",
+            "context": "## Post\n\nLog inSign up\n\n## Post\n\nLog inSign up\n\n# K Ashok Reddy, IAS on X: \"If your household water storage sump is mixed with rain water, pl empty it and clean & disinfect with bleaching powder and refill sump with HMWSSB water. As precaution pl mix the water with chlorine tablets. Chlorine tablets are distributed by HMWSSB staff at your doorstep.\"\n\n## Conversation\n\nK Ashok Reddy, IAS\n\n@MDHMWSSB\n\nIf your household water storage sump is mixed with rain water, pl empty it and clean & disinfect with bleaching powder and refill sump with HMWSSB water. As precaution pl mix the water with chlorine tablets. Chlorine tablets are distributed by HMWSSB staff at your doorstep.\n\n6:20 AM · Oct 16, 2020\n\n7"
+          },
+          {
+            "finding": "Retained full_page record for https://www.instagram.com/reel/DLkpBXuIOgH/?hl=en contains verbatim: In response to the recent surge in waterborne illnesses in the Karwan constituency, a special seven member team from the Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) has been deployed on an urgent basis. The move comes after complaints were received regarding contaminated drinking water leading to cases of vomiting, stomach pain, and other health concerns, particularly in areas served by Shaikpet and Allah Banda reservoirs.",
+            "url": "https://www.instagram.com/reel/DLkpBXuIOgH/?hl=en",
+            "quote": "In response to the recent surge in waterborne illnesses in the Karwan constituency, a special seven member team from the Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) has been deployed on an urgent basis. The move comes after complaints were received regarding contaminated drinking water leading to cases of vomiting, stomach pain, and other health concerns, particularly in areas served by Shaikpet and Allah Banda reservoirs.",
+            "context": "Sorry, we're having trouble playing this video.\n\nSpecial HMWSSB Team Deployed in Karwan Constituency for Door-to-Door Distribution of Chlorine Tablets  \n  \nIn response to the recent surge in waterborne illnesses in the Karwan constituency, a special seven member team from the Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) has been deployed on an urgent basis. The move comes after complaints were received regarding contaminated drinking water leading to cases of vomiting, stomach pain, and other health concerns, particularly in areas served by Shaikpet and Allah Banda reservoirs.\n\nIn response to the recent surge in waterborne illnesses in the Karwan constituency, a special seven member team from the Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) has been deployed on an urgent basis. The move comes after complaints were received regarding contaminated drinking water leading to cases of vomiting, stomach pain, and other health concerns, particularly in areas served by Shaikpet and Allah Banda reservoirs.\n\n@kausarmohiuddin al Saba hotel as colony Tolichowki is causing sewage overflow river into 7tombs road; if this is not stopped it will emerge like a new musi river; u can investigate it and please take immediate action\n\nReply\n\n👑🦁👑🫡\n\nReply\n\n🔥🔥🔥🔥🔥\n\nReply\n\n👏👏👏👏🔥🔥🔥\n\nReply\n\n👏👏\n\nReply\n\nLog in to like or comment."
+          },
+          {
+            "finding": "Retained snippet record for https://tenderkart.in/tenders/chemicals/telangana/result?page=11 contains verbatim: 2020 Procurement of Bleaching powder for maintenance of Water supply. Cost Rs.30.00 Lakhs, 2020 Supply of chlorine liquid, Bleaching Powder and sanitizing ...",
+            "url": "https://tenderkart.in/tenders/chemicals/telangana/result?page=11",
+            "quote": "2020 Procurement of Bleaching powder for maintenance of Water supply. Cost Rs.30.00 Lakhs, 2020 Supply of chlorine liquid, Bleaching Powder and sanitizing ...",
+            "context": "2020 Procurement of Bleaching powder for maintenance of Water supply. Cost Rs.30.00 Lakhs, 2020 Supply of chlorine liquid, Bleaching Powder and sanitizing ..."
+          },
+          {
+            "finding": "Retained snippet record for https://reliefweb.int/report/india/government-distributes-chlorine-tablets-flood-hit-areas contains verbatim: Aug 8, 2017 — Health department officials are now distributing chlorine tablets and bleaching powder in panchayats so that people would get clean water for ...",
+            "url": "https://reliefweb.int/report/india/government-distributes-chlorine-tablets-flood-hit-areas",
+            "quote": "Aug 8, 2017 — Health department officials are now distributing chlorine tablets and bleaching powder in panchayats so that people would get clean water for ...",
+            "context": "Aug 8, 2017 — Health department officials are now distributing chlorine tablets and bleaching powder in panchayats so that people would get clean water for ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-deepseek-candidate",
+  "timestamp": "2026-11-06T01:52:41.678283+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9427.0
+}

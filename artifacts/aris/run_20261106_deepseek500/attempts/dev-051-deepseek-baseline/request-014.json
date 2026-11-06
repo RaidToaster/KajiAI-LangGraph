@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost.",
+        "query": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost. original source fact check",
+        "candidates": [
+          {
+            "title": "Only those who vote for BJP to get Covid vaccine shows it's ...",
+            "snippet": "India News: MUMBAI: Shiv Sena leader Sanjay Raut slammed Bharatiya Janata party for promising free Covid-19 vaccine to those who vote for ...",
+            "url": "https://timesofindia.indiatimes.com/india/only-those-who-vote-for-bjp-to-get-covid-vaccine-shows-its-discriminatory-nature-sanjay-raut/articleshow/78824257.cms"
+          },
+          {
+            "title": "Election Commission Says BJP's Free Covid Vaccine Promise ...",
+            "snippet": "The BJP's promise of providing free coronavirus vaccine in its manifesto for the Bihar assembly polls is not in violation of the provisions ...",
+            "url": "https://www.ndtv.com/india-news/election-commission-says-bjps-free-covid-vaccine-promise-not-a-poll-code-violation-explains-why-2318529"
+          },
+          {
+            "title": "India Covid: What are the claims around the 'free vaccine' policy?",
+            "snippet": "India has given out a record eight million vaccine doses in a single day - we've put that into context. Missing:  vote  2020  elections",
+            "url": "https://www.bbc.com/news/57400891"
+          },
+          {
+            "title": "Misinformation has spread in India",
+            "snippet": "Misinformation has spread in India -- and sometimes been accepted as truth. Here's our fact check of some common myths and misconceptions ... Missing:  original  | Show results with:",
+            "url": "https://www.facebook.com/cnn/posts/misinformation-has-spread-in-india-and-sometimes-been-accepted-as-truth-heres-ou/10161967201966509/"
+          },
+          {
+            "title": "Bihar Elections: BJP Promises Free COVID-19 Vaccines ...",
+            "snippet": "'Refer to poll schedule to know when one will be inoculated, Rahul Gandhi takes jibe at BJP's 'free vaccine' poll promise. Missing:  original  source  fact",
+            "url": "https://www.newsclick.in/Bihar-Elections-BJP-Promises-Free-COVID-19-Vaccines-Opposition-%23-VaccinePolitics"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-051-deepseek-baseline",
+  "timestamp": "2026-11-06T08:04:32.216192+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19461.531
+}

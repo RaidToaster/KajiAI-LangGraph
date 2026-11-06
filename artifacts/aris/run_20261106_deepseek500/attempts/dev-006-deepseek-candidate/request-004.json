@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "More than 225,000 people dead, 225,000. The estimates are, if we’d have acted responsibly, there’d be 160,000 fewer dead than there are today, because of covid-19.",
+        "query": "What was the date and context of the statement, and what covid-19 death total was reported on or near that date?",
+        "candidates": [
+          {
+            "title": "Provisional COVID-19 Mortality Surveillance",
+            "snippet": "Deaths are coded to U07.1 when COVID-19 is reported as a cause that contributed to death on the death certificate. These can include laboratory confirmed cases,",
+            "url": "https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm"
+          },
+          {
+            "title": "COVID-19 deaths | WHO COVID-19 dashboard - WHO Data",
+            "snippet": "The latest data for coronavirus (COVID-19) deaths. Most recent data submission date: 17th October 2026 Number of countries reported: 31 Selected Timeframe: ...",
+            "url": "https://data.who.int/dashboards/covid19/deaths"
+          },
+          {
+            "title": "Coronavirus (COVID-19) Deaths",
+            "snippet": "The death figures on a given date do not necessarily show the number of new deaths on that day, but the deaths reported on that day.",
+            "url": "https://ourworldindata.org/covid-deaths"
+          },
+          {
+            "title": "The Unrecognized Death Toll of COVID-19 in the United States",
+            "snippet": "by SM Moghadas · 2021 · Cited by 17 — July 1, 2021. 180,000 additional deaths … 582,135 that were reported on death certificates by May 2021. on February 6, 2020,",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354557/"
+          },
+          {
+            "title": "COVID-19 pandemic in the United States",
+            "snippet": "On December 14, the U.S. passed 300,000 deaths, representing an average of more than 961 deaths per day since the first known death on February 6. More than ...",
+            "url": "https://en.wikipedia.org/wiki/COVID-19_pandemic_in_the_United_States"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-006-deepseek-candidate",
+  "timestamp": "2026-11-06T05:27:05.908855+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 10015.218
+}

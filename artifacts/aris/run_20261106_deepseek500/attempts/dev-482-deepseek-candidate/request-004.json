@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald trump said: \"Joe Biden recently raised his hand on the debate stage and promised he was going to give it away, your health care dollars to illegal immigrants, which is going to bring massive number of immigrants into our country.\"",
+        "query": "What is the exact date and venue of the debate stage event referenced, and did Joe Biden raise his hand there?",
+        "candidates": [
+          {
+            "title": "When Are the 2024 Presidential Debates?",
+            "snippet": "Here are the details about the scheduled presidential debates between Joe Biden and Donald Trump, including the dates, networks, and format.",
+            "url": "https://time.com/6978462/presidential-debates-2024-date-time/"
+          },
+          {
+            "title": "2024 Joe Biden–Donald Trump presidential debate",
+            "snippet": "A presidential debate between incumbent United States president Joe Biden and former president Donald Trump took place on June 27, 2024. At the time of the ...",
+            "url": "https://en.wikipedia.org/wiki/2024_Joe_Biden%E2%80%93Donald_Trump_presidential_debate"
+          },
+          {
+            "title": "Presidential debates, 2020",
+            "snippet": "The first of three presidential debates will take place on September 29, 2020, in Cleveland, Ohio. Case Western Reserve University and Cleveland Clinic will ...",
+            "url": "https://ballotpedia.org/Presidential_debates,_2020"
+          },
+          {
+            "title": "Why is Biden and Trump's presidential debate so early?",
+            "snippet": "The debate between President Joe Biden and former President Donald Trump, hosted by CNN on Thursday, is the first of the 2024 election cycle ...",
+            "url": "https://www.wbaltv.com/article/when-are-presidential-debates/61415339"
+          },
+          {
+            "title": "Biden and Trump Agree to Two Debates in June and ...",
+            "snippet": "President Biden and Donald J. Trump have agreed to two debates, one on June 27 on CNN and one on Sept. 10 on ABC News, the first onstage ...",
+            "url": "https://www.nytimes.com/2024/05/15/us/politics/biden-trump-debates.html?eafs_enabled=false"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-482-deepseek-candidate",
+  "timestamp": "2026-11-06T05:13:03.936934+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9173.234
+}

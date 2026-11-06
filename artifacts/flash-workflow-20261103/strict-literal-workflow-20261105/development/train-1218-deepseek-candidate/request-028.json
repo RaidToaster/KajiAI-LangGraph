@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Did Sanders make any statement explicitly opposing the Affordable Care Act as enacted?",
+        "candidates": [
+          {
+            "title": "Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "But they were not, Biden said, claiming that Sanders was against Obama's signature health care law. We rate it Mostly False.",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "Bernie Sanders's claim that he would expand, not ...",
+            "snippet": "Sanders did not directly dispute her claim but said the bill would have expanded, not eliminated, Medicare.",
+            "url": "https://www.washingtonpost.com/news/fact-checker/wp/2015/11/23/bernie-sanderss-claim-that-he-would-expand-not-dismantle-the-affordable-care-act/"
+          },
+          {
+            "title": "Sanders Statement on Health Care Vote",
+            "snippet": "“This bill is opposed by virtually every major health care organization in this country. It is opposed overwhelmingly by the American people.",
+            "url": "https://www.sanders.senate.gov/press-releases/sanders-statement-on-health-care-vote/"
+          },
+          {
+            "title": "Fact check US: Can progressive and centrist Democrats ...",
+            "snippet": "“I am a very strong advocate of Medicare for All. I introduced legislation in the Senate. Sanders' statement comes as no surprise. of improving ...",
+            "url": "https://sciencespo.hal.science/hal-03263649/document"
+          },
+          {
+            "title": "Sanders Calls for Rivals to Reject Money From Health ...",
+            "snippet": "In a speech in Washington, Bernie Sanders laid out his vision of “Medicare for all” and asked Democrats to join him in refusing money from ...",
+            "url": "https://www.nytimes.com/2019/07/17/us/politics/bernie-sanders-health-care.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-05T10:08:56.817007+00:00",
+  "status": "reserved_outcome_unknown"
+}

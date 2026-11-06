@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Canada would like to reopen the border with the U.S",
+        "query": "Canada would like to reopen the border with the U.S evidence",
+        "candidates": [
+          {
+            "title": "Trump says Canada wants to reopen the border. But do we ...",
+            "snippet": "\"We're looking at the border with Canada. Canada would like it open, and, you know, we want to get back to normal business,\" Trump said at the ...",
+            "url": "https://www.cbc.ca/news/politics/trump-border-reopen-canada-1.5730806"
+          },
+          {
+            "title": "Task Force To Look At How To Reopen The Canada-U.S. ...",
+            "snippet": "The border is now shut down for an indefinite period of time, and there is no clear timeline to reopen. a priority for the moment.",
+            "url": "https://www.forbes.com/sites/stephaniefillion/2020/11/24/task-force-to-look-at-how-to-reopen-the-canada-us-border/"
+          },
+          {
+            "title": "New York Democrat, 2 Trudeau Liberals push to reopen ...",
+            "snippet": "Brian Higgins and two members of Justin Trudeau's Liberal government are making a joint appeal for an evidence-based plan to reopen the U.S.- ...",
+            "url": "https://www.politico.com/news/2021/06/02/brian-higgins-canada-liberals-border-491638"
+          },
+          {
+            "title": "Government of Canada announces easing of border ...",
+            "snippet": "As a first step, starting August 9, 2021, Canada plans to begin allowing entry to American citizens and permanent residents, who are currently residing in the ...",
+            "url": "https://www.canada.ca/en/public-health/news/2021/07/government-of-canada-announces-easing-of-border-measures-for-fully-vaccinated-travellers.html"
+          },
+          {
+            "title": "Senate calls for U.S.-Canada border to reopen",
+            "snippet": "scientific evidence has shown that requiring travelers to be fully vaccinated or provide proof of a negative COVID-19 PCR test can effectively ...",
+            "url": "https://www.senatorrogervictory.com/senate-calls-for-u-s-canada-border-to-reopen/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-316-glm-baseline",
+  "timestamp": "2026-11-05T23:43:05.259029+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1650.562
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "Search the New Zealand Parliament website for the official Food Bill title, number, version and legislative status as of 2020-10-29.",
+        "candidates": [
+          {
+            "title": "Food Standards Code legislation",
+            "snippet": "Oct 16, 2026 — FSANZ has compiled all 80 Standards and 29 Schedules of the Code into a single, easy-to- search and navigate PDF. Legislation links below will ...",
+            "url": "https://www.foodstandards.gov.au/food-standards-code/legislation"
+          },
+          {
+            "title": "Progress of legislation",
+            "snippet": "The Progress of Legislation document provides a list of bills initiated in the current Parliament , and bills lapsed at the end of the previous Parliament ... Read more",
+            "url": "https://www3.parliament.nz/en/pb/bills-and-laws/progress-of-legislation/"
+          },
+          {
+            "title": "New Zealand Legislation: Home",
+            "snippet": "This website is the official home for New Zealand Acts, Bills , and secondary legislation . Get answers to legislation questions He aratohu",
+            "url": "https://www.legislation.govt.nz/"
+          },
+          {
+            "title": "New Zealand Parliament",
+            "snippet": "Browse official written questions s ubmitted by MPs and their responses",
+            "url": "https://www.parliament.nz/"
+          },
+          {
+            "title": "Bills (proposed laws) - New Zealand Parliament",
+            "snippet": "You can view the schedule of divided bills , or read more about the progress of legislation . Historical bills from 1854 to 2008 are available from NZLII.",
+            "url": "https://bills.parliament.nz/bills-proposed-laws?Tab=Current"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-candidate",
+  "timestamp": "2026-11-06T00:54:39.781085+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5945.078
+}

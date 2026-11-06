@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump tweeted “THE NEXT 30 TO 60 DAYS WILL BE THE BIGGEST DRAINING OF THE SWAMP EVER”",
+        "query": "Did Donald Trump's Twitter account post a tweet containing the exact phrase \"THE NEXT 30 TO 60 DAYS WILL BE THE BIGGEST DRAINING OF THE SWAMP EVER\"?",
+        "candidates": [
+          {
+            "title": "Fake Donald Trump Account Promises To \"Drain The ...",
+            "snippet": "The tweet reads: \"THE NEXT 30 TO 60 DAYS WILL BE THE BIGGEST DRAINING OF THE SWAMP EVER! ENOUGH IS ENOUGH, THE TIME HAS ARRIVED!\" The Facebook ...",
+            "url": "https://www.boomlive.in/world/fake-donald-trump-account-promises-to-drain-the-swamp-in-60-days-9680"
+          },
+          {
+            "title": "Did Trump Tweet That 'The Next 30 To 60 Days Will Be ...",
+            "snippet": "FACT CHECK: Did Trump Tweet That 'The Next 30 To 60 Days Will Be The Biggest Draining Of The Swamp Ever'? 10:45 AM 09/14/2020 Brad Sylvester ...",
+            "url": "https://checkyourfact.com/2020/09/14/fact-check-donald-trump-draining-swamp-tweet/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-407-deepseek-candidate",
+  "timestamp": "2026-11-06T05:02:05.265853+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8514.578
+}

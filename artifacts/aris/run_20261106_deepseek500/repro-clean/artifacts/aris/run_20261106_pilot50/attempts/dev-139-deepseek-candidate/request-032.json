@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "Search the Internet Archive Wayback Machine and Cornyn for TX Senate campaign website archives for a preserved copy or official transcript of the 'Will Be Covered' ad.",
+        "candidates": [
+          {
+            "title": "Ad in Texas GOP Runoff Attacks Cornyn on Immigration ...",
+            "snippet": "A TV ad attacking incumbent Texas Sen. John Cornyn for supporting “Muslim mass immigration” misleadingly cites a 2021 quote from Cornyn ...",
+            "url": "https://www.factcheck.org/2026/05/ad-in-texas-gop-runoff-attacks-cornyn-on-immigration-islam/"
+          },
+          {
+            "title": "Wesley Hunt Corrects John Cornyn Campaign Ad",
+            "snippet": "John Cornyn is up with a new campaign ad. Naturally it needed a few corrections. So we FIXED IT for him.",
+            "url": "https://www.facebook.com/WesleyHuntTX/videos/john-cornyn-is-up-with-a-new-campaign-ad-naturally-it-needed-a-few-correctionsso/1566923077958270/"
+          },
+          {
+            "title": "Cornyn campaign releases lengthy ad on Paxton",
+            "snippet": "The six-minute long ad details a number of allegations involving the Texas Attorney General from securities fraud charges to his impeachment in ...",
+            "url": "https://www.audacy.com/krld/news/local/cornyn-campaign-releases-lengthy-ad-on-paxton"
+          },
+          {
+            "title": "Sen. John Cornyn is under fire for a campaign ad that ...",
+            "snippet": "Sen. John Cornyn is under fire for a campaign ad that appears to edit a Trump clip, cutting out Ted Cruz's name.",
+            "url": "https://www.facebook.com/TheDallasExpress/videos/sen-john-cornyn-is-under-fire-for-a-campaign-ad-that-appears-to-edit-a-trump-cli/1255125156094983/"
+          },
+          {
+            "title": "H.R. 1, ONE BIG BEAUTIFUL BILL ACT",
+            "snippet": "Select a Congress to see the treaty documents received, considered, or pending. 81-119 (1949-2026), 119 (2025-2026), 118 (2023-2024) ...",
+            "url": "https://www.congress.gov/event/119th-congress/house-event/LC74815/text"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-deepseek-candidate",
+  "timestamp": "2026-11-06T01:23:24.593318+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7669.906
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons and seven other underage girls were featured on Hunter Biden's laptop.",
+        "query": "The Gateway Pundit, \"Delaware GOP Senate Candidate Says Sen. Chris Coons’ Daughter is ‘Featured on Hunter’s Laptop’,\" Oct. 24, 2020",
+        "candidates": [
+          {
+            "title": "Delaware GOP Senate Candidate Says Sen. Chris Coons' Daughter is ' ...",
+            "snippet": "... Delaware GOP Senate Candidate Says Sen. Chris Coons' Daughter is 'Featured on Hunter's Laptop'. by Cassandra MacDonald Oct. 24, 2020 5:50 pm.",
+            "url": "https://www.thegatewaypundit.com/2020/10/delaware-gop-senate-candidate-says-sen-chris-coons-daughter-featured-hunters-laptop/"
+          },
+          {
+            "title": "No evidence Hunter Biden had photos of Coons' daughter",
+            "snippet": "\" Oct. 25, 2020. The Gateway Pundit, \"Delaware GOP Senate Candidate Says Sen. Chris Coons' Daughter is 'Featured on Hunter's Laptop',\" Oct. 24, ...",
+            "url": "https://politifact.com/factchecks/2020/oct/26/facebook-posts/no-evidence-hunter-biden-had-photos-coons-daughter/"
+          },
+          {
+            "title": "Report: Democrat Senator's Daughter & 7 Other Underage Girls Appear On ...",
+            "snippet": "... Delaware GOP Senate candidate says Sen. Chris Coons' daughter is 'featured on Hunter's laptop' · (GATEWAY PUNDIT) Delaware Republican senate ...",
+            "url": "https://ground.news/article/d3c74388-e567-47f9-b709-c5721ccd1b10"
+          },
+          {
+            "title": "Download file 9.15 MB",
+            "snippet": "... Delaware GOP Senate candidate says Sen. Chris Coons' daughter is 'featured on Hunter's laptop' (GATEWAY PUNDIT) Delaware Republican senate candidate Lauren ...",
+            "url": "https://huggingface.co/datasets/fever/AVeriTeCFever8Dev/resolve/ad4871c74f79c951de161a72304baa9dfd59abeb/submissions/d23f3890-11f1-4f35-b4a2-79df2493d87e-fd74ac48-9c89-41aa-b18d-0b78df0affbd.csv?download=true"
+          },
+          {
+            "title": "WATCH: President Trump delivers remarks at a Make America Great ...",
+            "snippet": "6y. Noah Buzulak. Delaware GOP Senate Candidate Says Sen. Chris Coons' Daughter is 'Featured on Hunter's Laptop' Delaware Republican senate ...",
+            "url": "https://www.facebook.com/cbs21news/posts/watch-president-trump-delivers-remarks-at-a-make-america-great-again-victory-ral/10157363247017714/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-037-deepseek-candidate",
+  "timestamp": "2026-11-06T07:29:50.300191+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17379.625
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "Town of Grand Island Financial Report for the Year Ended Dec. 31, 2016, page 16. Accessed Aug. 25, 2018.",
+        "candidates": [
+          {
+            "title": "[PDF] TOWN OF GRAND ISLAND, NEW YORK Basic Financial ...",
+            "snippet": "Total revenue 27,065,851 29,675,602. For the year ended December 31, 2024, the Town recognized OPEB expense of $848,230. At December 31, 2024, ...",
+            "url": "https://www.grand-island.ny.us/DocumentCenter/View/3701/Financial-Report-2024"
+          },
+          {
+            "title": "Laserfiche WebLink - City of Grand Island",
+            "snippet": "The basic governmental fund financial statements can be found on pages 13-16 of this report. Net position increased $177,517 for the year ended September 30, ...",
+            "url": "https://city2.grand-island.com/WebLink/DocView.aspx?id=410155&dbid=0&repo=City-of-GI"
+          },
+          {
+            "title": "[PDF] TOWN OF CORTLANDT, NEW YORK",
+            "snippet": "The Comprehensive Annual Financial Report (CAFR) for the Town of Cortlandt, New York (the. Town) for the fiscal year ended December 31, 2016 is herewith ...",
+            "url": "https://www.townofcortlandtny.gov/documents/compt/2016_town_of_cortlandt_fs_2016.pdf"
+          },
+          {
+            "title": "[PDF] TOWN OF AMHERST, NEW YORK",
+            "snippet": "The total fund balance decreased to $13,578,315. During the year ended December 31, 2016, the Town's Highway Fund fund balance decreased by $391,865 from the ...",
+            "url": "https://www.amherst.ny.us/pdf/comptroller/financial2016.pdf"
+          },
+          {
+            "title": "Grand Island, NY | Official Website",
+            "snippet": "Welcome to the Town of Grand Island!",
+            "url": "https://www.grandislandny.gov/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-deepseek-candidate",
+  "timestamp": "2026-11-06T01:13:31.421959+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7076.718
+}

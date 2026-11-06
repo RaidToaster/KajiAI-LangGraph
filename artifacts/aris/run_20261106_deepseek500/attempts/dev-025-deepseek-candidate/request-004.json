@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "What official social media accounts did McDonald's Azerbaijan operate around October 2020, and on which platforms?",
+        "candidates": [
+          {
+            "title": "Did McDonald's in Azerbaijan Make Pro-Military Posts on Instagram?",
+            "snippet": "Social media users on Twitter were surprised on Oct. 27 to see the official Instagram account of McDonald's in Azerbaijan posting patriotic ...",
+            "url": "https://www.voanews.com/a/did-mcdonald-s-in-azerbaijan-make-pro-military-posts-on-instagram-/6742646.html"
+          },
+          {
+            "title": "McDonald's Azerbaijan 🍔🍟🥤 (@mcdonalds.az)",
+            "snippet": "194K followers · 414 following · 1458 posts · @mcdonalds.az: McDonald's Azerbaijan 1,458 posts 194K followers 64 following. Follow Message Accounts you might ...",
+            "url": "https://www.instagram.com/mcdonalds.az/?__d=1"
+          },
+          {
+            "title": "Mcdonald's Azerbaijan",
+            "snippet": "Watch short videos about mcdonald's azerbaijan. Mcdonald's Azerbaijan Watch reels about mcdonald's azerbaijan from people around the #azerbaijan @mcdonalds.az. ...",
+            "url": "https://www.instagram.com/popular/mcdonald's-azerbaijan/?hl=en"
+          },
+          {
+            "title": "McDonald's Locations in Azerbaijan",
+            "snippet": "Please go on McDonald's social media & twitter. This is currently posted to McDonald's Azerbejan official page CEO of mcDonalds",
+            "url": "https://www.facebook.com/fb-answers/mcdonalds-locations-in-azerbaijan/"
+          },
+          {
+            "title": "Purpose & Impact Report 2024–2025",
+            "snippet": "McDonald's is a leading global foodservice retailer, with more than 43,000 restaurants in over 100 countries serving millions of customers every day.",
+            "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/McDonalds_PurposeImpact_ProgressReport_2024_2025.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-candidate",
+  "timestamp": "2026-11-06T06:51:34.176677+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15083.484
+}

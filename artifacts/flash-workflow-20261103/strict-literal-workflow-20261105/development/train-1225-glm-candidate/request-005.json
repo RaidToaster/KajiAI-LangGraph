@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "What was Mike Bloomberg's estimated net worth and what primary or published sources report it, particularly around the claim's referenced time period?",
+        "candidates": [
+          {
+            "title": "What Is Michael Bloomberg's Net Worth?",
+            "snippet": "According to the net worth tracker, he was worth an estimated $35.5 billion in 2015, meaning his net wealth has climbed nearly 72 percent in the ...",
+            "url": "https://www.newsweek.com/michael-bloomberg-net-worth-1489053"
+          },
+          {
+            "title": "1 Mike Bloomberg equals 660000 American households ...",
+            "snippet": "The media mogul made an estimated $3.5 billion last year in income alone from Bloomberg LP, the financial data and news company he founded in ...",
+            "url": "https://www.cbsnews.com/news/mike-bloomberg-net-worth-media-company-finance-terminals-revenue/"
+          },
+          {
+            "title": "Michael Bloomberg",
+            "snippet": "... net worth was estimated at $55.5 billion. In 2021, Bloomberg's net worth was estimated at $106 billion, ranking him 12th on Forbes' list of billionaires.",
+            "url": "https://en.wikipedia.org/wiki/Michael_Bloomberg"
+          },
+          {
+            "title": "What is Michael Bloomberg's net worth?",
+            "snippet": "According to Forbes, Bloomberg is estimated to be worth $55.6 billion. to be worth only $3.1 billion, according to the website.",
+            "url": "https://www.foxbusiness.com/money/michael-bloomberg-net-worth"
+          },
+          {
+            "title": "Michael Bloomberg: Billionaire Businessman & Philanthropist",
+            "snippet": "He's one of the wealthiest people in the world with an estimated net worth of $104.7 billion as of Jan. 28, 2025, according to Forbes.1",
+            "url": "https://www.investopedia.com/terms/m/michael-bloomberg.asp"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-05T10:13:08.286425+00:00",
+  "status": "reserved_outcome_unknown"
+}

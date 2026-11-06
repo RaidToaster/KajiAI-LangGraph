@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Due to Imran Khan's criticism of Macron's comments on Islam, French authorities cancelled the visas of 183 Pakistani citizens and deported 118 from the country.",
+        "query": "Did Imran Khan publicly criticize Emmanuel Macron's comments on Islam, and what did he say?",
+        "candidates": [
+          {
+            "title": "Pakistan's Khan slams Macron's views on Islam",
+            "snippet": "The Pakistani prime minister has also sought a ban on \"Islamophobic content\" on Facebook. Imran Khan's criticism of Emmanuel Macron comes at ...",
+            "url": "https://www.dw.com/en/pakistans-imran-khan-slams-french-president-macrons-views-on-islam/a-55394035"
+          },
+          {
+            "title": "Pakistan PM accuses Macron of attacking Islam by ' ...",
+            "snippet": "Pakistani Prime Minister Imran Khan said on Sunday that French President Emmanuel Macron has \"attacked Islam\" by encouraging the display of ...",
+            "url": "https://www.reuters.com/business/media-telecom/pakistan-pm-accuses-macron-attacking-islam-by-encouraging-blasphemous-cartoons-2020-10-25/"
+          },
+          {
+            "title": "Pakistan's PM Khan accuses Macron of 'attacking Islam'",
+            "snippet": "Pakistani Prime Minister Imran Khan accused French President Emmanuel Macron on Sunday of \"attacking Islam\", after the European leader ...",
+            "url": "https://www.france24.com/en/live-news/20201025-pakistan-s-pm-khan-accuses-macron-of-attacking-islam"
+          },
+          {
+            "title": "Imran accuses Macron of maligning Islam - Newspaper",
+            "snippet": "ISLAMABAD: Prime Minister Imran Khan on Sunday denounced French President Emmanuel Macron's remarks on blasphemous caricatures, calling them “ ...",
+            "url": "https://www.dawn.com/news/1587034"
+          },
+          {
+            "title": "Pakistani PM: French Leader Stoking 'Islamophobia'",
+            "snippet": "Pakistani Prime Minister Imran Khan has accused French President Emmanuel Macron of “attacking Islam” by defending the publication of ...",
+            "url": "https://www.voanews.com/a/europe_pakistani-pm-french-leader-stoking-islamophobia/6197586.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-002-deepseek-candidate",
+  "timestamp": "2026-11-06T04:24:01.006727+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6230.312
+}

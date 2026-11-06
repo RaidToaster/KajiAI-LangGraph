@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Ignat Shchetinin And Sammy Scott Piatt, charged with arson connected to Clackamas County, Oregon wildfires.",
+        "query": "What is the specific connection alleged between the arson charges and Clackamas County, Oregon wildfires?",
+        "candidates": [
+          {
+            "title": "A man has been charged with first-degree arson in ...",
+            "snippet": "...”Four people have been arrested for arson for deliberately starting blazes along the West Coast including one man who livestreamed the ...",
+            "url": "https://www.facebook.com/ABC17News/posts/a-man-has-been-charged-with-first-degree-arson-in-connection-with-one-of-three-w/1709393764131248/"
+          },
+          {
+            "title": "Ontario man arrested, charged with 15 counts of arson in ...",
+            "snippet": "Ontario man arrested, charged with 15 counts of arson in Malheur County fires. Fires are being started in clackamas County too.",
+            "url": "https://www.facebook.com/CBS2Boise/videos/ontario-man-charged-with-15-counts-of-arson/1326289052923904/"
+          },
+          {
+            "title": "Ontario man charged with arson for Brogan Canyon Fire ...",
+            "snippet": "An Ontario man was charged with multiple counts of second-degree arson in connection to Brogan Canyon fires. His bail was set at $750,000",
+            "url": "https://www.statesmanjournal.com/story/news/wildfires/2026/07/31/ontario-oregon-man-charged-with-arson-for-brogan-canyon-fire/91116184007/"
+          },
+          {
+            "title": "Arson Charges and Defense in Federal Fire Investigations",
+            "snippet": "Federal arson charges depend on the property's federal connection, the cause of the fire, and proof of the required mental state. A wildfire alone does not ...",
+            "url": "https://www.daeryunlaw.com/us/practices/detail/arson-charges"
+          },
+          {
+            "title": "Man accused of setting eastern Oregon wildfires seeks ...",
+            "snippet": "A Ontario man was charged in connection with numerous fires. Man accused of setting eastern Oregon wildfires seeks reduction of $750,000 bond. ...",
+            "url": "https://www.oregonlive.com/wildfires/2026/08/man-accused-of-setting-eastern-oregon-wildfires-seeks-reduction-of-750000-bond.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-355-deepseek-candidate",
+  "timestamp": "2026-11-06T04:17:43.843009+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5853.156
+}

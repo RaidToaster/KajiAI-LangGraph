@@ -31,6 +31,14 @@ def format_report(result: FinalResult) -> str:
     ]
     if result.prediction_summary and result.verification_status != "verified":
         lines.extend(["## Model assessment (not accepted by the verification gate)", "", result.prediction_summary, ""])
+    if result.planning_statements:
+        lines.extend(["## Planning statements (unverified leads)", ""])
+        lines.extend(f"- {statement}" for statement in result.planning_statements)
+        lines.append("")
+    if result.verification_questions:
+        lines.extend(["## Verification questions", ""])
+        lines.extend(f"- {question}" for question in result.verification_questions)
+        lines.append("")
     if result.evidence:
         lines.extend(["## Cited evidence (see verification status)", ""])
         for index, item in enumerate(result.evidence, 1):
@@ -56,6 +64,10 @@ def format_report(result: FinalResult) -> str:
         )
         if item.queries:
             lines.append(f"  Queries: {', '.join(item.queries)}")
+        if item.assessment:
+            scope = item.assessment.indexed_input.get("scope_first_response", item.assessment.indexed_input.get("factored_decision", item.assessment.indexed_input.get("selected_decision", {})))
+            for note in scope.get("nonblocking_limitations", []):
+                lines.append(f"  Model limitation for {note['component']} (judged nonblocking): {note['issue']} Reason: {note['reason_nonblocking']}")
     citations = result.jev_audit.get("citations", [])
     reviewed = [source for source in result.retrieval_ledger if source.jev_scores]
     if citations or reviewed:

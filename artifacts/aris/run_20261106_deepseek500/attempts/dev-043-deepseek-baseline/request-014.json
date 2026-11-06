@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said that $15 an hour is too much for essential workers",
+        "query": "Donald Trump said that $15 an hour is too much for essential workers original source fact check",
+        "candidates": [
+          {
+            "title": "Does Donald Trump think $15 an hour is ‘too much’?",
+            "snippet": "At an event in Dallas, Pa., on Oct. 24, Biden said that Trump \"thinks that $15 an hour minimum wage is too much for essential workers.\" In reality, Trump’s position is a bit...",
+            "url": "https://www.politifact.com/factchecks/2020/oct/30/joe-biden/does-donald-trump-think-15-hour-too-much-essential/"
+          },
+          {
+            "title": "Does Donald Trump think $15 an hour is ‘too much’?",
+            "snippet": "At an event in Dallas, Pa., on Oct. 24, Biden said that Trump \"thinks that $15 an hour minimum wage is too much for essential workers.\" In reality, Trump’s position is a bit...",
+            "url": "https://api.politifact.com/factchecks/2020/oct/30/joe-biden/does-donald-trump-think-15-hour-too-much-essential/"
+          },
+          {
+            "title": "President Trump Ends $15-Per-Hour Contractor Minimum Wage ...",
+            "snippet": "On March 14, 2025, President Trump issued EO 14236, “Additional Rescissions of Harmful Executive Orders and Actions,” revoking EO 14026, which had set a $15-per-hour minimum wage rate for federal contractors.",
+            "url": "https://ogletree.com/insights-resources/blog-posts/president-trump-ends-15-per-hour-contractor-minimum-wage-rate-after-filing-a-brief-defending-power-to-set-the-minimum-wage/"
+          },
+          {
+            "title": "Donald Trump Insists That Wages Are 'Too High' - First Draft ...",
+            "snippet": "In the Fox Business News debate, Mr. Trump said he couldn’t endorse the demand to more than double the federal minimum wage to $15 an hour, from $7.25, as candidates such as Senator...",
+            "url": "https://archive.nytimes.com/www.nytimes.com/politics/first-draft/2015/11/11/donald-trump-insists-that-wages-are-too-high/"
+          },
+          {
+            "title": "The blatant Trump attack on workers you may not have heard ...",
+            "snippet": "In a move that starkly exposes just how disingenuous the Trump administration’s pro-worker rhetoric really is, President Trump rescinded the Biden administration’s executive order that increased the minimum wage for workers on federal contracts.",
+            "url": "https://www.epi.org/blog/trumps-blatant-attack-on-workers-you-may-not-have-heard-about-cutting-the-wages-of-nearly-half-a-million-workers/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-043-deepseek-baseline",
+  "timestamp": "2026-11-06T07:43:58.085589+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18227.406
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "Ferdinand Marcos birth death dates",
+        "candidates": [
+          {
+            "title": "Ferdinand Marcos",
+            "snippet": "Ferdinand Emmanuel Edralin Marcos Sr. (September 11, 1917 – September 28, 1989) was a Filipino lawyer and politician who served as the tenth president of ...",
+            "url": "https://en.wikipedia.org/wiki/Ferdinand_Marcos"
+          },
+          {
+            "title": "Ferdinand Marcos | Biography, President, Wife, & Facts",
+            "snippet": "Marcos was born on September 11, 1917, in Sarrat, Philippines. Marcos died in exile in Honolulu, Hawaii, on September 28, 1989. died in 1989.",
+            "url": "https://www.britannica.com/biography/Ferdinand-E-Marcos"
+          },
+          {
+            "title": "Ferdinand Marcos - Wife, Presidency & Death",
+            "snippet": "Name: Ferdinand Edralin Marcos · Birth Year: 1917 · Birth date: September 11, 1917 · Birth City: Sarrat · Birth Country: Philippines · Gender: Male ...",
+            "url": "https://www.biography.com/political-figures/ferdinand-marcos"
+          },
+          {
+            "title": "Ferdinand Marcos dies in Hawaii at 72",
+            "snippet": "Ferdinand Edralin Marcos was born on Sept. 11, 1917, in the Philippines' hardscrabble north, in Sarrat, Ilocos Norte Province. On Dec. 7, 1938, ...",
+            "url": "https://www.washingtonpost.com/obituaries/1989/09/29/ferdinand-marcos-philippines-death/"
+          },
+          {
+            "title": "Ferdinand Marcos Sr. birthdate and legacy as 10th Philippine president",
+            "snippet": "Born 11 September 1917. Died 28 September 1989. He stayed in Honolulu, Hawaii until his death at the age of 72 on September 28, 1989, which was ...",
+            "url": "https://www.facebook.com/groups/448419778556851/posts/28548244811480971/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-candidate",
+  "timestamp": "2026-11-06T08:10:20.389770+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19809.703
+}

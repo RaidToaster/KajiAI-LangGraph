@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign.",
+        "query": "Search FISA Court and DOJ Inspector General primary records for any authorization, application, or order specifically naming the Trump campaign as a surveillance target.",
+        "candidates": [
+          {
+            "title": "Review of Four FISA Applications and Other Aspects of the ...",
+            "snippet": "Dec 9, 2019 — Page 1. Office of the Inspector General . U.S. Department of Justice. OVERSIGHT INTEGRITY GUIDANCE. Review of Four FISA Applications and. Other ... Read more 478 pages",
+            "url": "https://www.justice.gov/storage/120919-examination.pdf"
+          },
+          {
+            "title": "FBI Apologizes To Court For Mishandling Surveillance Of ...",
+            "snippet": "Jan 11, 2020 — The FBI apologized to the secret court that handles national security investigations for the way it conducted surveillance of a former Trump ... Read more",
+            "url": "https://www.npr.org/2020/01/11/795566486/fbi-apologizes-to-court-for-mishandling-surveillance-of-trump-campaign-adviser"
+          },
+          {
+            "title": "Judiciary Committee Releases Key Material Related to FISA ...",
+            "snippet": "Apr 16, 2020 — In response to the Inspector General's audit, the Foreign Intelligence Surveillance Court ordered FBI to reexamine the FISA warrant application ... Read more",
+            "url": "https://www.judiciary.senate.gov/04/16/2020/fisa-investigation"
+          },
+          {
+            "title": "The FBI's warrant system for spying on Americans is a ...",
+            "snippet": "Dec 10, 2019 — Civil libertarians have long said the process for getting secret warrants to spy on Americans is flawed. The IG report on the Russia probe ...",
+            "url": "https://www.nbcnews.com/politics/justice-department/ig-report-shows-way-fbi-gets-warrants-spy-americans-mess-n1098666"
+          },
+          {
+            "title": "Court Orders F.B.I. to Fix National Security Wiretaps After ...",
+            "snippet": "Dec 17, 2019 — WASHINGTON — A secretive federal court accused the F.B.I. on Tuesday of misleading judges about the rationale for wiretapping a former Trump ... Read more",
+            "url": "https://www.nytimes.com/2019/12/17/us/politics/fisa-court-order-fbi-surveillance.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-candidate",
+  "timestamp": "2026-11-06T04:32:54.954838+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6764.265
+}

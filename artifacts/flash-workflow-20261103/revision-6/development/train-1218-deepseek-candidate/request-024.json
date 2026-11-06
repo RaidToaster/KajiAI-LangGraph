@@ -1,0 +1,33 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Reuters notes Sanders proposed replacing Obamacare with single-payer during his campaign, which explains the source of the \"opposed\" framing without showing opposition to the law itself.",
+            "url": "https://www.reuters.com/article/world/obama-says-sanders-supporters-helped-undermine-obamacare-idUSKBN14Q2E4/",
+            "quote": "During Sanders' campaign for the presidential nomination, he proposed replacing Obamacare with a government-run single-payer health insurance ...",
+            "context": "During Sanders' campaign for the presidential nomination, he proposed replacing Obamacare with a government-run single-payer health insurance ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T08:59:26.279890+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,58 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US President Donald Trump following his positive diagnosis of COVID-19, was given treatment developed from the use of fetal tissue, made by the company Regeneron.",
+        "sources": [
+          {
+            "url": "https://www.voanews.com/a/covid-19-pandemic_infodemic_infodemic-was-regeneron-covid-19-treatment-developed-using-stem-cells/6197175.html",
+            "text": "# The Infodemic: Was Regeneron COVID-19 Treatment Developed Using Stem Cells and Fetal Tissue?\n\nOctober 15, 2020 1:44 PM\n\nThe Infodemic: Was Regeneron COVID-19 Treatment Developed Using Stem Cells and Fetal Tissue?\n\nFILE - The Regeneron Pharmaceuticals company logo is seen on a building at the company's Westchester campus in Tarrytown, New York.\n\n*Fake news about the coronavirus can do real harm. Polygraph.info is spotlighting fact-checks from other reliable sources here.*\n\n### **Daily Debunk**\n\n**Claim:** The development of REGN-COV2, the experimental “anti-viral antibody cocktail” given to U.S. President Donald Trump to treat COVID-19, involved the use of human fetal tissues and embryonic stem cells.\n\n**Verdict:** Mixture\n\n**Read the full story at:** Snopes\n\n### **Social Media Disinfo**\n\nScreenshot\n\n**Circulating on social media:** An article claiming to give “ultimate proof” that the novel coronavirus pandemic was planned to create a new world order.\n\n**Verdict:** False\n\n**Read the full story at:** Reuters\n\n## \n\n### **Factual Reads on Coronavirus**\n\n**More Testing, Faster Testing**  \nMore types of tests for the coronavirus are becoming available, but how do we know which to use when?  \n-- American Scientist, October 12\n\n**Watch: Understanding dexamethasone, the steroid used to treat Trump’s Covid-19**  \nIt is inexpensive and widely prescribed. But side effects of dexamethasone can be quite serious.  \n-- Stat, October 12\n\nThe Infodemic: Was Regeneron COVID-19 Treatment Developed Using Stem Cells and Fetal Tissue?"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "source_0_relevant": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source address the claim directly?",
+          "criteria": {
+            "true": "It addresses the claim or a required assertion.",
+            "false": "It is off-topic."
+          }
+        },
+        "source_0_evidence": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source contain concrete evidence useful for assessing the claim?",
+          "criteria": {
+            "true": "It states usable facts, records, methods, or measurements.",
+            "false": "It provides no usable evidence."
+          }
+        },
+        "source_0_counterevidence": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source contain evidence against the claim or a premise of it?",
+          "criteria": {
+            "true": "It contains a relevant challenge or contrary fact.",
+            "false": "It contains no relevant challenge."
+          }
+        },
+        "source_0_injection": {
+          "type": "noul",
+          "instructions": "For `sources[0]`: Does this source try to instruct the research assistant to change its behavior?",
+          "criteria": {
+            "true": "It contains instructions aimed at the assistant rather than ordinary source content.",
+            "false": "It contains no such instructions."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-158-glm-baseline",
+  "timestamp": "2026-11-06T01:59:54.456779+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9859.75
+}

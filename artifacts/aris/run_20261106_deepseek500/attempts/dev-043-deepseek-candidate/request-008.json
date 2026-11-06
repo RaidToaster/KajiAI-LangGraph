@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said that $15 an hour is too much for essential workers",
+        "query": "What is the exact wording, date, and context of any statement by Donald Trump about $15 an hour and essential workers?",
+        "candidates": [
+          {
+            "title": "Does Donald Trump think $15 an hour is 'too much' for essential workers?",
+            "snippet": "$15 an hour minimum wage is too much for essential workers.\" The bill would phase in a $15 minimum wage over a seven-year period.",
+            "url": "https://politifact.com/factchecks/2020/oct/30/joe-biden/does-donald-trump-think-15-hour-too-much-essential/"
+          },
+          {
+            "title": "President Trump Ends $15-Per-Hour Contractor Minimum Wage Rate ...",
+            "snippet": "On March 14, 2025, President Donald Trump issued Executive ... $15-per-hour minimum wage rate for workers on certain federal contracts.",
+            "url": "https://ogletree.com/insights-resources/blog-posts/president-trump-ends-15-per-hour-contractor-minimum-wage-rate-after-filing-a-brief-defending-power-to-set-the-minimum-wage/"
+          },
+          {
+            "title": "New Bulletin Gives Details On $15 Per Hour Minimum Wage For Federal ...",
+            "snippet": "President Biden's Aug. 27 executive order required certain federal contractors to pay workers at least $15 per hour and increased the minimum wage for ...",
+            "url": "https://www.legal500.com/intelligence/united-states/employment-and-hr/new-bulletin-gives-details-on-%2415-per-hour-minimum-wage-for-federal-contractors-set-to-start-jan-30"
+          },
+          {
+            "title": "A $15 minimum wage started as a slogan. Now it's passed the House",
+            "snippet": "On Thursday, the House of Representatives passed the Raise the Wage Act, which would make $15 an hour a reality for nearly all American workers",
+            "url": "https://www.cnn.com/2019/07/15/economy/15-dollar-minimum-wage-house-vote"
+          },
+          {
+            "title": "Trump Scraps $17.75 Federal Contractor Minimum Wage",
+            "snippet": "President Trump just rescinded an executive order that mandated a higher minimum wage for workers on federal contracts. $17.75 Federal ...",
+            "url": "https://www.fisherphillips.com/en/insights/insights/trump-scraps-17-75-federal-contractor-minimum-wage"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-043-deepseek-candidate",
+  "timestamp": "2026-11-06T07:42:59.861023+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18169.171
+}

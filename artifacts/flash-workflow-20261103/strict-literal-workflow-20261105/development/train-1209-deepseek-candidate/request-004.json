@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "What is the exact date, venue, and context in which Amy Klobuchar made this statement, and is there a primary transcript or recording confirming the wording?",
+        "candidates": [
+          {
+            "title": "TESTIMONY FROM A FACEBOOK WHISTLEBLOWER ...",
+            "snippet": "Senator Klobuchar. STATEMENT OF HON. AMY KLOBUCHAR,. U.S. SENATOR FROM MINNESOTA ... record of publicizing efforts to make their platforms ...",
+            "url": "https://www.congress.gov/117/chrg/CHRG-117shrg54110/CHRG-117shrg54110.pdf"
+          },
+          {
+            "title": "- NOMINATION OF STEPHEN M. DICKSON, NOMINEE TO ...",
+            "snippet": "Amy Klobuchar........................................... 55 Hon. Richard ... Dan Carey, who reviewed a recording he made of the November meeting. A ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-116shrg52695/html/CHRG-116shrg52695.htm"
+          },
+          {
+            "title": "Amy Coney Barrett Confirmation Hearing Day 3",
+            "snippet": "Day 3 of the Supreme Court confirmation hearing of Amy Coney Barrett took place before the Senate on October 14. Read the transcript here.",
+            "url": "https://www.rev.com/transcripts/amy-coney-barrett-senate-confirmation-hearing-day-3-transcript"
+          },
+          {
+            "title": "UNCLASSIF]ED, COMMITTEE SENS]T]VE",
+            "snippet": "During the course of the interview, we will take any breaks you desire. This interview will be transcribed. There is a reporter making a record ...",
+            "url": "https://intelligence.house.gov/uploadedfiles/jake_sullivan_testimony_dec_21_2017.pdf"
+          },
+          {
+            "title": "The False Choice Between Digital Regulation and Innovation",
+            "snippet": "by A Bradford · 2024 · Cited by 191 — ABSTRACT—This Article challenges the common view that more stringent regulation of the digital economy inevitably compromises innovation and.",
+            "url": "https://scholarship.law.columbia.edu/context/faculty_scholarship/article/5567/viewcontent/Bradford_The_False_Choice_Between_Digital_Regulation_and_Innovation.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-05T10:25:17.396948+00:00",
+  "status": "reserved_outcome_unknown"
+}

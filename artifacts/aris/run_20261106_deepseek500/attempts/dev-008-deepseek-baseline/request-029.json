@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "You’re watching the cheaters original source fact check",
+        "candidates": [
+          {
+            "title": "Cheaters host Joey Greco's stabbing was staged, paid actor says",
+            "snippet": "Cheaters is fake, according to paid actors who appeared in multiple episodes, including the one where host Joey Greco was allegedly stabbed ...",
+            "url": "https://www.realityblurred.com/realitytv/2009/11/other-shows-cheaters_staged/"
+          },
+          {
+            "title": "The show Cheaters is filmed in the great city of Dallas ... - Reddit",
+            "snippet": "Yes! Old coworker was hired to be on the show and claims it was 100 percent fake! Missing:  original  fact",
+            "url": "https://www.reddit.com/r/Dallas/comments/wkqx2o/the_show_cheaters_is_filmed_in_the_great_city_of/"
+          },
+          {
+            "title": "'Cheaters' Host Recalls the Real-Life Dangers Behind ... - Yahoo",
+            "snippet": "Tommy Habeeb hosted the reality series when it first aired, and admits to having faced knives, guns, and angered spouses he had to protect ...",
+            "url": "https://www.yahoo.com/entertainment/tv/articles/cheaters-host-recalls-real-life-171830801.html"
+          },
+          {
+            "title": "Is the show Cheaters Fake? : What I Found Out - Stanley Parker",
+            "snippet": "So, is the show Cheaters fake? Probably. But the people watching it? The people quietly relating to every confrontation and denial and dramatic ...",
+            "url": "https://blueheartbeat.medium.com/is-the-show-cheaters-fake-8bb2ffc9a96e"
+          },
+          {
+            "title": "Is 'Cheaters' Cheating? - Inside Edition",
+            "snippet": "The show's creator and executive producer is Bobby Goldstein, who insists all the stories on Cheaters are true.",
+            "url": "https://www.insideedition.com/7346-is-cheaters-cheating"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-baseline",
+  "timestamp": "2026-11-06T05:50:47.573420+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11436.89
+}

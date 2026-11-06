@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans. counterevidence",
+        "candidates": [
+          {
+            "title": "Michael Bloomberg, the billionaire and the former mayor of ...",
+            "snippet": "Michael Bloomberg, the billionaire and the former mayor of New York City, gave Democrats $80 million in a late push to help them take the House ...",
+            "url": "https://www.facebook.com/nytimes/posts/breaking-news-michael-bloomberg-the-billionaire-and-the-former-mayor-of-new-york/1521774879804970/"
+          },
+          {
+            "title": "Michael Bloomberg",
+            "snippet": "Michael Rubens Bloomberg. He served as the 109th mayor of New York City from 2002 to 2013. Bloomberg is a centibillionaire, worth $109.4 billion as of March ...",
+            "url": "https://en.wikipedia.org/wiki/Michael_Bloomberg"
+          },
+          {
+            "title": "Mike Bloomberg",
+            "snippet": "An entrepreneur, former mayor of New York City and philanthropist who has lived the American Dream and dedicated his career so others get the same opportunity.",
+            "url": "https://www.mikebloomberg.com/"
+          },
+          {
+            "title": "Former New York City mayor Michael Bloomberg, one of the ...",
+            "snippet": "Former New York City mayor Michael Bloomberg, one of the world's richest people, announced his bid for the Democratic presidential nomination ...",
+            "url": "https://www.facebook.com/cnn/posts/former-new-york-city-mayor-michael-bloomberg-one-of-the-worlds-richest-people-an/10160159442406509/"
+          },
+          {
+            "title": "Former NYC Mayor Michael Bloomberg officially enters 2020 ...",
+            "snippet": "the billionaire dropped more than $37 million on campaign ads. Former NYC Mayor Michael Bloomberg officially enters 2020 presidential race",
+            "url": "https://www.youtube.com/watch?v=waq_D_qqPWs"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:52:05.282496+00:00",
+  "status": "reserved_outcome_unknown"
+}

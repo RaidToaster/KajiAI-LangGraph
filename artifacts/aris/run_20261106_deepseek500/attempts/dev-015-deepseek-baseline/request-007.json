@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States. counterevidence",
+        "candidates": [
+          {
+            "title": "[PDF] REAL LIFE IMPACTS OF THE BORDER CRISIS",
+            "snippet": "The millions of unlawful border crossings in America are more than just numbers; they have real economic, national security, and social consequences ...",
+            "url": "https://republicanpolicy.house.gov/sites/evo-subsites/republicanpolicy.house.gov/files/evo-media-document/Real%20Life%20Impacts%20of%20Border%20Crisis.pdf"
+          },
+          {
+            "title": "Federal border officials say a sharp decline in migrant ...",
+            "snippet": "A total of 47 percent more illegal substances were seized at the US southern border in March than in the previous month. These included cocaine, ...",
+            "url": "https://www.facebook.com/dcnewsnow/posts/federal-border-officials-say-a-sharp-decline-in-migrant-encounters-has-freed-per/1543923527771609/"
+          },
+          {
+            "title": "Illicit Drug Smuggling Between Ports of Entry and Border Barriers",
+            "snippet": "Summary. Policy discussions around border security often involve questions about how illicit drugs flow into the United States.",
+            "url": "https://www.congress.gov/crs-product/R46218"
+          },
+          {
+            "title": "Illicit Fentanyl and Drug Smuggling at the U.S.-Mexico Border",
+            "snippet": "CBP data indicates that drug seizures at the northern border are down compared to previous years, with 55,100 pounds seized in FY 2023 compared ...",
+            "url": "https://forumtogether.org/article/illicit-fentanyl-and-drug-smuggling-at-the-u-s-mexico-border-an-overview/"
+          },
+          {
+            "title": "Is Border Enforcement Effective? What We Know and What it ...",
+            "snippet": "The new evidence suggests that unauthorized migration across the southern border has plummeted, with successful illegal entries falling from roughly 1.8 million ...",
+            "url": "https://cmsny.org/publications/jmhs-is-border-enforcement-effective/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-baseline",
+  "timestamp": "2026-11-06T06:19:50.849734+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13180.171
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Getting drugs in Britain almost easier than ordering pizza.",
+        "query": "Getting drugs in Britain almost easier than ordering pizza. evidence",
+        "candidates": [
+          {
+            "title": "There's not enough evidence to say it's as easy to buy ...",
+            "snippet": "The global results revealed 30% could get cocaine in 30 minutes or less, while just 16.5% said the same about pizza. In the UK, 83% of ...",
+            "url": "https://fullfact.org/crime/easier-to-get-drugs-than-pizza/"
+          },
+          {
+            "title": "Illegal drugs 'almost as easy to get as pizza'",
+            "snippet": "More illegal drugs than ever before are coming into the UK - and buying them is almost as easy as ordering a pizza, the author of a major new ...",
+            "url": "https://www.bbc.com/news/uk-51658951"
+          },
+          {
+            "title": "Drugs as easy to buy online as pizza, says government report",
+            "snippet": "More illegal drugs than ever before are coming into the UK - and buying them is almost as easy as ordering a pizza, according to a government- ...",
+            "url": "https://theweek.com/105928/drugs-as-easy-to-buy-online-as-pizza-says-government-report"
+          },
+          {
+            "title": "'Cocaine is easier to get than pizza, it's socially acceptable' ...",
+            "snippet": "COCAINE is now so widely available in Scotland that users boast they can have the Class A drug delivered more quickly than a pizza.",
+            "url": "https://www.facebook.com/stvnews/posts/cocaine-is-easier-to-get-than-pizza-its-socially-acceptable/1210509217784990/"
+          },
+          {
+            "title": "It's quicker to get cocaine than pizza delivered in these ...",
+            "snippet": "LONDON — More than 30% of cocaine users in England can get the drug delivered faster than a pizza, according to a survey published Wednesday.",
+            "url": "https://www.13newsnow.com/article/news/nation-world/its-quicker-to-get-cocaine-than-pizza-delivered-in-these-countries/507-550309001"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1201-glm-baseline",
+  "timestamp": "2026-11-05T10:48:58.499111+00:00",
+  "status": "reserved_outcome_unknown"
+}

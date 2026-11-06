@@ -1,0 +1,72 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "PolitiFact March 2020 fact-check final rating and methodology for \"Bloomberg owns more wealth than the bottom 125 million Americans\"",
+        "candidates": [
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "Mar 2, 2020 — “Mike Bloomberg owns more wealth than the bottom 125 million Americans .” Mostly True. Income Poverty Bernie Sanders. Bloomberg wealth. Read more",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/"
+          },
+          {
+            "title": "Latest Fact-Checks On Bernie Sanders",
+            "snippet": "stated on February 19, 2020 in a debate: “Mike Bloomberg owns more wealth than the bottom 125 million Americans .” Mostly True. By Louis Jacobson • March 2, 2020 ... Read more",
+            "url": "https://politifact.com/factchecks/list/?speaker=bernie-sanders"
+          },
+          {
+            "title": "Bernie Sanders",
+            "snippet": "stated on February 19, 2020 in a debate: “Mike Bloomberg owns more wealth than the bottom 125 million Americans .” Mostly True. By Louis Jacobson • March 2, 2020 ... Read more",
+            "url": "https://politifact.com/personalities/bernie-sanders/"
+          },
+          {
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "snippet": "Bernie Sanders stated on February 19, 2020 in a debate: “Mike Bloomberg owns more wealth than the bottom 125 million Americans.” Rated mostly ...",
+            "url": "https://www.reddit.com/r/politics/comments/fcifsr/does_mike_bloomberg_own_more_wealth_than_the/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T15:19:39.530450+00:00",
+  "status": "reserved_outcome_unknown"
+}

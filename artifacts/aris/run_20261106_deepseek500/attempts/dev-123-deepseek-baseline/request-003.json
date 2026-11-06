@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "From 8th October the UK government will combine weekly flu and covid reports.",
+        "query": "From 8th October the UK government will combine weekly flu and covid reports. evidence",
+        "candidates": [
+          {
+            "title": "National flu and COVID-19 surveillance report: 8 October ...",
+            "snippet": "surveillance report: 8 October 2026 (week 41) Influenza positivity increased in week 40, with a rolling 7-day positivity rate of 6.5% up to ...",
+            "url": "https://www.gov.uk/government/statistics/national-flu-and-covid-19-surveillance-reports-2026-to-2027-season/national-flu-and-covid-19-surveillance-report-8-october-2026-week-41"
+          },
+          {
+            "title": "Flu and Covid-19 statistics are being published in one ...",
+            "snippet": "from 8 October, “the information in this report will be published in a combined Weekly flu and COVID-19 Surveillance Report on GOV.UK.”",
+            "url": "https://fullfact.org/health/flu-covid-phe-not-combined/"
+          },
+          {
+            "title": "#UKHSAVirusWatch is back – Each week we summarise ...",
+            "snippet": "This week's data shows an increase in COVID-19 activity, Flu activity has also increased, particularly in those aged 15 to 24, but remains at ...",
+            "url": "https://www.facebook.com/UKHealthSecurityAgency/posts/ukhsaviruswatch-is-back-each-week-we-summarise-the-data-from-our-weekly-winter-s/1102834708688402/"
+          },
+          {
+            "title": "The British government is not combining data on COVID-19 ...",
+            "snippet": "The British government is. VERDICT False. Public Health England is not combining COVID-19 and influenza data to make “one statistic”.",
+            "url": "https://www.reuters.com/article/world/fact-check-the-british-government-is-not-combining-data-on-covid-19-and-the-fl-idUSKBN26Y2FP/"
+          },
+          {
+            "title": "Weekly Flu and COVID-19 Report_w41",
+            "snippet": "Laboratory indicators suggest that influenza activity is very low. 2.9% respectively in week 40. Weekly confirmed COVID-19 case rates per 100, ...",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1025510/Weekly_Flu_and_COVID-19_report_w41.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-123-deepseek-baseline",
+  "timestamp": "2026-11-06T04:03:51.672599+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5020.984
+}

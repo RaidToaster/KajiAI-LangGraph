@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "More than 225,000 people dead, 225,000. The estimates are, if we’d have acted responsibly, there’d be 160,000 fewer dead than there are today, because of covid-19.",
+        "query": "More than 225,000 people dead, 225,000. The estimates are, if we’d have acted responsibly, there’d be 160,000 fewer dead than there are today, because of covid-19. counterevidence",
+        "candidates": [
+          {
+            "title": "Debunking the False Claim That COVID Death Counts Are ...",
+            "snippet": "Oct 20, 2020 — The number of COVID deaths in the U.S. is now more than 350,000, as of the beginning of January, according to the Johns Hopkins University  ...",
+            "url": "https://www.scientificamerican.com/article/debunking-the-false-claim-that-covid-death-counts-are-inflated1/"
+          },
+          {
+            "title": "Flawed Analysis Leads to False Claim of 'No Excess ...",
+            "snippet": "Dec 3, 2020 — The COVID - 19 death toll has surpassed 275,000, as of Dec. 3, according to Johns Hopkins University data. Cases are rising around the country, ... Read more",
+            "url": "https://www.factcheck.org/2020/12/flawed-analysis-leads-to-false-claim-of-no-excess-deaths-in-2020/"
+          },
+          {
+            "title": "Bogus Theory Says COVID-19 Deaths With Underlying ...",
+            "snippet": "Sep 20, 2020 — Far-right conspiracy theorists say 94% of US COVID - 19 deaths don't count because those Americans had underlying conditions. That's bogus. Read more",
+            "url": "https://www.businessinsider.com/cdc-coronavirus-death-count-underlying-conditions-2020-9"
+          },
+          {
+            "title": "False headline resurfaces to push COVID scam conspiracy",
+            "snippet": "Dec 17, 2024 — An inaccurate article has resurfaced on social media to wrongly suggest 99% of COVID - 19 deaths were primarily caused by something other than ...",
+            "url": "https://www.reuters.com/fact-check/false-headline-resurfaces-push-covid-scam-conspiracy-2024-12-17/"
+          },
+          {
+            "title": "VERIFY: No, the CDC did not say the number of COVID-19 ...",
+            "snippet": "Aug 31, 2020 — ANSWER. No, it is false to suggest the CDC now says fewer people have died from COVID - 19 than the government's statistics show. Read more",
+            "url": "https://www.wthr.com/article/news/verify/verify-no-the-cdc-did-not-say-the-number-of-covid-19-victims-who-actually-died-from-the-virus-is-much-lower-than-originally-reported/531-60bbdb37-4837-46c3-a8b6-a9d29d089566"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-006-deepseek-baseline",
+  "timestamp": "2026-11-06T05:25:20.114046+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9909.421
+}

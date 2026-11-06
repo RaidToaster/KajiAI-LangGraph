@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The family or Justine Damond received a $55 million settlement after she was gunned down by a Minneapolis police officer.",
+        "query": "The family or Justine Damond received a $55 million settlement after she was gunned down by a Minneapolis police officer. counterevidence",
+        "candidates": [
+          {
+            "title": "Killing of Justine Damond",
+            "snippet": "Damond's family brought a civil lawsuit against the City of Minneapolis alleging violation of Damond's civil rights, which the city settled for US$20 million in ...",
+            "url": "https://en.wikipedia.org/wiki/Killing_of_Justine_Damond"
+          },
+          {
+            "title": "Minneapolis agrees to pay $20000000 settlement to the ...",
+            "snippet": "Minneapolis agrees to pay $20,000,000 settlement to the family of Justine Damond, the woman killed by a police officer after she called 911, ...",
+            "url": "https://www.facebook.com/NBCNews/posts/minneapolis-agrees-to-pay-20000000-settlement-to-the-family-of-justine-damond-th/3275518815801459/"
+          },
+          {
+            "title": "Justine Damond's family agrees to $20 million settlement ...",
+            "snippet": "The city of Minneapolis agreed to a $20 million settlement with the family of a woman shot dead by a police officer who was convicted of murder, ...",
+            "url": "https://www.nbcnews.com/news/us-news/justine-damond-s-family-agrees-20-million-settlement-minneapolis-over-n1001716"
+          },
+          {
+            "title": "Minnesota police settlements, by the numbers",
+            "snippet": "The settlement between the Justine Ruszczyk family and the city of Minneapolis for $20 million after former Minneapolis police officer ...",
+            "url": "https://www.mprnews.org/story/2017/06/26/minnesota-police-settlements-by-the-numbers"
+          },
+          {
+            "title": "r/news - Ex-Minneapolis officer who killed Justine Damond ...",
+            "snippet": "Sued the police department for $50 million and understandably settled for $20 million. The family states they will contribute $2 million to ...",
+            "url": "https://www.reddit.com/r/news/comments/by2j2d/exminneapolis_officer_who_killed_justine_damond/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-296-deepseek-baseline",
+  "timestamp": "2026-11-06T02:05:17.842374+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 10183.156
+}

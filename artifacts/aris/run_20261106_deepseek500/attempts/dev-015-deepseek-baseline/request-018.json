@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "human smuggling activities have decreased in areas where barriers are deployed in the United States. evidence",
+        "candidates": [
+          {
+            "title": "Smuggling of migrants: the harsh search for a better life - UNODC",
+            "snippet": "Smugglers take advantage of the large number of migrants willing to take risks in search of a better life when they cannot access legal channels of migration.",
+            "url": "https://www.unodc.org/toc/en/crimes/migrant-smuggling.html"
+          },
+          {
+            "title": "The market for human smuggling: Structure, mechanisms, and ...",
+            "snippet": "These flexible arrangements, coupled with low barriers to entry, confer resilience and adaptability to the market, making enforcement difficult and resource- ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13486519/"
+          },
+          {
+            "title": "Human Smuggling | ICE",
+            "snippet": "Human smuggling is a gateway crime for additional criminal offenses, including illegal immigration, identity theft, document and benefit fraud, ...",
+            "url": "https://www.ice.gov/hsi/investigate/human-smuggling"
+          },
+          {
+            "title": "2025 Trafficking in Persons Report - State Department",
+            "snippet": "According to a 2024 UNODC report, 58 percent of identified trafficking victims in 2022 were exploited in their own country, rather than abroad.",
+            "url": "https://www.state.gov/reports/2025-trafficking-in-persons-report/"
+          },
+          {
+            "title": "Breaking the human smuggling policy trap | Global Initiative",
+            "snippet": "Rising demand for migration meets restrictive border policy; restriction raises the value of smuggling services; enforcement selects out low- ...",
+            "url": "https://globalinitiative.net/analysis/breaking-the-human-smuggling-policy-trap/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-baseline",
+  "timestamp": "2026-11-06T06:20:32.477458+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13221.796
+}

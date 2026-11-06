@@ -1,0 +1,40 @@
+{
+  "models": {
+    "glm": "glm-5.3-flash:cloud",
+    "deepseek": "deepseek-v4.1-flash:cloud"
+  },
+  "caps": {"ollama": 1},
+  "num_predict": 4096,
+  "cases": [
+    {
+      "id": "supported",
+      "claim": "The Northmere municipal ferry service opened to the public on May 8.",
+      "passages": {
+        "A": "The Northmere municipal ferry began public passenger service on May 8. Its April 26 trips were closed trials for staff.",
+        "B": "On May 8 we joined the first Northmere ferry crossing open to the public. The service had operated crew-only tests in April."
+      },
+      "verdict": "TRUE",
+      "expected_passages": ["A", "B"]
+    },
+    {
+      "id": "refuted",
+      "claim": "Residents needed a paid pass to enter Orchard Market on Sundays in June.",
+      "passages": {
+        "A": "June notices for Orchard Market: visitors on Sundays enter free. Paid passes are required on Saturdays only.",
+        "B": "The June Sunday ledgers record free public entry at Orchard Market. Payments in the ledger are for Saturday access."
+      },
+      "verdict": "FALSE",
+      "expected_passages": ["A", "B"]
+    },
+    {
+      "id": "insufficient",
+      "claim": "The Cedar House charter was ratified by a unanimous vote.",
+      "passages": {
+        "A": "The notice lists ratification of the Cedar House charter on the agenda for Monday.",
+        "B": "The meeting adjourned at nine and the clerk filed the agenda. A separate document contains vote totals."
+      },
+      "verdict": "NOT_ENOUGH_EVIDENCE",
+      "expected_passages": []
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Photo of three officers at the Indian Police Service who belong to the same family.",
+        "query": "Photo of three officers at the Indian Police Service who belong to the same family. original source fact check",
+        "candidates": [
+          {
+            "title": "Reuters Fact Check",
+            "snippet": "Reuters Fact Check addresses online misinformation with coverage that maintains accuracy, integrity and impartiality. The unit is part of Reuters news ...",
+            "url": "https://www.reuters.com/fact-check/"
+          },
+          {
+            "title": "Pic Shows Three IPS Officers From Same Family ...",
+            "snippet": "An image showing three officers of the Indian Police Service is doing the rounds with an inspirational message that they belong to the same ...",
+            "url": "https://www.thequint.com/news/webqoof/image-shows-three-ips-officers-belonging-to-same-family-no-false-claim"
+          },
+          {
+            "title": "CODIS and NDIS Fact Sheet",
+            "snippet": "A compilation of frequently-asked questions about the Combined DNA Index System (CODIS) and the National DNA Index System (NDIS).",
+            "url": "https://www.fbi.gov/how-we-can-help-you/dna-fingerprint-act-of-2005-expungement-policy/codis-and-ndis-fact-sheet"
+          },
+          {
+            "title": "Fact Check",
+            "snippet": "AFP Fact Check is a department within Agence France-Presse (AFP), a multi-lingual, multicultural news agency whose mission is to provide accurate, ...",
+            "url": "https://factcheck.afp.com/"
+          },
+          {
+            "title": "Chapter 4 - Documentation",
+            "snippet": "A. Initial Evidence · 1. Photographs · 2. Application to Register Permanent Residence or Adjust Status (Form I-485) · 3. Birth Certificate · 4. Evidence of ...",
+            "url": "https://www.uscis.gov/policy-manual/volume-7-part-a-chapter-4"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-396-deepseek-baseline",
+  "timestamp": "2026-11-06T04:15:25.972681+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5715.281
+}

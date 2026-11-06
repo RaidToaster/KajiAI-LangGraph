@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "The United States of America original source fact check",
+        "candidates": [
+          {
+            "title": "FactCheck.org - A Project of The Annenberg Public Policy Center",
+            "snippet": "An ad from the campaign of Republican Sen. Dan Sullivan in Alaska features a mother whose 22-year-old son died from fentanyl and who claims Democratic Senate ...",
+            "url": "https://www.factcheck.org/"
+          },
+          {
+            "title": "Web Sites for Fact Checking - Misinformation and Disinformation ...",
+            "snippet": "Oct 2, 2026 · MBFC also provides occasional fact checks, original articles on media bias, and breaking/important news stories, especially as it relates to USA ...",
+            "url": "https://library.csi.cuny.edu/misinformation/fact-checking-websites"
+          },
+          {
+            "title": "List of fact-checking websites - Wikipedia",
+            "snippet": "This list of fact-checking websites includes websites that provide fact-checking services about both political and non-political subjects.",
+            "url": "https://en.wikipedia.org/wiki/List_of_fact-checking_websites"
+          },
+          {
+            "title": "Fact Check",
+            "snippet": "AFP Fact Check is a department within Agence France-Presse (AFP), a multi-lingual, multicultural news agency whose mission is to provide accurate, ...",
+            "url": "https://factcheck.afp.com/"
+          },
+          {
+            "title": "FactCheck.org - Library of Congress",
+            "snippet": "We monitor the factual accuracy of what is said by major U.S. political players in the form of TV ads, debates, speeches, interviews and news releases. Names.",
+            "url": "https://www.loc.gov/item/lcwaN0000178/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-baseline",
+  "timestamp": "2026-11-06T00:45:35.728225+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5401.031
+}

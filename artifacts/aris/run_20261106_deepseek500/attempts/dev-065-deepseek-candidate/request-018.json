@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "Search IRS primary records for the maximum individual shared responsibility payment assessed for any taxpayer, including any $10,000 assessment, by tax year and income level.",
+        "candidates": [
+          {
+            "title": "Understanding your CP14H notice - Internal Revenue Service",
+            "snippet": "It's the assessed payment for not having minimum essential health coverage for you and, if applicable, your dependents in the tax year that ended December 31 of the year shown on your notice per Internal Revenue Code Section 5000A - Individual shared responsibility payment.",
+            "url": "https://www.irs.gov/individuals/understanding-your-cp14h-notice"
+          },
+          {
+            "title": "Internal Revenue Service | An official website of the United ...",
+            "snippet": "Get your tax return transcripts and other tax records from current and prior years. Get an EIN, free and direct from the IRS in minutes. Check the amount of tax you want withheld from your pay with our Estimator. Submit an amended tax return or check the status of your amended return.",
+            "url": "https://www.irs.gov/"
+          },
+          {
+            "title": "IRS FOIA Public Access Portal-Home - IRS tax forms",
+            "snippet": "To request a copy of your own records, contact the IRS employee or office that has your open case file. There is no fee for obtaining your own records under the Respond Directly Process. It is more efficient and generally faster to obtain your records directly than if requested through the FOIA.",
+            "url": "https://foiapublicaccessportal.for.irs.gov/app/Home.aspx"
+          },
+          {
+            "title": "IRS Notice CP14H | Shared Responsibility Payment",
+            "snippet": "The IRS will consider your unique situation and your ability to pay by looking at your income, expenses, and assets. Remember that it is important not to ignore this notice. If the IRS does not hear from you or receive payment by the due date, you can incur additional penalties and interest charges.",
+            "url": "https://www.taxaudit.com/tax-audit-blog/2023/irs-notice-cp14h-shared-responsibility-payment"
+          },
+          {
+            "title": "IRS Notice CP71H: Why You Got It and How To Respond",
+            "snippet": "Learn what IRS Notice CP71H means, why the shared responsibility payment is still due, and how to pay or set up relief before you cant.",
+            "url": "https://corridor-consulting.com/irs-notice-cp71h-shared-responsibility-payment/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-candidate",
+  "timestamp": "2026-11-06T08:47:21.145169+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22030.468
+}

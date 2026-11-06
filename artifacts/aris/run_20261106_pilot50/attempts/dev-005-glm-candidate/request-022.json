@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "Independent third-party editorial reviews, corrections, or retractions in Western media outlets regarding chemical weapons reporting",
+        "candidates": [
+          {
+            "title": "OPCW issues report on third Technical Assistance Visit to ...",
+            "snippet": "OPCW issues report on third Technical Assistance Visit to Ukraine following an incident of alleged use of toxic chemicals as a weapon. OPCW ...",
+            "url": "https://www.opcw.org/media-centre/news/2025/06/opcw-issues-report-third-technical-assistance-visit-ukraine-following"
+          },
+          {
+            "title": "Journal Policies and Publication Standards",
+            "snippet": "The Journal of Chemical Reviews (JCR), published by Sami Publishing Company, sets out the following standards to support independent editorial assessment, ...",
+            "url": "https://www.jchemrev.com/page_1628.html"
+          },
+          {
+            "title": "Corrections and Retractions: Upgrading the Scientific Record",
+            "snippet": "This consensus study will recommend improvements to the processes used to correct errors in scientific articles. retractions, and other actions.",
+            "url": "https://www.nationalacademies.org/projects/PGA-POLICY-24-13"
+          },
+          {
+            "title": "[PDF] AND ENFORCEMENT OF - UNIDIR",
+            "snippet": "I welcome UNIDIR's publication of a report on compliance management and enforcement in the Chemical Weapons. Convention (CWC) regime. The report is timely and ...",
+            "url": "https://unidir.org/wp-content/uploads/2023/05/WMD_Compliance_Report_V04.pdf"
+          },
+          {
+            "title": "From the Editors - Science & Global Security",
+            "snippet": "This review identified a number of issues with the peer-review and revision process. the Editors do not see a viable path to providing an independent, fair, ...",
+            "url": "https://scienceandglobalsecurity.org/editorial/2019/09/from_the_editors_1.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:47:28.780395+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5514.078
+}

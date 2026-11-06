@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A Maryland man was sentenced to a year in jail for throwing parties.",
+        "query": "What was the man's name, and what charges or offenses was he convicted of or pleaded to?",
+        "candidates": [
+          {
+            "title": "Philadelphia Standoff Suspect Maurice Hill 'Should Never ...",
+            "snippet": "Aug 15, 2019 — The man suspected of shooting six Philadelphia police officers during an hourslong standoff in a residential neighborhood of the city has an ...",
+            "url": "https://www.nbcphiladelphia.com/news/national-international/philadelphia-police-shot-standoff-maurice-hill-criminal-history/104608/"
+          },
+          {
+            "title": "Texas Man Sentenced to 90 Consecutive Life ...",
+            "snippet": "Jul 7, 2023 — A Texas man was sentenced to 90 consecutive life sentences in prison for carrying out a mass shooting at the Cielo Vista Walmart in El Paso, ... Read more",
+            "url": "https://www.justice.gov/archives/opa/pr/texas-man-sentenced-90-consecutive-life-sentences-2019-mass-shooting-walmart-el-paso-texas"
+          },
+          {
+            "title": "George Floyd",
+            "snippet": "George Perry Floyd Jr. (October 14, 1973 – May 25, 2020) was an African American man who was murdered by a white police officer in Minneapolis, Minnesota, ... Read more",
+            "url": "https://en.wikipedia.org/wiki/George_Floyd"
+          },
+          {
+            "title": "Maurice Hill guilty of attempted murder in Philadelphia ...",
+            "snippet": "Statement from DA Krasner : A Philadelphia jury on Monday found 41-year-old Maurice Hill guilty of attempted murder and related aggravated ...",
+            "url": "https://www.facebook.com/philaDAO/posts/statement-from-da-krasner-a-philadelphia-jury-on-monday-found-41-year-old-mauric/1024667776477075/"
+          },
+          {
+            "title": "Al Capone",
+            "snippet": "Alphonse Gabriel “Al” Capone rose to infamy as a gangster in Chicago during the 1920s and early 1930s.",
+            "url": "https://www.fbi.gov/history/cases-and-criminals/al-capone"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-257-deepseek-candidate",
+  "timestamp": "2026-11-06T04:36:22.165006+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6971.484
+}

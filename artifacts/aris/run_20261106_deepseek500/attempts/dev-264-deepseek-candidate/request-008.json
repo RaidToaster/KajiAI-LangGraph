@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump has not appoointed any black federal judges.",
+        "query": "Among Trump's federal judicial appointments as of 2020-09-25, were any appointees black, and how is race recorded or reported for federal judges?",
+        "candidates": [
+          {
+            "title": "Diversity of the Federal Bench | ACS",
+            "snippet": "Of the judges nominated by President Trump, most were white and male. So far under the Biden administration, there have been 210 confirmed Article III judges:",
+            "url": "https://www.acslaw.org/judicial-nominations/diversity-of-the-federal-bench/"
+          },
+          {
+            "title": "Donald Trump judicial appointment controversies",
+            "snippet": "As of July 2020, the judges appointed by Trump are \"85% white and 76% male; less than 5% are African-American,\" as a result of which the federal",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump_judicial_appointment_controversies"
+          },
+          {
+            "title": "Trump Nears Post-Nixon First: No Black Circuit Judges ...",
+            "snippet": "Just one of Trump's 53 confirmed appeals court judges is Hispanic and none are Black. That compares to about 27% of President Barack Obama's ...",
+            "url": "https://news.bloomberglaw.com/us-law-week/no-black-judges-among-trumps-appeals-court-confirmations"
+          },
+          {
+            "title": "How Trump's judge appointments compare with other ...",
+            "snippet": "About one-in-six of the judges appointed by Trump (16%) are Black, Hispanic, Asian or another race or ethnicity. No Black woman has ever served ...",
+            "url": "https://www.pewresearch.org/short-reads/2021/01/13/how-trump-compares-with-other-recent-presidents-in-appointing-federal-judges/"
+          },
+          {
+            "title": "Has the Trump administration confirmed a black judge?",
+            "snippet": "The American Constitution Society shows nearly 4% of President Trump's judge confirmations have been Black. Under President Obama, 18% were ...",
+            "url": "https://www.wusa9.com/article/news/verify/claims-that-president-trump-has-not-confirmed-any-black-judges-are-false/65-133a5583-af4c-450e-917c-15d5c7dff829"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-264-deepseek-candidate",
+  "timestamp": "2026-11-06T05:03:20.603897+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8589.921
+}

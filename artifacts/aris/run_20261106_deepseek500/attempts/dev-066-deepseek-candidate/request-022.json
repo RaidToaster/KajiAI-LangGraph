@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "UN World Food Programme Nobel Peace Prize 2020 official announcement",
+        "candidates": [
+          {
+            "title": "The Nobel Peace Prize 2020 - Press release",
+            "snippet": "The World Food Programme was an active participant in the diplomatic process that culminated in May 2018 in the UN Security Council's unanimous ...",
+            "url": "https://www.nobelprize.org/prizes/peace/2020/press-release/"
+          },
+          {
+            "title": "World Food Programme (WFP) - Nobel Peace Prize: 2020",
+            "snippet": "The Nobel Peace Prize 2020 was awarded to United Nations World Food Programme (WFP) \"for its efforts to combat hunger, for its contribution to bettering ...",
+            "url": "https://www.un.org/en/about-us/nobel-peace-prize/wfp-2020"
+          },
+          {
+            "title": "UN World Food Programme wins 2020 Nobel Peace Prize | Nations Unies",
+            "snippet": "UN World Food Programme wins 2020 Nobel Peace Prize. The UN World Food Programme (WFP), which provides lifesaving food assistance to millions across the world – ...",
+            "url": "https://www.un.org/fr/delegate/un-world-food-programme-wins-2020-nobel-peace-prize"
+          },
+          {
+            "title": "WFP wins Nobel Peace Prize for 2020 - United Nations Western Europe",
+            "snippet": "The Norwegian Nobel Committee announced today that the World Food Programme (WFP) will receive the Nobel Peace Prize for 2020.",
+            "url": "https://unric.org/en/wfp-wins-nobel-peace-prize-for-2020/"
+          },
+          {
+            "title": "Announcement of the 2020 Nobel Peace Prize",
+            "snippet": "The Nobel Peace Prize 2020 was awarded to World Food Programme (WFP) \"for its efforts to combat hunger, for its contribution to bettering ...",
+            "url": "https://www.youtube.com/watch?v=FpP4iUzNyVc"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-candidate",
+  "timestamp": "2026-11-06T08:52:44.729446+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22354.046
+}

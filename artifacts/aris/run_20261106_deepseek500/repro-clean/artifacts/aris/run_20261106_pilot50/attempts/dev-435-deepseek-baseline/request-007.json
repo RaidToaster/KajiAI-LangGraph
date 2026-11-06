@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa. counterevidence",
+        "candidates": [
+          {
+            "title": "The Igbos, on average, are richer than any ethnic group in ...",
+            "snippet": "The Igbos, on average, are richer than any ethnic group in Nigeria, some accounts say Africa. And this is true whether in Lagos, Abuja, Maiduguri ...",
+            "url": "https://www.facebook.com/ameer.lukmanharuna/posts/the-igbos-on-average-are-richer-than-any-ethnic-group-in-nigeria-some-accounts-s/1787600978102597/"
+          },
+          {
+            "title": "Factcheck: Pastor Reno Omokri reaches to hagiography on ...",
+            "snippet": "The claim that Igbo people have the richest per capita in Africa is misleading. There are no official statistical records to support the claim.",
+            "url": "https://dubawa.org/factcheck-pastor-reno-omokri-reaches-to-hagiography-on-a-claim-that-igbos-have-richest-people-per-capita-in-africa/"
+          },
+          {
+            "title": "The Igbo Tribe: Africa's Richest and Most Influential People?",
+            "snippet": "The Igbo people are one of Africa's most influential and culturally rich ethnic groups, known for their entrepreneurial spirit, deep traditions ...",
+            "url": "https://www.youtube.com/watch?v=uM5Am5-beww"
+          },
+          {
+            "title": "Top 10 ethnic groups with highest number of Millionaire in ...",
+            "snippet": "per-capita wealth, The Igbo are the most entrepreneurial ethnic group in Nigeria, with wealth spread across millions of traders and ...",
+            "url": "https://www.facebook.com/61555421849627/posts/top-10-ethnic-groups-with-highest-number-of-millionaire-in-nigeria-and-the-estim/122276300486180728/"
+          },
+          {
+            "title": "The Igbo-African Strategies for Wealth Creation, Building ...",
+            "snippet": "by CC Onah · 2025 · Cited by 2 — Despite the structural violence against the Igbo people since the Nigeria-Biafra civil war, they have achieved notable prosperity.",
+            "url": "https://unisapressjournals.co.za/index.php/SWPR/article/view/16614"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-baseline",
+  "timestamp": "2026-11-05T23:46:28.739994+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1854.046
+}

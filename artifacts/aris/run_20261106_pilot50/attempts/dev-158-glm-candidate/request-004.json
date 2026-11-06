@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US President Donald Trump following his positive diagnosis of COVID-19, was given treatment developed from the use of fetal tissue, made by the company Regeneron.",
+        "query": "Did official White House statements or primary medical records confirm that Donald Trump tested positive for COVID-19, and on what date?",
+        "candidates": [
+          {
+            "title": "How Donald Trump's COVID-19 illness unfolded: A timeline",
+            "snippet": "Oct 7, 2020 — United States President Donald Trump revealed in the early hours of October 2 that he had tested positive for COVID - 19 . White House officials ... Read more",
+            "url": "https://www.aljazeera.com/news/2020/10/7/timeline-what-we-know-about-trumps-covid-19-case"
+          },
+          {
+            "title": "What we know about Trump's COVID-19 illness",
+            "snippet": "Oct 5, 2020 — White House chief of staff Mark Meadows confirmed that Trump was experiencing \"mild symptoms\" on Friday afternoon,",
+            "url": "https://www.pbs.org/newshour/politics/what-we-know-about-trumps-covid-19-illness"
+          },
+          {
+            "title": "President Trump's Physician on Positive COVID-19 Test",
+            "snippet": "Oct 2, 2020 — Dr. Sean Conley, released a memo early Friday confirming that the president and first lady Melania Trump have tested positive for COVID - 19 .",
+            "url": "https://www.nbcboston.com/news/local/read-the-memo-president-trumps-physician-on-positive-covid-19-test/2205189/"
+          },
+          {
+            "title": "Timeline of Contradictory Statements on Trump's Health",
+            "snippet": "Oct 5, 2020 — Since President Donald Trump announced on Oct. 2 that he had tested positive for COVID - 19 , White House staff and the president's physicians ... Read more",
+            "url": "https://www.factcheck.org/2020/10/timeline-of-contradictory-statements-on-trumps-health/"
+          },
+          {
+            "title": "White House COVID-19 outbreak",
+            "snippet": "Hours after the ceremony, Trump tested positive for COVID - 19 , although the public would not learn of this result until one year later, in October 2021. Trump ... Read more",
+            "url": "https://en.wikipedia.org/wiki/White_House_COVID-19_outbreak"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-158-glm-candidate",
+  "timestamp": "2026-11-06T01:57:13.559145+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9698.875
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sleeping under a mosquito bed net treated (or not treated) with insecticide is ineffective and harmful to human health.",
+        "query": "Sleeping under a mosquito bed net treated (or not treated) with insecticide is ineffective and harmful to human health. counterevidence",
+        "candidates": [
+          {
+            "title": "Sleeping inside an insecticide treated net is one of the most effective ways to ...",
+            "snippet": "Insecticide -treated nets reduce malaria risk by up to 70%. Keeps mosquitoes away while you sleep ✅ Reduces the risk of malaria infection ✅ ...",
+            "url": "https://www.facebook.com/WHONigeria/posts/sleeping-inside-an-insecticide-treated-net-is-one-of-the-most-effective-ways-to-/634072858755532/"
+          },
+          {
+            "title": "Treated mosquito nets are safe and effective | WHO",
+            "snippet": "WHO recommends that all people at risk of malaria sleep under ITNs particularly long lasting insecticidal nets (LLINs) every night",
+            "url": "https://www.afro.who.int/news/treated-mosquito-nets-are-safe-and-effective"
+          },
+          {
+            "title": "Insecticide-Treated Nets | Malaria",
+            "snippet": "Bed nets form a protective barrier around people sleeping under them. However, bed nets treated with an insecticide are much more protective ...",
+            "url": "https://www.cdc.gov/malaria/php/public-health-strategy/insecticide-treated-nets.html"
+          },
+          {
+            "title": "Sleeping under Insecticide-treated Nets to Prevent Malaria in Nigeria",
+            "snippet": "by NG Onyeneho · 2013 · Cited by 25 — Health education would dispel misconceptions that ITNs could kill, curtail human fertility, and that local gin (Kai-Kai) would induce sleep and make one ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3702346/"
+          },
+          {
+            "title": "Some people believe sleeping under insecticide treated bed net is harmful ...",
+            "snippet": "Medical experts and scientists have affirmed that sleeping under a bed net reduces the risk of man-vector contact as mosquitoes bite at night ...",
+            "url": "https://dubawa.org/some-people-believe-sleeping-under-insecticide-treated-bed-net-is-harmful-but-how-true-is-this/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-027-deepseek-baseline",
+  "timestamp": "2026-11-06T07:01:08.723848+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15658.046
+}

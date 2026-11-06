@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Video shows attack of French embassy in Sudan",
+        "query": "Search archived French embassy Khartoum and French MFA statements from April–May 2023 for any documented attack on embassy premises, distinguishing attack from evacuation or protest.",
+        "candidates": [
+          {
+            "title": "List of attacks on diplomatic missions - Wikipedia",
+            "snippet": "The following is a list of attacks on diplomatic buildings. French embassy, taking six persons hostage. French embassy. the French embassy;",
+            "url": "https://en.wikipedia.org/wiki/List_of_attacks_on_diplomatic_missions"
+          },
+          {
+            "title": "Special Ops Forces Evacuate US Embassy Staff From Sudan",
+            "snippet": "The warring sides accused each other of attacking a convoy of French nationals, with both saying one French person was wounded.",
+            "url": "https://www.voanews.com/a/us-embassy-staff-evacuated-from-sudan/7061728.html"
+          },
+          {
+            "title": "Protesters attack French Embassy in Burkina Faso's ... - PBS",
+            "snippet": "Angry protesters attacked the French Embassy in Burkina Faso's capital Saturday after supporters of the West African nation's new coup leader",
+            "url": "https://www.pbs.org/newshour/world/protesters-attack-french-embassy-in-burkina-fasos-capital-after-countercoup"
+          },
+          {
+            "title": "Suspension of Operations at Embassy Khartoum",
+            "snippet": "April 22, 2023. The U.S. Department of State has temporarily suspended operations at our Embassy in Khartoum, Sudan and safely evacuated all ...",
+            "url": "https://2021-2025.state.gov/suspension-of-operations-at-embassy-khartoum/"
+          },
+          {
+            "title": "Special Forces Evacuate US Embassy Staff From Sudan, No ...",
+            "snippet": "Two French military planes evacuating about 200 people from multiple countries left Khartoum on Sunday for Djibouti as France urged all parties to stop fighting",
+            "url": "https://www.coffeeordie.com/article/special-forces-evacuate-embassy-sudan"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-019-deepseek-candidate",
+  "timestamp": "2026-11-06T06:40:01.810207+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14391.125
+}

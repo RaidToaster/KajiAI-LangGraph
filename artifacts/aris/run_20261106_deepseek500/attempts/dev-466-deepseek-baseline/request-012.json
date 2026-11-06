@@ -1,0 +1,66 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "A specific AMBER Alert/ALPR case in the retrieved records concerns the Vasquez children; the retrieved text does not identify license plate Q72B381.",
+            "url": "https://www.dps.texas.gov/news/automated-license-plate-reader-helps-dps-locate-children-amber-alert-houston-central-texas",
+            "quote": "As part of this investigation, DPS CID Special Agents requested the issuance of a statewide AMBER Alert – which generated thousands of tips and helped Special Agents accelerate their investigation. As part of their investigation, Special Agents utilized data from Automated License Plate Readers (ALPR) to track a suspect vehicle that had traveled to Converse and back to an apartment complex in the Houston area.",
+            "context": "SAN ANTONIO – The Texas Department of Public Safety (DPS) Criminal Investigations Division (CID) has recovered two missing children identified in a statewide AMBER Alert issued out of Bexar Co. last week. Escarleth Vasquez, 15, and Alejandro Vasquez, 1, were located safe in Houston on Thursday. \n\nOn June 22, 2026, at the request of the Texas Department of Family and Protective Services (DFPS), DPS CID Special Agents in San Antonio began assisting in a missing persons investigation involving Escarleth and Alejandro Vasquez from Converse. As part of this investigation, DPS CID Special Agents requested the issuance of a statewide AMBER Alert – which generated thousands of tips and helped Special Agents accelerate their investigation. As part of their investigation, Special Agents utilized data from Automated License Plate Readers (ALPR) to track a suspect vehicle that had traveled to Converse and back to an apartment complex in the Houston area. DPS CID in San Antonio coordinated with DPS CID in Houston to respond to the apartment complex, where they ultimately located both Escarleth and Alejandro safe on June 25, 2026. \n\nThis is an ongoing investigation, and no further information is available at this time. Questions regarding DFPS custody matters or actions taken prior to DPS involvement should be directed to DFPS.\n\nCases like this highlight the importance of the public’s attention to emergency alerts issued by law enforcement, and DPS would like to thank Texans for their vigilance and assistance in helping investigators locate Escarleth and Alejandro. \n\nRead more about AMBER Alerts, and the Statewide Alert Program, here. \n\n###\n\n(DPS – Central Texas Region)"
+          },
+          {
+            "finding": "A specific AMBER Alert/ALPR case in the retrieved records concerns the Vasquez children; the retrieved text does not identify license plate Q72B381.",
+            "url": "https://www.fox26houston.com/news/automated-license-plate-reader-helps-dps-locate-children-from-amber-alert-houston",
+            "quote": "Two missing children were recovered following a statewide AMBER Alert thanks to an automated license plate reader, according to Texas DPS.",
+            "context": "#### The Brief\n\n* + Two missing children were recovered following a statewide AMBER Alert thanks to an automated license plate reader, according to Texas DPS.\n  + Officials said the statewide alert was issued out of Bexar County earlier this week for Escarleth Vasquez, 15, and Alejandro Vasquez, 1.\n  + As part of their investigation, Special Agents utilized data from Automated License Plate Readers (ALPR) to track a suspect vehicle that had traveled to Converse and back to an apartment complex in the Houston area, officials stated.\n\n**HOUSTON** - Two missing children were recovered following a statewide AMBER Alert thanks to an automated license plate reader, according to Texas DPS.\n\n## Children behind Texas AMBER Alert issuance located in Houston thanks to automated license plate reader\n\nWhat we know:\n\nOfficials said the statewide alert was issued out of Bexar County earlier this week.\n\nEscarleth Vasquez, 15, and Alejandro Vasquez, 1, were located safe in Houston on Thursday.\n\nOfficials said on June 22 at the request of the Texas Department of Family and Protective Services (DFPS), DPS CID Special Agents in San Antonio began assisting in a missing persons investigation involving Escarleth and Alejandro Vasquez from Converse.\n\nAs part of the investigation, officials said DPS CID Special Agents requested the issuance of a statewide AMBER"
+          },
+          {
+            "finding": "Official AMBER Alert guidance provides general activation criteria but does not mention license plate Q72B381 or any specific plate-based alert.",
+            "url": "https://amberalert.ojp.gov/about/guidelines-for-issuing-alerts",
+            "quote": "AMBER plans require law enforcement to confirm an abduction prior to issuing an alert.",
+            "context": "Description\n\nEvery successful AMBER plan contains clearly defined activation criteria. The following guidance is designed to achieve a uniform, interoperable network of plans across the country, and to minimize potentially deadly delays because of confusion among varying jurisdictions.\n\nFlowchart: What Happens When Law Enforcement Issues an AMBER Alert (View larger image.)\n\nNational Center for Missing & Exploited Children (see reuse policy).\n\n## Summary of Department of Justice Recommended Criteria\n\n* There is reasonable belief by law enforcement that an abduction has occurred.\n* The law enforcement agency believes that the child is in imminent danger of serious bodily injury or death.\n* There is enough descriptive information about the victim and the abduction for law enforcement to issue an AMBER Alert to assist in the recovery of the child.\n* The abduction is of a child aged 17 years or younger.\n* The child’s name and other critical data elements, including the Child Abduction flag, have been entered into the National Crime Information Center (NCIC) system.\n\n### There is reasonable belief by law enforcement that an abduction has occurred.\n\nAMBER plans require law enforcement to confirm an abduction prior to issuing an alert. This is essential when determining the level of risk to the child. Clearly, stranger abductions are the most dangerous for children and thus are primary to the mission of an AMBER Alert. To allow activations in the absence of significant information that an abduction has occurred could lead to abuse of the system and ultimately weaken its effectiveness. At the same time, each case must be appraised on its own merits and a judgment call made quickly. Law enforcement must understand that a “best judgment” approach, based on the evidence, is appropriate and necessary.\n\n### The law enforcement agency believes that the child is in imminent danger of serious bodily injury or death.\n\nPlans require a child be at risk for serious bodily harm or death before an alert can be issued. This element is clearly related to law enforcement’s recognition that stranger abductions represent the greatest danger to children. The need for timely, accurate information based on strict and clearly understood criteria is critical, again keeping in mind the “best judgment” approach.\n\n### There is enough descriptive information about the victim and the abduction for law enforcement to issue an AMBER Alert to a"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-466-deepseek-baseline",
+  "timestamp": "2026-11-06T04:31:29.874042+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6679.187
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "558 people were killed by the police in 2018, while 201 people died in police custody",
+        "query": "Which country, jurisdiction, or reporting agency does the claim's 2018 year refer to?",
+        "candidates": [
+          {
+            "title": "Frequently Asked Questions | FinCEN.gov",
+            "snippet": "In some jurisdictions, this person is referred to as the reporting company's registered agent, or the address is referred to as the registered office. Such ...",
+            "url": "https://www.fincen.gov/boi-faqs"
+          },
+          {
+            "title": "Country-by-country reporting jurisdiction status table - IRS",
+            "snippet": "This table includes those jurisdictions that are in negotiations for a CAA, have satisfied the United States' bilateral data safeguards and ...",
+            "url": "https://www.irs.gov/businesses/country-by-country-reporting-jurisdiction-status-table"
+          },
+          {
+            "title": "Frequently Asked Questions (FAQs)",
+            "snippet": "The Agency enforces the California Consumer Privacy Act (CCPA) and its regulations. It works on behalf of all Californians and does not represent individuals.",
+            "url": "https://cppa.ca.gov/faq.html"
+          },
+          {
+            "title": "OFAC Consolidated Frequently Asked Questions",
+            "snippet": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) administers and enforces economic and trade sanctions against targeted foreign ...",
+            "url": "https://ofac.treasury.gov/faqs/all-faqs"
+          },
+          {
+            "title": "[PDF] Country Exposure Report - FFIEC",
+            "snippet": "A. Introduction and Purpose. The FFIEC 009 provides information on the distribu- tion, by country, of claims on, and liabilities to, the.",
+            "url": "https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec009-report-form-instructions.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-463-glm-candidate",
+  "timestamp": "2026-11-06T00:59:29.400288+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6234.703
+}

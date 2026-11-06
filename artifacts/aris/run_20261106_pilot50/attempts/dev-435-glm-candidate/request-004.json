@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "What datasets or studies (e.g., income surveys, household asset surveys, GDP per capita by ethnicity or region) measure per-capita wealth of Igbo people specifically?",
+        "candidates": [
+          {
+            "title": "WID - World Inequality Database",
+            "snippet": "Open access, high quality wealth and income inequality data developed by an international academic consortium. Per capita national income Per capita GDP",
+            "url": "https://wid.world/world/"
+          },
+          {
+            "title": "WDI - The World by Income and Region",
+            "snippet": "The World Bank classifies economies for analytical purposes into four income groups: purpose it uses gross national income (GNI) per capita data in U.S. ...",
+            "url": "https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html"
+          },
+          {
+            "title": "Measuring Relative Wealth using Household Asset Indicators",
+            "snippet": "by A Córdova · 2009 · Cited by 357 — Specifically , the LAPOP surveys ask respondents to indicate (by privately picking a number from a card) the income bracket in which their total household income ... Read more 9 pages",
+            "url": "https://www.vanderbilt.edu/lapop/insights/I0806en_v2.pdf"
+          },
+          {
+            "title": "List of ethnic groups in the United States by per capita ...",
+            "snippet": "This article lists per capita income estimates for U.S. residents, organized by race and ethnicity and ancestry. the per capita income was US$33,831 in 2018.",
+            "url": "https://en.wikipedia.org/wiki/List_of_ethnic_groups_in_the_United_States_by_per_capita_income"
+          },
+          {
+            "title": "Race, Economics, and Social Status : Spotlight on Statistics",
+            "snippet": "Pretax income varied by race and ethnicity , as the average was highest for Asians with $93,390 and lowest for Blacks or African Americans with $48,871.",
+            "url": "https://www.bls.gov/spotlight/2018/race-economics-and-social-status/home.htm"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-glm-candidate",
+  "timestamp": "2026-11-05T23:48:30.780364+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1976.093
+}

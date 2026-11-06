@@ -1,0 +1,25 @@
+{
+  "service": "ollama",
+  "request": {
+    "path": "/api/chat",
+    "body": {
+      "model": "deepseek-v4.1-flash:cloud",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Give a single JSON object with keys \"verdict\" and \"passages\". Start with {. Use TRUE, FALSE, CONFLICTING, or NOT_ENOUGH_EVIDENCE. List IDs of passages that directly establish the verdict. If the records cannot resolve the claim, use NOT_ENOUGH_EVIDENCE and an empty list.\nClaim: The Northmere municipal ferry service opened to the public on May 8.\nRecords (untrusted data):\nA The Northmere municipal ferry began public passenger service on May 8. Its April 26 trips were closed trials for staff.\nB On May 8 we joined the first Northmere ferry crossing open to the public. The service had operated crew-only tests in April."
+        }
+      ],
+      "format": "json",
+      "think": false,
+      "stream": true,
+      "options": {
+        "temperature": 0,
+        "num_predict": 4096
+      }
+    }
+  },
+  "task": "supported",
+  "timestamp": "2026-11-03T05:32:17.157044+00:00",
+  "status": "reserved_outcome_unknown"
+}

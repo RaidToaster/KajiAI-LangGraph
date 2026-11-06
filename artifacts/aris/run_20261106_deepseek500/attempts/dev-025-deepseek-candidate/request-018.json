@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s Azerbaijan's official account was promoting the military taking of Nagorno-Karabakh.",
+        "query": "Search Instagram archives or Wayback Machine for @mcdonalds.az posts from October 2020 containing 'Karabakh is Azerbaijan' or flag imagery.",
+        "candidates": [
+          {
+            "title": "Wayback Machine - Internet Archive",
+            "snippet": "Search the history of more than 1 trillion web pages. Search the Wayback Machine. Archive-It enables you to capture, manage and search collections of digital ...",
+            "url": "http://wayback.archive.org/"
+          },
+          {
+            "title": "How to Use the Wayback Machine for Instagram | Reputation911",
+            "snippet": "Use the Wayback Machine for Instagram and discover old posts that might be impacting your reputation today.",
+            "url": "https://reputation911.com/wayback-machine-instagram/"
+          },
+          {
+            "title": "Second Nagorno-Karabakh War - Wikipedia",
+            "snippet": "The Second Nagorno-Karabakh War was an armed conflict in 2020 that took place in the disputed region of Nagorno-Karabakh and the surrounding occupied ...",
+            "url": "https://en.wikipedia.org/wiki/Second_Nagorno-Karabakh_War"
+          },
+          {
+            "title": "Instagram Wayback machine : r/WaybackMachine - Reddit",
+            "snippet": "Instagram requires you to be logged in to view posts and Wayback Machine isn't logged in, nor is archive.is",
+            "url": "https://www.reddit.com/r/WaybackMachine/comments/grccg1/instagram_wayback_machine/"
+          },
+          {
+            "title": "Did McDonald's in Azerbaijan Make Pro-Military Posts on ... - VOA",
+            "snippet": "This is a verified McDonald's Instagram account that posted pro-military pictures about Nagorno-Karabakh. The posts are now removed.",
+            "url": "https://www.voanews.com/a/did-mcdonald-s-in-azerbaijan-make-pro-military-posts-on-instagram-/6742646.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-025-deepseek-candidate",
+  "timestamp": "2026-11-06T06:52:36.135098+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15145.453
+}

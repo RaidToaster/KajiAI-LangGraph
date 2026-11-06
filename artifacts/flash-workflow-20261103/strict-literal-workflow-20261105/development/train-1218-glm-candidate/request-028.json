@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Sanders individual vote entry in Senate.gov roll call vote 396 December 24, 2009",
+        "candidates": [
+          {
+            "title": "Roll Call Votes 111th Congress-1st session (2009)",
+            "snippet": "Dec 24 (00396) 396 (60-39) Passed On Passage of the Bill: H.R. 3590 as Amended; An act entitled The Patient Protection and Affordable Care Act.",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_111_1.htm"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "Vote Number: 396 Vote Date: December 24, 2009, Vote Result: Bill Passed. Vote Counts: YEAs60 NAYs 39 Not Voting 1. Sanders (I-VT),",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm"
+          },
+          {
+            "title": "NY State Senate Bill 2025-S3003D",
+            "snippet": "resolution must be approved by a majority vote of all members elected to the senate upon a roll call vote (10753)",
+            "url": "https://www.nysenate.gov/legislation/bills/2025/S3003/amendment/D"
+          },
+          {
+            "title": "H. Morgan Griffith | Congress.gov | Library of Congress",
+            "snippet": "Morgan Griffith, the Representative from Virginia - in Congress from 2011 through Present. by recorded vote: 235 - 185 (Roll no. 129 ...",
+            "url": "https://www.congress.gov/member/h-griffith/G000568?page=70"
+          },
+          {
+            "title": "Constitution, Jefferson's Manual, and the Rules of ...",
+            "snippet": "Wesberry v. Sanders, 376 U.S. 1 (1964); without motion or vote, even to the point of suspending a roll call then in progress",
+            "url": "https://www.govinfo.gov/content/pkg/HMAN-117/html/HMAN-117-pg4.htm"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-05T10:06:36.493488+00:00",
+  "status": "reserved_outcome_unknown"
+}

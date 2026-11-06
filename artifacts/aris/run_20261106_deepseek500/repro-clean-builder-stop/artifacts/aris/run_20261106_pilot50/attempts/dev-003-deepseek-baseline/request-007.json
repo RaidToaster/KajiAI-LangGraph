@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UNESCO declared Nadar community as the most ancient race in the world.",
+        "query": "UNESCO declared Nadar community as the most ancient race in the world. counterevidence",
+        "candidates": [
+          {
+            "title": "Fact Check: UNESCO did not declare Nadar community as ...",
+            "snippet": "Nov 6, 2020 — Vishvas News investigation revealed the claim is fake. UNESCO editor refuted the viral claim. Claim. A poster with a certificate is shared ... Read more",
+            "url": "https://www.vishvasnews.com/english/viral/fact-check-unesco-did-not-declare-nadar-community-as-ancient-race-in-the-world-viral-claim-is-fake/"
+          },
+          {
+            "title": "Nadar (caste)",
+            "snippet": "The Nadar community was not a single caste, but developed from an assortment of related subcastes, which in course of time came under the single banner Nadar . ...",
+            "url": "https://en.wikipedia.org/wiki/Nadar_(caste)"
+          },
+          {
+            "title": "Nadar Caste History | Sanror Historical Research",
+            "snippet": "Discover Nadar caste history through recent archaeological findings and modern research.",
+            "url": "https://www.sanrorhistoricalresearch.com/en/home/"
+          },
+          {
+            "title": "Nadars – Who Are they?",
+            "snippet": "Dec 14, 2016 — Nadars are one of the earliest inhabitants of our land , Bharat, which was later called by the Arabs as “Al Hind”. In Biblical times they were ... Read more",
+            "url": "http://www.nadar.org/nadars-who-are-they/"
+          },
+          {
+            "title": "Nadar History: Kings and Culture | PDF | Phoenicia",
+            "snippet": "The Nadar community , associated with the ancient Phoenicians, significantly contributed to international trade and cultural exchange.",
+            "url": "https://www.scribd.com/document/702512843/ShortHistoryOfNadars"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-003-deepseek-baseline",
+  "timestamp": "2026-11-05T23:39:16.033488+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1421.343
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Did Roswell Park Comprehensive Cancer Center or any other US institution actually obtain CimaVax-EGF, and under which OFAC or Commerce licenses?",
+        "candidates": [
+          {
+            "title": "CIMAvax Lung Cancer Vaccine - Buffalo",
+            "snippet": "It is a type of immunotherapy that harnesses the body's immune system to fight lung cancer. In 2017, Roswell Park initiated a clinical trials involving CIMAvax.",
+            "url": "https://www.roswellpark.org/cimavax"
+          },
+          {
+            "title": "Roswell Park Cancer Institute Partners With Cuban ...",
+            "snippet": "Johnson, Roswell Park proposes to test CimaVax in other cancer types with epidermal growth factor receptor (EGFR) mutations, including prostate, ...",
+            "url": "https://ascopost.com/issues/september-10-2015/roswell-park-cancer-institute-partners-with-cuban-scientists-to-develop-lung-cancer-vaccine/"
+          },
+          {
+            "title": "Cuba's Molecular Immunology Center and Roswell Park ...",
+            "snippet": "by R Evans · 2018 · Cited by 9 — This cooperation was responsible for the first clinical trial for CIMAvax-EGF involving advanced-stage non-small cell lung cancer patients in ...",
+            "url": "https://www.scielosp.org/article/medicc/2018.v20n2/35-39/en/"
+          },
+          {
+            "title": "Cuba's CIMAvax lung cancer vaccine has reportedly been ...",
+            "snippet": "Roswell Park launched the first US trial, but progress reportedly stalls amidst bureaucratic and funding headwinds. How it works: the vaccine ...",
+            "url": "https://www.facebook.com/ItisaScience/posts/cubas-cimavax-lung-cancer-vaccine-has-reportedly-been-free-for-cuban-patients-si/122233336412051326/"
+          },
+          {
+            "title": "Researchers Aim to Prevent Lung Cancer With Latest ...",
+            "snippet": "A groundbreaking international collaboration brought an innovative lung cancer immunotherapy from Cuba — CIMAvax-EGF — to Roswell Park ...",
+            "url": "https://www.roswellpark.org/newsroom/202110-researchers-aim-prevent-lung-cancer-latest-cimavax-egf-clinical-trial"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-05T10:37:24.359836+00:00",
+  "status": "reserved_outcome_unknown"
+}

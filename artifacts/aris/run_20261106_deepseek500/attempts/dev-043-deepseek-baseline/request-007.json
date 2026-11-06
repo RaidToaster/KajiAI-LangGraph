@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said that $15 an hour is too much for essential workers",
+        "query": "Donald Trump said that $15 an hour is too much for essential workers counterevidence",
+        "candidates": [
+          {
+            "title": "Does Donald Trump think $15 an hour is 'too much' for essential workers?",
+            "snippet": "Biden said Trump “thinks that $15 an hour minimum wage is too much for essential workers.” Trump has expressed skepticism about a $15 minimum ...",
+            "url": "https://politifact.com/factchecks/2020/oct/30/joe-biden/does-donald-trump-think-15-hour-too-much-essential/"
+          },
+          {
+            "title": "Trump Says He'd 'Consider' $15 Per Hour Federal Minimum Wage, But ...",
+            "snippet": "President Donald Trump said during Thursday night's presidential debate that he would “consider” raising the federal minimum wage to $15 per ...",
+            "url": "https://www.forbes.com/sites/nicholasreimann/2020/10/23/trump-says-hed-consider-15-per-hour-federal-minimum-wage-but-prefers-to-leave-it-to-states/"
+          },
+          {
+            "title": "President Trump Says He's Weighing Democrats' Plan for $15 Minimum ...",
+            "snippet": "Donald Trump said he's considering backing an increase in the federal minimum wage to $15 dollars an hour,",
+            "url": "https://www.nwyc.com/article/president_trump_says_hes_weighing_democrats_plan_for_15_minimum_wage"
+          },
+          {
+            "title": "Trump Says He's Weighing Democrats' Plan for $15 Minimum ...",
+            "snippet": "But in November and December of that year, Trump said wages were “too low” and told Fox News he supported a $15 hourly wage.",
+            "url": "https://www.bloomberg.com/news/articles/2019-06-21/trump-says-he-s-weighing-democrats-plan-for-15-minimum-wage"
+          },
+          {
+            "title": "Donald Trump Weighs In on Plan To Increase Minimum Wage",
+            "snippet": "The bill, introduced by Republican Senator Josh Hawley of Missouri last week, seeks to double the current federal minimum wage to $15 per hour.",
+            "url": "https://www.newsweek.com/donald-trump-weighs-increase-minimum-wage-2087981"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-043-deepseek-baseline",
+  "timestamp": "2026-11-06T07:43:23.798317+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 18193.109
+}

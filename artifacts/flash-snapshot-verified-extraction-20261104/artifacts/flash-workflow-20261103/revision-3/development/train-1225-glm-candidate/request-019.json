@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Forbes Mike Bloomberg net worth February 2020 $64.2 billion",
+        "candidates": [
+          {
+            "title": "If Bloomberg Wins, Here's Who Might Pay The Estimated ...",
+            "snippet": "Feb 19, 2020 — Bloomberg, who Forbes estimates has a net worth of $64.2 billion , owns 88% of the financial media and information company he cofounded back in ...",
+            "url": "https://www.forbes.com/sites/sergeiklebnikov/2020/02/19/if-bloomberg-wins-heres-who-might-pay-the-estimated-60-billion-for-his-company/"
+          },
+          {
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "snippet": "Feb 19, 2020 — Michael Bloomberg's net worth is $64.2 billion , according to Forbes. This makes him the eighth wealthiest person in America. Read more",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/"
+          },
+          {
+            "title": "Michael Bloomberg Has Six Times More Wealth Than the ...",
+            "snippet": "Feb 20, 2020 — Michael Bloomberg's net worth is $64.2 billion , according to Forbes. This makes him the eighth wealthiest person in America.",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary"
+          },
+          {
+            "title": "Michael Bloomberg",
+            "snippet": "Michael Bloomberg, the newest entrant to the Democratic primary, is worth $53 billion .",
+            "url": "https://www.forbes.com/profile/michael-bloomberg/"
+          },
+          {
+            "title": "Bloomberg would SELL his multi-billion dollar company if elected ...",
+            "snippet": "Bloomberg's personal net worth is $64.2 billion , according to Forbes, which reports Bloomberg LP's annual revenue is $10 billion. One of Bloomberg's top ...",
+            "url": "https://www.the-sun.com/news/425284/mike-bloomberg-donald-trump-2020-billionaire-president-company/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T05:44:19.713568+00:00",
+  "status": "reserved_outcome_unknown"
+}

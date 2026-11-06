@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Senate.gov, Graham on Coronavirus Response, Feb. 26, 2020",
+        "candidates": [
+          {
+            "title": "Roll Call Vote 116 th Congress - 2 nd Session",
+            "snippet": ": H.R. 6201 (Families First Coronavirus Response Act ) Measure Title: A bill making emergency supplemental appropriations for the fiscal year ending September ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00076.htm"
+          },
+          {
+            "title": "Graham on Coronavirus Response - Press Releases",
+            "snippet": "Feb 26 2020 Graham on Coronavirus Response. President Trump has tapped Vice President Mike Pence to serve as coronavirus coordinator.",
+            "url": "https://www.lgraham.senate.gov/public/index.cfm/2020/2/graham-on-coronavirus-response"
+          },
+          {
+            "title": "Enlisting Big Data in the Fight Against Coronavirus",
+            "snippet": "paper hearing on how governments, the private sector, and other stakeholders are leveraging big data to combat the novel coronavirus, which causes COVID-19.",
+            "url": "https://www.commerce.senate.gov/wp-content/uploads/media/doc/Graham%20Dufault%20Testimony.pdf"
+          },
+          {
+            "title": "COVID-19: An Update on the Federal Response",
+            "snippet": "COVID-19: An Update on the Federal Response Date: Wednesday, September 23rd, 2020 Time: 10:00am Location: G50 Dirksen Senate Office Building. ...",
+            "url": "https://www.help.senate.gov/hearings/covid-19-an-update-on-the-federal-response"
+          },
+          {
+            "title": "WATCH LIVE: The Senate Health committee holds hearing ...",
+            "snippet": "The Senate Health committee holds hearing on the federal response to COVID-19. Chilling claim on 'mRNA COVID vaccines causing Cancer' at Senate ...",
+            "url": "https://www.youtube.com/watch?v=tjQE34w3hTM"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-03T15:24:30.929542+00:00",
+  "status": "reserved_outcome_unknown"
+}

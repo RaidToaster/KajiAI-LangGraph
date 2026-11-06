@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The large image of the Joe Biden and Kamala Harris logo projected onto a Harley-Davidson location in Milwaukee US indicates the motorcycle manufacturer's endorsement of the US Democratic presidential nominee.",
+        "query": "What is the exact Harley-Davidson location in Milwaukee where the projection occurred, and on what date did it occur?",
+        "candidates": [
+          {
+            "title": "Milwaukee is the proud birthplace of Harley-Davidson, and we love ...",
+            "snippet": "Milwaukee is the proud birthplace of Harley-Davidson, and we love celebrating our hometown! Can you guess the iconic Milwaukee location featured in this photo?",
+            "url": "https://www.facebook.com/hdmuseum/posts/milwaukee-is-the-proud-birthplace-of-harley-davidson-and-we-love-celebrating-our/1031198685707400/"
+          },
+          {
+            "title": "Historic motorcycle at Harley-Davidson Museum",
+            "snippet": "The Harley-Davidson Museum in Milwaukee is remembering September 11, 2001 with a special exhibit. It features a motorcycle that was ridden ...",
+            "url": "https://www.youtube.com/watch?v=b1dsIp6LMSM"
+          },
+          {
+            "title": "Harley-Davidson: From 1903 Wisconsin Shed to Iconic American ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/USTradeRep/videos/from-a-small-wisconsin-shed-in-1903-to-one-of-the-most-recognizable-and-iconic-a/1605750497949190/"
+          },
+          {
+            "title": "The Ride Home | Harley-Davidson Museum",
+            "snippet": "Save the date for The RIDE Home 2027 at the Harley-Davidson Museum in Milwaukee. Celebrate Labor Day Weekend with motorcycles, free live music, riding, ...",
+            "url": "https://www.harley-davidson.com/us/en/experiences/events/ride-home-labor-day-milwaukee.html"
+          },
+          {
+            "title": "Harley-Davidson Museum | Milwaukee, WI 53203",
+            "snippet": "Located on 20 acres in downtown Milwaukee, the Museum showcases much more than the iconic bikes themselves. It offers an immersive experience into American ...",
+            "url": "https://www.visitmilwaukee.org/listing/harley-davidson-museum/1315/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-061-deepseek-candidate",
+  "timestamp": "2026-11-06T08:35:23.000755+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21312.312
+}

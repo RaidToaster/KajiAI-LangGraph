@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "Nigeria population at independence official statistics 1960 census estimate",
+        "candidates": [
+          {
+            "title": "Fact-checking Buhari's independence day speech",
+            "snippet": "Data from the World Bank and the UN's department of economic and social affairs shows Nigeria's population was 45.1 million in 1960. That ...",
+            "url": "https://africacheck.org/fact-checks/reports/nigerias-population-economy-and-history-fact-checking-buharis-independence-day"
+          },
+          {
+            "title": "In 1960 when Nigeria gained independence ...",
+            "snippet": "✓ In 1960, Nigeria's population was 45 million. ✓ In 2026, the UK population is 69 million (estimate) ✓ In 2026, Nigeria's population is ...",
+            "url": "https://www.facebook.com/kaybiyi/posts/in-1960-when-nigeria-gained-independence-nigerias-population-was-45-million-and-/10163671446241032/"
+          },
+          {
+            "title": "Demographics of Nigeria",
+            "snippet": "Nigeria is the most populous country in Africa and the sixth most populous in the world. Nigeria is also one of the most densely populated countries in ...",
+            "url": "https://en.wikipedia.org/wiki/Demographics_of_Nigeria"
+          },
+          {
+            "title": "History of Population Census in Nigeria",
+            "snippet": "1962 Census. The 1962 census was the second countrywide headcount in Nigeria and the first since independence in 1960. · 1963 Census · 1973 Census · 1991 Census.",
+            "url": "https://nationalpopulation.gov.ng/census-enumeration"
+          },
+          {
+            "title": "Nigeria Population (1950-2026)",
+            "snippet": "Total population for Nigeria in 2023 was 223,804,632, a 2.41% increase from 2022. Total population is based on the de facto definition of population, which ...",
+            "url": "https://www.macrotrends.net/global-metrics/countries/nga/nigeria/population"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-baseline",
+  "timestamp": "2026-11-06T00:07:49.223190+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3134.531
+}

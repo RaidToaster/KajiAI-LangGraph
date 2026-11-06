@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "49 percent of Nigerians are in extreme poverty.",
+        "query": "What definition or threshold of extreme poverty (for example, a specific daily income or consumption level) is used for the 49 percent figure?",
+        "candidates": [
+          {
+            "title": "June 2025 Update to Global Poverty Lines",
+            "snippet": "Anyone living on less than $3.00 a day is considered to be living in extreme poverty. In 2022, about 838 million people lived in extreme ...",
+            "url": "https://www.worldbank.org/en/news/factsheet/2025/06/05/june-2025-update-to-global-poverty-lines"
+          },
+          {
+            "title": "Share of population living in extreme poverty, 2025",
+            "snippet": "The World Bank defines extreme poverty as living on less than $3 per day. This threshold, known as the “International Poverty Line”, ...",
+            "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty"
+          },
+          {
+            "title": "Poverty threshold",
+            "snippet": "The poverty threshold, poverty limit, poverty line, or breadline is the minimum level of income deemed adequate in a particular country. The poverty line is ...",
+            "url": "https://en.wikipedia.org/wiki/Poverty_threshold"
+          },
+          {
+            "title": "How the Census Bureau Measures Poverty",
+            "snippet": "Poverty thresholds are the dollar amounts used to determine poverty status. The Census Bureau assigns each person or family one out of 48 ...",
+            "url": "https://www.census.gov/topics/income-poverty/poverty/guidance/poverty-measures.html"
+          },
+          {
+            "title": "How is poverty measured?",
+            "snippet": "Poverty is measured in the United States by comparing a person's or family's income to a set poverty threshold or minimum amount of income needed to cover ...",
+            "url": "https://www.irp.wisc.edu/resources/how-is-poverty-measured/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-166-deepseek-candidate",
+  "timestamp": "2026-11-06T00:02:32.861531+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2818.171
+}

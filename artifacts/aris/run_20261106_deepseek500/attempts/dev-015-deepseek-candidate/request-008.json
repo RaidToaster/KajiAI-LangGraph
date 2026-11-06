@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "What data sources measure illegal drug activity, border crossings, and human smuggling, and do they show decreases in barrier-deployed areas compared with non-barrier areas?",
+        "candidates": [
+          {
+            "title": "Illicit Drug Smuggling Between Ports of Entry and Border ...",
+            "snippet": "Data from U.S. Customs and Border Protection (CBP) indicate that, by weight, more marijuana, cocaine, methamphetamine, heroin, and fentanyl ...",
+            "url": "https://www.congress.gov/crs-product/R46218"
+          },
+          {
+            "title": "Facts About Fentanyl Smuggling",
+            "snippet": "From 2013 to 2023, the national drug overdose death rate more than doubled, with drug overdose deaths peaking in 2022 at 107,941. of fentanyl ...",
+            "url": "https://www.americanimmigrationcouncil.org/fact-sheet/fentanyl-smuggling/"
+          },
+          {
+            "title": "The Effect of Illegal Immigration and Border Enforcement on ...",
+            "snippet": "by PM Orrenius · 2005 · Cited by 38 — In a cross-sectional regression of city characteristics on crime, they find that border cities have lower rates of crime as compared with non-border cities.",
+            "url": "https://ccis.ucsd.edu/_files/wp131.pdf"
+          },
+          {
+            "title": "Border Patrol: Available Data on Interior Checkpoints ...",
+            "snippet": "CBP uses traditional law enforcement effectiveness measures, such as numbers of apprehensions and contraband seizures to describe the Border Patrol's ...",
+            "url": "https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-05-435/html/GAOREPORTS-GAO-05-435.htm"
+          },
+          {
+            "title": "Is Border Enforcement Effective? What We Know and What ...",
+            "snippet": "The new evidence suggests that unauthorized migration across the southern border has plummeted, with successful illegal entries falling from roughly 1.8 million ...",
+            "url": "https://cmsny.org/publications/jmhs-is-border-enforcement-effective/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-candidate",
+  "timestamp": "2026-11-06T06:22:37.569517+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13346.89
+}

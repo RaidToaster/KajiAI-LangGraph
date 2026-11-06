@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "Find an independent second outlet confirming Kamra's denial of the Pulwama/NRC quote.",
+        "candidates": [
+          {
+            "title": "Kunal Kamra Compares Pulwama Probe To NRC? - YouTube",
+            "snippet": "A viral image claims comedian Kunal Kamra compared the lack of information from the Pulwama probe with documents needed for NRC.",
+            "url": "https://www.youtube.com/watch?v=YWM1sGaWhkI"
+          },
+          {
+            "title": "[PDF] War or Peace Discourse? Analysis of News Headlines on ...",
+            "snippet": "Discourse analysis and the theories of war and peace journalism are used to investigate the newspaper coverage of the Pulwama attack of 2019, a ...",
+            "url": "https://nsuworks.nova.edu/cgi/viewcontent.cgi?article=2011&context=pcs"
+          },
+          {
+            "title": "Disputed narratives escalate tensions in Kashmir",
+            "snippet": "The recent Pulwama–Balakot crisis reveals how the Kashmir dispute is being driven to new heights by nationalist narratives that show no sign ...",
+            "url": "https://eastasiaforum.org/2019/04/18/disputed-narratives-escalate-tensions-in-kashmir/"
+          },
+          {
+            "title": "[PDF] A Discourse Analysis of Pakistani Elite Press on Post-Pulwama ...",
+            "snippet": "This study investigates the post-Pulwama coverage of the Pakistani English-language media from 2020 to 2024 regarding India, particularly ...",
+            "url": "https://www.researchsquare.com/article/rs-7510368/v1.pdf?c=1772632208000"
+          },
+          {
+            "title": "The Pulwama Attack's After Effects: Fake News and Rumours",
+            "snippet": "The second report was troublingly shared by major news channels such as India Today, Economic Times and Aaj Tak among others. Several ...",
+            "url": "https://rsis.edu.sg/rsis-publication/icpvtr/the-pulwama-attacks-after-effects-fake-news-and-rumours/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-glm-candidate",
+  "timestamp": "2026-11-05T10:33:56.622982+00:00",
+  "status": "reserved_outcome_unknown"
+}

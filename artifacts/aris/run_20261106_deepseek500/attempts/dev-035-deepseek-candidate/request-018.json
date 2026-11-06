@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "COVID-19 pandemic pre-planned with the help from Bill Gates.",
+        "query": "Bill Gates Foundation primary documents 2019 pandemic preparedness funding grants before December 2019",
+        "candidates": [
+          {
+            "title": "Collaborating against COVID-19: A timeline - Gates Foundation",
+            "snippet": "Since January 2020, the Bill & Melinda Gates Foundation has committed more than US$2 billion to the global COVID-19 response. Sections 01December 2019 02 ...",
+            "url": "https://www.gatesfoundation.org/ideas/a-timeline-of-gates-foundations-fight-against-covid-19"
+          },
+          {
+            "title": "Gates Foundation - Wikipedia",
+            "snippet": "In mid-2011, the foundation stated that they had committed more than $265 million to the water, sanitation, and hygiene sector over the past five years, i.e. ...",
+            "url": "https://en.wikipedia.org/wiki/Gates_Foundation"
+          },
+          {
+            "title": "Bill and Melinda Gates Foundation Dedicates Additional ...",
+            "snippet": "The foundation will immediately commit up to $20 million to accelerate the detection, isolation and treatment of people diagnosed with the virus ...",
+            "url": "https://www.gatesfoundation.org/ideas/media-center/press-releases/2020/02/bill-and-melinda-gates-foundation-dedicates-additional-funding-to-the-novel-coronavirus-response"
+          },
+          {
+            "title": "Event 201 | Johns Hopkins Center for Health Security",
+            "snippet": "Bill and Melinda Gates Foundation hosted Event 201, a high-level pandemic exercise on October 18, 2019, in New York, NY.",
+            "url": "https://centerforhealthsecurity.org/our-work/tabletop-exercises/event-201-pandemic-tabletop-exercise"
+          },
+          {
+            "title": "Committed Grants Database - Gates Foundation",
+            "snippet": "Search the Gates Foundation's committed grants database and explore funding details, annual reports, and downloadable data.",
+            "url": "https://www.gatesfoundation.org/about/committed-grants"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-035-deepseek-candidate",
+  "timestamp": "2026-11-06T07:23:49.944179+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17019.265
+}

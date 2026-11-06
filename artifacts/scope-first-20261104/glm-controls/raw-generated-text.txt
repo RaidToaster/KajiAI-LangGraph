@@ -1,0 +1,361 @@
+```json
+{
+  "assessments": {
+    "sufficient": {
+      "obligations": [
+        {
+          "component": "C0",
+          "target": "Exactly that Northport council approved the bridge plan by a vote of seven to two on 1 June 2024.",
+          "proof_needed": "Evidence of the vote date, the decision, and the tally (seven in favor, two against). The claim is a simple event; utterance-level attribution is not the target.",
+          "observations": [
+            "F1 (S1 P1): Council minutes state the bridge plan was approved, seven votes in favor and two against, at the 1 June 2024 meeting, compiled by the clerk from the recorded roll call.",
+            "F2 (S2 P1): The Northport Observer reporter, who attended the 1 June 2024 meeting and personally tallied the roll call, reports the plan passed seven to two, with no subsequent reversal at that meeting."
+          ],
+          "material_uncertainties": [
+            "The two accounts are textually distinct (clerk-compiled minutes vs. an attending reporter's tallied account), but the packet is an authored fixture and its records are stipulated; no independent third account, and no evidence about votes later in the session beyond 'at that meeting' exists. This does not undermine adjudication of the claim as stated."
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "id": "F1",
+          "reference": {"source": "S1", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "The Northport council minutes for the 1 June 2024 meeting record that the bridge plan was approved, seven votes in favor and two against; the minutes were compiled by the council clerk from the recorded roll call.",
+          "stance": "supports"
+        },
+        {
+          "id": "F2",
+          "reference": {"source": "S2", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "An account written by a reporter who attended the meeting states that they tallied the roll call themselves on 1 June 2024 and that the bridge plan passed seven to two, and that they found no subsequent reversal at that meeting.",
+          "stance": "supports"
+        }
+      ],
+      "origins": [
+        {
+          "source": "S1",
+          "underlying_origin": "Northport council minutes, compiled by the council clerk from the recorded roll call (authored fixture, stipulated).",
+          "verification_action": "",
+          "passages": ["S1.P1"],
+          "event_or_data_date": "2024-06-01",
+          "publication_date": ""
+        },
+        {
+          "source": "S2",
+          "underlying_origin": "Northport Observer attending reporter's first-person tallied account (authored fixture, stipulated).",
+          "verification_action": "Reporter personally tallied the roll call at the meeting and checked for subsequent reversal.",
+          "passages": ["S2.P1"],
+          "event_or_data_date": "2024-06-01",
+          "publication_date": "2024-06-02"
+        }
+      ],
+      "components": [
+        {
+          "id": "C0",
+          "resolved": true,
+          "findings": ["F1", "F2"],
+          "questions": [],
+          "unresolved_material_questions": []
+        }
+      ],
+      "proposed_verdict": "TRUE",
+      "confidence": "Medium",
+      "summary": "Two matching accounts of the 1 June 2024 vote — clerk-compiled minutes and an attending reporter's independently tallied roll call — both record approval of the bridge plan seven to two.",
+      "gaps": [],
+      "contradictions": [],
+      "counterevidence_searched": true,
+      "sources_independent": true,
+      "peer_reviewed_sources": false,
+      "next_queries": []
+    },
+    "attribution": {
+      "obligations": [
+        {
+          "component": "C0",
+          "target": "Only that Mayor Imani made the statement (utterance attribution). The truth of the statistics or causal claims inside the quoted words is outside this component's target.",
+          "proof_needed": "Evidence that Mayor Imani said the words 'Eastport unemployment fell by 20 percent between 2022 and 2023'.",
+          "observations": [
+            "F1 (S1 P1): A purported interview transcript dated 2024-02-02 attributes the exact statement to Mayor Imani; it explicitly provides no unemployment dataset, which matters only for the statistic's truth, not the attribution.",
+            "F2 (S2 P1): Reporter B attended and independently audio-recorded the interview on 2024-02-02; the recording contains Imani saying the words. Reporter B did not verify the statistic (again, relevant only to content, not attribution)."
+          ],
+          "material_uncertainties": [
+            "None material for the attribution target: the independently recorded audio corroborates the transcript's attribution. The unverified statistic is out of scope for C0 and is not hidden here as a limitation."
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "id": "F1",
+          "reference": {"source": "S1", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "A record titled as an interview transcript dated 2024-02-02 states that Mayor Imani said: Eastport unemployment fell by 20 percent between 2022 and 2023. The record states that no unemployment dataset is provided.",
+          "stance": "supports"
+        },
+        {
+          "id": "F2",
+          "reference": {"source": "S2", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "A record states that Reporter B attended and independently audio-recorded the interview on 2024-02-02 and that the recording contains Mayor Imani saying: Eastport unemployment fell by 20 percent between 2022 and 2023. Reporter B did not verify the statistic.",
+          "stance": "supports"
+        }
+      ],
+      "origins": [
+        {
+          "source": "S1",
+          "underlying_origin": "Interview transcript (authored fixture, stipulated).",
+          "verification_action": "",
+          "passages": ["S1.P1"],
+          "event_or_data_date": "2024-02-02",
+          "publication_date": ""
+        },
+        {
+          "source": "S2",
+          "underlying_origin": "Reporter B's description of an independently made audio recording (authored fixture, stipulated).",
+          "verification_action": "Independent audio recording of the interview by Reporter B; no verification of the statistic.",
+          "passages": ["S2.P1"],
+          "event_or_data_date": "2024-02-02",
+          "publication_date": ""
+        }
+      ],
+      "components": [
+        {
+          "id": "C0",
+          "resolved": true,
+          "findings": ["F1", "F2"],
+          "questions": [],
+          "unresolved_material_questions": []
+        }
+      ],
+      "proposed_verdict": "TRUE",
+      "confidence": "Medium",
+      "summary": "Attribution-only target: a first-person transcript and an independent audio recording both establish that Mayor Imani said the words; the truth of the statistic is explicitly out of scope.",
+      "gaps": [],
+      "contradictions": [],
+      "counterevidence_searched": true,
+      "sources_independent": true,
+      "peer_reviewed_sources": false,
+      "next_queries": []
+    },
+    "insufficient_content": {
+      "obligations": [
+        {
+          "component": "C0",
+          "target": "The factual assertion itself: Eastport unemployment fell by 20 percent between 2022 and 2023 (no speaker attribution).",
+          "proof_needed": "Underlying unemployment measurements and the calculation establishing a 20 percent decline between 2022 and 2023 — the measurement and assumptions are within scope because the claim is an asserted statistic.",
+          "observations": [
+            "F1 (S1 P1): The transcript attributes the statement to Mayor Imani and explicitly states no unemployment dataset is provided — evidence of utterance, not of the underlying statistic.",
+            "F2 (S2 P1): The recording containing the statement and Reporter B's failure to verify the statistic likewise evidences only the utterance."
+          ],
+          "material_uncertainties": [
+            "No supplied record contains the underlying 2022 and 2023 unemployment measurements or any independent calculation of the percentage change; the evidentiary path (utterance testimony) does not establish the statistic. This is a material gap and the component cannot be adjudicated."
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "id": "F1",
+          "reference": {"source": "S1", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "The interview transcript dated 2024-02-02 records Mayor Imani saying the words: Eastport unemployment fell by 20 percent between 2022 and 2023. It states no unemployment dataset is provided.",
+          "stance": "context"
+        },
+        {
+          "id": "F2",
+          "reference": {"source": "S2", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "The record states Reporter B independently audio-recorded the interview and the recording contains Mayor Imani saying the words, and that Reporter B did not verify the statistic.",
+          "stance": "context"
+        }
+      ],
+      "origins": [
+        {
+          "source": "S1",
+          "underlying_origin": "Interview transcript (authored fixture, stipulated).",
+          "verification_action": "",
+          "passages": ["S1.P1"],
+          "event_or_data_date": "2024-02-02",
+          "publication_date": ""
+        },
+        {
+          "source": "S2",
+          "underlying_origin": "Reporter B's description of an independently made audio recording (authored fixture, stipulated).",
+          "verification_action": "Independent audio recording of the interview; no verification of the statistic.",
+          "passages": ["S2.P1"],
+          "event_or_data_date": "2024-02-02",
+          "publication_date": ""
+        }
+      ],
+      "components": [
+        {
+          "id": "C0",
+          "resolved": false,
+          "findings": ["F1", "F2"],
+          "questions": [
+            "What are the underlying Eastport unemployment figures for 2022 and 2023, from what measurement instrument, and under what definitions?"
+          ],
+          "unresolved_material_questions": [
+            "Do any underlying measurements or an independent calculation support a 20 percent decline between 2022 and 2023?"
+          ]
+        }
+      ],
+      "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "Medium",
+      "summary": "Both records evidence only that Mayor Imani uttered the statistic; no supplied record contains the underlying unemployment measurements or an independent calculation, which the statistic claim requires in scope.",
+      "gaps": [
+        "No record supplies underlying 2022 and 2023 Eastport unemployment measurements or any independent computation of the change (C0)."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": true,
+      "sources_independent": false,
+      "peer_reviewed_sources": false,
+      "next_queries": [
+        "Obtain Eastport unemployment data for 2022 and 2023 from the official measurement source"
+      ]
+    },
+    "conflicting": {
+      "obligations": [
+        {
+          "component": "C0",
+          "target": "That the independently measured median delivery time in Westport in 2023 was less than 30 minutes.",
+          "proof_needed": "An independent, citywide, calendar-2023 sample and its median under a defined measurement (order-confirmed to door-received minutes) establishing the median below 30 minutes.",
+          "observations": [
+            "F1 (S1 P1): Lab A's own independently sampled, citywide, calendar-2023 measurement under the defined metric yields a median estimate of 28 minutes, with raw sample and calculation reviewed by Lab A — direct support for the same target (and above the 30-minute threshold only if under 30; 28 is below 30, so it supports).",
+            "F2 (S2 P1): Lab B's own independent citywide calendar-2023 sample, same metric, without Lab A's data, yields a median estimate of 34 minutes; the discrepancy is unresolved. A credible opposed estimate of the same target quantity."
+          ],
+          "material_uncertainties": [
+            "The two medians (28 vs. 34) differ across the 30-minute threshold; whether this reflects sampling variation or measurement error cannot be adjudicated from the supplied records, and the discrepancy is explicitly unresolved. Either resolution of the discrepancy could change the verdict."
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "id": "F1",
+          "reference": {"source": "S1", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "Lab A, sampling Westport completed deliveries independently across calendar 2023 for the citywide population using order-confirmed to door-received minutes, estimates a median of 28 minutes; the raw sample and calculation were reviewed by Lab A.",
+          "stance": "supports"
+        },
+        {
+          "id": "F2",
+          "reference": {"source": "S2", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "Lab B, using its own independently collected citywide Westport delivery sample across calendar 2023 with the same order-confirmed to door-received metric and without Lab A's observations or calculations, estimates a median of 34 minutes; the discrepancy has not been resolved.",
+          "stance": "refutes"
+        }
+      ],
+      "origins": [
+        {
+          "source": "S1",
+          "underlying_origin": "Lab A's independent sampling and calculation of Westport 2023 delivery times (authored fixture, stipulated).",
+          "verification_action": "Internal review of raw sample and calculation by Lab A.",
+          "passages": ["S1.P1"],
+          "event_or_data_date": "2023",
+          "publication_date": ""
+        },
+        {
+          "source": "S2",
+          "underlying_origin": "Lab B's independent sampling and calculation of Westport 2023 delivery times (authored fixture, stipulated).",
+          "verification_action": "Independent sample collection and calculation by Lab B, explicitly not using Lab A's data.",
+          "passages": ["S2.P1"],
+          "event_or_data_date": "2023",
+          "publication_date": ""
+        }
+      ],
+      "components": [
+        {
+          "id": "C0",
+          "resolved": true,
+          "findings": ["F1", "F2"],
+          "questions": [
+            "Do the two samples' designs, sizes, and uncertainty ranges account for the 28 vs. 34 difference?"
+          ],
+          "unresolved_material_questions": [
+            "Why do the two independent same-metric citywide 2023 estimates (28 vs. 34) differ, and which is closer to the true median?"
+          ]
+        }
+      ],
+      "proposed_verdict": "CONFLICTING",
+      "confidence": "Medium",
+      "summary": "Two same-target independent 2023 citywide medians under the same metric straddle the 30-minute threshold (28 vs. 34), with no basis in the supplied records to resolve the explicit, unresolved discrepancy.",
+      "gaps": [
+        "No supplied record explains or resolves the 28 vs. 34 median discrepancy (C0)."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": true,
+      "sources_independent": true,
+      "peer_reviewed_sources": false,
+      "next_queries": [
+        "Obtain sample designs, sizes, and confidence intervals from both labs"
+      ]
+    },
+    "shared": {
+      "obligations": [
+        {
+          "component": "C0",
+          "target": "That Southport's new signal system caused a 15 percent reduction in junction delays in 2024 compared with 2023.",
+          "proof_needed": "Evidence establishing both the measured 15 percent reduction versus 2023 and causal identification of the signal system as its cause; the underlying measurements and the causal assumptions (adjustment for volume, construction, seasonality, and other concurrent changes) are within scope.",
+          "observations": [
+            "F1 (S1 P1): The sole primary account is a vendor press release whose comparison explicitly did not adjust for traffic volume, construction, seasonality or other changes — it cannot support the causal claim on its own stated path.",
+            "F2 (S2 P1): The Southport Bulletin explicitly repeats the vendor's figures without collecting or independently verifying any measurements, so it is not an independent evidentiary path."
+          ],
+          "material_uncertainties": [
+            "The only source of measurements is the vendor itself, and by that source's own statement the before/after comparison was not adjusted for confounders; no independent path establishes either the size of the effect or its causal attribution to the signal system."
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "id": "F1",
+          "reference": {"source": "S1", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "A vendor press release dated 2024-06-01 claims the new Southport signal system caused a 15 percent reduction in junction delays compared with 2023, and states that delays were compared before and after installation without adjustment for traffic volume, construction, seasonality or other changes.",
+          "stance": "context"
+        },
+        {
+          "id": "F2",
+          "reference": {"source": "S2", "first_paragraph": "P1", "last_paragraph": "P1"},
+          "finding": "A Southport Bulletin article dated 2024-06-02 repeats the vendor press release's claim and figures, and states it did not collect or independently verify any measurements.",
+          "stance": "context"
+        }
+      ],
+      "origins": [
+        {
+          "source": "S1",
+          "underlying_origin": "Vendor press release of self-reported measurements (authored fixture, stipulated).",
+          "verification_action": "None documented; comparison explicitly unadjusted.",
+          "passages": ["S1.P1"],
+          "event_or_data_date": "",
+          "publication_date": "2024-06-01"
+        },
+        {
+          "source": "S2",
+          "underlying_origin": "Southport Bulletin article echoing the vendor press release (authored fixture, stipulated).",
+          "verification_action": "None; article states it did not collect or independently verify measurements.",
+          "passages": ["S2.P1"],
+          "event_or_data_date": "",
+          "publication_date": "2024-06-02"
+        }
+      ],
+      "components": [
+        {
+          "id": "C0",
+          "resolved": false,
+          "findings": ["F1", "F2"],
+          "questions": [
+            "What were the actual observed delay figures before and after installation?"
+          ],
+          "unresolved_material_questions": [
+            "Do the underlying measurements support a 15 percent reduction, and does any analysis controlling for traffic volume, construction, seasonality or other changes identify the signal system as the cause?"
+          ]
+        }
+      ],
+      "proposed_verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "High",
+      "summary": "The only evidence is a vendor's unadjusted self-reported before/after comparison, echoed without independent verification; both the statistic and the causal attribution lack any independent, confounder-controlled evidentiary path.",
+      "gaps": [
+        "No underlying delay measurements from any party other than the vendor are supplied (C0).",
+        "No confounder-adjusted or otherwise causally identified analysis is supplied; the vendor explicitly reports its comparison as unadjusted (C0)."
+      ],
+      "contradictions": [],
+      "counterevidence_searched": true,
+      "sources_independent": false,
+      "peer_reviewed_sources": false,
+      "next_queries": [
+        "Seek an independent traffic study of Southport junction delays controlling for volume, construction, and seasonality"
+      ]
+    }
+  }
+}
+```

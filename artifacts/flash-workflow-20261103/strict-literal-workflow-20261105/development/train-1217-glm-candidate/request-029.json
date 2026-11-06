@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Do US sanctions regulations restrict imports of Cuban-origin pharmaceutical or biological products into the United States, as distinct from exports to Cuba?",
+        "candidates": [
+          {
+            "title": "800 | Office of Foreign Assets Control",
+            "snippet": "Cuba Sanctions . 800. May persons subject to U.S. jurisdiction import Cuban - origin pharmaceuticals into the United States ? Answer. Section 515.547(b) of the ... Read more",
+            "url": "https://ofac.treasury.gov/faqs/800"
+          },
+          {
+            "title": "US Commerce and Treasury Departments Further Expand ...",
+            "snippet": "Oct 19, 2016 — OFAC has lifted the $400 monetary limit on merchandise acquired in Cuba and imported into the United States by US persons as accompanied ...",
+            "url": "https://sanctionsnews.bakermckenzie.com/u-s-commerce-and-treasury-departments-further-expand-authorizations-for-cuba-activities/"
+          },
+          {
+            "title": "Sanctions | Cuba",
+            "snippet": "prohibited American exports to Cuba except for non-subsidized foodstuff, medicines, and medical supplies.",
+            "url": "https://www.sanctionsexpert.com/cuba"
+          },
+          {
+            "title": "Cuba export controls",
+            "snippet": "The United States maintains a comprehensive embargo on trade with Cuba . The export and reexport to Cuba of items subject to the Export Administration ... Read more",
+            "url": "https://www.bis.gov/articles/cuba-export-controls"
+          },
+          {
+            "title": "Are medical supplies and medicine exempt from the US ...",
+            "snippet": "Can the Cuban Exiles in Florida please tell the truth about the blockade and its effects on medicine medical equipment and humanitarian aid just once ...",
+            "url": "https://www.facebook.com/groups/1537833293153724/posts/4565169193753437/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-05T10:37:30.398812+00:00",
+  "status": "reserved_outcome_unknown"
+}

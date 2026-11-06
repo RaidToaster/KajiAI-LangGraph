@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "Re-run the assessment with the actual draft text.",
+        "candidates": [
+          {
+            "title": "Assessments Page (Drafts and Published)",
+            "snippet": "In the row for a draft assessment (upper table), in the Actions column, select: [C] Edit to edit a draft assessment. Only a draft assessment that you choose to ...",
+            "url": "https://support.renaissance.com/s/article/Assessments-Page-Drafts-and-Published-1752673901446?language=en_US"
+          },
+          {
+            "title": "Multiple Attempts for Ungraded Text Entry Questions (Survey)",
+            "snippet": "The issue we're running into is that because these text entry questions are ungraded, we are not able to provide multiple attempts.",
+            "url": "https://community.articulate.com/discussions/discuss/multiple-attempts-for-ungraded-text-entry-questions-survey/1200855"
+          },
+          {
+            "title": "Are draft assessment reports acceptable for IEP meetings?",
+            "snippet": "I had an IEP meeting to discuss an Assitive Technology and Occupational Therapy assessments. I did not receive both assessment reports till the day before ...",
+            "url": "https://www.facebook.com/groups/iepeduc/posts/1404220538431464/"
+          },
+          {
+            "title": "How do I edit an item-based assessment as a teacher?",
+            "snippet": "To revert the assessment to a draft state, click the Revert to Draft button. Edit Assessment in Use. Edit Assessment in Use. If you are editing ...",
+            "url": "https://community.instructure.com/en/kb/articles/661930-how-do-i-edit-an-item-based-assessment-as-a-teacher"
+          },
+          {
+            "title": "What to do about assessments if we can't out-design or out ...",
+            "snippet": "Discover the capabilities. Run your assessment prompt(s) through generative AI, preferably using the more powerful models available (such as",
+            "url": "https://educational-innovation.sydney.edu.au/teaching@sydney/what-to-do-about-assessments-if-we-cant-out-design-or-out-run-ai/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-glm-baseline",
+  "timestamp": "2026-11-03T05:55:52.650332+00:00",
+  "status": "reserved_outcome_unknown"
+}

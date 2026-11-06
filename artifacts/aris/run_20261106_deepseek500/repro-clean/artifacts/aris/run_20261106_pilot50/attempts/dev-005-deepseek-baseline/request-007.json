@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention. counterevidence",
+        "candidates": [
+          {
+            "title": "Chemical Weapons Convention (CWC) - State.gov",
+            "snippet": "Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on Their Destruction (CWC)",
+            "url": "https://2009-2017.state.gov/t/avc/trty/127917.htm"
+          },
+          {
+            "title": "Chemical Weapons Convention (CWC)",
+            "snippet": "The United States is one of over 190 States Parties to the Chemical Weapons Convention (CWC), which prohibits the development, production, stockpiling, and use ...",
+            "url": "https://www.bis.gov/about-bis/bis-leadership-and-offices/nfpc/cwc"
+          },
+          {
+            "title": "UNITED STATES NON-COMPLIANCE WITH THE CHEMICAL ...",
+            "snippet": "That this House notes the United States of America signed the Chemical Weapons Convention on the Prohibition of Chemical Weapons on 13th ...",
+            "url": "https://edm.parliament.uk/early-day-motion/23350/united-states-noncompliance-with-the-chemical-weapons-convention"
+          },
+          {
+            "title": "Bond v. United States: Validity and Construction of the ...",
+            "snippet": "The Chemical Weapons Convention obligates the United States to outlaw the use, production, and retention of weapons consisting of toxic ...",
+            "url": "https://www.everycrsreport.com/reports/R42968.html"
+          },
+          {
+            "title": "Lieber Papers Series - The United States and (Most of) the Rest",
+            "snippet": "The post offers a primer on key points of divergence between U.S. legal obligations and its partners', which can strain interoperability.",
+            "url": "https://lieber.westpoint.edu/united-states-most-rest-legal-interoperability-primer/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-baseline",
+  "timestamp": "2026-11-06T00:44:21.852753+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5327.156
+}

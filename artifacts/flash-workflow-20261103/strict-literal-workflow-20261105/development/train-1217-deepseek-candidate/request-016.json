@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "What specific US sanctions or legal restrictions applied to CimaVax EGF importation or clinical use in the United States?",
+        "candidates": [
+          {
+            "title": "CIMAvax-EGF: A New Therapeutic Vaccine for Advanced Non ...",
+            "snippet": "by D Saavedra · 2017 · Cited by 110 — CIMAvax-EGF demonstrated to be safe and immunogenic in advanced non-small cell lung cancer (NSCLC) patients. The efficacy study was an open- ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5346887/"
+          },
+          {
+            "title": "Short-Term Goals and Long-Term Implications of the First ...",
+            "snippet": "In January 2017, approximately 3 months after the easing of restrictions, the first U.S.-based clinical trial of CIMAvax-EGF was initiated at Roswell Park.",
+            "url": "https://connection.asco.org/do/short-term-goals-and-long-term-implications-first-us-based-clinical-trial-cuban"
+          },
+          {
+            "title": "CimaVax-EGF",
+            "snippet": "In Cuba, CimaVax-EGF has completed a phase IV clinical ... The United States embargo against Cuba forbids US citizens from seeking medical treatment in Cuba.",
+            "url": "https://en.wikipedia.org/wiki/CimaVax-EGF"
+          },
+          {
+            "title": "Cuba's Cimavax-EGF lung cancer vaccine extends survival ...",
+            "snippet": "But the US embargo prohibits importing Cuban pharmaceuticals—even for dying patients. American lung cancer patients (235,000 diagnosed annually ...",
+            "url": "https://www.facebook.com/ScienceSimplified1/posts/a-country-under-six-decades-of-sanctions-built-something-american-pharma-hadnt-a/122334393194010907/"
+          },
+          {
+            "title": "Personal Importation",
+            "snippet": "In most circumstances, it is illegal for individuals to import drugs or devices into the U.S. for personal use because these products purchased ...",
+            "url": "https://www.fda.gov/industry/import-basics/personal-importation"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-deepseek-candidate",
+  "timestamp": "2026-11-05T10:42:56.539379+00:00",
+  "status": "reserved_outcome_unknown"
+}

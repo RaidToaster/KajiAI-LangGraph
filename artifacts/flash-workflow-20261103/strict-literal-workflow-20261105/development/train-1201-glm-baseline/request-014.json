@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Getting drugs in Britain almost easier than ordering pizza.",
+        "query": "Re-run the assessment once the draft text is supplied.",
+        "candidates": [
+          {
+            "title": "Enterprise Portal: Post an Assessment – ExamSoft",
+            "snippet": "This guide shows exam-makers how to post an assessment and adjust its settings. Before you post an assessment, you must set an exam password ...",
+            "url": "https://support.examsoft.com/hc/en-us/articles/11166370656397-Enterprise-Portal-Post-an-Assessment"
+          },
+          {
+            "title": "Assessment Templates Cannot Be Recovered After Being ...",
+            "snippet": "If a draft is discarded accidentally, a new assessment template must be created and configured again. Review the discard action carefully ...",
+            "url": "https://my-onetrust-com.libdata2015.hilbert.edu/s/article/Assessment-Templates-Cannot-Be-Recovered-After-Being-Discarded?language=en_US"
+          },
+          {
+            "title": "Assessments Page (Drafts and Published)",
+            "snippet": "A district administrator can edit any draft assessment. The link will change to View if you are not allowed to edit the draft. assessment can no longer be ...",
+            "url": "https://support.renaissance.com/s/article/Assessments-Page-Drafts-and-Published-1752673901446?language=en_US"
+          },
+          {
+            "title": "Retake an assessment",
+            "snippet": "When you retake an assessment, a duplicate of the original assessment is created in the Draft status. The new assessment copies the answers and ...",
+            "url": "https://productresources.collibra.com/docs/release-notes/Content/CollibraAssessments/Assessments/ta_retake-assessment.htm"
+          },
+          {
+            "title": "Adding Drafting to an Assessment",
+            "snippet": "From the Requirements page, go to the Drafting section. · Toggle on the Drafting feature. · Set a draft due date.Use the calendar to choose a due date, and then ...",
+            "url": "https://support.cadmus.io/teachers/adding-drafting-to-an-assessment"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1201-glm-baseline",
+  "timestamp": "2026-11-05T10:49:42.933645+00:00",
+  "status": "reserved_outcome_unknown"
+}

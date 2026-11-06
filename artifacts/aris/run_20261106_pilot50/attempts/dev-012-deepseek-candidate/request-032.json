@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "Search New Zealand government and parliamentary records for statements on whether the Food Bill bans gardening.",
+        "candidates": [
+          {
+            "title": "Tuesday, 9 December 2025 - Hansard - New Zealand Parliament",
+            "snippet": "Today, the Government has announced its new planning system to replace the Resource Management Act 1991 … give farmers and growers the freedom ...",
+            "url": "https://hansard.parliament.nz/hansard-transcript/2025-12-09/bills-climate-change-response-2050-target-and-othe?sId=bd3f638f614448f289d8dc7c3efd1202"
+          },
+          {
+            "title": "House Happenings: 16-18 September 2025",
+            "snippet": "During sitting weeks, the House of Representatives meets in the Debating Chamber to debate legislation, ask and answer questions, and more.",
+            "url": "https://www3.parliament.nz/en/get-involved/the-week-in-parliament/house-happenings-16-18-september-2025/"
+          },
+          {
+            "title": "New Zealand Legislation: Home",
+            "snippet": "This website is the official home for New Zealand Acts, Bills, and secondary legislation. Get answers to legislation questions. Parliamentary Counsel Office",
+            "url": "https://www.legislation.govt.nz/"
+          },
+          {
+            "title": "Beehive.govt.nz: Latest News from the Beehive",
+            "snippet": "Beehive.govt.nz is the best place to find Government initiatives, policies and Ministerial information.",
+            "url": "https://www.beehive.govt.nz/"
+          },
+          {
+            "title": "New Zealand Parliament",
+            "snippet": "Browse official written questions submitted by MPs and their responses. Browse official written questions submitted by MPs and their responses",
+            "url": "https://www.parliament.nz/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-candidate",
+  "timestamp": "2026-11-06T00:55:04.399572+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5969.703
+}

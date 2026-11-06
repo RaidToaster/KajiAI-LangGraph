@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The family or Justine Damond received a $55 million settlement after she was gunned down by a Minneapolis police officer.",
+        "query": "Court filing or settlement agreement in Ruszczyk v. City of Minneapolis stating the settlement amount",
+        "candidates": [
+          {
+            "title": "Court-Enforceable Settlement Agreement",
+            "snippet": "On March 31, 2023, the Minneapolis City Council and Mayor Jacob Frey approved terms of a court-enforceable settlement agreement.",
+            "url": "https://www.minneapolismn.gov/resident-services/public-safety/police-public-safety/investigations-settlement-agreement/court-enforceable-settlement-agreement/"
+          },
+          {
+            "title": "Minneapolis Reaches $20M Settlement With Justine ...",
+            "snippet": "Minneapolis Mayor Jacob Frey announced Friday afternoon that the city had reached a settlement with the family of Justine Ruszczyk Damond ...",
+            "url": "https://www.youtube.com/watch?v=gA1uNwJ4kfI"
+          },
+          {
+            "title": "Settlement Agreement between the United States and the City ...",
+            "snippet": "This settlement agreement (“Agreement”) is entered into between the United States of America and the City of Minneapolis, Minnesota (“Defendant”) on behalf of ...",
+            "url": "https://archive.ada.gov/minneapolis_t1_sa.html"
+          },
+          {
+            "title": "Settlement Agreement and Stipulation For Entry of Consent ...",
+            "snippet": "Defendants enter into any pre-verdict settlement agreement. If the Court approves the Settlement Agreement as submitted, the Agreement will be final and ...",
+            "url": "https://www.publichealthlawcenter.org/sites/default/files/resources/mn-settlement-agreement.pdf"
+          },
+          {
+            "title": "City of Minneapolis agrees to historic $20 million ...",
+            "snippet": "City of Minneapolis agreed to a $20 million settlement in the civil lawsuit. The City Council voted unanimously to approve the settlement.",
+            "url": "https://www.fox4news.com/news/city-of-minneapolis-agrees-to-historic-20-million-settlement-with-justine-ruszczyks-family"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-296-deepseek-candidate",
+  "timestamp": "2026-11-06T03:47:43.634752+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4052.953
+}

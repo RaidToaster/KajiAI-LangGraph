@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Most Arab citizens support normalization with Israel.",
+        "query": "What public opinion polls or surveys measured Arab citizens' support for normalization with Israel, and in which countries and years were they conducted?",
+        "candidates": [
+          {
+            "title": "Taking Arabs' Pulse on Normalization of Ties with Israel",
+            "snippet": "Dec 11, 2020 — Results from the Arab Barometer 2018-9 survey conducted face-to-face in 12 countries makes clear that there is low support for closer ties with ... Read more",
+            "url": "https://www.arabbarometer.org/2020/12/taking-arabs-pulse-on-normalizing-ties-with-israel/"
+          },
+          {
+            "title": "Arab Public Opinion on Arab-Israeli Normalization and ...",
+            "snippet": "Jul 15, 2022 — TWI polling from March 2022 demonstrates that more than two thirds of citizens in Bahrain, KSA, and UAE view the Abraham Accords unfavorably ...",
+            "url": "https://www.washingtoninstitute.org/policy-analysis/arab-public-opinion-arab-israeli-normalization-and-abraham-accords"
+          },
+          {
+            "title": "Arab Public Feelings about Normalization of ...",
+            "snippet": "by M Robbins · Cited by 6 — Arab Barometer surveyed seven Arab countries – Mo- rocco, Algeria, Tunisia, Libya, Jordan, Iraq and Leb- anon – about their views towards the normalization ... 3 pages",
+            "url": "https://www.iemed.org/wp-content/uploads/2021/11/Arab-Public-Opinion-Normalization-Arab-Countries-Israel_MedYearbook2021.pdf"
+          },
+          {
+            "title": "Arab Attitudes Toward Normalization and the Abraham ...",
+            "snippet": "There are reports about the likelihood of other Arab countries , like Bahrain, Oman, Sudan, and Morocco, to reaching normalization agreements with Israel .",
+            "url": "https://www.jewishvirtuallibrary.org/arab-attitudes-toward-the-abraham-accords"
+          },
+          {
+            "title": "What Do the Arabs Think? Public Opinion in Arab Countries",
+            "snippet": "Jan 31, 2023 — In 2014, for example, only 6 percent of respondents were in favor of recognition of Israel , while today 7.5 percent are in favor. ed opposition ...",
+            "url": "https://www.inss.org.il/publication/arab-polls/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-118-deepseek-candidate",
+  "timestamp": "2026-11-06T05:05:20.931137+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8710.234
+}

@@ -1,0 +1,91 @@
+{
+  "models": {
+    "glm": "glm-5.3-flash:cloud",
+    "deepseek": "deepseek-v4.1-flash:cloud"
+  },
+  "caps": {
+    "ollama": 1
+  },
+  "num_predict": 4096,
+  "packets": {
+    "positive": {
+      "case": "train-1218",
+      "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+      "reference_date": "23-2-2020",
+      "expected_verdict": "CONFLICTING",
+      "required_audit": null,
+      "records": [
+        {
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm?congress=111&session=1&vote=00396",
+          "date": "2009-12-24",
+          "origin": "U.S. Senate roll call 396 on passage of H.R. 3590 as amended",
+          "text": "Sanders (I-VT), Yea",
+          "finding": "Sanders voted for final Senate passage of the amended Affordable Care Act.",
+          "stance": "refutes"
+        },
+        {
+          "url": "https://www.sanders.senate.gov/press-releases/sanders-public-option-critical-to-health-reform/",
+          "date": "2009-11-22",
+          "origin": "Sanders press statement during negotiations before final passage",
+          "text": "including myself, who would not support final passage without a strong public option",
+          "finding": "During negotiation Sanders expressed conditional opposition to passage without a strong public option.",
+          "stance": "supports"
+        }
+      ]
+    },
+    "shared": {
+      "case": "train-1205",
+      "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+      "reference_date": "26-2-2020",
+      "expected_verdict": "FALSE",
+      "required_audit": "withhold_shared_lineage",
+      "records": [
+        {
+          "url": "https://www.snopes.com/fact-check/lindsey-graham-trump-cdc/",
+          "text": "social media. Graham supposedly said: \"President Trump probably knows more about medicine and specifically viruses than any of the so-called scientists at the NIH and CDC. If anyone is going to eradicate this plague it'll be the president.\"\n\nThis is not a genuine quote from Graham.\n\nWe could not find the quote published by any credible publication. Our search of the senator's social media pages for this quote also turned up empty-handed.",
+          "canonical_source_hash": "0910a95cc7bfad6dd3b3edeae081761158b0a19907d972d3ef07787ad660eb17"
+        },
+        {
+          "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087",
+          "text": "more about viruses than scientists, gained traction on Twitter last week. However, the quote was posted by satirical author Dan Lyons, whose Twitter bio reads, \"aka Fake Steve, inventor of fake news.\"\n\n\"CAPITOL HILL: @LindseyGrahamSC says @realDonaldTrump \"probably knows more about medicine and specifically viruses than any of the so-called scientists at the NIH [National Institute of Health] and CDC [Centers for Disease Control]. If anyone is going to eradicate this plague",
+          "canonical_source_hash": "1e8eaf26e20870c062531aa256c905f146823b10f0aa9642c7cd7a6deaa9463d"
+        },
+        {
+          "url": "https://politifact.com/factchecks/2020/mar/05/facebook-posts/lindsey-graham-quote-trump-knowing-more-about-viru/",
+          "text": "Facebook posts  \n\nstated on March 2, 2020 in a Facebook post:\n\nQuotes Sen. Lindsey Graham as saying President Trump “probably knows more about medicine and specifically viruses than any of the so-called scientists at the NIH and CDC.”\n\nPants on Fire goes to claims rated false and ridiculous.\n\nBy\n\nSamantha Putterman \n  \n\nMarch 5, 2020\n\n# Lindsey Graham quote on Trump knowing more about viruses than CDC is fake\n\n#### If your time",
+          "canonical_source_hash": "97763f6064b8349b13f8d0e1ccc97d112f0b0242bea51d22f99593a65d2481ab"
+        },
+        {
+          "url": "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/",
+          "text": "Mar 4, 2020 · “Lindsey Graham did not say that President Trump knows more about medicine and science than actual doctors and scientists. Nor did he say that ... Missing: counterevidence | Show results with: counterevidence",
+          "canonical_source_hash": "3b12d1c150d4200fffd5ca3f3464a65a5e598b4851b3db8ee9c2381b7ae2c982"
+        }
+      ]
+    },
+    "scope": {
+      "case": "train-1209",
+      "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+      "reference_date": "26-2-2020",
+      "expected_verdict": "CONFLICTING",
+      "required_audit": "withhold_attribution_only",
+      "records": [
+        {
+          "url": "https://www.presidency.ucsb.edu/documents/democratic-candidates-debate-charleston-south-carolina-0",
+          "date": "2020-02-25",
+          "origin": "Transcript of the debate",
+          "text": "While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls.",
+          "canonical_source_hash": "27ae4127ff64d813742e6b095e07bdb005fd3b60fbc8cfe77af7ca61cceef307"
+        },
+        {
+          "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/",
+          "date": "2020-03-02",
+          "origin": "Retrospective report describing an appeal before the debate",
+          "text": "an appeals court ordered voters to be kept on the rolls while it considered whether people should be removed",
+          "canonical_source_hash": "2b6a43926ff2d06950befa52c77cdba216da0137fe696ffda3586e2e274a09f6"
+        }
+      ]
+    }
+  },
+  "runner_sha256": "2739ed0422cad2f18e73bf7f03725d7df4869ea6c6b9f43ddbe6bd5ac918952c",
+  "offline_verification_sha256": "9d46528926d52d1b8f72fd659fd322c4f55b866d5555ed4370c0c8641012038a"
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "What specific Wisconsin voting-roll removal action or actions does the statement refer to, and what was the stated time period of those removals?",
+        "candidates": [
+          {
+            "title": "Court Upholds Halt to Purge of Wisconsin Voter Rolls - MyLO",
+            "snippet": "- In a complete victory for voters' rights, the Supreme Court of Wisconsin today ruled in a 5-2 decision that a purge of the state's voter rolls cannot proceed. Read more",
+            "url": "https://my.lwv.org/wisconsin/article/court-upholds-halt-purge-wisconsin-voter-rolls"
+          },
+          {
+            "title": "Roughly 206K People Removed From Wisconsin Voter ...",
+            "snippet": "Aug 4, 2021 — The Wisconsin Elections Commission said Wednesday it removed 174,307 voters from the rolls Saturday because they had not voted in four years. Read more",
+            "url": "https://www.wpr.org/politics/roughly-206k-people-removed-wisconsin-voter-rolls-routine-maintenance"
+          },
+          {
+            "title": "Wisconsin Supreme Court says don't purge voters from rolls",
+            "snippet": "Apr 9, 2021 — A Ozaukee County circuit court judge ruled in 2019 that the voters identified as possibly having moved must be removed from the rolls ...",
+            "url": "https://www.pbs.org/newshour/politics/wisconsin-supreme-court-says-dont-purge-voters-from-rolls"
+          },
+          {
+            "title": "Why Wisconsin removed nearly 500000 from voter rolls ...",
+            "snippet": "Oct 22, 2026 — Wisconsin officials have removed nearly a half-million voters from the registration list since 2025 due to moves, deaths and felony ...",
+            "url": "https://www.yahoo.com/news/politics/articles/why-wisconsin-removed-nearly-500-100425962.html"
+          },
+          {
+            "title": "The Wisconsin Voter Purge Is a Bad Idea",
+            "snippet": "Jan 15, 2020 — If the purge goes forward in Wisconsin , there will be no two- cycle waiting period and the purge will occur with less than 90 days before the ...",
+            "url": "https://www.brennancenter.org/our-work/analysis-opinion/wisconsin-voter-purge-bad-idea"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-05T10:25:25.754000+00:00",
+  "status": "reserved_outcome_unknown"
+}

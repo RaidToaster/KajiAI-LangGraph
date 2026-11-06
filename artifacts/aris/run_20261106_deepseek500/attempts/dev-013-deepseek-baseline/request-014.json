@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks will stop the spread of covid 19",
+        "query": "Wearing face masks will stop the spread of covid 19 original source fact check",
+        "candidates": [
+          {
+            "title": "How well do face masks protect against COVID-19? - Mayo Clinic",
+            "snippet": "Face masks can help slow the spread of coronavirus disease 2019 (COVID-19). Learn about mask types, which masks to use and how to use them.",
+            "url": "https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-mask/art-20485449"
+          },
+          {
+            "title": "Myths and facts when it comes to wearing masks",
+            "snippet": "Wearing a mask is a proven way to help reduce and prevent the spread of COVID-19. But even now, there is a great deal of misinformation ...",
+            "url": "https://www.albertahealthservices.ca/Blogs/BTH/Posting335.aspx"
+          },
+          {
+            "title": "Myth or Fact - Masks are effective against COVID-19 - Delaware",
+            "snippet": "Here is a list of studies and sources to reference on the effectiveness of masking. Research shows that under most circumstances, mask wearing has no ...",
+            "url": "https://coronavirus.delaware.gov/covid-19-myth-or-fact/myth-or-fact-masks-are-effective-against-covid-19/"
+          },
+          {
+            "title": "How effective is a mask in preventing COVID‐19 infection? - PMC",
+            "snippet": "The main clinical characteristics of COVID‐19 are respiratory symptoms that can lead to serious cardiovascular damages and severe worsening of other medical ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7883189/"
+          },
+          {
+            "title": "From the Frontlines: The Truth About Masks and COVID-19",
+            "snippet": "People with preexisting lung problems should discuss mask wearing concerns with their health care providers. There is absolutely no scientific ...",
+            "url": "https://www.lung.org/blog/covid-masks"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-013-deepseek-baseline",
+  "timestamp": "2026-11-06T06:12:52.394023+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12761.718
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "US Senator Bernie Sanders was opposed to Obamacare. counterevidence",
+        "candidates": [
+          {
+            "title": "Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "Former Vice President Joe Biden said Sen. Bernie Sanders talks in a way that one would think Sanders and Barack Obama “were close buddies.",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "Did Sanders oppose 'Obamacare'?",
+            "snippet": "Bernie Sanders talks in a way that one would think Sanders and Barack Obama \"were close buddies.\" But they were not, Biden said, claiming that ...",
+            "url": "https://www.wral.com/archive/18995597/"
+          },
+          {
+            "title": "Joe Biden leaves out key facts in claim that Bernie Sanders ...",
+            "snippet": "Biden said Sanders “opposed Obamacare, didn't like the fact we didn't push a single-payer option.” Sanders voted for the passage of Obamacare, ...",
+            "url": "https://politifact.com/factchecks/2020/feb/27/joe-biden/joe-biden-leaves-out-key-facts-claim-bernie-sander/"
+          },
+          {
+            "title": "Bernie Voted for Obamacare. That Didn't Make Him a Sellout.",
+            "snippet": "Given that he voted to establish the Affordable Care Act and voted repeatedly against Republican efforts to repeal it, of course he would. Would ...",
+            "url": "https://prospect.org/2019/11/19/bernie-voted-for-obamacare-medicare-for-all/"
+          },
+          {
+            "title": "Obama says Sanders' supporters helped undermine ...",
+            "snippet": "During Sanders' campaign for the presidential nomination, he proposed replacing Obamacare with a government-run single-payer health insurance ...",
+            "url": "https://www.reuters.com/article/world/obama-says-sanders-supporters-helped-undermine-obamacare-idUSKBN14Q2E4/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-03T08:33:59.288967+00:00",
+  "status": "reserved_outcome_unknown"
+}

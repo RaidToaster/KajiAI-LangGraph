@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted.",
+        "query": "Taylor Zundel claimed on Instagram that she and other early voters in Utah, were unable to cast ballots in the 2020 presidential elections, as they were told they had already voted. counterevidence",
+        "candidates": [
+          {
+            "title": "journal of - contempora ry antisemitism - Cloudfront.net",
+            "snippet": "The article also argues that antisemitic attitudes are disproportion- ately concentrated among Muslims and notes that perpetrators of, and individuals accused.",
+            "url": "https://dhjhkxawhe8q4.cloudfront.net/asp-wp/wp-content/uploads/2026/08/25163517/Academic-Studies-Press-JCA-9.1-OA.pdf"
+          },
+          {
+            "title": "History in a Post-Truth World: Theory and Praxis [1 ed.] 0367333244, ...",
+            "snippet": "46 Despite having no evidence for this explosive claim, a poll commissioned by the Washington Post in 2017 found that just under half of Republicans believe ...",
+            "url": "https://dokumen.pub/history-in-a-post-truth-world-theory-and-praxis-1nbsped-0367333244-9780367333249.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-021-deepseek-baseline",
+  "timestamp": "2026-11-06T06:43:15.366556+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14584.687
+}

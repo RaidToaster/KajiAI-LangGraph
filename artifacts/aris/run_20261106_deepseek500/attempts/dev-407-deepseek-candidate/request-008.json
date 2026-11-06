@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump tweeted “THE NEXT 30 TO 60 DAYS WILL BE THE BIGGEST DRAINING OF THE SWAMP EVER”",
+        "query": "On what date and at what time was any such tweet posted, and does that date fall within the period covered by available archives of Trump's tweets?",
+        "candidates": [
+          {
+            "title": "Documents Archive Search | The American Presidency Project",
+            "snippet": "Trump (1st Term) · Tweets of July 8, 2015. Jul 09, 2015, Donald J. Trump (1st Term) · Tweets of July 9, 2015. 1; 2 · 3 · 4 · 5 · 6 · 7 · 8 ... Missing:  period  | Show results with:",
+            "url": "https://www.presidency.ucsb.edu/advanced-search?field-keywords=&field-keywords2=&field-keywords3=&from%5Bdate%5D=&to%5Bdate%5D=&person2=&category2%5B%5D=423&items_per_page=25"
+          },
+          {
+            "title": "Posts Spread Fake Trump Memorial Day Tweet - FactCheck.org",
+            "snippet": "The fake screenshot includes a timestamp of 8:05 a.m. on May 24. There is no evidence Trump ever posted that tweet. It does not appear on his ... Missing:  period  | Show results with:",
+            "url": "https://www.factcheck.org/2020/05/posts-spread-fake-trump-memorial-day-tweet/"
+          },
+          {
+            "title": "Donald J. Trump Social Media Archive - Roll Call Factba.se",
+            "snippet": "The complete archive of all posts on X / Twitter / Truth Social – including thousands of deleted posts - from @realDonaldTrump with screenshots. Missing:  period  | Show results with:",
+            "url": "https://rollcall.com/factbase/topic/twitter"
+          },
+          {
+            "title": "Use of X by Donald Trump - Wikipedia",
+            "snippet": "On his most prolific day, June 5, 2020, he tweeted 200 times. Tweets counted through Trump Twitter Archive are shown below. Date range, Tweets ...",
+            "url": "https://en.wikipedia.org/wiki/Use_of_X_by_Donald_Trump"
+          },
+          {
+            "title": "100 days of Twitter: A timeline of President Trump's tweets",
+            "snippet": "ABC News has compiled every @realDonaldTrump tweet in a sortable timeline. ByABC News. April 29, 2017, 8:59 PM. 1:42. Trump's first 100 days ...",
+            "url": "https://abcnews.com/Politics/99-days-twitter-timeline-president-trumps-tweets/story?id=47042143"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-407-deepseek-candidate",
+  "timestamp": "2026-11-06T05:02:12.633637+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8521.953
+}

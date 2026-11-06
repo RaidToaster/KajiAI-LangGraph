@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Pogba Has Quit The French National Team Over Macron's Remarks on Islam.",
+        "query": "What remarks on Islam did Emmanuel Macron make, and on what dates were they made?",
+        "candidates": [
+          {
+            "title": "Macron says Islam 'in crisis', prompting backlash from Muslims",
+            "snippet": "'Islam is a religion that is in crisis all over the world today', says Macron, as he unveils plan to defend secularism.",
+            "url": "https://www.aljazeera.com/news/2020/10/2/macron-announces-new-plan-to-regulate-islam-in-france"
+          },
+          {
+            "title": "Calls to boycott French products grow in Muslim world after Macron backs ...",
+            "snippet": "Calls are growing in parts of the Muslim world to boycott French goods in protest after President Emmanuel Macron publicly defended cartoons ...",
+            "url": "http://edition.cnn.com/2020/10/26/europe/france-boycott-muslim-countries-macron-intl/index.html."
+          },
+          {
+            "title": "Macron says Islam 'in crisis', prompting backlash from Muslims",
+            "snippet": "French President Emmanuel Macron has called \"radical Islam\" the biggest threat to French society. He also claimed, \"Islam was in crisis ...",
+            "url": "https://www.youtube.com/watch?v=AArawEX7HzM"
+          },
+          {
+            "title": "France's Macron vows to fight 'Islamist separatism'",
+            "snippet": "French President Emmanuel Macron has announced plans for tougher laws to tackle what he called \"Islamist separatism\" and defend secular values.",
+            "url": "https://www.bbc.com/news/world-europe-54383173"
+          },
+          {
+            "title": "France Muhammad cartoon row: What you need to know",
+            "snippet": "French President Emmanuel Macron has invoked the ire of Muslims worldwide after he pledged to fight \"Islamist separatism\" and defended the right ...",
+            "url": "https://www.dw.com/en/france-muhammad-cartoon-row-what-you-need-to-know/a-55409316"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-028-deepseek-candidate",
+  "timestamp": "2026-11-06T07:05:28.176564+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15917.5
+}

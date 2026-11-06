@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Rock musician Jon Bon Jovi performed for 12 people and 7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania.",
+        "query": "7 pumpkins at a campaign event for Democratic presidential nominee Joe Biden in Pennsylvania. evidence",
+        "candidates": [
+          {
+            "title": "Hundreds of pumpkins purchased at a Pa. produce auction were among the ...",
+            "snippet": "Hundreds of pumpkins purchased at a Pa. produce auction were among the decorations at the White House for the annual Halloween party held. Joe ...",
+            "url": "https://www.facebook.com/PennLive/posts/hundreds-of-pumpkins-purchased-at-a-pa-produce-auction-were-among-the-decoration/1571994908288249/"
+          },
+          {
+            "title": "Pennsylvania pumpkins chosen for White House Halloween party",
+            "snippet": "Hundreds of pumpkins purchased at a Pa. produce auction were among the decorations at the White House for the annual Halloween party held. ...",
+            "url": "https://www.pennlive.com/news/2026/10/pennsylvania-pumpkins-picked-for-presidents-white-house-halloween-party.html"
+          },
+          {
+            "title": "The auction found out that the pumpkins they sold made it all ...",
+            "snippet": "",
+            "url": "https://www.instagram.com/reel/DfEKcZikdIK/"
+          },
+          {
+            "title": "Four Seasons Total Landscaping: America's strange new pilgrim…",
+            "snippet": "The site of a bizarre post-election press conference on the outskirts of Philadelphia has become an unlikely place of pilgrimage for all ...",
+            "url": "https://www.huckmag.com/article/speaking-to-tourists-at-four-seasons-total-landscaping"
+          },
+          {
+            "title": "John Fetterman, who survived his own bad debate in 2022, is Joe Biden's ...",
+            "snippet": "John Fetterman, who survived his own bad debate in 2022, is Joe Biden's biggest defender Supporting Biden in his tough moment may also be ...",
+            "url": "https://www.inquirer.com/politics/election/john-fetterman-defending-joe-biden-20240711.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-040-deepseek-baseline",
+  "timestamp": "2026-11-06T07:34:17.888435+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17647.203
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A “new virus” disease called Novel Bunya V!rus that is caused by ticks is diagnosed as severe fever with thrombocytopenia syndrome (SFTS) is spreading in China.",
+        "query": "China CDC weekly surveillance report SFTS 2020 confirmed cases by province",
+        "candidates": [
+          {
+            "title": "Characteristics and Containment of 74 Imported COVID-19 ...",
+            "snippet": "by F Li · 2022 · Cited by 1 — We summarized the characteristics of 74 imported COVID-19 outbreaks between March 19, 2020 and December 31, 2021. China CDC Weekly 2020;2(47): ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9897970/"
+          },
+          {
+            "title": "The Epidemiological Characteristics of an Outbreak ...",
+            "snippet": "China CDC Weekly, first published in 2019 by China CDC, is an authoritative, trusted resource for public and global health research.",
+            "url": "https://weekly.chinacdc.cn/en/article/id/e53946e2-c6c4-41e9-9a9b-fea8db1a8f51"
+          },
+          {
+            "title": "Update: Public Health Response to the Coronavirus ...",
+            "snippet": "by DB Jernigan · 2020 · Cited by 477 — As of February 23, 2020, there were 76,936 reported cases in mainland China and 1,875 cases. China (1). There have been 2,462 associated deaths",
+            "url": "https://www.cdc.gov/mmwr/volumes/69/wr/mm6908e1.htm"
+          },
+          {
+            "title": "a fifteen-year national surveillance analysis - Springer Nature",
+            "snippet": "by Q Ren · 2026 · Cited by 1 — During 2010–2024, a total of 30 provinces reported 34,055 cases. From 2010 to 2024, the incidence rate of SFTS in China showed a fluctuating ...",
+            "url": "https://link.springer.com/article/10.1186/s12879-026-14066-z"
+          },
+          {
+            "title": "Family cluster of Haff disease associated with wild red ...",
+            "snippet": "China records second carp-linked Haff disease cluster as 5 develop rhabdomyolysis after eating wild red-tailed carp: China CDC report.",
+            "url": "https://beaconbio.org/en/report/?reportid=5123e776-4725-40e1-b66f-6f0ea3736b44&filtersOpen=false"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-246-deepseek-candidate",
+  "timestamp": "2026-11-06T04:59:52.175291+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8381.5
+}

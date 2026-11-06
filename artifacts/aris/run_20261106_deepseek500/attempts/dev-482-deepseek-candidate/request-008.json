@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald trump said: \"Joe Biden recently raised his hand on the debate stage and promised he was going to give it away, your health care dollars to illegal immigrants, which is going to bring massive number of immigrants into our country.\"",
+        "query": "What did Joe Biden say at that debate regarding health care for undocumented immigrants, according to a transcript or primary recording?",
+        "candidates": [
+          {
+            "title": "Health Care For Undocumented Immigrants",
+            "snippet": "In a show of hands, the candidates show if they support health care for undocumented immigrants. Mayor Pete Buttigieg and former Vice ...",
+            "url": "https://www.youtube.com/watch?v=O-QP5TBTVhY"
+          },
+          {
+            "title": "Democrats unite at debate in endorsing health care to ...",
+            "snippet": "\"We're talking about something people are given the opportunity to buy into in the same way that there are undocumented immigrants in my ...",
+            "url": "https://www.yahoo.com/news/democratic-debate-health-care-undocumented-immigrants-020812191.html"
+          },
+          {
+            "title": "Democratic debate night: Candidates support health care ...",
+            "snippet": "Every single Democratic candidate at the Thursday debates said they support providing health care for undocumented immigrants in the United ...",
+            "url": "https://www.axios.com/2019/06/28/candidates-support-healthcare-for-undocumented-immigrants-democratic-debate"
+          },
+          {
+            "title": "Democrats Say Health Plans Would Cover Undocumented ...",
+            "snippet": "All Democrats on the stage raised their hands when asked if their health care plan would offer coverage for undocumented immigrants ...",
+            "url": "https://www.youtube.com/watch?v=aMSmoNOZJ9Y"
+          },
+          {
+            "title": "Health care for undocumented immigrants",
+            "snippet": "In a show of hands, the candidates show if they support health care for undocumented immigrants. Mayor Pete Buttigieg and former Vice ...",
+            "url": "https://www.nbcnews.com/video/health-care-for-undocumented-immigrants-where-the-candidates-stand-62832710000"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-482-deepseek-candidate",
+  "timestamp": "2026-11-06T05:13:11.624828+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9180.937
+}

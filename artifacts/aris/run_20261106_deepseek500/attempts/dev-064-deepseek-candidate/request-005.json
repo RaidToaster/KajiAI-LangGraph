@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "What primary records (court orders, settlements, or regulatory actions) document any ban on Eric Trump, Donald J. Trump Jr., or Ivanka Trump operating a charity, and what is its stated scope and duration?",
+        "candidates": [
+          {
+            "title": "Litigation Tracker: Legal Challenges to Trump Administration ...",
+            "snippet": "A public resource tracking the legal challenges to Trump administration executive orders and actions.",
+            "url": "https://www.justsecurity.org/107087/tracker-litigation-legal-challenges-trump-administration/"
+          },
+          {
+            "title": "Trump Trials Clearinghouse - Just Security",
+            "snippet": "Former President Donald Trump is a defendant in a sizable number of criminal and civil cases. To help readers parse through these complex legal developments, we have centralized information on Trump’s major cases in the most comprehensive clearinghouse of its kind.",
+            "url": "https://www.justsecurity.org/88175/trump-trials-clearinghouse/"
+          },
+          {
+            "title": "DOJ Settlement 'Forever' Bars IRS Trump Audits, Sparks Backlash",
+            "snippet": "The Department of Justice has issued an order that permanently bars the IRS from auditing past tax returns of President Donald Trump, his family, and related companies as part of a settlement that also creates a nearly $1.8 billion fund.",
+            "url": "https://tax.thomsonreuters.com/news/doj-settlement-forever-bars-irs-trump-audits-sparks-backlash/"
+          },
+          {
+            "title": "Trump Lawsuit: All Major Cases and Key Updates 2026",
+            "snippet": "What Is a Trump Lawsuit? A Trump lawsuit refers to any legal action filed either against Donald Trump, against his administration’s policies, or by Trump himself against other parties. In 2025 and 2026, these cases span two very different directions. The first direction: hundreds of lawsuits filed by states, civil rights groups, labor unions, and individuals challenging the Trump ...",
+            "url": "https://lawfold.com/trump-lawsuit/"
+          },
+          {
+            "title": "Trump’s old taxes can’t be audited as part of IRS deal. That ...",
+            "snippet": "The fund was designed to resolve a $10 billion lawsuit by Trump and his sons Donald Jr. and Eric Trump against the IRS, citing a leak of Trump-related tax materials.",
+            "url": "https://www.politifact.com/article/2026/may/21/trump-taxes-irs-audits-weaponization/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-candidate",
+  "timestamp": "2026-11-06T08:44:50.657650+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21879.968
+}

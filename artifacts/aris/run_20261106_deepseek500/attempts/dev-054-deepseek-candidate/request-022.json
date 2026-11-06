@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "India’s imports from China increased by 27% in April-August 2020",
+        "query": "PIB fact check original April-August 2020 India China imports 27.63% decrease source data",
+        "candidates": [
+          {
+            "title": "Pankaj Pachauri has claimed in a #Tweet that India's imports ...",
+            "snippet": "#PIBFactCheck: This claim is #Fake. India's imports from China decreased by 27.63% whereas India's exports to China increased by 27% during ...",
+            "url": "https://www.facebook.com/pibfactcheck/posts/pankaj-pachauri-has-claimed-in-a-tweet-that-indias-imports-from-china-have-incre/201968234669611/"
+          },
+          {
+            "title": "PIB Fact Check on X",
+            "snippet": "#PIBFactCheck: This claim is #Fake. India's imports from China decreased by 27.63% whereas India's exports to China increased by 27% during ...",
+            "url": "https://x.com/PIBFactCheck/status/1318466154302599168"
+          },
+          {
+            "title": "Did Prime Minister Narendra Modi issue an appeal to all ...",
+            "snippet": "Manmohan Singh's Advisor Pankaj Pachauri has claimed in a #Tweet that India's imports from China have increased by 27% during April-August. # ...",
+            "url": "https://www.facebook.com/factlyindia/videos/did-prime-minister-narendra-modi-issue-an-appeal-to-all-indians-to-refrain-from-/455344120872459/"
+          },
+          {
+            "title": "[PDF] PDF - U.S. Census Bureau",
+            "snippet": "As can be seen in Table 4, the US reported 274.9 million dollars of crude petroleum imports from India in 2018 and 72.4 million dollars in 2019. This is unusual ...",
+            "url": "https://www.census.gov/foreign-trade/reconciliation/recon_india_181920.pdf"
+          },
+          {
+            "title": "[PDF] Deciphering India's Dependency on Chinese Imports",
+            "snippet": "If India matures as a manufacturing destination it will not only reduce its dependency on imports from China but also emerge as an alternative.",
+            "url": "https://www.icsin.org/uploads/2020/10/26/af20f760b3644df1571b4e8e8e98b876.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-054-deepseek-candidate",
+  "timestamp": "2026-11-06T08:17:12.684243+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20221.984
+}

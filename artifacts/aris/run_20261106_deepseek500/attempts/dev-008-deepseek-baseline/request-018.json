@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "all those people that send in the phony ballots. … They want to have the count weeks after November 3. evidence",
+        "candidates": [
+          {
+            "title": "Nothing Untoward About Counting Ballots After Election Day",
+            "snippet": "Now they say, “We'd like to get the ballots and maybe get them within a few days of the election. And we'll take 10 days to count them up.",
+            "url": "https://www.factcheck.org/2020/10/nothing-untoward-about-counting-ballots-after-election-day/"
+          },
+          {
+            "title": "Voter fraud claims persist. The numbers tell a different story",
+            "snippet": "Trump has argued mail ballots are ripe for fraud. The fight is the latest chapter in a debate that has followed American elections for years: ...",
+            "url": "https://www.wbaltv.com/article/us-election-voter-fraud-investigation/73775562"
+          },
+          {
+            "title": "Exhaustive fact check finds little evidence of voter fraud, but ...",
+            "snippet": "And so, when those ballots come in, they're reviewed. They look at those signatures, and if there's a discrepancy, they flag it. They contact ...",
+            "url": "https://www.pbs.org/newshour/show/exhaustive-fact-check-finds-little-evidence-of-voter-fraud-but-2020s-big-lie-lives-on"
+          },
+          {
+            "title": "There's no evidence that hundreds of thousands of ballots ...",
+            "snippet": "While there were roughly 300,000 ballots that did not have delivery scans, that doesn't mean they weren't delivered. Fact checking the unfounded ...",
+            "url": "https://www.facebook.com/cnn/posts/theres-no-evidence-that-hundreds-of-thousands-of-ballots-went-undelivered-while/10161443290586509/"
+          },
+          {
+            "title": "How does vote-by-mail work and does it increase election ...",
+            "snippet": "According to the Brennan Center for Justice at New York University, there is no evidence that mail balloting increases electoral fraud as there ...",
+            "url": "https://www.brookings.edu/articles/how-does-vote-by-mail-work-and-does-it-increase-election-fraud/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-baseline",
+  "timestamp": "2026-11-06T05:49:25.972818+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11355.281
+}

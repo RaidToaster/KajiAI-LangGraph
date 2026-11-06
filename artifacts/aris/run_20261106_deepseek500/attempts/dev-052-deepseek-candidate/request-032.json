@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "Ferdinand Marcos Jose Rizal World Bank IMF founder primary source",
+        "candidates": [
+          {
+            "title": "Misleading claim circulates that World Bank and IMF were ...",
+            "snippet": "Misleading claim circulates that World Bank and IMF were established by former dictator Ferdinand Marcos and Filipino nationalist · Inconsistent ...",
+            "url": "https://factcheck.afp.com/misleading-claim-circulates-world-bank-and-imf-were-established-former-dictator-ferdinand-marcos-and"
+          },
+          {
+            "title": "FALSE: Ferdinand Marcos, Jose Rizal established World Bank",
+            "snippet": "Former President Ferdinand Marcos and national hero Jose Rizal did not establish the World Bank, as claimed in a false video. Missing:  IMF  primary",
+            "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-jose-rizal-established-world-bank/"
+          },
+          {
+            "title": "Your Daily Dose on X: \"The myth that Ferdinand Marcos & Jose ...",
+            "snippet": "The myth that Ferdinand Marcos & Jose Rizal established the IMF & World Bank is FALSE. The IMF-WB was established in 1944 by member ... Missing:  primary  source",
+            "url": "https://x.com/SaltAndReality/status/1451380428141596672"
+          },
+          {
+            "title": "#FactCheck: Dictator Ferdinand Marcos, Sr., lawyer of Jose ...",
+            "snippet": "NOT TRUE! This is recycled fake news! The dictator Ferdinand Marcos Sr. did not become a lawyer of our national hero Jose Rizal. | Fact Check ... Missing:  IMF  primary",
+            "url": "https://www.facebook.com/pressoneph/posts/factcheck-dictator-ferdinand-marcos-sr-lawyer-of-jose-rizal-not-true-this-is-rec/1106060296917290/"
+          },
+          {
+            "title": "World Bank and IMF's 'global debt facility' not owned by the ...",
+            "snippet": "The Rappler fact check debunked the claim that Marcos and Jose Rizal established the World Bank. In the article, the World Bank was dubbed as ... Missing:  primary  | Show results with:",
+            "url": "https://www.rappler.com/newsbreak/fact-check/world-bank-international-monetary-fund-global-debt-facility-not-owned-philippines/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-candidate",
+  "timestamp": "2026-11-06T08:10:12.264746+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19801.578
+}

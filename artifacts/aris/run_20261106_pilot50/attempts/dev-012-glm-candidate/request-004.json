@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "What is the full title, bill number, and current or historical status of the New Zealand Food Bill referred to (e.g., Food Bill 160-2, or a later act such as the Food Act 2014)?",
+        "candidates": [
+          {
+            "title": "Food Act 2014",
+            "snippet": "It was introduced as the Food Bill 160-2 on 26 May 2010 to make some fundamental changes to New Zealand's domestic food regulatory regime. Significantly, for an ...",
+            "url": "https://en.wikipedia.org/wiki/Food_Act_2014"
+          },
+          {
+            "title": "Food Act 2014",
+            "snippet": "This Act is the Food Act 2014. 2 Commencement (1) This Act comes into force on a date appointed by the Governor-General by Order in Council;",
+            "url": "https://www.legislation.govt.nz/act/public/2014/32/en/latest/"
+          },
+          {
+            "title": "Food Standards Code",
+            "snippet": "All food sold in Australia and New Zealand must comply with food standards. These standards are compiled in the Australia New Zealand Food Standards Code.",
+            "url": "https://www.foodstandards.gov.au/food-standards-code"
+          },
+          {
+            "title": "Food Safety in New Zealand",
+            "snippet": "Developing regulations to implement the Food Act 2014 - Food Safety Law Reform Bill - Reviewing policy and law for sale of raw milk to consumers. Ongoing ...",
+            "url": "https://www.otago.ac.nz/__data/assets/pdf_file/0032/288392/food-safety-presentation-615295.pdf"
+          },
+          {
+            "title": "Cost recovery proposal to maintain and expand New ...",
+            "snippet": "This consultation is about a proposal to maintain and expand New Zealand Food Safety's services under the Food Act 2014 which provide education ...",
+            "url": "https://www.mpi.govt.nz/consultations/cost-recovery-proposal-to-maintain-and-expand-new-zealand-food-safetys-core-regulatory-services-under-the-food-act-2014"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-glm-candidate",
+  "timestamp": "2026-11-06T00:49:23.318115+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5628.625
+}

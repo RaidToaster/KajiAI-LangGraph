@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial.",
+        "query": "Scoopertino \"EXPOSED: The iMac disaster that almost was\" original article",
+        "candidates": [
+          {
+            "title": "EXPOSED: The iMac disaster that almost was",
+            "snippet": "... Scoopertino. June 19, 2011 • 194 comments. EXPOSED: The iMac disaster that almost was. Share Tweet Pin Mail SMS. San Francisco, CA — It's easy ...",
+            "url": "https://scoopertino.com/exposed-the-imac-disaster-that-almost-was/"
+          },
+          {
+            "title": "Did Sean Connery Send a Letter to Apple Rejecting a Pitchman Offer?",
+            "snippet": "Scoopertino's 19 June 2011 article entitled \"EXPOSED: The iMac disaster that almost was\" purported to offer a (fictional) episode from ...",
+            "url": "https://www.snopes.com/fact-check/false-sean-connery-letter-to-apple/"
+          },
+          {
+            "title": "remove sample file · chenxwh/AVeriTeC at ed0d22b",
+            "snippet": "... scoopertino.com/exposed-the-imac-disaster-that-almost-was/\"}, {\"sentence\": \"Pingback: Did Sean Connery Write an Angry Letter to Steve Jobs? | wafflesatnoon ...",
+            "url": "https://huggingface.co/chenxwh/AVeriTeC/commit/ed0d22be60cec0dcedee6bb19876f711198f9399"
+          },
+          {
+            "title": "20 years of iMac: Behind the scenes of Apple's 'Simplicity Shootout' video",
+            "snippet": "Scoopertino. 9y · Public · EXPOSED: THE IMAC DISASTER THAT ALMOST WAS San Francisco, CA — Its easy to appreciate iMac's place in Apple history ...",
+            "url": "https://www.facebook.com/9to5mac/posts/20-years-of-imac-behind-the-scenes-of-apples-simplicity-shootout-video/10155572930892291/"
+          },
+          {
+            "title": "Fact Extraction and VERification",
+            "snippet": "... scoopertino.com/exposed-the-imac-disaster-that-almost-was/. Q2. What kind of website is Scoopertino. Answer 1: Answer: Scoopertino is an imaginary news ...",
+            "url": "https://fever.ai/dataset_viewer/averitec/0.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-000-deepseek-baseline",
+  "timestamp": "2026-11-06T05:19:57.388938+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9586.703
+}

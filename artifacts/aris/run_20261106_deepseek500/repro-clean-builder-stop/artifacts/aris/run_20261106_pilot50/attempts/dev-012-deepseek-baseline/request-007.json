@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "New Zealand’s new Food Bill bans gardening counterevidence",
+        "candidates": [
+          {
+            "title": "New Zealand's absurd gardening ban once again makes ...",
+            "snippet": "Our justice system is overrun with “criminals” whose only crime was to love plants · The anti-gardening legislation is applied inconsistently.",
+            "url": "https://thespinoff.co.nz/business/18-06-2016/new-zealands-absurd-gardening-ban-once-again-makes-us-the-laughing-stock-of-the-internet-2"
+          },
+          {
+            "title": "A Bunch Of People Have Been Tricked Into Thinking ...",
+            "snippet": "it's absolutely, 100% NOT illegal to grow a garden in New Zealand. It's actually just a very elaborate prank that's been years in the making. ...",
+            "url": "https://www.buzzfeed.com/bradesposito/nz-garden-ban"
+          },
+          {
+            "title": "Is the New Zealand anti-gardening law real or not? ...",
+            "snippet": "For real.",
+            "url": "https://www.reddit.com/r/OutOfTheLoop/comments/4ovxb1/is_the_new_zealand_antigardening_law_real_or_not/"
+          },
+          {
+            "title": "Gardening in New Zealand",
+            "snippet": "\"New Zealand's 'new' Food Bill doesn't ban gardening\". AAP Factcheck. Retrieved 24 January 2024. ↑ Ockhuysen, Stephanie. \"The Taranaki farmers introducing ...",
+            "url": "https://en.wikipedia.org/wiki/Gardening_in_New_Zealand"
+          },
+          {
+            "title": "3 Facts About New Zealand I Didn't Know Until I Moved Here",
+            "snippet": "Gardens are banned to ensure the economic stability of the agricultural sector. The law is not draconian — if grass happens to grow in your yard ...",
+            "url": "https://alannairving.medium.com/3-facts-about-new-zealand-i-didnt-know-until-i-moved-here-28208ef8b700"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-baseline",
+  "timestamp": "2026-11-06T00:55:49.453985+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6014.765
+}

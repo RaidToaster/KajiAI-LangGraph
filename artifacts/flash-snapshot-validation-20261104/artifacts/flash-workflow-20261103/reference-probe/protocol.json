@@ -1,0 +1,58 @@
+{
+  "schedule": [
+    {
+      "id": "train-1209-reference-1",
+      "case": "train-1209",
+      "arm": "reference",
+      "query": "Judge finds Wisconsin elections commissioners in contempt of court, orders them to quickly remove people from the rolls, Milwaukee Journal Sentinel, Jan. 13, 2020.",
+      "parent": "artifacts/flash-workflow-20261103/revision-6/development/train-1209-glm-candidate/result.json",
+      "parent_sha256": "33fa0aec00702af09c72655f005108b47596cc3e21c316f6ad9ac23dcf1e4e2a"
+    },
+    {
+      "id": "train-1209-reference-2",
+      "case": "train-1209",
+      "arm": "reference",
+      "query": "Appeals court blocks purge of Wisconsin voter rolls for the time being, Milwaukee Journal Sentinel, Jan. 14, 2020.",
+      "parent": "artifacts/flash-workflow-20261103/revision-6/development/train-1209-glm-candidate/result.json",
+      "parent_sha256": "33fa0aec00702af09c72655f005108b47596cc3e21c316f6ad9ac23dcf1e4e2a"
+    },
+    {
+      "id": "train-1218-reference-1",
+      "case": "train-1218",
+      "arm": "reference",
+      "query": "Senate.gov, Roll call on H.R. 3590 (Patient Protection and Affordable Care Act), Dec. 24, 2009",
+      "parent": "artifacts/flash-workflow-20261103/revision-6/development/train-1218-deepseek-candidate/result.json",
+      "parent_sha256": "0dbc6056976cd81cde4cbbf8e3a72446e7466132b4ec4f78d24fd884a86553b3"
+    },
+    {
+      "id": "train-1218-reference-2",
+      "case": "train-1218",
+      "arm": "reference",
+      "query": "PolitiFact, Bernie Sanders exaggerates with claim that he helped write Obamacare, Jan. 18, 2016",
+      "parent": "artifacts/flash-workflow-20261103/revision-6/development/train-1218-deepseek-candidate/result.json",
+      "parent_sha256": "0dbc6056976cd81cde4cbbf8e3a72446e7466132b4ec4f78d24fd884a86553b3"
+    }
+  ],
+  "caps": {
+    "tinyfish_search": 1
+  },
+  "max_results": 5,
+  "cases_sha256": "4af1ad05f10f28cd45bb3fdd8e9d3d42a5acbe5dcacd3c20a3f3e22acbac1a23",
+  "runner_sha256": "98e0793426b622f287c7956d402be3bfb80ee884f0de94931fd67de033a0000f",
+  "planner_sha256": "421efa87fcf9b019ff82dff76a130a30de0cf873b1cfeaf43ff2f4e958c1bc97",
+  "reference_selector_sha256": "e2984abd5a393a18af9f03c52b7d767ab2e6cd083ce2dda1cfd00dd383ca80e0",
+  "limits": {
+    "tinyfish_search": [
+      [
+        60,
+        30
+      ],
+      [
+        3600,
+        500
+      ]
+    ]
+  },
+  "screen": "Within the top five results, discover one substantively appropriate public record for each of the two eligible parents. Confirm that the record describes the relevant event or vote. Previously read article copies do not count.",
+  "scope": "Post hoc development diagnostic using saved article reference lines; four free search sends, no paid inference."
+}

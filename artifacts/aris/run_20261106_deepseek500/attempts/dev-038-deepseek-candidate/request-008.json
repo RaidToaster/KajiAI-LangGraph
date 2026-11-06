@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Are there any official death records, obituaries, or statements from the Biden family or US government confirming or denying Hunter Biden's death?",
+        "candidates": [
+          {
+            "title": "Joe Biden family death: verified facts and context",
+            "snippet": "Public reports have referenced deaths in former President Joe Biden's family, including the passing of a daughter as a child, the death of ... Missing:  government  denying",
+            "url": "https://research.localgov.digital/joe-biden-family-death-verified-facts-and-context.html"
+          },
+          {
+            "title": "Fact Check: No one in Biden's family has said he died and was ...",
+            "snippet": "U.S. President Joe Biden's family has not said he died and was replaced by an actor in 2019, as has been wrongly reported online. Missing:  obituaries,  confirming  denying  Hunter",
+            "url": "https://www.reuters.com/fact-check/no-one-bidens-family-has-said-he-died-was-replaced-by-actor-2019-2023-09-15/"
+          },
+          {
+            "title": "Widespread False Obituary Records on FamilySearch Claiming ...",
+            "snippet": "... there are multiple falsified obituary entries claiming that President Joe Biden has died. ... There is no anti Biden conspiracy in evidence.",
+            "url": "https://www.reddit.com/r/familysearch/comments/1kw7jw1/widespread_false_obituary_records_on_familysearch/"
+          },
+          {
+            "title": "[PDF] Robert Hunter Biden Materials FOIA - Department of Justice",
+            "snippet": "We ask that you forward each ofthese documents to your client. Sincerely,. Office of the Pardon Attorney. Page 3. (b) (6).",
+            "url": "https://www.justice.gov/d9/2024-12/robert_hunter_biden_materials_foia.pdf"
+          },
+          {
+            "title": "Transcript from documents probe contradicts Biden's account of ...",
+            "snippet": "Ex-special counsel stands by not charging BidenRobert Hur conducted the yearlong probe into President Joe Biden's handling of classified ...",
+            "url": "https://abcnews.com/US/transcript-documents-probe-contradicts-bidens-account-exchange-hur/story?id=108033689"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-candidate",
+  "timestamp": "2026-11-06T07:30:29.601900+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17418.921
+}

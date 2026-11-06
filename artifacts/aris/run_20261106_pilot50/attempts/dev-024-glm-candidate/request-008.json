@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Germany’s Foreign Minister Heiko Maas said that Thailand’s King Maha Vajiralongkorn didn’t do anything illegal while at his German residence.",
+        "query": "What was the exact wording, date, and context (e.g., press conference, television interview) of Heiko Maas's statement, and is a transcript or recording available?",
+        "candidates": [
+          {
+            "title": "Notable Statements on International Law by Germany in 2020",
+            "snippet": "29 June 2020. In an interview with the news agency DPA, Foreign Minister Heiko Maas delivered a damning verdict on the UN Security Council. Referring to the ...",
+            "url": "https://www.cambridge.org/core/books/german-practice-in-international-law/notable-statements-on-international-law-by-germany-in-2020/33C5C42DF9BE3D2228325346ED8E3DBE"
+          },
+          {
+            "title": "Statement by Federal Foreign Minister Heiko Maas at the ...",
+            "snippet": "Statement by Federal Foreign Minister Heiko Maas at the Afghanistan Donor Conference (Video Conference). 24.11.2020 - Speech. I think there ... Missing:  exact  wording,  date,  context  (eg,  press  television  +3",
+            "url": "https://www.auswaertiges-amt.de/en/newsroom/news/2420042-2420042"
+          },
+          {
+            "title": "[PDF] Opening remarks by Foreign Minister Heiko Maas at the side ...",
+            "snippet": "Working Together to End Impunity in Syria, during the conference. Supporting the Future of Syria and the Region. 25.04.2018 - Speech. Ministers,.",
+            "url": "https://files.syrianmemory.org/0210ebc868144e76bfe18ffee8ffefd8"
+          },
+          {
+            "title": "International Religious Freedom Reports - State Department",
+            "snippet": "At a national conference on religious affairs in December, President and CCP General Secretary Xi Jinping called on religious personnel and government officials ...",
+            "url": "https://2021-2025.state.gov/report/custom/299ec5aaeb?safe=1"
+          },
+          {
+            "title": "Behind the Walls of Silence - European Press Prize",
+            "snippet": "In December 2016 the report was published, partially covering the regulations on removing content. That day Minister of Justice Heiko Maas announced via the ...",
+            "url": "https://www.europeanpressprize.com/article/stuck-web-evil-behind-walls-silence/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-024-glm-candidate",
+  "timestamp": "2026-11-05T18:06:57.023178+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52436.609
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Scientific American magazine warned that 5G technology is not safe.",
+        "query": "Did Scientific American magazine publish any article, editorial, or column stating or implying that 5G technology is not safe?",
+        "candidates": [
+          {
+            "title": "We Have No Reason to Believe 5G Is Safe - Scientific American",
+            "snippet": "This article was published in Scientific American’s former blog network and reflects the views of the author, not necessarily those of Scientific American The telecommunications industry and ...",
+            "url": "https://www.scientificamerican.com/blog/observations/we-have-no-reason-to-believe-5g-is-safe/"
+          },
+          {
+            "title": "Fact Check: Scientific American Did NOT Warn That 5G Is ...",
+            "snippet": "Did Scientific American warn that 5G technology is not safe? No, that's not true: That's the opinion of one guest columnist of many. The magazine has not taken a stand on the safety of 5G. The claim appeared in an article published by Natural News on October 20, 2020, titled \"Still think 5G is ...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-scientific-american-did-not-warn-that-5g-is-not-safe-it-was-an-op-ed-written-by-a-guest-columnist.html"
+          },
+          {
+            "title": "Fact Check: Scientific American Did NOT Warn That 5G Is ...",
+            "snippet": "Did Scientific American warn that 5G technology is not safe? No, that's not true: That's the opinion of one guest columnist of many. The magazine has not taken a stand on the safety of 5G ...",
+            "url": "https://leadstories.com/mp/hoax-alert/2020/10/fact-check-scientific-american-did-not-warn-that-5g-is-not-safe-it-was-an-op-ed-written-by-a-guest-columnist.html"
+          },
+          {
+            "title": "Don't Fall Prey to Scaremongering about 5G | Scientific American",
+            "snippet": "This article was published in Scientific American’s former blog network and reflects the views of the author, not necessarily those of Scientific American In a recent opinion piece for ...",
+            "url": "https://blogs.scientificamerican.com/observations/dont-fall-prey-to-scaremongering-about-5g/"
+          },
+          {
+            "title": "5G Is Coming: How Worried Should We Be about the Health Risks?",
+            "snippet": "This article was published in Scientific American’s former blog network and reflects the views of the author, not necessarily those of Scientific American",
+            "url": "https://blogs.scientificamerican.com/observations/5g-is-coming-how-worried-should-we-be-about-the-health-risks/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-062-deepseek-candidate",
+  "timestamp": "2026-11-06T08:39:37.995325+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21567.296
+}

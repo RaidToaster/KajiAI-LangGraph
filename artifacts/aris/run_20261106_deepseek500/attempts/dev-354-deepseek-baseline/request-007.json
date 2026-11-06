@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "unemployment rate in the state of Edo, Nigeria reduced from 25% to 19% during Godwin Obaseki's tenure.",
+        "query": "unemployment rate in the state of Edo, Nigeria reduced from 25% to 19% during Godwin Obaseki's tenure. counterevidence",
+        "candidates": [
+          {
+            "title": "Is Edo unemployment rate 19 percent as claimed by ...",
+            "snippet": "... Godwin Obaseki, claimed that the unemployment rate in the state reduced from 25% to 19% in his tenure. The governor noted that this figure ...",
+            "url": "https://dubawa.org/is-edo-unemployment-rate-19-percent-as-claimed-by-obaseki/"
+          },
+          {
+            "title": "'new figures validate EdoJobs data' The unemployment ...",
+            "snippet": "The unemployment rate in Edo State has dropped from 25.1 per cent in the 3rd quarter of 2018 to 19 per cent in the second quarter of 2020,",
+            "url": "https://www.facebook.com/EdoStateGovt/posts/-new-figures-validate-edojobs-data-the-unemployment-rate-in-edo-state-has-droppe/4282635101809084/"
+          },
+          {
+            "title": "Godwin Obaseki: A tried and tested leader with a MEGA ...",
+            "snippet": "This model is definitely working as evidenced by the decreasing unemployment rate in Edo state from 25% to 19% within the span of 4 years. Numbers do not lie.",
+            "url": "https://www.thecable.ng/godwin-obaseki-a-tried-and-tested-leader-with-a-mega-vision/"
+          },
+          {
+            "title": "Edo unemployment rate falls from 25.1% to 19% on back ...",
+            "snippet": "The unemployment rate in Edo State has dropped from 25.1 per cent in the 3rd quarter of 2018 to 19 per cent in the second quarter of 2020, new ...",
+            "url": "https://edostate.gov.ng/edo-unemployment-rate-falls-from-25-1-to-19-on-back-of-obasekis-job-creation-drive/"
+          },
+          {
+            "title": "Nigeria Labour Force Survey Annual Report 2023",
+            "snippet": "The headline unemployment rate was 5.4% for the period under review. Zamfara state had the lowest rate at 4.5%.",
+            "url": "https://www.nigerianstat.gov.ng/pdfuploads/Annual_Nigerian_Labour_Force_Survey_Report.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-354-deepseek-baseline",
+  "timestamp": "2026-11-06T05:08:00.762230+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8870.078
+}

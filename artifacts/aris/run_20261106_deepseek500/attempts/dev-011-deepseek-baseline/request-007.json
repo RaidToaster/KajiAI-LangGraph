@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The U.S. surgeon general and the Centers for Disease Control both previously said that ‘masks are not effective in preventing [the] general public from catching coronavirus.’",
+        "query": "The U.S. surgeon general and the Centers for Disease Control both previously said that ‘masks are not effective in preventing [the] general public from catching coronavirus.’ counterevidence",
+        "candidates": [
+          {
+            "title": "Surgeon General Urges the Public to Stop Buying Face ...",
+            "snippet": "The surgeon general on Saturday urged the public to stop buying masks, warning that it won't help against the spread of the coronavirus but will ...",
+            "url": "https://www.nytimes.com/2020/02/29/health/coronavirus-n95-face-masks.html"
+          },
+          {
+            "title": "The CDC now believes that masks are effective for both stopping the ...",
+            "snippet": "Nov 11, 2020 · CDC now says masks protect both the wearers and those around them from Covid-19. This statement is an update to previous guidance suggesting the ...",
+            "url": "https://www.facebook.com/WRTVNews/posts/the-cdc-now-believes-that-masks-are-effective-for-both-stopping-the-spread-and-r/10158222052929092/"
+          },
+          {
+            "title": "Surgeon General Once Warned Against Face Masks but ...",
+            "snippet": "\" He said that they were \"NOT effective\" to the general public and noted that the increased demand in masks puts medical professionals at risk.",
+            "url": "https://www.businessinsider.com/americans-dont-need-masks-pence-says-as-demand-increases-2020-2"
+          },
+          {
+            "title": "Point: There's No Evidence That Masks Work",
+            "snippet": "May 5, 2022 · The second found small, marginally statistically significant reductions in viral transmission for surgical masks but not for cloth masks.",
+            "url": "https://cei.org/opeds_articles/point-theres-no-evidence-that-masks-work/"
+          },
+          {
+            "title": "Why People Aren't Listening to Experts About Face Masks",
+            "snippet": "29. “They are NOT effective in preventing general public from catching #Coronavirus, but if healthcare providers can't get them to care for sick ...",
+            "url": "https://time.com/5794729/coronavirus-face-masks/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-011-deepseek-baseline",
+  "timestamp": "2026-11-06T06:05:52.757118+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12342.062
+}

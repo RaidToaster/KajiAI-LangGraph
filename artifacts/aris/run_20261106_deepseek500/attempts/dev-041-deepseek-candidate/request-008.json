@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+        "query": "What measurements (e.g., bacterial culture results, infection rates) have been used to assess a causal link between mask wearing and staphylococcal infections?",
+        "candidates": [
+          {
+            "title": "Bacterial and fungal isolation from face masks under the ...",
+            "snippet": "Since masks can be a direct source of infection to the respiratory tract, digestive tract, and skin, it is crucial to maintain their hygiene to prevent bacterial and fungal infections that can ...",
+            "url": "https://www.nature.com/articles/s41598-022-15409-x"
+          },
+          {
+            "title": "Bacterial contamination on used face masks in healthcare ...",
+            "snippet": "Nursing homes have high rates of multidrug-resistant bacteria and low PPE compliance; therefore, contamination of face masks in this setting may be of great interest. We investigated bacterial colonization status on used face masks in healthcare personnel, including assessing the presence of clinically important and multidrug-resistant bacteria.",
+            "url": "https://www.cambridge.org/core/journals/antimicrobial-stewardship-and-healthcare-epidemiology/article/bacterial-contamination-on-used-face-masks-in-healthcare-personnel/565C37BF53F0D8C3A3538EB22CCA9008"
+          },
+          {
+            "title": "Bacterial contamination on used face masks among nursing home ...",
+            "snippet": "Results: In total, 123 distinct bacterial isolates were recovered (1–5 isolates per mask), including Staphylococcus aureus from 11 masks (15.9%) and gram-negative bacteria of clinical importance from 22 masks (31.9%). Antibiotic resistance rates were low. There were no significant differences in the number of clinically important bacteria among masks worn more or less than 6 hours, and there ...",
+            "url": "https://www.cambridge.org/core/journals/antimicrobial-stewardship-and-healthcare-epidemiology/article/bacterial-contamination-on-used-face-masks-among-nursing-home-healthcare-personnel/D64B1E08179F10785BC0CCD57BFED2C4"
+          },
+          {
+            "title": "Wound infection: A review of qualitative and quantitative ...",
+            "snippet": "Wound samples for bacterial culture are procured with a variety of methods, which include wound swabs, tissue biopsy, needle aspiration, and curettage. Semi-quantitative diagnosis of wound infection is generally defined as greater than 1 × 105 colony-forming units per mL or gram of tissue sample found upon wound sample culture analysis 6.",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1748681521006057"
+          },
+          {
+            "title": "A Guide to Bacterial Culture Identification And Results ...",
+            "snippet": "MacConkey agar plates can be used to differentiate lactose-fermenting and nonlactose-fermenting gram-negative bacteria. The coagulase test can be used to differentiate between Staphylococcus aureus and other Staphylococcus species.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6428495/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-041-deepseek-candidate",
+  "timestamp": "2026-11-06T07:36:36.105294+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17785.421
+}

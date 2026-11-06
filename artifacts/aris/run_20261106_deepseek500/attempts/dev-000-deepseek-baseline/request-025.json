@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial.",
+        "query": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial. original source fact check",
+        "candidates": [
+          {
+            "title": "No, Sean Connery Didn't Call Steve Jobs a 'Computer ...",
+            "snippet": "No, Sean Connery Didn't Call Steve Jobs a 'Computer Salesman'. The letter was published in 2011 on a satirical website called Scoopertino and ...",
+            "url": "https://www.thequint.com/news/webqoof/sean-connery-did-not-call-steve-jobs-a-computer-salesman"
+          },
+          {
+            "title": "Fact Extraction and VERification",
+            "snippet": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial. The answer and sources show that the claim was published in a fake news site ...",
+            "url": "https://fever.ai/dataset_viewer/averitec/0.html"
+          },
+          {
+            "title": "Did Sean Connery Send a Letter to Apple Rejecting ...",
+            "snippet": "A purported letter from Sean Connery caustically rejects an offer for him to become a pitchman for Apple Computers.",
+            "url": "https://www.snopes.com/fact-check/false-sean-connery-letter-to-apple/"
+          },
+          {
+            "title": "Fact check: Hoax Sean Connery letter to Steve Jobs ...",
+            "snippet": "A fabricated letter supposedly written by the late actor Sean Connery to Apple co-founder Steve Jobs has been circulating on social media.",
+            "url": "https://www.reuters.com/article/world/fact-check-hoax-sean-connery-letter-to-steve-jobs-resurfaces-following-his-deat-idUSKBN27I276/"
+          },
+          {
+            "title": "Shane - A letter from Sean Connery to Steve Jobs in 1996. ...",
+            "snippet": "A letter from Sean Connery to Steve Jobs in 1996. it was confirmed as fake in 2010. Steve was not part of apple in 1996 … worth $20 billion USD ...",
+            "url": "https://www.facebook.com/officialshanewarne/photos/a-letter-from-sean-connery-to-steve-jobs-in-1996-how-cool-is-this-bond-james-bon/2906415609465174/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-000-deepseek-baseline",
+  "timestamp": "2026-11-06T05:20:28.231538+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9617.546
+}

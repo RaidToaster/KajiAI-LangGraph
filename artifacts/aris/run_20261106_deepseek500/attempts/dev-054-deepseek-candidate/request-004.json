@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "India’s imports from China increased by 27% in April-August 2020",
+        "query": "What data source and methodology were used to calculate the 27% increase in India's imports from China for April-August 2020?",
+        "candidates": [
+          {
+            "title": "Pankaj Pachauri has claimed in a #Tweet that India's imports from China ...",
+            "snippet": "India's imports from China decreased by 27.63% whereas India's exports to China increased by 27% during April-August. #FakeNews #FactCheck # ...",
+            "url": "https://www.facebook.com/pibfactcheck/posts/pankaj-pachauri-has-claimed-in-a-tweet-that-indias-imports-from-china-have-incre/201968234669611/"
+          },
+          {
+            "title": "Working Paper 332",
+            "snippet": "by B Goldar · 2017 · Cited by 39 — Before we discuss the alternate data sources and the methodology used to estimate the import content in India's exports, it would be useful to illustrate ...",
+            "url": "https://www.icrier.org/pdf/Working_Paper_332.pdf"
+          },
+          {
+            "title": "Deciphering India's Dependency on Chinese Imports",
+            "snippet": "by S Pai · Cited by 2 — Scale helps determine whether import substitution through domestic manufacturing is feasible, or an alternative source of imports is preferred.",
+            "url": "https://www.icsin.org/uploads/2020/10/26/af20f760b3644df1571b4e8e8e98b876.pdf"
+          },
+          {
+            "title": "India (IND) and China (CHN) Trade",
+            "snippet": "Between August 2025 and August 2026 the exports of India to China increased by $629M (52.1%) from $1.21B to $1.84B, while imports increased by $1.86B (17.1%) ...",
+            "url": "https://oec.world/en/profile/bilateral-country/ind/partner/chn"
+          },
+          {
+            "title": "India's exports to US, China surge in August amid stronger global trade",
+            "snippet": "India's exports to China rose 38.71% during April-August ... China increased 27% to $65.5 billion, according to the Commerce Ministry data.",
+            "url": "https://timesofindia.indiatimes.com/business/india-business/indias-exports-to-us-china-surge-in-august-amid-stronger-global-trade/articleshow/134268244.cms"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-054-deepseek-candidate",
+  "timestamp": "2026-11-06T08:16:37.058533+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20186.359
+}

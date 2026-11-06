@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump, when he thinks of climate change, he says hoax. Well, guess what? Speaking of hoaxes, remember what he said about these increasing violent hurricanes and the frequency? He actually said, maybe we should detonate a nuclear bomb over the Atlantic. By the way, the same stable genius who said the biggest problem we had in the Revolutionary War is we didn’t have enough airports.",
+        "query": "Search for a primary transcript, recording, or contemporaneous report of Trump's remark about airports in the Revolutionary War, with date and venue.",
+        "candidates": [
+          {
+            "title": "User Clip: Trump on Revolutionary War and airports - C-SPAN",
+            "snippet": "Trump address on July 4, 2019. Claims Revolutionary War army seized airports. Also mispronounces Fort McHenry as McHendry. Missing:  primary  transcript,  recording,  contemporaneous  venue.",
+            "url": "https://www.c-span.org/clip/white-house-event/user-clip-trump-on-revolutionary-war-and-airports/4805671"
+          },
+          {
+            "title": "Trump Says Revolutionary War Troops 'Took Over the Airports'",
+            "snippet": "President Trump said that the Continental Army \"took over the airports\" from the British during the American Revolutionary War during his ... Missing:  transcript,  recording,  contemporaneous  date",
+            "url": "https://time.com/5620936/donald-trump-revolutionary-war-airports/"
+          },
+          {
+            "title": "Did Trump Say Revolutionary War Troops Took Over Airports?",
+            "snippet": "Trump made a statement erroneously indicating that American rebels had taken over not-yet-existent airports during the Revolutionary War: , it ...",
+            "url": "https://www.snopes.com/fact-check/trump-revolutionary-war-airports/"
+          },
+          {
+            "title": "Trump Says Revolutionary War-Era Army 'Took Over the Airports'",
+            "snippet": "The president's anachronism came during his Fourth of July speech, as he bounced from describing the Revolutionary War to the War of 1812. Missing:  primary  contemporaneous  date",
+            "url": "https://www.nytimes.com/video/us/100000006597776/trump-speech-airports.html"
+          },
+          {
+            "title": "In Fourth of July speech, Trump praises Revolutionary War ...",
+            "snippet": "Trump raised eyebrows during his Fourth. July celebration speech for a reference to an apparent seizure of “airports” by American soldiers ...",
+            "url": "https://www.fox29.com/news/in-fourth-of-july-speech-trump-praises-revolutionary-war-army-that-took-over-the-airports-in-1775"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-010-deepseek-candidate",
+  "timestamp": "2026-11-06T06:03:41.285625+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12210.593
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Judge finds Wisconsin elections commissioners in contempt of court, orders them to quickly remove people from the rolls, Milwaukee Journal Sentinel, Jan. 13, 2020.",
+        "candidates": [
+          {
+            "title": "Judge finds Wisconsin election officials in contempt over voter ...",
+            "snippet": "Ozaukee County Judge Paul Malloy held state election officials in contempt of court for not following. Jacobs said she believes Malloy's initial ...",
+            "url": "https://www.jsonline.com/story/news/politics/2020/01/13/judge-contempt-court-order-wisconsin-voter-rolls-case/2804070001/"
+          },
+          {
+            "title": "Judge finds Wisconsin election officials in contempt over voter ...",
+            "snippet": "Judge Paul Malloy held state election officials in contempt of court for not following his order to remove thousands of people from the voters ... Missing:  commissioners  | Show results with:",
+            "url": "https://www.jsonline.com/picture-gallery/news/local/wisconsin/2020/01/13/judge-finds-wisconsin-election-officials-contempt-over-voter-rolls/4457150002/"
+          },
+          {
+            "title": "Wisconsin Elections Officials Held in Contempt for Refusing to ...",
+            "snippet": "A Wisconsin judge held three state election commissioners in contempt on Monday and ordered them to proceed immediately with purging more ...",
+            "url": "https://www.nytimes.com/2020/01/13/us/wisconsin-voter-purge.html"
+          },
+          {
+            "title": "Wisconsin judge orders 200000 voters be purged in blow to ...",
+            "snippet": "A Wisconsin judge has ruled that state election officials need to purge 200,000 people from state voter rolls immediately. Last month there was ...",
+            "url": "https://www.theguardian.com/us-news/2020/jan/13/wisconsin-judge-orders-voters-purged-democrats-fined"
+          },
+          {
+            "title": "Judge Holds Election Commissioners in Contempt",
+            "snippet": "Will be fined $250 per day until they approve purge 209,000 names from voting list. By Corrinne Hess, Wisconsin Public Radio - Jan 13th, 2020 01 ... Missing:  finds  | Show results with:",
+            "url": "https://urbanmilwaukee.com/2020/01/13/judge-holds-election-commissioners-in-contempt/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-03T15:16:56.082818+00:00",
+  "status": "reserved_outcome_unknown"
+}

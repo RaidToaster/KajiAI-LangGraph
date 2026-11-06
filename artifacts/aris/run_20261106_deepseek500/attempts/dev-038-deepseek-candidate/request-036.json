@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Search for contemporaneous October 2020 reporting or statements from the Biden family, US government, or credible outlets addressing any claim that Hunter Biden had died around the reference date.",
+        "candidates": [
+          {
+            "title": "Hunter Biden laptop controversy",
+            "snippet": "In October 2020, a controversy arose involving a laptop that belonged to Hunter Biden. The owner of a Delaware computer shop, John Paul Mac Isaac, said that ...",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden_laptop_controversy"
+          },
+          {
+            "title": "No, Hunter Biden Did Not Die From a Drug Overdose - Snopes.com",
+            "snippet": "Oct 27, 2020 · In October 2020, a false and distasteful rumor emerged online that Hunter Biden, the 50-year-old son of Democratic presidential candidate ...",
+            "url": "https://www.snopes.com/fact-check/hunter-biden-dead-overdose-hoax/"
+          },
+          {
+            "title": "2 ex-FBI officials charged with making false statements ...",
+            "snippet": "WASHINGTON -- Two former FBI intelligence officials who specialized in foreign election interference were charged on Friday with making ...",
+            "url": "https://abc7news.com/story/2-ex-fbi-officials-charged-making-false-statements-hunter-bidens-laptop/19972560/"
+          },
+          {
+            "title": "New Testimony Reveals Secretary Blinken and Biden Campaign ...",
+            "snippet": "Apr 20, 2023 · WASHINGTON, D.C. – New testimony by Michael Morell, a former Deputy Director of the Central Intelligence Agency (CIA) and one of the 51 ... Missing: Search contemporaneous credible outlets addressing died date.",
+            "url": "http://judiciary.house.gov/media/press-releases/new-testimony-reveals-secretary-blinken-and-biden-campaign-behind-infamous"
+          },
+          {
+            "title": "election interference: how the fbi “prebunked” a true story",
+            "snippet": "At 5:00 a.m. ET, on Wednesday, October 14, 2020, less than three weeks before the 2020 presidential election, the New York Post published a ...",
+            "url": "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/FBI-Election-Interference-Report-FINAL--10-30-24-.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-candidate",
+  "timestamp": "2026-11-06T07:31:38.443272+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17487.75
+}

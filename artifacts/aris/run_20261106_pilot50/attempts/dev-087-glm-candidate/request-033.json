@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "HMWSSB OR \"Water Board\" Hyderabad door-to-door chlorine tablets bleaching powder October 2020 localities flood response official statement",
+        "candidates": [
+          {
+            "title": "Floods and Landslides, August 2018",
+            "snippet": "... Water Board for coordination between related state departments, with a top expert advisory body. The board is to be supported by a secretariat in the focal ...",
+            "url": "https://sdma.kerala.gov.in/wp-content/uploads/2019/03/PDNA-report-FINAL-FEB-2019_compressed.pdf"
+          },
+          {
+            "title": "Kerala",
+            "snippet": "... Water Board for coordination between related state departments, with a top expert advisory body. The board is to be supported by a ...",
+            "url": "https://www.undp.org/sites/g/files/zskgke326/files/publications/PDNA_Kerala_India.pdf"
+          },
+          {
+            "title": "GHMC Disaster Management Plan Overview | PDF",
+            "snippet": "Urban floods during monsoon is common in Hyderabad. 22. DRAFT DISASTER MANAGEMENT PLAN, GHMC. Issues of Climate Change on Telangana. Higher vulnerability of ...",
+            "url": "https://www.scribd.com/document/802904131/GHMC-Disastermanagement-Plan"
+          },
+          {
+            "title": "Proceedings of the 2nd International Conference on Water ...",
+            "snippet": "by A Île-de-France · 2022 — Cooper, 2020, Can coastal cities turn the tide on rising flood risk ? ... Water Board CWRS Clean Water Reservoirs GPS Global Positioning System INR ...",
+            "url": "https://unesdoc.unesco.org/ark:/48223/pf0000380319"
+          },
+          {
+            "title": "Sustainability Report 2026",
+            "snippet": "... Statement for FY 2024-25. 311. Stakeholder Engagement. 23. Material Issues ... Water Board Data). Future Drought Risk. (From Climate Models). Social Aspects.",
+            "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/sustainability-report/itc-sustainability-report-2026.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-glm-candidate",
+  "timestamp": "2026-11-06T01:56:26.583080+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9651.89
+}

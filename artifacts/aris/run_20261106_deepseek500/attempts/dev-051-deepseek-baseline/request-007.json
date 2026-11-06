@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost.",
+        "query": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost. counterevidence",
+        "candidates": [
+          {
+            "title": "Verdict 2019: The expanded support base of the Bharatiya ...",
+            "snippet": "The verdict of 2019 indicates that the Bharatiya Janata Party (BJP) not only managed to retain its support base which it built in 2014, but also expanded it both geographically and socially. It man...",
+            "url": "https://journals.sagepub.com/doi/pdf/10.1177/2057891120907699"
+          },
+          {
+            "title": "Explainer-Why India's Tens of Millions of Voter Deletions ...",
+            "snippet": "Election Commission data cited by Modi's Bharatiya Janata Party shows about 130 million names, more than the population of Japan, have been deleted from electoral rolls during the verification ...",
+            "url": "https://www.usnews.com/news/world/articles/2026-09-28/explainer-why-has-the-drive-to-verify-indias-billion-voters-put-poll-body-under-scrutiny"
+          },
+          {
+            "title": "From Fringe to Mainstream: The Rise of the BJP in India",
+            "snippet": "Its predecessor, the right-wing Bharatiya Jana Sangh (BJS) party, gained only marginal support and joined the Janata Party (People’s Party), which won the 1977 elections as a catch-all union ...",
+            "url": "https://www.statista.com/chart/18142/indian-parliament-lower-house-historical-seat-distribution/"
+          },
+          {
+            "title": "Janata Party - Wikipedia",
+            "snippet": "The Janata Party (JP, lit. 'People's Party') is an unrecognised political party in India. [4] Navneet Chaturvedi [5] is the current president of the party since November 2021, replacing Jai Prakash Bandhu. [6][7][8][9][10][11][12] The JP was established as an amalgam of Indian political parties opposed to the Emergency that was imposed between 1975 and 1977 by Prime Minister Indira Gandhi of ...",
+            "url": "https://en.wikipedia.org/wiki/Janata_Party"
+          },
+          {
+            "title": "The BJP’s Bengal victory exposes the erosion of Indian ...",
+            "snippet": "The BJP's victory after sweeping electoral roll revision raises profound questions over the integrity of the vote.",
+            "url": "https://www.aljazeera.com/opinions/2026/5/7/the-bjps-bengal-victory-exposes-the-erosion-of-indian-democracy"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-051-deepseek-baseline",
+  "timestamp": "2026-11-06T08:03:35.636562+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19404.953
+}

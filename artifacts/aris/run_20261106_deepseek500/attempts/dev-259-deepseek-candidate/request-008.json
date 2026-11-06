@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Govt of India is providing money to bereaved families of COVID-19 - Insurance benefits for Covid-19 deaths can be claimed under the schemes of PMJJBY and PMSBY.",
+        "query": "Do PMJJBY scheme rules or official communications state that COVID-19 deaths are covered for insurance benefits, and under what conditions?",
+        "candidates": [
+          {
+            "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+            "snippet": "The scheme is a one-year cover term life insurance scheme, renewable from year to year, offering life insurance cover for death due to any ...",
+            "url": "https://financialservices.gov.in/pmjjby"
+          },
+          {
+            "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+            "snippet": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) is an insurance scheme offering life insurance cover for death due to any reason. It is a one-year cover, ...",
+            "url": "https://web.umang.gov.in/landing/scheme/detail/pradhan-mantri-jeevan-jyoti-bima-yojana_pmjjby.html"
+          },
+          {
+            "title": "Kins of those who died of COVID-19 ...",
+            "snippet": "... Bima Yojana (PMSBY) #PIBFactCheck: PMSBY doesn't cover COVID related deaths, while PMJJBY covers COVID deaths with certain conditions.",
+            "url": "https://x.com/PIBFactCheck/status/1309371515922649088"
+          },
+          {
+            "title": "TERMS & CONDITIONS FOR PMJJBY Eligibility",
+            "snippet": "i. Death Benefits payable under Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) across all bank accounts and insurance companies for any insured member shall ...",
+            "url": "https://ippbonline.bank.in/documents/31498/0/TERMS+&+CONDITIONS-+PMJJBY+(2).pdf/872cd50e-a631-145d-9318-6ed65b7858db"
+          },
+          {
+            "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+            "snippet": "The scheme would be offered / administered through Life Insurance Corporation of India and other Life Insurance companies willing to offer the product on ...",
+            "url": "https://www.indiapost.gov.in/insurance-services/pmjjby"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-259-deepseek-candidate",
+  "timestamp": "2026-11-06T04:21:11.383658+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6060.703
+}

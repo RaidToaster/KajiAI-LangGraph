@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Search for the actual April 6, 2026 court filing or docket entry by Barry Coburn in the Winston & Strawn civil suit in Washington, D.C., to obtain the primary document rather than news retellings.",
+        "candidates": [
+          {
+            "title": "PACER Case Locator - United States Courts",
+            "snippet": "For real-time case filings, search by the court where the case is filed. Use the Court CM/ECF Lookup to find the court's specific link or log into PACER and select the court name.",
+            "url": "http://pcl.uscourts.gov/pcl/index.jsf"
+          },
+          {
+            "title": "Court Records - United States Courts",
+            "snippet": "Locate a federal court case by using the Public Access to Court Electronic Records (PACER) or by visiting the Clerk’s Office of the courthouse where the case was filed.",
+            "url": "https://www.uscourts.gov/court-records"
+          },
+          {
+            "title": "Find a Case | PACER: Federal Court Records",
+            "snippet": "Explore the various options for locating federal court case records electronically, including logging into PACER. Search for a case in the federal court where the case was filed. This information is updated immediately. Use the PACER Case Locator to search a nationwide index of federal court cases. This information is updated daily.",
+            "url": "https://pacer.uscourts.gov/find-case"
+          },
+          {
+            "title": "Advanced RECAP Archive Search for PACER – CourtListener.com",
+            "snippet": "Using this archive, you can finally search and download millions of PACER documents, including those that were originally scanned PDFs, which we laboriously convert to text.",
+            "url": "https://www.courtlistener.com/recap/"
+          },
+          {
+            "title": "Find a Case (PACER) - United States Courts",
+            "snippet": "PACER allows anyone with an account to search and locate appellate, district, and bankruptcy court case and docket information. Register for a PACER account. Use the PACER Case Locator if you are not sure which specific federal court the case was filed.",
+            "url": "https://www.uscourts.gov/court-records/find-a-case-pacer"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-candidate",
+  "timestamp": "2026-11-06T07:31:20.911491+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17470.234
+}

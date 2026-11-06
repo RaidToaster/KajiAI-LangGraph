@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "Search for a non-Washington-Post news report or fact-check covering the Cornyn 'Will Be Covered' preexisting-conditions ad as its separate reporting",
+        "candidates": [
+          {
+            "title": "Another clunker: John Cornyn's ad on preexisting conditions",
+            "snippet": "“You know, preexisting conditions is something we all agree should be covered.” — Sen. John Cornyn (R-Tex.), in a campaign ad, Oct. 8, 2020.",
+            "url": "https://www.washingtonpost.com/politics/2020/10/14/another-clunker-john-cornyns-ad-pre-existing-conditions/"
+          },
+          {
+            "title": "John Cornyn: 'Will Be Covered' | Campaign 2020",
+            "snippet": "Experts say Cornyn's proposal would weaken protections for patients with preexisting conditions under the Affordable Care Act.",
+            "url": "https://www.washingtonpost.com/video/politics/campaign-ads-2020/john-cornyn-will-be-covered-campaign-2020/2020/10/13/aaf6e1ef-920b-4a2f-8128-0d7d80ecdb8c_video.html"
+          },
+          {
+            "title": "Cornyn Votes to Protect Texans with Pre-Existing Conditions",
+            "snippet": "WASHINGTON –U.S. Senator John Cornyn (R-TX) released the following statement after he voted to take up the Protect Act, a bill to protect Texans with ...",
+            "url": "https://www.cornyn.senate.gov/news/cornyn-votes-to-protect-texans-with-pre-existing-conditions/"
+          },
+          {
+            "title": "User Clip: 170117 Cornyn Said People with Pre-Existing ...",
+            "snippet": "User Clip: 170117 Cornyn Said People with Pre-Existing Conditions Don't Need the ACA. \" I agree that people should not lose their health insurance coverage when ...",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-170117-cornyn-said-people-with-pre-existing-conditions-dont-need-the-aca/4899680"
+          },
+          {
+            "title": "Want to protect people with preexisting conditions? You ...",
+            "snippet": "“You know, preexisting conditions is something we all agree should be covered,” Sen. John Cornyn (R-Tex.) said in a campaign ad this month.",
+            "url": "https://www.washingtonpost.com/outlook/2020/10/22/preexisting-conditions-aca-debate-trump-biden/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-glm-candidate",
+  "timestamp": "2026-11-06T01:30:25.338599+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8090.64
+}

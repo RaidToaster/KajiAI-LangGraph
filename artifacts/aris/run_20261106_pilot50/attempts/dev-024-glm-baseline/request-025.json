@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Germany’s Foreign Minister Heiko Maas said that Thailand’s King Maha Vajiralongkorn didn’t do anything illegal while at his German residence.",
+        "query": "Provide the actual draft text and any claim statement to assess.",
+        "candidates": [
+          {
+            "title": "How to Draft a Statement of Claim (AB) | Practical Law - Westlaw",
+            "snippet": "A Practice Note that provides guidance on drafting a statement of claim to commence an action in the Court of King's Bench of Alberta.",
+            "url": "https://content.next.westlaw.com/practical-law/document/Ida25ad6c0c4411e698dc8b09b4f043e0/How-to-Draft-a-Statement-of-Claim-AB?viewType=FullText&transitionType=Default&contextData=(sc.Default)"
+          },
+          {
+            "title": "Drafting a Statement of Claim – tips and examples",
+            "snippet": "This factsheet is designed to help you draft a statement of claim once you have decided to bring a claim in a court and confirmed that you have a valid cause ...",
+            "url": "https://lawright.org.au/legal-information/going-to-court/drafting-a-statement-of-claim-tips-and-examples/"
+          },
+          {
+            "title": "How to Draft a Statement of Claim (AB) - Practical Law",
+            "snippet": "A Practice Note that provides guidance on drafting a statement of claim to commence an action in the Court of King's Bench of Alberta.",
+            "url": "https://ca.practicallaw.thomsonreuters.com/w-002-1770?transitionType=Default&contextData=(sc.Default)"
+          },
+          {
+            "title": "Drafting a Statement of Claim: An Unconventional but ...",
+            "snippet": "Drafting a Statement of Claim: An Unconventional but Practical Guide · Step 1: Identify the parties · Step 2: Provide a brief background · Step 3: ...",
+            "url": "https://www.linkedin.com/pulse/drafting-statement-claim-unconventional-practical-guide-desmond-goh"
+          },
+          {
+            "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+            "snippet": "Web Content Accessibility Guidelines (WCAG) 2.2 covers a wide range of recommendations for making web content more accessible.",
+            "url": "https://www.w3.org/TR/WCAG22/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-024-glm-baseline",
+  "timestamp": "2026-11-05T18:12:18.483044+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52758.078
+}

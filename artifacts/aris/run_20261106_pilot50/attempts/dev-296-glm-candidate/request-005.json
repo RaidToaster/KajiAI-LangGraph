@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The family or Justine Damond received a $55 million settlement after she was gunned down by a Minneapolis police officer.",
+        "query": "Was Justine Damond fatally shot by a Minneapolis police officer, and on what date did the shooting occur?",
+        "candidates": [
+          {
+            "title": "Ex-Minneapolis officer who killed Justine Damond ...",
+            "snippet": "Noor, 33, fatally shot Justine Ruszczyk Damond, on July 15, 2017, after Noor and his partner responded to Damond's call to report that she ...",
+            "url": "https://www.nbcnews.com/news/us-news/ex-minneapolis-officer-who-killed-justine-damond-sentenced-12-5-n1013926"
+          },
+          {
+            "title": "Killing of Justine Damond",
+            "snippet": "On July 15, 2017, Justine Damond ・ was fatally shot by Minneapolis Police Department officer Mohamed Noor after she had called 9-1-1 ・ of Philando Castile,",
+            "url": "https://en.wikipedia.org/wiki/Killing_of_Justine_Damond"
+          },
+          {
+            "title": "Justine Damond's fiance speaks out about fatal police shooting",
+            "snippet": "She was shot in 2017 after calling 911 to report a possible sexual assault near her home.",
+            "url": "https://www.youtube.com/watch?v=KYTgdKN41j8"
+          },
+          {
+            "title": "Justine Damond",
+            "snippet": "Minneapolis police chief Janeé Harteau resigned. Justine Damond, an unarmed 40-year-old Australian woman fatally shot by a police officer.",
+            "url": "https://www.pbs.org/newshour/tag/justine-damond"
+          },
+          {
+            "title": "Justine Damond, 40, was fatally shot by a Minneapolis ...",
+            "snippet": "In 2017, Minneapolis police officer Mohamed Noor shot Justine Damond after she called the police to report an ongoing assault behind her house.",
+            "url": "https://www.facebook.com/KITV4/posts/justine-damond-40-was-fatally-shot-by-a-minneapolis-police-officer-in-july/10154960437216861/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-296-glm-candidate",
+  "timestamp": "2026-11-06T02:06:00.736429+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 10226.062
+}

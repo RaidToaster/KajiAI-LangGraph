@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "What is the exact text or transcript of the John Cornyn campaign ad video that discusses preexisting conditions and his plan?",
+        "candidates": [
+          {
+            "title": "User Clip: 170117 Cornyn Said People with Pre-Existing ...",
+            "snippet": "\" I agree that people should not lose their health insurance coverage when they change employers and be caught in a trap where your insurance company ... Missing:  transcript  John",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-170117-cornyn-said-people-with-pre-existing-conditions-dont-need-the-aca/4899680"
+          },
+          {
+            "title": "Creative Alert - AdImpact",
+            "snippet": "Transcript. Original. English. You know pre existing conditions is something we all agree should be covered. And with John Cornyn's plan, they will be covered.",
+            "url": "https://host2.adimpact.com/admo/viewer/3819021"
+          },
+          {
+            "title": "John Cornyn: 'Will Be Covered' | Campaign 2020",
+            "snippet": "Experts say Cornyn's proposal would weaken protections for patients with preexisting conditions under the Affordable Care Act. Missing:  exact  text  transcript  plan?",
+            "url": "https://www.washingtonpost.com/video/politics/campaign-ads-2020/john-cornyn-will-be-covered-campaign-2020/2020/10/13/aaf6e1ef-920b-4a2f-8128-0d7d80ecdb8c_video.html"
+          },
+          {
+            "title": "Cornyn Votes to Protect Texans with Pre-Existing Conditions",
+            "snippet": "“Despite the best efforts of Democrats to convince otherwise, I'm committed to ensuring that no Texan will go without coverage due to a pre-existing condition.” Missing:  exact  text  transcript  campaign  video  plan?",
+            "url": "https://www.cornyn.senate.gov/news/cornyn-votes-to-protect-texans-with-pre-existing-conditions/"
+          },
+          {
+            "title": "DSCC Targets Cornyn with New Digital Ad on Health Care ...",
+            "snippet": "“It's hard to see how Cornyn's going to be able to sell Texans on this lawsuit that only stands to hurt them — from those with pre-existing ... Missing:  exact  transcript  video  plan?",
+            "url": "https://www.dscc.org/article/dscc-targets-cornyn-with-new-digital-ad-on-health-care-lawsuit/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-deepseek-candidate",
+  "timestamp": "2026-11-06T01:22:20.322744+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7605.625
+}

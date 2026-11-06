@@ -19,6 +19,9 @@ class ClaimState(TypedDict, total=False):
     domain: str
     classification: dict[str, Any]
     assertions: list[str]
+    verification_questions: list[str]
+    planning_statements: list[str]
+    decomposition_method: str
     sources: list[SourceRecord]
     research_round: int
     research_history: list[ResearchRound]
@@ -34,6 +37,7 @@ class ClaimState(TypedDict, total=False):
     fatal_error: bool
     budget_blocked: bool
     search_queries: list[str]
+    round_queries: list[str]
     stagnant_rounds: int
     last_new_sources: int
     route: str

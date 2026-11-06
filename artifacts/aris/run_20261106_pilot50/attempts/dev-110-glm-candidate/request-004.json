@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "What is the exact wording and full text of Kamala Harris' statement referencing Lincoln and the Supreme Court, and when and where was it made?",
+        "candidates": [
+          {
+            "title": "Kamala Harris, Honest Abe and the Supreme Court",
+            "snippet": "Last night in the VP debate Kamala Harris notes that Abraham Lincoln chose to delay nomination of a SCOTUS until after the election, because it ...",
+            "url": "https://www.factcheck.org/2020/10/kamala-harris-honest-abe-and-the-supreme-court/"
+          },
+          {
+            "title": "The Washington Post: Kamala Harris's 'little history lesson' ...",
+            "snippet": "Abraham Lincoln was up for reelection. And it was 27 days before the election. And a seat became open on the United States Supreme Court.",
+            "url": "https://www.lincolncottage.org/the-washington-post-kamala-harriss-little-history-lesson-about-lincolns-supreme-court-vacancy-wasnt-exactly-true/"
+          },
+          {
+            "title": "Why Lincoln didn't appoint a justice amid 1864 election",
+            "snippet": "Sen. Kamala Harris claimed that President Lincoln chose not to nominate a Supreme Court justice until after the election because he wanted the ...",
+            "url": "https://www.13newsnow.com/article/news/verify/verify-why-abraham-lincoln-chose-not-to-appoint-a-supreme-court-justice-during-the-1864-election/507-c6ff8887-900b-46b8-aae5-f5b8cd87442e"
+          },
+          {
+            "title": "Kamala Harris's 'little history lesson' about Lincoln's ...",
+            "snippet": "Abraham Lincoln was up for reelection. And it was 27 days before the election. And a seat became open on the United States Supreme Court.",
+            "url": "https://www.washingtonpost.com/history/2020/10/08/lincoln-supreme-court-kamala-harris/"
+          },
+          {
+            "title": "Remarks by Senator Kamala Harris on the U.S. Supreme ...",
+            "snippet": "Kamala Harris. Vice President of the United States: 2021-2025. Remarks by Senator Kamala Harris on the U.S. Supreme Court in Raleigh, North ...",
+            "url": "https://www.presidency.ucsb.edu/documents/remarks-senator-kamala-harris-the-us-supreme-court-raleigh-north-carolina"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-glm-candidate",
+  "timestamp": "2026-11-06T01:14:01.118026+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7106.421
+}

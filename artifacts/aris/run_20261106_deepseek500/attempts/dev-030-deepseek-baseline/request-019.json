@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Paul Pogba, who plays for Manchester United and the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism.",
+        "query": "the French national team, retired from international football in response to French President Macron’s comments on Islamist terrorism. evidence",
+        "candidates": [
+          {
+            "title": "Paul Pogba has not quit France's national football team over ...",
+            "snippet": "... French President Emmanuel Macron's recent comments about radical ... I am against any and all forms of terror and violence. My religion ...",
+            "url": "https://factcheck.afp.com/paul-pogba-has-not-quit-frances-national-football-team-over-presidents-remarks-islam"
+          },
+          {
+            "title": "Pogba denies quitting France team over Macron comments",
+            "snippet": "“I am against any and all forms of terror and violence. Unfortunately, some press people don't act responsibly when writing the news, abusing ...",
+            "url": "https://www.chinadailyhk.com/hk/article/147485"
+          },
+          {
+            "title": "Pogba denies quitting French team over Macron's comment on Islam",
+            "snippet": "... French national team due to anti-Islamic comments by. ... football team after Macron alleged that Islam was the source of international terrorism.",
+            "url": "https://www.thecable.ng/pogba-denies-quitting-french-team-over-macrons-comment-on-islam/"
+          },
+          {
+            "title": "Fact Check: Paul Pogba did not quit French football team after President ...",
+            "snippet": "It is clear that Pogba has not quit football because of President Macron's comments on 'Islamist terrorism'. Thus, the claim is FALSE. Also Read.",
+            "url": "https://newsmeter.in/fact-check-paul-pogba-did-not-quit-french-football-team-after-president-macrons-remarks-on-islam"
+          },
+          {
+            "title": "Pogba denies quitting France team over Macron's comments",
+            "snippet": "Preisdent Macron described the murder as an 'Islamic terrorist attack' that took the life of the French teacher. He later added: “Unity and ...",
+            "url": "https://www.facebook.com/Premiumtimes/posts/pogba-denies-quitting-france-team-over-macrons-commentsa-newspaper-report-allege/3452826704754919/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-030-deepseek-baseline",
+  "timestamp": "2026-11-06T07:10:30.443037+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16219.75
+}

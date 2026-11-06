@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kim Martin Morrow the CEO of Netflix has just been charged with 15 charges for child pornography and 31,000 files have been found on his personal computers for child porn from ages 8 and as young as toddlers.",
+        "query": "Do any court records, indictments, or official law enforcement statements show that Kim Martin Morrow was charged with 15 charges related to child pornography, and around what date were such charges filed?",
+        "candidates": [
+          {
+            "title": "A federal grand jury has indicted a Weakley County man ...",
+            "snippet": "A federal grand jury has indicted a Weakley County man on multiple counts related to the alleged sexual exploitation of a minor.",
+            "url": "https://www.facebook.com/TBInvestigation/posts/a-federal-grand-jury-has-indicted-a-weakley-county-man-on-multiple-counts-relate/1381533190665793/"
+          },
+          {
+            "title": "Tennessee Bureau of Investigation",
+            "snippet": "JUST ANNOUNCED: Special agents assigned to the Tennessee Bureau of Investigation's Criminal Investigation Division have charged a Gainesboro ...",
+            "url": "https://www.facebook.com/TBInvestigation/posts/just-announced-special-agents-assigned-to-the-tennessee-bureau-of-investigations/1480589464093498/"
+          },
+          {
+            "title": "VOLUME 61 Official Reports",
+            "snippet": "439.1 et seq. The Court of Claims has exclusive jurisdiction to hear and determine the following matters: (a) all claims against the State of Illinois founded ...",
+            "url": "https://www.ilsos.gov/content/dam/departments/court_of_claims/volumes/volume61.pdf"
+          },
+          {
+            "title": "Prior Sex Offender from Albuquerque Pleads Guilty to ...",
+            "snippet": "Morrow was arrested on federal child pornography charges on Mar. 7, 2014, based on a criminal complaint alleging possession of child pornography ...",
+            "url": "https://www.justice.gov/usao-nm/pr/prior-sex-offender-albuquerque-pleads-guilty-federal-child-pornography-charge"
+          },
+          {
+            "title": "Statute of Limitation in Federal Criminal Cases: An Overview",
+            "snippet": "Federal statutes of limitation are as old as federal crimes. When the Founders assembled in the First Congress, they passed not only the first ...",
+            "url": "https://www.congress.gov/crs-product/RL31253"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-332-glm-candidate",
+  "timestamp": "2026-11-05T18:00:15.725186+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52035.312
+}

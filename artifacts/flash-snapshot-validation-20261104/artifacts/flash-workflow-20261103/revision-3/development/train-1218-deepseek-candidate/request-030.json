@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Bernie Sanders Senate floor statement Affordable Care Act 2009 single-payer amendment",
+        "candidates": [
+          {
+            "title": "Sen. Bernie Sanders on his amendment for single payer",
+            "snippet": "Sanders' amendment to the health care reform bill would have created a single-payer system by allowing all Americans – regardless of age – to be covered by ...",
+            "url": "https://pnhp.org/news/sen-bernie-sanders-on-his-amendment-for-single-payer/"
+          },
+          {
+            "title": "Sen. Bernie Sanders (I-VT) â€“ Health Care Debate 2009 ...",
+            "snippet": "Sen. Bernie Sanders outlines the serious problems in the current US health care system - from its complexity and cost to inadequate coverage ...",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-sen-bernie-sanders-i-vt--health-care-debate-2009-6-problems/4538749"
+          },
+          {
+            "title": "Government Monopoly: Senator Sanders' “Single-Payer” ...",
+            "snippet": "The legislation would outlaw virtually all private insurance and create a government health care monopoly: a single entity delivering, as well as financing, ...",
+            "url": "https://www.heritage.org/health-care-reform/report/government-monopoly-senator-sanders-single-payer-health-care-prescription"
+          },
+          {
+            "title": "User Clip: Senate Rule XV",
+            "snippet": "Senator Bernie Sanders entered an amendment for a single-payer system by expanding Medicare to everyone. withdrew his amendment, although his ...",
+            "url": "https://www.c-span.org/clip/us-senate/user-clip-senate-rule-xv/5007795"
+          },
+          {
+            "title": "Sanders amendment withdrawn after opponents force oral ...",
+            "snippet": "There was no Senate vote on the single-payer health care amendment on the floor December 16, thanks to the parliamentary obstruction of amendments by ...",
+            "url": "https://www.citizen.org/news/sanders-amendment-withdrawn-after-opponents-force-oral-reading-of-bill-what-happens-now/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:37:13.685476+00:00",
+  "status": "reserved_outcome_unknown"
+}

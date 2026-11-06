@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The CDC has said over 98,000 people had non-COVID related deaths because of hospitals that were closed down for non-essential services",
+        "query": "What time period and geographic scope did any such CDC statement or data cover?",
+        "candidates": [
+          {
+            "title": "Conducting a Field Investigation | Field Epi Manual",
+            "snippet": "Epidemiologic field investigations are a core function of epidemiology and perhaps the most obvious way information is transformed into action to ensure public ...",
+            "url": "https://www.cdc.gov/field-epi-manual/php/chapters/field-investigation.html"
+          },
+          {
+            "title": "What Is Change Data Capture (CDC)? Methods & Use Cases",
+            "snippet": "Change Data Capture is ideal for real time data movement. Learn how it works, the best use cases for CDC, and the role it plays in streaming ETL.",
+            "url": "https://www.striim.com/blog/change-data-capture-cdc-what-it-is-and-how-it-works/"
+          },
+          {
+            "title": "Surveillance of Disease: Overview - PMC",
+            "snippet": "by A Chow · 2016 · Cited by 35 — ... time period of reporting such as 1 week or month. Regular zero reporting is an indicator of the sensitivity of a surveillance system. Zero reporting is ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7149774/"
+          },
+          {
+            "title": "Centers for Disease Control and Prevention (CDC): History ...",
+            "snippet": "As shown in the textbox above, discussions about the appropriate role and scope of public health in the late 1980s and early 1990s set the stage ...",
+            "url": "https://www.congress.gov/crs-product/R47981"
+          },
+          {
+            "title": "What Is Change Data Capture CDC for Real-Time Data",
+            "snippet": "Change data capture (CDC) is a data integration pattern for tracking and capturing changes made to a database, including inserts, updates, ...",
+            "url": "https://aerospike.com/blog/what-is-change-data-capture-cdc/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-142-deepseek-candidate",
+  "timestamp": "2026-11-06T00:15:00.818952+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3566.125
+}

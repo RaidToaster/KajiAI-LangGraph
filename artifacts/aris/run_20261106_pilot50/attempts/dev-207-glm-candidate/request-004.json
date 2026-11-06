@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "What was Nigeria's population recorded at the time of independence in 1960, according to official census records or the 1962/1963 census?",
+        "candidates": [
+          {
+            "title": "History of Population Census in Nigeria",
+            "snippet": "According to the 1962 census , the population of Nigeria was 45.26 million with Northern Nigeria having 22.01 figure a combined figure of 23.25 million.",
+            "url": "https://nationalpopulation.gov.ng/census-enumeration"
+          },
+          {
+            "title": "Nigeria Population (1950-2026)",
+            "snippet": "Total population for Nigeria in 2023 was 223,804,632, a 2.41% increase from 2022. Total population is based on the de facto definition of population , which ... Read more",
+            "url": "https://www.macrotrends.net/global-metrics/countries/nga/nigeria/population"
+          },
+          {
+            "title": "In 1962, Nigeria conducted a population census ...",
+            "snippet": "Conducted in May 1962, the initial count reported 4 5.26 million Nigerians. The Southern regions, had a population of 23.25 million, while the ...",
+            "url": "https://www.facebook.com/HistoricalnigeriaYoruba/posts/in-1962-nigeria-conducted-a-population-census-that-appeared-to-challenge-the-nor/122311307138076276/"
+          },
+          {
+            "title": "Demographics of Nigeria",
+            "snippet": "Over 1.2 million people living in Nigeria (0.5% of its total population , or 1 in every 200 people living in Nigeria ) are from a continent other than Africa. In ... Read more",
+            "url": "https://en.wikipedia.org/wiki/Demographics_of_Nigeria"
+          },
+          {
+            "title": "In the News: Results Trickle Out From the Nigerian Census",
+            "snippet": "Jan 17, 2007 — Nigeria's population reached 140 million, Results of the first post- independence census conducted in 1962 were withdrawn.2. Nigeria's ...",
+            "url": "https://www.prb.org/resource/in-the-news-results-trickle-out-from-the-nigerian-census/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-glm-candidate",
+  "timestamp": "2026-11-06T00:02:47.901385+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2833.203
+}

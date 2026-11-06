@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "What are the ballot receipt deadlines and postmark rules for each U.S. state for the election in question?",
+        "candidates": [
+          {
+            "title": "Table 11: Receipt and Postmark Deadlines for Absentee/Mail Ballots",
+            "snippet": "Under the injunction, ballots can be counted if they are postmarked by Election Day and received within three days of an election. Maryland SB 949 (2026) ...",
+            "url": "https://www.ncsl.org/elections-and-campaigns/table-11-receipt-and-postmark-deadlines-for-absentee-mail-ballots"
+          },
+          {
+            "title": "Absentee/mail-in ballot receipt deadlines by state",
+            "snippet": "Ballots must be postmarked or timestamped on or before election day and received within seven days. If a ballot has no postmark, a postmark that is illegible, ...",
+            "url": "https://ballotpedia.org/Absentee/mail-in_ballot_receipt_deadlines_by_state"
+          },
+          {
+            "title": "Early Voting and Mail Ballot Rules in Every State",
+            "snippet": "A ballot is mailed to every active registered voter; no ordinary request. Postmarked by Nov. 3, received by Nov. 10. Drop-off rules differ from ...",
+            "url": "https://www.callyoursenate.com/2026-midterm-voting-guide-early-voting-and-mail-ballot-rules-in-every-state/"
+          },
+          {
+            "title": "Voting By Mail? Here Are the Deadlines in Every U.S. State",
+            "snippet": "If you return your ballot by mail, it must be postmarked no later than Nov. 2 and received by the Absentee Election Manager no later than noon on Nov. 3 ( ...",
+            "url": "https://time.com/5889969/how-to-vote-by-mail/"
+          },
+          {
+            "title": "Mail Ballot Receipt Deadlines",
+            "snippet": "A number of states allow ballots to be received a certain number of days after Election Day if the ballot envelope is postmarked on or before Election Day.",
+            "url": "https://mapresearch.org/democracy-map/mail-ballot-receipt-deadlines/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-017-deepseek-candidate",
+  "timestamp": "2026-11-06T06:29:59.195519+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13788.515
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Federal Reserve SCF 2019 net worth percentile table bottom 38 percent aggregate",
+        "candidates": [
+          {
+            "title": "Changes in U.S. Family Finances from 2019 to 2022",
+            "snippet": "real median net worth surged 37 percent to $192,900, Among families in the bottom quartile, median net worth was $400 in 2019 and $3,500 in ...",
+            "url": "https://www.federalreserve.gov/publications/october-2023-changes-in-us-family-finances-from-2019-to-2022.htm"
+          },
+          {
+            "title": "Portfolios Across the U.S. Wealth Distribution",
+            "snippet": "by J Jones · 2023 · Cited by 10 — Table 1 describes the U.S. household wealth distribution in 2022, using data from the Survey of Consumer Finances (SCF). At the bottom, the 10th percentile of ...",
+            "url": "https://www.richmondfed.org/publications/research/economic_brief/2023/eb_23-39"
+          },
+          {
+            "title": "United States Net Worth Brackets, Percentiles, and Top ...",
+            "snippet": "Our mean net worth ($1,231,997) matches the Fed's own public-file table ($1,232,000, rounded), versus $1,241,500 from its internal data",
+            "url": "https://dqydj.com/net-worth-percentiles/"
+          },
+          {
+            "title": "Share of Net Worth Held by the Top 1% (99th to 100th Wealth ...",
+            "snippet": "Graph and download economic data for Share of Net Worth Held by the Top 1% Percent of Aggregate, Not Seasonally Adjusted. Federal Reserve System (US) Percent ...",
+            "url": "https://fred.stlouisfed.org/series/WFRBST01134"
+          },
+          {
+            "title": "Now available: 2019 Survey of Consumer Finances (SCF ...",
+            "snippet": "The 2019 SCF shows gains in median net worth across the net worth distribution. View the interactive SCF chartbook: https://go.usa.gov/xGvyX. ...",
+            "url": "https://www.facebook.com/federalreserve/posts/now-available-2019-survey-of-consumer-finances-scf-reports-on-family-incomes-net/3314863345258301/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T05:38:57.339636+00:00",
+  "status": "reserved_outcome_unknown"
+}

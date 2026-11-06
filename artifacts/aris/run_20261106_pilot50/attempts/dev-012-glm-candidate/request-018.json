@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "Food Bill 160-2 New Zealand clause text growing food for personal or household consumption exemption site:legislation.govt.nz",
+        "candidates": [
+          {
+            "title": "Food Bill",
+            "snippet": "The Food Bill (No 160–2) was first introduced. Our commentary covers the main amendments we of safe and suitable food. ing standards for food ...",
+            "url": "https://www.legislation.govt.nz/bill/government/2010/160/en/2014-05-02.pdf"
+          },
+          {
+            "title": "Food Bill",
+            "snippet": "We recommend inserting new clause 94A to provide for exemption from operating under a food control plan or national programme in circumstances. Exemption if ...",
+            "url": "https://www.legislation.govt.nz/bill/government/2010/0160/24.0/096be8ed8067340b.pdf"
+          },
+          {
+            "title": "Supplementary Order Paper",
+            "snippet": "Note: This Supplementary Order Paper shows amendments to the Bill that are being proposed by the Minister for the purposes of consideration in Committee of ...",
+            "url": "https://www.legislation.govt.nz/amendment-paper/government/2013/278/en/2013-07-17.pdf"
+          },
+          {
+            "title": "Food Act 2014",
+            "snippet": "Exemption from food control plan and national programme if trading in food for certain fund-raising (1) This section applies if— (a) a person ...",
+            "url": "https://www.legislation.govt.nz/act/public/2014/0032/57.0/096be8ed8120a608.pdf"
+          },
+          {
+            "title": "Animal Welfare Act 1999",
+            "snippet": "This website is the official home for New Zealand Acts, Bills, and secondary legislation.",
+            "url": "https://www.legislation.govt.nz/act/public/1999/142/en/latest/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-glm-candidate",
+  "timestamp": "2026-11-06T00:50:30.420333+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5695.734
+}

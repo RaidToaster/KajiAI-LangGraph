@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "Verify the original Kamra tweet of February 21, 2020 directly on Twitter.",
+        "candidates": [
+          {
+            "title": "Kunal Kamra on X: \"I deleted my account so my tweets were ...",
+            "snippet": "You selectively deleted those tweets fearing for your life. Here is a tweet from 2013. Grow balls and accept ur fear!! @kunalkamra88.",
+            "url": "https://x.com/kunalkamra88/status/1320256645847396353"
+          },
+          {
+            "title": "Kunal Kamra on X: \"Deleted tweet in question… I think ...",
+            "snippet": "Kunal Kamra on X: \"Deleted tweet in question… I think everyone has an IT cell now \" ; @reportedbro_. Blood Boiler   · @reportedbro_ · 5. 10.",
+            "url": "https://x.com/kunalkamra88/status/1581947485744173058"
+          },
+          {
+            "title": "Kunal Kamra: Parliamentary panel grills Twitter over 'obscene ...",
+            "snippet": "NEW DELHI: A parliamentary committee questioned Twitter on Thursday over the recent \"obscene\" tweets by stand-up comedian Kunal Kamra ...",
+            "url": "https://timesofindia.indiatimes.com/india/parliamentary-panel-grills-twitter-over-obscene-tweets-by-kunal-kamra-targeting-sc-cji/articleshow/79302825.cms"
+          },
+          {
+            "title": "Parliamentary panel grills Twitter over 'obscene' tweets by ...",
+            "snippet": "A parliamentary committee questioned Twitter on Thursday over the recent “obscene” tweets by stand-up comedian Kunal Kamra targeting the Supreme Court and ...",
+            "url": "https://www.nationalheraldindia.com/national/parliamentary-panel-grills-twitter-over-obscene-tweets-by-kunal-kamra-targeting-sc-cji"
+          },
+          {
+            "title": "Kunal Kamra refuses to apologise, retract his tweets - The Hindu",
+            "snippet": "Kunal Kamra refuses to apologise, retract his tweets. Attorney General consented to multiple requests for criminal contempt action against him.",
+            "url": "https://www.thehindu.com/news/national/kunal-kamra-refuses-to-apologise-retract-his-tweets/article61729558.ece"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-glm-candidate",
+  "timestamp": "2026-11-05T10:34:30.550341+00:00",
+  "status": "reserved_outcome_unknown"
+}

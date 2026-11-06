@@ -1,0 +1,108 @@
+{
+  "completed_new": 4,
+  "paired_cases_per_model": 2,
+  "case": "train1225",
+  "rows": [
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "candidate",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Supported",
+      "accepted": "ABSTAIN",
+      "citations": 6,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "Is independent verification established? Model dependency: independence_unresolved; basis finding IDs: F1, F2, F6.",
+        "Is the evidence aligned with the component's exact scope? Model dependency: scope_unaligned; basis finding IDs: F3, F4.",
+        "Nonliteral or unknown finding extraction: F3; raw extraction retained.",
+        "Evidence confidence remains below High.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": []
+    },
+    {
+      "case": "train-1225",
+      "model": "deepseek",
+      "arm": "baseline",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Not Enough Evidence",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "No draft content provided.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": []
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "baseline",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Not Enough Evidence",
+      "accepted": "ABSTAIN",
+      "citations": 0,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "The draft is empty; no statements or sources were supplied to evaluate.",
+        "No supported verdict yet.",
+        "Evidence confidence remains below High.",
+        "Every finding needs retrieved citations.",
+        "Find relevant evidence from at least two source hosts.",
+        "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "Search for evidence against the proposed conclusion.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": []
+    },
+    {
+      "case": "train-1225",
+      "model": "glm",
+      "arm": "candidate",
+      "gold_label": "Supported",
+      "failed": false,
+      "prediction": "Supported",
+      "accepted": "ABSTAIN",
+      "citations": 6,
+      "stop_reason": "max_rounds",
+      "gaps": [
+        "Nonliteral or unknown finding extraction: F5; raw extraction retained.",
+        "Evidence confidence remains below High.",
+        "Establish source independence; copied reporting is not corroboration."
+      ],
+      "errors": []
+    }
+  ],
+  "candidate_acceptances": 0,
+  "guard_reachable": true,
+  "finding": "BothcandidateproposalsSupportedmatchfrozengold;bothbaselinesNEIwrong. Bothcandidategateabstain,so no supportedacceptancegainandnoefficacyclaimed.",
+  "usage": {
+    "jev": 51,
+    "jev_input_tokens": 152064,
+    "jev_output_tokens": 14245,
+    "ollama": 30,
+    "ollama_input_tokens": 483080,
+    "ollama_output_tokens": 42959,
+    "ollama_estimated_usd": 0.13301425,
+    "tinyfish_search": 24,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 48,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "jev_estimated_usd": 0.006386688
+  },
+  "new_unknown_outcomes": 0,
+  "next": "Originaltrain1209GLM/DS candidates, no priorcells retried."
+}

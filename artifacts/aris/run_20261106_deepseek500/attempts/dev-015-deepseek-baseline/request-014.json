@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "Illegal drug, border crossings evidence",
+        "candidates": [
+          {
+            "title": "Illicit Drug Smuggling Between Ports of Entry and Border Barriers",
+            "snippet": "These include questions about the smugglers, types and quantities of illicit drugs crossing U.S. borders, primary entry points, and methods by ... Missing:  evidence  | Show results with:",
+            "url": "https://www.congress.gov/crs-product/R46218"
+          },
+          {
+            "title": "Illicit Fentanyl and Drug Smuggling at the U.S.-Mexico Border",
+            "snippet": "The fact that most illicit fentanyl is smuggled through POEs adds credence to nationwide evidence that illicit drugs are predominantly smuggled ...",
+            "url": "https://forumtogether.org/article/illicit-fentanyl-and-drug-smuggling-at-the-u-s-mexico-border-an-overview/"
+          },
+          {
+            "title": "US Citizens Were 80 Percent of Crossers with Fentanyl at Ports ...",
+            "snippet": "Figure 2. Customs and Border Protection seizes 88 percent of drugs at ports of entry, not illegal crossing routes. Location of fentanyl seized ...",
+            "url": "https://www.cato.org/blog/us-citizens-were-80-crossers-fentanyl-ports-entry-2019-2024"
+          },
+          {
+            "title": "US Citizens—Not Migrants—Smuggle the Majority of Fentanyl ...",
+            "snippet": "... illegally crossing the southern border. Trump claimed that the Biden administration's border policies “flooded our country with fentanyl and ...",
+            "url": "https://www.americanimmigrationcouncil.org/blog/who-smuggles-fentanyl-into-united-states-citizens-migrants/"
+          },
+          {
+            "title": "Illegal Immigration and Fentanyl at the U.S. Northern and ...",
+            "snippet": "... illegal border crossings has been much, much lower. In FY 2024, Border Patrol apprehended 23,721 people who illegally crossed the northern ...",
+            "url": "https://www.factcheck.org/2025/01/illegal-immigration-and-fentanyl-at-the-u-s-northern-and-southwest-borders/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-baseline",
+  "timestamp": "2026-11-06T06:20:24.363650+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13213.687
+}

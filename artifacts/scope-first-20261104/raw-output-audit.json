@@ -1,0 +1,107 @@
+{
+  "status": "FAILED native contract; this is a descriptive raw-output audit, NOT a repaired/compiled result or retrospective pass",
+  "raw_text_sha256": "3cb35ce6ae9918739330c16d13ae3c19e406946293bbd4a69c0182085d8a4798",
+  "rows": [
+    {
+      "id": "sufficient",
+      "required_nested_assessment_present": false,
+      "verdict": "TRUE",
+      "confidence": "Medium",
+      "gaps": [],
+      "material_uncertainties": [
+        "The two accounts are textually distinct (clerk-compiled minutes vs. an attending reporter's tallied account), but the packet is an authored fixture and its records are stipulated; no independent third account, and no evidence about votes later in the session beyond 'at that meeting' exists. This does not undermine adjudication of the claim as stated."
+      ],
+      "observations_use_bare_ids": false,
+      "component_flags": [
+        [
+          "C0",
+          true
+        ]
+      ],
+      "nonblocking_notes": []
+    },
+    {
+      "id": "attribution",
+      "required_nested_assessment_present": false,
+      "verdict": "TRUE",
+      "confidence": "Medium",
+      "gaps": [],
+      "material_uncertainties": [
+        "None material for the attribution target: the independently recorded audio corroborates the transcript's attribution. The unverified statistic is out of scope for C0 and is not hidden here as a limitation."
+      ],
+      "observations_use_bare_ids": false,
+      "component_flags": [
+        [
+          "C0",
+          true
+        ]
+      ],
+      "nonblocking_notes": []
+    },
+    {
+      "id": "insufficient_content",
+      "required_nested_assessment_present": false,
+      "verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "Medium",
+      "gaps": [
+        "No record supplies underlying 2022 and 2023 Eastport unemployment measurements or any independent computation of the change (C0)."
+      ],
+      "material_uncertainties": [
+        "No supplied record contains the underlying 2022 and 2023 unemployment measurements or any independent calculation of the percentage change; the evidentiary path (utterance testimony) does not establish the statistic. This is a material gap and the component cannot be adjudicated."
+      ],
+      "observations_use_bare_ids": false,
+      "component_flags": [
+        [
+          "C0",
+          false
+        ]
+      ],
+      "nonblocking_notes": []
+    },
+    {
+      "id": "conflicting",
+      "required_nested_assessment_present": false,
+      "verdict": "CONFLICTING",
+      "confidence": "Medium",
+      "gaps": [
+        "No supplied record explains or resolves the 28 vs. 34 median discrepancy (C0)."
+      ],
+      "material_uncertainties": [
+        "The two medians (28 vs. 34) differ across the 30-minute threshold; whether this reflects sampling variation or measurement error cannot be adjudicated from the supplied records, and the discrepancy is explicitly unresolved. Either resolution of the discrepancy could change the verdict."
+      ],
+      "observations_use_bare_ids": false,
+      "component_flags": [
+        [
+          "C0",
+          true
+        ]
+      ],
+      "nonblocking_notes": []
+    },
+    {
+      "id": "shared",
+      "required_nested_assessment_present": false,
+      "verdict": "NOT_ENOUGH_EVIDENCE",
+      "confidence": "High",
+      "gaps": [
+        "No underlying delay measurements from any party other than the vendor are supplied (C0).",
+        "No confounder-adjusted or otherwise causally identified analysis is supplied; the vendor explicitly reports its comparison as unadjusted (C0)."
+      ],
+      "material_uncertainties": [
+        "The only source of measurements is the vendor itself, and by that source's own statement the before/after comparison was not adjusted for confounders; no independent path establishes either the size of the effect or its causal attribution to the signal system."
+      ],
+      "observations_use_bare_ids": false,
+      "component_flags": [
+        [
+          "C0",
+          false
+        ]
+      ],
+      "nonblocking_notes": []
+    }
+  ],
+  "independent_substantive_failure": "All three positive controls remain Medium. Sufficient/speech material_uncertainties contain nonmaterial/None prose, which would still block under the frozen conservative union; conflict retains material discrepancy gap. Negative unresolved flags/date-role handling improved but do not rescue failure.",
+  "unknown_references": "Observation strings contain prose instead of bare finding IDs; origin passage IDs use S1.P1/S2.P1 rather than local P1. Never auto-normalize them into a successful cell.",
+  "next": "No further wording/shape retries on this chain. Audit actual exposed development sources/components for missing-primary evidence, concrete lineage, conversion and output-contract causes.",
+  "development_released": false
+}

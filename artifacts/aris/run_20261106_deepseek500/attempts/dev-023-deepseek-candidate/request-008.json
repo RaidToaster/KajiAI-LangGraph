@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden wants to ban fracking",
+        "query": "What is Joe Biden's stated policy position on fracking as of the 2020 presidential campaign, including any distinctions between banning fracking and restricting new permits or transitioning away from fossil fuels?",
+        "candidates": [
+          {
+            "title": "What's Next for Fracking Under Biden?",
+            "snippet": "Since 2008, the United States has become the world's leading producer of oil and gas, largely due to advances in hydraulic fracturing, ... Missing:  distinctions  transitioning",
+            "url": "https://www.cfr.org/articles/whats-next-fracking-under-biden"
+          },
+          {
+            "title": "What Is Biden's Stance on Fracking? - Boston University",
+            "snippet": "President-elect Joe Biden plans to have the United States be powered on 100 percent clean energy by 2050, but how is he going to get us ... Missing:  distinctions  restricting",
+            "url": "https://www.bu.edu/articles/2020/what-is-bidens-stance-on-fracking/"
+          },
+          {
+            "title": "Joe Biden's 'not banning fracking' defense, explained",
+            "snippet": "Joe Biden was unequivocal Monday on his position for one of the more politically sensitive climate change debates: whether to ban the ... Missing:  distinctions  restricting",
+            "url": "https://www.washingtonpost.com/politics/2020/09/04/joe-biden-not-banning-fracking-defense-explained/"
+          },
+          {
+            "title": "Here's Why Biden Can't Ban Fracking, But Could Restrict It",
+            "snippet": "Fracking has emerged as a hot button issue of the 2020 election, with President Donald Trump claiming his political rival will cripple the ... Missing:  distinctions  | Show results with:",
+            "url": "https://www.bloomberg.com/news/articles/2020-10-21/here-s-why-biden-couldn-t-ban-fracking-but-could-restrict-it"
+          },
+          {
+            "title": "U.S. presidential hopeful Biden says he would not ban fracking",
+            "snippet": "Democratic presidential candidate Joe Biden said on Monday he would not ban hydraulic fracturing, a controversial method of drilling for ... Missing:  distinctions  restricting  permits",
+            "url": "https://www.reuters.com/business/environment/us-presidential-hopeful-biden-says-he-would-not-ban-fracking-2020-08-31/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-023-deepseek-candidate",
+  "timestamp": "2026-11-06T06:50:36.930754+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15026.25
+}

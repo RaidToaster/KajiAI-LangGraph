@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Carbon dioxide intoxication is caused by wearing face masks.",
+        "query": "Search PubMed/clinical trial registries for controlled human studies or case reports of carbon dioxide intoxication (CO2 toxicity) with measured inhaled CO2, mask type, wear duration, population, and alternative explanations.",
+        "candidates": [
+          {
+            "title": "CO2 Levels Behind and in Front of Different Protective Mask ...",
+            "snippet": "by H Akhondi · 2022 · Cited by 5 — Our primary objective was to determine whether continuous mask-wearing causes elevated levels of carbon dioxide (CO2) behind the facemasks. Methods. CO2 ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10324709/"
+          },
+          {
+            "title": "Carbon dioxide poisoning: a literature review of an often ...",
+            "snippet": "by K Permentier · 2017 · Cited by 225 — Abstract. The goal of this article was to provide an overview of the literature available on carbon dioxide intoxication.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5380556/"
+          },
+          {
+            "title": "Inhaled CO2 Concentration While Wearing Face Masks - PMC",
+            "snippet": "by CA Martellucci · 2022 · Cited by 41 — With the present study, we aimed at expanding the evidence about the potential inhalation of excess CO2 as a consequence of wearing surgical masks or FFP2 ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9483963/"
+          },
+          {
+            "title": "Effect of Wearing Face Masks on the Carbon Dioxide ...",
+            "snippet": "by O Geiss · 2021 · Cited by 90 — In this study, the carbon dioxide concentration in the breathing zone was measured while wearing a surgical mask, a KN95 and a cloth mask. For the surgical mask ...",
+            "url": "https://aaqr.org/articles/aaqr-20-07-covid-0403"
+          },
+          {
+            "title": "Misleading claims make facemasks appear dangerous",
+            "snippet": "It says masks could trap exhaled carbon dioxide and cause us to breathe it back in. It claims this process could lead to CO2 intoxication or ...",
+            "url": "https://www.wcnc.com/article/news/health/coronavirus/misleading-claims-facemasks-carbon-dioxide/507-98df2a7c-9eca-4c75-a341-728561d32962"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-173-deepseek-candidate",
+  "timestamp": "2026-11-06T03:50:29.854433+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4219.156
+}

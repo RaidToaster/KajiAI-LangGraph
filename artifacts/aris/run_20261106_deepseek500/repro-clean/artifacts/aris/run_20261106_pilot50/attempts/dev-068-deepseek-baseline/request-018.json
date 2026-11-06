@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden said 'If Your 8-Year-Old Child Says They Want To Be Transgender, They Have A Right To Transition'.",
+        "query": "Biden October 15 2020 town hall transcript 'zero discrimination' transgender child",
+        "candidates": [
+          {
+            "title": "Fact check: Fabricated Biden quote supports transgender ...",
+            "snippet": "In his recent town hall, Biden said there should be no discrimination towards children who identify as transgender but he made no mention of ...",
+            "url": "https://www.reuters.com/article/world/fact-check-fabricated-biden-quote-supports-transgender-childrens-right-to-tran-idUSKBN2772PC/"
+          },
+          {
+            "title": "Biden did not say transgender children should be able to ' ...",
+            "snippet": "Biden said transgender children should not experience discrimination, but he did not say they “have a right to transition.” THE FACTS ...",
+            "url": "https://apnews.com/article/fact-checking-9582957367"
+          },
+          {
+            "title": "Biden tells mother of transgender daughter there should be ...",
+            "snippet": "There should be zero discrimination,\" he continued. \"And what's happening is too many transgender women of color are being murdered. They're ...",
+            "url": "https://www.cbsnews.com/news/biden-town-hall-transgender-rights-zero-discrimination/"
+          },
+          {
+            "title": "Read the full transcript of Joe Biden's ABC News town hall",
+            "snippet": "There should be zero discrimination. And what's happening is too many transgender women of color are being murdered. They're being murdered ...",
+            "url": "https://abcnews.com/Politics/read-full-transcript-joe-bidens-abc-news-town/story?id=73643517"
+          },
+          {
+            "title": "Joe Biden ABC Town Hall Transcript October 15",
+            "snippet": "... child decides, \"I decided I want to be transgender. That's what I think I'd like to be. It'd make my life a lot easier.\" There should be zero discrimination.",
+            "url": "https://www.rev.com/transcripts/joe-biden-abc-town-hall-transcript-october-15"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-068-deepseek-baseline",
+  "timestamp": "2026-11-05T23:24:26.616513+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 531.921
+}

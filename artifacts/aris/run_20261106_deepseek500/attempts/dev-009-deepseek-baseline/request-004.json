@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent.",
+        "query": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent. evidence",
+        "candidates": [
+          {
+            "title": "Which countries achieved economic growth? And why ...",
+            "snippet": "by M Roser · 2019 · Cited by 90 — Some countries have grown a lot, while others remained poor. We look at how incomes have changed around the world and why it matters.",
+            "url": "https://ourworldindata.org/economic-growth-since-1950"
+          },
+          {
+            "title": "Why Did Some US States Get Rich But Others Never Did?",
+            "snippet": "In 2024, the richest U.S. state produced more than twice as much per person as the poorest one. GDP per capita measures economic output,",
+            "url": "https://www.youtube.com/watch?v=2jinH3xHIFk"
+          },
+          {
+            "title": "Real 1835 - 1935 GDP Growth vs Victoria 3 Growth",
+            "snippet": "I’ve been looking at historical GDP estimates for the 1835-1935 period and comparing them to what typically happens in a full 1835-1935 campaign in ...",
+            "url": "https://www.reddit.com/r/victoria3/comments/1r6bvmk/real_1835_1935_gdp_growth_vs_victoria_3_growth/"
+          },
+          {
+            "title": "US 2020 election: The economy under Trump in six charts",
+            "snippet": "Mr Trump has said the recent recovery in growth is \"the biggest in the history of our country by almost triple...that's bigger than any nation\".",
+            "url": "https://www.bbc.com/news/world-45827430"
+          },
+          {
+            "title": "Trump lies to America: \"We have more growth than this ...",
+            "snippet": "Trump lies to America: \"We have more growth than this country has ever had. And we have more growth than any country in the world is having ...",
+            "url": "https://www.facebook.com/LincolnSquareHQ/posts/trump-lies-to-america-we-have-more-growth-than-this-country-has-ever-had-and-we-/1126226580300815/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-009-deepseek-baseline",
+  "timestamp": "2026-11-06T05:54:23.262078+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11652.578
+}

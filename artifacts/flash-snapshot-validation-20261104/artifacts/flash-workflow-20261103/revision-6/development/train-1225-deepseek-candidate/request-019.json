@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Forbes 2020 valuation methodology for Michael Bloomberg net worth independent corroboration",
+        "candidates": [
+          {
+            "title": "How Forbes Tracks Michael Bloomberg's Net Worth",
+            "snippet": "Aug 7, 2026 — Forbes estimates Bloomberg's stake in Bloomberg LP using private market valuation methods , including revenue multiples (typically 5–7x EBITDA) ...",
+            "url": "https://asmapp.mssm.edu/article/how-forbes-tracks-michael-bloomberg-s-net-worth-the-billionaire-s-financial-empire-explained"
+          },
+          {
+            "title": "Billionaires Index",
+            "snippet": "The specific valuation methodology for each closely held company is included in the net worth analysis section of a billionaire's profile.",
+            "url": "https://www.bloomberg.com/billionaires/methodology/"
+          },
+          {
+            "title": "Michael Bloomberg",
+            "snippet": "He put in the seed funding for the company and now owns 88% of the business, which has estimated annual revenues of nearly $15 billion. In 2023, he appointed ... Read more",
+            "url": "https://www.forbes.com/profile/michael-bloomberg/"
+          },
+          {
+            "title": "How Much Richer Michael Bloomberg Has Gotten Over ...",
+            "snippet": "Apr 1, 2026 — Forbes estimates his wealth at approximately $109.4 billion , more than double what he was worth in 2020, making him the 16th richest person in ...",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/much-richer-michael-bloomberg-gotten-065504566.html"
+          },
+          {
+            "title": "How Bloomberg and Forbes estimate billionaire net worth",
+            "snippet": "Oct 18, 2025 — How Bloomberg and Forbes estimate billionaire net worth . The process of calculating wealth is not an exact science. Hand near an orange ... Read more",
+            "url": "https://www.morningbrew.com/stories/2025/10/19/how-to-estimate-billionaire-net-worth"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-deepseek-candidate",
+  "timestamp": "2026-11-03T08:52:37.431475+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Canada would like to reopen the border with the U.S",
+        "query": "Canada would like to reopen the border with the U.S original source fact check",
+        "candidates": [
+          {
+            "title": "Trump says Canada wants to reopen the border. But do we ...",
+            "snippet": "Sep 19, 2020 — \"We're looking at the border with Canada. Canada would like it open , and, you know, we want to get back to normal business,\" Trump said at the ... Read more",
+            "url": "https://www.cbc.ca/news/politics/trump-border-reopen-canada-1.5730806"
+          },
+          {
+            "title": "Reports that U.S. border to Canada could reopen on June ...",
+            "snippet": "May 26, 2021 — U.S. government sources tell Global News that reports they will unilaterally reopen the border with Canada on June 22 are not true. Read more",
+            "url": "https://globalnews.ca/news/7894709/reports-us-border-canada-could-reopen-june-22-untrue-sources/"
+          },
+          {
+            "title": "Trudeau hopes for a 'better summer' along U.S.-Canada ...",
+            "snippet": "May 18, 2021 — According to a Bloomberg story Friday, the Canadian government is beginning internal discussions about reopening the border with the U.S. , even ... Read more",
+            "url": "https://www.bellinghamherald.com/news/coronavirus/article251425408.html"
+          },
+          {
+            "title": "Reopen the Canada-U.S. border? Canadians say sorry, ...",
+            "snippet": "Jul 14, 2020 — Polling released last week by Abacus Data shows that 89 percent of Canadians want to see the border stay closed longer. Still, some Canadians ... Read more",
+            "url": "https://www.politico.com/news/2020/07/14/reopen-canada-us-border-360929"
+          },
+          {
+            "title": "Canada reopens its border for vaccinated US visitors",
+            "snippet": "Aug 9, 2021 — U.S. citizens and legal residents must be both fully vaccinated and test negative for COVID-19 within three days to get across one of the ... Read more",
+            "url": "https://apnews.com/article/lifestyle-canada-business-health-travel-f2a37189b8c7ac90dddec1514a7f3fa8"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-316-deepseek-baseline",
+  "timestamp": "2026-11-05T23:45:33.459113+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1798.765
+}

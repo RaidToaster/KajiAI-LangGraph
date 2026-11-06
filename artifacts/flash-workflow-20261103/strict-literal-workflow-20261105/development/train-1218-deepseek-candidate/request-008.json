@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "How did Bernie Sanders vote on the Affordable Care Act in the Senate, and what was the outcome of that vote?",
+        "candidates": [
+          {
+            "title": "Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "The Senate passed the health care bill, 60-39, on Dec. 24, 2009, with Sanders voting in favor. No Senate Republican supported it.",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "Roll Call Vote 111 th Congress - 1 st Session",
+            "snippet": "Vote Result: Bill Passed. Measure Number: H.R. 3590 (Patient Protection and Affordable Care Act ). Measure Title: An act entitled The Patient ...",
+            "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm"
+          },
+          {
+            "title": "How Each Senator Voted on Obamacare Repeal Proposals",
+            "snippet": "The Senate rejected a third Republican proposal to repeal the Affordable Care Act early Friday morning. ... Bernie Sanders Vt. N. N. N ...",
+            "url": "https://www.nytimes.com/interactive/2017/07/25/us/politics/senate-votes-repeal-obamacare.html"
+          },
+          {
+            "title": "Bernie Sanders",
+            "snippet": "by B Sanders · 2024 · Cited by 5 — Sanders ran for re-election in the 2012 election for the U.S. Senate, representing Vermont. Sanders ran unopposed in the Democratic primary on August 28, 2012.",
+            "url": "https://ballotpedia.org/Bernie_Sanders"
+          },
+          {
+            "title": "Middle-of-the-night vote clears way for Obamacare repeal",
+            "snippet": "The Sanders-Klobuchar amendment failed, 52 to 46, but 12 Republicans voted for it. Leahy supported Sanders' amendment, though 13 Democrats voted ...",
+            "url": "https://vtdigger.org/2017/01/12/middle-of-the-night-vote-clears-way-for-obamacare-repeal/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-05T10:08:18.032549+00:00",
+  "status": "reserved_outcome_unknown"
+}

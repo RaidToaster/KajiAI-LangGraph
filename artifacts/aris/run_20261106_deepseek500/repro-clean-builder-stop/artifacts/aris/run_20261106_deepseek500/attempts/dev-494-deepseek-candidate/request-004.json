@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign.",
+        "query": "What specific surveillance activities, programs, or operations are alleged in the claim, and what primary records or official documents describe them?",
+        "candidates": [
+          {
+            "title": "9-7.000 - Electronic Surveillance",
+            "snippet": "roving taps, video surveillance, and the consensual monitoring of wire or oral communications, as well as emergency interception procedures",
+            "url": "https://www.justice.gov/jm/jm-9-7000-electronic-surveillance"
+          },
+          {
+            "title": "Social Media Surveillance by the U.S. Government",
+            "snippet": "This document focuses primarily on the activities of DHS, FBI, and the State Department, Law enforcement agencies, such as the FBI and some ...",
+            "url": "https://www.brennancenter.org/our-work/research-reports/social-media-surveillance-us-government"
+          },
+          {
+            "title": "Surveillance Under the USA/PATRIOT Act",
+            "snippet": "1. Expanded access to personal records held by third parties · 2. More secret searches · 3. Expansion of the intelligence exception in wiretap law.",
+            "url": "https://www.aclu.org/documents/surveillance-under-usapatriot-act"
+          },
+          {
+            "title": "Freedom of Information Act: Frequently Asked Questions ...",
+            "snippet": "It is often described as the law that keeps citizens “in the know” about their government. The FOIA requires agencies to proactively post online certain ...",
+            "url": "https://www.foia.gov/faq.html"
+          },
+          {
+            "title": "NSA Spying: Overview | Politics and Government",
+            "snippet": "NSA spying refers to the surveillance activities conducted by the National Security Agency (NSA), primarily revealed to the public in 2013 through the ...",
+            "url": "https://www.ebsco.com/research-starters/politics-and-government/nsa-spying-overview/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-candidate",
+  "timestamp": "2026-11-06T04:32:19.969233+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6729.281
+}

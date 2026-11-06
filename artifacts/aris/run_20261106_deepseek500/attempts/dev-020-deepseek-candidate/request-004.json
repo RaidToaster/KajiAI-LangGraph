@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Viral video purportedly shows Pakistani opposition MPs chanted ‘Modi, Modi’ (India's PM)  inside the Pakistani Parliament",
+        "query": "What is the original source, upload date, and full unedited footage of the viral video, and does it show chanting of 'Modi, Modi' inside the Pakistani Parliament?",
+        "candidates": [
+          {
+            "title": "From an AI-manipulated image shared to show a 'Pakistani man' ...",
+            "snippet": "In the video, the speaker presents what is described as the original, unedited photograph, reportedly posted by the creator @saddyjordan on ...",
+            "url": "https://www.facebook.com/quintillion/posts/webqoof-from-an-ai-manipulated-image-shared-to-show-a-pakistani-man-holding-paki/1567276945442669/"
+          },
+          {
+            "title": "A video of a Pakistani Islamic preacher is falsely shared as the Chief ...",
+            "snippet": "This video is a small portion of a clip that was recorded on 01 March 2019. The person featured in it is Khalid Mehmood Abbasi, who is not ...",
+            "url": "https://factly.in/this-video-is-a-small-portion-of-a-clip-that-was-recorded-on-01-march-2019-the-person-featured-in-it-is-khalid-mehmood-abbasi-khalid-is-an-islamic-preacher-based-in-islamabad-pakistan-who-is-not-assoc/"
+          },
+          {
+            "title": "Misleading Video Claims Pro Modi Slogans chanted in Pakistan's ...",
+            "snippet": "A video is going viral on social media claiming that pro Modi slogans were chanted in Pakistan's parliament after “Pakistan students used ...",
+            "url": "https://newschecker.in/fact-check/pro-modi-slogans-misleading-claim"
+          },
+          {
+            "title": "Fake Video Alert! Pakistani propaganda accounts are ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/airnewsalerts/posts/%EF%B8%8F-fake-video-alertpakistani-propaganda-accounts-are-circulating-a-video-of-defen/1414219000901797/"
+          },
+          {
+            "title": "FACT CHECK: Do Viral Videos Show Actor Shah Rukh Khan, PM Modi ...",
+            "snippet": "A news clip about Bollywood actor Shah Rukh Khan and PM Modi promoting an AI-powered crypto-based investment scheme/app launched by Mukesh ...",
+            "url": "https://www.youtube.com/watch?v=U8UeWpqlQ90"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-020-deepseek-candidate",
+  "timestamp": "2026-11-06T06:41:00.460968+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 14449.781
+}

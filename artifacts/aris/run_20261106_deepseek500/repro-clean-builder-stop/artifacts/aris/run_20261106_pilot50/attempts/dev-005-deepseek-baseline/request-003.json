@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention. evidence",
+        "candidates": [
+          {
+            "title": "Assad Regime Groundlessly Claims US and Allies are Lying ...",
+            "snippet": "“The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information …",
+            "url": "https://www.voanews.com/a/assad-regime-groundlessly-claims-us-and-allies-are-lying-about-chemical-attacks/6742662.html"
+          },
+          {
+            "title": "[PDF] compliance with - State Department",
+            "snippet": "The United States works bilaterally and in close coordination with close allies and like- minded states, to address CWC compliance concerns and non-compliance ...",
+            "url": "https://www.state.gov/wp-content/uploads/2025/04/Condition-10-c-Report-Inaccessible-Version.pdf"
+          },
+          {
+            "title": "United States Government Assessment of the Assad Regime's ...",
+            "snippet": "The United States assesses with confidence that the Syrian regime used chemical weapons in the eastern Damascus suburb of Duma on April 7, 2018, ...",
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/united-states-government-assessment-assad-regimes-chemical-weapons-use/"
+          },
+          {
+            "title": "Strategy and Impacts of CW Disinformation",
+            "snippet": "These allegations have sparked a cycle of retaliatory sanctions, as the US, EU, and their allies impose financial and economic penalties on Russian entities in ...",
+            "url": "https://gpwmdcounterdisinfo.com/chemical-weapons-disinformation-primer/strategy-and-impacts-of-cw-disinformation/"
+          },
+          {
+            "title": "[PDF] The Chemical Weapons \"Red Line\" - LAW eCommons",
+            "snippet": "Reports that chemical agents may have been used in the war in Bosnia and. Herzegovina in July of 1995 prompted the U.S. to investigate; however, the government ...",
+            "url": "https://lawecommons.luc.edu/cgi/viewcontent.cgi?article=1009&context=pilr"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-deepseek-baseline",
+  "timestamp": "2026-11-06T00:44:13.970083+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5319.281
+}

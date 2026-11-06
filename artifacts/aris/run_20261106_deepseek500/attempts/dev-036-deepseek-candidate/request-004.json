@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Speaker Robin Vos lost a Republican-held seat in the 2018 election for the first time.",
+        "query": "What specific seat or district does the claim refer to, and was it Republican-held before the 2018 election?",
+        "candidates": [
+          {
+            "title": "Florida House of Representatives elections, 2018",
+            "snippet": "The Republican majority in the House of Representatives was reduced from 75-41 to 73-47. Four seats were vacant before the election. One Democratic incumbent ...",
+            "url": "https://ballotpedia.org/Florida_House_of_Representatives_elections,_2018"
+          },
+          {
+            "title": "How Florida's State House Districts Voted in 2018",
+            "snippet": "Seven seats are held by Republicans but were won by Andrew Gillum over Ron DeSantis. The GOP edge is of course strongest in Dade,",
+            "url": "https://mcimaps.com/how-floridas-state-house-districts-voted-in-2018/"
+          },
+          {
+            "title": "2018 United States House of Representatives elections",
+            "snippet": "Republicans maintained control of the sole seat in the state. District, Incumbent, Results, Candidates. Location, 2017. PVI ...",
+            "url": "https://en.wikipedia.org/wiki/2018_United_States_House_of_Representatives_elections"
+          },
+          {
+            "title": "Once Republican bastions, Democrats see gains in ...",
+            "snippet": "In the state's 11th Congressional District, Democrat Mikie Sherrill won the seat held by the retiring Republican chairman of the powerful House ...",
+            "url": "https://abcnews.com/Politics/republican-bastions-democrats-gains-traditionally-conservative-districts/story?id=59217697"
+          },
+          {
+            "title": "Democrat Conor Lamb claims victory in Pennsylvania ...",
+            "snippet": "Conor Lamb and Republican opponent Rick Saccone were neck-and-neck in the solidly conservative 18th district.",
+            "url": "https://www.bbc.com/news/world-us-canada-43388150"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-036-deepseek-candidate",
+  "timestamp": "2026-11-06T05:15:30.482493+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9319.796
+}

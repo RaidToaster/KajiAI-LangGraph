@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "In a letter to Steve Jobs, Sean Connery refused to appear in an apple commercial.",
+        "query": "Did Sean Connery write a letter to Steve Jobs, and what is the primary record or archive of that letter?",
+        "candidates": [
+          {
+            "title": "Connery's Fictional Letter to Jobs Goes Viral",
+            "snippet": "The letter, complete on 007 letterhead, has been making the rounds on Twitter. But it's obviously not real. It comes from the fake Mac rumor ...",
+            "url": "https://www.nbcsandiego.com/news/national-international/sean-connerys-fictional-letter-to-steve-jobs-goes-viral/1900269/"
+          },
+          {
+            "title": "Shane - A letter from Sean Connery to Steve Jobs in 1996. ...",
+            "snippet": "A letter from Sean Connery to Steve Jobs in 1996. How cool is this. Bond. James Bond.",
+            "url": "https://www.facebook.com/officialshanewarne/photos/a-letter-from-sean-connery-to-steve-jobs-in-1996-how-cool-is-this-bond-james-bon/2906415609465174/"
+          },
+          {
+            "title": "Did Sean Connery Send a Letter to Apple Rejecting ...",
+            "snippet": "A purported letter from Sean Connery caustically rejects an offer for him to become a pitchman for Apple Computers.",
+            "url": "https://www.snopes.com/fact-check/false-sean-connery-letter-to-apple/"
+          },
+          {
+            "title": "Fact check: Hoax Sean Connery letter to Steve Jobs ...",
+            "snippet": "The letter was actually written by satirical website Scoopertino, which describes itself as an “imaginary news organization devoted to ...",
+            "url": "https://www.reuters.com/article/world/fact-check-hoax-sean-connery-letter-to-steve-jobs-resurfaces-following-his-deat-idUSKBN27I276/"
+          },
+          {
+            "title": "Debunked Sean Connery-Steve Jobs Letter Resurfaces",
+            "snippet": "A satirical website's letter claiming to be to Steve Jobs from Sean Connery has resurfaced. It remains satire and not news.",
+            "url": "https://www.insidehook.com/culture/satirical-sean-connery-steve-jobs-letter-is-back"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-000-deepseek-candidate",
+  "timestamp": "2026-11-06T05:21:47.195716+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9696.515
+}

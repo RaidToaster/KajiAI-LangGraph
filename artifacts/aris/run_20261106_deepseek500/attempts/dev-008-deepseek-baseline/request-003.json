@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3. evidence",
+        "candidates": [
+          {
+            "title": "Exhaustive fact check finds little evidence of voter fraud, but ...",
+            "snippet": "More than a year after President Joe Biden won the 2020 election, former President Donald Trump and his allies still insist without evidence ...",
+            "url": "https://www.pbs.org/newshour/show/exhaustive-fact-check-finds-little-evidence-of-voter-fraud-but-2020s-big-lie-lives-on"
+          },
+          {
+            "title": "After President Donald Trump told attendees ...",
+            "snippet": "We must win the Midterms, and I believe we will! Stay focused,and vote BLUE! It's got to happen! 7w · 58 likes.",
+            "url": "https://www.facebook.com/newshour/posts/after-president-donald-trump-told-attendees-at-the-republican-midterm-convention/1548972963764611/"
+          },
+          {
+            "title": "Fact-Checking PA-related Election Claims",
+            "snippet": "Mail ballot fraud has been proven to be exceptionally rare. There is no evidence to support claims of systemic voter fraud and those claims have been ...",
+            "url": "https://www.pa.gov/agencies/vote/elections/fact-checking-pa-related-election-claims"
+          },
+          {
+            "title": "Trump's Repeated False Attacks on Mail-In Ballots",
+            "snippet": "In the past 48 hours, President Donald Trump repeatedly has refused to commit to a peaceful transfer of power if he loses, claiming that ...",
+            "url": "https://www.factcheck.org/2020/09/trumps-repeated-false-attacks-on-mail-in-ballots/"
+          },
+          {
+            "title": "Mail Voting is Safe and Secure",
+            "snippet": "Before they are counted, election officials vigorously verify the validity of every mail ballot submission. Mail ballots suspected of fraudulent ...",
+            "url": "https://bipartisanpolicy.org/report/mail-voting-is-safe-secure/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-baseline",
+  "timestamp": "2026-11-06T05:47:39.493154+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11248.796
+}

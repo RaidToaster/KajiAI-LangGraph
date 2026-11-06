@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Wisconsin voter roll purge February 2020 court order Ozaukee County",
+        "candidates": [
+          {
+            "title": "Wisconsin Elections Board in Contempt for Inaction on ...",
+            "snippet": "Ozaukee County Circuit Court Judge Paul Malloy agreed with WILL's contention on Dec. 13 that the board must adhere to the 30-day limit ...",
+            "url": "https://www.courthousenews.com/wisconsin-elections-board-in-contempt-for-inaction-on-voter-rolls/"
+          },
+          {
+            "title": "Judge Holds Elections Commissioners In Contempt In ...",
+            "snippet": "An Ozaukee County Circuit Court judge found three Wisconsin Elections Commission members and the commission in contempt of court Monday ...",
+            "url": "https://www.wpr.org/justice/judge-holds-elections-commissioners-contempt-wisconsins-voter-purge-case"
+          },
+          {
+            "title": "\"Judge orders state to purge more than 200,000 Wisconsin ...",
+            "snippet": "An Ozaukee County judge on Friday ordered the state to remove hundreds of thousands of people from Wisconsin's voter rolls because they may ...",
+            "url": "https://electionlawblog.org/2019/judge-orders-state-to-purge-more-than-200000-wisconsin-voters-from-the-rolls/"
+          },
+          {
+            "title": "Wisconsin Supreme Court says don't purge voters from rolls",
+            "snippet": "The court's 5-2 ruling Friday means about 69000 people on the list of likely movers will not have their voter registrations deactivated.",
+            "url": "https://www.pbs.org/newshour/politics/wisconsin-supreme-court-says-dont-purge-voters-from-rolls"
+          },
+          {
+            "title": "2020 WI App 17 COURT OF APPEALS OF WISCONSIN ...",
+            "snippet": "APPEALS from orders of the circuit court for Ozaukee County: PAUL V. MALLOY, Judge. Reversed and cause remanded with directions. Before ...",
+            "url": "https://www.wicourts.gov/ca/opinion/DisplayDocument.pdf?content=pdf&seqNo=255587"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T05:48:55.586410+00:00",
+  "status": "reserved_outcome_unknown"
+}

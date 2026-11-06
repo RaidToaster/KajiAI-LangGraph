@@ -1,0 +1,33 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "A Sanders press release opposes a health care bill as opposed by major health care organizations and the American people, but the snippet does not identify the bill as the ACA or show Sanders opposing Obamacare itself.",
+            "url": "https://www.sanders.senate.gov/press-releases/sanders-statement-on-health-care-vote/",
+            "quote": "“This bill is opposed by virtually every major health care organization in this country. It is opposed overwhelmingly by the American people.",
+            "context": "“This bill is opposed by virtually every major health care organization in this country. It is opposed overwhelmingly by the American people."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T08:59:48.558448+00:00",
+  "status": "reserved_outcome_unknown"
+}

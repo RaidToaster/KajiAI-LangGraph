@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Amy Klobuchar South Carolina debate February 25 2020 voting rights transcript",
+        "candidates": [
+          {
+            "title": "Read the full transcript of the South Carolina Democratic ...",
+            "snippet": "AMY KLOBUCHAR (D-MN), PRESIDENTIAL CANDIDATE: America deserves a president who is as resilient as her people. (CHEERING AND APPLAUSE). SEN.",
+            "url": "https://www.cbsnews.com/news/south-carolina-democratic-debate-full-transcript-text/"
+          },
+          {
+            "title": "CBS Hosts Democratic Presidential Debate in South Carolina",
+            "snippet": "Amy Klobuchar, February 25, 2020 LIVE Campaign 2020 CBS Hosts Democratic Presidential Debate in South Carolina … participated in the 10th presidential debate ...",
+            "url": "https://www.c-span.org/program/campaign-2020/cbs-hosts-democratic-presidential-debate-in-south-carolina/541754"
+          },
+          {
+            "title": "Top quotes from the Democratic presidential debate",
+            "snippet": "\"If you keep on going, we will elect Bernie, Bernie will lose to Donald Trump, and Donald Trump and the House (of Representatives) and the ...",
+            "url": "https://www.reuters.com/article/world/chaos-coming-our-way-top-quotes-from-the-democratic-presidential-debate-idUSKCN20K04X/"
+          },
+          {
+            "title": "What did we learn from this week's 2020 Democratic debate?",
+            "snippet": "from South Carolina, which is a key state. with African American voters, of Iowans bring up Amy Klobuchar. She is a neighboring-state senator, ...",
+            "url": "https://www.pbs.org/weta/washingtonweek/video/2019/11/what-did-we-learn-from-this-weeks-2020-democratic-debate"
+          },
+          {
+            "title": "Democratic debate fact check: Claims from the South ...",
+            "snippet": "AMY KLOBUCHAR: \"I am the author of the bill to close the boyfriend loophole that says that domestic abusers can't go out and get an AK-47.\" JOE ...",
+            "url": "https://abc11.com/post/ap-fact-check-south-carolina-democratic-debate/5967812/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-deepseek-candidate",
+  "timestamp": "2026-11-03T09:02:37.304325+00:00",
+  "status": "reserved_outcome_unknown"
+}

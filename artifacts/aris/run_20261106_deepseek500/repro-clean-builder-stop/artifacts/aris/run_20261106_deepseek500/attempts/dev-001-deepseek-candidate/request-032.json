@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+        "query": "Search for any independent authentication of the leaked documents by HHS, congressional investigators, or the Post beyond the single original report.",
+        "candidates": [
+          {
+            "title": "HHS Office for Civil Rights (OCR) Breach Portal",
+            "snippet": "Office for Civil Rights (OCR) investigates all breaches of protected health information (PHI) and Part 2 records that affect 500 or more individuals.",
+            "url": "https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf"
+          },
+          {
+            "title": "FINAL REPORT: COVID Select Concludes 2-Year Investigation ...",
+            "snippet": "This 520-page final report details all findings of the Select Subcommittee's investigation. U.S. Department of Health and Human Services (HHS) ...",
+            "url": "https://oversight.house.gov/release/final-report-covid-select-concludes-2-year-investigation-issues-500-page-final-report-on-lessons-learned-and-the-path-forward/"
+          },
+          {
+            "title": "Home | Office of Inspector General | Government ... - HHS.gov",
+            "snippet": "Department of Health and Human Services Office of Inspector General Search Search Report Fraud, Read the Report Report fraud, waste, and abuse.",
+            "url": "https://oig.hhs.gov/"
+          },
+          {
+            "title": "Leaked HHS budget projects $40B in cuts, ACA subsidies expire",
+            "snippet": "In an update, Inside Medicine said the entire document was authenticated by The Washington Post. The HHS has not authenticated the document and ...",
+            "url": "https://www.fiercehealthcare.com/regulatory/hhs-budget-slashed-40-billion-first-look-hhs-reorganization-leaked-document"
+          },
+          {
+            "title": "Healthcare Data Breach Statistics - The HIPAA Journal",
+            "snippet": "The latest report to Congress for calendar year 2024 shows a 12% increase in small data breaches from 2020 to 2024. es are listed as under investigation",
+            "url": "https://www.hipaajournal.com/healthcare-data-breach-statistics/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-001-deepseek-candidate",
+  "timestamp": "2026-11-06T03:55:35.556641+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4524.875
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "COVID-19 pandemic pre-planned with the help from Bill Gates.",
+        "query": "COVID-19 pandemic pre-planned with the help from Bill Gates. original source fact check",
+        "candidates": [
+          {
+            "title": "The Twitter origins and evolution of the COVID-19 “plandemic” conspiracy ...",
+            "snippet": "by MD Kearney · 2020 · Cited by 132 — Tweets about “plandemic” (e.g., #plandemic)—the notion that the COVID-19 pandemic was planned or fraudulent—helped to spread several ...",
+            "url": "https://misinforeview.hks.harvard.edu/article/the-twitter-origins-and-evolution-of-the-covid-19-plandemic-conspiracy-theory/"
+          },
+          {
+            "title": "Coronavirus: Bill Gates 'microchip' conspiracy theory and other vaccine ...",
+            "snippet": "Fact-checking vaccine claims - including ones about the ex-Microsoft boss and a dubious cow-dung trial.",
+            "url": "https://www.bbc.com/news/52847648"
+          },
+          {
+            "title": "COVID-19 vaccine rumors and conspiracy theories - PMC",
+            "snippet": "by MS Islam · 2021 · Cited by 689 — Bill Gates explains that the COVID vaccine will use experimental technology and permanently alter your DNA. WHO admits COVID vaccines will not work. Coronavirus ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8115834/"
+          },
+          {
+            "title": "Event 201",
+            "snippet": "... World Economic Forum and the Bill and Melinda Gates Foundation hosted Event 201, a high-level pandemic exercise on October 18, 2019, in New York, NY.",
+            "url": "https://centerforhealthsecurity.org/our-work/tabletop-exercises/event-201-pandemic-tabletop-exercise"
+          },
+          {
+            "title": "Fact check: Bill Gates is not responsible for COVID-19",
+            "snippet": "A photo with over 1400 shares on Facebook as of Sept. 9, 2020, shows a poster with a conspiracy theory about the COVID-19 pandemic.",
+            "url": "https://www.reuters.com/article/world/fact-check-bill-gates-is-not-responsible-for-covid-19-idUSKBN2613BY/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-035-deepseek-baseline",
+  "timestamp": "2026-11-06T07:25:40.318782+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17129.625
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden, son of US President Joe Biden has died.",
+        "query": "Hunter Biden, son of US President Joe Biden has died. original source fact check",
+        "candidates": [
+          {
+            "title": "No, Hunter Biden Did Not Die From a Drug Overdose",
+            "snippet": "In October 2020, a false and distasteful rumor emerged online that Hunter Biden, the 50-year-old son of Democratic presidential candidate ...",
+            "url": "https://www.snopes.com/fact-check/hunter-biden-dead-overdose-hoax/"
+          },
+          {
+            "title": "Fact check: Rumors that Hunter Biden is dead are a 4chan hoax",
+            "snippet": "A false rumor that Hunter Biden — the son of former Vice President Joe Biden — has died originated on 4chan.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/27/fact-check-rumors-hunter-biden-dead-4-chan-hoax/3754066001/"
+          },
+          {
+            "title": "Hunter Biden is alive, despite social media claims ... - PolitiFact",
+            "snippet": "“Someone posted on 8Kun that Hunter died of a crack overdose and Joe already on way to hospital,” the Facebook post says. “I can't verify (this) ...",
+            "url": "https://politifact.com/factchecks/2020/oct/27/facebook-posts/hunter-biden-alive-despite-social-media-claims-abo/"
+          },
+          {
+            "title": "Rumors that Hunter Biden — the son of former Vice President ...",
+            "snippet": "Rumors that Hunter Biden — the son of former Vice President Joe Biden — has died of an overdose have appeared on Facebook this week. Missing:  original  | Show results with:",
+            "url": "https://www.facebook.com/asburyparkpress/posts/rumors-that-hunter-biden-the-son-of-former-vice-president-joe-biden-has-died-of-/10164404070820322/"
+          },
+          {
+            "title": "Did Late JPMorgan Director Have Info on Hunter & Joe Biden?",
+            "snippet": "A QAnon influencer linked the death of JPMorgan Chase executive James Crown to the Bidens.",
+            "url": "https://www.newsweek.com/fact-check-joe-biden-hunter-biden-jpmorgan-death-conspiracy-theory-1811928"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-038-deepseek-baseline",
+  "timestamp": "2026-11-06T07:32:36.192864+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17545.515
+}

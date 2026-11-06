@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+        "query": "Wearing face masks can cause infections from bacteria such as staphylococcus. original source fact check",
+        "candidates": [
+          {
+            "title": "Fact check: Staph infections are common, not caused by face masks",
+            "snippet": "Based on our research, the claim that face masks cause staph infections is FALSE. Numerous dermatologists have confirmed that face masks do not ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/09/18/fact-check-staph-infections-common-not-caused-face-masks/5692064002/"
+          },
+          {
+            "title": "VERIFY: Getting a staph infection from a mask is pretty rare",
+            "snippet": "There have been some online claims that wearing a mask can cause Staphylococcus, an infection that often causes rashes on the face or worse.",
+            "url": "https://www.kvue.com/article/news/verify/verify-staph-infection-risk-masks-should-be-low-wounds-treated/507-3fc1834e-b0f3-4b9f-bb01-4acecdbc8733"
+          },
+          {
+            "title": "Do face masks increase the rate of the Staphylococcus aureus nasal ...",
+            "snippet": "by S Urquía-Cutillas · 2023 · Cited by 3 — This microorganism can be part of the skin and mucosal microbiota, but it can also cause diverse infections. to an enrichment of aero-tolerant bacteria, ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10586734/"
+          },
+          {
+            "title": "Do These Photos Show Staph Infections Caused by Face Masks?",
+            "snippet": "\"Having a staph infection [from wearing a face mask] is a pretty rare occurrence, and it usually involves multiple things for it to happen.\"",
+            "url": "https://www.snopes.com/fact-check/staph-infections-face-masks/"
+          },
+          {
+            "title": "Do face masks cause 'staph' infections? - AAP",
+            "snippet": "However, experts told AAP FactCheck there was no evidence that mask-wearing was linked to increased risk of staphylococcus (staph) infections, ...",
+            "url": "https://www.aap.com.au/factcheck/do-face-masks-cause-staph-infections/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-041-deepseek-baseline",
+  "timestamp": "2026-11-06T07:39:20.693720+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17950.015
+}

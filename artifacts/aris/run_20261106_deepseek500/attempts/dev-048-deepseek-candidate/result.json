@@ -1,0 +1,1739 @@
+{
+  "case": "dev-048",
+  "model": "deepseek",
+  "arm": "candidate",
+  "requested_model": "deepseek-v4.1-flash:cloud",
+  "gold_label": "",
+  "predicted_label": "ABSTAIN",
+  "accepted_label": "ABSTAIN",
+  "result": {
+    "claim": "99% of people recover from COVID-19.",
+    "domain": "health_medical",
+    "verdict": "UNVERIFIED",
+    "predicted_verdict": "UNVERIFIED",
+    "prediction_confidence": "Low",
+    "prediction_summary": "",
+    "verification_status": "execution_error",
+    "confidence": "Low",
+    "summary": "The evidence did not meet the verification criteria. Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found No supported verdict yet. Evidence confidence remains below High. Every finding needs retrieved citations. Find relevant evidence from at least two source hosts. This domain requires peer-reviewed evidence. Resolve and cite the assertion: 99% of people recover from COVID-19. Search for evidence against the proposed conclusion. Establish source independence; copied reporting is not corroboration.",
+    "stop_reason": "execution_error",
+    "reference_date": "2020-10-23",
+    "reference_timezone": "SE Asia Standard Time",
+    "execution_id": "a3d060c8-829a-46e7-97c7-8a644932c7a0",
+    "elapsed_seconds": 38.375,
+    "evidence": [],
+    "sources": [],
+    "retrieval_ledger": [
+      {
+        "title": "Estimating Case Fatality and Case Recovery Rates of COVID-19 - PMC",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9291733/",
+        "snippet": "by MA Khafaie · 2021 · Cited by 10 — Case fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to specific disease epidemics, ...",
+        "page_text": "## Abstract\n\n### Introduction:\n\nCase fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to specific disease epidemics, including the COVID-19 pandemic. This study aimed to compare various methods and models for calculating CFR and CRR related to COVID-19 based on the global and national data available as of April 2020.\n\n### Methods:\n\nThis analytical epidemiologic study was conducted based on detailed data from 210 countries and territories worldwide in April 2020. We used three different formulas to measure CFR and CRR, considering all possible scenarios.\n\n### Results:\n\nWe included information for 72 countries with more than 1,000 cases of COVID-19. Overall, using first, second, and third estimation models, the CFR were 6.22%, 21.20%, and 8.67%, respectively; similarly, the CRR was estimated as 23.21%, 78.86%, 32.23%, respectively. We have shown that CFRs vary so much spatially and depend on the estimation method and timing of case reports, likely resulting in overestimation.\n\n### Conclusions:\n\nEven with the more precise method of CFRs estimation, the value is overestimated. Case fatality and recovery rates should not be the only measures used to evaluate disease severity, and the better assessment measures need to be developed as indicators of countries’ performance during COVID-19 pandemic.\n\nKeywords: Coronavirus, COVID-19, Case fatality rates, CFRs, Case recovery rates, CRRs\n\nIn late December 2019, a series of unexplained pneumonia cases were reported in Wuhan, China, which led government and researchers in China to take quick action to control its spread and start a large number of etiologic studies.1 On January 30, 2020, WHO declared the epidemic of the virus as a public health emergency with international concern (PHEIC).2 COVID-19 has spread to more than 210 countries and territories around the world, and as of December 2020, nearly 1.7 million lives have been lost.3 The virus spreads through droplets after infected persons cough or sneeze, which may enter the body through inhalation or contact with contaminated surfaces, and then touching the eyes, nose, and mouth.5 According to scientists, the average time required for symptoms to appear is 5 days, but in some cases and situations, it may take much longer, as the virus' incubation period lasts up to 14 days.6\n\nCase fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to certain disease epidemics, as well as for the COVID-19 outbreak.7 CFR is the proportion of deaths due to a specified health condition compared to total infected cases.8 Calculations are based on the controversial assumption that all of patients were tested. COVID-related CFR might be either overestimated or underestimated depending on if calculations are based on every confirmed case or only those cases who have recovered or died. Specialists in epidemiology have proposed different scenarios for calculating CFR, each with its advantages and disadvantages.9-11 CRR is the proportion of recovered or discharged individuals with a specified health condition compared to total infected cases.12\n\nThe absence of reliable numbers of infected cases for the entire population could lead to inaccurate calculation of the CFR and CRR due to lack of a valid denominator. There has been an urgent need for these reported data to be openly available, so estimates of CFR and CRR can be estimated as accurately as possible. This study aimed to compare various introduced methods and models for the calculation of CFR and CRR related to COVID-19 over a time based on the recent global and national data.\n\n## Methods\n\n### Design and setting\n\nThis analytical epidemiologic study was conducted using detailed data from 210 countries and territories available around the world as of April 17, 2020. The current survey was approved by the Ahvaz Jundishapur University of Medical Sciences Ethical Committee.\n\n### Source of data and procedure\n\nWe used a method that our research team recently published to retrieve data and estimate CFR and CRR.13 In brief, the data about total cases, total deaths, and total recovered cases, alongside total screening tests used to diagnose COVID-19, were collected from the world's most acceptable and accurate data repositories, including WHO14, Worldometer4, the Centers for Disease Control and Prevention, and the Morbidity and Mortality Weekly Report series (provided from Centers for Disease Control and Prevention)15, consistent with the user's guide of data sources for patient registries.16 The data analyses were performed between April 17–19, 2020. Data were measured and analyzed for each country, and CFR and CRR for countries with ≥1,000 cases (n=72) are presented in the main tables. Data for the remaining countries with <1,000 cases (n=138) are accessible in the supplementary tables.\n\n### Measuring the CFR and CRR\n\nGiven the difficulty of estimating CFR and CRR accurately during the ongoing COVID-19 pandemic, we used three different methods to estimate CFR and CRR, considering all possible scenarios (Figure 1).\n\n### Formula I\n\nAccording to Battegay et al., we used the proportion of total deaths and recovered cases of COVID-19 disease to total cases of disease at global and national levels to estimate CFRs and CRRs, respectively.17\n\n> CFR = (Total deaths attributed to COVID-19/Total cases of COVID-19) \\* 100\n>\n> CRR = (Total recovered individuals attributed to COVID-19/Total cases of COVID-19) \\* 100\n\n### Formula II\n\nAnother method, proposed by Ghani et al., to estimate CFRs and CRRs is merely considering the summation of the current total deaths plus current total recovered as the denominator.18\n\n> CFR = Total deaths attributed to COVID-19/(deaths+recovered)\n>\n> CRR = Total recovered individuals attributed to COVID-19/(deaths+recovered)\n\n### Formula III\n\nThis formula accounts for the lag time between an individual's disease onset and death/recovery.4 T is the average time from emerging symptoms until the onset of death (or recovery). Since most countries had not adopted well-performing detection systems, to avoid overestimating the rates, T was considered 7 days, which is the difference of the minimum reported time between the onset of symptom to outcomes and the maximum incubation period.19\n\n> CFR=Deaths at day x/Total cases at day x–T\n>\n> CRR=Recovered at day x/Total cases at day x–T\n\n### Statistical analysis\n\nData management and calculation were conducted in Microsoft Excel, and results (CF and CR rates) were tabulated for the three standard methods of rate estimation by countries. We reported information for the 72 countries in the body of the paper with more than 1,000 cases of COVID-19 in the main paper, and the estimates of the remaining countries (n=138) were provided as supplementary tables. Overall rates for the world were also calculated.\n\n## Results\n\nThe total number of reported cases from the beginning of the epidemic until April 17, 2020 was 1,925,179. The USA had the highest number of COVID-19 cases detected (n=578,155; 30.5% of global cases), followed by Spain and Italy with 170,099 (8.84%) and 159,516 (8.29%) cases, respectively. Table 1 shows global as well as national data on the COVID-19 health-related consequences. Global CFRs for COVID-19 estimated by first, second, and third methods were 6.22%, 21.20%, and 8.67%, respectively. Similarly, CRRs were estimated as 23.21%, 78.86%, 32.23%. The third method, which is the more precise and widely accepted method, shows that Algeria (19.17%), Belgium (18.39%), and the UK (18.38%) account for the highest CFRs. Data about all countries with confirmed cases less than 1,000 were presented in Table S1.\n\n### Table 1.\n\n| Country | Total Recovered | Total deaths | Total cases | Active cases | Model 1 | Model 2 | Model 3 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| CFR1 | CRR1 | CFR2 | CRR2 | CFR3 | CRR3 |\n| USA | 3,950,354 | 198,128 | 6,676,601 | 2,528,119 | 2.97% | 59% | 4.78% | 95.22% | 0.85% | 57.09% |\n| India | 3,702,595 | 78,614 | 4,754,356 | 973,147 | 1.65% | 78% | 2.08% | 97.92% | 0.49% | 75.34% |\n| Brazil | 3,553,421 | 131,274 | 4,315,858 | 631,163 | 3.04% | 82% | 3.56% | 96.44% | 0.63% | 80.79% |\n| Russia | 873,535 | 18,484 | 1,057,362 | 165,343 | 1.75% | 83% | 2.07% | 97.93% | 2.20% | 78.31% |\n| Peru | 559,321 | 30,593 | 722,832 | 132,918 | 4.23% | 77% | 5.19% | 94.81% | 0.85% | 61.54% |\n| Colombia | 592,820 | 22,734 | 708,964 | 93,410 | 3.21% | 84% | 3.69% | 96.31% | 2.98% | ------ |\n| Mexico | 467,525 | 70,604 | 663,973 | 125,844 | 10.63% | 70% | 13.12% | 86.88% | 0.44% | 65.32% |\n| South Africa | 576,423 | 15,427 | 648,214 | 56,364 | 2.38% | 89% | 2.61% | 97.39% | 0.90% | 77.98% |\n| Spain | N/A | 29,747 | 576,697 | N/A | 5.16% | ------ | ------ | ------ | 0.14% | ------ |\n| Argentina | 409,771 | 11,263 | 546,481 | 125,447 | 2.06% | 75% | 2.68% | 97.32% | 0.85% | 60.79% |\n| Chile | 404,919 | 11,895 | 432,666 | 15,852 | 2.75% | 94% | 2.85% | 97.15% | 1.06% | 86.39% |\n| Iran | 344,516 | 23,029 | 399,940 | 32,395 | 5.76% | 86% | 6.27% | 93.73% | 0.68% | 81.57% |\n| France | 89,059 | 30,910 | 373,911 | 253,942 | 8.27% | 24% | 25.76% | 74.24% | 1.93% | 20.91% |\n| UK | N/A | 41,623 | 365,174 | N/A | 11.40% | ------ | ------ | ------ | 1.24% | ------ |\n| Bangladesh | 238,271 | 4,702 | 336,044 | 93,071 | 1.40% | 71% | 1.94% | 98.06% | 0.28% | 68.78% |\n| Saudi Arabia | 301,836 | 4,240 | 325,050 | 18,974 | 1.30% | 93% | 1.39% | 98.61% | 0.51% | 86.03% |\n| Pakistan | 289,429 | 6,379 | 301,481 | 5,673 | 2.12% | 96% | 2.16% | 97.84% | 0.26% | 93.21% |\n| Turkey | 257,731 | 6,999 | 289,635 | 24,905 | 2.42% | 89% | 2.64% | 97.36% | 0.32% | 88.52% |\n| Iraq | 221,283 | 7,941 | 286,778 | 57,554 | 2.77% | 77% | 3.46% | 96.54% | 0.23% | 76.62% |\n| Italy | 213,191 | 35,603 | 286,297 | 37,503 | 12.44% | 74% | 14.31% | 85.69% | 0.38% | 71.24% |\n| Germany | 235,300 | 9,427 | 260,546 | 15,819 | 3.62% | 90% | 3.85% | 96.15% | 0.87% | 89.92% |\n| Philippines | 187,116 | 4,292 | 257,863 | 66,455 | 1.66% | 73% | 2.24% | 97.76% | 0.06% | 71.58% |\n| Indonesia | 152,458 | 8,650 | 214,746 | 53,638 | 4.03% | 71% | 5.37% | 94.63% | 0.09% | 67.64% |\n| Israel | 113,496 | 1,103 | 152,722 | 38,123 | 0.72% | 74% | 0.96% | 99.04% | 0.94% | 68.37% |\n| Ukraine | 68,346 | 3,148 | 151,859 | 80,365 | 2.07% | 45% | 4.40% | 95.60% | 0.36% | 36.87% |\n| Canada | 120,075 | 9,170 | 136,141 | 6,896 | 6.74% | 88% | 7.10% | 92.90% | 0.01% | 87.39% |\n| Bolivia | 82,796 | 7,297 | 125,982 | 35,889 | 5.79% | 66% | 8.10% | 91.90% | 0.23% | 63.32% |\n| Qatar | 118,475 | 205 | 121,523 | 2,843 | 0.17% | 97% | 0.17% | 99.83% | 0.16% | 91.46% |\n| Ecuador | 91,242 | 10,864 | 116,451 | 14,345 | 9.33% | 78% | 10.64% | 89.36% | 0.33% | 76.72% |\n| Kazakhstan | 100,615 | 1,634 | 106,803 | 4,554 | 1.53% | 94% | 1.60% | 98.40% | 0.53% | 91.90% |\n| Dominican Republic | 76,531 | 1,953 | 103,092 | 24,608 | 1.89% | 74% | 2.49% | 97.51% | 0.62% | 71.19% |\n| Romania | 42,811 | 4,127 | 102,386 | 55,448 | 4.03% | 42% | 8.79% | 91.21% | 0.07% | 40.11% |\n| Panama | 73,476 | 2,155 | 101,041 | 25,410 | 2.13% | 73% | 2.85% | 97.15% | 0.01% | 71.66% |\n| Egypt | 83,261 | 5,627 | 100,856 | 11,968 | 5.58% | 83% | 6.33% | 93.67% | 0.08% | 80.48% |\n| Kuwait | 84,404 | 558 | 94,211 | 9,249 | 0.59% | 90% | 0.66% | 99.34% | 0.26% | 80.19% |\n| Belgium | 18,709 | 9,923 | 92,478 | 63,846 | 10.73% | 20% | 34.66% | 65.34% | 0.83% | 18.99% |\n| Oman | 83,325 | 762 | 88,337 | 4,250 | 0.86% | 94% | 0.91% | 99.09% | 0.25% | 93.35% |\n| Sweden | N/A | 5,846 | 86,505 | N/A | 6.76% | ------ | 100.00% | ------ | 0.49% | ------ |\n| China | 80,399 | 4,634 | 85,184 | 151 | 5.44% | 94% | 5.45% | 94.55% | 0.19% | 92.96% |\n| Morocco | 65,867 | 1,553 | 84,435 | 17,015 | 1.84% | 78% | 2.30% | 97.70% | 0.61% | 76.91% |\n| Guatemala | 70,403 | 2,949 | 81,658 | 8,306 | 3.61% | 86% | 4.02% | 95.98% | 0.25% | 86.18% |\n| Netherlands | N/A | 6,253 | 81,012 | N/A | 7.72% | ------ | 100.00% | ------ | 0.28% | ------ |\n| UAE | 68,983 | 399 | 78,849 | 9,467 | 0.51% | 87% | 0.58% | 99.42% | 0.11% | 80.38% |\n| Japan | 66,280 | 1,423 | 74,544 | 6,841 | 1.91% | 89% | 2.10% | 97.90% | 0.38% | 87.58% |\n| Belarus | 72,547 | 744 | 73,975 | 684 | 1.01% | 98% | 1.02% | 98.98% | 0.23% | 97.45% |\n| Poland | 59,725 | 2,182 | 73,650 | 11,743 | 2.96% | 81% | 3.52% | 96.48% | 0.21% | 80.92% |\n| Honduras | 17,760 | 2,065 | 67,136 | 47,311 | 3.08% | 26% | 10.42% | 89.58% | 0.15% | 20.56% |\n| Ethiopia | 24,493 | 996 | 63,888 | 38,399 | 1.56% | 38% | 3.91% | 96.09% | 0.40% | 36.44% |\n| Portugal | 43,894 | 1,860 | 63,310 | 17,556 | 2.94% | 69% | 4.07% | 95.93% | 0.14% | 67.01% |\n| Venezuela | 47,729 | 477 | 59,630 | 11,424 | 0.80% | 80% | 0.99% | 99.01% | 0.57% | 77.97% |\n| Bahrain | 53,192 | 211 | 59,586 | 6,183 | 0.35% | 89% | 0.40% | 99.60% | 0.32% | 85.07% |\n| Singapore | 56,699 | 27 | 57,357 | 631 | 0.05% | 99% | 0.05% | 99.95% | 0.28% | 97.64% |\n| Nigeria | 44,088 | 1,078 | 56,177 | 11,011 | 1.92% | 78% | 2.39% | 97.61% | 0.35% | 76.45% |\n| Costa Rica | 20,928 | 590 | 55,454 | 33,936 | 1.06% | 38% | 2.74% | 97.26% | 0.16% | 32.11% |\n| Nepal | 37,524 | 336 | 53,120 | 15,260 | 0.63% | 71% | 0.89% | 99.11% | 0.81% | 67.71% |\n| Algeria | 33,875 | 1,605 | 48,007 | 12,527 | 3.34% | 71% | 4.52% | 95.48% | 0.21% | 68.64% |\n| Uzbekistan | 43,511 | 386 | 46,850 | 2,953 | 0.82% | 93% | 0.88% | 99.12% | 0.05% | 90.71% |\n| Switzerland | 38,500 | 2,020 | 46,704 | 6,184 | 4.33% | 82% | 4.99% | 95.01% | 0.11% | 76.85% |\n| Armenia | 41,605 | 911\\_ | 45,675 | 3,159 | 1.99% | 91% | 2.14% | 97.86% | 0.05% | 89.51% |\n| Ghana | 44,342 | 286 | 45,434 | 806 | 0.63% | 98% | 0.64% | 99.36% | 0.02% | 94.92% |\n| Kyrgyzstan | 40,779 | 1,063 | 44,828 | 2,986 | 2.37% | 91% | 2.54% | 97.46% | 0.62% | 89.86% |\n| Moldova | 30,437 | 1,117 | 42,714 | 11,160 | 2.62% | 71% | 3.54% | 96.46% | 0.32% | 69.91% |\n| Afghanistan | 31,234 | 1,420 | 38,641 | 5,987 | 3.67% | 81% | 4.35% | 95.65% | 0.03% | 79.89% |\n| Azerbaijan | 35,607 | 559 | 38,172 | 2,006 | 1.46% | 93% | 1.55% | 98.45% | 0.15% | 90.23% |\n| Kenya | 22,771 | 619 | 35,969 | 12,579 | 1.72% | 63% | 2.65% | 97.35% | 0.02% | 60.83% |\n| Czechia | 21,205 | 453 | 35,401 | 13,743 | 1.28% | 60% | 2.09% | 97.91% | 0.25% | 56.27% |\n| Austria | 26,579 | 754 | 32,696 | 5,363 | 2.31% | 81% | 2.76% | 97.24% | 0.09% | 78.70% |\n| Serbia | 31,100 | 731 | 32,300 | 469 | 2.26% | 96% | 2.30% | 97.70% | 0.03% | 91.26% |\n| Ireland | 23,364 | 1,783 | 30,730 | 5,583 | 5.80% | 76% | 7.09% | 92.91% | 0.19% | 73.41% |\n| Palestine | 19,979 | 210 | 29,906 | 9,717 | 0.70% | 67% | 1.04% | 98.96% | 0.19% | 66.07% |\n| Paraguay | 13,679 | 514 | 27,324 | 13,131 | 1.88% | 50% | 3.62% | 96.38% | 0.08% | 45.81% |\n| El Salvador | 17,874 | 782 | 26,851 | 8,195 | 2.91% | 67% | 4.19% | 95.81% | 0.19% | 65.70% |\n| World | 20,811,464 | 924,577 | 28,943,657 | 7,207,616 | 3.19% | 72% | 4.25% | 95.75% | 0.73% | 68.72% |\n\nConsidering the first estimation model, the highest CRRs were in China, South Korea, and Iran. Given the second estimation model, most countries such as Germany, China, Iran, Switzerland, Canada, and Austria had CRR above 90%. Based on the third estimation model, several countries, including China, Turkey, Russia, Sweden, and Peru, had CRRs higher than 90% (Table 1).\n\nThe overall lowest and highest CFR and CRR in the European continent were estimated by model 1 and model 2, respectively (Table 2). The highest CFR was observed in the European continent using models 1 and 3; model 2 highlighted the North American continent as the region with the highest CFR (Table 2). Moreover, the highest CRR was observed in Oceania in all three models (Table 2).\n\n### Table 2.\n\n| Continents | Number of countries | Total recovered | Total deaths | Total cases | Active cases | Model 1 | Model 2 | Model 3 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| CFR1 | CRR1 | CFR2 | CRR2 | CFR3 | CRR3 |\n| Europe | 48 | 2,239,376 | 212,327 | 4,053,217 | 1,601,514 | 5.24% | 55% | 8.66% | 55% | 2.47% | 47.72% |\n| North America | 39 | 4,835,653 | 289,160 | 7,950,455 | 2,825,642 | 3.64% | 61% | 5.64% | 61% | 0.52% | 59.77% |\n| Asia | 49 | 6,843,427 | 162,543 | 8,485,682 | 1,479,712 | 1.92% | 81% | 2.32% | 81% | 0.17% | 78.56% |\n| South America | 14 | 5,771,324 | 227,166 | 7,073,893 | 1,075,403 | 3.21% | 82% | 3.79% | 82% | 0.05% | 81.19% |\n| Africa | 57 | 1,096,779 | 32,556 | 1,352,693 | 223,358 | 2.41% | 81% | 2.88% | 81% | 0.08% | 80.68% |\n| Oceania | 7 | 25,940 | 843 | 29,967 | 3,184 | 2.81% | 87% | 3.15% | 87% | 0.27% | 69.35% |\n| World | 210 | 20,813,150 | 924,610 | 28,946,628 | 7,208,868 | 3.19% | 72% | 4.25% | 72% | 0.41% | 70.36% |\n\nThe impact of important contributing factors affecting CFR and CRR such as the country's population, GDP, number of hospital beds per 1,000 people, number of ICU beds per 100,000 people, and number of ventilators were assessed in the three different proposed models of estimation (Table S2). Comparison among countries with high, moderate, and low CFR was illustrated in Figure 2.\n\nThough the analysis showed a statistically non-significant pattern for all variables of interest, models 1 and 2 potentially provide more accurate estimates of CFR and CRR (Table 3). The WHO reported CFR for COVID-19 as 2%20; other calculated values are shown based on data and available literature in countries and at the global level (Table 4).\n\n### Table 3.\n\n| Variables | Model 1 | Model 2 | Model 3 |\n| --- | --- | --- | --- |\n| rs | P | rs | P | rs | P |\n| Population With CFR | 0.088 | 0.597 | -0.078 | 0.637 | 0.124 | 0.457 |\n| Population With CRR | 0.098 | 0.556 | 0.078 | 0.637 | -0.082 | 0.622 |\n| GDP With CFR | 0.152 | 0.361 | -0.029 | 0.859 | 0.266 | 0.106 |\n| GDP With CRR | 0.121 | 0.467 | 0.029 | 0.859 | 0.005 | 0.974 |\n| NHB With CFR | -0.167 | 0.315 | -0.149 | 0.637 | 0.192 | 0.247 |\n| NHB With CRR | 0.124 | 0.457 | 0.149 | 0.371 | 0.121 | 0.468 |\n| NIB With CFR | 0.112 | 0.501 | 0.014 | 0.933 | 0.029 | 0.073 |\n| NIB With CRR | 0.122 | 0.462 | -0.014 | 0.933 | 0.217 | 0.188 |\n| Number of Ventilators With CFR | -0.221 | 0.181 | -0.009 | 0.953 | 0.041 | 0.803 |\n| Number of Ventilators With CRR | -0.109 | 0.511 | 0.009 | 0.953 | -0.088 | 0.0595 |\n\nNote: NHB: Number of Hospital Beds per 1000 people; NIB: Number of ICU Beds per 100,000 people; CFR: Case Fatality Rate; CRR: Case Recovery Rate; rs: Pearson Correlation Coefficient; P: P-value\n\n### Table 4.\n\n| Study ID (reference) | Country | Population | Method | CFR | Estimation level |\n| --- | --- | --- | --- | --- | --- |\n| Change et al, 2020 (19) | China | >30 Chinese locations and other countries/regions | Model 1 (Computational using Bayes Theorem) | 3.7% | Local |\n| Yang et al, 2020 (20) | China | 205 patients with cancer and laboratory-confirmed SARS-CoV-2 infection | Model 1 | Hematological malignancies: 41% Solid tumors: 3.28 | Local |\n| Turk et al., 2020 (21) | USA | 474 people with intellectual and developmental disabilities (IDD) | Model 1 (CFR within 30 days) | 5.1% | Local |\n| Capalbo et al., 2020 (22) | Italy | 182 patients with laboratory-confirmed SARS-CoV-2 infection | Model 2 | 12.1% | Local |\n| Dongarwar and Salihu, 2020 (23) | USA | A total of 213 countries had been affected by the disease as of May 6, 2020 | Model 1 | Asia: 3.5 Australia: 1.4% | Global |\n| Peng et al., 2020 (24) | China | 82,836 patients with COVID-19 were confirmed in mainland China | Model 1 | 5.6% | Local |\n| Abdollahi et al., 2020 (3) | Canada and USA | Using data for COVID-19 confirmed cases | Model 1 (CFR within 30 days) | Canada: 4.9% USA: 5.4% | Local |\n| Undela and Gudi, 2020 (25) | India | 2,761,121 confirmed cases | Model 1 | 7.0% | Global |\n| Mi et al, 2020 (26) | China | 82,735 confirmed cases | Model 1 | 5.7% | Local |\n| Khafaie and Rahim, 2020 (12) | Iran | 33,570 confirmed cases | Model 1 (CFR within 30 days) | 3.61 | Global |\n\n## Discussion\n\nWe have presented a global consequence of COVID-19 in terms of CFRs and CR",
+        "retrieved_at": "2026-11-06T07:55:46.482011+00:00",
+        "content_hash": "cd3eebe3edeb25ac967e5b0e7673f05520b419c1d38a9ef1616c134ef2988276",
+        "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "3b2969f0bea19f72e0af1ffd329be75561adbec81dcbc4cf0788829f42014b5a",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.86,
+          "evidence": 0.88,
+          "counterevidence": 0.85,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "Global COVID-19 Tracker",
+        "url": "https://www.kff.org/covid-19/global-covid-19-tracker/",
+        "snippet": "This tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths ...",
+        "page_text": "# Global COVID-19 Tracker\n\nPublished:\nOct 13, 2026\n\nEmail \n\nAdd KFF on Google\n\n## \n\n**Editorial Note:** The Policy Actions tracker will no longer be updated as the data source has ceased tracking government responses to COVID-19. For more information, please visit the Oxford Covid-19 Government Response Tracker.\n\nSection:\n\n\n0\n/\n0\n\n## Cases and Deaths\n\nCopy link to Cases and Deaths\n\nThis tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths by country, income, region, and globally. It will be updated weekly, as new data are released. As of March 7, 2023, all data on COVID-19 cases and deaths are drawn from the World Health Organization’s (WHO) Coronavirus (COVID-19) Dashboard. Prior to March 7, 2023, this tracker relied on data provided by the Johns Hopkins University (JHU) Coronavirus Resource Center’s COVID-19 Map, which ended on March 10, 2023. Please see the Methods tab for more detailed information on data sources and notes. To prevent slow load times, the tracker only contains data from the last 200 days. However, the full data set can be downloaded from our GitHub page. While the tracker provides the most recent data available, there is a two-week lag in the data reporting.\n\nNote: The data in this tool were corrected on March 18, 2024, to clarify that they represent new cases and deaths over a full week rather than the average per day over a seven-day period.\n\n## Policy Actions\n\nCopy link to Policy Actions\n\nThis tracker contains information on policy measures currently in place to address the COVID-19 pandemic. Policy categories currently being tracked include social distancing & closure measures, economic measures, and health systems measures. Policies are tracked at the country-, income-, and region-level. Please see the Methods tab for more detailed information on data sources and notes.\n\n### Social Distancing and Closure Measures\n\nAs countries continue to implement policies to prevent the transmission of SARS-CoV-2, the virus that causes COVID-19, these tables and charts show which social distancing and closure measures are currently in place by country.\n\nTable 1: Social Distancing and Closure Measures\n\nUnder 'Stay At Mome Requirements', exceptions for leaving the house may include anything from being able to leave for daily exercise, grocery shopping, and essential trips, to only being allowed to leave once a week, or one person may leave at a time, etc.\nUnder 'Workplace Closing', partial closing includes instances in which a country recommends closing the workplace (or working from home); businesses are open but with significant COVID-19-related operational adjustments; or when workplaces require closing for only some, but not all, sectors or categories of workers.\nUnder 'School Closing', partial closing includes instances in which a country has recommended school closures; all schools are open but with significant COVID-19-related operational adjustments; or some schools, but not all, are closed; full closing includes schools that are in session but operating virtually.\nUnder 'Restrictions On Gatherings', partial restrictions include restrictions on gatherings of more than 10 people; full restrictions include restrictions on gatherings of 10 people or less.\nUnder 'International Travel Controls', partial restrictions include screening and quarantine requirements for those entering the country.\nData as of July 10, 2023.\n\nKFF analysis of data obtained from the Oxford Covid-19 Government Response Tracker\n\n### Economic Measures\n\nThe COVID-19 pandemic has placed an unprecedented strain on country economies. These tables and charts show which economic-related measures, namely income support and debt relief, are currently in place by country.\n\nTable 2: Economic Measures\n\nUnder 'Income Support', some support includes instances in which a country's government is replacing less than 50% of lost salary (or if a flat sum, it is less than 50% median salary); broad support includes instances in which a country's government is replacing 50% or more of lost salary (or if a flat sum, it is greater than 50% median salary).\nUnder 'Debt/Contract Relief' refers to whether the government is freezing financial obligations for households (e.g. stopping loan repayments, preventing services like water from stopping, or banning evictions). Under debt contract relief, some support includes instances in which a country's government is providing narrow relief, specific to one kind of contract; broad support includes instances in which a country's government is providing broad debt/contract relief.\nData as of July 10, 2023.\n\nKFF analysis of data obtained from the Oxford Covid-19 Government Response Tracker\n\n### Health Systems Measures\n\nThe COVID-19 pandemic continues to strain and disrupt global health systems. These tables and charts show which health systems measures are currently in place by country.\n\nTable 3: Health Systems Measures\n\nUnder 'Vaccine Eligibility', partial availability includes availability for some or all of the following groups: key workers, non-elderly clinically vulnerable groups, and elderly groups, or for select broad groups/ages.\nUnder 'Facial Coverings', recommend/partial requirement includes instances in which a country's government recommends wearing facial coverings, requires facial coverings in some situations, and requires facial coverings when social distancing is not possible.\nData as of July 10, 2023.\n\nKFF analysis of data obtained from the Oxford Covid-19 Government Response Tracker\n\n## Methods\n\nCopy link to Methods\n\n### Cases and Deaths\n\n**SOURCES**\n\nAs of March 7, 2023, all data on COVID-19 cases and deaths are drawn from the World Health Organization’s (WHO) Coronavirus (COVID-19) Dashboard. Prior to March 7, 2023, this tracker relied on data provided by the Johns Hopkins University (JHU) Coronavirus Resource Center’s COVID-19 Map, which ends on March 10, 2023. Population data are obtained from the United Nations World Population Prospects using 2021 total population estimates. Income-level classifications are obtained from the latest World Bank Country and Lending Groups. Regional classifications are obtained from the World Health Organization.\n\n### Policy Actions\n\n**NOTES**\n\nPolicy actions data include the measure that was in place for each indicator at the country-level as of the end of 2022. Policy actions data will no longer be updated as the data source has ceased tracking government responses to COVID-19. For more information, please visit the Oxford Covid-19 Government Response Tracker.\n\n**Social Distancing and Closure Measures**\n\nUnder 'Stay At Home Requirements', exceptions for leaving the house may include anything from being able to leave for daily exercise, grocery shopping, and essential trips, to only being allowed to leave once a week, or one person may leave at a time, etc. Under 'Workplace Closing', partial closing includes instances in which a country recommends closing the workplace (or working from home); businesses are open but with significant COVID-19-related operational adjustments; or when workplaces require closing for only some, but not all, sectors or categories of workers. Under 'School Closing', partial closing includes instances in which a country has recommended school closures; all schools are open but with significant COVID-19-related operational adjustments; or some schools, but not all, are closed; full closing includes schools that are in session but operating virtually. Under 'Restrictions On Gatherings', partial restrictions include restrictions on gatherings of more than 10 people; full restrictions include restrictions on gatherings of 10 people or less. Under 'International Travel Controls', partial restrictions include screening and quarantine requirements for those entering the country. Values for ‘Cancel Public Events’ were not recodified.\n\n**Economic Measures**\n\nUnder 'Income Support', narrow support includes instances in which a country's government is replacing less than 50% of lost salary (or if a flat sum, it is less than 50% median salary); broad support includes instances in which a country's government is replacing 50% or more of lost salary (or if a flat sum, it is greater than 50% median salary). Under 'Debt/Contract Relief', narrow support includes instances in which a country's government is providing narrow relief, such as relief specific to one kind of contract.\n\n**Health Systems Measures**\n\nUnder 'Vaccine Eligibility', partial availability includes availability for some or all of the following groups: key workers, non-elderly clinically vulnerable groups, and elderly groups, or for select broad groups/ages. Under 'Facial Coverings', recommend/partial requirement includes instances in which a country's government recommends wearing facial coverings, requires facial coverings in some situations, and requires facial coverings when social distancing is not possible.\n\n**SOURCES**\n\nData on and descriptions of government measures related to COVID-19 provided by the Oxford Covid-19 Government Response Tracker (OxCGRT). For more detailed information on their data collection and methodology, please see their codebook and interpretation guide.\n\nMore On\n\nCOVID-19 \n\nInfectious Disease",
+        "retrieved_at": "2026-11-06T07:55:55.851396+00:00",
+        "content_hash": "f9c00d885fdecd099416d38972ccf8c390c6a4a33cbc6979be5b1fb20df7e30f",
+        "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "5f3b3b9682d94950f533f17d2e3d684fa3e652e14c04b4800ab6c5df92da466b",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.18,
+          "evidence": 0.41,
+          "counterevidence": 0.13,
+          "injection": 0.16
+        }
+      },
+      {
+        "title": "Coronavirus (COVID-19) Deaths",
+        "url": "https://ourworldindata.org/covid-deaths",
+        "snippet": "This page provides data on the number of confirmed deaths from COVID-19. Research has shown that these figures are an underestimate of the total pandemic ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:55:57.095790+00:00",
+        "content_hash": "d5d073de92b8447ccbda393860f673fe514ed71d2fa87d27086ece724b903f5b",
+        "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "f2540349b2e2ddf5e265f70352b4b8aae3eb03abdcedccdbf1104b8b32b84aae",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.22,
+          "evidence": 0.37,
+          "counterevidence": 0.38,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "Underlying Conditions and the Higher Risk for Severe COVID-19",
+        "url": "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html",
+        "snippet": "This page summarizes data from published reports, Age Age remains the strongest risk factor for severe COVID-19 outcomes, the risk of death is 25 times higher ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:55:57.095790+00:00",
+        "content_hash": "4070c384d8901e83cf7de5c53be42696fd3e63cc766cf12f809428abe5441d0b",
+        "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "1ed5323c59f5b61f00ea2ef90086587d8a4ba41684891406cebca764eca2522f",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.22,
+          "evidence": 0.43,
+          "counterevidence": 0.45,
+          "injection": 0.04
+        }
+      },
+      {
+        "title": "COVID-19 Data Resources",
+        "url": "https://www.data4sdgs.org/resources/covid-19-data-resources",
+        "snippet": "Data on population risk factors can help governments prepare and respond to the pandemic and save lives.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:55:57.095790+00:00",
+        "content_hash": "6828e347042cbe76c13132c9211e518c1119d3002e4666f7b6d9feb0c0e0ae99",
+        "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "a033512279cc94d94e83fc0cfb83306291c07681579443e4ff6cd11b98ce6c3d",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.07,
+          "evidence": 0.07,
+          "counterevidence": 0.09,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "Whole of population-based cohort study of recovery time from ...",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8225991/",
+        "snippet": "80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later.",
+        "page_text": "## Abstract\n\n### Background\n\nCOVID-19 results in persisting symptoms but there is little systematically collected data estimating recovery time following infection.\n\n### Methods\n\nWe followed 94% of all COVID-19 cases diagnosed in the Australian state of New South Wales between January and May 2020 using 3-4 weekly telephone interviews and linkage to hospitalisation and death data to determine if they had recovered from COVID-19 based on symptom resolution. Proportional hazards models with competing risks were used to estimate time to recovery adjusted for age and gender.\n\n### Findings\n\nIn analyses 2904 cases were followed for recovery (median follow-up time 16 days, range 1-122, IQR 11-24).There were 2572 (88.6%) who reported resolution of symptoms (262/2572 were also hospitalised), 224 (7.8%) had not recovered at last contact (28/224 were also hospitalised), 51 (1.8%) died of COVID-19, and 57 (2.0%) were hospitalised without a documented recovery date. Of those followed, 20% recovered by 10 days, 60% at 20, 80% at 30, 91% at 60, 93% at 90 and 96% at 120 days. Compared to those aged 30-49 years, those 0-29 years were more likely to recover (aHR 1.22, 95%CI 1.10-1.34) while those aged 50-69 and 70+ years were less likely to recover (aHR respectively 0.74, 95%CI 0.67-0.81 and 0.63, 95%CI 0.56-0.71). Men were faster to recover than women (aHR 1.20, 95%CI 1.11-1.29) and those with pre-existing co-morbidities took longer to recover than those without (aHR 0.90, 95%CI 0.83-0.98).\n\n### Interpretation\n\nIn a setting where most cases of COVID-19 were ascertained and followed, 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later.\n\n### Funding\n\nNSW Health Emergency Response Priority Research Projects\n\nKeywords: COVID-19, Recovery, Cohort study\n\n## Research in context.\n\n### Evidence before this study\n\nThere is significant concern regarding the longer-term effects of COVID-19 but to date most studies have been restricted to volunteers or people hospitalised with disease which may bias estimates of recovery.\n\n### Added value of this study\n\nIn this study we followed 94% of all people with a laboratory-confirmed diagnosis of COVID-19 in the Australian state of New South Wales to determine if they had recovered from their infection. We found that 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later. Older people, women and those with comorbidities were less likely to report recovery.\n\n### Implications of all the available evidence\n\nAccurate estimates of the proportion of people diagnosed with COVID-19 who experience long-term effects are important to estimate the impact of disease at a population level. Our whole of population estimates suggest that while only a small proportion of those presenting with COVID-19 will have prolonged symptoms, given the scale of the pandemic and the number of cases diagnosed worldwide, these effects are significant and should be considered in balancing the costs and benefits of prevention strategies.\n\nAlt-text: Unlabelled box\n\n## 1. Background\n\nCOVID-19, the disease caused by SARS-CoV-2 infection was declared a global pandemic in early 2020. While substantial knowledge has now accumulated regarding the acute clinical presentation of SARS-CoV-2 infection and some of the pathophysiological changes observed, particularly in people with serious disease who are hospitalised, less is known about the clinical course, particularly in those with less severe disease. Numerous case reports from those diagnosed with COVID-19 have described a prolonged recovery with persisting symptoms including fatigue, shortness of breath, atypical chest pains or palpitations, changes in mood and sleep disturbances, and cognitive dysfunction [1], [2], [3].\n\nThere is however substantial variation in estimates of recovery time. A systematic review and meta-analysis conducted early in the pandemic, based on 7 small case series, reported mean time from symptom onset to recovery from COVID-19 was 19 days but included both hospitalised and non-hospitalised populations and there was significant heterogeneity among estimates [4]. Other studies including samples of hospitalised patients (N=143) [5], non-hospitalised adults (N=292) [6], and self-reported cases who logged symptoms into a smartphone application (N=4182) [7], have also suggested a wide spectrum of recovery times. To date, studies are limited by their unsystematic sampling frames and low response rates which means their findings may not be generalisable [8].\n\nAustralia has managed to contain COVID-19 relatively well with currently about 30,000 cases nationally in a population of over 25 million [9]. Since the beginning of the pandemic Australia has had very high SARS-CoV-2 testing rates and very low test positivity suggesting that case detection is high, at least for symptomatic infection [9]. New South Wales (NSW) is Australia's most populous state with a population of over 8 million people, and the location of most cases in the first wave of infections in Australia (January to May 2020). We used the state's comprehensive disease notification registry, follow-up questionnaires and linked health datasets to estimate the recovery time in all people diagnosed with COVID-19 in NSW.\n\n## 2. Methods\n\n### 2.1. Population\n\nOur sampling frame comprised all people diagnosed with COVID-19 in NSW. Cases were identified through the NSW Notifiable Conditions Information Management System (NCIMS) a statutory public health register that records infectious diseases legally notifiable to public health authorities. It receives electronic notifications from laboratories and health practitioners and is used for disease surveillance and outbreak management. Detailed information on the data available on COVID-19 cases in the NCIMS is available elsewhere [10]. During the study period cases of COVID-19 were considered as confirmed if they met nationally agreed case definitions, which includes having a positive test to a validated SARS-CoV-2 nucleic acid test [11]. For all cases recorded on the NCIMS database, information collected at initial case interview included the date of illness onset, reported symptoms, test date and result, as well as sociodemographic characteristics and co-morbidities. Information on hospitalisation and death from COVID-19 was entered subsequently, as it became available.\n\n### 2.2. Follow-up through surveys and record linkage\n\nBetween April and July 2020 all people with confirmed COVID-19 reported in the NCIMS were contacted by telephone, on average 28 days after their initial diagnosis with COVID-19. They were asked, “Do you still have any symptoms following your COVID-19 infection?”. If yes, they were asked to report the symptoms experienced and if no, the date they last had symptoms and how long they were sick for. Interviewers were instructed to only collect symptoms that were new following the COVID-19 diagnosis. Those reporting having symptoms were interviewed at approximately 3-weekly intervals until resolution of symptoms. Contact for interview was not attempted if information provided to NCIMS indicated the person had died, or at the time of attempted contact the person was hospitalised or in a residential aged care facility. Telephone contact with eligible cases was attempted at least 5 times over a 2-week period before they were considered as non-responders.\n\nWe used methods previously described to link cases to a register of hospitalisations in NSW to determine if they had at least an overnight inpatient admission for COVID-19, to supplement the reporting to NCIMS [12]. Reports of COVID-19 related deaths were obtained from the NCIMS record. Interviews were approved by the NSW Health Department as part of routine public health surveillance and this study was approved by the UNSW Human Research Ethics Committee (HC200483).\n\n### 2.3. Data Statement\n\nData used in these analyses are held by the NSW Ministry of Health. Data are only available on request to the Ministry and with appropriate ethical clearances regarding use.\n\n### 2.4. Analysis\n\nFor our primary analysis we included all confirmed COVID-19 cases reported to the NCIMS database with an onset date from 1 January to 29 May 2020, and for which there was a follow-up record through either a completed telephone interview, or a COVID-19 hospitalisation or death record. The outcome of interest was recovery from COVID-19 defined as the absence of self-reported symptoms of COVID-19. Follow-up commenced at the reported date of onset of COVID-19 which was the date of first symptoms or the date of first positive test, whichever came first, and concluded at the first date no symptoms of COVID-19 were reported or the date of last interview (if symptoms continued), or if they had no interview record, the last date of COVID-19 related hospitalisation or date of death. Cases who had no symptoms at the time of their first positive SARS-CoV-2 test were included in analyses, as a few reported having had symptoms at the 28-day interview but for the vast majority of these cases, recovery was considered to occur one day following their positive test.\n\nSurvival analysis was used to estimate the relative risks of recovery by age, gender, socioeconomic status, symptoms reported at onset and selected pre-existing co-morbidities. As people who die from COVID-19 cannot recover, a competing-risks regression was used to allow for the competing risks of COVID-19 death [13]. All analyses were routinely adjusted for age and gender.\n\n### 2.5. Role of the funding sources\n\nThe study funders had no role in study design, data analysis, data interpretation or writing of the report. The corresponding author had full access to the data in the study and had final responsibility for the decision to submit for publication.\n\n## 3. Results\n\nIn total there were 3096 confirmed COVID-19 cases diagnosed in NSW during the study period. Of these cases follow-up information was available for 2904 (93.8%) who were followed in statistical analyses for a median of 16 days; range 1 to 122; interquartile [IQR] range 11 to 24. Of those with follow-up data, 2572 (88.6%) had a documented interview record that they had recovered (of which 262 were hospitalised), and 224 (7.8%) had not yet recovered at time of last telephone contact (of which 28 were hospitalised). A further 51 (1.8%) died of COVID-19 and 57 (2.0%) were hospitalised for COVID-19 without a documented interview record of a recovery date. A flow diagram describing the outcome for all cases with follow-up information is shown in Appendix 1. The mean time between onset of COVID-19 and first interview or between subsequent interviews if required, was 29 days (SD 12; median 27 days, IQR 23-33). The average age of the 2904 cases was 47 years (standard deviation [SD] 20 years), 51% were female and 65% had a reported comorbidity. Of cases analysed, 3.9% (113/2904) were asymptomatic at diagnosis of which 94% (106/113) reported having no symptoms at follow up. The characteristics of cases overall and according to whether they were hospitalised or died are shown in Appendix 2.\n\nFigure 1 shows the cumulative incidence curve for recovery from COVID-19 among the 2904 cases and Appendix 3 provides the cumulative incidence data in 5-day intervals following disease onset. In the first 10 days after illness onset, only 20% of cases had recovered but by 20 days 60% had recovered; by 30 days, 80% had recovered; by 60 days 91% had recovered; by 90 days 93% had recovered, and by 120 days 96% had recovered. Of those who had not recovered at the time of their last interview, the most commonly reported residual symptoms included cough (46.7%) and fatigue (36.0%).\n\nFigure 2 shows the hazard ratios for time to recovery from COVID-19 according to age, gender, presence of symptoms at diagnosis, and level of socioeconomic disadvantage and Appendix 4 shows cumulative incidence curves by age and gender and cumulative incidence tables by age group are in Appendix 5. After adjusting for gender, compared to those aged 30-49 years, those aged 0-29 years were 22% more likely to recover whilst those aged 50-69 years were 26% less likely to recover and those aged 70+ years 37% less likely to recover. After adjusting for age, men were 20% faster to recover than women. Those with symptoms at COVID-19 diagnosis were substantially slower to recover than those who were asymptomatic at diagnosis. There was no discernable difference in likelihood of recovery by socioeconomic disadvantage.\n\nFigure 3 shows the relative risk of recovery according to symptoms reported at COVID-19 diagnosis. Compared to those without any symptoms there was a substantially lower likelihood of recovery if any symptoms were reported but this did not vary with the type of symptoms experienced.\n\nFor many comorbidities examined (Figure 4), particularly among people with chronic kidney disease, cerebrovascular disease or chronic obstructive pulmonary disease (COPD), the likelihood of reporting continuing symptoms for those with the condition was lower than in those without. Those with more comorbidities were also less likely to recover than those with fewer.\n\n## 4. Discussion\n\nIn this study we aimed to use a systematic and inclusive sampling frame to estimate recovery from COVID-19. In our sample of close to 3000 confirmed COVID-19 cases we found 80% of people had recovered within a month of disease onset, more than 90% recovered by 2 months and 93% by 3 months. We also found that recovery is faster in younger people, in men compared to women, and in those with no comorbidities. The major strength of our study is that we have systematically followed almost the entire population diagnosed with COVID-19 within the Australian state of NSW to ascertain recovery from infection thereby reducing potential for selection bias that may affect many other studies [8]. We had follow-up data on 2904 laboratory confirmed COVID-19 cases, which included almost 95% of all people diagnosed during the study period.\n\nWhile there have been numerous case reports and case series of people experiencing prolonged recovery from COVID-19 there are few large studies that include unselected population samples documenting recovery, particularly in people who have not been hospitalised. Thus, accurate information on what proportion of COVID-19 cases are expected to experience prolonged symptoms is limited. A US study randomly surveyed adults who were diagnosed through outpatient settings. They found among 274 symptomatic cases (56% response rate) that at an average of 16 days post-laboratory diagnosis, 35% had not recovered [6]. Similar to our analysis, they found a higher proportion of younger cases had recovered and that those with more comorbidities were less likely to have recovered. However, unlike in our report, they did not find differences between men and women. In another sample of 4182 adults from the UK, the US, and Sweden (mean age 43 years; 28.5% male) who volunteered to log their symptoms into a smartphone application and had reported testing positive for SARS-CoV-2, about 13% reported symptoms lasting longer than 28 days, 4.5% for more than 8 weeks and 2.3% for more than 12 weeks [7]. Similar to our report this study also reported a longer duration of symptoms in older adults and in women but also found longer duration of symptoms in those with high body mass index. The UK Office for National Statistics has surveyed over 8000 people who tested positive for COVID-19 and reported that 21% were symptomatic at 5 weeks post-infection and 10% at 12 weeks [14]. As our sample includes all people diagnosed with COVID-19 in NSW, including those who died or were hospitalised with COVID-19 our estimates of the proportion of people recovered over time are unlikely to be directly comparable to these other samples.\n\nOther viral infections such as Epstein-Barr virus are known to cause prolonged illness characterised by fatigue [15] and long-term effects of COVID-19 are not unexpected with studies on people with SARS-CoV-2 infection suggesting evidence of impairment in multiple organs, predominantly the heart and lungs even in those not hospitalised with the disease [16,17]. It has been hypothesised that as the virus attaches to the ACE2 receptor, which is present on the lung as well as many other organs, that inflammatory changes leading to longer-term organ damage may occur and that this may lead to long-standing symptoms from the disease [1]. Other proposed mechanisms for persisting symptoms include that some people infected by SARS-CoV-2 continue to harbour virus or persisting viral fragments which trigger immune responses, or that in some people the longer-term effects from COVID-19 result from an overactive immune response such as observed in other post-viral syndromes [18,19].\n\nOur findings may be explained by the different mechanisms that are thought to underlie prolonged recovery from COVID-19. It is well known that COVID-19 severity, hospitalisations and deaths increase with increasing age and with the prevalence of some comorbidities. Therefore, it is unsurprising that we found recovery was longer and was less likely in these groups. It is less clear why, after adjusting for age, women took longer to recover than men. Women are known to have higher incidence of autoimmune and inflammatory conditions than men, so our findings also support suggestions of an immune mechanism underlying prolonged symptoms. It has been reported that greater socioeconomic disadvantage may increase COVID-19 severity [20] however after adjusting for other factors we did not find significant differences in likelihood of recovery between different socioeconomic groups in our whole of population sample.\n\nDuring the study period (Jan to May 2020) in NSW, SARS-CoV-2 testing was predominantly recommended for individuals who had symptoms suggestive of COVID-19 and asymptomatic screening was mostly confined to close contacts of known cases. Therefore, while we were able to follow almost all cases with COVID-19 diagnosed in the state it is likely that a proportion of mostly asymptomatic cases were not diagnosed and therefore not included in this analysis [21]. As we found that only a small proportion of people (6%) who were asymptomatic at initial diagnosis reported any symptoms at follow-up it is likely that the impact of these missed cases would be to reduce overall estimated recovery times.\n\nStudy limitations include that if at interview people reported no further symptoms, they were not re-interviewed, so it is possible if people experienced a recurrence of symptoms this would not have been captured. Furthermore, symptoms initially reported were not collected using standardised tools so they may not be comparable with other studies. Also, contact protocols meant that people hospitalised or in aged care were less likely to be interviewed. While this was a relatively small proportion of the total sample, this loss to follow-up is likely to be biased towards the older age group, leading to a potential overestimate of likelihood of recovery in this group. Also while interviewers were asked to only record symptoms related to the diagnosis of COVID-19, it is possible that those with comorbidities may have had difficulty differentiating pre-existing complaints from new ones, also creating a bias towards those with more comorbidities being less likely to be classified as recovered. Finally, no functional or diagnostic measures were conducted although this was not the aim of our study and is likely to have enabled the high follow-up rates which was the purpose of this epidemiological report.\n\nIn summary, we found that in a large whole-of-population sample of mostly symptomatic people with laboratory confirmed COVID-19, while 80% recover within 30 days of infection, at 3 months from disease onset, 7% had not. Given th",
+        "retrieved_at": "2026-11-06T07:56:00.400859+00:00",
+        "content_hash": "c289d9967f9a4386c2f06bd99cfb09c93d4ad21b1a70daee428011dd74da95a5",
+        "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "ddcd78bb865bda6080d38e8745244951e191836a4a6af9aee9a022ce9b1ceca7",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.89,
+          "evidence": 0.94,
+          "counterevidence": 0.75,
+          "injection": 0.02
+        }
+      },
+      {
+        "title": "Post COVID-19 condition (long COVID)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/post-covid-19-condition-(long-covid)",
+        "snippet": "Most patients with COVID-19 recover fully, but some develop post COVID-19 condition with medium- to long-term effects on one or more body ...",
+        "page_text": "## Key facts\n\n* Most patients with COVID-19 recover fully, but some develop post COVID-19 condition with medium- to long-term effects on one or more body systems.\n* Approximately 6 in every 100 people who have COVID-19 develop post COVID-19 condition.\n* While data are limited, the chance of developing post COVID-19 condition appears to be lower now than earlier in the pandemic. However, the virus is still circulating widely, and every new infection is associated with a risk.\n* Fatigue, breathlessness, muscle or joint pain, and impaired sleep are common symptoms of post-COVID-19 condition.\n* WHO is working to develop clinical practice guidelines for management of post COVID-19 condition.\n* Health-care providers can guide patients on self-management of symptoms and offer medication for symptom relief or referral for rehabilitation services as needed.\n\n---\n\n  \n\n## Overview\n\nCOVID-19 can lead to serious long-term effects, known as post COVID-19 condition (PCC). It is also commonly referred to as long COVID. Post COVID-19 condition is characterized by a range of symptoms which usually start within 3 months of the initial COVID-19 illness and last at least 2 months. PCC can affect a person’s ability to perform daily activities such as work or household chores and restrict social participation.\n\n## Scope of the problem\n\nMillions of people have been affected with post COVID-19 condition since the beginning of the pandemic *(1)*. Global estimates indicate that 6 in 100 people with COVID-19 develop post COVID-19 condition. Estimates largely come from people who suffered COVID-19 early in the pandemic (in the first two years), and there is a very large variation in estimates *(2)*.\n\nMore recent research shows the chances of developing post COVID-19 condition have reduced, but these data are limited and mostly from high-income countries *(3)*. However, the SARS-CoV-2 virus, the virus that causes COVID-19 is widely circulating and post COVID-19 condition remains a substantial threat and ongoing challenge to global public health.\n\n## Risk factors\n\nAnyone who was infected with SARS-CoV-2 can develop post COVID-19 condition. Some people have higher risk. These include women, older adults, smokers, those who are overweight or obese or have pre-existing chronic health problems. Repeated infections and severe COVID-19 needing hospitalization or ICU admission also increase the risk *(4)*. We see higher numbers of post COVID-19 condition sufferers among people with disabilities, and where health disparity and access to health care is a problem *(5)*.\n\nResearch is ongoing to better understand what causes post COVID-19 condition. Almost any organ can be affected, including the heart and blood vessels, lungs, nervous system, gut and endocrine (hormone) system. In those with post COVID-19 condition, researchers have found evidence of persistence of SARS-CoV2 virus in the body, of altered immune responses and autoimmunity, and of formation of microscopic blood clots (micro-thrombosis), among other problems *(6)*.\n\n## Symptoms\n\nOver 200 different symptoms have been reported by people with post COVID-19 condition. Common symptoms include:\n\n* fatigue\n* aches and pains in muscles or joints\n* feeling breathless\n* headaches\n* difficulty in thinking or concentrating\n* alterations in taste.\n\nImpaired sleep, depression and anxiety also occur *(5)*. These symptoms might persist from their initial illness or develop after their recovery. Symptoms can be mild to severely debilitating, and affect someone’s capacity to work, perform their daily activities or do exercise.\n\nWith increasing understanding of post COVID-19 condition, some clinical patterns have become clearer. There are symptoms which tend to occur together, for example dizziness, palpitations, light-headedness on standing, and exercise intolerance (related to postural orthostatic tachycardia syndrome), symptoms of post exertional malaise, or myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS) *(7)*.\n\nOther medical conditions can occur more often than usual after having COVID-19. These include kidney impairment, heart disease, stroke, diabetes and mental health disorders, among other conditions *(8)*.\n\n## Impact\n\nPost COVID-19 condition can affect the ability to work and may lead to loss of productivity, and a reduction in income and quality of life. Ongoing medical needs of people with the condition may stretch existing health systems.\n\n## Recovery\n\nSymptoms of post COVID-19 condition generally improve over time, typically 4–9 months. Approximately 15 in 100 people still have symptoms at 12 months as per global estimates from 2022 *(2)*.\n\n## Treatments\n\nThe individual needs of patients with post COVID-19 condition vary. At the present time, there remains limited research on treatments and a lack of large studies to understand the most effective treatments. However, doctors and their patients may make individualized treatment decisions based on knowledge from similar medical conditions. Health-care providers may offer medications for symptomatic relief as needed. Additionally, newly diagnosed medical problems occurring after COVID-19 frequently have well-established treatments, for example kidney disease or stroke. Many symptoms and functional impairment can be managed effectively by rehabilitation, and with careful communication between primary care practitioners and medical specialists.\n\n## Self-care\n\nEducation about the importance of quality rest and sleep and skills training on energy conservation techniques can help patients manage their symptoms better. Health-care providers can discuss with patients about self-management strategies to respond promptly to a flare-up or relapse, such as identifying possible triggers, temporarily reducing activity levels, monitoring symptoms over time, and not returning to usual activity levels until the flare-up has resolved. Use of assistive devices and environmental modifications at work and home may be needed in some instances.\n\n## Prevention\n\nPeople can be reinfected with SARS-CoV-2 multiple times. Each time, they have a risk of developing post COVID-19 condition. Therefore, risk reduction with preventive measures such as the use of masks, personal hygiene and ventilation in high-risk situations continues to be important. Receiving two doses of vaccination appears to reduce the likelihood chance of developing post COVID-19 condition *(9)*.\n\n## WHO response\n\nWHO first started work on post COVID-19 condition in the first wave of the global COVID-19 pandemic in 2020 when reports began to emerge that some patients had persistent symptoms weeks or months following SARS-CoV-2 infection. To better understand this phenomenon, WHO met with patient advocates, researchers, health-care providers and public health professionals and by September 2020, established emergency international classification of disease (ICD) codes for post COVID-19 condition.\n\nSince then, WHO has developed a clinical case definition of post COVID-19 condition to recognize the condition and its impact on people’s lives. This definition was developed by patients, researchers and clinical experts, representing all WHO regions, with the understanding that the definition may change as new evidence emerges and our understanding of the consequences of COVID-19 evolves.\n\nA separate clinical case definition for post COVID-19 condition in children and adolescents is also available.\n\nWHO has been organizing webinars on post COVID-19 condition since February 2021 to expand understanding of the condition and its impact on patients’ lives, and foster research and collaboration. A global webinar series on the medical management of post COVID-19 condition is organized each month and has been running since 2023.\n\nA WHO Guideline Development Group consisting of global experts, frontline providers and affected individuals is presently at work on guidelines on diagnosis, treatment and rehabilitation in post COVID-19 condition.\n\nWe advocate for governments and funders to support research on post COVID-19 condition in the interest of improved understanding of this condition around the world, not just in high-income countries, and design optimal clinical care for patients. National authorities are encouraged to plan and budget for multidisciplinary post COVID-19 condition programmes and to ensure equitable access to relevant therapies.\n\n**References**\n\n1. Al-Aly, Z., Davis, H., McCorkell, L. *et al.* Long COVID science, research and policy. *Nat Med* 30, 2148–2164 (2024). https://doi.org/10.1038/s41591-024-03173-6\n2. Vos, T. *et al.* Estimated Global Proportions of Individuals With Persistent Fatigue, Cognitive, and Respiratory Symptom Clusters Following Symptomatic COVID-19 in 2020 and 2021. *JAMA* 328, 1604–1615 (2022).\n3. Ford ND, Slaughter D, Edwards D, et al. Long COVID and Significant Activity Limitation Among Adults, by Age — United States, June 1–13, 2022, to June 7–19, 2023. MMWR Morb Mortal Wkly Rep 2023;72:866–870. DOI: http://dx.doi.org/10.15585/mmwr.mm7232a3.\n4. Tsampasian, V. *et al.* Risk factors associated with Post-COVID-19 Condition: A Systematic Review and Meta-analysis. *JAMA Intern Med* 183, (2023).\n5. Jean P. Hall, Noelle K. Kurth, Lisa McCorkell, and Kelsey S. Goddard, 2024: Long COVID Among People With Preexisting Disabilities. American Journal of Public Health 114, 1261\\_1264, https://doi.org/10.2105/AJPH.2024.307794\n6. Peluso MJ, Deeks SG. Mechanisms of long COVID and the path toward therapeutics. *Cell*. 2024;187(20):5500-5529. doi:10.1016/j.cell.2024.07.054\n\n7. The persistence of Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS) after SARS-CoV-2 infection: A systematic review and meta-analysis. Dehlia, Ankush et al. Journal of Infection, Volume 0, Issue 0, 106297\n8. Bowe, B., Xie, Y. & Al-Aly, Z. Postacute sequelae of COVID-19 at 2 years. Nat Med 29, 2347–2357 (2023). https://doi.org/10.1038/s41591-023-02521-2\n9. Byambasuren O, Stehlik P, Clark J*, et al.*Effect of covid-19 vaccination on long covid: systematic review. *BMJ Medicine*2023;2**:**e000385. doi: 10.1136/bmjmed-2022-000385",
+        "retrieved_at": "2026-11-06T07:56:08.660428+00:00",
+        "content_hash": "1e0e815d37bb8a7a54ff33f4ec0e45669c6815e285f65599763e18f368780099",
+        "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "8a8cdbb229b87f67fddea43c3bc622245c3d544933b8b9cd9be3ae2a2095b225",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.83,
+          "evidence": 0.86,
+          "counterevidence": 0.66,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "A negative COVID-19 test does not mean recovery - Nature",
+        "url": "https://www.nature.com/articles/d41586-020-02335-z",
+        "snippet": "A negative COVID-19 test does not mean recovery Pandemic policy must include defining and measuring what we mean by mild infection.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:56:10.480339+00:00",
+        "content_hash": "ab60ad896973b0a748a3d61801fc26745e421a73f92b62e3a7ceeda101343f02",
+        "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "faf74acabdb057095f8cb5867bf647ca4d19858e3f9891291ec0b445fc78c329",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.39,
+          "evidence": 0.17,
+          "counterevidence": 0.52,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "Underlying Conditions and the Higher Risk for Severe COVID-19",
+        "url": "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html",
+        "snippet": "Severe outcomes of COVID-19 are defined as hospitalization, admission to the intensive care unit (ICU), intubation or mechanical ventilation, or death.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:56:10.480339+00:00",
+        "content_hash": "0078d9ea0223a2bf905d9a27ae44a4c950fe30f57ffe15f81276948b6bcebeec",
+        "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "983974a888a3e3596e291143accec2093631f1948abc19608323925dee0df52d",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.22,
+          "evidence": 0.31,
+          "counterevidence": 0.24,
+          "injection": 0.04
+        }
+      },
+      {
+        "title": "Quantifying asymptomatic infection and transmission of COVID ...",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2019716118",
+        "snippet": "This metric of outbreak severity is generally defined as the total number of deaths divided by the total number of cases. In practice, this ratio is calculated ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:56:10.480339+00:00",
+        "content_hash": "1e159d2c68e6ba1c78a7a16f6c8ae71cd8669a4508a48fb5cb33693fa4c0760e",
+        "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "004dc3d8abb2f5516d7c4f38eaf8d49f39b23e9833151c7a085e34dd827ab9d6",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.26,
+          "evidence": 0.28,
+          "counterevidence": 0.21,
+          "injection": 0.04
+        }
+      }
+    ],
+    "assertions": [
+      "99% of people recover from COVID-19."
+    ],
+    "verification_questions": [
+      "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+      "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+      "What denominator (all infections, confirmed cases, hospitalized patients, or another group) is used in reported COVID-19 recovery rate estimates?",
+      "For what time period and geographic location do reported COVID-19 recovery rates approximate 99%?",
+      "How do COVID-19 recovery rates vary by age group, underlying health conditions, and healthcare capacity?",
+      "What do excess mortality and seroprevalence studies indicate about the proportion of COVID-19 infections that result in death rather than recovery?",
+      "Are there differences between recovery rates based on confirmed cases versus estimated total infections, and how large are those differences?",
+      "What independent analyses or primary records contradict or support a 99% COVID-19 recovery rate?"
+    ],
+    "planning_statements": [
+      "The claim states that 99% of people recover from COVID-19.",
+      "The claim does not specify a time period, location, or population to which the 99% recovery figure applies.",
+      "The claim does not define what counts as 'recovery' from COVID-19.",
+      "The claim does not specify whether the 99% figure refers to all infected people, confirmed cases, or another denominator."
+    ],
+    "decomposition_method": "questions_as_guidance",
+    "gaps": [
+      "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "This domain requires peer-reviewed evidence.",
+      "Resolve and cite the assertion: 99% of people recover from COVID-19.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "contradictions": [],
+    "search_queries": [
+      "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+      "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?"
+    ],
+    "research_history": [
+      {
+        "round_number": 1,
+        "queries": [
+          "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+          "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?"
+        ],
+        "new_sources": 10,
+        "proposed_verdict": "UNVERIFIED",
+        "confidence": "Low",
+        "gaps": [
+          "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found",
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "This domain requires peer-reviewed evidence.",
+          "Resolve and cite the assertion: 99% of people recover from COVID-19.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "decision": "execution_error",
+        "assessment": {
+          "proposed_verdict": "UNVERIFIED",
+          "confidence": "Low",
+          "summary": "",
+          "evidence": [],
+          "assertions": [],
+          "gaps": [
+            "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found"
+          ],
+          "contradictions": [],
+          "counterevidence_searched": false,
+          "sources_independent": false,
+          "peer_reviewed_sources": false,
+          "next_queries": [],
+          "component_ledger": [],
+          "source_origin_ledger": [],
+          "raw_indexed_assessment": {},
+          "indexed_input": {
+            "original_claim": "99% of people recover from COVID-19.",
+            "required_components": {
+              "C0": "99% of people recover from COVID-19."
+            },
+            "domain": "health_medical",
+            "reference_date": "2020-10-23",
+            "domain_guidance": {
+              "research": "Prioritize official health organizations, peer-reviewed medical journals, systematic reviews, clinical guidelines, and registered clinical trials.",
+              "analysis": "Distinguish systematic reviews, trials, observational studies, case reports, expert opinion, and anecdotes; note population and dosage limitations.",
+              "verification_standard": "Apply a strict medical evidence standard and do not generalize beyond the studied population."
+            },
+            "prior_gaps": [],
+            "planning_statements": [
+              "The claim states that 99% of people recover from COVID-19.",
+              "The claim does not specify a time period, location, or population to which the 99% recovery figure applies.",
+              "The claim does not define what counts as 'recovery' from COVID-19.",
+              "The claim does not specify whether the 99% figure refers to all infected people, confirmed cases, or another denominator."
+            ],
+            "verification_questions": [
+              "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+              "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+              "What denominator (all infections, confirmed cases, hospitalized patients, or another group) is used in reported COVID-19 recovery rate estimates?",
+              "For what time period and geographic location do reported COVID-19 recovery rates approximate 99%?",
+              "How do COVID-19 recovery rates vary by age group, underlying health conditions, and healthcare capacity?",
+              "What do excess mortality and seroprevalence studies indicate about the proportion of COVID-19 infections that result in death rather than recovery?",
+              "Are there differences between recovery rates based on confirmed cases versus estimated total infections, and how large are those differences?",
+              "What independent analyses or primary records contradict or support a 99% COVID-19 recovery rate?"
+            ],
+            "executed_queries": [
+              "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+              "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?"
+            ],
+            "source_path_review": {
+              "bound_origins": [
+                {
+                  "source": "S1",
+                  "origin": "U5",
+                  "origin_confidence": 0.58,
+                  "verification_action": "U5",
+                  "verification_action_confidence": 0.94
+                },
+                {
+                  "source": "S2",
+                  "origin": "U30",
+                  "origin_confidence": 0.21,
+                  "verification_action": "U27",
+                  "verification_action_confidence": 0.22
+                },
+                {
+                  "source": "S3",
+                  "origin": null,
+                  "origin_confidence": 0.6,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.97
+                },
+                {
+                  "source": "S4",
+                  "origin": null,
+                  "origin_confidence": 0.98,
+                  "verification_action": null,
+                  "verification_action_confidence": 1.0
+                },
+                {
+                  "source": "S5",
+                  "origin": null,
+                  "origin_confidence": 0.42,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.94
+                },
+                {
+                  "source": "S6",
+                  "origin": "U66",
+                  "origin_confidence": 0.66,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.82
+                },
+                {
+                  "source": "S7",
+                  "origin": null,
+                  "origin_confidence": 0.84,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.96
+                },
+                {
+                  "source": "S8",
+                  "origin": null,
+                  "origin_confidence": 0.92,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.98
+                }
+              ],
+              "anchor_catalogue_sha256": "a88bda68a919482e42212c4ce6ec20877f5c55bab0802cc015c10b24f21ca61f",
+              "review": {
+                "relation": "independent",
+                "confidence": 0.56
+              },
+              "model": "jev-1.13.0",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S8"
+              ],
+              "input_sha256": "1b3ddaa3778e79f8be49c5571954434c54ff2b4586aa6780aaf7c5e860211e21",
+              "scope": "Automated judgment of supplied evidence paths, not authenticated facts, a factual verdict or an acceptance decision."
+            },
+            "single_materiality_owner": true,
+            "records": [
+              {
+                "id": "S1",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8225991/",
+                "title": "Whole of population-based cohort study of recovery time from ...",
+                "content_hash": "c289d9967f9a4386c2f06bd99cfb09c93d4ad21b1a70daee428011dd74da95a5",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+                "visible_text": "## Abstract\n\n### Background\n\nCOVID-19 results in persisting symptoms but there is little systematically collected data estimating recovery time following infection.\n\n### Methods\n\nWe followed 94% of all COVID-19 cases diagnosed in the Australian state of New South Wales between January and May 2020 using 3-4 weekly telephone interviews and linkage to hospitalisation and death data to determine if they had recovered from COVID-19 based on symptom resolution. Proportional hazards models with competing risks were used to estimate time to recovery adjusted for age and gender.\n\n### Findings\n\nIn analyses 2904 cases were followed for recovery (median follow-up time 16 days, range 1-122, IQR 11-24).There were 2572 (88.6%) who reported resolution of symptoms (262/2572 were also hospitalised), 224 (7.8%) had not recovered at last contact (28/224 were also hospitalised), 51 (1.8%) died of COVID-19, and 57 (2.0%) were hospitalised without a documented recovery date. Of those followed, 20% recovered by 10 days, 60% at 20, 80% at 30, 91% at 60, 93% at 90 and 96% at 120 days. Compared to those aged 30-49 years, those 0-29 years were more likely to recover (aHR 1.22, 95%CI 1.10-1.34) while those aged 50-69 and 70+ years were less likely to recover (aHR respectively 0.74, 95%CI 0.67-0.81 and 0.63, 95%CI 0.56-0.71). Men were faster to recover than women (aHR 1.20, 95%CI 1.11-1.29) and those with pre-existing co-morbidities took longer to recover than those without (aHR 0.90, 95%CI 0.83-0.98).\n\n### Interpretation\n\nIn a setting where most cases of COVID-19 were ascertained and followed, 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later.\n\n### Funding\n\nNSW Health Emergency Response Priority Research Projects\n\nKeywords: COVID-19, Recovery, Cohort study\n\n## Research in context.\n\n### Evidence before this study\n\nThere is significant concern regarding the longer-term effects of COVID-19 but to date most studies have been restricted to volunteers or people hospitalised with disease which may bias estimates of recovery.\n\n### Added value of this study\n\nIn this study we followed 94% of all people with a laboratory-confirmed diagnosis of COVID-19 in the Australian state of New South Wales to determine if they had recovered from their infection. We found that 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later. Older people, women and those with comorbidities were less likely to report recovery.\n\n### Implications of all the available evidence\n\nAccurate estimates of the proportion of people diagnosed with COVID-19 who experience long-term effects are important to estimate the impact of disease at a population level. Our whole of population estimates suggest that while only a small proportion of those presenting with COVID-19 will have prolonged symptoms, given the scale of the pandemic and the number of cases diagnosed worldwide, these effects are significant and should be considered in balancing the costs and benefits of prevention strategies.\n\nAlt-text: Unlabelled box\n\n## 1. Background",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    11
+                  ],
+                  "P2": [
+                    13,
+                    27
+                  ],
+                  "P3": [
+                    29,
+                    164
+                  ],
+                  "P4": [
+                    166,
+                    177
+                  ],
+                  "P5": [
+                    179,
+                    577
+                  ],
+                  "P6": [
+                    579,
+                    591
+                  ],
+                  "P7": [
+                    593,
+                    1498
+                  ],
+                  "P8": [
+                    1500,
+                    1518
+                  ],
+                  "P9": [
+                    1520,
+                    1709
+                  ],
+                  "P10": [
+                    1711,
+                    1722
+                  ],
+                  "P11": [
+                    1724,
+                    1780
+                  ],
+                  "P12": [
+                    1782,
+                    1824
+                  ],
+                  "P13": [
+                    1826,
+                    1849
+                  ],
+                  "P14": [
+                    1851,
+                    1881
+                  ],
+                  "P15": [
+                    1883,
+                    2091
+                  ],
+                  "P16": [
+                    2093,
+                    2122
+                  ],
+                  "P17": [
+                    2124,
+                    2534
+                  ],
+                  "P18": [
+                    2536,
+                    2582
+                  ],
+                  "P19": [
+                    2584,
+                    3093
+                  ],
+                  "P20": [
+                    3095,
+                    3119
+                  ],
+                  "P21": [
+                    3121,
+                    3137
+                  ]
+                },
+                "passages": {
+                  "P1": "## Abstract",
+                  "P2": "### Background",
+                  "P3": "COVID-19 results in persisting symptoms but there is little systematically collected data estimating recovery time following infection.",
+                  "P4": "### Methods",
+                  "P5": "We followed 94% of all COVID-19 cases diagnosed in the Australian state of New South Wales between January and May 2020 using 3-4 weekly telephone interviews and linkage to hospitalisation and death data to determine if they had recovered from COVID-19 based on symptom resolution. Proportional hazards models with competing risks were used to estimate time to recovery adjusted for age and gender.",
+                  "P6": "### Findings",
+                  "P7": "In analyses 2904 cases were followed for recovery (median follow-up time 16 days, range 1-122, IQR 11-24).There were 2572 (88.6%) who reported resolution of symptoms (262/2572 were also hospitalised), 224 (7.8%) had not recovered at last contact (28/224 were also hospitalised), 51 (1.8%) died of COVID-19, and 57 (2.0%) were hospitalised without a documented recovery date. Of those followed, 20% recovered by 10 days, 60% at 20, 80% at 30, 91% at 60, 93% at 90 and 96% at 120 days. Compared to those aged 30-49 years, those 0-29 years were more likely to recover (aHR 1.22, 95%CI 1.10-1.34) while those aged 50-69 and 70+ years were less likely to recover (aHR respectively 0.74, 95%CI 0.67-0.81 and 0.63, 95%CI 0.56-0.71). Men were faster to recover than women (aHR 1.20, 95%CI 1.11-1.29) and those with pre-existing co-morbidities took longer to recover than those without (aHR 0.90, 95%CI 0.83-0.98).",
+                  "P8": "### Interpretation",
+                  "P9": "In a setting where most cases of COVID-19 were ascertained and followed, 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later.",
+                  "P10": "### Funding",
+                  "P11": "NSW Health Emergency Response Priority Research Projects",
+                  "P12": "Keywords: COVID-19, Recovery, Cohort study",
+                  "P13": "## Research in context.",
+                  "P14": "### Evidence before this study",
+                  "P15": "There is significant concern regarding the longer-term effects of COVID-19 but to date most studies have been restricted to volunteers or people hospitalised with disease which may bias estimates of recovery.",
+                  "P16": "### Added value of this study",
+                  "P17": "In this study we followed 94% of all people with a laboratory-confirmed diagnosis of COVID-19 in the Australian state of New South Wales to determine if they had recovered from their infection. We found that 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later. Older people, women and those with comorbidities were less likely to report recovery.",
+                  "P18": "### Implications of all the available evidence",
+                  "P19": "Accurate estimates of the proportion of people diagnosed with COVID-19 who experience long-term effects are important to estimate the impact of disease at a population level. Our whole of population estimates suggest that while only a small proportion of those presenting with COVID-19 will have prolonged symptoms, given the scale of the pandemic and the number of cases diagnosed worldwide, these effects are significant and should be considered in balancing the costs and benefits of prevention strategies.",
+                  "P20": "Alt-text: Unlabelled box",
+                  "P21": "## 1. Background"
+                },
+                "omitted_characters": 16863
+              },
+              {
+                "id": "S2",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9291733/",
+                "title": "Estimating Case Fatality and Case Recovery Rates of COVID-19 - PMC",
+                "content_hash": "cd3eebe3edeb25ac967e5b0e7673f05520b419c1d38a9ef1616c134ef2988276",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+                "visible_text": "## Abstract\n\n### Introduction:\n\nCase fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to specific disease epidemics, including the COVID-19 pandemic. This study aimed to compare various methods and models for calculating CFR and CRR related to COVID-19 based on the global and national data available as of April 2020.\n\n### Methods:\n\nThis analytical epidemiologic study was conducted based on detailed data from 210 countries and territories worldwide in April 2020. We used three different formulas to measure CFR and CRR, considering all possible scenarios.\n\n### Results:\n\nWe included information for 72 countries with more than 1,000 cases of COVID-19. Overall, using first, second, and third estimation models, the CFR were 6.22%, 21.20%, and 8.67%, respectively; similarly, the CRR was estimated as 23.21%, 78.86%, 32.23%, respectively. We have shown that CFRs vary so much spatially and depend on the estimation method and timing of case reports, likely resulting in overestimation.\n\n### Conclusions:\n\nEven with the more precise method of CFRs estimation, the value is overestimated. Case fatality and recovery rates should not be the only measures used to evaluate disease severity, and the better assessment measures need to be developed as indicators of countries’ performance during COVID-19 pandemic.\n\nKeywords: Coronavirus, COVID-19, Case fatality rates, CFRs, Case recovery rates, CRRs\n\nIn late December 2019, a series of unexplained pneumonia cases were reported in Wuhan, China, which led government and researchers in China to take quick action to control its spread and start a large number of etiologic studies.1 On January 30, 2020, WHO declared the epidemic of the virus as a public health emergency with international concern (PHEIC).2 COVID-19 has spread to more than 210 countries and territories around the world, and as of December 2020, nearly 1.7 million lives have been lost.3 The virus spreads through droplets after infected persons cough or sneeze, which may enter the body through inhalation or contact with contaminated surfaces, and then touching the eyes, nose, and mouth.5 According to scientists, the average time required for symptoms to appear is 5 days, but in some cases and situations, it may take much longer, as the virus' incubation period lasts up to 14 days.6\n\nCase fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to certain disease epidemics, as well as for the COVID-19 outbreak.7 CFR is the proportion of deaths due to a specified health condition compared to total infected cases.8 Calculations are based on the controversial assumption that all of patients were tested. COVID-related CFR might be either overestimated or underestimated depending on if calculations are based on every confirmed case or only those cases who have recovered or died. Specialists in epidemiology have proposed different scenarios for calculating CFR, each with its advantages and disadvantages.9-11 CRR is the proportion of recovered or discharged individuals with a specified health condition compared to total infected cases.12",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    11
+                  ],
+                  "P2": [
+                    13,
+                    30
+                  ],
+                  "P3": [
+                    32,
+                    380
+                  ],
+                  "P4": [
+                    382,
+                    394
+                  ],
+                  "P5": [
+                    396,
+                    621
+                  ],
+                  "P6": [
+                    623,
+                    635
+                  ],
+                  "P7": [
+                    637,
+                    1050
+                  ],
+                  "P8": [
+                    1052,
+                    1068
+                  ],
+                  "P9": [
+                    1070,
+                    1373
+                  ],
+                  "P10": [
+                    1375,
+                    1460
+                  ],
+                  "P11": [
+                    1462,
+                    2368
+                  ],
+                  "P12": [
+                    2370,
+                    3185
+                  ]
+                },
+                "passages": {
+                  "P1": "## Abstract",
+                  "P2": "### Introduction:",
+                  "P3": "Case fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to specific disease epidemics, including the COVID-19 pandemic. This study aimed to compare various methods and models for calculating CFR and CRR related to COVID-19 based on the global and national data available as of April 2020.",
+                  "P4": "### Methods:",
+                  "P5": "This analytical epidemiologic study was conducted based on detailed data from 210 countries and territories worldwide in April 2020. We used three different formulas to measure CFR and CRR, considering all possible scenarios.",
+                  "P6": "### Results:",
+                  "P7": "We included information for 72 countries with more than 1,000 cases of COVID-19. Overall, using first, second, and third estimation models, the CFR were 6.22%, 21.20%, and 8.67%, respectively; similarly, the CRR was estimated as 23.21%, 78.86%, 32.23%, respectively. We have shown that CFRs vary so much spatially and depend on the estimation method and timing of case reports, likely resulting in overestimation.",
+                  "P8": "### Conclusions:",
+                  "P9": "Even with the more precise method of CFRs estimation, the value is overestimated. Case fatality and recovery rates should not be the only measures used to evaluate disease severity, and the better assessment measures need to be developed as indicators of countries’ performance during COVID-19 pandemic.",
+                  "P10": "Keywords: Coronavirus, COVID-19, Case fatality rates, CFRs, Case recovery rates, CRRs",
+                  "P11": "In late December 2019, a series of unexplained pneumonia cases were reported in Wuhan, China, which led government and researchers in China to take quick action to control its spread and start a large number of etiologic studies.1 On January 30, 2020, WHO declared the epidemic of the virus as a public health emergency with international concern (PHEIC).2 COVID-19 has spread to more than 210 countries and territories around the world, and as of December 2020, nearly 1.7 million lives have been lost.3 The virus spreads through droplets after infected persons cough or sneeze, which may enter the body through inhalation or contact with contaminated surfaces, and then touching the eyes, nose, and mouth.5 According to scientists, the average time required for symptoms to appear is 5 days, but in some cases and situations, it may take much longer, as the virus' incubation period lasts up to 14 days.6",
+                  "P12": "Case fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to certain disease epidemics, as well as for the COVID-19 outbreak.7 CFR is the proportion of deaths due to a specified health condition compared to total infected cases.8 Calculations are based on the controversial assumption that all of patients were tested. COVID-related CFR might be either overestimated or underestimated depending on if calculations are based on every confirmed case or only those cases who have recovered or died. Specialists in epidemiology have proposed different scenarios for calculating CFR, each with its advantages and disadvantages.9-11 CRR is the proportion of recovered or discharged individuals with a specified health condition compared to total infected cases.12"
+                },
+                "omitted_characters": 16815
+              },
+              {
+                "id": "S3",
+                "url": "https://www.who.int/news-room/fact-sheets/detail/post-covid-19-condition-(long-covid)",
+                "title": "Post COVID-19 condition (long COVID)",
+                "content_hash": "1e0e815d37bb8a7a54ff33f4ec0e45669c6815e285f65599763e18f368780099",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+                "visible_text": "## Key facts\n\n* Most patients with COVID-19 recover fully, but some develop post COVID-19 condition with medium- to long-term effects on one or more body systems.\n* Approximately 6 in every 100 people who have COVID-19 develop post COVID-19 condition.\n* While data are limited, the chance of developing post COVID-19 condition appears to be lower now than earlier in the pandemic. However, the virus is still circulating widely, and every new infection is associated with a risk.\n* Fatigue, breathlessness, muscle or joint pain, and impaired sleep are common symptoms of post-COVID-19 condition.\n* WHO is working to develop clinical practice guidelines for management of post COVID-19 condition.\n* Health-care providers can guide patients on self-management of symptoms and offer medication for symptom relief or referral for rehabilitation services as needed.\n\n---\n\n  \n\n## Overview\n\nCOVID-19 can lead to serious long-term effects, known as post COVID-19 condition (PCC). It is also commonly referred to as long COVID. Post COVID-19 condition is characterized by a range of symptoms which usually start within 3 months of the initial COVID-19 illness and last at least 2 months. PCC can affect a person’s ability to perform daily activities such as work or household chores and restrict social participation.\n\n## Scope of the problem\n\nMillions of people have been affected with post COVID-19 condition since the beginning of the pandemic *(1)*. Global estimates indicate that 6 in 100 people with COVID-19 develop post COVID-19 condition. Estimates largely come from people who suffered COVID-19 early in the pandemic (in the first two years), and there is a very large variation in estimates *(2)*.\n\nMore recent research shows the chances of developing post COVID-19 condition have reduced, but these data are limited and mostly from high-income countries *(3)*. However, the SARS-CoV-2 virus, the virus that causes COVID-19 is widely circulating and post COVID-19 condition remains a substantial threat and ongoing challenge to global public health.\n\n## Risk factors\n\nAnyone who was infected with SARS-CoV-2 can develop post COVID-19 condition. Some people have higher risk. These include women, older adults, smokers, those who are overweight or obese or have pre-existing chronic health problems. Repeated infections and severe COVID-19 needing hospitalization or ICU admission also increase the risk *(4)*. We see higher numbers of post COVID-19 condition sufferers among people with disabilities, and where health disparity and access to health care is a problem *(5)*.\n\nResearch is ongoing to better understand what causes post COVID-19 condition. Almost any organ can be affected, including the heart and blood vessels, lungs, nervous system, gut and endocrine (hormone) system. In those with post COVID-19 condition, researchers have found evidence of persistence of SARS-CoV2 virus in the body, of altered immune responses and autoimmunity, and of formation of microscopic blood clots (micro-thrombosis), among other problems *(6)*.\n\n## Symptoms\n\nOver 200 different symptoms have been reported by people with post COVID-19 condition. Common symptoms include:\n\n* fatigue\n* aches and pains in muscles or joints\n* feeling breathless\n* headaches\n* difficulty in thinking or concentrating\n* alterations in taste.",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    12
+                  ],
+                  "P2": [
+                    14,
+                    860
+                  ],
+                  "P3": [
+                    862,
+                    865
+                  ],
+                  "P4": [
+                    871,
+                    882
+                  ],
+                  "P5": [
+                    884,
+                    1308
+                  ],
+                  "P6": [
+                    1310,
+                    1333
+                  ],
+                  "P7": [
+                    1335,
+                    1699
+                  ],
+                  "P8": [
+                    1701,
+                    2051
+                  ],
+                  "P9": [
+                    2053,
+                    2068
+                  ],
+                  "P10": [
+                    2070,
+                    2575
+                  ],
+                  "P11": [
+                    2577,
+                    3042
+                  ],
+                  "P12": [
+                    3044,
+                    3055
+                  ],
+                  "P13": [
+                    3057,
+                    3168
+                  ],
+                  "P14": [
+                    3170,
+                    3317
+                  ]
+                },
+                "passages": {
+                  "P1": "## Key facts",
+                  "P2": "* Most patients with COVID-19 recover fully, but some develop post COVID-19 condition with medium- to long-term effects on one or more body systems.\n* Approximately 6 in every 100 people who have COVID-19 develop post COVID-19 condition.\n* While data are limited, the chance of developing post COVID-19 condition appears to be lower now than earlier in the pandemic. However, the virus is still circulating widely, and every new infection is associated with a risk.\n* Fatigue, breathlessness, muscle or joint pain, and impaired sleep are common symptoms of post-COVID-19 condition.\n* WHO is working to develop clinical practice guidelines for management of post COVID-19 condition.\n* Health-care providers can guide patients on self-management of symptoms and offer medication for symptom relief or referral for rehabilitation services as needed.",
+                  "P3": "---",
+                  "P4": "## Overview",
+                  "P5": "COVID-19 can lead to serious long-term effects, known as post COVID-19 condition (PCC). It is also commonly referred to as long COVID. Post COVID-19 condition is characterized by a range of symptoms which usually start within 3 months of the initial COVID-19 illness and last at least 2 months. PCC can affect a person’s ability to perform daily activities such as work or household chores and restrict social participation.",
+                  "P6": "## Scope of the problem",
+                  "P7": "Millions of people have been affected with post COVID-19 condition since the beginning of the pandemic *(1)*. Global estimates indicate that 6 in 100 people with COVID-19 develop post COVID-19 condition. Estimates largely come from people who suffered COVID-19 early in the pandemic (in the first two years), and there is a very large variation in estimates *(2)*.",
+                  "P8": "More recent research shows the chances of developing post COVID-19 condition have reduced, but these data are limited and mostly from high-income countries *(3)*. However, the SARS-CoV-2 virus, the virus that causes COVID-19 is widely circulating and post COVID-19 condition remains a substantial threat and ongoing challenge to global public health.",
+                  "P9": "## Risk factors",
+                  "P10": "Anyone who was infected with SARS-CoV-2 can develop post COVID-19 condition. Some people have higher risk. These include women, older adults, smokers, those who are overweight or obese or have pre-existing chronic health problems. Repeated infections and severe COVID-19 needing hospitalization or ICU admission also increase the risk *(4)*. We see higher numbers of post COVID-19 condition sufferers among people with disabilities, and where health disparity and access to health care is a problem *(5)*.",
+                  "P11": "Research is ongoing to better understand what causes post COVID-19 condition. Almost any organ can be affected, including the heart and blood vessels, lungs, nervous system, gut and endocrine (hormone) system. In those with post COVID-19 condition, researchers have found evidence of persistence of SARS-CoV2 virus in the body, of altered immune responses and autoimmunity, and of formation of microscopic blood clots (micro-thrombosis), among other problems *(6)*.",
+                  "P12": "## Symptoms",
+                  "P13": "Over 200 different symptoms have been reported by people with post COVID-19 condition. Common symptoms include:",
+                  "P14": "* fatigue\n* aches and pains in muscles or joints\n* feeling breathless\n* headaches\n* difficulty in thinking or concentrating\n* alterations in taste."
+                },
+                "omitted_characters": 6810
+              },
+              {
+                "id": "S4",
+                "url": "https://www.nature.com/articles/d41586-020-02335-z",
+                "title": "A negative COVID-19 test does not mean recovery - Nature",
+                "content_hash": "ab60ad896973b0a748a3d61801fc26745e421a73f92b62e3a7ceeda101343f02",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+                "visible_text": "A negative COVID-19 test does not mean recovery Pandemic policy must include defining and measuring what we mean by mild infection.",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    131
+                  ]
+                },
+                "passages": {
+                  "P1": "A negative COVID-19 test does not mean recovery Pandemic policy must include defining and measuring what we mean by mild infection."
+                },
+                "omitted_characters": 0
+              },
+              {
+                "id": "S5",
+                "url": "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html",
+                "title": "Underlying Conditions and the Higher Risk for Severe COVID-19",
+                "content_hash": "4070c384d8901e83cf7de5c53be42696fd3e63cc766cf12f809428abe5441d0b",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+                "visible_text": "This page summarizes data from published reports, Age Age remains the strongest risk factor for severe COVID-19 outcomes, the risk of death is 25 times higher ...",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    162
+                  ]
+                },
+                "passages": {
+                  "P1": "This page summarizes data from published reports, Age Age remains the strongest risk factor for severe COVID-19 outcomes, the risk of death is 25 times higher ..."
+                },
+                "omitted_characters": 0
+              },
+              {
+                "id": "S6",
+                "url": "https://www.kff.org/covid-19/global-covid-19-tracker/",
+                "title": "Global COVID-19 Tracker",
+                "content_hash": "f9c00d885fdecd099416d38972ccf8c390c6a4a33cbc6979be5b1fb20df7e30f",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+                "visible_text": "# Global COVID-19 Tracker\n\nPublished:\nOct 13, 2026\n\nEmail \n\nAdd KFF on Google\n\n## \n\n**Editorial Note:** The Policy Actions tracker will no longer be updated as the data source has ceased tracking government responses to COVID-19. For more information, please visit the Oxford Covid-19 Government Response Tracker.\n\nSection:\n\n\n0\n/\n0\n\n## Cases and Deaths\n\nCopy link to Cases and Deaths\n\nThis tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths by country, income, region, and globally. It will be updated weekly, as new data are released. As of March 7, 2023, all data on COVID-19 cases and deaths are drawn from the World Health Organization’s (WHO) Coronavirus (COVID-19) Dashboard. Prior to March 7, 2023, this tracker relied on data provided by the Johns Hopkins University (JHU) Coronavirus Resource Center’s COVID-19 Map, which ended on March 10, 2023. Please see the Methods tab for more detailed information on data sources and notes. To prevent slow load times, the tracker only contains data from the last 200 days. However, the full data set can be downloaded from our GitHub page. While the tracker provides the most recent data available, there is a two-week lag in the data reporting.\n\nNote: The data in this tool were corrected on March 18, 2024, to clarify that they represent new cases and deaths over a full week rather than the average per day over a seven-day period.\n\n## Policy Actions\n\nCopy link to Policy Actions\n\nThis tracker contains information on policy measures currently in place to address the COVID-19 pandemic. Policy categories currently being tracked include social distancing & closure measures, economic measures, and health systems measures. Policies are tracked at the country-, income-, and region-level. Please see the Methods tab for more detailed information on data sources and notes.\n\n### Social Distancing and Closure Measures\n\nAs countries continue to implement policies to prevent the transmission of SARS-CoV-2, the virus that causes COVID-19, these tables and charts show which social distancing and closure measures are currently in place by country.\n\nTable 1: Social Distancing and Closure Measures\n\nUnder 'Stay At Mome Requirements', exceptions for leaving the house may include anything from being able to leave for daily exercise, grocery shopping, and essential trips, to only being allowed to leave once a week, or one person may leave at a time, etc.\nUnder 'Workplace Closing', partial closing includes instances in which a country recommends closing the workplace (or working from home); businesses are open but with significant COVID-19-related operational adjustments; or when workplaces require closing for only some, but not all, sectors or categories of workers.\nUnder 'School Closing', partial closing includes instances in which a country has recommended school closures; all schools are open but with significant COVID-19-related operational adjustments; or some schools, but not all, are closed; full closing includes schools that are in session but operating virtually.\nUnder 'Restrictions On Gatherings', partial restrictions include restrictions on gatherings of more than 10 people; full restrictions include restrictions on gatherings of 10 people or less.\nUnder 'International Travel Controls', partial restrictions include screening and quarantine requirements for those entering the country.\nData as of July 10, 2023.",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    25
+                  ],
+                  "P2": [
+                    27,
+                    50
+                  ],
+                  "P3": [
+                    52,
+                    57
+                  ],
+                  "P4": [
+                    60,
+                    77
+                  ],
+                  "P5": [
+                    79,
+                    81
+                  ],
+                  "P6": [
+                    84,
+                    313
+                  ],
+                  "P7": [
+                    315,
+                    323
+                  ],
+                  "P8": [
+                    326,
+                    331
+                  ],
+                  "P9": [
+                    333,
+                    352
+                  ],
+                  "P10": [
+                    354,
+                    383
+                  ],
+                  "P11": [
+                    385,
+                    1278
+                  ],
+                  "P12": [
+                    1280,
+                    1467
+                  ],
+                  "P13": [
+                    1469,
+                    1486
+                  ],
+                  "P14": [
+                    1488,
+                    1515
+                  ],
+                  "P15": [
+                    1517,
+                    1907
+                  ],
+                  "P16": [
+                    1909,
+                    1951
+                  ],
+                  "P17": [
+                    1953,
+                    2180
+                  ],
+                  "P18": [
+                    2182,
+                    2229
+                  ],
+                  "P19": [
+                    2231,
+                    3472
+                  ]
+                },
+                "passages": {
+                  "P1": "# Global COVID-19 Tracker",
+                  "P2": "Published:\nOct 13, 2026",
+                  "P3": "Email",
+                  "P4": "Add KFF on Google",
+                  "P5": "##",
+                  "P6": "**Editorial Note:** The Policy Actions tracker will no longer be updated as the data source has ceased tracking government responses to COVID-19. For more information, please visit the Oxford Covid-19 Government Response Tracker.",
+                  "P7": "Section:",
+                  "P8": "0\n/\n0",
+                  "P9": "## Cases and Deaths",
+                  "P10": "Copy link to Cases and Deaths",
+                  "P11": "This tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths by country, income, region, and globally. It will be updated weekly, as new data are released. As of March 7, 2023, all data on COVID-19 cases and deaths are drawn from the World Health Organization’s (WHO) Coronavirus (COVID-19) Dashboard. Prior to March 7, 2023, this tracker relied on data provided by the Johns Hopkins University (JHU) Coronavirus Resource Center’s COVID-19 Map, which ended on March 10, 2023. Please see the Methods tab for more detailed information on data sources and notes. To prevent slow load times, the tracker only contains data from the last 200 days. However, the full data set can be downloaded from our GitHub page. While the tracker provides the most recent data available, there is a two-week lag in the data reporting.",
+                  "P12": "Note: The data in this tool were corrected on March 18, 2024, to clarify that they represent new cases and deaths over a full week rather than the average per day over a seven-day period.",
+                  "P13": "## Policy Actions",
+                  "P14": "Copy link to Policy Actions",
+                  "P15": "This tracker contains information on policy measures currently in place to address the COVID-19 pandemic. Policy categories currently being tracked include social distancing & closure measures, economic measures, and health systems measures. Policies are tracked at the country-, income-, and region-level. Please see the Methods tab for more detailed information on data sources and notes.",
+                  "P16": "### Social Distancing and Closure Measures",
+                  "P17": "As countries continue to implement policies to prevent the transmission of SARS-CoV-2, the virus that causes COVID-19, these tables and charts show which social distancing and closure measures are currently in place by country.",
+                  "P18": "Table 1: Social Distancing and Closure Measures",
+                  "P19": "Under 'Stay At Mome Requirements', exceptions for leaving the house may include anything from being able to leave for daily exercise, grocery shopping, and essential trips, to only being allowed to leave once a week, or one person may leave at a time, etc.\nUnder 'Workplace Closing', partial closing includes instances in which a country recommends closing the workplace (or working from home); businesses are open but with significant COVID-19-related operational adjustments; or when workplaces require closing for only some, but not all, sectors or categories of workers.\nUnder 'School Closing', partial closing includes instances in which a country has recommended school closures; all schools are open but with significant COVID-19-related operational adjustments; or some schools, but not all, are closed; full closing includes schools that are in session but operating virtually.\nUnder 'Restrictions On Gatherings', partial restrictions include restrictions on gatherings of more than 10 people; full restrictions include restrictions on gatherings of 10 people or less.\nUnder 'International Travel Controls', partial restrictions include screening and quarantine requirements for those entering the country.\nData as of July 10, 2023."
+                },
+                "omitted_characters": 5834
+              },
+              {
+                "id": "S7",
+                "url": "https://ourworldindata.org/covid-deaths",
+                "title": "Coronavirus (COVID-19) Deaths",
+                "content_hash": "d5d073de92b8447ccbda393860f673fe514ed71d2fa87d27086ece724b903f5b",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+                "visible_text": "This page provides data on the number of confirmed deaths from COVID-19. Research has shown that these figures are an underestimate of the total pandemic ...",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    157
+                  ]
+                },
+                "passages": {
+                  "P1": "This page provides data on the number of confirmed deaths from COVID-19. Research has shown that these figures are an underestimate of the total pandemic ..."
+                },
+                "omitted_characters": 0
+              },
+              {
+                "id": "S8",
+                "url": "https://www.pnas.org/doi/10.1073/pnas.2019716118",
+                "title": "Quantifying asymptomatic infection and transmission of COVID ...",
+                "content_hash": "1e159d2c68e6ba1c78a7a16f6c8ae71cd8669a4508a48fb5cb33693fa4c0760e",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+                "visible_text": "This metric of outbreak severity is generally defined as the total number of deaths divided by the total number of cases. In practice, this ratio is calculated ...",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    163
+                  ]
+                },
+                "passages": {
+                  "P1": "This metric of outbreak severity is generally defined as the total number of deaths divided by the total number of cases. In practice, this ratio is calculated ..."
+                },
+                "omitted_characters": 0
+              }
+            ],
+            "claim_selection": null,
+            "evidence_paths": null,
+            "stance_reviews": null,
+            "stance_review_inputs": [],
+            "assessment_mode": "evidence_adjudicated",
+            "passage_units": {
+              "U1": {
+                "catalogue_key": "S1:P1:P1",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "## Abstract"
+              },
+              "U2": {
+                "catalogue_key": "S1:P2:P2",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "### Background"
+              },
+              "U3": {
+                "catalogue_key": "S1:P3:P3",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "COVID-19 results in persisting symptoms but there is little systematically collected data estimating recovery time following infection."
+              },
+              "U4": {
+                "catalogue_key": "S1:P4:P4",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "### Methods"
+              },
+              "U5": {
+                "catalogue_key": "S1:P5:P5",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "We followed 94% of all COVID-19 cases diagnosed in the Australian state of New South Wales between January and May 2020 using 3-4 weekly telephone interviews and linkage to hospitalisation and death data to determine if they had recovered from COVID-19 based on symptom resolution. Proportional hazards models with competing risks were used to estimate time to recovery adjusted for age and gender."
+              },
+              "U6": {
+                "catalogue_key": "S1:P6:P6",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "### Findings"
+              },
+              "U7": {
+                "catalogue_key": "S1:P7:P7",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "In analyses 2904 cases were followed for recovery (median follow-up time 16 days, range 1-122, IQR 11-24).There were 2572 (88.6%) who reported resolution of symptoms (262/2572 were also hospitalised), 224 (7.8%) had not recovered at last contact (28/224 were also hospitalised), 51 (1.8%) died of COVID-19, and 57 (2.0%) were hospitalised without a documented recovery date. Of those followed, 20% recovered by 10 days, 60% at 20, 80% at 30, 91% at 60, 93% at 90 and 96% at 120 days. Compared to those aged 30-49 years, those 0-29 years were more likely to recover (aHR 1.22, 95%CI 1.10-1.34) while those aged 50-69 and 70+ years were less likely to recover (aHR respectively 0.74, 95%CI 0.67-0.81 and 0.63, 95%CI 0.56-0.71). Men were faster to recover than women (aHR 1.20, 95%CI 1.11-1.29) and those with pre-existing co-morbidities took longer to recover than those without (aHR 0.90, 95%CI 0.83-0.98)."
+              },
+              "U8": {
+                "catalogue_key": "S1:P8:P8",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "### Interpretation"
+              },
+              "U9": {
+                "catalogue_key": "S1:P9:P9",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "In a setting where most cases of COVID-19 were ascertained and followed, 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later."
+              },
+              "U10": {
+                "catalogue_key": "S1:P10:P10",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "### Funding"
+              },
+              "U11": {
+                "catalogue_key": "S1:P11:P11",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "NSW Health Emergency Response Priority Research Projects"
+              },
+              "U12": {
+                "catalogue_key": "S1:P12:P12",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "Keywords: COVID-19, Recovery, Cohort study"
+              },
+              "U13": {
+                "catalogue_key": "S1:P13:P13",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P13",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "## Research in context."
+              },
+              "U14": {
+                "catalogue_key": "S1:P14:P14",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "### Evidence before this study"
+              },
+              "U15": {
+                "catalogue_key": "S1:P15:P15",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P15",
+                  "last_paragraph": "P15"
+                },
+                "literal_quote": "There is significant concern regarding the longer-term effects of COVID-19 but to date most studies have been restricted to volunteers or people hospitalised with disease which may bias estimates of recovery."
+              },
+              "U16": {
+                "catalogue_key": "S1:P16:P16",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P16",
+                  "last_paragraph": "P16"
+                },
+                "literal_quote": "### Added value of this study"
+              },
+              "U17": {
+                "catalogue_key": "S1:P17:P17",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P17",
+                  "last_paragraph": "P17"
+                },
+                "literal_quote": "In this study we followed 94% of all people with a laboratory-confirmed diagnosis of COVID-19 in the Australian state of New South Wales to determine if they had recovered from their infection. We found that 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later. Older people, women and those with comorbidities were less likely to report recovery."
+              },
+              "U18": {
+                "catalogue_key": "S1:P18:P18",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P18",
+                  "last_paragraph": "P18"
+                },
+                "literal_quote": "### Implications of all the available evidence"
+              },
+              "U19": {
+                "catalogue_key": "S1:P19:P19",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P19",
+                  "last_paragraph": "P19"
+                },
+                "literal_quote": "Accurate estimates of the proportion of people diagnosed with COVID-19 who experience long-term effects are important to estimate the impact of disease at a population level. Our whole of population estimates suggest that while only a small proportion of those presenting with COVID-19 will have prolonged symptoms, given the scale of the pandemic and the number of cases diagnosed worldwide, these effects are significant and should be considered in balancing the costs and benefits of prevention strategies."
+              },
+              "U20": {
+                "catalogue_key": "S1:P20:P20",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P20",
+                  "last_paragraph": "P20"
+                },
+                "literal_quote": "Alt-text: Unlabelled box"
+              },
+              "U21": {
+                "catalogue_key": "S1:P21:P21",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P21",
+                  "last_paragraph": "P21"
+                },
+                "literal_quote": "## 1. Background"
+              },
+              "U22": {
+                "catalogue_key": "S1:P1:P8",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "## Abstract\n\n### Background\n\nCOVID-19 results in persisting symptoms but there is little systematically collected data estimating recovery time following infection.\n\n### Methods\n\nWe followed 94% of all COVID-19 cases diagnosed in the Australian state of New South Wales between January and May 2020 using 3-4 weekly telephone interviews and linkage to hospitalisation and death data to determine if they had recovered from COVID-19 based on symptom resolution. Proportional hazards models with competing risks were used to estimate time to recovery adjusted for age and gender.\n\n### Findings\n\nIn analyses 2904 cases were followed for recovery (median follow-up time 16 days, range 1-122, IQR 11-24).There were 2572 (88.6%) who reported resolution of symptoms (262/2572 were also hospitalised), 224 (7.8%) had not recovered at last contact (28/224 were also hospitalised), 51 (1.8%) died of COVID-19, and 57 (2.0%) were hospitalised without a documented recovery date. Of those followed, 20% recovered by 10 days, 60% at 20, 80% at 30, 91% at 60, 93% at 90 and 96% at 120 days. Compared to those aged 30-49 years, those 0-29 years were more likely to recover (aHR 1.22, 95%CI 1.10-1.34) while those aged 50-69 and 70+ years were less likely to recover (aHR respectively 0.74, 95%CI 0.67-0.81 and 0.63, 95%CI 0.56-0.71). Men were faster to recover than women (aHR 1.20, 95%CI 1.11-1.29) and those with pre-existing co-morbidities took longer to recover than those without (aHR 0.90, 95%CI 0.83-0.98).\n\n### Interpretation"
+              },
+              "U23": {
+                "catalogue_key": "S1:P9:P21",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P21"
+                },
+                "literal_quote": "In a setting where most cases of COVID-19 were ascertained and followed, 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later.\n\n### Funding\n\nNSW Health Emergency Response Priority Research Projects\n\nKeywords: COVID-19, Recovery, Cohort study\n\n## Research in context.\n\n### Evidence before this study\n\nThere is significant concern regarding the longer-term effects of COVID-19 but to date most studies have been restricted to volunteers or people hospitalised with disease which may bias estimates of recovery.\n\n### Added value of this study\n\nIn this study we followed 94% of all people with a laboratory-confirmed diagnosis of COVID-19 in the Australian state of New South Wales to determine if they had recovered from their infection. We found that 80% of those with COVID-19 recover within a month, but about 5% will continue to experience symptoms 3 months later. Older people, women and those with comorbidities were less likely to report recovery.\n\n### Implications of all the available evidence\n\nAccurate estimates of the proportion of people diagnosed with COVID-19 who experience long-term effects are important to estimate the impact of disease at a population level. Our whole of population estimates suggest that while only a small proportion of those presenting with COVID-19 will have prolonged symptoms, given the scale of the pandemic and the number of cases diagnosed worldwide, these effects are significant and should be considered in balancing the costs and benefits of prevention strategies.\n\nAlt-text: Unlabelled box\n\n## 1. Background"
+              },
+              "U24": {
+                "catalogue_key": "S2:P1:P1",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "## Abstract"
+              },
+              "U25": {
+                "catalogue_key": "S2:P2:P2",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "### Introduction:"
+              },
+              "U26": {
+                "catalogue_key": "S2:P3:P3",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "Case fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to specific disease epidemics, including the COVID-19 pandemic. This study aimed to compare various methods and models for calculating CFR and CRR related to COVID-19 based on the global and national data available as of April 2020."
+              },
+              "U27": {
+                "catalogue_key": "S2:P4:P4",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "### Methods:"
+              },
+              "U28": {
+                "catalogue_key": "S2:P5:P5",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "This analytical epidemiologic study was conducted based on detailed data from 210 countries and territories worldwide in April 2020. We used three different formulas to measure CFR and CRR, considering all possible scenarios."
+              },
+              "U29": {
+                "catalogue_key": "S2:P6:P6",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "### Results:"
+              },
+              "U30": {
+                "catalogue_key": "S2:P7:P7",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "We included information for 72 countries with more than 1,000 cases of COVID-19. Overall, using first, second, and third estimation models, the CFR were 6.22%, 21.20%, and 8.67%, respectively; similarly, the CRR was estimated as 23.21%, 78.86%, 32.23%, respectively. We have shown that CFRs vary so much spatially and depend on the estimation method and timing of case reports, likely resulting in overestimation."
+              },
+              "U31": {
+                "catalogue_key": "S2:P8:P8",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "### Conclusions:"
+              },
+              "U32": {
+                "catalogue_key": "S2:P9:P9",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "Even with the more precise method of CFRs estimation, the value is overestimated. Case fatality and recovery rates should not be the only measures used to evaluate disease severity, and the better assessment measures need to be developed as indicators of countries’ performance during COVID-19 pandemic."
+              },
+              "U33": {
+                "catalogue_key": "S2:P10:P10",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "Keywords: Coronavirus, COVID-19, Case fatality rates, CFRs, Case recovery rates, CRRs"
+              },
+              "U34": {
+                "catalogue_key": "S2:P11:P11",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "In late December 2019, a series of unexplained pneumonia cases were reported in Wuhan, China, which led government and researchers in China to take quick action to control its spread and start a large number of etiologic studies.1 On January 30, 2020, WHO declared the epidemic of the virus as a public health emergency with international concern (PHEIC).2 COVID-19 has spread to more than 210 countries and territories around the world, and as of December 2020, nearly 1.7 million lives have been lost.3 The virus spreads through droplets after infected persons cough or sneeze, which may enter the body through inhalation or contact with contaminated surfaces, and then touching the eyes, nose, and mouth.5 According to scientists, the average time required for symptoms to appear is 5 days, but in some cases and situations, it may take much longer, as the virus' incubation period lasts up to 14 days.6"
+              },
+              "U35": {
+                "catalogue_key": "S2:P12:P12",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "Case fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to certain disease epidemics, as well as for the COVID-19 outbreak.7 CFR is the proportion of deaths due to a specified health condition compared to total infected cases.8 Calculations are based on the controversial assumption that all of patients were tested. COVID-related CFR might be either overestimated or underestimated depending on if calculations are based on every confirmed case or only those cases who have recovered or died. Specialists in epidemiology have proposed different scenarios for calculating CFR, each with its advantages and disadvantages.9-11 CRR is the proportion of recovered or discharged individuals with a specified health condition compared to total infected cases.12"
+              },
+              "U36": {
+                "catalogue_key": "S2:P1:P10",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "## Abstract\n\n### Introduction:\n\nCase fatality rates (CFRs) and case recovery rates (CRRs) are frequently used to define health consequences related to specific disease epidemics, including the COVID-19 pandemic. This study aimed to compare various methods and models for calculating CFR and CRR related to COVID-19 based on the global and national data available as of April 2020.\n\n### Methods:\n\nThis analytical epidemiologic study was conducted based on detailed data from 210 countries and territories worldwide in April 2020. We used three different formulas to measure CFR and CRR, considering all possible scenarios.\n\n### Results:\n\nWe included information for 72 countries with more than 1,000 cases of COVID-19. Overall, using first, second, and third estimation models, the CFR were 6.22%, 21.20%, and 8.67%, respectively; similarly, the CRR was estimated as 23.21%, 78.86%, 32.23%, respectively. We have shown that CFRs vary so much spatially and depend on the estimation method and timing of case reports, likely resulting in overestimation.\n\n### Conclusions:\n\nEven with the more precise method of CFRs estimation, the value is overestimated. Case fatality and recovery rates should not be the only measures used to evaluate disease severity, and the better assessment measures need to be developed as indicators of countries’ performance during COVID-19 pandemic.\n\nKeywords: Coronavirus, COVID-19, Case fatality rates, CFRs, Case recovery rates, CRRs"
+              },
+              "U37": {
+                "catalogue_key": "S3:P1:P1",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "## Key facts"
+              },
+              "U38": {
+                "catalogue_key": "S3:P2:P2",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "* Most patients with COVID-19 recover fully, but some develop post COVID-19 condition with medium- to long-term effects on one or more body systems.\n* Approximately 6 in every 100 people who have COVID-19 develop post COVID-19 condition.\n* While data are limited, the chance of developing post COVID-19 condition appears to be lower now than earlier in the pandemic. However, the virus is still circulating widely, and every new infection is associated with a risk.\n* Fatigue, breathlessness, muscle or joint pain, and impaired sleep are common symptoms of post-COVID-19 condition.\n* WHO is working to develop clinical practice guidelines for management of post COVID-19 condition.\n* Health-care providers can guide patients on self-management of symptoms and offer medication for symptom relief or referral for rehabilitation services as needed."
+              },
+              "U39": {
+                "catalogue_key": "S3:P3:P3",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "---"
+              },
+              "U40": {
+                "catalogue_key": "S3:P4:P4",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "## Overview"
+              },
+              "U41": {
+                "catalogue_key": "S3:P5:P5",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "COVID-19 can lead to serious long-term effects, known as post COVID-19 condition (PCC). It is also commonly referred to as long COVID. Post COVID-19 condition is characterized by a range of symptoms which usually start within 3 months of the initial COVID-19 illness and last at least 2 months. PCC can affect a person’s ability to perform daily activities such as work or household chores and restrict social participation."
+              },
+              "U42": {
+                "catalogue_key": "S3:P6:P6",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "## Scope of the problem"
+              },
+              "U43": {
+                "catalogue_key": "S3:P7:P7",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "Millions of people have been affected with post COVID-19 condition since the beginning of the pandemic *(1)*. Global estimates indicate that 6 in 100 people with COVID-19 develop post COVID-19 condition. Estimates largely come from people who suffered COVID-19 early in the pandemic (in the first two years), and there is a very large variation in estimates *(2)*."
+              },
+              "U44": {
+                "catalogue_key": "S3:P8:P8",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "More recent research shows the chances of developing post COVID-19 condition have reduced, but these data are limited and mostly from high-income countries *(3)*. However, the SARS-CoV-2 virus, the virus that causes COVID-19 is widely circulating and post COVID-19 condition remains a substantial threat and ongoing challenge to global public health."
+              },
+              "U45": {
+                "catalogue_key": "S3:P9:P9",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "## Risk factors"
+              },
+              "U46": {
+                "catalogue_key": "S3:P10:P10",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "Anyone who was infected with SARS-CoV-2 can develop post COVID-19 condition. Some people have higher risk. These include women, older adults, smokers, those who are overweight or obese or have pre-existing chronic health problems. Repeated infections and severe COVID-19 needing hospitalization or ICU admission also increase the risk *(4)*. We see higher numbers of post COVID-19 condition sufferers among people with disabilities, and where health disparity and access to health care is a problem *(5)*."
+              },
+              "U47": {
+                "catalogue_key": "S3:P11:P11",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "Research is ongoing to better understand what causes post COVID-19 condition. Almost any organ can be affected, including the heart and blood vessels, lungs, nervous system, gut and endocrine (hormone) system. In those with post COVID-19 condition, researchers have found evidence of persistence of SARS-CoV2 virus in the body, of altered immune responses and autoimmunity, and of formation of microscopic blood clots (micro-thrombosis), among other problems *(6)*."
+              },
+              "U48": {
+                "catalogue_key": "S3:P12:P12",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "## Symptoms"
+              },
+              "U49": {
+                "catalogue_key": "S3:P13:P13",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P13",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "Over 200 different symptoms have been reported by people with post COVID-19 condition. Common symptoms include:"
+              },
+              "U50": {
+                "catalogue_key": "S3:P14:P14",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "* fatigue\n* aches and pains in muscles or joints\n* feeling breathless\n* headaches\n* difficulty in thinking or concentrating\n* alterations in taste."
+              },
+              "U51": {
+                "catalogue_key": "S3:P1:P6",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "## Key facts\n\n* Most patients with COVID-19 recover fully, but some develop post COVID-19 condition with medium- to long-term effects on one or more body systems.\n* Approximately 6 in every 100 people who have COVID-19 develop post COVID-19 condition.\n* While data are limited, the chance of developing post COVID-19 condition appears to be lower now than earlier in the pandemic. However, the virus is still circulating widely, and every new infection is associated with a risk.\n* Fatigue, breathlessness, muscle or joint pain, and impaired sleep are common symptoms of post-COVID-19 condition.\n* WHO is working to develop clinical practice guidelines for management of post COVID-19 condition.\n* Health-care providers can guide patients on self-management of symptoms and offer medication for symptom relief or referral for rehabilitation services as needed.\n\n---\n\n  \n\n## Overview\n\nCOVID-19 can lead to serious long-term effects, known as post COVID-19 condition (PCC). It is also commonly referred to as long COVID. Post COVID-19 condition is characterized by a range of symptoms which usually start within 3 months of the initial COVID-19 illness and last at least 2 months. PCC can affect a person’s ability to perform daily activities such as work or household chores and restrict social participation.\n\n## Scope of the problem"
+              },
+              "U52": {
+                "catalogue_key": "S3:P7:P10",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "Millions of people have been affected with post COVID-19 condition since the beginning of the pandemic *(1)*. Global estimates indicate that 6 in 100 people with COVID-19 develop post COVID-19 condition. Estimates largely come from people who suffered COVID-19 early in the pandemic (in the first two years), and there is a very large variation in estimates *(2)*.\n\nMore recent research shows the chances of developing post COVID-19 condition have reduced, but these data are limited and mostly from high-income countries *(3)*. However, the SARS-CoV-2 virus, the virus that causes COVID-19 is widely circulating and post COVID-19 condition remains a substantial threat and ongoing challenge to global public health.\n\n## Risk factors\n\nAnyone who was infected with SARS-CoV-2 can develop post COVID-19 condition. Some people have higher risk. These include women, older adults, smokers, those who are overweight or obese or have pre-existing chronic health problems. Repeated infections and severe COVID-19 needing hospitalization or ICU admission also increase the risk *(4)*. We see higher numbers of post COVID-19 condition sufferers among people with disabilities, and where health disparity and access to health care is a problem *(5)*."
+              },
+              "U53": {
+                "catalogue_key": "S3:P11:P14",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "Research is ongoing to better understand what causes post COVID-19 condition. Almost any organ can be affected, including the heart and blood vessels, lungs, nervous system, gut and endocrine (hormone) system. In those with post COVID-19 condition, researchers have found evidence of persistence of SARS-CoV2 virus in the body, of altered immune responses and autoimmunity, and of formation of microscopic blood clots (micro-thrombosis), among other problems *(6)*.\n\n## Symptoms\n\nOver 200 different symptoms have been reported by people with post COVID-19 condition. Common symptoms include:\n\n* fatigue\n* aches and pains in muscles or joints\n* feeling breathless\n* headaches\n* difficulty in thinking or concentrating\n* alterations in taste."
+              },
+              "U54": {
+                "catalogue_key": "S4:P1:P1",
+                "reference": {
+                  "source": "S4",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "A negative COVID-19 test does not mean recovery Pandemic policy must include defining and measuring what we mean by mild infection."
+              },
+              "U55": {
+                "catalogue_key": "S5:P1:P1",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "This page summarizes data from published reports, Age Age remains the strongest risk factor for severe COVID-19 outcomes, the risk of death is 25 times higher ..."
+              },
+              "U56": {
+                "catalogue_key": "S6:P1:P1",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "# Global COVID-19 Tracker"
+              },
+              "U57": {
+                "catalogue_key": "S6:P2:P2",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "Published:\nOct 13, 2026"
+              },
+              "U58": {
+                "catalogue_key": "S6:P3:P3",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "Email"
+              },
+              "U59": {
+                "catalogue_key": "S6:P4:P4",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "Add KFF on Google"
+              },
+              "U60": {
+                "catalogue_key": "S6:P5:P5",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "##"
+              },
+              "U61": {
+                "catalogue_key": "S6:P6:P6",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "**Editorial Note:** The Policy Actions tracker will no longer be updated as the data source has ceased tracking government responses to COVID-19. For more information, please visit the Oxford Covid-19 Government Response Tracker."
+              },
+              "U62": {
+                "catalogue_key": "S6:P7:P7",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "Section:"
+              },
+              "U63": {
+                "catalogue_key": "S6:P8:P8",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "0\n/\n0"
+              },
+              "U64": {
+                "catalogue_key": "S6:P9:P9",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "## Cases and Deaths"
+              },
+              "U65": {
+                "catalogue_key": "S6:P10:P10",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "Copy link to Cases and Deaths"
+              },
+              "U66": {
+                "catalogue_key": "S6:P11:P11",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "This tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths by country, income, region, and globally. It will be updated weekly, as new data are released. As of March 7, 2023, all data on COVID-19 cases and deaths are drawn from the World Health Organization’s (WHO) Coronavirus (COVID-19) Dashboard. Prior to March 7, 2023, this tracker relied on data provided by the Johns Hopkins University (JHU) Coronavirus Resource Center’s COVID-19 Map, which ended on March 10, 2023. Please see the Methods tab for more detailed information on data sources and notes. To prevent slow load times, the tracker only contains data from the last 200 days. However, the full data set can be downloaded from our GitHub page. While the tracker provides the most recent data available, there is a two-week lag in the data reporting."
+              },
+              "U67": {
+                "catalogue_key": "S6:P12:P12",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "Note: The data in this tool were corrected on March 18, 2024, to clarify that they represent new cases and deaths over a full week rather than the average per day over a seven-day period."
+              },
+              "U68": {
+                "catalogue_key": "S6:P13:P13",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P13",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "## Policy Actions"
+              },
+              "U69": {
+                "catalogue_key": "S6:P14:P14",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "Copy link to Policy Actions"
+              },
+              "U70": {
+                "catalogue_key": "S6:P15:P15",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P15",
+                  "last_paragraph": "P15"
+                },
+                "literal_quote": "This tracker contains information on policy measures currently in place to address the COVID-19 pandemic. Policy categories currently being tracked include social distancing & closure measures, economic measures, and health systems measures. Policies are tracked at the country-, income-, and region-level. Please see the Methods tab for more detailed information on data sources and notes."
+              },
+              "U71": {
+                "catalogue_key": "S6:P16:P16",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P16",
+                  "last_paragraph": "P16"
+                },
+                "literal_quote": "### Social Distancing and Closure Measures"
+              },
+              "U72": {
+                "catalogue_key": "S6:P17:P17",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P17",
+                  "last_paragraph": "P17"
+                },
+                "literal_quote": "As countries continue to implement policies to prevent the transmission of SARS-CoV-2, the virus that causes COVID-19, these tables and charts show which social distancing and closure measures are currently in place by country."
+              },
+              "U73": {
+                "catalogue_key": "S6:P18:P18",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P18",
+                  "last_paragraph": "P18"
+                },
+                "literal_quote": "Table 1: Social Distancing and Closure Measures"
+              },
+              "U74": {
+                "catalogue_key": "S6:P19:P19",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P19",
+                  "last_paragraph": "P19"
+                },
+                "literal_quote": "Under 'Stay At Mome Requirements', exceptions for leaving the house may include anything from being able to leave for daily exercise, grocery shopping, and essential trips, to only being allowed to leave once a week, or one person may leave at a time, etc.\nUnder 'Workplace Closing', partial closing includes instances in which a country recommends closing the workplace (or working from home); businesses are open but with significant COVID-19-related operational adjustments; or when workplaces require closing for only some, but not all, sectors or categories of workers.\nUnder 'School Closing', partial closing includes instances in which a country has recommended school closures; all schools are open but with significant COVID-19-related operational adjustments; or some schools, but not all, are closed; full closing includes schools that are in session but operating virtually.\nUnder 'Restrictions On Gatherings', partial restrictions include restrictions on gatherings of more than 10 people; full restrictions include restrictions on gatherings of 10 people or less.\nUnder 'International Travel Controls', partial restrictions include screening and quarantine requirements for those entering the country.\nData as of July 10, 2023."
+              },
+              "U75": {
+                "catalogue_key": "S6:P1:P13",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "# Global COVID-19 Tracker\n\nPublished:\nOct 13, 2026\n\nEmail \n\nAdd KFF on Google\n\n## \n\n**Editorial Note:** The Policy Actions tracker will no longer be updated as the data source has ceased tracking government responses to COVID-19. For more information, please visit the Oxford Covid-19 Government Response Tracker.\n\nSection:\n\n\n0\n/\n0\n\n## Cases and Deaths\n\nCopy link to Cases and Deaths\n\nThis tracker provides the cumulative number of confirmed COVID-19 cases and deaths, as well as the rate of daily COVID-19 cases and deaths by country, income, region, and globally. It will be updated weekly, as new data are released. As of March 7, 2023, all data on COVID-19 cases and deaths are drawn from the World Health Organization’s (WHO) Coronavirus (COVID-19) Dashboard. Prior to March 7, 2023, this tracker relied on data provided by the Johns Hopkins University (JHU) Coronavirus Resource Center’s COVID-19 Map, which ended on March 10, 2023. Please see the Methods tab for more detailed information on data sources and notes. To prevent slow load times, the tracker only contains data from the last 200 days. However, the full data set can be downloaded from our GitHub page. While the tracker provides the most recent data available, there is a two-week lag in the data reporting.\n\nNote: The data in this tool were corrected on March 18, 2024, to clarify that they represent new cases and deaths over a full week rather than the average per day over a seven-day period.\n\n## Policy Actions"
+              },
+              "U76": {
+                "catalogue_key": "S6:P14:P18",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P18"
+                },
+                "literal_quote": "Copy link to Policy Actions\n\nThis tracker contains information on policy measures currently in place to address the COVID-19 pandemic. Policy categories currently being tracked include social distancing & closure measures, economic measures, and health systems measures. Policies are tracked at the country-, income-, and region-level. Please see the Methods tab for more detailed information on data sources and notes.\n\n### Social Distancing and Closure Measures\n\nAs countries continue to implement policies to prevent the transmission of SARS-CoV-2, the virus that causes COVID-19, these tables and charts show which social distancing and closure measures are currently in place by country.\n\nTable 1: Social Distancing and Closure Measures"
+              },
+              "U77": {
+                "catalogue_key": "S7:P1:P1",
+                "reference": {
+                  "source": "S7",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "This page provides data on the number of confirmed deaths from COVID-19. Research has shown that these figures are an underestimate of the total pandemic ..."
+              },
+              "U78": {
+                "catalogue_key": "S8:P1:P1",
+                "reference": {
+                  "source": "S8",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "This metric of outbreak severity is generally defined as the total number of deaths divided by the total number of cases. In practice, this ratio is calculated ..."
+              }
+            }
+          }
+        },
+        "usable_source_keys": [
+          [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9291733/",
+            "cd3eebe3edeb25ac967e5b0e7673f05520b419c1d38a9ef1616c134ef2988276"
+          ],
+          [
+            "https://www.kff.org/covid-19/global-covid-19-tracker/",
+            "f9c00d885fdecd099416d38972ccf8c390c6a4a33cbc6979be5b1fb20df7e30f"
+          ],
+          [
+            "https://ourworldindata.org/covid-deaths",
+            "d5d073de92b8447ccbda393860f673fe514ed71d2fa87d27086ece724b903f5b"
+          ],
+          [
+            "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html",
+            "4070c384d8901e83cf7de5c53be42696fd3e63cc766cf12f809428abe5441d0b"
+          ],
+          [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8225991/",
+            "c289d9967f9a4386c2f06bd99cfb09c93d4ad21b1a70daee428011dd74da95a5"
+          ],
+          [
+            "https://www.who.int/news-room/fact-sheets/detail/post-covid-19-condition-(long-covid)",
+            "1e0e815d37bb8a7a54ff33f4ec0e45669c6815e285f65599763e18f368780099"
+          ],
+          [
+            "https://www.nature.com/articles/d41586-020-02335-z",
+            "ab60ad896973b0a748a3d61801fc26745e421a73f92b62e3a7ceeda101343f02"
+          ],
+          [
+            "https://www.pnas.org/doi/10.1073/pnas.2019716118",
+            "1e159d2c68e6ba1c78a7a16f6c8ae71cd8669a4508a48fb5cb33693fa4c0760e"
+          ]
+        ],
+        "structural_gaps": [
+          "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found",
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "This domain requires peer-reviewed evidence.",
+          "Resolve and cite the assertion: 99% of people recover from COVID-19.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "semantic_gaps": [],
+        "fatal_error": true,
+        "budget": {
+          "max_rounds": 3,
+          "max_search_calls": 20,
+          "max_scrapes": 20,
+          "max_tokens": 250000,
+          "max_seconds": 270.0,
+          "search_calls": 2,
+          "scrapes": 4,
+          "tokens_used": 10891,
+          "token_usage_complete": false,
+          "started_at_monotonic": 18926.14
+        },
+        "elapsed_seconds": 38.375
+      }
+    ],
+    "budget": {
+      "max_rounds": 3,
+      "max_search_calls": 20,
+      "max_scrapes": 20,
+      "max_tokens": 250000,
+      "max_seconds": 270.0,
+      "search_calls": 2,
+      "scrapes": 4,
+      "tokens_used": 10891,
+      "token_usage_complete": false,
+      "started_at_monotonic": 18926.14
+    },
+    "errors": [
+      "Analysis failed: RuntimeError: Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found"
+    ],
+    "jev_audit": {
+      "search_ranking": [
+        {
+          "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9291733/",
+          "score": 0.89
+        },
+        {
+          "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+          "url": "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html",
+          "score": 0.21
+        },
+        {
+          "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+          "url": "https://www.kff.org/covid-19/global-covid-19-tracker/",
+          "score": 0.52
+        },
+        {
+          "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+          "url": "https://www.data4sdgs.org/resources/covid-19-data-resources",
+          "score": 0.16
+        },
+        {
+          "query": "What data sources report COVID-19 recovery rates, and what recovery rate do they show?",
+          "url": "https://ourworldindata.org/covid-deaths",
+          "score": 0.25
+        },
+        {
+          "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+          "url": "https://www.nature.com/articles/d41586-020-02335-z",
+          "score": 0.66
+        },
+        {
+          "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/post-covid-19-condition-(long-covid)",
+          "score": 0.76
+        },
+        {
+          "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8225991/",
+          "score": 0.85
+        },
+        {
+          "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+          "url": "https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html",
+          "score": 0.25
+        },
+        {
+          "query": "How is 'recovery' defined and measured in COVID-19 statistics, and does it include asymptomatic or mild cases?",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.2019716118",
+          "score": 0.24
+        }
+      ],
+      "citations": [],
+      "domain": {
+        "domain": "health_medical",
+        "confidence": 1.0,
+        "used": true,
+        "model": "jev-1.13.0"
+      }
+    }
+  }
+}

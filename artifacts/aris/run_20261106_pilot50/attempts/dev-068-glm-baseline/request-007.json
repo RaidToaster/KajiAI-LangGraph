@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden said 'If Your 8-Year-Old Child Says They Want To Be Transgender, They Have A Right To Transition'.",
+        "query": "Joe Biden said 'If Your 8-Year-Old Child Says They Want To Be Transgender, They Have A Right To Transition'. counterevidence",
+        "candidates": [
+          {
+            "title": "Fact check: Fabricated Biden quote supports transgender ...",
+            "snippet": "Posts on social media falsely attribute a quote to Joe Biden in which he says that transgender children have a right to transition and there ...",
+            "url": "https://www.reuters.com/article/world/fact-check-fabricated-biden-quote-supports-transgender-childrens-right-to-tran-idUSKBN2772PC/"
+          },
+          {
+            "title": "Biden did not say transgender children should be able to ' ...",
+            "snippet": "CLAIM: Democratic presidential candidate Joe Biden said if your 8-year-old child wants to be transgender to make life easier, “they have a right ...",
+            "url": "https://apnews.com/article/fact-checking-9582957367"
+          },
+          {
+            "title": "No, Biden didn't say 8-year-olds have 'right to transition' as ...",
+            "snippet": "Here are the facts: CLAIM: Democratic presidential candidate Joe Biden said if your 8-year-old child wants to be transgender to ...",
+            "url": "https://www.oregonlive.com/health/2020/10/no-biden-didnt-say-8-year-olds-have-right-to-transition-as-transgender.html"
+          },
+          {
+            "title": "A mother told Biden about her transgender 8-year-old child ...",
+            "snippet": "In Joe Biden's town hall earlier this month, one of the questions came from a woman named Mieke Haeck, a 42-year-old physical therapist from ...",
+            "url": "https://www.washingtonpost.com/dc-md-va/2020/10/29/mother-told-biden-about-her-transgender-8-year-old-child-then-came-attacks/"
+          },
+          {
+            "title": "Fact check: Joe Biden wants 'zero discrimination' ...",
+            "snippet": "Posts have misquoted Joe Biden as having said at a recent town hall that transgender kids have a \"right to transition.\"",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/22/fact-check-joe-biden-wants-zero-discrimination-transgender-kids/3714732001/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-068-glm-baseline",
+  "timestamp": "2026-11-05T18:20:23.249349+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 53242.843
+}

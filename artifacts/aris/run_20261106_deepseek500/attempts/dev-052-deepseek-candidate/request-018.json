@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "Bretton Woods 1944 official conference proceedings delegate list Philippines",
+        "candidates": [
+          {
+            "title": "Bretton Woods and the Birth of the World Bank",
+            "snippet": "The conference, formally known as the United Nations Monetary and Financial Conference, convened on July 1, 1944, and was attended by 730 delegates. U.S. ...",
+            "url": "https://www.worldbank.org/en/archive/history/exhibits/Bretton-Woods-and-the-Birth-of-the-World-Bank"
+          },
+          {
+            "title": "Chapter 5: Bretton Woods (July 1944) in - IMF eLibrary",
+            "snippet": "The International Monetary and Financial Conference of the United and Associated Nations was convened at the Mount Washington Hotel, Bretton Woods, New ...",
+            "url": "https://www.elibrary.imf.org/display/book/9798400276132/ch005.xml"
+          },
+          {
+            "title": "Bretton Woods Conference - Wikipedia",
+            "snippet": "The Bretton Woods Conference, formally known as the United Nations Monetary and Financial Conference, was the gathering of 730 delegates from all 44 allied ...",
+            "url": "https://en.wikipedia.org/wiki/Bretton_Woods_Conference"
+          },
+          {
+            "title": "Full text of Proceedings and Documents of the United Nations ...",
+            "snippet": "... Bretton Woods, New Hampshire, which assembled on July 1, 1944. The Bretton Woods Conference worked in a spirit of complete cooperation and harmony. All the ...",
+            "url": "https://fraser.stlouisfed.org/title/proceedings-documents-united-nations-monetary-financial-conference-bretton-woods-new-hampshire-july-1-22-1944-430/volume-i-7570/fulltext"
+          },
+          {
+            "title": "FALSE: Carlos P. Romulo represented PH in 1944 Bretton Woods ...",
+            "snippet": "The facts: Romulo was not among the representatives to the Bretton Woods Conference in 1944. The Philippine delegates were Andres Soriano, Jaime Hernandez, ...",
+            "url": "https://www.rappler.com/newsbreak/fact-check/carlos-romulo-represented-philippines-bretton-woods-conference-1944/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-candidate",
+  "timestamp": "2026-11-06T08:09:20.036916+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19749.343
+}

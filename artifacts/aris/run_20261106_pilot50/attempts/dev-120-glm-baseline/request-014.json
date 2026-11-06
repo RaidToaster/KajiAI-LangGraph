@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A law called The Flora and Fauna Act classified aboriginal people as animals until Australian voters overturned it in the 1960s.",
+        "query": "Obtain the draft content containing the claim(s) to be assessed",
+        "candidates": [
+          {
+            "title": "2111-Claim Interpretation; Broadest Reasonable ...",
+            "snippet": "During patent examination, the pending claims must be “given their broadest reasonable interpretation consistent with the specification.”",
+            "url": "https://www.uspto.gov/web/offices/pac/mpep/s2111.html"
+          },
+          {
+            "title": "How To Master and Draft Patent Claims That Actually Get ...",
+            "snippet": "Independent claims are required to contain all the critical components that outline the invention and must be capable of asserting the novelty on their own,",
+            "url": "https://thompsonpatentlaw.com/draft-patent-claims-that-get-allowed/"
+          },
+          {
+            "title": "Anthropic, PBC - S-1 (Q2)",
+            "snippet": "obtaining, producing, analyzing, and communicating information drafting analyses, synthesizing research, building financial models, and managing and automating ...",
+            "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
+          },
+          {
+            "title": "Understanding Moving Claims",
+            "snippet": "Step 1: Give a notice of loss/damage within 180 calendar days from delivery date. · Step 2: File a claim within nine months from delivery date. · Step 3: Work ...",
+            "url": "https://www.militaryonesource.mil/resources/millife-guides/moving-claims/"
+          },
+          {
+            "title": "Preliminary Assessment Technical Guidance - NJDEP - NJ.gov",
+            "snippet": "The preliminary assessment report should include a list of the persons interviewed to obtain information during the preliminary assessment data gathering ...",
+            "url": "https://dep.nj.gov/wp-content/uploads/srp/pa_guidance.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-120-glm-baseline",
+  "timestamp": "2026-11-05T23:34:17.823704+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 1123.125
+}

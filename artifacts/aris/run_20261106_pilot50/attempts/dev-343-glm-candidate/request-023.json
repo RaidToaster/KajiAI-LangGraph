@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "McDonald’s take down American flags at their fast-food restaurants in support of Black Lives Matter and antifa (an umbrella term for far-left anti-fascism groups).",
+        "query": "McDonald's franchise operator policy exterior flag display corporate directive 2020 media relations statement",
+        "candidates": [
+          {
+            "title": "McDonald's U.S. Franchising",
+            "snippet": "Becoming a McDonald's Franchisee offers the opportunity to build your own business, lead teams, and play a meaningful role in your community.",
+            "url": "https://www.mcdonalds.com/us/en-us/us-franchising.html"
+          },
+          {
+            "title": "McDonald's Franchisee Privacy Statement",
+            "snippet": "Read about McDonald's Franchisee Privacy Statement for United States residents only. Learn more about how McDonald's handles personal information.",
+            "url": "https://www.mcdonalds.com/us/en-us/franchisee-privacy-notice.html"
+          },
+          {
+            "title": "Franchising Overview",
+            "snippet": "Generally, we require a minimum of $750,000 (net) of non-borrowed personal resources to consider you for a franchise.",
+            "url": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html"
+          },
+          {
+            "title": "McDonald's Franchisees Vote to Give Corporate the Silent ...",
+            "snippet": "McDonald's franchisees have formally voted to ice out the corporate office after changes infuriated operators.",
+            "url": "https://www.businessinsider.com/mcdonalds-franchisees-vote-to-give-corporate-silent-treatment-protest-costs-2020-12"
+          },
+          {
+            "title": "Safe & Respectful Workplaces",
+            "snippet": "The purpose of McDonald's People Brand Standards is to promote safe, respectful and inclusive workplaces that help protect the physical and psychological safety ...",
+            "url": "https://corporate.mcdonalds.com/corpmcd/our-purpose-and-impact/jobs-inclusion-and-empowerment/safe-respectful-workplaces.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-343-glm-candidate",
+  "timestamp": "2026-11-06T00:38:49.265829+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4994.562
+}

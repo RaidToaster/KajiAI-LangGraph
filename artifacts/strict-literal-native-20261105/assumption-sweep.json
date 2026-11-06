@@ -1,0 +1,77 @@
+{
+  "review_task": "/root/literal_proof_review",
+  "round": 2,
+  "review_boundary": "literal-contract, same reviewer dialogue",
+  "review_budget_exhausted": true,
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "high",
+  "actual_runtime_model": null,
+  "actual_runtime_effort": null,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_scope_complete": true,
+  "native_diagnostic_justified": true,
+  "verdict": "One NEW bounded strict_literal native-fidelity route justified; no material blocker found; no native or efficacy pass",
+  "material_defects": [],
+  "assumptions": [
+    {
+      "id": "S1",
+      "status": "supported_in_inspected_delta",
+      "judgment": "Disjoint strict union rejects appended custom text on typed dependencies, never discards it. Required arbitrary other_uncertainty question preserves any concern typed dependencies cannot adequately express.",
+      "evidence": ["src/kaji_langgraph/strict_literal_assessment.py:TypedLiteralIssue", "src/kaji_langgraph/strict_literal_assessment.py:OtherLiteralIssue", "src/kaji_langgraph/strict_literal_assessment.py:strict_literal_prompt", "tests/test_strict_literal_assessment.py"],
+      "limit": "Old I1 already used other_uncertainty and would remain structurally admissible. Neutrality/basis failure remains a semantic audit obligation, not solved by the union."
+    },
+    {
+      "id": "S2",
+      "status": "supported_as_representation_only",
+      "judgment": "response_missing asks whether lack of response leaves uncertainty. It is not denial, proof of absence or a materiality inference. Model materiality and all material blockers survive existing translation.",
+      "evidence": ["src/kaji_langgraph/literal_proof_assessment.py:QUESTIONS", "src/kaji_langgraph/strict_literal_assessment.py:compile_strict_literal", "src/kaji_langgraph/bound_proof_assessment.py"],
+      "limit": "Audit source/basis relevance, actual missing response, omissions and nonblocking classification. New enum does not force its use or certify facts."
+    },
+    {
+      "id": "S3",
+      "status": "supported_with_fresh_freeze_required",
+      "judgment": "strict_literal dispatch is added through actual catalogue/native/backend/graph/CLI/study paths; extraction and existing acceptance chain are reused. Raw strict output is retained; old failed responses are not migrated or repaired.",
+      "evidence": ["src/kaji_langgraph/catalogued_assessment.py:analyze_catalogued", "src/kaji_langgraph/llm.py:analyze_indexed", "src/kaji_langgraph/strict_literal_assessment.py:compile_strict_literal", "evaluation/flash_study.py"],
+      "limit": "Original whole-claim/stance/context/provenance/uncertainty audit and8/12 guards remain necessary. Easier local Jev citation task cannot count as efficacy."
+    }
+  ],
+  "failure_basis": {
+    "phase": "artifacts/literal-proof-native-20261105",
+    "closed_failed": true,
+    "actual_issues_read": ["I1", "I2"],
+    "facts_elsewhere_supported": true,
+    "old_I2_typed_custom_text_now_rejected": true,
+    "old_I1_other_custom_text_still_structurally_allowed": true,
+    "unchanged_semantic_audit_must_reject_loaded_other_question": true,
+    "low_Jev_scores_preserved": [0.72, 0.79],
+    "no_old_phase_rescore_or_resume": true
+  },
+  "allowed_route": {
+    "new_phase_and_freeze": true,
+    "assessment_mode": "strict_literal",
+    "reasoning": {"glm": "high", "deepseek": false},
+    "sequence": ["GLM native2calls and complete audit", "DeepSeek source-blind plan and audit", "DeepSeek native2calls and complete audit"],
+    "max_sends": {"flash": 5, "jev": 4, "search": 0, "fetch": 0},
+    "requested_output_token_cap_total": 26624,
+    "worker_count": 1,
+    "numerical_threads": 2,
+    "job_seconds_cap": 300,
+    "aggregate_seconds_cap": 900,
+    "retries": 0,
+    "semantic_repairs": 0,
+    "first_binding_failure_stop": true,
+    "faithful_abstention": "engineering entry only, then promptly original8case/model efficacy screen",
+    "confirmation_final_released": false
+  },
+  "verification": {
+    "executor_full_suite_log_inspected": "190 passed in3.86s",
+    "new_tests_inspected": 3,
+    "new_independent_test_runs": 0,
+    "earlier_round_32_independent_passes": "predates strict delta; not independent new-union validation",
+    "service_calls": 0,
+    "protected_case_reads": 0,
+    "source_edits": 0,
+    "subagents_spawned": 0
+  }
+}

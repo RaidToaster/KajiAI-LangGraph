@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Twitter now putting warnings on tweets that are just unedited clips of Biden saying he would end fracking",
+        "query": "Are there documented instances around October 2020 of Twitter placing warnings on tweets containing unedited clips of Joe Biden discussing fracking?",
+        "candidates": [
+          {
+            "title": "Trump's Video of Biden Speaking Out Against Fracking Viewed Over ...",
+            "snippet": "President Donald Trump's campaign video of Joe Biden speaking out against fracking has been viewed 10 million times. The video, which was ...",
+            "url": "https://www.newsweek.com/donald-trump-video-joe-biden-fracking-10-million-views-1541627"
+          },
+          {
+            "title": "Twitter and 2020 Election Interference",
+            "snippet": "Last Friday, Elon Musk released documents and information relating to Twitter's interference in the 2020 presidential election by censoring the ...",
+            "url": "https://www.grassley.senate.gov/news/remarks/twitter-and-2020-election-interference"
+          },
+          {
+            "title": "Following the debates, Democratic support for a fracking ban dropped an ...",
+            "snippet": "Following the debates, Democratic support for a fracking ban dropped an eye-popping 16 points, from 65% to 49%.",
+            "url": "https://x.com/thenation/status/1318965276893941761"
+          },
+          {
+            "title": "Joe Biden's stance on fracking targeted in misleading political ad",
+            "snippet": "A video ad on Facebook claims that Joe Biden will abolish fracking and cause the loss of hundreds of thousands of jobs if elected president ...",
+            "url": "https://factcheck.afp.com/joe-bidens-stance-fracking-targeted-misleading-political-ad"
+          },
+          {
+            "title": "Download file 4.75 MB",
+            "snippet": "Sean Connery's refusal to appear in an Apple commercial was based on a satirical piece, not a real letter.",
+            "url": "https://huggingface.co/datasets/fever/AVeriTeCFever8Dev/resolve/ad4871c74f79c951de161a72304baa9dfd59abeb/submissions/cca1ff1a-d404-4736-9179-00ada5e89ee0-ce3dd108-e8ac-483b-8eed-5b73da2e24e1.csv?download=true"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-050-deepseek-candidate",
+  "timestamp": "2026-11-06T08:00:27.112404+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19216.421
+}

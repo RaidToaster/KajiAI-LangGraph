@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign.",
+        "query": "Search congressional testimony and declassified documents for evidence of who within the Obama-Biden administration authorized or directed any surveillance of Trump campaign associates.",
+        "candidates": [
+          {
+            "title": "Newly Declassified Appendix to Durham Report Sheds ...",
+            "snippet": "History will show that the Obama and Biden administration's law enforcement and intelligence agencies were weaponized against President Trump.",
+            "url": "https://www.grassley.senate.gov/news/news-releases/newly-declassified-appendix-to-durham-report-sheds-additional-light-on-clinton-campaign-plan-to-falsely-tie-trump-to-russia-and-fbis-failure-to-investigate"
+          },
+          {
+            "title": "Russia Investigation Transcripts and Documents",
+            "snippet": "The transcripts released today richly detail evidence of the Trump campaign's efforts to invite, make use of, and cover up Russia's help in the ...",
+            "url": "https://democrats-intelligence.house.gov/russiainvestigation/"
+          },
+          {
+            "title": "Allegations of Barack Obama spying on Donald Trump",
+            "snippet": "In July 2025, Tulsi Gabbard distributed documents that she insinuated placed guilt for certain members of the Obama administration, that she termed \"treasonous\" ...",
+            "url": "https://en.wikipedia.org/wiki/Allegations_of_Barack_Obama_spying_on_Donald_Trump"
+          },
+          {
+            "title": "Untitled",
+            "snippet": "The report does include some comparisons and contrasts between the facts alleged in the Trump case and the Biden case. Did you find that President Biden ...",
+            "url": "https://congress.gov/118/chrg/CHRG-118hhrg55150/generated/CHRG-118hhrg55150.htm"
+          },
+          {
+            "title": "Gabbard says declassified report 'exposes' Obama ...",
+            "snippet": "It was declassified on Wednesday, a day after President Trump accused former President Barack Obama of leading an effort to falsely tie him to ...",
+            "url": "https://www.bbc.com/news/articles/cx2l01ek0y7o"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-candidate",
+  "timestamp": "2026-11-06T04:33:26.660661+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6795.968
+}

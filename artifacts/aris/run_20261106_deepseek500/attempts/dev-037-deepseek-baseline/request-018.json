@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons and seven other underage girls were featured on Hunter Biden's laptop.",
+        "query": "seven other underage girls were featured on Hunter Biden's laptop. evidence",
+        "candidates": [
+          {
+            "title": "No evidence Hunter Biden had photos of Coons' daughter",
+            "snippet": "\"The daughter of Sen. Coons (D-DE), along with 7 other underaged girls are featured on Hunter's laptop! - Breitbart News\"",
+            "url": "https://politifact.com/factchecks/2020/oct/26/facebook-posts/no-evidence-hunter-biden-had-photos-coons-daughter/"
+          },
+          {
+            "title": "17 rumors involving Hunter Biden from our archives",
+            "snippet": "The second son of former President Joe Biden has described himself as an artist, author, recovery advocate and \"crackhead.\"",
+            "url": "https://www.snopes.com/collections/hunter-biden-collection/"
+          },
+          {
+            "title": "Inside the campaign to 'pizzagate' Hunter Biden",
+            "snippet": "How evidence-free allegations of child abuse leveled at Hunter Biden went from the fringes of the internet to the mainstream.",
+            "url": "https://www.nbcnews.com/tech/tech-news/inside-campaign-pizzagate-hunter-biden-n1244331"
+          },
+          {
+            "title": "Social Media Posts Dredge Up Baseless 'Child Trafficking' ...",
+            "snippet": "The Facebook meme that makes claims about Hunter Biden “torturing and raping children” provides no evidence, despite very specifically claiming ...",
+            "url": "https://www.factcheck.org/2020/10/social-media-posts-dredge-up-baseless-child-trafficking-conspiracy-theory/"
+          },
+          {
+            "title": "Hunter Biden laptop controversy",
+            "snippet": "In October 2020, a controversy arose involving a laptop that belonged to Hunter Biden. The owner of a Delaware computer shop, John Paul Mac Isaac, said that ...",
+            "url": "https://en.wikipedia.org/wiki/Hunter_Biden_laptop_controversy"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-037-deepseek-baseline",
+  "timestamp": "2026-11-06T07:27:34.676217+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17243.984
+}

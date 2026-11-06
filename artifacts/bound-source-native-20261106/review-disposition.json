@@ -1,0 +1,43 @@
+{
+  "native_diagnostic_justified": true,
+  "assessment_mode": "evidence_adjudicated",
+  "assessment_reasoning": {
+    "glm": "high",
+    "deepseek": false
+  },
+  "caps_by_kind": {
+    "anchor": {
+      "ollama": 2,
+      "jev": 4
+    }
+  },
+  "planned_max_sends": {
+    "ollama": 4,
+    "jev": 8,
+    "search": 0,
+    "fetch": 0
+  },
+  "requested_output_token_cap_total": 24576,
+  "aggregate_job_seconds_cap": 600,
+  "reused_deepseek_plan": {
+    "result": "artifacts/strict-literal-native-20261105/deepseek-plan/result.json",
+    "audit": "artifacts/strict-literal-native-20261105/deepseek-plan-audit.json"
+  },
+  "prior_accounting": "artifacts/bound-source-native-20261106/prior-accounting.json",
+  "additional_helpers": [
+    "evaluation/run_bound_source_native.ps1",
+    "evaluation/prepare_bound_source_native.py",
+    "evaluation/prepare_evidence_adjudicated_native.py",
+    "evaluation/prepare_path_adjudicated_native.py",
+    "artifacts/bound-source-native-20261106/prior-accounting.json",
+    "src/kaji_langgraph/config/default.yaml",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "review_report": "artifacts/bound-source-native-20261106/REVIEW.md",
+  "criterion": "FullnativefidelityofC0/classes/stance/sourceunits/origin/action/dates/allissuesandactualindependence; allmaterialissuesblock. Literalrecordselfreport/Jevscores notworldtruth or efficacy. Faithfulhonestabstentionentryonlyafterbothmodels; immediately original8case/modeldevelopment19new+13matchingbaselines andunchangedguards. Firstfailureclosesphase, norepair/retry/pruning; requiredexact+Jev>=.80/provenance/wholeclaimauditforanyacceptance. Final2000onlyinadifferentchat.",
+  "postreview_delta": null,
+  "mechanism": "Typed per-source anchor choices combined with early evidence-path review in one Jev call; language path model cannot emit origin/action IDs. Semantic field ownership remains explicit, raw confidence/choices retained, no response repair.",
+  "predecision_source_path_review": true,
+  "bound_source_anchors": true
+}

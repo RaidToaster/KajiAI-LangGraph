@@ -1,0 +1,33 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Sanders introduced a single-payer substitute amendment during the ACA debate, which was withdrawn after a procedural objection, showing he sought a stronger option rather than opposing the law.",
+            "url": "https://www.citizen.org/news/sanders-amendment-withdrawn-after-opponents-force-oral-reading-of-bill-what-happens-now/",
+            "quote": "##### Share\n\n* Facebook\n* Twitter\n* Email\n* BlueSky\n* Text\n* Threads\n\n##### Share\n\n* Facebook\n* Twitter\n* Email\n* BlueSky\n* Text\n* Threads\n\nby John Sparks\n\nThere was no Senate vote on the single-payer health care amendment on the floor December 16, thanks to the parliamentary obstruction of amendments by Republican senators in their battle to prevent any and all health care reform this year.\n\nSen. Bernie",
+            "context": "##### Share\n\n* Facebook\n* Twitter\n* Email\n* BlueSky\n* Text\n* Threads\n\n##### Share\n\n* Facebook\n* Twitter\n* Email\n* BlueSky\n* Text\n* Threads\n\nby John Sparks\n\nThere was no Senate vote on the single-payer health care amendment on the floor December 16, thanks to the parliamentary obstruction of amendments by Republican senators in their battle to prevent any and all health care reform this year.\n\nSen. Bernie Sanders (I-Vt.) attempted to introduce his Medicare-for-All, single-payer health care substitute amendment, but when he requested the usual unanimous consent to dispense with the reading of the entire bill, Sen. Tom Coburn (R-Okla.) objected, and under Senate rules, clerks were obligated to read aloud the entire 700-plus page amendment – a process that would have consumed nearly eight hours.\n\nAfter 2 hours and 43 minutes, Sen. Sanders withdrew his amendment in order to allow the Senate to proceed with other business in the dwindling days before the Christmas recess – but he then gave a rousing, blistering speech on the Senate floor, condemning the insurance cartel, anti-reform obstructionists in Congress, and promising that the day will come when America has true universal healthcare.\n\nHad Sen. Sanders’s amendment been allowed to proceed to debate and vote, it would have been the first time a complete single-payer plan had been considered on the Senate floor, a milestone in the history of nearly 60 years of effort to reform the nation’s health care system.\n\nSanders was proposing the amendment as a substitute for the compromise bill put together by Majority Leader Harry Reid (D-Nev"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-deepseek-candidate",
+  "timestamp": "2026-11-03T05:37:52.534573+00:00",
+  "status": "reserved_outcome_unknown"
+}

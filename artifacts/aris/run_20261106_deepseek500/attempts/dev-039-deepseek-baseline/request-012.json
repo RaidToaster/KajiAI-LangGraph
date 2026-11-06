@@ -1,0 +1,66 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Official UK government guidance states there is no evidence of a link between 5G and COVID-19.",
+            "url": "https://www.gov.uk/guidance/5g-and-coronavirus-covid-19",
+            "quote": "There is no evidence of a link between 5G and coronavirus (COVID-19).",
+            "context": "Guidance\n\n# 5G and coronavirus (COVID-19)\n\nThere is no evidence of a link between 5G and coronavirus (COVID-19).\n\n**From:**\n**Published:**:   6 May 2020\n\n## No evidence of a link between 5G and coronavirus\n\nThere is no evidence of a link between 5G and coronavirus. These theories have been rejected by scientific experts in the World Health Organisation and Full Fact, a UK-based independent fact checking charity.\n\nViruses cannot travel on radio waves or mobile networks. Coronavirus is also spreading in many countries that do not have 5G mobile networks.\n\nFull Fact makes clear there is no evidence that 5G is harmful to humans and it is not accelerating the spread of coronavirus.\n\nOfcom has produced guidance to address the myths around 5G and coronavirus, while the UK’s mobile network operators (EE, O2, Three and Vodafone) have issued a joint statement highlighting that there is no scientific evidence of any link between 5G and coronavirus.\n\n## How 5G works\n\n5G is the next generation of wireless network technology. 5G mobile data is transmitted over radio waves. These radio waves are non-ionising, meaning they do not carry enough energy to directly damage a person’s DNA inside cells.\n\nRead Public Health England’s guidance on radio waves and health.\n\n## If you’re not sure, don’t share it\n\nBefore"
+          },
+          {
+            "finding": "Official UK guidance explains that viruses cannot travel on radio waves or mobile networks and that COVID-19 spreads in countries without 5G networks.",
+            "url": "https://www.gov.uk/guidance/5g-and-coronavirus-covid-19",
+            "quote": "Viruses cannot travel on radio waves or mobile networks. Coronavirus is also spreading in many countries that do not have 5G mobile networks.",
+            "context": "Guidance\n\n# 5G and coronavirus (COVID-19)\n\nThere is no evidence of a link between 5G and coronavirus (COVID-19).\n\n**From:**\n**Published:**:   6 May 2020\n\n## No evidence of a link between 5G and coronavirus\n\nThere is no evidence of a link between 5G and coronavirus. These theories have been rejected by scientific experts in the World Health Organisation and Full Fact, a UK-based independent fact checking charity.\n\nViruses cannot travel on radio waves or mobile networks. Coronavirus is also spreading in many countries that do not have 5G mobile networks.\n\nFull Fact makes clear there is no evidence that 5G is harmful to humans and it is not accelerating the spread of coronavirus.\n\nOfcom has produced guidance to address the myths around 5G and coronavirus, while the UK’s mobile network operators (EE, O2, Three and Vodafone) have issued a joint statement highlighting that there is no scientific evidence of any link between 5G and coronavirus.\n\n## How 5G works\n\n5G is the next generation of wireless network technology. 5G mobile data is transmitted over radio waves. These radio waves are non-ionising, meaning they do not carry enough energy to directly damage a person’s DNA inside cells.\n\nRead Public Health England’s guidance on radio waves and health.\n\n## If you’re not sure, don’t share it\n\nBefore you like, comment or share something about coronavirus online, use the SHARE Checklist to help spot false or misleading content.\n\n## Sign up for emails or print this page\n\nContents"
+          },
+          {
+            "finding": "A peer-reviewed analysis describes the 5G-COVID link as a conspiracy theory and reports that Full Fact found the conspiracy not true and its supporting theories flawed.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7205032/",
+            "quote": "The independent fact",
+            "context": "ronic devices and wireless multimedia demand, which created a burden on existing networks. A key benefit of 5G is that some of the current issues with cellular networks such as poor data rates, capacity, quality of service, and latency will be solved [7]. Although there is no scientific proof, the technology is suggested to negatively affect health on certain social media channels [8].\n\nIn the first week of January, some social media users pointed to 5G as being the cause of COVID-19 or accelerating its spread. The issue became a trending topic and appeared visible to all users on Twitter within the United Kingdom. Since then, multiple videos and news articles have been shared across social media linking the two together. The conspiracy has been of such a serious nature that, in Birmingham and Merseyside, United Kingdom, 5G masts were torched over concerns associating this technology and the spread of the disease according to the British Broadcasting Corporation [9]. More concerningly, Nightingale hospital in Birmingham, United Kingdom had its phone mast set on fire [10]. This is unwelcome damage especially at a time when hospitals are required to operate with maximum efficiency.\n\nThe independent fact-checking website Full Fact noted that the conspiracy was not true and concluded that the theories given to support the 5G claims were flawed [11]. The National Health Service Director, Stephen Powis, noted in a press conference that the 5G infrastructure is vital for the wider general population who are being asked to remain at home. He noted that: “I'm absolutely outraged and disgusted that people would be taking action against the infrastructure we need to tackle this emergency” [10].\n\nThe origin of this theory demonstrates the transnational dimension to the new media landscape and the way that fake news and conspiracy theories travel. Previous research has traced the emergence of the conspiracy theory to comments made by a Belgian doctor in January 2020, linking health concerns about 5G to the emergence of the coronavirus [12]. From April 2-6, 2020, it is estimated that at least 20 mobile phone masts were vandalized in the United Kingdom alone [13]. Social media is an important information source for a subset of the population, and previous seminal research has noted the potential of Twitter for providing real time content analysis, allowing public health authorities to rapidly"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-039-deepseek-baseline",
+  "timestamp": "2026-11-06T04:26:17.394336+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6366.703
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Obtain the draft content to extract assertions and gather evidence.",
+        "candidates": [
+          {
+            "title": "Writing assertions and actions - CAI open source SDK",
+            "snippet": "Writing assertions and actions. Overview​. Assertions provide information about when, where, and how an asset was created or transformed.",
+            "url": "https://opensource.contentauthenticity.org/docs/manifest/writing/assertions-actions/"
+          },
+          {
+            "title": "Content Credentials : C2PA Technical Specification",
+            "snippet": "Assertions are wrapped up with additional information into a digitally signed entity called a claim. This claim is digitally signed by the claim generator on ...",
+            "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html"
+          },
+          {
+            "title": "Chapter 6 - Evidence | USCIS",
+            "snippet": "Any evidence submitted in connection with a benefit request is incorporated into and considered part of the request. The purpose of gathering evidence is to ...",
+            "url": "https://www.uscis.gov/policy-manual/volume-1-part-e-chapter-6"
+          },
+          {
+            "title": "Understanding evidence extractions - Axon.com",
+            "snippet": "Learn what happens when you extract evidence in Axon Evidence, including third-party video, overlays, clips, markers, and redactions.",
+            "url": "https://www.axon.com/help/axon-evidence/software/axon-evidence/evidence/manage-evidence/evidence-extractions.htm"
+          },
+          {
+            "title": "A Guide to Evidence Synthesis: 10. Data Extraction",
+            "snippet": "1. Draft your Research Question · 2. Select Databases · 3. Select Grey Literature Sources · 4. Write a Search Strategy · 5. Register a Protocol · 6.",
+            "url": "https://guides.library.cornell.edu/evidence-synthesis/data-extraction"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-03T05:23:10.346772+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Pogba Has Quit The French National Team Over Macron's Remarks on Islam.",
+        "query": "Paul Pogba Instagram October 2020 fake news France national team Macron",
+        "candidates": [
+          {
+            "title": "Pogba lashes out at media outlets over 'fake news' stories",
+            "snippet": "... France. In a post on Instagram, Pogba put a sticker saying 'œUNACCEPTABLE FAKE NEWS'ť over a screenshot of the article published by The Sun.",
+            "url": "https://www.dailyherald.com/20201026/pro-sports/pogba-lashes-out-at-media-outlets-over-fake-news-stories/"
+          },
+          {
+            "title": "Man United midfielder Pogba 'angry, appalled' by media treatment",
+            "snippet": "\"I am appalled, angry, shocked and frustrated some 'media' sources use me to make total fake headlines in the sensible subject of French current ...",
+            "url": "https://www.espn.com/soccer/story/_/id/37608163/man-united-midfielder-pogba-angry-appalled-media-treatment"
+          },
+          {
+            "title": "French star Pogba denies rumors about int'l retirement",
+            "snippet": "British media had claimed Man Utd midfielder Pogba quit French national football team over Macron's Islamophobic remarks | Anadolu. ... Fake news, ...",
+            "url": "https://www.aa.com.tr/en/sports/french-star-pogba-denies-rumors-about-intl-retirement/2019611"
+          },
+          {
+            "title": "Paul Pogba has denied claims that he has quite the French national team ...",
+            "snippet": "... national team, branding the story as 'unacceptable fake news'. Reports in the ... France's president Emmanuel Macron alleging that Islam ...",
+            "url": "https://www.instagram.com/p/CGzjq50A0Ur/"
+          },
+          {
+            "title": "Paul Pogba denies reports he's quitting France over Macron",
+            "snippet": "'Fake news': Paul Pogba slams reports he's quitting France national team over Macron's Islam comments ... Macron has been embroiled in a row over ...",
+            "url": "https://www.newarab.com/news/paul-pogba-denies-reports-hes-quitting-france-over-macron"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-028-deepseek-baseline",
+  "timestamp": "2026-11-06T07:03:49.194747+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15818.515
+}

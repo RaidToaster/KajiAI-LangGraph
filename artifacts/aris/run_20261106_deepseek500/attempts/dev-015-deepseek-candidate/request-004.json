@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Illegal drug, border crossings, and human smuggling activities have decreased in areas where barriers are deployed in the United States.",
+        "query": "What specific areas of the United States are identified as having deployed barriers, and over what time periods are decreases measured?",
+        "candidates": [
+          {
+            "title": "TIPS FOR SMALL AGENCIES CONDUCTING BARRIER ...",
+            "snippet": "The purpose of this report is to examine some of the challenges faced by small agencies in complying with MD- 715 and to provide recommendations on how small ...",
+            "url": "https://www.eeoc.gov/federal-sector/management-directive/tips-small-agencies-conducting-barrier-analyses-under-md-715"
+          },
+          {
+            "title": "Healthcare Access in Rural Communities Overview",
+            "snippet": "In rural areas, because there is little anonymity, social stigma and privacy concerns are more likely to act as barriers to healthcare access.",
+            "url": "https://www.ruralhealthinfo.org/topics/healthcare-access"
+          },
+          {
+            "title": "Grid connection barriers to renewable energy deployment in ...",
+            "snippet": "In many regions of the US, it is common for generators to pay for individual transmission upgrades associated with their specific project that are identified ...",
+            "url": "https://www.sciencedirect.com/science/article/pii/S2542435124005038"
+          },
+          {
+            "title": "[PDF] FOREIGN TRADE BARRIERS - USTR",
+            "snippet": "Trade barriers elude fixed definitions, but may be broadly defined as government laws, regulations, policies, or practices—including non-market ...",
+            "url": "https://ustr.gov/sites/default/files/files/Press/Reports/2025NTE.pdf"
+          },
+          {
+            "title": "ICE expansion has outpaced accountability. What are the ...",
+            "snippet": "Examining ICE's expanded role, this piece looks at federal authority, training standards, and long-term effects on civil liberties.",
+            "url": "https://www.brookings.edu/articles/ice-expansion-has-outpaced-accountability-what-are-the-remedies/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-015-deepseek-candidate",
+  "timestamp": "2026-11-06T06:22:11.723183+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13321.031
+}

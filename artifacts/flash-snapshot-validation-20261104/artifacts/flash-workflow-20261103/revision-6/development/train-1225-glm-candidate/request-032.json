@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Search Federal Reserve Distributional Financial Accounts data for late-2019 or Q1-2020 bottom-50% wealth levels to independently estimate the early-2020 wealth of the bottom 125 million Americans.",
+        "candidates": [
+          {
+            "title": "The State of U.S. Household Wealth | St. Louis Fed",
+            "snippet": "An analysis examines quarterly data on the distribution of average household wealth in the U.S. by generation, education and race.",
+            "url": "https://www.stlouisfed.org/open-vault/2025/june/the-state-of-us-household-wealth"
+          },
+          {
+            "title": "The Fed - Distributional Financial Accounts Overview",
+            "snippet": "The Distributional Financial Accounts (DFAs) provide quarterly estimates of the distribution of a comprehensive measure of U.S. household ...",
+            "url": "https://www.federalreserve.gov/releases/efa/efa-distributional-financial-accounts.htm"
+          },
+          {
+            "title": "Wealth inequality in the United States",
+            "snippet": "Federal Reserve data indicates that as of Q2 2026, the top 1% of households in the United States held 32.5% of the country's wealth, while the bottom 50% held ...",
+            "url": "https://en.wikipedia.org/wiki/Wealth_inequality_in_the_United_States"
+          },
+          {
+            "title": "Trends in the Distribution of Family Wealth, 1989 to 2022",
+            "snippet": "In this report, the Congressional Budget Office examines changes in the distribution of family wealth (a family's assets minus its debts) ...",
+            "url": "https://www.cbo.gov/publication/60807"
+          },
+          {
+            "title": "Wealth Inequality",
+            "snippet": "We equate wealth with “net worth,” the sum total of your assets minus liabilities. Assets can include everything from an owned personal residence and cash in ...",
+            "url": "https://inequality.org/facts/wealth-inequality/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T08:55:30.458644+00:00",
+  "status": "reserved_outcome_unknown"
+}

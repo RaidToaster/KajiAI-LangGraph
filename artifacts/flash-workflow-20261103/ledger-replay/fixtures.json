@@ -1,0 +1,50 @@
+{
+  "positive": {
+    "case": "train-1218",
+    "expected_verdict": "CONFLICTING",
+    "records": [
+      {
+        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1111/vote_111_1_00396.htm?congress=111&session=1&vote=00396",
+        "date": "2009-12-24",
+        "origin": "U.S. Senate roll call 396 on passage of H.R. 3590 as amended",
+        "text": "Sanders (I-VT), Yea",
+        "finding": "Sanders voted for final Senate passage of the amended Affordable Care Act.",
+        "stance": "refutes"
+      },
+      {
+        "url": "https://www.sanders.senate.gov/press-releases/sanders-public-option-critical-to-health-reform/",
+        "date": "2009-11-22",
+        "origin": "Sanders press statement during negotiations before final passage",
+        "text": "including myself, who would not support final passage without a strong public option",
+        "finding": "During negotiation Sanders expressed conditional opposition to passage without a strong public option.",
+        "stance": "supports"
+      }
+    ]
+  },
+  "shared": {
+    "case": "train-1205",
+    "saved_attempt": "revision-4/development/train-1205-glm-candidate/result.json",
+    "expected_verdict": "FALSE",
+    "required_audit": "withhold_shared_lineage"
+  },
+  "scope": {
+    "case": "train-1209",
+    "saved_attempt": "revision-6/development/train-1209-glm-candidate/result.json",
+    "expected_verdict": "CONFLICTING",
+    "required_audit": "withhold_attribution_only",
+    "records": [
+      {
+        "url": "https://www.presidency.ucsb.edu/documents/democratic-candidates-debate-charleston-south-carolina-0",
+        "date": "2020-02-25",
+        "origin": "Transcript of the debate",
+        "text": "While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls."
+      },
+      {
+        "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/",
+        "date": "2020-03-02",
+        "origin": "Retrospective report describing an appeal before the debate",
+        "text": "an appeals court ordered voters to be kept on the rolls while it considered whether people should be removed"
+      }
+    ]
+  }
+}

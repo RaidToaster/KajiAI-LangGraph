@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Eric Trump, Donald J. Trump Jr., and Ivanka Trump are banned from ever operating a charity again because they stole donations for children with cancer.",
+        "query": "Primary settlement or consent judgment documents naming Eric Trump, Donald Trump Jr., or Ivanka Trump and charity operation restrictions",
+        "candidates": [
+          {
+            "title": "AG James Secures Court Order Against Donald J. Trump ...",
+            "snippet": "The award is part of Attorney General James' lawsuit against the Donald J. Trump Foundation and its directors — Mr. Trump, Donald Trump Jr., ...",
+            "url": "https://ag.ny.gov/press-release/2019/ag-james-secures-court-order-against-donald-j-trump-trump-children-and-trump"
+          },
+          {
+            "title": "PMUR 611/MUR 7425 (Donald J. Trump Foundation, et al.)",
+            "snippet": "on. May 31, 2019. The two matters stem from an investigation into the Donald J. Trump Foundation. (“Foundation”) conducted by the New York State Attorney ...",
+            "url": "https://www.fec.gov/files/legal/murs/7425/7425_27.pdf"
+          },
+          {
+            "title": "Social Posts Distort Facts on Trump Charities",
+            "snippet": "Trump Foundation, and conflates it with allegations about the Eric Trump Foundation. Full Story. President Donald Trump's namesake charitable ...",
+            "url": "https://www.factcheck.org/2019/12/social-posts-distort-facts-on-trump-charities/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-064-deepseek-candidate",
+  "timestamp": "2026-11-06T08:45:50.777388+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21940.093
+}

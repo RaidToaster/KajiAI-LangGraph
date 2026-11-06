@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Even if your mail-in ballot is postmarked prior to the Election day but arrives after the Election day it will be thrown out.",
+        "query": "For the relevant jurisdiction and election, what is the official deadline for receipt of mail-in ballots, and does a pre-Election Day postmark extend that deadline?",
+        "candidates": [
+          {
+            "title": "Table 11: Receipt and Postmark Deadlines for Absentee/Mail Ballots",
+            "snippet": "Must be received by noon on third day after the election if postmarked by Election Day, unless the voter can prove that election officials failed to send the ... Missing: relevant jurisdiction",
+            "url": "https://www.ncsl.org/elections-and-campaigns/table-11-receipt-and-postmark-deadlines-for-absentee-mail-ballots"
+          },
+          {
+            "title": "USPS postmark rules: What taxpayers, voters should know - CNBC",
+            "snippet": "Oct 15, 2026 · Most states — 35 of them — require mail-in ballots to arrive by Election Day, which falls on Nov. 3. Fifteen states, plus Washington and several ...",
+            "url": "https://www.cnbc.com/2026/10/15/usps-postmark-rules-taxpayers-voters.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-018-deepseek-candidate",
+  "timestamp": "2026-11-06T06:32:12.860852+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13922.171
+}

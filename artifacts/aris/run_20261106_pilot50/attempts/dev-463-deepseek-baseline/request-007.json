@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "558 people were killed by the police in 2018, while 201 people died in police custody",
+        "query": "558 people were killed by the police in 2018, while 201 people died in police custody counterevidence",
+        "candidates": [
+          {
+            "title": "Confronting US Policing's Record of Violence and Abuse",
+            "snippet": "In 2018, police killed 852 people, according to Mapping Police Violence, a research collaborative collecting comprehensive data on police ...",
+            "url": "https://www.hrw.org/news/2018/10/22/confronting-us-policings-record-violence-and-abuse"
+          },
+          {
+            "title": "Fed Gov't Data Undercounts Police Killings by 55%",
+            "snippet": "Police Killings by 55% out of 30,800 deaths … 55.5% (54.8–56.2) of all police violence deaths from 1980 to 2018.” per incarcerated person, ...",
+            "url": "https://campaignzero.org/research/federal-govt-data-undercounts-police-killings-by-55/"
+          },
+          {
+            "title": "The number of civilians killed by the police has been ...",
+            "snippet": "Research found that police officers killed more than 30000 people from 1980 to 2018 – 17000 more than official federal data suggests.",
+            "url": "https://www.pbs.org/newshour/nation/the-number-of-civilians-killed-by-the-police-has-been-greatly-undercounted-in-official-stats-for-decades"
+          },
+          {
+            "title": "Fatal Force: 2018 police shootings database",
+            "snippet": "Fatal Force 990 people were shot and killed by police in 2018. The Post is not tracking deaths of people in police custody,",
+            "url": "https://www.washingtonpost.com/graphics/2018/national/police-shootings-2018/"
+          },
+          {
+            "title": "Than Half of Police Killings Are Mislabeled, New Study Says",
+            "snippet": "About 55 percent of fatal encounters with the police between 1980 and 2018 were listed as another cause of death.",
+            "url": "https://www.nytimes.com/2021/09/30/us/police-killings-undercounted-study.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-463-deepseek-baseline",
+  "timestamp": "2026-11-06T00:57:25.727824+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6111.031
+}

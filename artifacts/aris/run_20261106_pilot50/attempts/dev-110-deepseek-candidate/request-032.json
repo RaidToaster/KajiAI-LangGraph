@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "Search the Abraham Lincoln Papers (Library of Congress) for any 1864 letter, memorandum, or telegram in which Lincoln explains his reasons for delaying the Chase nomination.",
+        "candidates": [
+          {
+            "title": "About this Collection | Abraham Lincoln Papers at the Library of ...",
+            "snippet": "Abraham Lincoln, \"Blind Memorandum,\" August 23, 1864, endorsed ... Ceremonial copy, joint resolution of Congress submitting the ... Abraham Lincoln, reading ...",
+            "url": "https://www.loc.gov/collections/abraham-lincoln-papers/about-this-collection/"
+          },
+          {
+            "title": "Digital Collections - Abraham Lincoln: A Resource Guide",
+            "snippet": "The complete Abraham Lincoln Papers from the Manuscript Division at the Library of Congress consist of approximately 20,000 documents. The ...",
+            "url": "https://guides.loc.gov/abraham-lincoln-guide/digital-collections"
+          },
+          {
+            "title": "Abraham Lincoln and Salmon P. Chase",
+            "snippet": "Galesburg, Illinois ( Letter from Salmon P. Chase to Abraham Lincoln, October 11, 1864); Abraham Lincoln Papers at the Library of Congress. Transcribed and ...",
+            "url": "https://www.abrahamlincolnsclassroom.org/abraham-lincolns-contemporaries/abraham-lincoln-and-salmon-p-chase/index.html"
+          },
+          {
+            "title": "#AbrahamLincoln accepting the resignation of Salmon P ...",
+            "snippet": "THURSDAY, JUNE 30, 1864 Secretary of the Treasury Salmon Chase submitted a letter of resignation to Lincoln--his fourth such letter since 1861-- ...",
+            "url": "https://www.facebook.com/Lincoln.Museum/posts/abrahamlincoln-accepting-the-resignation-of-salmon-p-chase-his-treasury-secretar/1526792132826590/"
+          },
+          {
+            "title": "Abraham Lincoln, Blind Memorandum (1864) - House Divided",
+            "snippet": "Today, that document (located in the Lincoln Papers at the Library of Congress) is known as the “Blind Memorandum.” SOURCE FORMAT: Private memorandum. WORD ...",
+            "url": "https://housedivided.dickinson.edu/sites/teagle/texts/abraham-lincoln-blind-memorandum-1864/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-deepseek-candidate",
+  "timestamp": "2026-11-06T01:17:01.156177+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7286.468
+}

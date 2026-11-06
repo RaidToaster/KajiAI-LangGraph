@@ -1,0 +1,966 @@
+{
+  "model": "jev-1.13.0",
+  "caps": {
+    "jev": 1
+  },
+  "cases": [
+    {
+      "id": "speech",
+      "claim": "Mayor Imani said unemployment fell 20%.",
+      "objection": "The unemployment statistic was not independently verified.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "Independent recordings A and B both contain Mayor Imani saying unemployment fell 20%. Neither recording verifies unemployment data."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": false,
+      "authored": true
+    },
+    {
+      "id": "embedded",
+      "claim": "Unemployment fell 20%.",
+      "objection": "The unemployment statistic was not independently verified.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "Independent recordings A and B both contain Mayor Imani saying unemployment fell 20%. Neither recording verifies unemployment data."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": true,
+      "authored": true
+    },
+    {
+      "id": "inequality",
+      "claim": "Firm A had more net assets than group B in 2020.",
+      "objection": "Two verified comparable group B totals differ.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "For the same date, population, USD net-asset measure and fully verified inputs: A=64.2 billion. Independent methods report B=6 billion and B=11.4 billion. For this authored control, these two estimates cover the stipulated alternatives; no additional input uncertainty is at issue."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": false,
+      "authored": true
+    },
+    {
+      "id": "threshold_crossing",
+      "claim": "Firm A had more net assets than group B in 2020.",
+      "objection": "Two comparable group B totals differ across A's value.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "For the same date, population and USD net-asset measure: A=12 billion. Independent methods report B=11 billion and B=14 billion. Neither alternative has been resolved."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": true,
+      "authored": true
+    },
+    {
+      "id": "cohort",
+      "claim": "The bottom 38% of households had positive combined wealth.",
+      "objection": "The bottom 38% had negative combined wealth.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "The bottom 37% collectively had -44 billion dollars. The 38th percentile held 50 billion. The bottom 38% combined held about +6 billion dollars."
+        }
+      ],
+      "expected_basis": "inconsistent",
+      "expected_material": false,
+      "authored": true
+    },
+    {
+      "id": "causal",
+      "claim": "The signal system caused the 15% reduction in delays.",
+      "objection": "No analysis controls alternative explanations.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "A vendor measured a 15% before/after delay change. It did not control traffic volume, roadworks, seasonality or other changes."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": true,
+      "authored": true
+    },
+    {
+      "id": "shared",
+      "claim": "The vendor's 15% reduction was independently verified.",
+      "objection": "The second story only repeats the original vendor figures.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "Outlet B states it repeats the vendor's figures and did not collect or independently verify measurements."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": true,
+      "authored": true
+    },
+    {
+      "id": "date_mismatch",
+      "claim": "The official's wealth was 64.2 billion in February 2020.",
+      "objection": "The valuation is for a different period.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "The supplied valuation of 64.2 billion is explicitly dated February 2025. No 2020 value is provided."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": true,
+      "authored": true
+    },
+    {
+      "id": "date_given",
+      "claim": "The official's wealth was 64.2 billion in February 2020.",
+      "objection": "The supplied date is February 2020.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "The source reports the official's net worth was 64.2 billion at the February 19, 2020 event and lists its valuation-source access date as February 19, 2020."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": false,
+      "authored": true
+    },
+    {
+      "id": "population_proxy",
+      "claim": "The poorest 125 million individual residents held less wealth than A.",
+      "objection": "The population was estimated from household averages rather than ranked individuals.",
+      "records": [
+        {
+          "id": "T1",
+          "text": "The study ranks households and multiplies their number by citywide average household size. It does not observe individual wealth ranking or household size by wealth group."
+        }
+      ],
+      "expected_basis": "consistent",
+      "expected_material": true,
+      "authored": true
+    },
+    {
+      "id": "observed_gap_0",
+      "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "objection": "The 125.7 million figure rests on household averaging; PolitiFact and S1 both derive from the same Bruenig calculation, so no fully independent wealth-distribution dataset is supplied.",
+      "records": [
+        {
+          "id": "S1",
+          "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+          "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+          "passages": {
+            "P1": "of $11.4 billion, meaning that Michael Bloomberg owns nearly 6 times as much wealth as they do.\n\nThe bottom 38 percent of households is equal to around 47.8 million households. Since households have an average of 2.63 members, this is equal to about 125.7 million people. Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined.\n\nIn fact, this 125 million figure actually understates"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S2",
+          "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+          "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+          "passages": {
+            "P1": "broader message about income inequality. That said, some quirks in how wealth is distributed among households mean that millions of American — not just Bloomberg — own more wealth than millions of their compatriots.\n\nLet’s walk through the numbers.\n\nBloomberg’s net worth, as listed by Forbes magazine’s richest list, was $64.2 billion at the time of the Feb. 19 debate. That was enough to rank him as the 12th-richest person in the",
+            "P2": "bottom 38% of American households to get $11.4 billion.\n\nThen, he determined how many household units this accounted for and found the answer to be 47.8 million. You can then multiply the 47.8 million households by 2.63 (the average number of people per household) to come up with 125.7 million people.\n\nMatthew Gross, a doctoral candidate at the University of Michigan with data-analyzing experience, helped PolitiFact replicate Bruenig’s math. (He was recommended",
+            "P3": "can also say they're richer than more than 100 million Americans.\n\nSee the sources for this fact-check\n\nSen. Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate.\n\n“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That’s wrong. That’s amoral.”\n\nWe wanted to know if Bloomberg, the former mayor of New York, was",
+            "P4": "#### If your time is short\n\n• Bloomberg, one of the world's richest men, does have more wealth than roughly the bottom 125 million Americans.\n\n• That said, the roughly 123 million Americans at the bottom of the wealth spectrum are collectively $44 billion in the red, so Bloomberg is not alone — millions of Americans can also say they're richer than more than 100 million Americans.\n\nSee the sources for this",
+            "P5": "0 through 38 collectively own about $6 billion in wealth, which is less than Bloomberg had.\n\nIn a technical sense, however, tens of millions of Americans join Bloomberg in owning more wealth than the bottom 37% of households combined, since the bottom 37% are collectively in the red.\n\n## Our ruling\n\nSanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.”\n\nThe numbers check out. It’s worth noting, however,"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S3",
+          "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+          "title": "Michael Bloomberg Has Six Times More Wealth Than ... - Jacobin",
+          "passages": {
+            "P1": "# Michael Bloomberg Has Six Times More Wealth Than the Bottom 125 Million Americans\n\nMichael Bloomberg is so rich it's hard to comprehend. So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.\n\nMichael Bloomberg’s net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that scale is hard"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S4",
+          "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+          "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire ...",
+          "passages": {
+            "P1": "an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S5",
+          "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+          "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth than ...",
+          "passages": {
+            "P1": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth. Missing:  counterevidence  | Show results with:"
+          },
+          "retrieval_kind": "snippet"
+        },
+        {
+          "id": "S6",
+          "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/",
+          "title": "The top 0.1% of Americans now hold more than six times ...",
+          "passages": {
+            "P1": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ..."
+          },
+          "retrieval_kind": "snippet"
+        },
+        {
+          "id": "S7",
+          "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/",
+          "title": "Two Americas, the people vs. the billionaires",
+          "passages": {
+            "P1": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ..."
+          },
+          "retrieval_kind": "snippet"
+        }
+      ],
+      "authored": false
+    },
+    {
+      "id": "observed_gap_1",
+      "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "objection": "Bloomberg's $64.2 billion figure is a Forbes estimate, not an audited wealth measurement.",
+      "records": [
+        {
+          "id": "S1",
+          "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+          "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+          "passages": {
+            "P1": "of $11.4 billion, meaning that Michael Bloomberg owns nearly 6 times as much wealth as they do.\n\nThe bottom 38 percent of households is equal to around 47.8 million households. Since households have an average of 2.63 members, this is equal to about 125.7 million people. Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined.\n\nIn fact, this 125 million figure actually understates"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S2",
+          "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+          "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+          "passages": {
+            "P1": "broader message about income inequality. That said, some quirks in how wealth is distributed among households mean that millions of American — not just Bloomberg — own more wealth than millions of their compatriots.\n\nLet’s walk through the numbers.\n\nBloomberg’s net worth, as listed by Forbes magazine’s richest list, was $64.2 billion at the time of the Feb. 19 debate. That was enough to rank him as the 12th-richest person in the",
+            "P2": "bottom 38% of American households to get $11.4 billion.\n\nThen, he determined how many household units this accounted for and found the answer to be 47.8 million. You can then multiply the 47.8 million households by 2.63 (the average number of people per household) to come up with 125.7 million people.\n\nMatthew Gross, a doctoral candidate at the University of Michigan with data-analyzing experience, helped PolitiFact replicate Bruenig’s math. (He was recommended",
+            "P3": "can also say they're richer than more than 100 million Americans.\n\nSee the sources for this fact-check\n\nSen. Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate.\n\n“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That’s wrong. That’s amoral.”\n\nWe wanted to know if Bloomberg, the former mayor of New York, was",
+            "P4": "#### If your time is short\n\n• Bloomberg, one of the world's richest men, does have more wealth than roughly the bottom 125 million Americans.\n\n• That said, the roughly 123 million Americans at the bottom of the wealth spectrum are collectively $44 billion in the red, so Bloomberg is not alone — millions of Americans can also say they're richer than more than 100 million Americans.\n\nSee the sources for this",
+            "P5": "0 through 38 collectively own about $6 billion in wealth, which is less than Bloomberg had.\n\nIn a technical sense, however, tens of millions of Americans join Bloomberg in owning more wealth than the bottom 37% of households combined, since the bottom 37% are collectively in the red.\n\n## Our ruling\n\nSanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.”\n\nThe numbers check out. It’s worth noting, however,"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S3",
+          "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+          "title": "Michael Bloomberg Has Six Times More Wealth Than ... - Jacobin",
+          "passages": {
+            "P1": "# Michael Bloomberg Has Six Times More Wealth Than the Bottom 125 Million Americans\n\nMichael Bloomberg is so rich it's hard to comprehend. So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.\n\nMichael Bloomberg’s net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that scale is hard"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S4",
+          "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+          "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire ...",
+          "passages": {
+            "P1": "an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S5",
+          "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+          "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth than ...",
+          "passages": {
+            "P1": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth. Missing:  counterevidence  | Show results with:"
+          },
+          "retrieval_kind": "snippet"
+        },
+        {
+          "id": "S6",
+          "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/",
+          "title": "The top 0.1% of Americans now hold more than six times ...",
+          "passages": {
+            "P1": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ..."
+          },
+          "retrieval_kind": "snippet"
+        },
+        {
+          "id": "S7",
+          "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/",
+          "title": "Two Americas, the people vs. the billionaires",
+          "passages": {
+            "P1": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ..."
+          },
+          "retrieval_kind": "snippet"
+        }
+      ],
+      "authored": false
+    },
+    {
+      "id": "observed_gap_2",
+      "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+      "objection": "The comparison is technically true because the bottom group's collective net worth is negative; the claim's framing relies on this quirk.",
+      "records": [
+        {
+          "id": "S1",
+          "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+          "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+          "passages": {
+            "P1": "of $11.4 billion, meaning that Michael Bloomberg owns nearly 6 times as much wealth as they do.\n\nThe bottom 38 percent of households is equal to around 47.8 million households. Since households have an average of 2.63 members, this is equal to about 125.7 million people. Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined.\n\nIn fact, this 125 million figure actually understates"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S2",
+          "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+          "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+          "passages": {
+            "P1": "broader message about income inequality. That said, some quirks in how wealth is distributed among households mean that millions of American — not just Bloomberg — own more wealth than millions of their compatriots.\n\nLet’s walk through the numbers.\n\nBloomberg’s net worth, as listed by Forbes magazine’s richest list, was $64.2 billion at the time of the Feb. 19 debate. That was enough to rank him as the 12th-richest person in the",
+            "P2": "bottom 38% of American households to get $11.4 billion.\n\nThen, he determined how many household units this accounted for and found the answer to be 47.8 million. You can then multiply the 47.8 million households by 2.63 (the average number of people per household) to come up with 125.7 million people.\n\nMatthew Gross, a doctoral candidate at the University of Michigan with data-analyzing experience, helped PolitiFact replicate Bruenig’s math. (He was recommended",
+            "P3": "can also say they're richer than more than 100 million Americans.\n\nSee the sources for this fact-check\n\nSen. Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate.\n\n“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That’s wrong. That’s amoral.”\n\nWe wanted to know if Bloomberg, the former mayor of New York, was",
+            "P4": "#### If your time is short\n\n• Bloomberg, one of the world's richest men, does have more wealth than roughly the bottom 125 million Americans.\n\n• That said, the roughly 123 million Americans at the bottom of the wealth spectrum are collectively $44 billion in the red, so Bloomberg is not alone — millions of Americans can also say they're richer than more than 100 million Americans.\n\nSee the sources for this",
+            "P5": "0 through 38 collectively own about $6 billion in wealth, which is less than Bloomberg had.\n\nIn a technical sense, however, tens of millions of Americans join Bloomberg in owning more wealth than the bottom 37% of households combined, since the bottom 37% are collectively in the red.\n\n## Our ruling\n\nSanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.”\n\nThe numbers check out. It’s worth noting, however,"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S3",
+          "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+          "title": "Michael Bloomberg Has Six Times More Wealth Than ... - Jacobin",
+          "passages": {
+            "P1": "# Michael Bloomberg Has Six Times More Wealth Than the Bottom 125 Million Americans\n\nMichael Bloomberg is so rich it's hard to comprehend. So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.\n\nMichael Bloomberg’s net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that scale is hard"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S4",
+          "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+          "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire ...",
+          "passages": {
+            "P1": "an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving"
+          },
+          "retrieval_kind": "full_page"
+        },
+        {
+          "id": "S5",
+          "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+          "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth than ...",
+          "passages": {
+            "P1": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth. Missing:  counterevidence  | Show results with:"
+          },
+          "retrieval_kind": "snippet"
+        },
+        {
+          "id": "S6",
+          "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/",
+          "title": "The top 0.1% of Americans now hold more than six times ...",
+          "passages": {
+            "P1": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ..."
+          },
+          "retrieval_kind": "snippet"
+        },
+        {
+          "id": "S7",
+          "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/",
+          "title": "Two Americas, the people vs. the billionaires",
+          "passages": {
+            "P1": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ..."
+          },
+          "retrieval_kind": "snippet"
+        }
+      ],
+      "authored": false
+    }
+  ],
+  "state": {
+    "cases": [
+      {
+        "id": "speech",
+        "claim": "Mayor Imani said unemployment fell 20%.",
+        "objection": "The unemployment statistic was not independently verified.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "Independent recordings A and B both contain Mayor Imani saying unemployment fell 20%. Neither recording verifies unemployment data."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "embedded",
+        "claim": "Unemployment fell 20%.",
+        "objection": "The unemployment statistic was not independently verified.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "Independent recordings A and B both contain Mayor Imani saying unemployment fell 20%. Neither recording verifies unemployment data."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "inequality",
+        "claim": "Firm A had more net assets than group B in 2020.",
+        "objection": "Two verified comparable group B totals differ.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "For the same date, population, USD net-asset measure and fully verified inputs: A=64.2 billion. Independent methods report B=6 billion and B=11.4 billion. For this authored control, these two estimates cover the stipulated alternatives; no additional input uncertainty is at issue."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "threshold_crossing",
+        "claim": "Firm A had more net assets than group B in 2020.",
+        "objection": "Two comparable group B totals differ across A's value.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "For the same date, population and USD net-asset measure: A=12 billion. Independent methods report B=11 billion and B=14 billion. Neither alternative has been resolved."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "cohort",
+        "claim": "The bottom 38% of households had positive combined wealth.",
+        "objection": "The bottom 38% had negative combined wealth.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "The bottom 37% collectively had -44 billion dollars. The 38th percentile held 50 billion. The bottom 38% combined held about +6 billion dollars."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "causal",
+        "claim": "The signal system caused the 15% reduction in delays.",
+        "objection": "No analysis controls alternative explanations.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "A vendor measured a 15% before/after delay change. It did not control traffic volume, roadworks, seasonality or other changes."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "shared",
+        "claim": "The vendor's 15% reduction was independently verified.",
+        "objection": "The second story only repeats the original vendor figures.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "Outlet B states it repeats the vendor's figures and did not collect or independently verify measurements."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "date_mismatch",
+        "claim": "The official's wealth was 64.2 billion in February 2020.",
+        "objection": "The valuation is for a different period.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "The supplied valuation of 64.2 billion is explicitly dated February 2025. No 2020 value is provided."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "date_given",
+        "claim": "The official's wealth was 64.2 billion in February 2020.",
+        "objection": "The supplied date is February 2020.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "The source reports the official's net worth was 64.2 billion at the February 19, 2020 event and lists its valuation-source access date as February 19, 2020."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "population_proxy",
+        "claim": "The poorest 125 million individual residents held less wealth than A.",
+        "objection": "The population was estimated from household averages rather than ranked individuals.",
+        "records": [
+          {
+            "id": "T1",
+            "text": "The study ranks households and multiplies their number by citywide average household size. It does not observe individual wealth ranking or household size by wealth group."
+          }
+        ],
+        "authored": true
+      },
+      {
+        "id": "observed_gap_0",
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "objection": "The 125.7 million figure rests on household averaging; PolitiFact and S1 both derive from the same Bruenig calculation, so no fully independent wealth-distribution dataset is supplied.",
+        "records": [
+          {
+            "id": "S1",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "passages": {
+              "P1": "of $11.4 billion, meaning that Michael Bloomberg owns nearly 6 times as much wealth as they do.\n\nThe bottom 38 percent of households is equal to around 47.8 million households. Since households have an average of 2.63 members, this is equal to about 125.7 million people. Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined.\n\nIn fact, this 125 million figure actually understates"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S2",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "passages": {
+              "P1": "broader message about income inequality. That said, some quirks in how wealth is distributed among households mean that millions of American — not just Bloomberg — own more wealth than millions of their compatriots.\n\nLet’s walk through the numbers.\n\nBloomberg’s net worth, as listed by Forbes magazine’s richest list, was $64.2 billion at the time of the Feb. 19 debate. That was enough to rank him as the 12th-richest person in the",
+              "P2": "bottom 38% of American households to get $11.4 billion.\n\nThen, he determined how many household units this accounted for and found the answer to be 47.8 million. You can then multiply the 47.8 million households by 2.63 (the average number of people per household) to come up with 125.7 million people.\n\nMatthew Gross, a doctoral candidate at the University of Michigan with data-analyzing experience, helped PolitiFact replicate Bruenig’s math. (He was recommended",
+              "P3": "can also say they're richer than more than 100 million Americans.\n\nSee the sources for this fact-check\n\nSen. Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate.\n\n“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That’s wrong. That’s amoral.”\n\nWe wanted to know if Bloomberg, the former mayor of New York, was",
+              "P4": "#### If your time is short\n\n• Bloomberg, one of the world's richest men, does have more wealth than roughly the bottom 125 million Americans.\n\n• That said, the roughly 123 million Americans at the bottom of the wealth spectrum are collectively $44 billion in the red, so Bloomberg is not alone — millions of Americans can also say they're richer than more than 100 million Americans.\n\nSee the sources for this",
+              "P5": "0 through 38 collectively own about $6 billion in wealth, which is less than Bloomberg had.\n\nIn a technical sense, however, tens of millions of Americans join Bloomberg in owning more wealth than the bottom 37% of households combined, since the bottom 37% are collectively in the red.\n\n## Our ruling\n\nSanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.”\n\nThe numbers check out. It’s worth noting, however,"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S3",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+            "title": "Michael Bloomberg Has Six Times More Wealth Than ... - Jacobin",
+            "passages": {
+              "P1": "# Michael Bloomberg Has Six Times More Wealth Than the Bottom 125 Million Americans\n\nMichael Bloomberg is so rich it's hard to comprehend. So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.\n\nMichael Bloomberg’s net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that scale is hard"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S4",
+            "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+            "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire ...",
+            "passages": {
+              "P1": "an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S5",
+            "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+            "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth than ...",
+            "passages": {
+              "P1": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth. Missing:  counterevidence  | Show results with:"
+            },
+            "retrieval_kind": "snippet"
+          },
+          {
+            "id": "S6",
+            "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/",
+            "title": "The top 0.1% of Americans now hold more than six times ...",
+            "passages": {
+              "P1": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ..."
+            },
+            "retrieval_kind": "snippet"
+          },
+          {
+            "id": "S7",
+            "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/",
+            "title": "Two Americas, the people vs. the billionaires",
+            "passages": {
+              "P1": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ..."
+            },
+            "retrieval_kind": "snippet"
+          }
+        ],
+        "authored": false
+      },
+      {
+        "id": "observed_gap_1",
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "objection": "Bloomberg's $64.2 billion figure is a Forbes estimate, not an audited wealth measurement.",
+        "records": [
+          {
+            "id": "S1",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "passages": {
+              "P1": "of $11.4 billion, meaning that Michael Bloomberg owns nearly 6 times as much wealth as they do.\n\nThe bottom 38 percent of households is equal to around 47.8 million households. Since households have an average of 2.63 members, this is equal to about 125.7 million people. Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined.\n\nIn fact, this 125 million figure actually understates"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S2",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "passages": {
+              "P1": "broader message about income inequality. That said, some quirks in how wealth is distributed among households mean that millions of American — not just Bloomberg — own more wealth than millions of their compatriots.\n\nLet’s walk through the numbers.\n\nBloomberg’s net worth, as listed by Forbes magazine’s richest list, was $64.2 billion at the time of the Feb. 19 debate. That was enough to rank him as the 12th-richest person in the",
+              "P2": "bottom 38% of American households to get $11.4 billion.\n\nThen, he determined how many household units this accounted for and found the answer to be 47.8 million. You can then multiply the 47.8 million households by 2.63 (the average number of people per household) to come up with 125.7 million people.\n\nMatthew Gross, a doctoral candidate at the University of Michigan with data-analyzing experience, helped PolitiFact replicate Bruenig’s math. (He was recommended",
+              "P3": "can also say they're richer than more than 100 million Americans.\n\nSee the sources for this fact-check\n\nSen. Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate.\n\n“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That’s wrong. That’s amoral.”\n\nWe wanted to know if Bloomberg, the former mayor of New York, was",
+              "P4": "#### If your time is short\n\n• Bloomberg, one of the world's richest men, does have more wealth than roughly the bottom 125 million Americans.\n\n• That said, the roughly 123 million Americans at the bottom of the wealth spectrum are collectively $44 billion in the red, so Bloomberg is not alone — millions of Americans can also say they're richer than more than 100 million Americans.\n\nSee the sources for this",
+              "P5": "0 through 38 collectively own about $6 billion in wealth, which is less than Bloomberg had.\n\nIn a technical sense, however, tens of millions of Americans join Bloomberg in owning more wealth than the bottom 37% of households combined, since the bottom 37% are collectively in the red.\n\n## Our ruling\n\nSanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.”\n\nThe numbers check out. It’s worth noting, however,"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S3",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+            "title": "Michael Bloomberg Has Six Times More Wealth Than ... - Jacobin",
+            "passages": {
+              "P1": "# Michael Bloomberg Has Six Times More Wealth Than the Bottom 125 Million Americans\n\nMichael Bloomberg is so rich it's hard to comprehend. So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.\n\nMichael Bloomberg’s net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that scale is hard"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S4",
+            "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+            "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire ...",
+            "passages": {
+              "P1": "an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S5",
+            "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+            "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth than ...",
+            "passages": {
+              "P1": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth. Missing:  counterevidence  | Show results with:"
+            },
+            "retrieval_kind": "snippet"
+          },
+          {
+            "id": "S6",
+            "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/",
+            "title": "The top 0.1% of Americans now hold more than six times ...",
+            "passages": {
+              "P1": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ..."
+            },
+            "retrieval_kind": "snippet"
+          },
+          {
+            "id": "S7",
+            "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/",
+            "title": "Two Americas, the people vs. the billionaires",
+            "passages": {
+              "P1": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ..."
+            },
+            "retrieval_kind": "snippet"
+          }
+        ],
+        "authored": false
+      },
+      {
+        "id": "observed_gap_2",
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "objection": "The comparison is technically true because the bottom group's collective net worth is negative; the claim's framing relies on this quirk.",
+        "records": [
+          {
+            "id": "S1",
+            "url": "https://www.peoplespolicyproject.org/2020/02/19/bloomberg-is-wealthier-than-the-bottom-125-million-americans/",
+            "title": "Bloomberg Is Wealthier Than The Bottom 125 Million ...",
+            "passages": {
+              "P1": "of $11.4 billion, meaning that Michael Bloomberg owns nearly 6 times as much wealth as they do.\n\nThe bottom 38 percent of households is equal to around 47.8 million households. Since households have an average of 2.63 members, this is equal to about 125.7 million people. Thus, Bloomberg's wealth is nearly 6 times greater than the wealth of the bottom 125 million people combined.\n\nIn fact, this 125 million figure actually understates"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S2",
+            "url": "https://politifact.com/factchecks/2020/mar/02/bernie-sanders/does-mike-bloomberg-own-more-wealth-bottom-125-mil/",
+            "title": "Does Mike Bloomberg own more wealth than the bottom ...",
+            "passages": {
+              "P1": "broader message about income inequality. That said, some quirks in how wealth is distributed among households mean that millions of American — not just Bloomberg — own more wealth than millions of their compatriots.\n\nLet’s walk through the numbers.\n\nBloomberg’s net worth, as listed by Forbes magazine’s richest list, was $64.2 billion at the time of the Feb. 19 debate. That was enough to rank him as the 12th-richest person in the",
+              "P2": "bottom 38% of American households to get $11.4 billion.\n\nThen, he determined how many household units this accounted for and found the answer to be 47.8 million. You can then multiply the 47.8 million households by 2.63 (the average number of people per household) to come up with 125.7 million people.\n\nMatthew Gross, a doctoral candidate at the University of Michigan with data-analyzing experience, helped PolitiFact replicate Bruenig’s math. (He was recommended",
+              "P3": "can also say they're richer than more than 100 million Americans.\n\nSee the sources for this fact-check\n\nSen. Bernie Sanders, I-Vt., hammered home his message against billionaire Mike Bloomberg at a Democratic presidential debate.\n\n“Mike Bloomberg owns more wealth than the bottom 125 million Americans,” Sanders said during the Feb. 19 debate in Las Vegas. “That’s wrong. That’s amoral.”\n\nWe wanted to know if Bloomberg, the former mayor of New York, was",
+              "P4": "#### If your time is short\n\n• Bloomberg, one of the world's richest men, does have more wealth than roughly the bottom 125 million Americans.\n\n• That said, the roughly 123 million Americans at the bottom of the wealth spectrum are collectively $44 billion in the red, so Bloomberg is not alone — millions of Americans can also say they're richer than more than 100 million Americans.\n\nSee the sources for this",
+              "P5": "0 through 38 collectively own about $6 billion in wealth, which is less than Bloomberg had.\n\nIn a technical sense, however, tens of millions of Americans join Bloomberg in owning more wealth than the bottom 37% of households combined, since the bottom 37% are collectively in the red.\n\n## Our ruling\n\nSanders said, “Mike Bloomberg owns more wealth than the bottom 125 million Americans.”\n\nThe numbers check out. It’s worth noting, however,"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S3",
+            "url": "https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary",
+            "title": "Michael Bloomberg Has Six Times More Wealth Than ... - Jacobin",
+            "passages": {
+              "P1": "# Michael Bloomberg Has Six Times More Wealth Than the Bottom 125 Million Americans\n\nMichael Bloomberg is so rich it's hard to comprehend. So here's a comparison: the bottom 38 percent of US households have a collective net worth of $11 billion. Bloomberg alone has $64 billion.\n\nMichael Bloomberg’s net worth is $64.2 billion, according to Forbes. This makes him the eighth wealthiest person in America. Wealth at that scale is hard"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S4",
+            "url": "https://www.commondreams.org/news/2020/02/20/sanders-hits-bloomberg-grotesque-statistic-billionaire-owns-more-wealth-bottom-125",
+            "title": "Sanders Hits Bloomberg With 'Grotesque' Statistic: Billionaire ...",
+            "passages": {
+              "P1": "an $850 billion increase in their wealth--congratulations, Mr. Bloomberg--but the average American last year saw less than a 1% increase in his or her income. That's wrong.\"\n\nBloomberg, the former mayor of New York City and eighth-richest person in America with a net worth of $64.2 billion, responded that he got \"very lucky\" but said he should have made that much money because he \"worked very hard for it.\"\n\n\"And I'm giving"
+            },
+            "retrieval_kind": "full_page"
+          },
+          {
+            "id": "S5",
+            "url": "https://www.thestandard.com.hk/world/article/142203/Bernie-Sanders-says-Mike-Bloomberg-owns-more-wealth-than-the-bottom-125-million-Americans",
+            "title": "Bernie Sanders says Mike Bloomberg 'owns more wealth than ...",
+            "passages": {
+              "P1": "Billionaire Mike Bloomberg comes under fire at the Democrat debate in Nevada, for amassing wealth. Missing:  counterevidence  | Show results with:"
+            },
+            "retrieval_kind": "snippet"
+          },
+          {
+            "id": "S6",
+            "url": "https://www.facebook.com/StevenLRattner/posts/the-top-01-of-americans-now-hold-more-than-six-times-more-wealth-than-the-bottom/1606872647558332/",
+            "title": "The top 0.1% of Americans now hold more than six times ...",
+            "passages": {
+              "P1": "So let's study how those above the bottom 50% built their wealth and apply those lessons to the needy. The answer does not have to reflexively ..."
+            },
+            "retrieval_kind": "snippet"
+          },
+          {
+            "id": "S7",
+            "url": "https://www.sanders.senate.gov/op-eds/two-americas-the-people-vs-the-billionaires/",
+            "title": "Two Americas, the people vs. the billionaires",
+            "passages": {
+              "P1": "The top 1% now own more wealth than the bottom 90% – and the gap between the very rich and everyone else is growing wider every day. In the ..."
+            },
+            "retrieval_kind": "snippet"
+          }
+        ],
+        "authored": false
+      }
+    ]
+  },
+  "questions": {
+    "basis_0": {
+      "type": "choice",
+      "instructions": "For cases[0], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_0": {
+      "type": "noul",
+      "instructions": "For cases[0], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_1": {
+      "type": "choice",
+      "instructions": "For cases[1], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_1": {
+      "type": "noul",
+      "instructions": "For cases[1], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_2": {
+      "type": "choice",
+      "instructions": "For cases[2], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_2": {
+      "type": "noul",
+      "instructions": "For cases[2], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_3": {
+      "type": "choice",
+      "instructions": "For cases[3], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_3": {
+      "type": "noul",
+      "instructions": "For cases[3], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_4": {
+      "type": "choice",
+      "instructions": "For cases[4], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_4": {
+      "type": "noul",
+      "instructions": "For cases[4], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_5": {
+      "type": "choice",
+      "instructions": "For cases[5], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_5": {
+      "type": "noul",
+      "instructions": "For cases[5], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_6": {
+      "type": "choice",
+      "instructions": "For cases[6], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_6": {
+      "type": "noul",
+      "instructions": "For cases[6], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_7": {
+      "type": "choice",
+      "instructions": "For cases[7], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_7": {
+      "type": "noul",
+      "instructions": "For cases[7], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_8": {
+      "type": "choice",
+      "instructions": "For cases[8], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_8": {
+      "type": "noul",
+      "instructions": "For cases[8], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_9": {
+      "type": "choice",
+      "instructions": "For cases[9], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_9": {
+      "type": "noul",
+      "instructions": "For cases[9], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_10": {
+      "type": "choice",
+      "instructions": "For cases[10], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_10": {
+      "type": "noul",
+      "instructions": "For cases[10], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_11": {
+      "type": "choice",
+      "instructions": "For cases[11], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_11": {
+      "type": "noul",
+      "instructions": "For cases[11], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    },
+    "basis_12": {
+      "type": "choice",
+      "instructions": "For cases[12], use only that case's claim, objection, and supplied records. Is the objection's factual description consistent with the records? Keep population, metric and dates distinct; an objection's relevance is a separate question.",
+      "criteria": {
+        "consistent": "The records support the objection's description of what is given, missing or different.",
+        "inconsistent": "The objection misstates, conflates or contradicts the records, including a different population, date or measurement.",
+        "unclear": "The supplied records do not determine whether the objection's factual description is accurate."
+      }
+    },
+    "material_12": {
+      "type": "noul",
+      "instructions": "For cases[12], use only that case's claim, objection, and supplied records. Does this objection identify a currently unresolved MATERIAL issue preventing the original claim from being established as worded by these records? Do not require proof of embedded content to establish speech attribution. A difference irrelevant to a stated inequality is not by itself material, but uncertain data comparability, population/time scope, causal identification and source independence may be material. An objection contradicted by the records does not itself establish an unresolved question. Do not judge by the proposed label, and never assume that an advisory check can authorize acceptance.",
+      "criteria": {
+        "true": "A material original-claim component remains unsupported or uncertain for the concrete reason stated.",
+        "false": "The supplied evidence already answers the objection, its premise is contradicted, or the concern cannot change the claimed relation under the explicitly comparable given measurements."
+      }
+    }
+  },
+  "runner_sha256": "8ccde5845bbd8b4fc5c43baf9addfdad740a25d3270e852a64baec1547f28720",
+  "planned_sends": {
+    "jev": 1,
+    "ollama": 0,
+    "search": 0,
+    "fetch": 0
+  },
+  "estimate": {
+    "input_tokens": 14000,
+    "output_tokens": 1600,
+    "not_a_balance_or_bill": true
+  },
+  "screen": "All ten authored basis judgments must match and all ten materiality probabilities must be <=0.2 for nonmaterial or >=0.8 for material. The observed cohort-conflation objection must be inconsistent and nonmaterial (<=0.2); other observed objections are exploratory, not gold-scored. Any failed control closes this typed checker as tested. No retries or threshold changes. A pass only permits designing a separate matched advisory-feedback diagnostic, not clearing gaps or releasing 68 workflow attempts.",
+  "assurance": "Choice confidence/probability is not semantic truth or workflow correctness. Preserve raw judgments; no gate changes or automatic acceptance.",
+  "mechanism_premise": "Observed ledger incorrectly transfers negative bottom37% wealth to bottom38%, and prior outputs block attributed speech on unverified content. Separate narrow factual consistency from unresolved materiality; use advisory feedback only if controlled behavior is adequate.",
+  "docs": [
+    "https://docs.typesafe.ai/sdk/python",
+    "https://docs.typesafe.ai/primitives/choice",
+    "https://docs.typesafe.ai/cookbooks/citation_check",
+    "https://docs.typesafe.ai/confidence"
+  ]
+}

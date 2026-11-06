@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners.",
+        "query": "While serving as Town Supervisor on Grand Island, Nebraska, US Nate McMurray voted to raise taxes on homeowners. counterevidence",
+        "candidates": [
+          {
+            "title": "Jacob's charge that McMurray raised taxes on Grand Island ...",
+            "snippet": "Slight increases. We spoke with McMurray, who confirmed that as a member of the town board on Grand Island, he voted to slightly increase taxes.",
+            "url": "https://politifact.com/factchecks/2020/oct/28/chris-jacobs/jacobs-charge-mcmurray-raised-taxes-grand-island-c/"
+          },
+          {
+            "title": "FEVER 2024 The Seventh Fact Extraction and VERification ...",
+            "snippet": "The seventh edition of the FEVER workshop collocated with EMNLP 2024 aims to continue promoting ongoing research in above area, following on ...",
+            "url": "https://aclanthology.org/2024.fever-1.pdf"
+          },
+          {
+            "title": "McMurray claims financial victories on Grand Island",
+            "snippet": "“If we don't pass the tax bill by the end of the year, we will have the largest tax increase in American history.”",
+            "url": "https://politifact.com/factchecks/2018/aug/29/nathan-mcmurray/mcmurray-claims-about-grand-island-record-are-true/"
+          },
+          {
+            "title": "Property owners fuming at valuation increases, assessor ...",
+            "snippet": "Property owners are fuming at the prospect of higher taxes. He said his taxes will likely go up tens of thousands of dollars, even hundreds of ...",
+            "url": "https://nebraska.tv/news/local/property-owners-fuming-at-valuation-increases-assessor-says-changes-reflect-market"
+          },
+          {
+            "title": "Why Nate McMurray Should Win the 145th Assembly",
+            "snippet": "He lost by 1,087 votes. Nate McMurray, a Democrat and former Grand Island supervisor, should beat Republican Becky Wydysh for the 145th ...",
+            "url": "https://artvoice.com/before-tuesday-why-nate-mcmurray-should-win-the-145th-assembly"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-057-glm-baseline",
+  "timestamp": "2026-11-06T01:06:19.347826+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6644.656
+}

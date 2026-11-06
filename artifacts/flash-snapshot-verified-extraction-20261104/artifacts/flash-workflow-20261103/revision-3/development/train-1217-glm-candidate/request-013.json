@@ -1,0 +1,33 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "The S7 page retrieved under an embargo-related headline contains unrelated content about California bond propositions and cannot support any part of the claim.",
+            "url": "https://www.facebook.com/PBSSoCal/posts/when-the-us-trade-embargo-left-cuba-isolated-from-medical-resources-cuban-scient/10157461003780674/",
+            "quote": "This year, California voters have two \"bond propositions\" on our ballots -- Props 1 and 38. And if you're wondering what it means to \"authorize\" a bond, and how those bonds work, so are a lot of other voters. Ben Sheehan , host of PBS ' Civics Made Easy explains all that, plus the pros and cons of a state using bonds to pay for projects.\nFor more election info, visit pbssocal.org/elections",
+            "context": "This year, California voters have two \"bond propositions\" on our ballots -- Props 1 and 38. And if you're wondering what it means to \"authorize\" a bond, and how those bonds work, so are a lot of other voters. Ben Sheehan , host of PBS ' Civics Made Easy explains all that, plus the pros and cons of a state using bonds to pay for projects.\nFor more election info, visit pbssocal.org/elections and for more Civics explainers follow Ben and check out Civics Made Easy on PBS' YouTube channel.\nEste año, los votantes de California tenemos dos \"propuestas de bonos\" en nuestras boletas electorales: las Propuestas 1 y 38. Y si te estás preguntando qué significa \"autorizar\" un bono y cómo funcionan esos bonos, hay muchos otros votantes que también se lo preguntan. Ben Sheehan, presentador del programa \"Civics Made Easy\" de PBS, te lo explica todo, además de las ventajas y desventajas de que un estado utilice bonos para financiar proyectos.\nSi quieres más información sobre las elecciones, visita pbssocal.org/elections, y si te interesan más contenidos sobre educación cívica, sigue a Ben y no te pierdas \"Civics Made Easy\" en el canal de YouTube de PBS."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-03T06:02:09.679411+00:00",
+  "status": "reserved_outcome_unknown"
+}

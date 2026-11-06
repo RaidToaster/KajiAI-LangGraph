@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The U.S. surgeon general and the Centers for Disease Control both previously said that ‘masks are not effective in preventing [the] general public from catching coronavirus.’",
+        "query": "The U.S. surgeon general and the Centers for Disease Control both previously said that ‘masks are not effective in preventing [the] general public from catching coronavirus.’ original source fact check",
+        "candidates": [
+          {
+            "title": "Fact check: Ex-Surgeon General Jerome Adams ... - USA Today",
+            "snippet": "Masks do not work for the general public and preventing them from getting coronavirus,\" he told Margaret Brennan on CBS News' \"Face the Nation.\"",
+            "url": "https://www.usatoday.com/story/news/factcheck/2021/02/17/fact-check-ex-surgeon-general-jerome-adams-reversed-position-masks/6765301002/"
+          },
+          {
+            "title": "Did the US Surgeon General Recommend the Public Not Wear ...",
+            "snippet": "U.S. Surgeon General Jerome Adams made comments in February and March 2020 recommending people not wear masks to help protect against the spread ...",
+            "url": "https://www.snopes.com/fact-check/surgeon-general-against-masks/"
+          },
+          {
+            "title": "Surgeon General Urges the Public to Stop Buying Face Masks",
+            "snippet": "The surgeon general on Saturday urged the public to stop buying masks, warning that it won't help against the spread of the coronavirus but will ... Missing:  fact  check",
+            "url": "https://www.nytimes.com/2020/02/29/health/coronavirus-n95-face-masks.html"
+          },
+          {
+            "title": "Misinformation About Face Masks - FactCheck.org",
+            "snippet": "On April 3, 2020, the CDC reversed course and recommended that everyone wear face coverings in public, citing new data that showed a “ ...",
+            "url": "https://www.factcheck.org/2021/08/scicheck-misinformation-about-face-masks/"
+          },
+          {
+            "title": "Face masks during the COVID-19 pandemic in the United States",
+            "snippet": "In early April, federal officials reversed their guidance, saying that the general public should wear masks to lessen transmission by themselves, particularly ...",
+            "url": "https://en.wikipedia.org/wiki/Face_masks_during_the_COVID-19_pandemic_in_the_United_States"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-011-deepseek-baseline",
+  "timestamp": "2026-11-06T06:07:11.632219+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12420.953
+}

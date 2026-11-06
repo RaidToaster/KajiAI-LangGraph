@@ -1,0 +1,75 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "There is a scam involving Santander customers being sent fake bank cards.",
+        "query": "When and in which countries or regions was this scam reported?",
+        "candidates": [
+          {
+            "title": "Crushing scam farms, Southeast Asia's 'criminal service ...",
+            "snippet": "A version of this article originally appeared on UN News. Listen to the interview here. Transnational organised crime groups based in Southeast Asia are ...",
+            "url": "https://www.unodc.org/unodc/frontpage/2024/July/crushing-scam-farms--southeast-asias-criminal-service-providers.html"
+          },
+          {
+            "title": "Online Scam Centers in Southeast Asia: Background and ...",
+            "snippet": "In the past decade, cyber-enabled scam operations have proliferated across Southeast Asia, concentrated in Burma (Myanmar), Cambodia, and Laos.",
+            "url": "https://www.congress.gov/crs-product/R49432"
+          },
+          {
+            "title": "How to Watch out For Scams Misrepresenting the ...",
+            "snippet": "Note: The World Bank Group has learned that fraudulent websites are falsely using IFC's name and branding to offer purported grants.",
+            "url": "https://www.worldbank.org/ext/en/legal/scam-alert"
+          },
+          {
+            "title": "Global Anti Scam Alliance: Home",
+            "snippet": "The Global Anti-Scam Alliance (GASA) mission is to protect consumers worldwide from scams.",
+            "url": "https://gasa.org/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-059-deepseek-candidate",
+  "timestamp": "2026-11-06T08:28:56.451461+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20925.765
+}

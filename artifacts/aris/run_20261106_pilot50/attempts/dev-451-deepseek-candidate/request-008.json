@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "PEDOPHILIA is now LEGAL in CALIFORNIA",
+        "query": "Did any California legislation enacted or effective before 2020-09-01 change the legal status of sexual conduct involving minors, and if so, what did the bill text and legislative history state?",
+        "candidates": [
+          {
+            "title": "Falsehoods about sex-offender law hit the campaign trail",
+            "snippet": "The bill — signed into California law this month — has become an issue in a handful of congressional, legislative and municipal races.",
+            "url": "https://calmatters.org/politics/2020/09/sex-offender-bill-falsehoods-campaign-california/"
+          },
+          {
+            "title": "Bill Text: CA SB680 | 2025-2026 | Regular Session | Enrolled",
+            "snippet": "LEGISLATIVE COUNSEL'S DIGEST. SB 680, Rubio. Sex offender registration: unlawful sexual intercourse with a minor. Existing law, the ...",
+            "url": "https://legiscan.com/CA/text/SB680/id/3268172"
+          },
+          {
+            "title": "California governor signs bill changing sex offender law",
+            "snippet": "California Gov. Gavin Newsom on Friday signed a law that would give judges a say on whether to list someone as a sex offender for having ...",
+            "url": "https://www.kcra.com/article/california-governor-signs-bill-changing-sex-offender-law/33998732"
+          },
+          {
+            "title": "Sex Offender Tiering (SB 384) FAQs",
+            "snippet": "The California Department of Justice (CA DOJ) Sex Offender Registry has developed the following frequently asked questions in reference to Senate Bill (SB) 384.",
+            "url": "https://oag.ca.gov/system/files/media/sb384-registrant-faqs.pdf"
+          },
+          {
+            "title": "CA Legislature Passes Bill to End Discrimination Against ...",
+            "snippet": "SACRAMENTO, Calif. — Senator Scott Wiener's (D-San Francisco) Senate Bill 145 — co-sponsored by Equality California — which ends blatant ...",
+            "url": "https://www.eqca.org/release-sb145-final-passage/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-451-deepseek-candidate",
+  "timestamp": "2026-11-06T00:20:13.681881+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3879.0
+}

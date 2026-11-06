@@ -1,0 +1,36 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "PIB Fact Check directly refutes the assertion that PMSBY covers COVID-19 deaths.",
+            "url": "https://x.com/PIBFactCheck/status/1309371515922649088",
+            "quote": "PMSBY doesn't cover COVID related deaths, while PMJJBY covers COVID deaths with certain conditions.",
+            "context": "## Post\n\nLog inSign up\n\n## Post\n\nLog inSign up\n\n# PIB Fact Check on X: \"Claim: Kins of those who died of COVID-19 can claim insurance under Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) and Pradhan Mantri Suraksha Bima Yojana (PMSBY) #PIBFactCheck: PMSBY doesn't cover COVID related deaths, while PMJJBY covers COVID deaths with certain conditions.\"\n\n## Conversation\n\nPIB Fact Check\n\n@PIBFactCheck\n\nClaim: Kins of those who died of COVID-19 can claim insurance under Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) and Pradhan Mantri Suraksha Bima Yojana (PMSBY)\n#PIBFactCheck: PMSBY doesn't cover COVID related deaths, while PMJJBY covers COVID deaths with certain conditions.\n\nread image description\n\nDD News and 3 others\n\n5:57 AM · Sep 25, 2020\n\n6"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-259-deepseek-baseline",
+  "timestamp": "2026-11-06T04:20:07.662399+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5996.968
+}

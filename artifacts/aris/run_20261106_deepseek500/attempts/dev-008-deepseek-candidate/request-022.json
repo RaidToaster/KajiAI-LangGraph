@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "Search for primary election-official records or court filings in the relevant jurisdiction addressing specific allegations of fraudulent or phony mail ballots.",
+        "candidates": [
+          {
+            "title": "Election Voter Complaint Form - California Secretary of State",
+            "snippet": "Find information on how to file a Voter Fraud Complaint form here. investigates election related criminal violations, (916) 653-3214 (916) 657-2166 or (800) ...",
+            "url": "https://www.sos.ca.gov/elections/publications-and-resources/voter-complaint"
+          },
+          {
+            "title": "Appeals court rejects DOJ request for California to set ...",
+            "snippet": "The 9th Circuit Court of Appeals on Friday rejected the Justice Department's request for California to set aside disputed ballots sent to ...",
+            "url": "https://abc7ny.com/story/appeals-court-rejects-justice-department-request-california-set-aside-disputed-ballots-allegedly-sent-noncitzen-voters/20000721/"
+          },
+          {
+            "title": "What to do if you suspect voter fraud in the Nov. 3 ...",
+            "snippet": "If you have witnessed potential election fraud in California, email tips to: CAElectionFraudTips@usdoj.gov. The DOJ requires direct evidence. ...",
+            "url": "https://www.facebook.com/sacramentobee/posts/what-to-do-if-you-suspect-voter-fraud-in-the-nov-3-california-election/1625747006263446/"
+          },
+          {
+            "title": "Filed US Complaint CA Voter Roles",
+            "snippet": "Those records include individuals' names, addresses, social security numbers, and numbers assigned to each applicant (alien numbers). USCIS also.",
+            "url": "https://www.justice.gov/opa/media/1466286/dl"
+          },
+          {
+            "title": "DOJ Subpoenas California Election Officials, Despite ...",
+            "snippet": "A federal judge warned federal prosecutors to stop threatening California election officials, but prosecutors kept going.",
+            "url": "https://www.kqed.org/news/12107495/doj-subpoenas-california-election-officials-despite-judges-order-to-stop-threatening-them"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-candidate",
+  "timestamp": "2026-11-06T05:52:53.649050+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11562.953
+}

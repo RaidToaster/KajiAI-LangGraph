@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Donald Trump said \"Last month, I took on Big Pharma. You think that is easy? I signed orders that would massively lower the cost of your prescription drugs.\"",
+        "query": "What is the exact date and venue of the speech or statement in which Donald Trump said these words, and is there a primary transcript or recording?",
+        "candidates": [
+          {
+            "title": "Read Trump's Jan. 6 Speech, A Key Part Of Impeachment Trial",
+            "snippet": "Former President Donald Trump's remarks on the Ellipse on Jan. 6, urging his supporters to march on the Capitol as Congress was certifying ... Missing:  venue  | Show results with:",
+            "url": "https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial"
+          },
+          {
+            "title": "Read the full text of Trump's speech to a joint session of Congress",
+            "snippet": "A transcript of President Donald Trump's speech to a joint session of Congress on Tuesday, May 4, 2025, as transcribed by The Associated ... Missing:  exact  statement  primary",
+            "url": "https://www.pbs.org/newshour/politics/read-the-full-text-of-trumps-speech-to-a-joint-session-of-congress"
+          },
+          {
+            "title": "The Inaugural Address - Trump White House Archives",
+            "snippet": "REMARKS OF PRESIDENT DONALD J. TRUMP – ADDRESS FRIDAY, JANUARY 20, 2017 WASHINGTON, D.C. January 20th 2017, will be remembered as the day the ... Missing:  exact  venue  primary  recording?",
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/the-inaugural-address/"
+          },
+          {
+            "title": "Donald Trump Delivers a Primetime Address to the Nation",
+            "snippet": "Full transcript of Donald J. Trump: Speech: Donald Trump Delivers a Primetime Address to the Nation - July 16, 2026. Donald Trump said 182 ...",
+            "url": "https://rollcall.com/factbase/trump/transcript/donald-trump-speech-primetime-address-white-house-july-16-2026/"
+          },
+          {
+            "title": "TRANSCRIPT: The Inaugural Address of President Donald J ...",
+            "snippet": "The Inaugural Address of President Donald J. Trump. January 21, 2025 U.S. Capitol Washington, D.C. 12:10 P.M. EST THE PRESIDENT: Thank you. Missing:  exact  date  venue",
+            "url": "https://au.usembassy.gov/the-inaugural-address/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-485-deepseek-candidate",
+  "timestamp": "2026-11-06T01:31:37.771630+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8163.078
+}

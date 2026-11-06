@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The New York post Endorsed Donald trumps bid for re-election.",
+        "query": "The New York post Endorsed Donald trumps bid for re-election. counterevidence",
+        "candidates": [
+          {
+            "title": "Fact check: NY Post encourages Trump to accept Biden's victory",
+            "snippet": "Based on our research, the claim that the New York Post published a cover and staff editorial urging President Trump to accept defeat is TRUE.",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/12/29/fact-check-ny-post-encourages-trump-accept-bidens-victory/4075001001/"
+          },
+          {
+            "title": "The New York Post endorses President Donald J. Trump for re- ...",
+            "snippet": "The New York Post endorses President Donald J. Trump for re-election. We can have economic freedom and opportunity, and resist cancel culture ...",
+            "url": "https://nypost.com/2020/10/26/the-new-york-post-endorses-president-donald-j-trump-for-re-election/"
+          },
+          {
+            "title": "New York Post Tells Trump to 'Give It Up' Over Election Claim",
+            "snippet": "The paper, which endorsed Trump for president, tells Trump to “Give it up,” adding “for your sake and the nation's.” Trump is a regular reader ...",
+            "url": "https://www.bloomberg.com/news/articles/2020-12-28/new-york-post-tells-trump-to-give-it-up-over-election-claim"
+          },
+          {
+            "title": "New York Post withholds endorsement from Donald Trump",
+            "snippet": "After endorsing Donald Trump in the Republican primary, the New York Post withheld its backing in the general election — a surprise, given the ...",
+            "url": "https://www.washingtonpost.com/news/the-fix/wp/2016/11/08/shock-and-nah-new-york-post-withholds-endorsement-from-donald-trump/"
+          },
+          {
+            "title": "NY Post endorses Trump after previous criticisms",
+            "snippet": "The New York Post endorsed former President Trump for president, praising his strength and vigor “ridiculously hyperbolic.”",
+            "url": "https://thehill.com/homenews/media/4953034-ny-post-endorses-trump/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-032-deepseek-baseline",
+  "timestamp": "2026-11-06T07:15:57.148707+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16546.468
+}

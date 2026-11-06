@@ -1,0 +1,9 @@
+# Manuscript readiness
+
+The venue-neutral IEEE draft and its companion are ready for author review within the paper's stated scope. No target venue or thesis rubric was selected.
+
+The abstract and contribution now foreground the controlled no-go. The paper states the frozen batch boundary, the correct Medium-confidence prefixes, the scripted semantic gate, the paired reuse condition, the three exact requested model tags and the 2,048-token limit. Table V reports within-model proposal, acceptance and continuation cost outcomes. The decisive Gemma case is explained directly, with the August diary's evidentiary scope stated separately. The historical benchmark and pilot are kept distinct. One historical sentence now counts failed attempts among other unaccepted attempts rather than labeling all of them wrong predictions.
+
+The paper source archive now includes a guide, the frozen protocol and authored cases, paired responses and assessment traces, the adjudication and a runnable offline reproducer. Extracted-package reanalysis produced a byte-identical result from the saved records. All eight scripted pairs matched their saved non-timing metrics when run against the extracted runtime source. The seven-page PDF was rendered and inspected. Validation checked Table V against the saved model summaries, checked the historical figures against archived metrics and found zero overfull boxes or unresolved citations and all fonts embedded.
+
+The manuscript review was performed by a fresh native Codex agent requested as GPT-6.1-Sol/high. Its assessment of the draft under review was almost, 7.5/10, same-family and provisional. Its local fixes were implemented and verified. Author approval and byline details, venue-specific checks, and any release permissions remain submission decisions. Independent human citation annotation remains pending. No new service requests were sent and no archived experiment was changed.

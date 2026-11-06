@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Twitter now putting warnings on tweets that are just unedited clips of Biden saying he would end fracking",
+        "query": "Twitter now putting warnings on tweets that are just unedited clips of Biden saying he would end fracking original source fact check",
+        "candidates": [
+          {
+            "title": "Twitter changing labeling practices after deceptive videos hit Biden",
+            "snippet": "The social network in recent days has slapped labels on tweets by prominent Republican officials that contained deceptively edited or ...",
+            "url": "https://www.politico.com/news/2020/08/31/twitter-doctored-video-policy-biden-406632"
+          },
+          {
+            "title": "\"Twitter changing labeling practices after deceptive videos hit Biden ...",
+            "snippet": "On Monday, the Trump campaign tweeted a truncated clip of Biden saying, “You won't be safe in Joe Biden's America.” The clip was in fact from a ...",
+            "url": "https://electionlawblog.org/2020/twitter-changing-labeling-practices-after-deceptive-videos-hit-biden/"
+          },
+          {
+            "title": "Fact Check: Twitter Warning NOT Just For Biden Retweets",
+            "snippet": "Did Twitter place a warning about retweeting solely on recent tweets about Joe Biden and fracking? No, that's not true:...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-warning-not-just-for-biden-tweets-new-policy-applies-to-all-users.html"
+          },
+          {
+            "title": "Twitter labels edited Biden video 'manipulated tweet'",
+            "snippet": "The misleading video, viewed almost six million times, was retweeted twice by President Trump.",
+            "url": "https://www.bbc.com/news/world-us-canada-51799366"
+          },
+          {
+            "title": "How new rules at Facebook and Twitter led to a warning beneath a Trump ...",
+            "snippet": "A video of Joe Biden that was deceptively edited to make it appear as if he endorsed President Donald Trump for re-election triggered ...",
+            "url": "https://www.nbcnews.com/tech/social-media/facebook-twitter-put-warning-label-edited-video-biden-n1153506"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-050-deepseek-baseline",
+  "timestamp": "2026-11-06T08:01:45.742190+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19295.062
+}

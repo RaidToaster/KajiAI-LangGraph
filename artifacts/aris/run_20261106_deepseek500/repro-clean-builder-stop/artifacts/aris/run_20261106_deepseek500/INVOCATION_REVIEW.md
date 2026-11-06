@@ -1,0 +1,8 @@
+# Invocation review
+
+A fresh native Codex reviewer used GPT-6.1 Sol at high reasoning. Review class is same-family and provisional. The reviewer checked the original launcher draft, frozen archive, raw pilot identities, schedule, quota reservation logic and checkpoint behavior offline.
+
+The reviewer verified 47 reused cells, 953 untouched cells and the next DeepSeek candidate cell. It found that all 227 reused Ollama replies returned the expected suffix-free DeepSeek ID. Candidate planning and assessment explicitly disabled reasoning. One generic candidate classification call retained original reasoning behavior. The original draft's account receipt and provider usage verification were outstanding, and its operational stop needed to surface as a nonzero exit. The draft could also inherit Python optimization and lose assertion-based checks.
+
+Before dispatch, the executor verified the credit and tariff facts, recorded the authenticated TinyFish wallet and timestamp-only recent usage, and bound the receipt and rates to the frozen protocol. The coordinator now uses conservative completion timestamps and the maximum of independently computed provider and local quota expiry times. It exits nonzero at an unresolved operational stop. A Windows child-process witness found that launching via the virtualenv redirector gave the worker an intermediate parent PID. The frozen revision starts the underlying interpreter with the same virtualenv selected, checks its real parent PID, and reaps the actual worker on timeout. The first draft is preserved under predispatch-v1. The corrected launcher passed the offline invocation witness and no fresh send occurred.
+

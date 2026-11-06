@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba. evidence",
+        "candidates": [
+          {
+            "title": "CimaVax-EGF - Wikipedia",
+            "snippet": "However, some cancer patients from the US have defied the embargo and travelled to Cuba for treatment with CimaVax. Trials are being organized in the United ... · · ·",
+            "url": "https://en.wikipedia.org/wiki/CimaVax-EGF"
+          },
+          {
+            "title": "NOVA: Cuba's Cancer Hope - Southern Oregon PBS",
+            "snippet": "... and American scientists. CIMAvax-EGF—a potential breakthrough lung cancer vaccine developed at Cuba's CIM—is already being used to treat thousands of ...",
+            "url": "https://www.sopbs.org/2019-1-january/2020/april/cubas-cancer-hope/"
+          },
+          {
+            "title": "Clinical development and perspectives of CIMAvax EGF ...",
+            "snippet": "CIMAvax EGF is a therapeutic anticancer vaccine developed entirely in Cuba and licensed in Cuba for use in adult patients with stage IIIB/IV non-small-cell ...",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20387330/"
+          },
+          {
+            "title": "CIMAvax Lung Cancer Vaccine - Roswell Park",
+            "snippet": "What is CIMAvax? CIMAvax-EGF is a lung cancer treatment that was developed in Cuba. It is a type of immunotherapy that harnesses the body's immune system to ...",
+            "url": "https://www.roswellpark.org/cimavax"
+          },
+          {
+            "title": "Cuba Has a Lung Cancer Vaccine. But American Patients Can't ...",
+            "snippet": "Cuba Has a Lung Cancer Vaccine. But American Patients Can't Get It Without Breaking the Law. Country: Cuba United states.",
+            "url": "https://pulitzercenter.org/stories/cuba-has-lung-cancer-vaccine-american-patients-cant-get-it-without-breaking-law"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-03T08:45:08.497831+00:00",
+  "status": "reserved_outcome_unknown"
+}

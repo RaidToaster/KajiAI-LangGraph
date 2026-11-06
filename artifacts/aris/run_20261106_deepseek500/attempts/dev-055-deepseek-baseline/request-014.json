@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve.",
+        "query": "Generally the deaths from Covid-19 are still pretty flat because we've flattened the curve. original source fact check",
+        "candidates": [
+          {
+            "title": "Five common misconceptions regarding flattening-the-curve of ...",
+            "snippet": "by AAM Daud · 2022 · Cited by 21 — However, the assumption that COVID-19 would just die down as depicted by a normal distribution is not necessarily true, as shown by a study ( ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9435423/"
+          },
+          {
+            "title": "The story behind 'flatten the curve,' the defining chart of the coronavirus",
+            "snippet": "Flatten the Curve has become the defining graphic of the COVID-19 pandemic. (Where the term “flatten the curve” first came from is less clear).",
+            "url": "https://www.fastcompany.com/90476143/the-story-behind-flatten-the-curve-the-defining-chart-of-the-coronavirus"
+          },
+          {
+            "title": "Flattening the Curve for COVID-19: What Does It Mean and How Can You ...",
+            "snippet": "\"If you don't have as many cases coming to the hospitals and clinics at once, it can actually lower the number of total deaths from the virus ...",
+            "url": "https://www.michiganmedicine.org/health-lab/flattening-curve-covid-19-what-does-it-mean-and-how-can-you-help"
+          },
+          {
+            "title": "Coronavirus: What is 'flattening the curve,' and will it work?",
+            "snippet": "Why slowing the rate of infection, or 'flattening the curve,' is so important to reducing the incredible damage of coronavirus.",
+            "url": "https://www.livescience.com/coronavirus-flatten-the-curve.html"
+          },
+          {
+            "title": "COVID-19, flattening the curve, and Benford's law",
+            "snippet": "by KB Lee · 2020 · Cited by 93 — Thus, “flattening the curve” requires intervention efforts, such as social distancing, to slow the growth rate of COVID-19 infections and give more time to ...",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378437120305719"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-055-deepseek-baseline",
+  "timestamp": "2026-11-06T08:20:09.026030+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20398.328
+}

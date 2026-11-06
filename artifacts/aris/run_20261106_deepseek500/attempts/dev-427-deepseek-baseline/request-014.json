@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "query": "U.S. citizens should show up at polling places on Election Day evidence",
+        "candidates": [
+          {
+            "title": "What You Can and Can't Do at Polling Places",
+            "snippet": "A handful prohibit general loitering around polling stations, and eight states prohibit the taking of exit polls as voters leave polling sites.",
+            "url": "https://www.nytimes.com/2026/11/03/us/voting-election-day-polling-site-rules.html"
+          },
+          {
+            "title": "In-Person Voting Access",
+            "snippet": "The freedom to vote depends on meaningful voter access. For many voters, that means casting their ballot in-person at a polling location on Election Day or.",
+            "url": "https://campaignlegal.org/democracyu/inclusion/person-voting-access"
+          },
+          {
+            "title": "Thousands of observers expected to monitor polling sites ...",
+            "snippet": "State Democratic parties have trained an estimated 10,000 volunteers to observe polling places and report anything potentially concerning they ...",
+            "url": "https://www.wtsp.com/article/news/nation-world/election-day-polling-site-observers-monitor-voting/507-0debec1a-8b90-4a86-b678-8cd2b056a91a"
+          },
+          {
+            "title": "Exposing and Disrupting Federal Attempts to Interfere in ...",
+            "snippet": "The law is very clear that federal law enforcement cannot show up at polling locations in an armed capacity while voting is occurring. I ...",
+            "url": "https://democracyforward.org/work/research/exposing-and-disrupting-federal-attempts-to-interfere-in-the-2026-midterm-elections/"
+          },
+          {
+            "title": "There is a jumble of rules in place around the U.S. on ...",
+            "snippet": "Thirty-seven states have laws requesting or requiring voters to show some form of identification at the polls, while the remaining 13 states and ...",
+            "url": "https://www.facebook.com/nytimes/posts/there-is-a-jumble-of-rules-in-place-around-the-us-on-election-day-including-whet/1536544114994713/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:38:42.476741+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7111.796
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "Alt News or second fact-check of fake Kamra Pulwama NRC quote",
+        "candidates": [
+          {
+            "title": "The Pulwama Attack's After Effects: Fake News and Rumours",
+            "snippet": "However, fact checkers have since debunked this narrative given that the incident in question took place in 2014 when Omar Abdulla was the Chief ...",
+            "url": "https://rsis.edu.sg/rsis-publication/icpvtr/the-pulwama-attacks-after-effects-fake-news-and-rumours/"
+          },
+          {
+            "title": "Alt News",
+            "snippet": "Alt News is an Indian non-profit fact checking website founded. It was launched on 9 February 2017 to combat fake news.",
+            "url": "https://en.wikipedia.org/wiki/Alt_News"
+          },
+          {
+            "title": "A fake quote on the Pulwama attack being a BJP ...",
+            "snippet": "For now, Avi Dandiya's audio clip is FAKE. Fact check done by Alt News. Fact check: Manufactured audio clip used to falsely claim Pulwama terror ...",
+            "url": "https://www.facebook.com/altnews.in/posts/a-fake-quote-on-the-pulwama-attack-being-a-bjp-conspiracy-is-being-assigned-to-i/3338803019703859/"
+          },
+          {
+            "title": "Fake News and Real Tensions",
+            "snippet": "According to Govindraj Ethiraj, journalist for the fact-checking site Boom, “the wave of misinformation after the Pulwama attack was driven ...",
+            "url": "https://mediaengagement.org/research/fake-news-and-real-tensions-the-impacts-of-misinformation-in-south-asia/"
+          },
+          {
+            "title": "Al Jazeera Journalism Review",
+            "snippet": "Zubair, cofounder of the Indian fact-checking platform Alt News, had been incessantly writing posts debunking the disinformation about the ...",
+            "url": "https://institute.aljazeera.net/en/ajr/article/2446"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-glm-candidate",
+  "timestamp": "2026-11-03T08:43:40.028750+00:00",
+  "status": "reserved_outcome_unknown"
+}

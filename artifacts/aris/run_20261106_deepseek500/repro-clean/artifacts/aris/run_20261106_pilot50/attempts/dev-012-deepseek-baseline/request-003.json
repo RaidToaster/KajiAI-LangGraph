@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "New Zealand’s new Food Bill bans gardening evidence",
+        "candidates": [
+          {
+            "title": "Gardening in New Zealand",
+            "snippet": "\"New Zealand's 'new' Food Bill doesn't ban gardening\". AAP Factcheck. Retrieved 24 January 2024. ↑ Ockhuysen, Stephanie. \"The Taranaki farmers introducing ...",
+            "url": "https://en.wikipedia.org/wiki/Gardening_in_New_Zealand"
+          },
+          {
+            "title": "New Zealand's absurd gardening ban once again makes ...",
+            "snippet": "But if you compare gardening to, say, drinking, all the evidence says that gardening is much less dangerous and is ultimately better for you.",
+            "url": "https://thespinoff.co.nz/business/18-06-2016/new-zealands-absurd-gardening-ban-once-again-makes-us-the-laughing-stock-of-the-internet-2"
+          },
+          {
+            "title": "Thanks to Outdated Laws, Growing Your Own Food Can ...",
+            "snippet": "However, the perception that growing vegetables will drive down home values is “not rooted in any evidence,” as Calvert points out.",
+            "url": "https://www.sierraclub.org/sierra/thanks-outdated-laws-growing-your-own-food-can-be-illegal"
+          },
+          {
+            "title": "Is the New Zealand anti-gardening law real or not? ...",
+            "snippet": "For real.",
+            "url": "https://www.reddit.com/r/OutOfTheLoop/comments/4ovxb1/is_the_new_zealand_antigardening_law_real_or_not/"
+          },
+          {
+            "title": "Guidance on single-use plastic products banned or phased ...",
+            "snippet": "Information for businesses, industry and the general public on single-use plastic items banned, restricted or phased out from 1 July 2023.",
+            "url": "https://environment.govt.nz/publications/plastic-products-banned-from-july-2023/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-baseline",
+  "timestamp": "2026-11-06T00:55:40.095953+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6005.406
+}

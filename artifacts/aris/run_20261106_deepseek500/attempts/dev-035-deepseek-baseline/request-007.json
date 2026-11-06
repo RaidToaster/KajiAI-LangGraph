@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "COVID-19 pandemic pre-planned with the help from Bill Gates.",
+        "query": "COVID-19 pandemic pre-planned with the help from Bill Gates. counterevidence",
+        "candidates": [
+          {
+            "title": "Event 201",
+            "snippet": "... World Economic Forum and the Bill and Melinda Gates Foundation hosted Event 201, a high-level pandemic exercise on October 18, 2019, in New York, NY.",
+            "url": "https://centerforhealthsecurity.org/our-work/tabletop-exercises/event-201-pandemic-tabletop-exercise"
+          },
+          {
+            "title": "Collaborating against COVID-19: A timeline",
+            "snippet": "Since January 2020, the Bill & Melinda Gates Foundation has committed more than US$2 billion to the global COVID-19 response. Sections.",
+            "url": "https://www.gatesfoundation.org/ideas/a-timeline-of-gates-foundations-fight-against-covid-19"
+          },
+          {
+            "title": "COVID-19: Lessons Can Help Agencies Better Prepare for Future ...",
+            "snippet": "GAO identified lessons from the COVID-19 pandemic that could help federal agencies better prepare for, respond to, and recover from future ...",
+            "url": "https://www.gao.gov/products/gao-24-107175"
+          },
+          {
+            "title": "'Epstein, Gates were setting up COVID…': Economist's EXPLOSIVE claims ...",
+            "snippet": "'Bill Gates' finger prints are all over…': Johnson exposes how Fauci 'scared people during COVID'. The Economic Times•337K views · 14:54 · Go to ...",
+            "url": "https://www.youtube.com/watch?v=BpwuUf5ykqI&vl=en"
+          },
+          {
+            "title": "How Bill Gates became the voodoo doll of Covid conspiracies",
+            "snippet": "The ex-Microsoft head is currently the target of all kinds of outlandish theories and false claims.",
+            "url": "https://www.bbc.com/news/technology-52833706"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-035-deepseek-baseline",
+  "timestamp": "2026-11-06T07:25:05.295915+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17094.609
+}

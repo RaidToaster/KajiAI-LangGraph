@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Dan Lyons original tweet Lindsey Graham fake quote 'eradicate this plague'",
+        "candidates": [
+          {
+            "title": "That Viral Lindsey Graham Quote Saying Trump Knows ...",
+            "snippet": "The quote, which cites Graham saying that Trump will \"eradicate this plague,\" originated from a satire Twitter account.",
+            "url": "https://www.newsweek.com/that-viral-lindsey-graham-quote-saying-trump-knows-more-about-viruses-scientists-fake-1490087"
+          },
+          {
+            "title": "Congressional Record",
+            "snippet": "... plague by the end of. 2020. (4) The desert locust outbreak in East ... false election—another one—was announced on August 9 declaring ...",
+            "url": "https://www.congress.gov/116/crec/2020/11/18/CREC-2020-11-18.pdf"
+          },
+          {
+            "title": "dictionary of words",
+            "snippet": "... fake faked faker fakes faking falcon falconer falcons Falk Falkland ... plague plagued plagues plaguing plaid plaids plain plainer plainest Plainfield ...",
+            "url": "http://www.cs.toronto.edu/~hojjat/101w08/assignments/a3/words.txt"
+          },
+          {
+            "title": "Correspondence Received SR per Item",
+            "snippet": "... fake outdoor dining, i.e. a tent, but not a place like farmers ... plague! Citizens are fed up and desperate, and willing to recall and ...",
+            "url": "http://file.lacounty.gov/SDSInter/bos/supdocs/150571.pdf"
+          },
+          {
+            "title": "Congressional Record",
+            "snippet": "... fake news to have a tremendous victory. The voters appreciated ... plague of the coronavirus. Send Your spirit of peace, that our ...",
+            "url": "https://www.govinfo.gov/content/pkg/CREC-2020-11-17/pdf/CREC-2020-11-17.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-03T06:12:07.692637+00:00",
+  "status": "reserved_outcome_unknown"
+}

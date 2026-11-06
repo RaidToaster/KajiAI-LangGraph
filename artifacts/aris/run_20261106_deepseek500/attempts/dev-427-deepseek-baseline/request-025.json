@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received.",
+        "query": "U.S. citizens should show up at polling places on Election Day and cast an in-person ballot if poll workers can’t confirm that their mail-in ballot was received. original source fact check",
+        "candidates": [
+          {
+            "title": "Can poll workers write on your ballot? Election officials debunk ...",
+            "snippet": "Can poll workers write on your ballot? Election officials debunk viral claim. @NBCChicago35 likes3.1K views2 weeks ago",
+            "url": "https://www.youtube.com/watch?v=Mq-MXHMb3nk"
+          },
+          {
+            "title": "Fact Check: Poll worker markings don't void US ballots",
+            "snippet": "Fact Check: Poll worker markings don't void US ballots ... US election officials and experts say ballots are not automatically invalidated if poll ...",
+            "url": "https://www.reuters.com/fact-check/poll-worker-markings-dont-void-us-ballots-2026-10-22/"
+          },
+          {
+            "title": "Can poll workers write on your ballot? Election officials ...",
+            "snippet": "A false social media rumor about poll workers writing on ballots is spreading online again, and election officials insist it isn't true.",
+            "url": "https://www.nbcchicago.com/news/local/election-officials-debunk-viral-claim-about-poll-workers-writing-on-ballots/4003553/"
+          },
+          {
+            "title": "Fact check: Why are there initials on your 2026 MS ballot?",
+            "snippet": "A viral social media post has suggested that a poll worker writing on your ballot will invalidate it. Here is the truth.",
+            "url": "https://www.sunherald.com/news/politics-government/election/article317889163.html"
+          },
+          {
+            "title": "Misinformation about voting spreads not long before Election ...",
+            "snippet": "If they've already printed a ballot that doesn't reflect their intended selections, “they should notify a poll worker rather than cast it so the ...",
+            "url": "https://www.timesherald.com/2026/10/29/election-2026-fact-check-voting-misinformation/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-427-deepseek-baseline",
+  "timestamp": "2026-11-06T04:39:26.869355+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7156.187
+}

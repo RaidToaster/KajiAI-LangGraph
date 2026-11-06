@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "Locate a verbatim transcript or video excerpt of Klobuchar's Wisconsin voting-rolls line from a source independent of S1 (e.g., the omitted portion of the CBS full transcript or C-SPAN footage)",
+        "candidates": [
+          {
+            "title": "Klobuchar misfires with debate salvo on Wisconsin voter ...",
+            "snippet": "Klobuchar's statement also implied voters were being kicked off the rolls right then, which isn't the case. See the sources for this fact-check.",
+            "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+          },
+          {
+            "title": "glove.6B.100d.txt-vocab.txt",
+            "snippet": "president only state million could us ・ current board football ministry workers vote book fell seen role students shares iran process agreement ・ release ...",
+            "url": "https://worksheets.codalab.org/rest/bundles/0xadf98bb30a99476ab56ebff3e462d4fa/contents/blob/glove.6B.100d.txt-vocab.txt"
+          },
+          {
+            "title": "than born became states including american",
+            "snippet": "UNK the , . of and in \" a to was is ) ( for as on by he with 's that at from his it an were are which this also be has or : had first one their its new after ...",
+            "url": "http://downloads.cs.stanford.edu/nlp/data/jiwei/data/vocab_wiki.txt"
+          },
+          {
+            "title": "A plan for at-risk students",
+            "snippet": "In August, students will return to Lake County. Schools to find a net has been cast beneath them, made up of increased mental health support ...",
+            "url": "https://ufdcimages.uflib.ufl.edu/AA/00/01/92/82/02090/07-14-2019.pdf"
+          },
+          {
+            "title": "Pollution Risks for New Mexico Waterways | PDF",
+            "snippet": "Miami 24 9 .727 5 7-3 S1 all performance was “very good.” cords and a lot of games on the road,” Vogel said. tough to win in other teams' arenas, and we got",
+            "url": "https://www.scribd.com/document/805075901/123119"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-05T10:19:33.106690+00:00",
+  "status": "reserved_outcome_unknown"
+}

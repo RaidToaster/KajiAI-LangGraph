@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Speaker Robin Vos lost a Republican-held seat in the 2018 election for the first time.",
+        "query": "What election results records for 2018 show whether that seat changed from Republican to another party?",
+        "candidates": [
+          {
+            "title": "2018 United States House of Representatives elections",
+            "snippet": "Prior to the 2018 elections, the Republican Party had held the House majority since January 2011. ... Both parties won two seats and lost two seats, no net change ...",
+            "url": "https://en.wikipedia.org/wiki/2018_United_States_House_of_Representatives_elections"
+          },
+          {
+            "title": "Seat Flips — MultiState Elections",
+            "snippet": "Every state legislative and statewide seat that has changed parties from 2010 to 2026. Filter by state, chamber, direction, and cycle.",
+            "url": "https://www.multistate.us/elections/seat-flips"
+          },
+          {
+            "title": "United States House of Representatives elections, 2018",
+            "snippet": "In total, 14 of the 52 districts changed party hands. Eleven seats flipped from Republican to Democrat. Three seats flipped from Democrat to Republican.",
+            "url": "https://ballotpedia.org/United_States_House_of_Representatives_elections,_2018"
+          },
+          {
+            "title": "US mid-term election results 2018: Maps, charts and analysis",
+            "snippet": "In West Virginia's 3rd district, there was a 20% swing towards the Democrats, but the seat still went to Republican Carol Miller. One ...",
+            "url": "https://www.bbc.com/news/world-us-canada-46076389"
+          },
+          {
+            "title": "Seats in Congress Gained/Lost by the President's Party in Mid ...",
+            "snippet": "Note that both of these pages report party divisions immediately following an election. That number has sometimes changed during the session.",
+            "url": "https://www.presidency.ucsb.edu/statistics/data/seats-congress-gainedlost-the-presidents-party-mid-term-elections"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-036-deepseek-candidate",
+  "timestamp": "2026-11-06T05:16:14.615759+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9363.921
+}

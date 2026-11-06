@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "What specific US sanction programs apply to Cuba, and do they cover pharmaceutical or biological products from Cuba?",
+        "candidates": [
+          {
+            "title": "Cuba Sanctions",
+            "snippet": "Below OFAC has issued guidance and statements on specific licensing policies as they relate to the Cuba Sanctions. Licenses for Legal Fees and Costs ...",
+            "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/cuba-sanctions"
+          },
+          {
+            "title": "Cuba export controls",
+            "snippet": "The export and reexport to Cuba of items subject to the Export Administration Regulations (EAR) require a BIS license unless authorized by a license exception ...",
+            "url": "https://www.bis.gov/articles/cuba-export-controls"
+          },
+          {
+            "title": "Fact Sheet: Provision of Humanitarian Assistance to Cuba",
+            "snippet": "Through the Departments of Commerce and the Treasury, there are many options available for expediting the export of humanitarian goods to Cuba.",
+            "url": "https://2021-2025.state.gov/fact-sheet-provision-of-humanitarian-assistance-to-cuba/"
+          },
+          {
+            "title": "Activities Involving Cuba",
+            "snippet": "U.S. sanctions regulations authorize certain educational activities involving Cuba, subject to specific requirements and conditions. Effective ...",
+            "url": "https://www.stonybrook.edu/research-security/research_activities/cuba.html"
+          },
+          {
+            "title": "Cuba Myths and Facts",
+            "snippet": "While the U.S. embargo prevented Cuba from buying medicines and medical supplies directly from the United States, many U.S. products were available from foreign ...",
+            "url": "https://www.wola.org/sites/default/files/downloadable/Cuba/past/cuba_myths_facts.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-05T10:36:47.724001+00:00",
+  "status": "reserved_outcome_unknown"
+}

@@ -1,0 +1,25 @@
+{
+  "service": "ollama",
+  "request": {
+    "path": "/api/chat",
+    "body": {
+      "model": "gemma4:31b-cloud",
+      "stream": true,
+      "options": {
+        "num_predict": 4096,
+        "temperature": 0.0
+      },
+      "format": "json",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Classify this claim: A library holds books.\n\nReturn ONLY one JSON object matching this JSON Schema. Do not use Markdown fences or explanatory text. The first character must be '{' and the last must be '}'.\nJSON Schema:\n{\"properties\": {\"domain\": {\"default\": \"general\", \"enum\": [\"general\", \"scientific\", \"political\", \"health_medical\"], \"title\": \"Domain\", \"type\": \"string\"}, \"confidence\": {\"default\": 0.0, \"maximum\": 1.0, \"minimum\": 0.0, \"title\": \"Confidence\", \"type\": \"number\"}, \"reasoning\": {\"default\": \"\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"risk_level\": {\"default\": \"low\", \"enum\": [\"low\", \"medium\", \"high\"], \"title\": \"Risk Level\", \"type\": \"string\"}}, \"title\": \"Classification\", \"type\": \"object\"}"
+        }
+      ],
+      "tools": []
+    }
+  },
+  "task": "smoke",
+  "timestamp": "2026-11-02T15:33:18.051932+00:00",
+  "status": "reserved_outcome_unknown"
+}

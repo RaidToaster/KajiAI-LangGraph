@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "What is the date of the Pulwama blast referenced, and which vehicle and registration details are documented in official investigations?",
+        "candidates": [
+          {
+            "title": "Country Reports on Terrorism 2019",
+            "snippet": "In February 2019, Jaysh al-Adl claimed responsibility for a suicide car bombing in southeastern Iran that killed 27 Iranian government officials. Strength ...",
+            "url": "https://www.state.gov/reports/country-reports-on-terrorism-2019"
+          },
+          {
+            "title": "Indian government calls deadly car explosion a terror ...",
+            "snippet": "A deadly car explosion in New Delhi is being investigated under an anti-terrorism law, Indian officials said. By Sheikh Saaliq, Rajesh Roy ...",
+            "url": "https://www.pbs.org/newshour/world/indian-government-calls-deadly-car-explosion-a-terror-attack-by-anti-national-forces"
+          },
+          {
+            "title": "Delhi's alleged car bomb attacker named by investigators",
+            "snippet": "The explosion last week came just hours after Kashmir police said they had arrested seven men in recent weeks from different parts of India and ...",
+            "url": "https://www.bbc.com/news/articles/cdeg85ng5n1o"
+          },
+          {
+            "title": "Indias response to remarks by Prime Minister of Pakistan ...",
+            "snippet": "In the horrific attack in Mumbai on 26/11, proof was provided to Pakistan. Despite this, the case has not progressed for the last more than 10 ...",
+            "url": "https://www.mea.gov.in/press-releases?dtl/31069/Indias_response_to_remarks_by_Prime_Minister_of_Pakistan_on_the_Pulwama_Terrorist_Attack"
+          },
+          {
+            "title": "Watch: Delhi Blast Car Sold To Tariq In Pulwama",
+            "snippet": "Delhi Blast News | Delhi Blast car was sold to Tariq in Pulwama. The i20 car is under Haryana registration and still named under its ...",
+            "url": "https://www.youtube.com/watch?v=_sZA153aXQU"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-deepseek-candidate",
+  "timestamp": "2026-11-05T10:29:11.274957+00:00",
+  "status": "reserved_outcome_unknown"
+}

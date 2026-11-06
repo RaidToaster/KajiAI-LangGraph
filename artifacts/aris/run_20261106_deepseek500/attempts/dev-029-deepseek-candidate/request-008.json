@@ -1,0 +1,49 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Wire called Durga puja racist and the goddess Durga a sex worker",
+        "query": "Did The Wire publish any article, column, or social media post that described the goddess Durga as a sex worker, and if so, what was the exact wording, author, and date?",
+        "candidates": [
+          {
+            "title": "No, The Wire Didn't Publish an Excerpt Against Goddess Durga",
+            "snippet": "Oct 26, 2020 · The Wire Didn't Publish an. The viral excerpt is from a pamphlet read by Union Minister Smriti Irani in the Parliament. has been taken out of ... Missing: column, exact wording, date?",
+            "url": "https://www.thequint.com/news/webqoof/excerpt-shared-without-context-to-label-the-wire-as-anti-hindu"
+          },
+          {
+            "title": "Viral Screenshot Misrepresents a 2016 Article on Durga Puja From ...",
+            "snippet": "Oct 26, 2020 · The screenshot is taken from The Wire's news article Mahishasura and the Minister dated February 27, 2016, quoting Union minister Smriti Irani ... Missing: column, exact author,",
+            "url": "https://m.thewire.in/article/media/fact-check-viral-durga-puja-screenshot"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-029-deepseek-candidate",
+  "timestamp": "2026-11-06T07:07:25.899371+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16035.218
+}

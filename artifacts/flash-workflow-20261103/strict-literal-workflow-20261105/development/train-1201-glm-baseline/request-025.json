@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Getting drugs in Britain almost easier than ordering pizza.",
+        "query": "Re-run assessment once the draft text is supplied.",
+        "candidates": [
+          {
+            "title": "Retake an assessment - Product Resource Center - Collibra",
+            "snippet": "When you retake an assessment, a duplicate of the original assessment is created in the Draft status. The new assessment copies the answers ...",
+            "url": "https://productresources.collibra.com/docs/collibra/latest/Content/CollibraAssessments/Assessments/ta_retake-assessment.htm"
+          },
+          {
+            "title": "Assessments Page (Drafts and Published)",
+            "snippet": "Only a draft assessment that you choose to share can be edited by the user or a district administrator. A district administrator can edit any draft assessment ... Missing:  run  text  supplied.",
+            "url": "https://support.renaissance.com/s/article/Assessments-Page-Drafts-and-Published-1752673901446?language=en_US"
+          },
+          {
+            "title": "[PDF] R.E.R.U.N. - K20 Learn",
+            "snippet": "Students can use R.E.R.U.N. to help them organize a lab report. This strategy allows students to take what they have actively learned and put it. Missing:  draft  text  supplied.",
+            "url": "https://learn.k20center.ou.edu/strategy/819/pdf"
+          },
+          {
+            "title": "Rerunning test cases - TestRail Support Center",
+            "snippet": "Open the test run or test plan you want to rerun · Click on the Rerun button · On the Select Tests dialog, select the status of the test cases you ... Missing:  draft  supplied.",
+            "url": "https://support.testrail.com/hc/en-us/articles/16081372340628-Rerunning-test-cases"
+          },
+          {
+            "title": "Draft Coach by Turnitin: How do I read these checks - LibGuides",
+            "snippet": "First Check: Complete your entire draft and then run your first Similarity Check to reveal places where you may need to revise, add citations, ... Missing:  assessment  supplied.",
+            "url": "https://coastal-provostoffice.libguides.com/c.php?g=1498368&p=11194272"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1201-glm-baseline",
+  "timestamp": "2026-11-05T10:51:06.773414+00:00",
+  "status": "reserved_outcome_unknown"
+}

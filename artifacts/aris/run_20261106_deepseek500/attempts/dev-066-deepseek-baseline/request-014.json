@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program.",
+        "query": "Hunter Biden was chairman of the Nobel Peace Prize winning World Food Program. original source fact check",
+        "candidates": [
+          {
+            "title": "Fact-checking claims about charities linked to Hunter Biden and the Trump ...",
+            "snippet": "“Hunter Biden was chairman of the World Food Program, which just won the Nobel Peace Prize,” Left Action said in an Oct. 20 post. “Eric Trump, ...",
+            "url": "https://politifact.com/factchecks/2020/oct/21/left-action/fact-checking-claims-about-charities-linked-hunter/"
+          },
+          {
+            "title": "Fact Check: Hunter Biden Was NOT Chairman Of The UN Program That ...",
+            "snippet": "No, neither of these claims are true. Hunter Biden was a member and chairman of the board for World Food Program USA, which is the American ...",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-hunter-biden-was-not-the-chairman-of-the-un-world-food-programme-that-won-the-nobel-peace-prize-and-the-trump-kids-are-not-banned-from-operating-a-charity.html"
+          },
+          {
+            "title": "Hunter Biden's work with World Food Program USA",
+            "snippet": "... fact-checking of claims that incorrectly treated Hunter Biden as a former chairman of the Nobel Peace Prize-winning United Nations agency itself ...",
+            "url": "https://www.facebook.com/historyrevealedd/posts/circa-2012-the-name-hunter-biden-appeared-in-a-very-different-kind-of-historical/122252842958316862/"
+          },
+          {
+            "title": "Hunter Biden | Chairman of the Board | World Food Program USA",
+            "snippet": "Hunter Biden serves as chairman of the board for World Food Program USA, a nonprofit based in Washington, D.C., which works to solve global hunger in ...",
+            "url": "https://www.devex.com/people/hunter-biden-985169"
+          },
+          {
+            "title": "Hunter Biden's laptop: The April 16, 2015, dinner",
+            "snippet": "Hunter Biden at the time was chairman of World Food Program USA, a fundraising arm of the U.N. humanitarian organization.",
+            "url": "https://www.washingtonpost.com/politics/2021/06/07/hunter-bidens-laptop-april-16-2015-dinner/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-066-deepseek-baseline",
+  "timestamp": "2026-11-06T08:50:58.917909+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22248.234
+}

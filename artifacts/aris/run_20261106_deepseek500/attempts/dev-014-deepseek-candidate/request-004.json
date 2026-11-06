@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Jammu and Kashmir (J&K) in Pakistan/India was removed from the United Nations (UN) list of “unresolved disputes”.",
+        "query": "Does the United Nations maintain an official list of \"unresolved disputes\" that includes or previously included Jammu and Kashmir?",
+        "candidates": [
+          {
+            "title": "UN mediation of the Kashmir dispute - Wikipedia",
+            "snippet": "The United Nations has played an advisory role in maintaining peace and order in the Kashmir region soon after the independence and partition of British India into the dominions of Pakistan and India in 1947, when a dispute erupted between the two new States on the question of accession over the princely state of Jammu and Kashmir.",
+            "url": "https://en.wikipedia.org/wiki/UN_mediation_of_the_Kashmir_dispute"
+          },
+          {
+            "title": "Fact check: WhatsApp forward about J&K not on UN unresolved ...",
+            "snippet": "A WhatsApp forward claiming that Jammu and Kashmir has been removed from the United Nations’ List of unresolved Disputes has gone viral.",
+            "url": "https://newsmeter.in/fact-check/fact-check-whatsapp-forward-about-jk-not-on-un-unresolved-disputes-list-is-misleading-679286"
+          },
+          {
+            "title": "UN affirms Kashmir and Palestine are unresolved disputes",
+            "snippet": "UNITED NATIONS: The UN Security Council’s annual report for 2025, presented to the General Assembly on Friday, reaffirmed the continued relevance of the Jammu and Kashmir dispute and the ...",
+            "url": "https://www.dawn.com/news/2005763"
+          },
+          {
+            "title": "UN reaffirms Kashmir and Palestine as unresolved disputes",
+            "snippet": "The UN Security Council’s annual report for 2025, presented to the General Assembly on Friday, reaffirmed the continued relevance of the Jammu and Kashmir dispute and the Palestinian question ...",
+            "url": "https://dailytimes.com.pk/1504367/un-reaffirms-kashmir-and-palestine-as-unresolved-disputes/"
+          },
+          {
+            "title": "UN reaffirms Kashmir and Palestine as unresolved disputes",
+            "snippet": "United Nations: The UN Security Council’s annual report for 2025, presented to the General Assembly on Friday, reaffirmed the continued relevance of the Jammu and Kashmir dispute and the Palestinian question, describing them as long-standing issues on the UNSC’s agenda with implications for regional and international peace and security.",
+            "url": "https://kmsnews.org/kms/2026/06/07/un-reaffirms-kashmir-and-palestine-as-unresolved-disputes.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-014-deepseek-candidate",
+  "timestamp": "2026-11-06T06:15:59.719944+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 12949.031
+}

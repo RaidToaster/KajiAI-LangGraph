@@ -1,0 +1,1781 @@
+{
+  "case": "dev-049",
+  "model": "deepseek",
+  "arm": "candidate",
+  "requested_model": "deepseek-v4.1-flash:cloud",
+  "gold_label": "",
+  "predicted_label": "ABSTAIN",
+  "accepted_label": "ABSTAIN",
+  "result": {
+    "claim": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+    "domain": "political",
+    "verdict": "UNVERIFIED",
+    "predicted_verdict": "UNVERIFIED",
+    "prediction_confidence": "Low",
+    "prediction_summary": "",
+    "verification_status": "execution_error",
+    "confidence": "Low",
+    "summary": "The evidence did not meet the verification criteria. Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found No supported verdict yet. Evidence confidence remains below High. Every finding needs retrieved citations. Find relevant evidence from at least two source hosts. Resolve and cite the assertion: The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration. Search for evidence against the proposed conclusion. Establish source independence; copied reporting is not corroboration.",
+    "stop_reason": "execution_error",
+    "reference_date": "2020-10-23",
+    "reference_timezone": "SE Asia Standard Time",
+    "execution_id": "2df71603-8a3d-479d-b4ac-aa2667cdc4a2",
+    "elapsed_seconds": 23.43800000000192,
+    "evidence": [],
+    "sources": [],
+    "retrieval_ledger": [
+      {
+        "title": "CO₂ emissions per capita - Our World in Data",
+        "url": "https://ourworldindata.org/grapher/co-emissions-per-capita",
+        "snippet": "Global CO2 emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in ...",
+        "page_text": "## CO₂ emissions per capita\n\n**Description**:   Carbon dioxide (CO₂) emissions from burning fossil fuels and industrial processes. This includes emissions from transport, electricity generation, and heating, but not land-use change.\n\n**Data source**:   Global Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data\n\n**Unit**:   tonnes per person\n\n**Date range**:   1750-2024\n\n**Last updated**:   2025-11-13\n\n**Next expected update**:   2026-11-13\n\n**Managed by**:   Pablo Rosado\n\n* Carbon dioxide (CO₂) is the primary greenhouse gas causing climate change.\n* Global CO₂ emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in some, falling in others.\n* Fossil fuel burning is the main source of CO₂ emissions. This data includes fossil CO₂ emissions from activities such as transport, electricity generation, and heating.\n\nShow more Show less \n\n* These figures don't include CO₂ emissions from changes in land use, like deforestation or reforestation.\n* Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total.\n* This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: How do CO₂ emissions compare when we adjust for trade?\n* The data comes from the Global Carbon Budget. Fossil CO₂ emissions are estimated using national statistics on energy use — such as coal, oil, and gas consumption — and industrial production, particularly cement. These figures are converted into CO₂ emissions using standardized emission factors. For more details, read the Global Carbon Budget paper.\n* CO₂ emissions per capita are calculated by dividing emissions by population. They represent the average emissions per person in a country or region. To learn more about how different metrics capture the distribution of CO₂ emissions, read our article: Per capita, national, historical: how do countries compare on CO2 metrics?\n\n## Frequently asked questions\n\n#### How did Our World in Data process this data?\n\nAll data and visualizations on Our World in Data rely on data sourced from one or several original data providers. Preparing this original data involves several processing steps. Depending on the data, this can include standardizing country names and world region definitions, converting units, calculating derived indicators such as per capita measures, as well as adding or adapting metadata such as the name or the description given to an indicator.\n\nAt the link below you can find a detailed description of the structure of our data pipeline, including links to all the code used to prepare data across Our World in Data.\n\nRead about our data pipeline\n\n##### Notes on our processing step for this indicator\n\n* Global emissions are converted from tonnes of carbon to tonnes of carbon dioxide (CO₂) using a factor of 3.664. This is the conversion factor recommended by the Global Carbon Project. It reflects that one tonne of carbon, when fully oxidized, forms 3.664 tonnes of CO₂, based on the relative molecular weights of carbon and oxygen in CO₂.\n* Emissions from the 1991 Kuwaiti oil fires are included in Kuwait's emissions for that year.- To calculate CO₂ emissions per capita, we divide the original data by a country's estimated population. These estimates come from our population dataset based on multiple sources.\n\n## Data sources\n\n#### Global Carbon Project – Global Carbon Budget\n\nThe Global Carbon Budget was established by the Global Carbon Project (GCP) to track global carbon emissions and sinks.\n\nThis dataset makes it possible to assess whether countries are making progress toward the goals of the Paris Agreement and is widely recognized as the most comprehensive report of its kind.\n\nSince 2001, the GCP has published estimates of global and national fossil CO₂ emissions. Initially, these were simple republished data from other sources, but over time, refinements were made based on feedback and correction of inaccuracies.\n\nRetrieved on\n\nNovember 13, 2025\n\nRetrieved from\n\nhttps://globalcarbonbudget.org/\n\nCitation\n\nThis is the citation of the original data obtained from the source, prior to any processing or adaptation by Our World in Data.\n\n```\nAndrew, R. M., & Peters, G. P. (2025). The Global Carbon Project's fossil CO2 emissions dataset (2025v15) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.17417124\nThe data files of the Global Carbon Budget can be found at: https://globalcarbonbudget.org/carbonbudget/\nFor more details, see the original paper:\nFriedlingstein, P., O'Sullivan, M., Jones, M. W., Andrew, R. M., Bakker, D. C. E., Hauck, J., Landschützer, P., Le Quéré, C., Luijkx, I. T., Peters, G. P., Peters, W., Pongratz, J., Schwingshackl, C., Sitch, S., Canadell, J. G., Ciais, P., Jackson, R. B., Alin, S. R., Anthoni, P., Barbero, L., Bates, N. R., Becker, M., Bellouin, N., Decharme, B., Bopp, L., Brasika, I. B. M., Cadule, P., Chamberlain, M. A., Chandra, N., Chau, T.-T.-T., Chevallier, F., Chini, L. P., Cronin, M., Dou, X., Enyo, K., Evans, W., Falk, S., Feely, R. A., Feng, L., Ford, D. J., Gasser, T., Ghattas, J., Gkritzalis, T., Grassi, G., Gregor, L., Gruber, N., Gürses, Ö., Harris, I., Hefner, M., Heinke, J., Houghton, R. A., Hurtt, G. C., Iida, Y., Ilyina, T., Jacobson, A. R., Jain, A., Jarníková, T., Jersild, A., Jiang, F., Jin, Z., Joos, F., Kato, E., Keeling, R. F., Kennedy, D., Klein Goldewijk, K., Knauer, J., Korsbakken, J. I., Körtzinger, A., Lan, X., Lefèvre, N., Li, H., Liu, J., Liu, Z., Ma, L., Marland, G., Mayot, N., McGuire, P. C., McKinley, G. A., Meyer, G., Morgan, E. J., Munro, D. R., Nakaoka, S.-I., Niwa, Y., O'Brien, K. M., Olsen, A., Omar, A. M., Ono, T., Paulsen, M., Pierrot, D., Pocock, K., Poulter, B., Powis, C. M., Rehder, G., Resplandy, L., Robertson, E., Rödenbeck, C., Rosan, T. M., Schwinger, J., Séférian, R., Smallman, T. L., Smith, S. M., Sospedra-Alfonso, R., Sun, Q., Sutton, A. J., Sweeney, C., Takao, S., Tans, P. P., Tian, H., Tilbrook, B., Tsujino, H., Tubiello, F., van der Werf, G. R., van Ooijen, E., Wanninkhof, R., Watanabe, M., Wimart-Rousseau, C., Yang, D., Yang, X., Yuan, W., Yue, X., Zaehle, S., Zeng, J., and Zheng, B.: Global Carbon Budget 2023, Earth Syst. Sci. Data, 15, 5301-5369, https://doi.org/10.5194/essd-15-5301-2023, 2023.\n```\n\n#### Various sources – Population\n\nOur World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources\n\nRetrieved on\n\nOctober 22, 2026\n\nRetrieved from\n\nhttps://ourworldindata.org/population-sources\n\nCitation\n\nThis is the citation of the original data obtained from the source, prior to any processing or adaptation by Our World in Data.\n\n```\nThe long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources\n```\n\n## How to cite\n\n#### How to cite this page\n\nTo cite this page overall, including any descriptions, FAQs or explanations of the data authored by Our World in Data, please use the following citation:\n\n```\n“Data Page: CO₂ emissions per capita”, part of the following publication: Hannah Ritchie, Pablo Rosado, and Max Roser (2023) - “CO₂ and Greenhouse Gas Emissions”. Data adapted from Global Carbon Project, Various sources. Retrieved from https://archive.ourworldindata.org/20261102-112946/grapher/co-emissions-per-capita.html [online resource] (archived on November 2, 2026).\n```\n\n#### How to cite this data\n\nIf you have limited space (e.g. in data visualizations), you can use this abbreviated in-line citation:\n\n```\nGlobal Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data\n```\n\nFull citation\n\n```\nGlobal Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data. “CO₂ emissions per capita” [dataset]. Global Carbon Project, “Global Carbon Budget v15”; Various sources, “Population” [original data]. Retrieved November 6, 2026 from https://archive.ourworldindata.org/20261102-112946/grapher/co-emissions-per-capita.html (archived on November 2, 2026).\n```\n\nAll data produced by third-party providers and made available by Our World in Data are subject to the license terms from the original providers. Our work would not be possible without the data providers we rely on, so we ask you to always cite them appropriately. This is crucial to allow data providers to continue doing their work, enhancing, maintaining and updating valuable data.\n\nAll data, visualizations, and code produced by Our World in Data are completely open access under the Creative Commons BY license. You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited.\n\n## Related charts\n\n### Download\n\n#### Quick download\n\nDownload the data shown in this chart as a ZIP file containing a CSV file, metadata in JSON format, and a README. The CSV file can be opened in Excel, Google Sheets, and other data analysis tools.\n\n#### Data API\n\nUse these URLs to programmatically access this chart's data and configure your requests with the options below. Our documentation provides more information on how to use the API, and you can find a few code examples below.\n\nDownload full data, including all entities and time points\n\nDownload only the currently selected data visible in the chart\n\n##### Data URL (CSV format)\n\n```\nhttps://ourworldindata.org/grapher/co-emissions-per-capita.csv?v=1&csvType=full&useColumnShortNames=false\n```\n\n##### Metadata URL (JSON format)\n\n```\nhttps://ourworldindata.org/grapher/co-emissions-per-capita.metadata.json?v=1&csvType=full&useColumnShortNames=false\n```\n\n#### Code examples\n\nExamples of how to load this data into different data analysis tools.\n\n##### Excel / Google Sheets\n\n```\n=IMPORTDATA(\"https://ourworldindata.org/grapher/co-emissions-per-capita.csv?v=1&csvType=full&useColumnShortNames=false\")\n```\n\n##### Python with Pandas\n\n```\nimport pandas as pd\nimport requests\n\n# Fetch the data.\ndf = pd.read_csv(\"https://ourworldindata.org/grapher/co-emissions-per-capita.csv?v=1&csvType=full&useColumnShortNames=false\", storage_options = {'User-Agent': 'Our World In Data data fetch/1.0'})\n\n# Fetch the metadata\nmetadata = requests.get(\"https://ourworldindata.org/grapher/co-emissions-per-capita.metadata.json?v=1&csvType=full&useColumnShortNames=false\").json()\n```\n\n##### R\n\n```\nlibrary(jsonlite)\n\n# Fetch the data\ndf <- read.csv(\"https://ourworldindata.org/grapher/co-emissions-per-capita.csv?v=1&csvType=full&useColumnShortNames=false\")\n\n# Fetch the metadata\nmetadata <- fromJSON(\"https://ourworldindata.org/grapher/co-emissions-per-capita.metadata.json?v=1&csvType=full&useColumnShortNames=false\")\n```\n\n##### Stata\n\n```\nimport delimited \"https://ourworldindata.org/grapher/co-emissions-per-capita.csv?v=1&csvType=full&useColumnShortNames=false\", encoding(\"utf-8\") clear\n```",
+        "retrieved_at": "2026-11-06T07:59:30.849666+00:00",
+        "content_hash": "2afb280a6c244c488e38db95e3880faeb6c009dcfcb540c3e08ffedd4310498a",
+        "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "8208b8801ad0752deac8cd56842c7656dfb59a4e241c98d6c610625a7fe1d692",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.3,
+          "evidence": 0.65,
+          "counterevidence": 0.23,
+          "injection": 0.05
+        }
+      },
+      {
+        "title": "Carbon Footprint Factsheet | Center for Sustainable Systems",
+        "url": "https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet",
+        "snippet": "The U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest ...",
+        "page_text": "## Carbon Footprint Factsheet\n\nA carbon footprint measures the total greenhouse gas (GHG) emissions—direct and indirect—associated with an individual, organization, product, or event1 across all stages of its lifecycle: from material extraction and manufacturing to use and disposal. GHGs include carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). Because these gases differ in how strongly they trap heat, emissions are expressed in carbon dioxide equivalents (CO2e), using each gas’s global warming potential (GWP) as a conversion factor (See Greenhouse Gases Factsheet).1\n\n### Per Capita Emissions\n\nThe U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest portion: 29.5% of GHG emissions, equivalent to 5.6 t per person.3,4 Transportation is the second largest: 28.5% of GHG emissions, equivalent to 5.4 t per person.3,4 Agriculture produces 10.5% of emissions. 88% of this impact is due to CH4 and N2O.3,4 Household consumption indirectly accounts for over 70% of total U.S. emissions.5,6\n\n###### Average U.S. per Capita Emissions per Year3,4\n\n#### Transportation (Personal Transportation Factsheet)\n\n* The average passenger car emits 0.66 lbs of CO2e per mile driven.8 Over its lifetime, a gasoline car emits about 66,000 lbs of CO2e—84% comes from driving.9,10 In 2022, cars and light trucks generated 16% of total U.S. emissions (1.03 Gt CO2e).4 See Electric Vehicle Factsheet for more GHG emission data.\n* In 2025, annual per capita miles driven was 9,583.11,12\n* Fuel economy rose 41% from 2004–2024, reaching an average of 27 mpg by 2024.13 Driving at the speed limit boosts fuel economy by 7–14%, every 5 mph over 50 is equivalent to paying an additional $0.27–$0.54/gal.14\n* Commercial aircraft emitted 130.8 Mt CO2e in 2022; emissions vary by aircraft type, trip length, and load.4 A domestic flight emits 0.41 lb of CO2e per passenger mile.4,15\n* Domestic air travel fuel efficiency (passenger miles/gal) rose 112% since 1990 due to increased occupancy.15\n* Rail transportation emitted 35.6 Mt CO2e in 2022, 2% of U.S. transportation emissions.4\n* Commuter rail emits 0.295 lb CO2e per passenger-mile, while freight rail emits 0.047 lb CO2e per ton-mile.8\n\n#### Household Energy (Residential Buildings Factsheet)\n\n* Each kWh generated in the U.S. emits 0.85 lb of CO2e.16 Coal emits 2.31 lb/kWh, petroleum 2.46, and natural gas 0.96.17\n* Nuclear, solar, wind, and hydro produce no CO2 during use but have upstream emissions from material production and infrastructure (e.g. solar cells, nuclear fuels).18\n* Residential electricity use generated 582.2 Mt CO2e in 2022—9.2% of U.S. total.4 Heating and cooling account for 42% of energy used in U.S. residences in 2025.19 17% of global carbon emissions from energy use is tied to residential buildings.20\n\n#### Goods and Services\n\n* The average American buys 53 clothes items a year,21 producing emissions equivalent to driving almost 3,000 miles.22,23,61 The U.S. has the highest fashion carbon footprint at 132 Mt CO2e/yr—90% of these emissions occur overseas.24\n* A piece of household furniture emits 9–164 kg CO2e;25 50-80% is from materials. Buying refurbished cuts emissions by up to 85%.26\n* Health care is the most carbon-intensive U.S. household service, emitting 1,692 kg CO2e per capita in 2018—the highest among industrialized nations. 70% of these emissions came from supply chains (e.g. pharmaceuticals, medical devices).27\n\n#### Food (U.S. Food System Factsheet)\n\n* Agriculture is responsible for 50% of CH4, 66% of N2O, and 3% of CO2 emissions.28\n* Food makes up 10–30% of a household’s emissions, often more in low-income households.5\n* Food production accounts for 68% of food emissions; 27% comes from retail, restaurants, and wholesale. Transport accounts for just 5%—dietary choices have greater impact.29\n* Meats like beef produce 36 times more GHG per mass of protein than plant-based products;30 most energy from feed is lost, and ruminants like cows emit CH4 primarily through burping and from manure.31,32 Chicken produces 4.2 kg CO2e/kg, 7 times less than beef’s 30.4 kg CO2e/kg.33\n* High-emission diets (top 20%) emit 8 times more GHGs than low-emission diets (bottom 20%), accounting for 46% of diet-related emissions.8\n* Changes in U.S. eating habits cut diet-related GHG emissions by over 35% from 2003–2018.34\n\n###### U.S. Greenhouse Gas Emissions by Sector, Activity, and Gas Type (2021)35\n\n### Sources of Institutional Emissions\n\n* Construction material production emits 23% of global GHG. Recycling construction materials in the U.S. could reduce emissions by at least 80%. Steel and cement production generates 11% of global carbon emissions.20\n* $1 spent on infrastructure creates 1 kg of embodied carbon.36\n* U.S. commercial buildings emit 764 Mt CO2/yr in 2025.19 Data centers emitted 105 Mt CO2e/yr in 2023,37 projected to double by 2030.38 U.S. data centers account for 45% of the global energy consumption by data centers.39 See Commercial Buildings Factsheet and AI and Data Centers Factsheet.\n* Industrial machinery production accounts for 8% of global CO2 emissions.40\n* Militaries contribute 5.5% of global GHG emissions,41 mostly from supply chains and procurement, not operations.42\n* NATO’s military activities in 2023 resulted in 233 Mt CO2e. The U.S. accounts for ⅔ of these emissions.43\n* If NATO meets the 2% GDP military spending goal by 2028, its military’s carbon footprint would be 2 Bt CO2e/yr—surpassing emissions from all but the top 3 countries (China, India, U.S.).43\n\n### Global Emissions and Development\n\n* To stay below 1.5 °C warming, world emissions must fall to 2.3 t CO2 per capita by 2030.44 This requires countries like the U.S., Canada, and Australia to cut emissions by >80%.2\n* The world’s richest 10% emit 24 t CO2e/capita.44 The richest 1% make up 15% of global emissions (74 t CO2e/capita), while the poorest 50% account for 7% (just over 1 t CO2e/capita).44 By 2030, the world’s richest 10% are projected to emit 9x the sustainable target.44 The richest 1% will emit 30x the target.44 The bottom 50% will emit about 1 t CO2e/capita, less than half the global per capita CO2e target.44 Check out the Emissions Inequality Calculator for more information.\n\n###### GHG Emissions per Capita by GDP per Capita2\n\n### Solutions and Sustainable Actions\n\n#### Ways to Reduce Your Carbon Footprint\n\n* Walk, bike, carpool, use transit, or drive best-in-class vehicles.45 Use less plane travel and use alternative travel methods where they are available.46\n* Switching from incandescent to LED bulbs saves an average household $200/yr; immediately switching from incandescent and halogen is expected to save money for any bulb used more than 90 minutes per day.47,48\n* ENERGY STAR is a federal program that designates energy efficient products.49 ENERGY STAR smart thermostats can save $50-$100 annually.7 Nation-wide adoption of these thermostats would save $740M and 6 Mt CO2e per year.29\n* Switching to cold water for one load of laundry per week can cut household emissions by 70 lb of CO2e per year.50\n* Unplug devices or switch off power strips when not in use.51\n* Purchase secondhand, reusable,52 or low-emission products to reduce waste. See Municipal Solid Waste Factsheet. Many brands now disclose their products’ carbon footprints.53,54\n* Reduce meat consumption55 or swap beef for chicken33 and cut food waste: compost scraps, and donate excess.56 See U.S. Food System Factsheet.\n* Cook at home—restaurant delivery can double emissions.57 Meal kits may lower GHGs by 33% per meal compared to in-store shopping.58\n* Reducing snacks, ready-made food, and soft drinks can cut emissions as much as switching to a plant-based diet.59\n* Solar-reflective roofs can cut home cooling demand by 27%, and wide-scale usage can reduce mortality from urban heat extremes by 18%.60\n\n#### Carbon Footprint Calculators\n\nEstimate your personal or household greenhouse gas emissions and explore the impact of different techniques to lower those emissions:\n\nResults from carbon calculators will vary due to different assumptions and levels of detail.\n\nCite As\n\nCenter for Sustainable Systems, University of Michigan, Ann Arbor. 2026. \"Carbon Footprint Factsheet.\" Pub. No. CSS09-05.\n\nReferences\n\n1. The Carbon Trust (2018) Carbon Footprinting. https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/a-guide-to-carbon-footprinting-for-businesses\n2. EDGAR (2025) GHG emissions of all world countries 2025. https://edgar.jrc.ec.europa.eu/report\\_2025#data\\_download\n3. U.S. Census Bureau (2026) U.S. and World Population Clock. https://www.census.gov/popclock/\n4. U.S. Environmental Protection Agency (EPA) (2024) Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990–2022. https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks-1990-2021\n5. Jones C., Kammen D. (2011) \"Quantifying Carbon Footprint Reduction Opportunities for U.S. Households and Communities.\" https://pubs.acs.org/esthag/article-pdf/45/9/4088/8551474/es102221h.pdf\n6. Song, K., et al. (2019). Scale, distribution and variations of global greenhouse gas emissions driven by US households. https://www.sciencedirect.com/science/article/pii/S0160412019315752?via%3Dihub#bb0095\n7. CoolClimate Network (2025) Calculator. https://coolclimate.berkeley.edu/calculator\n8. U.S. Environmental Protection Agency (EPA) (2024) Emissions Factors for Greenhouse Gas Inventories. https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf\n9. Pero, F. et al. (2018) Life Cycle Assessment in the automotive sector: a comparative case study of Internal Combustion Engine and electric car. https://www.sciencedirect.com/science/article/pii/S2452321618301690\n10. Schlesinger, W. (2018) Life-time side-by-side comparison: Electric vs. gasoline automobiles. https://blogs.nicholas.duke.edu/citizenscientist/life-time-side-by-side-comparison-electric-vs-gasoline-automobiles/\n11. U.S. Census Bureau (2026) U.S. and World Population Clock. https://www.census.gov/popclock/\n12. U.S. DOE, Alternative Fuels Data Center (2026) Annual Vehicle Miles Traveled in the United States. https://afdc.energy.gov/data/10315\n13. EPA (2025) The 2025 EPA Automotive Trends Report. https://www.epa.gov/system/files/documents/2026-02/420r26001.pdf\n14. Fueleconomy.gov.  “Driving More Efficiently.\" https://www.fueleconomy.gov/feg/driveHabits.jsp\n15. U.S. Department of Transportation Bureau of Transportation Statistics (2023) National Transportation Statistics 2023. https://www.bts.gov/content/energy-intensity-certificated-air-carriers-all-services\n16. U.S. EPA (2025) “Emissions & Generation Resource Integrated Database Revision 2 (eGRID) 2023.” https://www.epa.gov/egrid/detailed-data\n17. U.S. Energy Information Administration (EIA) (2024) Inventory of U.S. Greenhouse Gas Emissions and Sinks 1990 - 2022. https://www.eia.gov/tools/faqs/faq.php?id=74&t=11\n18. U.S. Energy Information Administration (EIA) (2023) Electric Power Monthly with Data from January 2023. https://www.eia.gov/electricity/monthly/\n19. U.S. EIA (2026) Annual Energy Outlook 2026. https://www.eia.gov/outlooks/aeo/\n20. United Nations Environment Programme (2023) Building Materials and the Climate: Constructing a New Future. https://wedocs.unep.org/items/effe9d8d-a949-4397-bed6-7afda856e261\n21. FashionUnited. Global Fashion Industry Statistics. Accessed May 2025. https://fashionunited.com/statistics/global-fashion-industry-statistics\n22. Carbonfact. How Much CO₂ Does a T-Shirt Emit? Accessed May 2025. https://www.carbonfact.com/carbon-footprint/t-shirt\n23. World Bank. The Price Tag of Fashion: What’s the Cost to the Environment? September 23, 2019. Accessed May 2025.\n24. Zhikun, L. et al. (2024) The carbon footprint of fast fashion consumption. https://www.sciencedirect.com/science/article/pii/S0048969724016498\n25. FIRA (2011) BENCHMARKING CARBON FOOTPRINTS of Furniture Products. https://fira-website.files.svdcdn.com/production/images/fira-carbon-footprinting-document-2011.pdf\n26. COGGIN (2025) The carbon footprint of office furniture. https://www.coggin-sos.co.uk/the-carbon-footprint-of-office-furniture\n27. Eckelman, M. J., et. al (2020). “Health Care Pollution and Public Health Damage in the United States: An Update.” Health Affairs 39, no. 12: 2071–2079. https://www.healthaffairs.org/doi/10.1377/hlthaff.2020.01247\n28. Ivanovich, et. al, (2023) Future warming from global food consumption. https://www.nature.com/articles/s41558-023-01605-8#:~:text=Food%20is%20both%20an%20essential,to%20the%20Paris%20Agreement5.\n29. Boehm R., et al. (2018) \"A Comprehensive Life Cycle Assessment of Greenhouse Gas Emissions from U.S. Household Food Choices.\" https://www.sciencedirect.com/science/article/pii/S0306919217310552\n30. Poore, J., and Nemeck, T. (2019) Reducing Food's Environmental Impacts through Producers and Consumers. Science, 360(6392), 987–992. https://www.science.org/doi/10.1126/science.aaq0216\n31. Weber, C. and H. Matthews (2008) \"Food miles and the Relative Climate Impacts of Food Choices in the United States.\" Environmental Science & Technology, 42(10): 3508-3513. http://pubs.acs.org/doi/pdf/10.1021/es702969f\n32. Benedict, O (2026) Moo-vement in the Field: Strategies for Reducing Methane Emissions from Cattle. Environmental and Energy Study Institute, https://www.eesi.org/articles/view/moo-vement-in-the-field-strategies-for-reducing-methane-emissions-from-cattle\n33. Heller, M., et al. (2020). Implications of Future US Diet Scenarios on Greenhouse Gas Emissions. http://css.umich.edu/sites/default/files/publication/CSS20-01.pdf\n34. Bassi C., et al, (2022) Declining greenhouse gas emissions in the US diet (2003–2018). https://www.sciencedirect.com/science/article/pii/S0959652622010861\n35. UNCC (2023) United States. 2023 Common Reporting Format (CRF) Table. https://unfccc.int/documents/627772\n36. KPMG (2023) Embodied Carbon Management for Global Infrastructure. https://assets.kpmg.com/content/dam/kpmg/in/pdf/2023/03/embodied-carbon-management-for-global-infrastructure.pdf\n37. Guidi, G. et al. (2024) Environmental Burden of United States Data Centers in the Artificial Intelligence Era. https://arxiv.org/pdf/2411.09786\n38. S&P Global Ratings (2024) Data Centers' Rapid Growth Will Test U.S. Tech Sector’s Decarbonization Ambitions. Accessed May 2025. https://www.spglobal.com/ratings/en/regulatory/article/241030-data-centers-rapid-growth-will-test-u-s-tech-sector-s-decarbonization-ambitions-s13302390\n39. International Energy Agency (IEA) (2025) Energy and AI. https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf\n40. Jiang, M., et al. (2023) Material and Carbon Footprints of Machinery Capital. Environmental Science & Technology 57, no. 50: 21124–21135. https://pubs.acs.org/esthag/article/57/50/21124/869349/Material-and-Carbon-Footprints-of-Machinery\n41. CEOBS (2022) Estimating Global MIlitary GHG Emissions. https://ceobs.org/new-estimate-global-military-is-responsible-for-more-emissions-than-russia/\n42. The Military Emissions Gap (2025) The Problem. https://militaryemissions.org/problem/\n43. Transnational Institute (TNI). (2023) Climate in the Crosshairs: How the Arms Industry is Profiting from Climate Disaster. https://www.tni.org/en/publication/climate-in-the-crosshairs\n44. IEEP and SEI. (2021) Carbon Inequality in 2030: Per Capita Consumption Emissions and the 1.5°C Goal. https://ieep.eu/publications/carbon-inequality-in-2030-per-capita-consumption-emissions-and-the-1-5c-goal/#:~:text=To%20stay%20within%20this%20guardrail,every%20person%20on%20Earth%20today.\n45. United Nations. (2025). ActNow: Transport. United Nations. Accessed May 23 2025. https://www.un.org/en/actnow/transport\n46. Columbia University (2018). Alternatives to Flying. https://sustainable.columbia.edu/content/alternatives-flying\n47. Liu, L., Keoleian, G. A., & Saitou, K. (2017). Replacement policy of residential lighting optimized for cost, energy, and greenhouse gas emissions. Environmental Research Letters, 12(11), 114034. https://iopscience.iop.org/article/10.1088/1748-9326/aa9447/pdf\n48. Department of Energy (2023) Energy Saving Hub. https://www.energy.gov/save?utm\\_medium=email&utm\\_source=govdelivery\n49. Environmental Protection Agency (EPA) ENERGY STAR Program (2025) ENERGY STAR Program. https://www.energystar.gov/about/how-energy-star-works/energy-star-certification\n50. Mars C. (2016) Benefits of Using Cold Water for Everyday Laundry in the U.S. https://www.cleaninginstitute.org/sites/default/files/assets/1/Page/Cold-Water-Wash-Technical-Brief.pdf\n51. LBNL (2026) Frequently Asked Questions About Standby Power. https://standby.lbl.gov/frequently-asked-questions\n52. United States Environmental Protection Agency. Reducing waste: What you can do. Accessed May 23 2025. https://www.epa.gov/recycle/what-you-can-do\n53. Clever Carbon. Find out the carbon footprint of common items. Accessed May 23, 2025. https://clevercarbon.io/carbon-footprint-of-common-items\n54. Meinrenken C., et al. (2022) The Carbon Catalogue, carbon footprints of 866 commercial products from 8 industry sectors and 5 continents. Scientific Data, 9, Article 87. https://www.nature.com/articles/s41597-022-01178-9\n55. Ritchie H. (2020) - “You want to reduce the carbon footprint of your food? Focus on what you eat, not whether your food is local” Published online at OurWorldinData.org. Accessed May 23 2025. https://ourworldindata.org/food-choice-vs-eating-local\n56. US EPA (2024) Reducing and Reusing Basics. https://19january2017snapshot.epa.gov/recycle/reducing-and-reusing-basics\\_.html\n57. Matsuyuki, M., et al. (2024). Assessment of the sustainability of online food delivery from the perspective of CO₂ emissions and transport intensity: A case study in Jakarta. Transportation Research Interdisciplinary Perspectives, 27, 101200. https://www.sciencedirect.com/science/article/pii/S2590198224001866?via%3Dihub\n58. Miller, S. A. et al. (2019). Comparison of life cycle environmental impacts from meal kits and grocery store meals. Resources, Conservation and Recycling, 147, 189–200. https://www.sciencedirect.com/science/article/pii/S0921344919301703?via%3Dihub\n59. Song L., et al. (2021) Large-Scale Microanalysis of U.S. Household Food Carbon. https://pubs.acs.org/doi/epdf/10.1021/acs.est.1c02658?ref=article\\_openPDF\n60. U.S. Environmental Protection Agency. (2025). Using cool roofs to reduce heat islands. https://www.epa.gov/heatislands/using-cool-roofs-reduce-heat-islands?utm\\_source=chatgpt.com#6\n61. Carbonfact. What’s the Carbon Footprint of a Dress? Accessed May 2025. https://fira-website.files.svdcdn.com/production/images/fira-carbon-footprinting-document-2011.pdf\n\n## Where to go from here",
+        "retrieved_at": "2026-11-06T07:59:32.521626+00:00",
+        "content_hash": "004f733cc6e1806d2d2d2b448a85d839f932170d460036449373a31c77c540e3",
+        "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "4d2aea92194e9f417a23a94125894bd791163a6775d50747a86554ab4e4d943f",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.12,
+          "evidence": 0.55,
+          "counterevidence": 0.22,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "CO2 Emissions - Global Energy Review 2025 - IEA",
+        "url": "https://www.iea.org/reports/global-energy-review-2025/co2-emissions",
+        "snippet": "Total energy-related CO2 emissions increased by 0.8% in 2024, hitting an all-time high of 37.8 Gt CO21. concentrations of 422.5 ppm in 2024,",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:59:38.365528+00:00",
+        "content_hash": "233e78fb874f9d74d1db0a5956dbad6117e4ce53d1317272af9b05a14eae181c",
+        "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "a42f7779d44467abcf4cef41a3285232dd53fe52f7c9f46b51f863f14a06df94",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.14,
+          "evidence": 0.4,
+          "counterevidence": 0.44,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "CO2 emissions (kt) - Glossary | DataBank",
+        "url": "https://databank.worldbank.org/metadataglossary/millennium-development-goals/series/EN.ATM.CO2E.KT",
+        "snippet": "Emission intensity is the average emission rate of a given pollutant from a given source relative to the intensity of a specific activity. Emission intensities ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:59:38.365528+00:00",
+        "content_hash": "40ab61b21436d0e03a0b3015966c38843e02500a0c0df20b3f3b30faf5374195",
+        "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "dbdb143287abdba5e163913cb1f3f8da5961cd5b74e996eb868bd99e2732e084",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.04,
+          "evidence": 0.07,
+          "counterevidence": 0.07,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "Calculate Your Carbon Footprint - The Nature Conservancy",
+        "url": "https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/",
+        "snippet": "Do you know your carbon footprint? What's a good carbon footprint? Use our tool to find out, compare it to the average, and take action.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:59:38.365528+00:00",
+        "content_hash": "8a71775d123a40bd9f4f9d4035d972cb634aac3ff13aa23474c61566092cca5a",
+        "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "16c62aa2bc21528c70845a99698bb5f1803184b1056b7bc20f6363bcfb626b6c",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.04,
+          "evidence": 0.05,
+          "counterevidence": 0.06,
+          "injection": 0.04
+        }
+      },
+      {
+        "title": "CO₂ emissions | Our World in Data",
+        "url": "https://ourworldindata.org/co2-emissions",
+        "snippet": "Carbon dioxide (CO₂) emissions from burning fossil fuels and industrialprocesses. This includes emissions from transport, electricitygeneration, and heating, ...",
+        "page_text": "Carbon dioxide emissions are the primary driver of global climate change. It's widely recognized that to avoid the worst impacts of climate change, the world needs to urgently reduce emissions. But, how this responsibility is shared between regions, countries, and individuals has been an endless point of contention in international discussions.\n\nThis debate arises from the various ways in which emissions are compared: as annual emissions by country; emissions per person; historical contributions; and whether they adjust for traded goods and services. These metrics can tell very different stories.\n\nWe teamed up with the YouTube channel *Kurzgesagt* to produce a video that explored these different metrics in detail: ‘Who is responsible for climate change? – Who needs to fix it?’.\n\nThis page is just one in our collection of work on CO2 and Greenhouse Gas Emissions where you can explore emissions of other greenhouse gases; where our emissions come from; what trajectories of future emissions look like; and what is driving emissions across the world.\n\nYou can also **download** our complete *Our World in Data* CO2 and Greenhouse Gas Emissions database.\n\nOther research and writing on CO₂ emissions on Our World in Data:\n\n# Global CO2 emissions from fossil fuels\n\n## How have global emissions of carbon dioxide (CO2) changed over time?\n\nIn this chart, we see the growth of global emissions from the mid-18th century through to today.\n\nWe see that before the Industrial Revolution, emissions were very low. Growth in emissions was still relatively slow until the mid-20th century. In 1950 the world emitted 6 billion tonnes of CO2. By 1990 this had almost quadrupled, reaching more than 20 billion tonnes. Emissions have continued to grow rapidly; we now emit over 35 billion tonnes each year. Emissions growth has slowed over the last few years, but they have yet to reach their peak.\n\n## Global CO2 emissions from fossil fuels and land use change\n\nHow have global emissions of carbon dioxide (CO2) from fossil fuels *and* land use changed over time?\n\nWe see that while emissions from fossil fuels have increased, emissions from land use change have declined slightly in recent years. Overall, this means total emissions have roughly stabilized over the past decade.\n\n## CO2 emissions by region\n\nThis interactive chart shows the breakdown of global CO2 emissions by region. We see that until well into the 20th century, global emissions were dominated by Europe and the United States. In 1900, more than 90% of emissions were produced in Europe or the US; even by 1950, they accounted for more than 85% of emissions each year. But in recent decades this has changed significantly. In the second half of the 20th century, we see a significant rise in emissions in the rest of the world, particularly across Asia, and most notably, China. The US and Europe now account for less than one-third of emissions.\n\n# Per capita CO2 emissions\n\nWhere in the world does the average person emit the most carbon dioxide (CO2) each year?\n\nWe can calculate the contribution of the average citizen of each country by dividing its total emissions by its population. This gives us CO2 emissions per capita. In the visualization, we see the differences in per capita emissions across the world.\n\nHere we look at production-based emissions – that is, emissions produced within a country’s boundaries without accounting for how goods are traded across the world. In our post on consumption-based emissions, we look at how these figures change when we account for trade. Production figures matter – these are the numbers that are taken into account for climate targets1 and thanks to historical reconstructions they have been available for the entire world since the mid-18th century.\n\nThere are very large inequalities in per capita emissions across the world.\n\nThe world’s largest per capita CO2 emitters are the major oil-producing countries; this is particularly true for those with relatively low population size. Most are in the Middle East and include Qatar, the United Arab Emirates, Bahrain, and Kuwait.\n\nHowever, many of the major oil producers have a relatively small population meaning their total annual emissions are low. More populous countries with some of the highest per capita emissions – and therefore high total emissions – are the United States, Australia, and Canada which on average have emissions that are around 3 times higher than the global average.\n\nSince there is such a strong relationship between income and per capita CO2 emissions, we’d expect this to be the case: countries with high standards of living would have a high carbon footprint. But what becomes clear is that there can be large differences in per capita emissions, even between countries with similar standards of living. Many countries across Europe, for example, have much lower emissions than the US, Canada, or Australia.\n\nIn fact, some European countries have emissions not far from the global average, including Portugal, France, and the UK. This is also much lower than some of their neighbors with similar standards of living, such as Germany, the Netherlands, or Belgium. The choice of energy sources plays a key role here: in the UK, Portugal, and France, a much higher share of electricity is produced from nuclear and renewable sources – you can explore this electricity mix by country **here**. While approximately half of Germany's electricity is derived from fossil fuels, the percentage in France is markedly lower.\n\nProsperity is a primary driver of CO2 emissions, but clearly, policy and technological choices make a difference.\n\nMany countries in the world still have very low per capita CO2 emissions. In many of the poorest countries in Sub-Saharan Africa – such as Chad, Niger, and the Central African Republic – the average footprint is around 0.1 tonnes per year. That’s around 150 times lower than the USA, Australia, and Canada. The average American or Australian produces the same amount of emissions in under two days as the average person in Mali or Niger does in an entire year.\n\n# Annual CO2 emissions\n\nWho emits the most CO2 each year? In the following visualization, we show annual CO2 emissions aggregated by region, with a special focus on the leading emitters including India, China, and the United States. The emissions shown here relate to where CO2 is produced (i.e., production-based CO2), not where the goods and services that generate emissions are finally consumed. We look at the difference in each country’s production vs. consumption (trade-adjusted) emissions **here**.\n\nAsia is by far the largest emitter, accounting for around half of global emissions. As it is home to almost 60% of the world’s population this means that per capita emissions in Asia are slightly lower than the world average, however.\n\nChina is, by a significant margin, Asia’s and the world’s largest emitter: it emits more than one-quarter of global emissions.\n\nNorth America – dominated by the USA – is the second largest regional emitter at one-fourth of global emissions and it’s followed closely by Europe. Here we have grouped the countries in the European Union since they typically negotiate and set targets as a collective body. You can see the data for individual EU countries in the interactive maps that follow.\n\nAfrica and South America are both fairly small emitters: accounting for 3-4% of global emissions each. Both have emissions similar in size to international aviation and shipping combined. Aviation and shipping are not included in national or regional emissions. This is because of disagreement over how emissions that cross country borders should be allocated: do they belong to the country of departure or country of origin? How are connecting flights accounted for? The tensions in reaching international aviation and shipping deals are discussed in detail in the Carbon Brief **here**.\n\n## How did CO2 emissions change over time?\n\nThe same data is also explorable by country and over time in the interactive map.\n\nBy clicking on any country you can see how its annual emissions have changed, and compare it with other countries.\n\n## Share of global CO2 emissions by country\n\nIn the interactive chart, you can explore each country’s *share* of global emissions. Using the timeline at the bottom of the map, you can see how the global distribution has changed since 1750. By clicking on any country you can see its evolution and compare it with others.\n\nThe distribution of emissions has changed significantly over time. The UK was – until 1888 when it was overtaken by the US – the world’s largest emitter. This was because the UK was the first country to industrialize, a transition that later contributed to massive improvements in living standards for much of its population.\n\nWhilst rising CO2 emissions have clear negative environmental consequences, it is also true that they have historically been a by-product of positive improvements in human living conditions. But, it’s also true that reducing CO2 emissions is important to protect the living conditions of future generations. This perspective – that we must consider both the environmental and human welfare implications of emissions – is important if we are to build a future that is both sustainable and provides high standards of living for everyone.\n\nRising emissions and living standards in North America and Oceania followed soon after developments in the UK.\n\nMany of the world’s largest emitters today are in Asia. However, Asia’s rapid rise in emissions has only occurred in very recent decades. This too has been a by-product of massive improvements in living standards: since 1950 life expectancy in Asia has increased by more than 30 years, it has seen a dramatic fall in extreme poverty; and for the first time, most of its population received formal education.\n\nWhilst all countries must work collectively, action from the very top emitters will be essential. China, the USA, and the 28 countries of the EU account for more than half of global emissions. Without a commitment from these largest emitters, the world will not come close to meeting its global targets.\n\n# Annual change in CO2 emissions\n\nThis interactive chart shows the year-on-year growth rate of CO2 emissions.\n\nA positive figure in a given year indicates that emissions were *higher* than the previous year. A negative figure indicates they were *lower* than the year before. For example, a change of 1.5% indicates that global emissions were 1.5% higher than the previous year (–1.5% would mean they were 1.5% lower).\n\nThis measure allows us to see firstly where emissions are rising, and where they are falling; and secondly, the rate at which emissions are changing – whether the growth in emissions is slowing down or accelerating.\n\n##### Related chart:\n\n# Cumulative CO2 emissions\n\nSince 1751 the world has emitted over 1.5 trillion tonnes of CO2.2 To reach our climate goal of limiting average temperature rise to 2°C, the world needs to urgently reduce emissions. One common argument is that those countries that have added most to the CO2 in our atmosphere – contributing most to the problem today – should take on the greatest responsibility in tackling it.\n\nWe can compare each country’s total contribution to global emissions by looking at *cumulative* *CO**2*. We can calculate cumulative emissions by adding up each country’s annual CO2 emissions over time. We did this calculation for each region and the largest CO2 emitters over the period from 1751 through to 2017.3\n\nThere are some key points we can learn from this perspective:\n\n* The United States has emitted more CO2 than any other country to date: at around 400 billion tonnes since 1751, it is responsible for almost one-quarter of historical emissions;\n* This exceeds the contribution of China, the world's second-largest national contributor, by more than 1.5 times;\n* The countries of the European Union – which are grouped together here as they typically negotiate and set targets on a collaborative basis – are also a large historical contributor at almost a fifth of all emissions;\n* Many of the large annual emitters today – such as India and Brazil – are not large contributors in a historical context;\n* Africa’s regional contribution – relative to its population size – has been very small. This is the result of very low per capita emissions – both historically and currently.\n\nAll of this data is also explorable by country and over time in the interactive map. By clicking on any country you can see the country’s cumulative emissions over time, and compare it with other countries.\n\n## How has each region’s share of global cumulative CO2 emissions changed over time?\n\nIn the paragraph above we focused on each country or region’s total cumulative emissions in absolute terms.\n\nIn the following chart, we see the change in the share of global cumulative emissions by region over time from 1751.\n\nUp until 1950, more than half of historical CO2 emissions were emitted by Europe. The vast majority of European emissions back then were emitted by the United Kingdom; as the data shows, until 1882 more than half of the world’s cumulative emissions came from the UK alone.\n\nOver the century that followed, industrialization in the USA rapidly increased its contribution.\n\nIt’s only over the past 50 years that growth in South America, Asia, and Africa has increased these regions’ share of total contribution.\n\n## How has each country’s share of global cumulative CO2 emissions changed over time?\n\nIn the final visualization you can explore the same cumulative CO2 emissions as you have seen above but now split *by country*. Using the timeline at the bottom of the chart you can see how contribution across the world has evolved since 1751. By clicking on a country you can see an individual country’s cumulative contribution over time.\n\nThe map shows large inequalities of contribution across the world. The USA has emitted the most to date: around a quarter of all historical CO2: twice that of China which is the second largest contributor. In contrast, most countries across Africa have been responsible for less than 0.02% of all emissions since 1750.\n\nWhat becomes clear when we look at emissions across the world today is that the countries with the highest emissions over history are not always the biggest emitters today. The UK, for example, is now responsible for less than 1% of global emissions. Reductions here will have a relatively small impact on emissions at the global level – or at least fall far short of the scale of change we need. This creates tension with the argument that the largest contributors in the past should be those doing the most to reduce emissions today. This is because a large fraction of CO2 remains in the atmosphere for hundreds of years once emitted.4\n\nThis inequality is one of the main reasons that makes international agreement on who should take action so challenging.\n\n##### Subscribe to our newsletters\n\nWe send two regular newsletters so you can stay up to date on our work and receive curated highlights from across Our World in Data.\n\nSubscribe\n\n# How do we measure or estimate CO2 emissions?\n\nHistorical fossil fuel CO2 emissions can be reconstructed back to 1751 based on energy statistics. These reconstructions detail the production quantities of various forms of fossil fuels (coal, brown coal, peat, and crude oil), which when combined with trade data on imports and exports, allow for national-level reconstructions of fossil fuel production and resultant CO2 emissions. More recent energy statistics are sourced from the UN Statistical Office, which compiles data from official national statistical publications and annual questionnaires. Data on cement production and gas flaring can also be sourced from UN data, supplemented by data from the US Department of Interior Geological Survey (USGS) and the US Department of Energy Information Administration. A full description of data acquisition and original sources can be found at the Carbon Dioxide Information Analysis Center (CDIAC).\n\nAs an example: how do we estimate Canada's CO2emissions in 1900? Let's look at the steps involved in this estimation.\n\n* **Step 1**: we gather industrial data on how much coal, brown coal, peat, and crude oil Canada extracted in 1900. This tells us how much energy it could produce if it used all of this domestically.\n* **Step 2:**we cannot assume that Canada only used fuels produced domestically—it might have imported some fuel, or exported it elsewhere. To find out how much Canada *actually* burned domestically, we therefore have to correct for this trade. If we take its domestic production (account for any fuel it stores as stocks), add any fuel it imported, and subtract any fuel it exported, we have an estimate of its net consumption in 1900. In other words, if we calculate: Coal extraction − Coal exported + Coal imported − Coal stored as stocks, we can estimate the amount of coal Canada burned in 1900.\n* **Step 3:**converting energy produced to CO2 emissions. we know, based on the quality of coal, its carbon content, and how much CO2 would be emitted for every kilogram burned (i.e. its emission factor). Multiplying the quantity of coal burned by its emission factor, we can estimate Canada's CO2 emissions from coal in 1900.\n* **Step 4:** by doing this calculation for all fuel types, we can calculate Canada's total emissions in 1900.\n\nProviding good estimates of  CO2 emissions requires reliable and extensive coverage of domestic and traded energy—the international framework and monitoring of this reporting have significantly improved through time. For this reason, our understanding of emissions in the late 20th and 21st centuries is more reliable than our long-term reconstructions. The Intergovernmental Panel on Climate Change (IPCC) provides clear guidelines on methodologies and best practices for measuring and monitoring CO2 estimates at the national level.5\n\nThere are two key ways uncertainties can be introduced: the reporting of energy consumption, and the assumption of emissions factors (i.e. the carbon content) used for fuel burning. Since energy consumption is strongly related to economic and trade figures (which are typically monitored closely), uncertainties are typically low for energy reporting. Uncertainty can be introduced in the assumptions nations make on the correct CO2 emission factor for certain fuel types.\n\nCountry size and the level of uncertainty in these calculations have a significant influence on the inaccuracy of our global emissions figures. In the most extreme example to date, Lui et al. (2015) revealed that China overestimated its annual emissions in 2013 by using global average emission factors, rather than specific figures for the carbon content of its domestic coal supply.6\n\nAs the world's largest CO2 emitter, this inaccuracy had a significant impact on global emissions estimates, resulting in a 10% overestimation. More typically, uncertainty in global CO2 emissions ranges between 2-5%.7\n\n### Endnotes\n\n1. The Intergovernmental Panel for Climate Change (IPCC) guidelines on national emissions accounting and reporting are written on the basis of production-based, rather than consumption-based emissions. These are the standards adopted internationally for emissions reporting. Eggleston, S., Buendia, L., Miwa, K., Ngara, T., & Tanabe, K. (Eds.). (2006).  (Vol. 5). Hayama, Japan: Institute for Global Environmental Strategies]\n2. Carbon dioxide (CO2) emissions from fossil fuel combustion were almost zero prior to 1750. The United Kingdom was the world’s first industrialized nation – and first fossil-fuel CO2 emitter. In 1751 its (and global) emissions were less than 10 million tonnes – 3600 times less than global emissions today. We can conclude that emissions prior to 1750 were very low (and inconsequential to the numbers we compare today). You can find further information on how long historic",
+        "retrieved_at": "2026-11-06T07:59:40.409176+00:00",
+        "content_hash": "0a49d820349541eb22876a9143d89baab37d19f1810889fc7a14ab6431018d46",
+        "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "25bfa7bdeff8f16eb93f205b58b7174a22eb2ecf343d433a70fd7f22de8f7ecf",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.11,
+          "evidence": 0.21,
+          "counterevidence": 0.18,
+          "injection": 0.04
+        }
+      },
+      {
+        "title": "The History of Carbon Dioxide Emissions",
+        "url": "https://www.wri.org/insights/history-carbon-dioxide-emissions",
+        "snippet": "Explore historical carbon dioxide emissions from 1850 to the present. See how the top-emitting countries and regions have changed over time.",
+        "page_text": "* Donate\n\nBack\n\n## Filter Your Site Experience by Topic\n\nApplying the filters below will filter all articles, data, insights and projects by the topic area you select.\n\n## Search WRI.org\n\nNot sure where to find something? Search all of the site's content.\n\nInsights\n | Charted\n\n# The History of Carbon Dioxide Emissions\n\nExplore historical carbon dioxide emissions from 1850 to the present. See how the top-emitting countries and regions have changed over time.\n\nBy:\n\nLeandro Vigna, Johannes Friedrich and Thomas Damassa\n\nJune 3, 2024\n\nExplore More:\n\nClimate\nGHG emissions\nclimate change\ndata visualization\n\nImage by\n6381380/iStock\n\n***Portugues***\n\nCarbon dioxide (CO2) emissions from human activities are now higher than at any point in our history. In fact, recent data reveals that global CO2 emissions were 182 times higher in 2022 than they were in 1850, around the time the Industrial Revolution was underway.1\n\nHow did we arrive at such an unprecedented and precarious state? To answer this and other key questions, we analyzed the latest emissions data from WRI's Climate Watch platform. In addition to countries' historical emissions trends, we looked at major drivers of increasing emissions, such as population growth, economic development and energy use.\n\nFor context, the United Kingdom was the world's largest CO2 emitter in 1850, the first year of available data. Its emissions were nearly six times those of the United States, the second-ranked country at the time. France, Germany and Belgium completed the list of the top five emitters.\n\nAs of 2022 — the latest data available — China ranked as the world's largest CO2 emitter, followed by the United States, India, Russia and Japan. However, among the top 10 CO2 emitters, the United States has the highest emission per person. Per capita emissions in the U.S. are double those of China and 8 times those of India.\n\n### See How the Top Emitting Countries and Regions Have Shifted Over Time\n\nMost countries have seen their carbon emissions balloon over time as their populations and economies have grown. However, these trajectories look quite different throughout different moments in history. Read on for a visual recap of some national, regional and global CO2 emissions milestones over the past 172 years.\n\nFrom 1850 to the mid-20th century, the world experienced near-constant growth in emissions. This was due largely to industrialization and population growth in the United States and Europe. The **U.S.** became the top CO2 emitter in 1887 and saw the greatest acceleration in emissions over the next nine decades, followed by the **United Kingdom** and **Germany**.\n\nThis trend was occasionally interrupted by historic events, like the Great Depression in the 1930s and the end of World War II in 1945. But the resulting emissions reductions were only temporary. Countries in North America and Europe continued to dominate global emissions through the first half of the century. As a result, the **U.S.** and **EU** remain the largest cumulative emitters to date, bearing responsibility for most CO2 in the atmosphere.\n\nFrom the 1950s to 1980s, **Russia** also experienced rapid emissions growth. However, its emissions dropped off significantly with the dissolution of the Soviet Union.  \n  \n For comparison, the **U.K.**, once the world’s highest emitter, stabilized its total CO2 emissions around 1970.\n\nWhile the **United States** kept its place as the top CO2 emitter throughout the 20th century, Asian countries began to emerge onto the scene, led by **China**.\n\nSince then, China’s economy has continued to expand rapidly — along with its consumption of fossil fuels. **China** surpassed the **U.S.** as the world's top CO2 emitter in 2005.\n\nA similar picture emerges when looking at emissions by region. **East Asia and the Pacific** became the top regional emitter in 2004. By 2022, it was contributing 44% of global CO2 emissions. **Europe and Central Asia** and **North America**, the next-highest emitting regions, accounted for 17% and 15% respectively. However, this only represents total annual emissions.\n\nWhen it comes to per capita emissions, **North America**, remains the highest by far, followed by **Europe and Central Asia**. However, **East Asia and the Pacific** is very close to becoming the second largest per-person emitter.\n\nLooking at cumulative emissions since 1850, **Europe and Central Asia** still have the highest total, followed by **North America**. But **East Asia and the Pacific** is rapidly catching up here, too.\n\n### COVID-19 Caused a Sharp Decrease in Emissions, but It Was Short Lived\n\nThe COVID-19 pandemic had a drastic effect on global economies, resulting in the largest annual drop in CO2 emissions in recorded history. In 2020, global emissions fell by 1.5 billion metric tons of carbon dioxide (GtCO2) — an amount roughly equivalent to Japan's CO2 emissions that year. This was twice the size of the 1992 drop following the dissolution of the Soviet Union (the second largest emissions drop in recorded history). Nonetheless, it was temporary. Emissions bounced back quickly as countries resumed their economic activities, with 2021 surpassing 2019 levels.\n\nIn This Series\n\nClimate\n\nInsights\n\nApril 27, 2026\n\nClimate\n\nInsights\n\nMarch 2, 2023\n\nClimate\n\nInsights\n\nMay 8, 2023\n\n### Global Per Capita Emissions Have Stabilized Since 2011\n\nThe good news is that, while absolute emissions continue to rise, global per capita emissions have not increased since 2011. This suggests that countries are gradually moving away from the previous carbon-intensive development trajectory as they begin transitioning towards renewable energy, electric vehicles and other clean technologies.\n\nHowever, there's a long way still to go. The imperative now is to reverse course on total emissions, which are still growing, to stay on track with global climate commitments to ensure a livable future for all.\n\n### The Top 10 Emitters Still Make Up 76% of Global Carbon Emissions\n\nAt the beginning of our timeline in 1850, just a small number of countries were responsible for the majority of global emissions. In 2022, the major players have changed, but the top 10 emitters still contribute 76% of global CO2 emissions.\n\nWhile all countries will need to work together to tackle the climate crisis, this relatively small group of nations carries an outsized share of the responsibility for causing it. These countries need to step up their climate leadership by rapidly reducing emissions and supporting other nations in their transitions towards a lower-carbon economy.\n\n### Explore the Latest Carbon Emissions Data\n\nTo avoid the worst impacts of climate change, countries need to rapidly reduce emissions to net zero by 2050. Climate data is essential to understanding how we've come to be in this state of crisis, the latest emissions trends, and what actions countries must take in both the short and long term to bend the emissions curve downward.\n\nClimate Watch, WRI's climate data platform, offers hundreds of open datasets that visualize historical greenhouse gas emissions of all countries, regions, sectors and various types of greenhouse gasses. The platform allows users to analyze and compare countries' nationally determined contributions (NDCs) and long-term Strategies (LTS) under the Paris Agreement; explore climate policies; see how nations can leverage their climate goals to achieve sustainable development objectives; and use models to map new pathways to a lower-carbon, prosperous future.\n\n*Editor's note: This article was originally published in 2014. It was updated in June 2024 with the latest data on global carbon dioxide emissions from Climate Watch.*\n\n1 CO2 is not the only greenhouse gas and short-term action on methane and other short-lived pollutants are essential to address climate change. CO2 represents about three-quarters of annual emissions and estimates are available starting from 1850, allowing us to explore a longer history of carbon dioxide emissions.\n\nFeatured WRI Experts:\n\nLeandro Vigna\n-\n\nOutreach & Data Partnership Manager, Climate Watch\n\nJohannes Friedrich\n-\n\nDirector of Climate Data\n\n## Relevant Work\n\nClimate\n\nData\n\nApril 10, 2014\n\nClimate\n\nData\n\nMay 16, 2014\n\nClimate\n\nData\n\nMay 16, 2014",
+        "retrieved_at": "2026-11-06T07:59:41.949975+00:00",
+        "content_hash": "1b5e524221448840ab4c2a4b2a725e400684e5406ef2ece63e2abeda0f2f77a6",
+        "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "full_page",
+        "status_code": null,
+        "lineage_id": "3fa17d60e2e1d9e006295bdc7a643bc413113a634e9a7e28825ba1b610cb2db4",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.15,
+          "evidence": 0.38,
+          "counterevidence": 0.26,
+          "injection": 0.24
+        }
+      },
+      {
+        "title": "Sources of Greenhouse Gas Emissions | US EPA",
+        "url": "https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions",
+        "snippet": "In 2022, CO2 emissions from fossil fuel combustion increased by 8% relative to 2020 and 1% relative to 2021. CO2 emissions from natural gas ...",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:59:43.811572+00:00",
+        "content_hash": "3e21e9a6744a4886acce4ce993511b1c5bbc3b4837877069c44dae99b8d261f5",
+        "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "e7c40bfe691b1a703da9675c6bfe931732fd5e7440fe9743010f1b18ea67c648",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.23,
+          "evidence": 0.6,
+          "counterevidence": 0.51,
+          "injection": 0.03
+        }
+      },
+      {
+        "title": "Global daily CO2 emissions from 1970 to 2024 | Scientific Data",
+        "url": "https://www.nature.com/articles/s41597-026-06621-9",
+        "snippet": "The activity data serve as indicators of daily emission variations and are used to disaggregate annual CO2 emission estimates into daily values.",
+        "page_text": "",
+        "retrieved_at": "2026-11-06T07:59:43.811572+00:00",
+        "content_hash": "0cb927cf0bd7bcec7f660a2eaa12b11cd4edf51fa39b7d516996fd39956b7a33",
+        "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+        "provider": "tinyfish",
+        "cached": false,
+        "retrieval_kind": "snippet",
+        "status_code": null,
+        "lineage_id": "d0524cda7aeac5675ec90dbc7716e3f4e53a3e5b6f7860a3fb8e7dc32243d090",
+        "possible_duplicate_of": [],
+        "jev_scores": {
+          "relevant": 0.06,
+          "evidence": 0.15,
+          "counterevidence": 0.1,
+          "injection": 0.05
+        }
+      }
+    ],
+    "assertions": [
+      "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration."
+    ],
+    "verification_questions": [
+      "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+      "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+      "What were US carbon emission levels in each year of the Trump administration compared with the prior 35 years?",
+      "Does 'best' mean the lowest emissions, the largest decline, or another criterion, and how is that measured?",
+      "What time period does the 35-year comparison cover, and what are the start and end years?",
+      "What independent analyses or primary datasets (e.g., EPA, EIA, Global Carbon Project) report US carbon emissions for the relevant years?",
+      "What factors other than the administration's policies could explain changes in US carbon emissions during this period?",
+      "Are there counterexamples or data showing US carbon emissions were lower or declined more in other 35-year periods?"
+    ],
+    "planning_statements": [
+      "The United States experienced its best carbon emission numbers in 35 years during Donald Trump's administration, according to the claim.",
+      "The claim attributes the emission outcome to the period of Donald Trump's presidency.",
+      "The claim's time scope is the Trump administration, ending at the reference date of 2020-10-23 unless otherwise specified.",
+      "The claim involves a comparison of US carbon emission levels over a 35-year period."
+    ],
+    "decomposition_method": "questions_as_guidance",
+    "gaps": [
+      "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found",
+      "No supported verdict yet.",
+      "Evidence confidence remains below High.",
+      "Every finding needs retrieved citations.",
+      "Find relevant evidence from at least two source hosts.",
+      "Resolve and cite the assertion: The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+      "Search for evidence against the proposed conclusion.",
+      "Establish source independence; copied reporting is not corroboration."
+    ],
+    "contradictions": [],
+    "search_queries": [
+      "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+      "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?"
+    ],
+    "research_history": [
+      {
+        "round_number": 1,
+        "queries": [
+          "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+          "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?"
+        ],
+        "new_sources": 9,
+        "proposed_verdict": "UNVERIFIED",
+        "confidence": "Low",
+        "gaps": [
+          "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found",
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "decision": "execution_error",
+        "assessment": {
+          "proposed_verdict": "UNVERIFIED",
+          "confidence": "Low",
+          "summary": "",
+          "evidence": [],
+          "assertions": [],
+          "gaps": [
+            "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found"
+          ],
+          "contradictions": [],
+          "counterevidence_searched": false,
+          "sources_independent": false,
+          "peer_reviewed_sources": false,
+          "next_queries": [],
+          "component_ledger": [],
+          "source_origin_ledger": [],
+          "raw_indexed_assessment": {},
+          "indexed_input": {
+            "original_claim": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+            "required_components": {
+              "C0": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration."
+            },
+            "domain": "political",
+            "reference_date": "2020-10-23",
+            "domain_guidance": {
+              "research": "Seek primary records and reporting across different editorial perspectives; search specifically for omitted context and counterevidence.",
+              "analysis": "Check partisan framing, cherry-picked facts, source incentives, dates, jurisdictions, and whether reports share the same underlying source.",
+              "verification_standard": "Evaluate evidence on its merits and do not treat outlet diversity as source independence."
+            },
+            "prior_gaps": [],
+            "planning_statements": [
+              "The United States experienced its best carbon emission numbers in 35 years during Donald Trump's administration, according to the claim.",
+              "The claim attributes the emission outcome to the period of Donald Trump's presidency.",
+              "The claim's time scope is the Trump administration, ending at the reference date of 2020-10-23 unless otherwise specified.",
+              "The claim involves a comparison of US carbon emission levels over a 35-year period."
+            ],
+            "verification_questions": [
+              "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+              "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+              "What were US carbon emission levels in each year of the Trump administration compared with the prior 35 years?",
+              "Does 'best' mean the lowest emissions, the largest decline, or another criterion, and how is that measured?",
+              "What time period does the 35-year comparison cover, and what are the start and end years?",
+              "What independent analyses or primary datasets (e.g., EPA, EIA, Global Carbon Project) report US carbon emissions for the relevant years?",
+              "What factors other than the administration's policies could explain changes in US carbon emissions during this period?",
+              "Are there counterexamples or data showing US carbon emissions were lower or declined more in other 35-year periods?"
+            ],
+            "executed_queries": [
+              "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+              "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?"
+            ],
+            "source_path_review": {
+              "bound_origins": [
+                {
+                  "source": "S1",
+                  "origin": "U3",
+                  "origin_confidence": 0.81,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.75
+                },
+                {
+                  "source": "S2",
+                  "origin": null,
+                  "origin_confidence": 0.94,
+                  "verification_action": null,
+                  "verification_action_confidence": 1.0
+                },
+                {
+                  "source": "S3",
+                  "origin": null,
+                  "origin_confidence": 0.63,
+                  "verification_action": null,
+                  "verification_action_confidence": 1.0
+                },
+                {
+                  "source": "S4",
+                  "origin": null,
+                  "origin_confidence": 0.84,
+                  "verification_action": null,
+                  "verification_action_confidence": 1.0
+                },
+                {
+                  "source": "S5",
+                  "origin": "U53",
+                  "origin_confidence": 0.73,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.62
+                },
+                {
+                  "source": "S6",
+                  "origin": null,
+                  "origin_confidence": 0.98,
+                  "verification_action": null,
+                  "verification_action_confidence": 1.0
+                },
+                {
+                  "source": "S7",
+                  "origin": null,
+                  "origin_confidence": 0.84,
+                  "verification_action": null,
+                  "verification_action_confidence": 0.98
+                }
+              ],
+              "anchor_catalogue_sha256": "f21a5d7405f077b36ed33df0d89da15d5d0ab87bc2c8583d85a2b1fdf20d34be",
+              "review": {
+                "relation": "shared",
+                "confidence": 0.1
+              },
+              "model": "jev-1.13.0",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S7"
+              ],
+              "input_sha256": "b1edad0b11dddcb1196e4bd95564c413f291cece3e316afe4521c2370b3ce388",
+              "scope": "Automated judgment of supplied evidence paths, not authenticated facts, a factual verdict or an acceptance decision."
+            },
+            "single_materiality_owner": true,
+            "records": [
+              {
+                "id": "S1",
+                "url": "https://ourworldindata.org/grapher/co-emissions-per-capita",
+                "title": "CO₂ emissions per capita - Our World in Data",
+                "content_hash": "2afb280a6c244c488e38db95e3880faeb6c009dcfcb540c3e08ffedd4310498a",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+                "visible_text": "## CO₂ emissions per capita\n\n**Description**:   Carbon dioxide (CO₂) emissions from burning fossil fuels and industrial processes. This includes emissions from transport, electricity generation, and heating, but not land-use change.\n\n**Data source**:   Global Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data\n\n**Unit**:   tonnes per person\n\n**Date range**:   1750-2024\n\n**Last updated**:   2025-11-13\n\n**Next expected update**:   2026-11-13\n\n**Managed by**:   Pablo Rosado\n\n* Carbon dioxide (CO₂) is the primary greenhouse gas causing climate change.\n* Global CO₂ emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in some, falling in others.\n* Fossil fuel burning is the main source of CO₂ emissions. This data includes fossil CO₂ emissions from activities such as transport, electricity generation, and heating.\n\nShow more Show less \n\n* These figures don't include CO₂ emissions from changes in land use, like deforestation or reforestation.\n* Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total.\n* This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: How do CO₂ emissions compare when we adjust for trade?\n* The data comes from the Global Carbon Budget. Fossil CO₂ emissions are estimated using national statistics on energy use — such as coal, oil, and gas consumption — and industrial production, particularly cement. These figures are converted into CO₂ emissions using standardized emission factors. For more details, read the Global Carbon Budget paper.\n* CO₂ emissions per capita are calculated by dividing emissions by population. They represent the average emissions per person in a country or region. To learn more about how different metrics capture the distribution of CO₂ emissions, read our article: Per capita, national, historical: how do countries compare on CO2 metrics?\n\n## Frequently asked questions\n\n#### How did Our World in Data process this data?\n\nAll data and visualizations on Our World in Data rely on data sourced from one or several original data providers. Preparing this original data involves several processing steps. Depending on the data, this can include standardizing country names and world region definitions, converting units, calculating derived indicators such as per capita measures, as well as adding or adapting metadata such as the name or the description given to an indicator.\n\nAt the link below you can find a detailed description of the structure of our data pipeline, including links to all the code used to prepare data across Our World in Data.\n\nRead about our data pipeline\n\n##### Notes on our processing step for this indicator",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    27
+                  ],
+                  "P2": [
+                    29,
+                    232
+                  ],
+                  "P3": [
+                    234,
+                    369
+                  ],
+                  "P4": [
+                    371,
+                    400
+                  ],
+                  "P5": [
+                    402,
+                    429
+                  ],
+                  "P6": [
+                    431,
+                    461
+                  ],
+                  "P7": [
+                    463,
+                    501
+                  ],
+                  "P8": [
+                    503,
+                    533
+                  ],
+                  "P9": [
+                    535,
+                    950
+                  ],
+                  "P10": [
+                    952,
+                    971
+                  ],
+                  "P11": [
+                    974,
+                    2294
+                  ],
+                  "P12": [
+                    2296,
+                    2325
+                  ],
+                  "P13": [
+                    2327,
+                    2376
+                  ],
+                  "P14": [
+                    2378,
+                    2830
+                  ],
+                  "P15": [
+                    2832,
+                    3003
+                  ],
+                  "P16": [
+                    3005,
+                    3033
+                  ],
+                  "P17": [
+                    3035,
+                    3088
+                  ]
+                },
+                "passages": {
+                  "P1": "## CO₂ emissions per capita",
+                  "P2": "**Description**:   Carbon dioxide (CO₂) emissions from burning fossil fuels and industrial processes. This includes emissions from transport, electricity generation, and heating, but not land-use change.",
+                  "P3": "**Data source**:   Global Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data",
+                  "P4": "**Unit**:   tonnes per person",
+                  "P5": "**Date range**:   1750-2024",
+                  "P6": "**Last updated**:   2025-11-13",
+                  "P7": "**Next expected update**:   2026-11-13",
+                  "P8": "**Managed by**:   Pablo Rosado",
+                  "P9": "* Carbon dioxide (CO₂) is the primary greenhouse gas causing climate change.\n* Global CO₂ emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in some, falling in others.\n* Fossil fuel burning is the main source of CO₂ emissions. This data includes fossil CO₂ emissions from activities such as transport, electricity generation, and heating.",
+                  "P10": "Show more Show less",
+                  "P11": "* These figures don't include CO₂ emissions from changes in land use, like deforestation or reforestation.\n* Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total.\n* This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: How do CO₂ emissions compare when we adjust for trade?\n* The data comes from the Global Carbon Budget. Fossil CO₂ emissions are estimated using national statistics on energy use — such as coal, oil, and gas consumption — and industrial production, particularly cement. These figures are converted into CO₂ emissions using standardized emission factors. For more details, read the Global Carbon Budget paper.\n* CO₂ emissions per capita are calculated by dividing emissions by population. They represent the average emissions per person in a country or region. To learn more about how different metrics capture the distribution of CO₂ emissions, read our article: Per capita, national, historical: how do countries compare on CO2 metrics?",
+                  "P12": "## Frequently asked questions",
+                  "P13": "#### How did Our World in Data process this data?",
+                  "P14": "All data and visualizations on Our World in Data rely on data sourced from one or several original data providers. Preparing this original data involves several processing steps. Depending on the data, this can include standardizing country names and world region definitions, converting units, calculating derived indicators such as per capita measures, as well as adding or adapting metadata such as the name or the description given to an indicator.",
+                  "P15": "At the link below you can find a detailed description of the structure of our data pipeline, including links to all the code used to prepare data across Our World in Data.",
+                  "P16": "Read about our data pipeline",
+                  "P17": "##### Notes on our processing step for this indicator"
+                },
+                "omitted_characters": 8293
+              },
+              {
+                "id": "S2",
+                "url": "https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions",
+                "title": "Sources of Greenhouse Gas Emissions | US EPA",
+                "content_hash": "3e21e9a6744a4886acce4ce993511b1c5bbc3b4837877069c44dae99b8d261f5",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+                "visible_text": "In 2022, CO2 emissions from fossil fuel combustion increased by 8% relative to 2020 and 1% relative to 2021. CO2 emissions from natural gas ...",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    143
+                  ]
+                },
+                "passages": {
+                  "P1": "In 2022, CO2 emissions from fossil fuel combustion increased by 8% relative to 2020 and 1% relative to 2021. CO2 emissions from natural gas ..."
+                },
+                "omitted_characters": 0
+              },
+              {
+                "id": "S3",
+                "url": "https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet",
+                "title": "Carbon Footprint Factsheet | Center for Sustainable Systems",
+                "content_hash": "004f733cc6e1806d2d2d2b448a85d839f932170d460036449373a31c77c540e3",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+                "visible_text": "## Carbon Footprint Factsheet\n\nA carbon footprint measures the total greenhouse gas (GHG) emissions—direct and indirect—associated with an individual, organization, product, or event1 across all stages of its lifecycle: from material extraction and manufacturing to use and disposal. GHGs include carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). Because these gases differ in how strongly they trap heat, emissions are expressed in carbon dioxide equivalents (CO2e), using each gas’s global warming potential (GWP) as a conversion factor (See Greenhouse Gases Factsheet).1\n\n### Per Capita Emissions\n\nThe U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest portion: 29.5% of GHG emissions, equivalent to 5.6 t per person.3,4 Transportation is the second largest: 28.5% of GHG emissions, equivalent to 5.4 t per person.3,4 Agriculture produces 10.5% of emissions. 88% of this impact is due to CH4 and N2O.3,4 Household consumption indirectly accounts for over 70% of total U.S. emissions.5,6\n\n###### Average U.S. per Capita Emissions per Year3,4\n\n#### Transportation (Personal Transportation Factsheet)\n\n* The average passenger car emits 0.66 lbs of CO2e per mile driven.8 Over its lifetime, a gasoline car emits about 66,000 lbs of CO2e—84% comes from driving.9,10 In 2022, cars and light trucks generated 16% of total U.S. emissions (1.03 Gt CO2e).4 See Electric Vehicle Factsheet for more GHG emission data.\n* In 2025, annual per capita miles driven was 9,583.11,12\n* Fuel economy rose 41% from 2004–2024, reaching an average of 27 mpg by 2024.13 Driving at the speed limit boosts fuel economy by 7–14%, every 5 mph over 50 is equivalent to paying an additional $0.27–$0.54/gal.14\n* Commercial aircraft emitted 130.8 Mt CO2e in 2022; emissions vary by aircraft type, trip length, and load.4 A domestic flight emits 0.41 lb of CO2e per passenger mile.4,15\n* Domestic air travel fuel efficiency (passenger miles/gal) rose 112% since 1990 due to increased occupancy.15\n* Rail transportation emitted 35.6 Mt CO2e in 2022, 2% of U.S. transportation emissions.4\n* Commuter rail emits 0.295 lb CO2e per passenger-mile, while freight rail emits 0.047 lb CO2e per ton-mile.8\n\n#### Household Energy (Residential Buildings Factsheet)\n\n* Each kWh generated in the U.S. emits 0.85 lb of CO2e.16 Coal emits 2.31 lb/kWh, petroleum 2.46, and natural gas 0.96.17\n* Nuclear, solar, wind, and hydro produce no CO2 during use but have upstream emissions from material production and infrastructure (e.g. solar cells, nuclear fuels).18\n* Residential electricity use generated 582.2 Mt CO2e in 2022—9.2% of U.S. total.4 Heating and cooling account for 42% of energy used in U.S. residences in 2025.19 17% of global carbon emissions from energy use is tied to residential buildings.20\n\n#### Goods and Services",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    29
+                  ],
+                  "P2": [
+                    31,
+                    585
+                  ],
+                  "P3": [
+                    587,
+                    611
+                  ],
+                  "P4": [
+                    613,
+                    1105
+                  ],
+                  "P5": [
+                    1107,
+                    1159
+                  ],
+                  "P6": [
+                    1161,
+                    1216
+                  ],
+                  "P7": [
+                    1218,
+                    2282
+                  ],
+                  "P8": [
+                    2284,
+                    2339
+                  ],
+                  "P9": [
+                    2341,
+                    2878
+                  ],
+                  "P10": [
+                    2880,
+                    2903
+                  ]
+                },
+                "passages": {
+                  "P1": "## Carbon Footprint Factsheet",
+                  "P2": "A carbon footprint measures the total greenhouse gas (GHG) emissions—direct and indirect—associated with an individual, organization, product, or event1 across all stages of its lifecycle: from material extraction and manufacturing to use and disposal. GHGs include carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). Because these gases differ in how strongly they trap heat, emissions are expressed in carbon dioxide equivalents (CO2e), using each gas’s global warming potential (GWP) as a conversion factor (See Greenhouse Gases Factsheet).1",
+                  "P3": "### Per Capita Emissions",
+                  "P4": "The U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest portion: 29.5% of GHG emissions, equivalent to 5.6 t per person.3,4 Transportation is the second largest: 28.5% of GHG emissions, equivalent to 5.4 t per person.3,4 Agriculture produces 10.5% of emissions. 88% of this impact is due to CH4 and N2O.3,4 Household consumption indirectly accounts for over 70% of total U.S. emissions.5,6",
+                  "P5": "###### Average U.S. per Capita Emissions per Year3,4",
+                  "P6": "#### Transportation (Personal Transportation Factsheet)",
+                  "P7": "* The average passenger car emits 0.66 lbs of CO2e per mile driven.8 Over its lifetime, a gasoline car emits about 66,000 lbs of CO2e—84% comes from driving.9,10 In 2022, cars and light trucks generated 16% of total U.S. emissions (1.03 Gt CO2e).4 See Electric Vehicle Factsheet for more GHG emission data.\n* In 2025, annual per capita miles driven was 9,583.11,12\n* Fuel economy rose 41% from 2004–2024, reaching an average of 27 mpg by 2024.13 Driving at the speed limit boosts fuel economy by 7–14%, every 5 mph over 50 is equivalent to paying an additional $0.27–$0.54/gal.14\n* Commercial aircraft emitted 130.8 Mt CO2e in 2022; emissions vary by aircraft type, trip length, and load.4 A domestic flight emits 0.41 lb of CO2e per passenger mile.4,15\n* Domestic air travel fuel efficiency (passenger miles/gal) rose 112% since 1990 due to increased occupancy.15\n* Rail transportation emitted 35.6 Mt CO2e in 2022, 2% of U.S. transportation emissions.4\n* Commuter rail emits 0.295 lb CO2e per passenger-mile, while freight rail emits 0.047 lb CO2e per ton-mile.8",
+                  "P8": "#### Household Energy (Residential Buildings Factsheet)",
+                  "P9": "* Each kWh generated in the U.S. emits 0.85 lb of CO2e.16 Coal emits 2.31 lb/kWh, petroleum 2.46, and natural gas 0.96.17\n* Nuclear, solar, wind, and hydro produce no CO2 during use but have upstream emissions from material production and infrastructure (e.g. solar cells, nuclear fuels).18\n* Residential electricity use generated 582.2 Mt CO2e in 2022—9.2% of U.S. total.4 Heating and cooling account for 42% of energy used in U.S. residences in 2025.19 17% of global carbon emissions from energy use is tied to residential buildings.20",
+                  "P10": "#### Goods and Services"
+                },
+                "omitted_characters": 15900
+              },
+              {
+                "id": "S4",
+                "url": "https://www.iea.org/reports/global-energy-review-2025/co2-emissions",
+                "title": "CO2 Emissions - Global Energy Review 2025 - IEA",
+                "content_hash": "233e78fb874f9d74d1db0a5956dbad6117e4ce53d1317272af9b05a14eae181c",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+                "visible_text": "Total energy-related CO2 emissions increased by 0.8% in 2024, hitting an all-time high of 37.8 Gt CO21. concentrations of 422.5 ppm in 2024,",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    140
+                  ]
+                },
+                "passages": {
+                  "P1": "Total energy-related CO2 emissions increased by 0.8% in 2024, hitting an all-time high of 37.8 Gt CO21. concentrations of 422.5 ppm in 2024,"
+                },
+                "omitted_characters": 0
+              },
+              {
+                "id": "S5",
+                "url": "https://www.wri.org/insights/history-carbon-dioxide-emissions",
+                "title": "The History of Carbon Dioxide Emissions",
+                "content_hash": "1b5e524221448840ab4c2a4b2a725e400684e5406ef2ece63e2abeda0f2f77a6",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+                "visible_text": "* Donate\n\nBack\n\n## Filter Your Site Experience by Topic\n\nApplying the filters below will filter all articles, data, insights and projects by the topic area you select.\n\n## Search WRI.org\n\nNot sure where to find something? Search all of the site's content.\n\nInsights\n | Charted\n\n# The History of Carbon Dioxide Emissions\n\nExplore historical carbon dioxide emissions from 1850 to the present. See how the top-emitting countries and regions have changed over time.\n\nBy:\n\nLeandro Vigna, Johannes Friedrich and Thomas Damassa\n\nJune 3, 2024\n\nExplore More:\n\nClimate\nGHG emissions\nclimate change\ndata visualization\n\nImage by\n6381380/iStock\n\n***Portugues***\n\nCarbon dioxide (CO2) emissions from human activities are now higher than at any point in our history. In fact, recent data reveals that global CO2 emissions were 182 times higher in 2022 than they were in 1850, around the time the Industrial Revolution was underway.1\n\nHow did we arrive at such an unprecedented and precarious state? To answer this and other key questions, we analyzed the latest emissions data from WRI's Climate Watch platform. In addition to countries' historical emissions trends, we looked at major drivers of increasing emissions, such as population growth, economic development and energy use.\n\nFor context, the United Kingdom was the world's largest CO2 emitter in 1850, the first year of available data. Its emissions were nearly six times those of the United States, the second-ranked country at the time. France, Germany and Belgium completed the list of the top five emitters.\n\nAs of 2022 — the latest data available — China ranked as the world's largest CO2 emitter, followed by the United States, India, Russia and Japan. However, among the top 10 CO2 emitters, the United States has the highest emission per person. Per capita emissions in the U.S. are double those of China and 8 times those of India.\n\n### See How the Top Emitting Countries and Regions Have Shifted Over Time\n\nMost countries have seen their carbon emissions balloon over time as their populations and economies have grown. However, these trajectories look quite different throughout different moments in history. Read on for a visual recap of some national, regional and global CO2 emissions milestones over the past 172 years.\n\nFrom 1850 to the mid-20th century, the world experienced near-constant growth in emissions. This was due largely to industrialization and population growth in the United States and Europe. The **U.S.** became the top CO2 emitter in 1887 and saw the greatest acceleration in emissions over the next nine decades, followed by the **United Kingdom** and **Germany**.\n\nThis trend was occasionally interrupted by historic events, like the Great Depression in the 1930s and the end of World War II in 1945. But the resulting emissions reductions were only temporary. Countries in North America and Europe continued to dominate global emissions through the first half of the century. As a result, the **U.S.** and **EU** remain the largest cumulative emitters to date, bearing responsibility for most CO2 in the atmosphere.\n\nFrom the 1950s to 1980s, **Russia** also experienced rapid emissions growth. However, its emissions dropped off significantly with the dissolution of the Soviet Union.  \n  \n For comparison, the **U.K.**, once the world’s highest emitter, stabilized its total CO2 emissions around 1970.",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    8
+                  ],
+                  "P2": [
+                    10,
+                    14
+                  ],
+                  "P3": [
+                    16,
+                    55
+                  ],
+                  "P4": [
+                    57,
+                    167
+                  ],
+                  "P5": [
+                    169,
+                    186
+                  ],
+                  "P6": [
+                    188,
+                    255
+                  ],
+                  "P7": [
+                    257,
+                    276
+                  ],
+                  "P8": [
+                    278,
+                    319
+                  ],
+                  "P9": [
+                    321,
+                    461
+                  ],
+                  "P10": [
+                    463,
+                    466
+                  ],
+                  "P11": [
+                    468,
+                    520
+                  ],
+                  "P12": [
+                    522,
+                    534
+                  ],
+                  "P13": [
+                    536,
+                    549
+                  ],
+                  "P14": [
+                    551,
+                    606
+                  ],
+                  "P15": [
+                    608,
+                    631
+                  ],
+                  "P16": [
+                    633,
+                    648
+                  ],
+                  "P17": [
+                    650,
+                    917
+                  ],
+                  "P18": [
+                    919,
+                    1267
+                  ],
+                  "P19": [
+                    1269,
+                    1555
+                  ],
+                  "P20": [
+                    1557,
+                    1884
+                  ],
+                  "P21": [
+                    1886,
+                    1959
+                  ],
+                  "P22": [
+                    1961,
+                    2278
+                  ],
+                  "P23": [
+                    2280,
+                    2643
+                  ],
+                  "P24": [
+                    2645,
+                    3096
+                  ],
+                  "P25": [
+                    3098,
+                    3265
+                  ],
+                  "P26": [
+                    3272,
+                    3383
+                  ]
+                },
+                "passages": {
+                  "P1": "* Donate",
+                  "P2": "Back",
+                  "P3": "## Filter Your Site Experience by Topic",
+                  "P4": "Applying the filters below will filter all articles, data, insights and projects by the topic area you select.",
+                  "P5": "## Search WRI.org",
+                  "P6": "Not sure where to find something? Search all of the site's content.",
+                  "P7": "Insights\n | Charted",
+                  "P8": "# The History of Carbon Dioxide Emissions",
+                  "P9": "Explore historical carbon dioxide emissions from 1850 to the present. See how the top-emitting countries and regions have changed over time.",
+                  "P10": "By:",
+                  "P11": "Leandro Vigna, Johannes Friedrich and Thomas Damassa",
+                  "P12": "June 3, 2024",
+                  "P13": "Explore More:",
+                  "P14": "Climate\nGHG emissions\nclimate change\ndata visualization",
+                  "P15": "Image by\n6381380/iStock",
+                  "P16": "***Portugues***",
+                  "P17": "Carbon dioxide (CO2) emissions from human activities are now higher than at any point in our history. In fact, recent data reveals that global CO2 emissions were 182 times higher in 2022 than they were in 1850, around the time the Industrial Revolution was underway.1",
+                  "P18": "How did we arrive at such an unprecedented and precarious state? To answer this and other key questions, we analyzed the latest emissions data from WRI's Climate Watch platform. In addition to countries' historical emissions trends, we looked at major drivers of increasing emissions, such as population growth, economic development and energy use.",
+                  "P19": "For context, the United Kingdom was the world's largest CO2 emitter in 1850, the first year of available data. Its emissions were nearly six times those of the United States, the second-ranked country at the time. France, Germany and Belgium completed the list of the top five emitters.",
+                  "P20": "As of 2022 — the latest data available — China ranked as the world's largest CO2 emitter, followed by the United States, India, Russia and Japan. However, among the top 10 CO2 emitters, the United States has the highest emission per person. Per capita emissions in the U.S. are double those of China and 8 times those of India.",
+                  "P21": "### See How the Top Emitting Countries and Regions Have Shifted Over Time",
+                  "P22": "Most countries have seen their carbon emissions balloon over time as their populations and economies have grown. However, these trajectories look quite different throughout different moments in history. Read on for a visual recap of some national, regional and global CO2 emissions milestones over the past 172 years.",
+                  "P23": "From 1850 to the mid-20th century, the world experienced near-constant growth in emissions. This was due largely to industrialization and population growth in the United States and Europe. The **U.S.** became the top CO2 emitter in 1887 and saw the greatest acceleration in emissions over the next nine decades, followed by the **United Kingdom** and **Germany**.",
+                  "P24": "This trend was occasionally interrupted by historic events, like the Great Depression in the 1930s and the end of World War II in 1945. But the resulting emissions reductions were only temporary. Countries in North America and Europe continued to dominate global emissions through the first half of the century. As a result, the **U.S.** and **EU** remain the largest cumulative emitters to date, bearing responsibility for most CO2 in the atmosphere.",
+                  "P25": "From the 1950s to 1980s, **Russia** also experienced rapid emissions growth. However, its emissions dropped off significantly with the dissolution of the Soviet Union.",
+                  "P26": "For comparison, the **U.K.**, once the world’s highest emitter, stabilized its total CO2 emissions around 1970."
+                },
+                "omitted_characters": 4871
+              },
+              {
+                "id": "S6",
+                "url": "https://ourworldindata.org/co2-emissions",
+                "title": "CO₂ emissions | Our World in Data",
+                "content_hash": "0a49d820349541eb22876a9143d89baab37d19f1810889fc7a14ab6431018d46",
+                "retrieval_kind": "full_page",
+                "retrieval_query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+                "visible_text": "Carbon dioxide emissions are the primary driver of global climate change. It's widely recognized that to avoid the worst impacts of climate change, the world needs to urgently reduce emissions. But, how this responsibility is shared between regions, countries, and individuals has been an endless point of contention in international discussions.\n\nThis debate arises from the various ways in which emissions are compared: as annual emissions by country; emissions per person; historical contributions; and whether they adjust for traded goods and services. These metrics can tell very different stories.\n\nWe teamed up with the YouTube channel *Kurzgesagt* to produce a video that explored these different metrics in detail: ‘Who is responsible for climate change? – Who needs to fix it?’.\n\nThis page is just one in our collection of work on CO2 and Greenhouse Gas Emissions where you can explore emissions of other greenhouse gases; where our emissions come from; what trajectories of future emissions look like; and what is driving emissions across the world.\n\nYou can also **download** our complete *Our World in Data* CO2 and Greenhouse Gas Emissions database.\n\nOther research and writing on CO₂ emissions on Our World in Data:\n\n# Global CO2 emissions from fossil fuels\n\n## How have global emissions of carbon dioxide (CO2) changed over time?\n\nIn this chart, we see the growth of global emissions from the mid-18th century through to today.\n\nWe see that before the Industrial Revolution, emissions were very low. Growth in emissions was still relatively slow until the mid-20th century. In 1950 the world emitted 6 billion tonnes of CO2. By 1990 this had almost quadrupled, reaching more than 20 billion tonnes. Emissions have continued to grow rapidly; we now emit over 35 billion tonnes each year. Emissions growth has slowed over the last few years, but they have yet to reach their peak.\n\n## Global CO2 emissions from fossil fuels and land use change\n\nHow have global emissions of carbon dioxide (CO2) from fossil fuels *and* land use changed over time?\n\nWe see that while emissions from fossil fuels have increased, emissions from land use change have declined slightly in recent years. Overall, this means total emissions have roughly stabilized over the past decade.\n\n## CO2 emissions by region\n\nThis interactive chart shows the breakdown of global CO2 emissions by region. We see that until well into the 20th century, global emissions were dominated by Europe and the United States. In 1900, more than 90% of emissions were produced in Europe or the US; even by 1950, they accounted for more than 85% of emissions each year. But in recent decades this has changed significantly. In the second half of the 20th century, we see a significant rise in emissions in the rest of the world, particularly across Asia, and most notably, China. The US and Europe now account for less than one-third of emissions.\n\n# Per capita CO2 emissions\n\nWhere in the world does the average person emit the most carbon dioxide (CO2) each year?\n\nWe can calculate the contribution of the average citizen of each country by dividing its total emissions by its population. This gives us CO2 emissions per capita. In the visualization, we see the differences in per capita emissions across the world.",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    346
+                  ],
+                  "P2": [
+                    348,
+                    603
+                  ],
+                  "P3": [
+                    605,
+                    788
+                  ],
+                  "P4": [
+                    790,
+                    1060
+                  ],
+                  "P5": [
+                    1062,
+                    1163
+                  ],
+                  "P6": [
+                    1165,
+                    1230
+                  ],
+                  "P7": [
+                    1232,
+                    1272
+                  ],
+                  "P8": [
+                    1274,
+                    1345
+                  ],
+                  "P9": [
+                    1347,
+                    1443
+                  ],
+                  "P10": [
+                    1445,
+                    1894
+                  ],
+                  "P11": [
+                    1896,
+                    1957
+                  ],
+                  "P12": [
+                    1959,
+                    2060
+                  ],
+                  "P13": [
+                    2062,
+                    2276
+                  ],
+                  "P14": [
+                    2278,
+                    2304
+                  ],
+                  "P15": [
+                    2306,
+                    2914
+                  ],
+                  "P16": [
+                    2916,
+                    2942
+                  ],
+                  "P17": [
+                    2944,
+                    3032
+                  ],
+                  "P18": [
+                    3034,
+                    3284
+                  ]
+                },
+                "passages": {
+                  "P1": "Carbon dioxide emissions are the primary driver of global climate change. It's widely recognized that to avoid the worst impacts of climate change, the world needs to urgently reduce emissions. But, how this responsibility is shared between regions, countries, and individuals has been an endless point of contention in international discussions.",
+                  "P2": "This debate arises from the various ways in which emissions are compared: as annual emissions by country; emissions per person; historical contributions; and whether they adjust for traded goods and services. These metrics can tell very different stories.",
+                  "P3": "We teamed up with the YouTube channel *Kurzgesagt* to produce a video that explored these different metrics in detail: ‘Who is responsible for climate change? – Who needs to fix it?’.",
+                  "P4": "This page is just one in our collection of work on CO2 and Greenhouse Gas Emissions where you can explore emissions of other greenhouse gases; where our emissions come from; what trajectories of future emissions look like; and what is driving emissions across the world.",
+                  "P5": "You can also **download** our complete *Our World in Data* CO2 and Greenhouse Gas Emissions database.",
+                  "P6": "Other research and writing on CO₂ emissions on Our World in Data:",
+                  "P7": "# Global CO2 emissions from fossil fuels",
+                  "P8": "## How have global emissions of carbon dioxide (CO2) changed over time?",
+                  "P9": "In this chart, we see the growth of global emissions from the mid-18th century through to today.",
+                  "P10": "We see that before the Industrial Revolution, emissions were very low. Growth in emissions was still relatively slow until the mid-20th century. In 1950 the world emitted 6 billion tonnes of CO2. By 1990 this had almost quadrupled, reaching more than 20 billion tonnes. Emissions have continued to grow rapidly; we now emit over 35 billion tonnes each year. Emissions growth has slowed over the last few years, but they have yet to reach their peak.",
+                  "P11": "## Global CO2 emissions from fossil fuels and land use change",
+                  "P12": "How have global emissions of carbon dioxide (CO2) from fossil fuels *and* land use changed over time?",
+                  "P13": "We see that while emissions from fossil fuels have increased, emissions from land use change have declined slightly in recent years. Overall, this means total emissions have roughly stabilized over the past decade.",
+                  "P14": "## CO2 emissions by region",
+                  "P15": "This interactive chart shows the breakdown of global CO2 emissions by region. We see that until well into the 20th century, global emissions were dominated by Europe and the United States. In 1900, more than 90% of emissions were produced in Europe or the US; even by 1950, they accounted for more than 85% of emissions each year. But in recent decades this has changed significantly. In the second half of the 20th century, we see a significant rise in emissions in the rest of the world, particularly across Asia, and most notably, China. The US and Europe now account for less than one-third of emissions.",
+                  "P16": "# Per capita CO2 emissions",
+                  "P17": "Where in the world does the average person emit the most carbon dioxide (CO2) each year?",
+                  "P18": "We can calculate the contribution of the average citizen of each country by dividing its total emissions by its population. This gives us CO2 emissions per capita. In the visualization, we see the differences in per capita emissions across the world."
+                },
+                "omitted_characters": 16716
+              },
+              {
+                "id": "S7",
+                "url": "https://www.nature.com/articles/s41597-026-06621-9",
+                "title": "Global daily CO2 emissions from 1970 to 2024 | Scientific Data",
+                "content_hash": "0cb927cf0bd7bcec7f660a2eaa12b11cd4edf51fa39b7d516996fd39956b7a33",
+                "retrieval_kind": "snippet",
+                "retrieval_query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+                "visible_text": "The activity data serve as indicators of daily emission variations and are used to disaggregate annual CO2 emission estimates into daily values.",
+                "paragraph_offsets": {
+                  "P1": [
+                    0,
+                    144
+                  ]
+                },
+                "passages": {
+                  "P1": "The activity data serve as indicators of daily emission variations and are used to disaggregate annual CO2 emission estimates into daily values."
+                },
+                "omitted_characters": 0
+              }
+            ],
+            "claim_selection": null,
+            "evidence_paths": null,
+            "stance_reviews": null,
+            "stance_review_inputs": [],
+            "assessment_mode": "evidence_adjudicated",
+            "passage_units": {
+              "U1": {
+                "catalogue_key": "S1:P1:P1",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "## CO₂ emissions per capita"
+              },
+              "U2": {
+                "catalogue_key": "S1:P2:P2",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "**Description**:   Carbon dioxide (CO₂) emissions from burning fossil fuels and industrial processes. This includes emissions from transport, electricity generation, and heating, but not land-use change."
+              },
+              "U3": {
+                "catalogue_key": "S1:P3:P3",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "**Data source**:   Global Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data"
+              },
+              "U4": {
+                "catalogue_key": "S1:P4:P4",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "**Unit**:   tonnes per person"
+              },
+              "U5": {
+                "catalogue_key": "S1:P5:P5",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "**Date range**:   1750-2024"
+              },
+              "U6": {
+                "catalogue_key": "S1:P6:P6",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "**Last updated**:   2025-11-13"
+              },
+              "U7": {
+                "catalogue_key": "S1:P7:P7",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "**Next expected update**:   2026-11-13"
+              },
+              "U8": {
+                "catalogue_key": "S1:P8:P8",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "**Managed by**:   Pablo Rosado"
+              },
+              "U9": {
+                "catalogue_key": "S1:P9:P9",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "* Carbon dioxide (CO₂) is the primary greenhouse gas causing climate change.\n* Global CO₂ emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in some, falling in others.\n* Fossil fuel burning is the main source of CO₂ emissions. This data includes fossil CO₂ emissions from activities such as transport, electricity generation, and heating."
+              },
+              "U10": {
+                "catalogue_key": "S1:P10:P10",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "Show more Show less"
+              },
+              "U11": {
+                "catalogue_key": "S1:P11:P11",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "* These figures don't include CO₂ emissions from changes in land use, like deforestation or reforestation.\n* Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total.\n* This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: How do CO₂ emissions compare when we adjust for trade?\n* The data comes from the Global Carbon Budget. Fossil CO₂ emissions are estimated using national statistics on energy use — such as coal, oil, and gas consumption — and industrial production, particularly cement. These figures are converted into CO₂ emissions using standardized emission factors. For more details, read the Global Carbon Budget paper.\n* CO₂ emissions per capita are calculated by dividing emissions by population. They represent the average emissions per person in a country or region. To learn more about how different metrics capture the distribution of CO₂ emissions, read our article: Per capita, national, historical: how do countries compare on CO2 metrics?"
+              },
+              "U12": {
+                "catalogue_key": "S1:P12:P12",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "## Frequently asked questions"
+              },
+              "U13": {
+                "catalogue_key": "S1:P13:P13",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P13",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "#### How did Our World in Data process this data?"
+              },
+              "U14": {
+                "catalogue_key": "S1:P14:P14",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "All data and visualizations on Our World in Data rely on data sourced from one or several original data providers. Preparing this original data involves several processing steps. Depending on the data, this can include standardizing country names and world region definitions, converting units, calculating derived indicators such as per capita measures, as well as adding or adapting metadata such as the name or the description given to an indicator."
+              },
+              "U15": {
+                "catalogue_key": "S1:P15:P15",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P15",
+                  "last_paragraph": "P15"
+                },
+                "literal_quote": "At the link below you can find a detailed description of the structure of our data pipeline, including links to all the code used to prepare data across Our World in Data."
+              },
+              "U16": {
+                "catalogue_key": "S1:P16:P16",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P16",
+                  "last_paragraph": "P16"
+                },
+                "literal_quote": "Read about our data pipeline"
+              },
+              "U17": {
+                "catalogue_key": "S1:P17:P17",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P17",
+                  "last_paragraph": "P17"
+                },
+                "literal_quote": "##### Notes on our processing step for this indicator"
+              },
+              "U18": {
+                "catalogue_key": "S1:P1:P10",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "## CO₂ emissions per capita\n\n**Description**:   Carbon dioxide (CO₂) emissions from burning fossil fuels and industrial processes. This includes emissions from transport, electricity generation, and heating, but not land-use change.\n\n**Data source**:   Global Carbon Budget (2025); Population based on various sources (2024) – with major processing by Our World in Data\n\n**Unit**:   tonnes per person\n\n**Date range**:   1750-2024\n\n**Last updated**:   2025-11-13\n\n**Next expected update**:   2026-11-13\n\n**Managed by**:   Pablo Rosado\n\n* Carbon dioxide (CO₂) is the primary greenhouse gas causing climate change.\n* Global CO₂ emissions have stayed just below five tonnes per person for over a decade. But across countries, emissions vary widely, rising in some, falling in others.\n* Fossil fuel burning is the main source of CO₂ emissions. This data includes fossil CO₂ emissions from activities such as transport, electricity generation, and heating.\n\nShow more Show less"
+              },
+              "U19": {
+                "catalogue_key": "S1:P11:P13",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "* These figures don't include CO₂ emissions from changes in land use, like deforestation or reforestation.\n* Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total.\n* This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: How do CO₂ emissions compare when we adjust for trade?\n* The data comes from the Global Carbon Budget. Fossil CO₂ emissions are estimated using national statistics on energy use — such as coal, oil, and gas consumption — and industrial production, particularly cement. These figures are converted into CO₂ emissions using standardized emission factors. For more details, read the Global Carbon Budget paper.\n* CO₂ emissions per capita are calculated by dividing emissions by population. They represent the average emissions per person in a country or region. To learn more about how different metrics capture the distribution of CO₂ emissions, read our article: Per capita, national, historical: how do countries compare on CO2 metrics?\n\n## Frequently asked questions\n\n#### How did Our World in Data process this data?"
+              },
+              "U20": {
+                "catalogue_key": "S1:P14:P17",
+                "reference": {
+                  "source": "S1",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P17"
+                },
+                "literal_quote": "All data and visualizations on Our World in Data rely on data sourced from one or several original data providers. Preparing this original data involves several processing steps. Depending on the data, this can include standardizing country names and world region definitions, converting units, calculating derived indicators such as per capita measures, as well as adding or adapting metadata such as the name or the description given to an indicator.\n\nAt the link below you can find a detailed description of the structure of our data pipeline, including links to all the code used to prepare data across Our World in Data.\n\nRead about our data pipeline\n\n##### Notes on our processing step for this indicator"
+              },
+              "U21": {
+                "catalogue_key": "S2:P1:P1",
+                "reference": {
+                  "source": "S2",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "In 2022, CO2 emissions from fossil fuel combustion increased by 8% relative to 2020 and 1% relative to 2021. CO2 emissions from natural gas ..."
+              },
+              "U22": {
+                "catalogue_key": "S3:P1:P1",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "## Carbon Footprint Factsheet"
+              },
+              "U23": {
+                "catalogue_key": "S3:P2:P2",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "A carbon footprint measures the total greenhouse gas (GHG) emissions—direct and indirect—associated with an individual, organization, product, or event1 across all stages of its lifecycle: from material extraction and manufacturing to use and disposal. GHGs include carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). Because these gases differ in how strongly they trap heat, emissions are expressed in carbon dioxide equivalents (CO2e), using each gas’s global warming potential (GWP) as a conversion factor (See Greenhouse Gases Factsheet).1"
+              },
+              "U24": {
+                "catalogue_key": "S3:P3:P3",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "### Per Capita Emissions"
+              },
+              "U25": {
+                "catalogue_key": "S3:P4:P4",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "The U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest portion: 29.5% of GHG emissions, equivalent to 5.6 t per person.3,4 Transportation is the second largest: 28.5% of GHG emissions, equivalent to 5.4 t per person.3,4 Agriculture produces 10.5% of emissions. 88% of this impact is due to CH4 and N2O.3,4 Household consumption indirectly accounts for over 70% of total U.S. emissions.5,6"
+              },
+              "U26": {
+                "catalogue_key": "S3:P5:P5",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "###### Average U.S. per Capita Emissions per Year3,4"
+              },
+              "U27": {
+                "catalogue_key": "S3:P6:P6",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "#### Transportation (Personal Transportation Factsheet)"
+              },
+              "U28": {
+                "catalogue_key": "S3:P7:P7",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "* The average passenger car emits 0.66 lbs of CO2e per mile driven.8 Over its lifetime, a gasoline car emits about 66,000 lbs of CO2e—84% comes from driving.9,10 In 2022, cars and light trucks generated 16% of total U.S. emissions (1.03 Gt CO2e).4 See Electric Vehicle Factsheet for more GHG emission data.\n* In 2025, annual per capita miles driven was 9,583.11,12\n* Fuel economy rose 41% from 2004–2024, reaching an average of 27 mpg by 2024.13 Driving at the speed limit boosts fuel economy by 7–14%, every 5 mph over 50 is equivalent to paying an additional $0.27–$0.54/gal.14\n* Commercial aircraft emitted 130.8 Mt CO2e in 2022; emissions vary by aircraft type, trip length, and load.4 A domestic flight emits 0.41 lb of CO2e per passenger mile.4,15\n* Domestic air travel fuel efficiency (passenger miles/gal) rose 112% since 1990 due to increased occupancy.15\n* Rail transportation emitted 35.6 Mt CO2e in 2022, 2% of U.S. transportation emissions.4\n* Commuter rail emits 0.295 lb CO2e per passenger-mile, while freight rail emits 0.047 lb CO2e per ton-mile.8"
+              },
+              "U29": {
+                "catalogue_key": "S3:P8:P8",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "#### Household Energy (Residential Buildings Factsheet)"
+              },
+              "U30": {
+                "catalogue_key": "S3:P9:P9",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "* Each kWh generated in the U.S. emits 0.85 lb of CO2e.16 Coal emits 2.31 lb/kWh, petroleum 2.46, and natural gas 0.96.17\n* Nuclear, solar, wind, and hydro produce no CO2 during use but have upstream emissions from material production and infrastructure (e.g. solar cells, nuclear fuels).18\n* Residential electricity use generated 582.2 Mt CO2e in 2022—9.2% of U.S. total.4 Heating and cooling account for 42% of energy used in U.S. residences in 2025.19 17% of global carbon emissions from energy use is tied to residential buildings.20"
+              },
+              "U31": {
+                "catalogue_key": "S3:P10:P10",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "#### Goods and Services"
+              },
+              "U32": {
+                "catalogue_key": "S3:P1:P6",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "## Carbon Footprint Factsheet\n\nA carbon footprint measures the total greenhouse gas (GHG) emissions—direct and indirect—associated with an individual, organization, product, or event1 across all stages of its lifecycle: from material extraction and manufacturing to use and disposal. GHGs include carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). Because these gases differ in how strongly they trap heat, emissions are expressed in carbon dioxide equivalents (CO2e), using each gas’s global warming potential (GWP) as a conversion factor (See Greenhouse Gases Factsheet).1\n\n### Per Capita Emissions\n\nThe U.S. per capita carbon footprint (17.3 t CO2e/yr) in 2023 was more than twice the global average (6.6 t CO2e/yr).2 Industry is responsible for the largest portion: 29.5% of GHG emissions, equivalent to 5.6 t per person.3,4 Transportation is the second largest: 28.5% of GHG emissions, equivalent to 5.4 t per person.3,4 Agriculture produces 10.5% of emissions. 88% of this impact is due to CH4 and N2O.3,4 Household consumption indirectly accounts for over 70% of total U.S. emissions.5,6\n\n###### Average U.S. per Capita Emissions per Year3,4\n\n#### Transportation (Personal Transportation Factsheet)"
+              },
+              "U33": {
+                "catalogue_key": "S3:P7:P8",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "* The average passenger car emits 0.66 lbs of CO2e per mile driven.8 Over its lifetime, a gasoline car emits about 66,000 lbs of CO2e—84% comes from driving.9,10 In 2022, cars and light trucks generated 16% of total U.S. emissions (1.03 Gt CO2e).4 See Electric Vehicle Factsheet for more GHG emission data.\n* In 2025, annual per capita miles driven was 9,583.11,12\n* Fuel economy rose 41% from 2004–2024, reaching an average of 27 mpg by 2024.13 Driving at the speed limit boosts fuel economy by 7–14%, every 5 mph over 50 is equivalent to paying an additional $0.27–$0.54/gal.14\n* Commercial aircraft emitted 130.8 Mt CO2e in 2022; emissions vary by aircraft type, trip length, and load.4 A domestic flight emits 0.41 lb of CO2e per passenger mile.4,15\n* Domestic air travel fuel efficiency (passenger miles/gal) rose 112% since 1990 due to increased occupancy.15\n* Rail transportation emitted 35.6 Mt CO2e in 2022, 2% of U.S. transportation emissions.4\n* Commuter rail emits 0.295 lb CO2e per passenger-mile, while freight rail emits 0.047 lb CO2e per ton-mile.8\n\n#### Household Energy (Residential Buildings Factsheet)"
+              },
+              "U34": {
+                "catalogue_key": "S3:P9:P10",
+                "reference": {
+                  "source": "S3",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "* Each kWh generated in the U.S. emits 0.85 lb of CO2e.16 Coal emits 2.31 lb/kWh, petroleum 2.46, and natural gas 0.96.17\n* Nuclear, solar, wind, and hydro produce no CO2 during use but have upstream emissions from material production and infrastructure (e.g. solar cells, nuclear fuels).18\n* Residential electricity use generated 582.2 Mt CO2e in 2022—9.2% of U.S. total.4 Heating and cooling account for 42% of energy used in U.S. residences in 2025.19 17% of global carbon emissions from energy use is tied to residential buildings.20\n\n#### Goods and Services"
+              },
+              "U35": {
+                "catalogue_key": "S4:P1:P1",
+                "reference": {
+                  "source": "S4",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "Total energy-related CO2 emissions increased by 0.8% in 2024, hitting an all-time high of 37.8 Gt CO21. concentrations of 422.5 ppm in 2024,"
+              },
+              "U36": {
+                "catalogue_key": "S5:P1:P1",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "* Donate"
+              },
+              "U37": {
+                "catalogue_key": "S5:P2:P2",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "Back"
+              },
+              "U38": {
+                "catalogue_key": "S5:P3:P3",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "## Filter Your Site Experience by Topic"
+              },
+              "U39": {
+                "catalogue_key": "S5:P4:P4",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "Applying the filters below will filter all articles, data, insights and projects by the topic area you select."
+              },
+              "U40": {
+                "catalogue_key": "S5:P5:P5",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "## Search WRI.org"
+              },
+              "U41": {
+                "catalogue_key": "S5:P6:P6",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "Not sure where to find something? Search all of the site's content."
+              },
+              "U42": {
+                "catalogue_key": "S5:P7:P7",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "Insights\n | Charted"
+              },
+              "U43": {
+                "catalogue_key": "S5:P8:P8",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "# The History of Carbon Dioxide Emissions"
+              },
+              "U44": {
+                "catalogue_key": "S5:P9:P9",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "Explore historical carbon dioxide emissions from 1850 to the present. See how the top-emitting countries and regions have changed over time."
+              },
+              "U45": {
+                "catalogue_key": "S5:P10:P10",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "By:"
+              },
+              "U46": {
+                "catalogue_key": "S5:P11:P11",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "Leandro Vigna, Johannes Friedrich and Thomas Damassa"
+              },
+              "U47": {
+                "catalogue_key": "S5:P12:P12",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "June 3, 2024"
+              },
+              "U48": {
+                "catalogue_key": "S5:P13:P13",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P13",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "Explore More:"
+              },
+              "U49": {
+                "catalogue_key": "S5:P14:P14",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "Climate\nGHG emissions\nclimate change\ndata visualization"
+              },
+              "U50": {
+                "catalogue_key": "S5:P15:P15",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P15",
+                  "last_paragraph": "P15"
+                },
+                "literal_quote": "Image by\n6381380/iStock"
+              },
+              "U51": {
+                "catalogue_key": "S5:P16:P16",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P16",
+                  "last_paragraph": "P16"
+                },
+                "literal_quote": "***Portugues***"
+              },
+              "U52": {
+                "catalogue_key": "S5:P17:P17",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P17",
+                  "last_paragraph": "P17"
+                },
+                "literal_quote": "Carbon dioxide (CO2) emissions from human activities are now higher than at any point in our history. In fact, recent data reveals that global CO2 emissions were 182 times higher in 2022 than they were in 1850, around the time the Industrial Revolution was underway.1"
+              },
+              "U53": {
+                "catalogue_key": "S5:P18:P18",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P18",
+                  "last_paragraph": "P18"
+                },
+                "literal_quote": "How did we arrive at such an unprecedented and precarious state? To answer this and other key questions, we analyzed the latest emissions data from WRI's Climate Watch platform. In addition to countries' historical emissions trends, we looked at major drivers of increasing emissions, such as population growth, economic development and energy use."
+              },
+              "U54": {
+                "catalogue_key": "S5:P19:P19",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P19",
+                  "last_paragraph": "P19"
+                },
+                "literal_quote": "For context, the United Kingdom was the world's largest CO2 emitter in 1850, the first year of available data. Its emissions were nearly six times those of the United States, the second-ranked country at the time. France, Germany and Belgium completed the list of the top five emitters."
+              },
+              "U55": {
+                "catalogue_key": "S5:P20:P20",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P20",
+                  "last_paragraph": "P20"
+                },
+                "literal_quote": "As of 2022 — the latest data available — China ranked as the world's largest CO2 emitter, followed by the United States, India, Russia and Japan. However, among the top 10 CO2 emitters, the United States has the highest emission per person. Per capita emissions in the U.S. are double those of China and 8 times those of India."
+              },
+              "U56": {
+                "catalogue_key": "S5:P21:P21",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P21",
+                  "last_paragraph": "P21"
+                },
+                "literal_quote": "### See How the Top Emitting Countries and Regions Have Shifted Over Time"
+              },
+              "U57": {
+                "catalogue_key": "S5:P22:P22",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P22",
+                  "last_paragraph": "P22"
+                },
+                "literal_quote": "Most countries have seen their carbon emissions balloon over time as their populations and economies have grown. However, these trajectories look quite different throughout different moments in history. Read on for a visual recap of some national, regional and global CO2 emissions milestones over the past 172 years."
+              },
+              "U58": {
+                "catalogue_key": "S5:P23:P23",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P23",
+                  "last_paragraph": "P23"
+                },
+                "literal_quote": "From 1850 to the mid-20th century, the world experienced near-constant growth in emissions. This was due largely to industrialization and population growth in the United States and Europe. The **U.S.** became the top CO2 emitter in 1887 and saw the greatest acceleration in emissions over the next nine decades, followed by the **United Kingdom** and **Germany**."
+              },
+              "U59": {
+                "catalogue_key": "S5:P24:P24",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P24",
+                  "last_paragraph": "P24"
+                },
+                "literal_quote": "This trend was occasionally interrupted by historic events, like the Great Depression in the 1930s and the end of World War II in 1945. But the resulting emissions reductions were only temporary. Countries in North America and Europe continued to dominate global emissions through the first half of the century. As a result, the **U.S.** and **EU** remain the largest cumulative emitters to date, bearing responsibility for most CO2 in the atmosphere."
+              },
+              "U60": {
+                "catalogue_key": "S5:P25:P25",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P25",
+                  "last_paragraph": "P25"
+                },
+                "literal_quote": "From the 1950s to 1980s, **Russia** also experienced rapid emissions growth. However, its emissions dropped off significantly with the dissolution of the Soviet Union."
+              },
+              "U61": {
+                "catalogue_key": "S5:P26:P26",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P26",
+                  "last_paragraph": "P26"
+                },
+                "literal_quote": "For comparison, the **U.K.**, once the world’s highest emitter, stabilized its total CO2 emissions around 1970."
+              },
+              "U62": {
+                "catalogue_key": "S5:P1:P19",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P19"
+                },
+                "literal_quote": "* Donate\n\nBack\n\n## Filter Your Site Experience by Topic\n\nApplying the filters below will filter all articles, data, insights and projects by the topic area you select.\n\n## Search WRI.org\n\nNot sure where to find something? Search all of the site's content.\n\nInsights\n | Charted\n\n# The History of Carbon Dioxide Emissions\n\nExplore historical carbon dioxide emissions from 1850 to the present. See how the top-emitting countries and regions have changed over time.\n\nBy:\n\nLeandro Vigna, Johannes Friedrich and Thomas Damassa\n\nJune 3, 2024\n\nExplore More:\n\nClimate\nGHG emissions\nclimate change\ndata visualization\n\nImage by\n6381380/iStock\n\n***Portugues***\n\nCarbon dioxide (CO2) emissions from human activities are now higher than at any point in our history. In fact, recent data reveals that global CO2 emissions were 182 times higher in 2022 than they were in 1850, around the time the Industrial Revolution was underway.1\n\nHow did we arrive at such an unprecedented and precarious state? To answer this and other key questions, we analyzed the latest emissions data from WRI's Climate Watch platform. In addition to countries' historical emissions trends, we looked at major drivers of increasing emissions, such as population growth, economic development and energy use.\n\nFor context, the United Kingdom was the world's largest CO2 emitter in 1850, the first year of available data. Its emissions were nearly six times those of the United States, the second-ranked country at the time. France, Germany and Belgium completed the list of the top five emitters."
+              },
+              "U63": {
+                "catalogue_key": "S5:P20:P24",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P20",
+                  "last_paragraph": "P24"
+                },
+                "literal_quote": "As of 2022 — the latest data available — China ranked as the world's largest CO2 emitter, followed by the United States, India, Russia and Japan. However, among the top 10 CO2 emitters, the United States has the highest emission per person. Per capita emissions in the U.S. are double those of China and 8 times those of India.\n\n### See How the Top Emitting Countries and Regions Have Shifted Over Time\n\nMost countries have seen their carbon emissions balloon over time as their populations and economies have grown. However, these trajectories look quite different throughout different moments in history. Read on for a visual recap of some national, regional and global CO2 emissions milestones over the past 172 years.\n\nFrom 1850 to the mid-20th century, the world experienced near-constant growth in emissions. This was due largely to industrialization and population growth in the United States and Europe. The **U.S.** became the top CO2 emitter in 1887 and saw the greatest acceleration in emissions over the next nine decades, followed by the **United Kingdom** and **Germany**.\n\nThis trend was occasionally interrupted by historic events, like the Great Depression in the 1930s and the end of World War II in 1945. But the resulting emissions reductions were only temporary. Countries in North America and Europe continued to dominate global emissions through the first half of the century. As a result, the **U.S.** and **EU** remain the largest cumulative emitters to date, bearing responsibility for most CO2 in the atmosphere."
+              },
+              "U64": {
+                "catalogue_key": "S5:P25:P26",
+                "reference": {
+                  "source": "S5",
+                  "first_paragraph": "P25",
+                  "last_paragraph": "P26"
+                },
+                "literal_quote": "From the 1950s to 1980s, **Russia** also experienced rapid emissions growth. However, its emissions dropped off significantly with the dissolution of the Soviet Union.  \n  \n For comparison, the **U.K.**, once the world’s highest emitter, stabilized its total CO2 emissions around 1970."
+              },
+              "U65": {
+                "catalogue_key": "S6:P1:P1",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "Carbon dioxide emissions are the primary driver of global climate change. It's widely recognized that to avoid the worst impacts of climate change, the world needs to urgently reduce emissions. But, how this responsibility is shared between regions, countries, and individuals has been an endless point of contention in international discussions."
+              },
+              "U66": {
+                "catalogue_key": "S6:P2:P2",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P2",
+                  "last_paragraph": "P2"
+                },
+                "literal_quote": "This debate arises from the various ways in which emissions are compared: as annual emissions by country; emissions per person; historical contributions; and whether they adjust for traded goods and services. These metrics can tell very different stories."
+              },
+              "U67": {
+                "catalogue_key": "S6:P3:P3",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P3",
+                  "last_paragraph": "P3"
+                },
+                "literal_quote": "We teamed up with the YouTube channel *Kurzgesagt* to produce a video that explored these different metrics in detail: ‘Who is responsible for climate change? – Who needs to fix it?’."
+              },
+              "U68": {
+                "catalogue_key": "S6:P4:P4",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P4",
+                  "last_paragraph": "P4"
+                },
+                "literal_quote": "This page is just one in our collection of work on CO2 and Greenhouse Gas Emissions where you can explore emissions of other greenhouse gases; where our emissions come from; what trajectories of future emissions look like; and what is driving emissions across the world."
+              },
+              "U69": {
+                "catalogue_key": "S6:P5:P5",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P5",
+                  "last_paragraph": "P5"
+                },
+                "literal_quote": "You can also **download** our complete *Our World in Data* CO2 and Greenhouse Gas Emissions database."
+              },
+              "U70": {
+                "catalogue_key": "S6:P6:P6",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P6",
+                  "last_paragraph": "P6"
+                },
+                "literal_quote": "Other research and writing on CO₂ emissions on Our World in Data:"
+              },
+              "U71": {
+                "catalogue_key": "S6:P7:P7",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P7",
+                  "last_paragraph": "P7"
+                },
+                "literal_quote": "# Global CO2 emissions from fossil fuels"
+              },
+              "U72": {
+                "catalogue_key": "S6:P8:P8",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P8",
+                  "last_paragraph": "P8"
+                },
+                "literal_quote": "## How have global emissions of carbon dioxide (CO2) changed over time?"
+              },
+              "U73": {
+                "catalogue_key": "S6:P9:P9",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P9",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "In this chart, we see the growth of global emissions from the mid-18th century through to today."
+              },
+              "U74": {
+                "catalogue_key": "S6:P10:P10",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P10"
+                },
+                "literal_quote": "We see that before the Industrial Revolution, emissions were very low. Growth in emissions was still relatively slow until the mid-20th century. In 1950 the world emitted 6 billion tonnes of CO2. By 1990 this had almost quadrupled, reaching more than 20 billion tonnes. Emissions have continued to grow rapidly; we now emit over 35 billion tonnes each year. Emissions growth has slowed over the last few years, but they have yet to reach their peak."
+              },
+              "U75": {
+                "catalogue_key": "S6:P11:P11",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P11",
+                  "last_paragraph": "P11"
+                },
+                "literal_quote": "## Global CO2 emissions from fossil fuels and land use change"
+              },
+              "U76": {
+                "catalogue_key": "S6:P12:P12",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P12",
+                  "last_paragraph": "P12"
+                },
+                "literal_quote": "How have global emissions of carbon dioxide (CO2) from fossil fuels *and* land use changed over time?"
+              },
+              "U77": {
+                "catalogue_key": "S6:P13:P13",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P13",
+                  "last_paragraph": "P13"
+                },
+                "literal_quote": "We see that while emissions from fossil fuels have increased, emissions from land use change have declined slightly in recent years. Overall, this means total emissions have roughly stabilized over the past decade."
+              },
+              "U78": {
+                "catalogue_key": "S6:P14:P14",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P14",
+                  "last_paragraph": "P14"
+                },
+                "literal_quote": "## CO2 emissions by region"
+              },
+              "U79": {
+                "catalogue_key": "S6:P15:P15",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P15",
+                  "last_paragraph": "P15"
+                },
+                "literal_quote": "This interactive chart shows the breakdown of global CO2 emissions by region. We see that until well into the 20th century, global emissions were dominated by Europe and the United States. In 1900, more than 90% of emissions were produced in Europe or the US; even by 1950, they accounted for more than 85% of emissions each year. But in recent decades this has changed significantly. In the second half of the 20th century, we see a significant rise in emissions in the rest of the world, particularly across Asia, and most notably, China. The US and Europe now account for less than one-third of emissions."
+              },
+              "U80": {
+                "catalogue_key": "S6:P16:P16",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P16",
+                  "last_paragraph": "P16"
+                },
+                "literal_quote": "# Per capita CO2 emissions"
+              },
+              "U81": {
+                "catalogue_key": "S6:P17:P17",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P17",
+                  "last_paragraph": "P17"
+                },
+                "literal_quote": "Where in the world does the average person emit the most carbon dioxide (CO2) each year?"
+              },
+              "U82": {
+                "catalogue_key": "S6:P18:P18",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P18",
+                  "last_paragraph": "P18"
+                },
+                "literal_quote": "We can calculate the contribution of the average citizen of each country by dividing its total emissions by its population. This gives us CO2 emissions per capita. In the visualization, we see the differences in per capita emissions across the world."
+              },
+              "U83": {
+                "catalogue_key": "S6:P1:P9",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P9"
+                },
+                "literal_quote": "Carbon dioxide emissions are the primary driver of global climate change. It's widely recognized that to avoid the worst impacts of climate change, the world needs to urgently reduce emissions. But, how this responsibility is shared between regions, countries, and individuals has been an endless point of contention in international discussions.\n\nThis debate arises from the various ways in which emissions are compared: as annual emissions by country; emissions per person; historical contributions; and whether they adjust for traded goods and services. These metrics can tell very different stories.\n\nWe teamed up with the YouTube channel *Kurzgesagt* to produce a video that explored these different metrics in detail: ‘Who is responsible for climate change? – Who needs to fix it?’.\n\nThis page is just one in our collection of work on CO2 and Greenhouse Gas Emissions where you can explore emissions of other greenhouse gases; where our emissions come from; what trajectories of future emissions look like; and what is driving emissions across the world.\n\nYou can also **download** our complete *Our World in Data* CO2 and Greenhouse Gas Emissions database.\n\nOther research and writing on CO₂ emissions on Our World in Data:\n\n# Global CO2 emissions from fossil fuels\n\n## How have global emissions of carbon dioxide (CO2) changed over time?\n\nIn this chart, we see the growth of global emissions from the mid-18th century through to today."
+              },
+              "U84": {
+                "catalogue_key": "S6:P10:P15",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P10",
+                  "last_paragraph": "P15"
+                },
+                "literal_quote": "We see that before the Industrial Revolution, emissions were very low. Growth in emissions was still relatively slow until the mid-20th century. In 1950 the world emitted 6 billion tonnes of CO2. By 1990 this had almost quadrupled, reaching more than 20 billion tonnes. Emissions have continued to grow rapidly; we now emit over 35 billion tonnes each year. Emissions growth has slowed over the last few years, but they have yet to reach their peak.\n\n## Global CO2 emissions from fossil fuels and land use change\n\nHow have global emissions of carbon dioxide (CO2) from fossil fuels *and* land use changed over time?\n\nWe see that while emissions from fossil fuels have increased, emissions from land use change have declined slightly in recent years. Overall, this means total emissions have roughly stabilized over the past decade.\n\n## CO2 emissions by region\n\nThis interactive chart shows the breakdown of global CO2 emissions by region. We see that until well into the 20th century, global emissions were dominated by Europe and the United States. In 1900, more than 90% of emissions were produced in Europe or the US; even by 1950, they accounted for more than 85% of emissions each year. But in recent decades this has changed significantly. In the second half of the 20th century, we see a significant rise in emissions in the rest of the world, particularly across Asia, and most notably, China. The US and Europe now account for less than one-third of emissions."
+              },
+              "U85": {
+                "catalogue_key": "S6:P16:P18",
+                "reference": {
+                  "source": "S6",
+                  "first_paragraph": "P16",
+                  "last_paragraph": "P18"
+                },
+                "literal_quote": "# Per capita CO2 emissions\n\nWhere in the world does the average person emit the most carbon dioxide (CO2) each year?\n\nWe can calculate the contribution of the average citizen of each country by dividing its total emissions by its population. This gives us CO2 emissions per capita. In the visualization, we see the differences in per capita emissions across the world."
+              },
+              "U86": {
+                "catalogue_key": "S7:P1:P1",
+                "reference": {
+                  "source": "S7",
+                  "first_paragraph": "P1",
+                  "last_paragraph": "P1"
+                },
+                "literal_quote": "The activity data serve as indicators of daily emission variations and are used to disaggregate annual CO2 emission estimates into daily values."
+              }
+            }
+          }
+        },
+        "usable_source_keys": [
+          [
+            "https://ourworldindata.org/grapher/co-emissions-per-capita",
+            "2afb280a6c244c488e38db95e3880faeb6c009dcfcb540c3e08ffedd4310498a"
+          ],
+          [
+            "https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet",
+            "004f733cc6e1806d2d2d2b448a85d839f932170d460036449373a31c77c540e3"
+          ],
+          [
+            "https://www.iea.org/reports/global-energy-review-2025/co2-emissions",
+            "233e78fb874f9d74d1db0a5956dbad6117e4ce53d1317272af9b05a14eae181c"
+          ],
+          [
+            "https://ourworldindata.org/co2-emissions",
+            "0a49d820349541eb22876a9143d89baab37d19f1810889fc7a14ab6431018d46"
+          ],
+          [
+            "https://www.wri.org/insights/history-carbon-dioxide-emissions",
+            "1b5e524221448840ab4c2a4b2a725e400684e5406ef2ece63e2abeda0f2f77a6"
+          ],
+          [
+            "https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions",
+            "3e21e9a6744a4886acce4ce993511b1c5bbc3b4837877069c44dae99b8d261f5"
+          ],
+          [
+            "https://www.nature.com/articles/s41597-026-06621-9",
+            "0cb927cf0bd7bcec7f660a2eaa12b11cd4edf51fa39b7d516996fd39956b7a33"
+          ]
+        ],
+        "structural_gaps": [
+          "Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found",
+          "No supported verdict yet.",
+          "Evidence confidence remains below High.",
+          "Every finding needs retrieved citations.",
+          "Find relevant evidence from at least two source hosts.",
+          "Resolve and cite the assertion: The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+          "Search for evidence against the proposed conclusion.",
+          "Establish source independence; copied reporting is not corroboration."
+        ],
+        "semantic_gaps": [],
+        "fatal_error": true,
+        "budget": {
+          "max_rounds": 3,
+          "max_search_calls": 20,
+          "max_scrapes": 20,
+          "max_tokens": 250000,
+          "max_seconds": 270.0,
+          "search_calls": 2,
+          "scrapes": 4,
+          "tokens_used": 10852,
+          "token_usage_complete": false,
+          "started_at_monotonic": 19154.765
+        },
+        "elapsed_seconds": 23.43800000000192
+      }
+    ],
+    "budget": {
+      "max_rounds": 3,
+      "max_search_calls": 20,
+      "max_scrapes": 20,
+      "max_tokens": 250000,
+      "max_seconds": 270.0,
+      "search_calls": 2,
+      "scrapes": 4,
+      "tokens_used": 10852,
+      "token_usage_complete": false,
+      "started_at_monotonic": 19154.765
+    },
+    "errors": [
+      "Analysis failed: RuntimeError: Evidence adjudication failed: ValueError: No valid ClaimClassSelection JSON object found"
+    ],
+    "jev_audit": {
+      "search_ranking": [
+        {
+          "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+          "url": "https://ourworldindata.org/grapher/co-emissions-per-capita",
+          "score": 0.45
+        },
+        {
+          "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+          "url": "https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/",
+          "score": 0.05
+        },
+        {
+          "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+          "url": "https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet",
+          "score": 0.29
+        },
+        {
+          "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+          "url": "https://www.iea.org/reports/global-energy-review-2025/co2-emissions",
+          "score": 0.29
+        },
+        {
+          "query": "What specific metric (total CO2 emissions, per-capita emissions, energy-related emissions, or another measure) is used to define 'best carbon emission numbers'?",
+          "url": "https://databank.worldbank.org/metadataglossary/millennium-development-goals/series/EN.ATM.CO2E.KT",
+          "score": 0.28
+        },
+        {
+          "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+          "url": "https://ourworldindata.org/co2-emissions",
+          "score": 0.82
+        },
+        {
+          "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+          "url": "https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions",
+          "score": 0.47
+        },
+        {
+          "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+          "url": "https://www.wri.org/insights/history-carbon-dioxide-emissions",
+          "score": 0.69
+        },
+        {
+          "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+          "url": "https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet",
+          "score": 0.15
+        },
+        {
+          "query": "Which data sources and years are used to establish US carbon emission levels over the 35-year comparison period?",
+          "url": "https://www.nature.com/articles/s41597-026-06621-9",
+          "score": 0.39
+        }
+      ],
+      "citations": [],
+      "domain": {
+        "domain": "political",
+        "confidence": 0.64,
+        "used": true,
+        "model": "jev-1.13.0"
+      }
+    }
+  }
+}

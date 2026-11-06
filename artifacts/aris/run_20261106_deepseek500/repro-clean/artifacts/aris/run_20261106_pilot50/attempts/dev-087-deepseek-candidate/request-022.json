@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "Greater Hyderabad Municipal Corporation HMWSSB water contamination October 2020 chlorine tablets distribution households independent news report",
+        "candidates": [
+          {
+            "title": "Special HMWSSB Team Deployed in Karwan Constituency for ...",
+            "snippet": "It reports that three water samples from a water quality monitoring report have been classified as \"UNSATISACTORY\" due to high coliform bacteria ...",
+            "url": "https://www.facebook.com/kausarmohiuddinkarwan/videos/special-hmwssb-team-deployed-in-karwan-constituency-for-door-to-door-distributio/718146167632886/"
+          },
+          {
+            "title": "Source Treatment",
+            "snippet": "Chlorine tablets are commonly distributed for household water treatment in emergencies. However, confirmed use after distribution ranges widely (from 7–87%) ...",
+            "url": "https://www.washcluster.net/taxonomy/term/9031?page=1"
+          },
+          {
+            "title": "House-to-house distribution of Chlorine tablets and ORS ...",
+            "snippet": "As the rainy season continues, the initiative aims to prevent waterborne disease outbreaks by providing free chlorinated water to communities.",
+            "url": "https://www.facebook.com/AhmedabadAMC/posts/house-to-house-distribution-of-chlorine-tablets-and-ors-packets-along-with-iec-i/1326524776170949/"
+          },
+          {
+            "title": "Drinking-water",
+            "snippet": "Microbiologically contaminated drinking water can transmit diseases such as diarrhoea, cholera, dysentery, typhoid and polio and is estimated to ...",
+            "url": "https://www.who.int/news-room/fact-sheets/detail/drinking-water"
+          },
+          {
+            "title": "Special HMWSSB Team Deployed in Karwan Constituency for ...",
+            "snippet": "The move comes after complaints were received regarding contaminated drinking water leading to cases of vomiting, stomach pain, and other health ...",
+            "url": "https://www.instagram.com/reel/DLkpBXuIOgH/?hl=en"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-deepseek-candidate",
+  "timestamp": "2026-11-06T01:51:28.863242+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9354.171
+}

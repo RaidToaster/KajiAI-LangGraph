@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "President Ferdinand Marcos and Dr. Jose Rizal established and founded the WORLD BANK and International Monetary Fund.",
+        "query": "World Bank Group Archives Bretton Woods Conference Records inventory delegate roster",
+        "candidates": [
+          {
+            "title": "Bretton Woods and the Birth of the World Bank",
+            "snippet": "Below you will find inventories containing folder lists; those that have been digitized are hyperlinked. RECORD INVENTORY LISTS The World Bank Bretton Woods",
+            "url": "https://www.worldbank.org/en/archive/history/exhibits/Bretton-Woods-and-the-Birth-of-the-World-Bank"
+          },
+          {
+            "title": "WBG Archives Bretton Woods Conference Records Inventory List",
+            "snippet": "Records originate in four different fonds, including the Secretary's. Department, Office of the President (WB IBRD/IDA EXC), Central Files (WB IBRD/IDA ADMCF), ...",
+            "url": "https://thedocs.worldbank.org/en/doc/6de2c7816fb67c22fa46121291fb98af-0240022021/original/Bretton-Woods-textual-excludingLEGv3.pdf"
+          },
+          {
+            "title": "World Bank Group Archives",
+            "snippet": "On July 1, 1944, delegates from forty-four nations met in Bretton Woods, New Hampshire to agree on a new system of international cooperation.",
+            "url": "https://www.worldbank.org/en/archive/home"
+          },
+          {
+            "title": "Newly Updated Inventory Lists in Historical Exhibits",
+            "snippet": "On July 1, 1944, delegates from 44 nations met at the secluded Mount Washington Hotel in Bretton Woods, New Hampshire to participate in what became known as ...",
+            "url": "https://www.worldbank.org/en/archive/updated-inventory-lists-in-historical-exhibits"
+          },
+          {
+            "title": "Bretton Woods Conference & the Birth of the IMF and World Bank",
+            "snippet": "The Bretton Woods conference was held in July 1944 and included delegates from 44 countries attended the conference.",
+            "url": "https://guides.loc.gov/this-month-in-business-history/july/bretton-woods-conference"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-052-deepseek-candidate",
+  "timestamp": "2026-11-06T08:09:56.416610+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19785.734
+}

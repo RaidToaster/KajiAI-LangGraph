@@ -1,0 +1,4980 @@
+{
+  "scope": "Pre-screen native/question continuation plus NEW screen requests; historical study reservations remain separate.",
+  "base_accounting": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/continuation-base-accounting.json",
+  "base_sha256": "e78f3e13fe6febc18740ba9b9336ccf78ab32ce151c9f217ac814e85c753d62c",
+  "totals_model_services": {
+    "ollama": 121,
+    "ollama_input_tokens": 1469465,
+    "ollama_output_tokens": 181971,
+    "jev": 164,
+    "jev_input_tokens": 483933,
+    "jev_output_tokens": 46301
+  },
+  "screen_totals": {
+    "jev": 152,
+    "jev_input_tokens": 423765,
+    "jev_output_tokens": 42997,
+    "tinyfish_search": 74,
+    "tinyfish_fetch": 143,
+    "ollama": 85,
+    "ollama_input_tokens": 1176918,
+    "ollama_output_tokens": 112888
+  },
+  "flash_sends_by_requested_model": {
+    "glm-5.3-flash:cloud": 75,
+    "deepseek-v4.1-flash:cloud": 46
+  },
+  "continuation_workflow_search": 78,
+  "continuation_workflow_fetch": 144,
+  "new_screen_outcomes_requiring_review": [
+    {
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1209-glm-candidate",
+      "send": {
+        "service": "tinyfish_fetch",
+        "request_id": "029",
+        "sent_at": "2026-11-05T10:19:33.478524+00:00",
+        "status": 200,
+        "transport_error": "RuntimeError: TinyFish HTTP 200; response size 2000001"
+      }
+    }
+  ],
+  "historical_unknown": "One historical refused-loopback token usage remains UNKNOWN, never zero.",
+  "new_screen_attempts": 13,
+  "new_screen_execution_errors": 5,
+  "confirmation_attempts": 0,
+  "final_attempts": 0,
+  "final_launch_in_this_chat": false,
+  "attempts": [
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1201-glm-baseline",
+      "task": {
+        "case": "train-1201",
+        "model": "glm",
+        "arm": "baseline",
+        "started_at": "2026-11-05T10:48:54.720760+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:48:56.588508+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 411,
+          "output_tokens": 51
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:48:56.901711+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:48:58.499111+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1195,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:48:58.793605+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:49:01.037610+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:49:02.698573+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:49:05.165805+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1201,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:49:05.470387+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:49:07.558645+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:49:10.788660+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5037,
+          "output_tokens": 692
+        },
+        {
+          "service": "ollama",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:49:11.128915+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "length",
+          "input_tokens": 5867,
+          "output_tokens": 4096,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:49:35.860769+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 647,
+          "output_tokens": 838,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:49:41.248577+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:49:42.933645+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1193,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:49:43.223579+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:50:03.665442+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:50:27.546611+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:50:29.228868+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1172,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:50:29.491601+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:50:31.303516+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:50:34.823980+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3366,
+          "output_tokens": 606
+        },
+        {
+          "service": "ollama",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:50:35.147698+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "length",
+          "input_tokens": 7358,
+          "output_tokens": 4096,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:51:01.999198+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 647,
+          "output_tokens": 557,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:51:05.084028+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:51:06.773414+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1227,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:51:07.051912+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:51:08.630497+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:51:11.083192+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 2941,
+          "output_tokens": 348
+        },
+        {
+          "service": "ollama",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:51:11.354241+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "length",
+          "input_tokens": 7364,
+          "output_tokens": 4096,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:51:36.013482+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 647,
+          "output_tokens": 643,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 165.15599999999904,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "dfeae04e4d953b7a8913adaf7dac6d432f291f38d612c10a65b447e1a344ba23",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Not Enough Evidence",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1205-deepseek-candidate",
+      "task": {
+        "case": "train-1205",
+        "model": "deepseek",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:43:37.819976+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:43:40.162118+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 429,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:43:40.627804+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 388,
+          "output_tokens": 292,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:43:44.562502+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:43:47.368702+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1254,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:43:47.711651+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:43:50.480444+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:43:52.199031+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:43:55.073527+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1156,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:43:55.350135+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:43:58.350586+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:44:00.352450+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5570,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:44:00.800662+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 5823,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:44:04.016118+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 10417,
+          "output_tokens": 790,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:44:06.881878+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3709,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:44:07.181411+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:44:09.423965+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1195,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:44:09.725350+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:44:12.468401+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:44:20.983230+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:44:24.300945+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1213,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:44:24.568422+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:44:26.474204+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:44:41.526465+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4662,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:44:41.839714+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 10617,
+          "output_tokens": 231,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:44:45.272383+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 15574,
+          "output_tokens": 793,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:44:48.092325+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3635,
+          "output_tokens": 251
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:44:48.406575+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:44:51.847561+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1151,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:44:52.159160+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:44:54.945951+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:44:57.129526+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:44:59.319448+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1176,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:44:59.765395+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:45:02.720823+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:45:21.938916+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4728,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:45:22.245807+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 11544,
+          "output_tokens": 231,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:45:25.630168+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 16594,
+          "output_tokens": 793,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "038",
+          "sent_at": "2026-11-05T10:45:28.624668+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3635,
+          "output_tokens": 251
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 111.23400000000038,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "078bc4c7e40f7a9e8d8f90d289073da0621c0098e3ef656a76784f75933d6576",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1205-glm-candidate",
+      "task": {
+        "case": "train-1205",
+        "model": "glm",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:47:11.053509+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:47:12.887583+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 429,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:47:13.383589+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 388,
+          "output_tokens": 495,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:47:20.273570+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:47:23.048933+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1283,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:47:23.506537+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:47:34.128795+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:47:35.838750+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:47:40.872290+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1194,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:47:41.355419+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:47:45.237836+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:47:48.552162+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4691,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:47:49.330737+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 8967,
+          "output_tokens": 698,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:47:57.785752+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 13858,
+          "output_tokens": 2741,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:48:17.533925+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3219,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:48:18.007270+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:48:20.675832+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1099,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:48:20.981238+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:48:31.729228+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:48:32.902010+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:48:33.650529+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1213,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:48:33.996695+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:48:37.539022+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:48:48.405400+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4585,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:48:48.759074+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 13869,
+          "output_tokens": 633,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 103.61000000000058,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "fbb8d7bfdf65e3df6bf94bdc50880c6e6e8f40470098322cfb0bccb249dbbe42",
+      "verification_status": "execution_error",
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1209-deepseek-candidate",
+      "task": {
+        "case": "train-1209",
+        "model": "deepseek",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:25:07.546214+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:25:09.514638+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 429,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:25:09.832886+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 389,
+          "output_tokens": 320,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:25:14.062137+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:25:17.396948+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1282,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:25:17.677632+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:25:20.417286+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:25:23.105110+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:25:25.754000+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1271,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:25:26.011234+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:25:50.821877+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:25:52.475954+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 6694,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:25:52.868946+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 9671,
+          "output_tokens": 279,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:25:56.326315+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 15156,
+          "output_tokens": 754,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:25:59.217062+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3832,
+          "output_tokens": 210
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:25:59.527456+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:26:02.424781+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1251,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:26:02.685652+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:26:05.678862+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:26:08.088751+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:26:11.923227+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1212,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:26:12.188328+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:26:13.683411+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:26:15.783311+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 6318,
+          "output_tokens": 778
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:26:16.127255+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 23393,
+          "output_tokens": 303,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:26:20.168460+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 30035,
+          "output_tokens": 993,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:26:24.026451+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4577,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:26:24.319729+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:26:27.184040+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1187,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:26:27.429227+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:26:30.168409+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:26:33.477271+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:26:34.179930+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1265,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:26:34.451791+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:26:40.575121+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:26:42.377167+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4209,
+          "output_tokens": 692
+        },
+        {
+          "service": "ollama",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:26:42.684176+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 19306,
+          "output_tokens": 215,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 98.96900000000096,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "2b87ca6102b03bb85fe4f38cb05036105488e88e72b8e3b2d809bcde0ce37bec",
+      "verification_status": "execution_error",
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1209-glm-candidate",
+      "task": {
+        "case": "train-1209",
+        "model": "glm",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:17:34.153913+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:17:36.361063+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 429,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:17:36.674105+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 389,
+          "output_tokens": 458,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:17:41.632766+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:17:45.291044+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1278,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:17:45.587121+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:17:49.906040+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:18:13.784966+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:18:16.248906+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1272,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:18:16.553364+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:18:20.363343+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:18:22.407253+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5806,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:18:23.030321+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 5290,
+          "output_tokens": 431,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:18:27.711489+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 9750,
+          "output_tokens": 4094,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:18:44.651798+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4469,
+          "output_tokens": 208
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:18:44.958090+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:18:47.357925+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1293,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:18:47.651111+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:18:49.686550+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:18:53.681583+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:18:56.605252+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1265,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:18:56.873037+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:18:58.582737+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:19:03.549393+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5755,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:19:03.861284+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 18867,
+          "output_tokens": 1107,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:19:10.793144+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 25614,
+          "output_tokens": 4395,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:19:29.065706+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5599,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:19:29.389260+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:19:33.106690+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1277,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:19:33.478524+00:00",
+          "status": 200,
+          "transport_error": "RuntimeError: TinyFish HTTP 200; response size 2000001"
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 132.15599999999904,
+        "hard_stop": true,
+        "stop_reason": "transport failure; no retry",
+        "accounting_problem": true
+      },
+      "result_sha256": "943046586d838da4bb56f91abaa83e08c0c233d309fb0e34cf1ab8ce990d128f",
+      "verification_status": "execution_error",
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1216-deepseek-candidate",
+      "task": {
+        "case": "train-1216",
+        "model": "deepseek",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:26:46.539031+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:26:48.519043+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 457,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:26:48.813230+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 416,
+          "output_tokens": 392,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:26:53.325529+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:26:55.983000+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1227,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:26:56.241633+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:26:59.961014+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:27:08.779098+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:27:10.501070+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1281,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:27:10.757962+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:27:12.356768+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:27:13.645004+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5790,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:27:13.996237+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 15983,
+          "output_tokens": 207,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:27:17.252692+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 21461,
+          "output_tokens": 784,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:27:19.584667+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 6036,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:27:19.891121+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:27:21.837171+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1238,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:27:22.158153+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:27:41.570653+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:27:47.228342+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:27:50.041044+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1313,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:27:50.322967+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:27:53.886873+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:28:24.648543+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3664,
+          "output_tokens": 692
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:28:24.971115+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20325,
+          "output_tokens": 183,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:28:28.325565+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 26370,
+          "output_tokens": 731,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:28:31.245145+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 6036,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:28:31.607552+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:28:33.826562+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1250,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:28:34.107534+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:29:05.290085+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:29:09.138220+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:29:11.274957+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1223,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:29:12.230009+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:29:20.740031+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:29:36.505140+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3892,
+          "output_tokens": 778
+        },
+        {
+          "service": "ollama",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:29:37.815369+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 21006,
+          "output_tokens": 279,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:29:41.543348+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 27901,
+          "output_tokens": 589,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "038",
+          "sent_at": "2026-11-05T10:29:43.764794+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 6036,
+          "output_tokens": 249
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 178.29699999999866,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "dc2031e6eedd9f082a81b7f48ac1ae5647c76f39b6ab8263dba29f9082497e4d",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1216-glm-candidate",
+      "task": {
+        "case": "train-1216",
+        "model": "glm",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:33:00.743952+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:33:02.635469+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 457,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:33:02.923983+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 416,
+          "output_tokens": 455,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:33:07.380444+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:33:09.300211+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1265,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:33:09.593259+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:33:22.142160+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:33:25.354162+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:33:28.137625+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1277,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:33:28.434265+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:33:29.753923+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:33:31.100298+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5216,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:33:31.411442+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 7501,
+          "output_tokens": 824,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:33:37.082935+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 12916,
+          "output_tokens": 4140,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:33:54.439650+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5498,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:33:54.773153+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:33:56.622982+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1239,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:33:56.939658+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:34:24.024257+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:34:28.030143+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:34:30.550341+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1317,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:34:30.833177+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:34:32.706602+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:34:34.532115+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4473,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:34:34.838371+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 14816,
+          "output_tokens": 617,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:34:39.807611+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20870,
+          "output_tokens": 3720,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:35:02.344834+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5515,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:35:02.640099+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:35:06.701853+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1280,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:35:07.014341+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:35:10.517541+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:35:12.985966+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:35:15.363915+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1326,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:35:15.655794+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:35:16.986226+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:35:18.827573+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5239,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:35:19.163382+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 15202,
+          "output_tokens": 645,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:35:26.909229+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 22081,
+          "output_tokens": 4435,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "038",
+          "sent_at": "2026-11-05T10:35:55.466125+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5475,
+          "output_tokens": 249
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 175.1720000000023,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "73ca9cefbc8cef0c1bb8cdb7f710b140008aecf659183b5a86eed0858be53b73",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1217-deepseek-candidate",
+      "task": {
+        "case": "train-1217",
+        "model": "deepseek",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:42:24.510521+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:42:26.533297+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 420,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:42:26.873655+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 379,
+          "output_tokens": 257,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:42:30.516752+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:42:33.289421+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1197,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:42:33.596499+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:42:34.909307+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:42:36.309459+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:42:40.510216+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1243,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:42:40.827722+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:42:42.178499+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:42:43.629649+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5344,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:42:44.005380+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 5311,
+          "output_tokens": 155,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:42:48.081418+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 9135,
+          "output_tokens": 1004,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:42:52.361886+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3307,
+          "output_tokens": 208
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:42:52.731417+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:42:56.539379+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1213,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:42:56.825849+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:42:59.046290+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:43:02.088392+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:43:03.755283+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1164,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:43:04.024856+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:43:06.174567+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:43:13.294441+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5786,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:43:13.647630+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 16890,
+          "output_tokens": 231,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:43:17.376376+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 22379,
+          "output_tokens": 1128,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:43:21.221946+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4000,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:43:21.562275+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:43:23.663872+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1135,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:43:24.141062+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:43:26.608978+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:43:28.329572+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:43:29.137666+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3253,
+          "output_tokens": 434
+        },
+        {
+          "service": "ollama",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:43:29.590339+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20040,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:43:33.253146+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 26124,
+          "output_tokens": 1150,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:43:37.038795+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5010,
+          "output_tokens": 249
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 73.23399999999674,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "04504ffb2553310d4705b05275ab27acb8b2ce1f1fc392d72bcc55acba0a79a5",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Conflicting Evidence/Cherrypicking",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1217-glm-candidate",
+      "task": {
+        "case": "train-1217",
+        "model": "glm",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:35:55.956036+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:35:57.854658+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 420,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:35:58.145323+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 379,
+          "output_tokens": 263,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:36:02.446612+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:36:04.484809+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1175,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:36:04.876553+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:36:06.723530+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:36:07.691310+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:36:09.506393+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1176,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:36:09.773964+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:36:19.378461+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:36:21.133330+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5556,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:36:21.510816+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 11672,
+          "output_tokens": 474,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:36:28.097311+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 16994,
+          "output_tokens": 3933,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:36:44.967586+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3585,
+          "output_tokens": 208
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:36:45.268409+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:36:47.724001+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1106,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:36:48.035198+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:36:49.229283+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:36:50.762243+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:36:52.747549+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3261,
+          "output_tokens": 434
+        },
+        {
+          "service": "ollama",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:36:53.102128+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 14535,
+          "output_tokens": 919,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:36:59.960029+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20243,
+          "output_tokens": 5602,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:37:20.903364+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5176,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:37:21.296752+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:37:24.359836+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1259,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:37:24.699007+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:37:27.061978+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:37:28.744646+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:37:30.398812+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1155,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:37:30.684112+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:37:32.460109+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:37:34.612741+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4801,
+          "output_tokens": 778
+        },
+        {
+          "service": "ollama",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:37:34.968119+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 14064,
+          "output_tokens": 930,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 106.23400000000038,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "055997e9e43c0b75d02b199df04eeb34b5c20a237b3ddfafa4c812383e351c19",
+      "verification_status": "execution_error",
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1218-deepseek-candidate",
+      "task": {
+        "case": "train-1218",
+        "model": "deepseek",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:08:02.469158+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:08:04.737789+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 410,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:08:05.073380+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 372,
+          "output_tokens": 271,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:08:08.544744+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:08:11.362910+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1208,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:08:11.668588+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:08:14.296322+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:08:16.168377+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:08:18.032549+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1243,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:08:18.307786+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:08:19.466828+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:08:20.429560+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4337,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:08:20.833985+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 7285,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:08:24.038157+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 12517,
+          "output_tokens": 640,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:08:26.628694+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4927,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:08:26.960883+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:08:29.621289+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1311,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:08:29.906719+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:08:32.826897+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:08:38.674295+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:08:41.129131+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1219,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:08:41.404966+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:08:43.774334+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:08:46.168814+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4771,
+          "output_tokens": 692
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:08:46.470705+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 12077,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:08:50.231225+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 17548,
+          "output_tokens": 647,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:08:54.084671+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4549,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:08:54.380161+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:08:56.817007+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1171,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:08:57.124877+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:08:59.378546+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:09:01.414410+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:09:03.642611+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1275,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:09:03.912694+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:09:28.067650+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:09:29.736775+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3884,
+          "output_tokens": 434
+        },
+        {
+          "service": "ollama",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:09:30.104838+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 14995,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:09:36.525773+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20811,
+          "output_tokens": 578,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "038",
+          "sent_at": "2026-11-05T10:09:39.020883+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4742,
+          "output_tokens": 249
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 97.15599999999904,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "c0de4f760cbc3d9840db28778acc61f6b6a814ab8546954f11786ec29175a006",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1218-glm-candidate",
+      "task": {
+        "case": "train-1218",
+        "model": "glm",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:04:25.906709+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:04:27.923710+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 410,
+          "output_tokens": 53
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:04:28.225387+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 369,
+          "output_tokens": 327,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:04:32.390811+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:04:34.326911+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1223,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:04:34.600193+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:04:38.544417+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:04:42.412917+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:04:45.545703+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1255,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:04:45.823371+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:04:47.404102+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:04:52.307863+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5852,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:04:52.685075+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 13625,
+          "output_tokens": 916,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:05:00.493916+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 19584,
+          "output_tokens": 4001,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:05:33.676737+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5010,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:05:34.085130+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:05:36.756703+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1247,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:05:37.035315+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:05:39.832503+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:05:41.830647+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:05:43.832507+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1295,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:05:44.089428+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:05:46.294449+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:05:48.125871+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 3519,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:05:48.428451+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 14340,
+          "output_tokens": 1286,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:06:01.552667+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20047,
+          "output_tokens": 3821,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:06:33.803932+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5417,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:06:34.129632+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:06:36.493488+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1245,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:06:36.882840+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:06:38.835188+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:06:41.007698+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:06:42.591656+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1234,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:06:42.865491+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:06:44.988815+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:06:47.483973+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4585,
+          "output_tokens": 778
+        },
+        {
+          "service": "ollama",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:06:47.820228+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 20541,
+          "output_tokens": 1063,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:06:55.575226+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "length",
+          "input_tokens": 26809,
+          "output_tokens": 6144,
+          "model_verified": true,
+          "incomplete": false
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 216.54699999999866,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "9a79b0e01d65efd6bb3a458b3d2fa025971aa16c571cbb9fe278f5caf9fdefd6",
+      "verification_status": "execution_error",
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1225-deepseek-candidate",
+      "task": {
+        "case": "train-1225",
+        "model": "deepseek",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:10:57.509348+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:10:59.499655+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 424,
+          "output_tokens": 51
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:10:59.838506+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 280,
+          "output_tokens": 168,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:11:03.255931+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 382,
+          "output_tokens": 236,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:11:04.789726+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:11:07.626877+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1281,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:11:07.884059+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:11:17.352117+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:11:20.150106+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:11:21.729744+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1237,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:11:22.002492+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:11:44.281910+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:11:46.137069+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 7093,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:11:46.587125+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 14508,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:11:49.820870+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 19909,
+          "output_tokens": 718,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:12:01.499587+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5875,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:12:01.820283+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:12:04.767613+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1201,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:12:05.024430+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:12:06.529591+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:12:09.653623+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:12:11.307371+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1286,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:12:11.628188+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:12:14.243601+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:12:16.363836+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 7870,
+          "output_tokens": 778
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:12:16.710165+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 24028,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:12:20.655600+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 31397,
+          "output_tokens": 692,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:12:23.067821+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4896,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:12:23.375361+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:12:25.475671+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1316,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:12:25.735063+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:12:30.133689+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:12:34.210986+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:12:38.917757+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1092,
+          "output_tokens": 76
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:12:39.189073+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:12:40.879716+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:12:48.888641+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5813,
+          "output_tokens": 606
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:12:49.241091+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 24019,
+          "output_tokens": 255,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "038",
+          "sent_at": "2026-11-05T10:12:52.953259+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "deepseek-v4.1-flash",
+          "requested_model": "deepseek-v4.1-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 31349,
+          "output_tokens": 736,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "039",
+          "sent_at": "2026-11-05T10:12:56.024862+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4627,
+          "output_tokens": 249
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 119.01599999999962,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "c8d0ac8a9c5ea64f98d05db811fa2f7b8b765453ad34bad4323fd10abc8e2632",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Supported",
+      "accepted": "ABSTAIN"
+    },
+    {
+      "phase": "development",
+      "directory": "artifacts/flash-workflow-20261103/strict-literal-workflow-20261105/development/train-1225-glm-candidate",
+      "task": {
+        "case": "train-1225",
+        "model": "glm",
+        "arm": "candidate",
+        "started_at": "2026-11-05T10:12:56.558413+00:00",
+        "protocol_sha256": "e40d53f782544dd50f3ea3a0d1bce17ed0a88760b51bd86cb6b19dbbc15b9215"
+      },
+      "sends": [
+        {
+          "service": "jev",
+          "request_id": "001",
+          "sent_at": "2026-11-05T10:12:58.650635+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 424,
+          "output_tokens": 51
+        },
+        {
+          "service": "ollama",
+          "request_id": "002",
+          "sent_at": "2026-11-05T10:12:58.966935+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 259,
+          "output_tokens": 471,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "003",
+          "sent_at": "2026-11-05T10:13:03.982284+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 381,
+          "output_tokens": 339,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "004",
+          "sent_at": "2026-11-05T10:13:05.821207+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "005",
+          "sent_at": "2026-11-05T10:13:08.286425+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1174,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "006",
+          "sent_at": "2026-11-05T10:13:08.564745+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "007",
+          "sent_at": "2026-11-05T10:13:16.530618+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "008",
+          "sent_at": "2026-11-05T10:13:18.461302+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "009",
+          "sent_at": "2026-11-05T10:13:21.224343+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1172,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "010",
+          "sent_at": "2026-11-05T10:13:21.514351+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "011",
+          "sent_at": "2026-11-05T10:13:23.220175+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "012",
+          "sent_at": "2026-11-05T10:13:24.940562+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 6509,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "013",
+          "sent_at": "2026-11-05T10:13:25.337278+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 11582,
+          "output_tokens": 593,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "014",
+          "sent_at": "2026-11-05T10:13:30.697248+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 16825,
+          "output_tokens": 5025,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "015",
+          "sent_at": "2026-11-05T10:14:06.129861+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 4745,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "016",
+          "sent_at": "2026-11-05T10:14:06.439421+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "017",
+          "sent_at": "2026-11-05T10:14:08.294461+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1244,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "018",
+          "sent_at": "2026-11-05T10:14:08.562680+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "019",
+          "sent_at": "2026-11-05T10:14:10.360566+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "020",
+          "sent_at": "2026-11-05T10:14:12.754492+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "021",
+          "sent_at": "2026-11-05T10:14:15.639156+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1258,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "022",
+          "sent_at": "2026-11-05T10:14:15.902805+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "023",
+          "sent_at": "2026-11-05T10:14:18.079929+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "024",
+          "sent_at": "2026-11-05T10:14:19.502706+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5966,
+          "output_tokens": 864
+        },
+        {
+          "service": "ollama",
+          "request_id": "025",
+          "sent_at": "2026-11-05T10:14:19.871556+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 24639,
+          "output_tokens": 1064,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "026",
+          "sent_at": "2026-11-05T10:14:28.885119+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 31296,
+          "output_tokens": 5196,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "027",
+          "sent_at": "2026-11-05T10:15:02.642708+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5337,
+          "output_tokens": 249
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "028",
+          "sent_at": "2026-11-05T10:15:02.968244+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "029",
+          "sent_at": "2026-11-05T10:15:05.269781+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1273,
+          "output_tokens": 94
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "030",
+          "sent_at": "2026-11-05T10:15:05.578091+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "031",
+          "sent_at": "2026-11-05T10:15:08.616930+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_search",
+          "request_id": "032",
+          "sent_at": "2026-11-05T10:15:12.176123+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "033",
+          "sent_at": "2026-11-05T10:15:13.004702+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 1092,
+          "output_tokens": 76
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "034",
+          "sent_at": "2026-11-05T10:15:13.287201+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "tinyfish_fetch",
+          "request_id": "035",
+          "sent_at": "2026-11-05T10:15:25.012588+00:00",
+          "status": 200,
+          "transport_error": null
+        },
+        {
+          "service": "jev",
+          "request_id": "036",
+          "sent_at": "2026-11-05T10:15:32.890976+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5007,
+          "output_tokens": 606
+        },
+        {
+          "service": "ollama",
+          "request_id": "037",
+          "sent_at": "2026-11-05T10:15:33.185627+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 22392,
+          "output_tokens": 1087,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "ollama",
+          "request_id": "038",
+          "sent_at": "2026-11-05T10:15:41.234656+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "glm-5.3-flash",
+          "requested_model": "glm-5.3-flash:cloud",
+          "done": true,
+          "done_reason": "stop",
+          "input_tokens": 28914,
+          "output_tokens": 5410,
+          "model_verified": true,
+          "incomplete": false
+        },
+        {
+          "service": "jev",
+          "request_id": "039",
+          "sent_at": "2026-11-05T10:16:09.115621+00:00",
+          "status": 200,
+          "transport_error": null,
+          "returned_model": "jev-1.13.0",
+          "requested_model": "jev-1.13.0",
+          "model_verified": true,
+          "input_tokens": 5513,
+          "output_tokens": 249
+        }
+      ],
+      "job": {
+        "exit_code": 0,
+        "elapsed_seconds": 193.26599999999962,
+        "hard_stop": false,
+        "stop_reason": null,
+        "accounting_problem": false
+      },
+      "result_sha256": "f73c9c2f99b0db4fce8dab18024a3429b065c253149d6ccaed6d68838eb6f1e4",
+      "verification_status": "insufficient_evidence",
+      "prediction": "Supported",
+      "accepted": "ABSTAIN"
+    }
+  ],
+  "study_complete": false
+}

@@ -1,0 +1,106 @@
+{
+  "passed": false,
+  "state": "closed_frozen_positive_screen",
+  "reason": "GLM method packet restored replication visibility but remained ineligible under unchanged gap and citation guards. Requiring qualifying revised packets on both models is unreachable in this diagnostic. Leave both DeepSeek sends untouched.",
+  "planned_sends": 4,
+  "started_attempts": 2,
+  "untouched_attempts": 2,
+  "execution_failures": 0,
+  "service_usage": [
+    {
+      "service": "ollama",
+      "request_id": "001",
+      "sent_at": "2026-11-04T08:16:33.898510+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash:cloud",
+      "done": true,
+      "done_reason": "stop",
+      "input_tokens": 2486,
+      "output_tokens": 431,
+      "model_verified": true,
+      "incomplete": false
+    },
+    {
+      "service": "jev",
+      "request_id": "002",
+      "sent_at": "2026-11-04T08:16:40.493345+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "jev-1.13.0",
+      "requested_model": "jev-1.13.0",
+      "model_verified": true,
+      "input_tokens": 2450,
+      "output_tokens": 126
+    },
+    {
+      "service": "ollama",
+      "request_id": "001",
+      "sent_at": "2026-11-04T08:16:42.496143+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash:cloud",
+      "done": true,
+      "done_reason": "stop",
+      "input_tokens": 2473,
+      "output_tokens": 585,
+      "model_verified": true,
+      "incomplete": false
+    },
+    {
+      "service": "jev",
+      "request_id": "002",
+      "sent_at": "2026-11-04T08:16:51.043635+00:00",
+      "status": 200,
+      "transport_error": null,
+      "returned_model": "jev-1.13.0",
+      "requested_model": "jev-1.13.0",
+      "model_verified": true,
+      "input_tokens": 4244,
+      "output_tokens": 208
+    }
+  ],
+  "cells": [
+    {
+      "id": "glm-original",
+      "started": true,
+      "parsed": true,
+      "proposed_verdict": "TRUE",
+      "confidence": "High",
+      "gate_eligible": false,
+      "gaps": [
+        "None found; note S1 and S3 share near-identical underlying analysis (People's Policy Project), so independent support rests mainly on S2's fact-check.",
+        "Resolve and cite the assertion: Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans."
+      ],
+      "result_sha256": "05b273c3de41502de4e284857560d590390b002999ba884f4ef82f6572f82fb0",
+      "job_sha256": "4350a9ad65646b8e7a5b68083aaf751e48e7c736415988dd879bab8e2754f47e"
+    },
+    {
+      "id": "glm-method",
+      "started": true,
+      "parsed": true,
+      "proposed_verdict": "TRUE",
+      "confidence": "High",
+      "gate_eligible": false,
+      "gaps": [
+        "No counterevidence was retrieved challenging the Forbes net worth estimate or the SCF bottom-38% calculation; S2 does not publish the economist's final full methodology in the retrieved passages.",
+        "Citation support is uncertain for https://jacobin.com/2020/02/michael-bloomberg-wealth-inequality-presidential-primary."
+      ],
+      "result_sha256": "69a6999e9ce244fd339a889fc67f45af3d04af8a74233200a616a6cb524f6f3d",
+      "job_sha256": "6e2a992baa5551a80d64b11c94f69050f07cf5a04af3d61488755464f3b0c2a1"
+    },
+    {
+      "id": "deepseek-method",
+      "started": false
+    },
+    {
+      "id": "deepseek-original",
+      "started": false
+    }
+  ],
+  "denominator_note": "Only two cells started; untouched planned sends are neither counted failures nor completed attempts. The protocol phrase four-send denominator describes its planned maximum, not a fabricated completed denominator.",
+  "protocol_sha256": "98ed39b310844cbf6580932317c04ff447f3390764101ab7dc754ee4b752bf35",
+  "scope": "Fixed development packet diagnostic; no full workflow acceptance result; not evidence of universal futility."
+}

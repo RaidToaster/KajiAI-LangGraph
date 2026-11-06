@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Someone who couldn't afford health care under Barack Obama's Affordable Care Act gets penalized $10,000",
+        "query": "Search state individual mandate penalty statutes and enforcement records (Massachusetts, New Jersey, California, Rhode Island, DC) for any $10,000 penalty on residents unable to afford coverage.",
+        "candidates": [
+          {
+            "title": "ACA State Individual Mandate Penalties 2026: California, NJ ...",
+            "snippet": "Five jurisdictions impose enforceable tax penalties for uninsured months in 2026: California, New Jersey, Massachusetts, the District of Columbia, and Rhode Island.",
+            "url": "https://quoteturbo.com/field-notes/aca-state-individual-mandate-penalties-2026"
+          },
+          {
+            "title": "State Health Insurance Mandate Requirements | Penalties",
+            "snippet": "It didn't. California, Massachusetts, New Jersey, Rhode Island, and the District of Columbia each enacted their own state-level individual mandate after the federal penalty disappeared, and residents of those five jurisdictions can still owe a tax penalty for a coverage gap.",
+            "url": "https://coveragecriteria.com/articles/health-insurance-mandate-requirements"
+          },
+          {
+            "title": "State Health Insurance Mandate Penalties: CA, MA, NJ, RI, DC",
+            "snippet": "The Franchise Tax Board (FTB) assesses the penalty when you file your state return, and it publishes an Individual Shared Responsibility Penalty Estimator so you can preview the damage before you file.",
+            "url": "https://beancount.io/blog/2026/09/20/state-individual-health-insurance-mandate-penalties-employer-reporting-guide"
+          },
+          {
+            "title": "No Health Insurance Penalty by State (2026 Guide) | eMedicare",
+            "snippet": "Learn each state's 2026 penalty amounts, exemptions, and your options for affordable coverage. When the Affordable Care Act was signed into law in 2010, it included a federal individual mandate requiring most Americans to maintain qualifying health insurance or pay a tax penalty.",
+            "url": "https://www.emedicare.com/health-insurance/no-health-insurance-penalty-by-state-2026"
+          },
+          {
+            "title": "Penalty for No Health Insurance: Where It Still Applies in 2026",
+            "snippet": "As of 2026, five states and the District of Columbia maintain an active individual mandate with a genuine financial penalty for residents who go without qualifying coverage and don't qualify for an exemption:",
+            "url": "https://apollo-insurance.com/penalty-for-no-health-insurance/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-065-deepseek-candidate",
+  "timestamp": "2026-11-06T08:48:06.109248+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 22075.421
+}

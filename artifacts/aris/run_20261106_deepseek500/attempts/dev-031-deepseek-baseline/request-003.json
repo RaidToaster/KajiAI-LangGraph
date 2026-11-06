@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amy Coney Barrett was confirmed as US Supreme Court Justice on October 26, 2020",
+        "query": "Amy Coney Barrett was confirmed as US Supreme Court Justice on October 26, 2020 evidence",
+        "candidates": [
+          {
+            "title": "Amy Coney Barrett",
+            "snippet": "She served as a federal appeals judge for three years before being confirmed as a U.S. Supreme Court Justice in October 2020. Born Amy Vivian Coney in New ...",
+            "url": "https://www.oyez.org/justices/amy_coney_barrett"
+          },
+          {
+            "title": "Justice Amy Coney Barrett",
+            "snippet": "The full Senate confirmed Barrett by a 52-48 vote on October 26. She was the first Supreme Court Justice since the 19th century to receive confirmation",
+            "url": "https://supreme.justia.com/justices/amy-coney-barrett/"
+          },
+          {
+            "title": "Senate Confirms Amy Coney Barrett for Supreme Court",
+            "snippet": "Senate just confirmed Seventh Circuit Court of Appeals Judge Amy Coney Barrett to become the 115th Associate Justice on the United States ...",
+            "url": "https://trumpwhitehouse.archives.gov/articles/senate-confirms-amy-coney-barrett-supreme-court/"
+          },
+          {
+            "title": "Amy Coney Barrett",
+            "snippet": "On October 26, the Senate confirmed Barrett to the Supreme Court by a vote of 52–48, 30 days after her nomination and 8 days before the 2020 presidential ...",
+            "url": "https://en.wikipedia.org/wiki/Amy_Coney_Barrett"
+          },
+          {
+            "title": "Amy Coney Barrett confirmed as a Supreme Court justice",
+            "snippet": "",
+            "url": "https://www.facebook.com/newshour/videos/amy-coney-barrett-confirmed-as-a-supreme-court-justice/363873828158132/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-031-deepseek-baseline",
+  "timestamp": "2026-11-06T07:14:11.107240+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16440.421
+}

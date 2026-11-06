@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+        "query": "What primary studies or surveillance data examine whether wearing face masks causes bacterial infections, including staphylococcus, and what were their findings?",
+        "candidates": [
+          {
+            "title": "Evaluation of the bacterial contamination of face masks worn by ...",
+            "snippet": "Of 175 masks, 471 bacterial isolates were detected including 9 species. The most prevalent strain were Coagulase negative Staphylococcus (28%) followed by ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9883076/"
+          },
+          {
+            "title": "Cotton and Surgical Face Masks in Community Settings",
+            "snippet": "Bacillus, Staphylococcus, and Acinetobacter spp. were mostly cultured from the masks and 43% of these isolates were resistant to ampicillin or erythromycin.",
+            "url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2021.732047/full"
+          },
+          {
+            "title": "\"Understanding the Burden of Facemasks' \"",
+            "snippet": "Among the most common pathogens found on the masks, 11 masks (15.9%) had Staphylococcus aureus, and 30 masks (43.5%) had VSE (vancomycin-susceptible ...",
+            "url": "https://criisp-mody.lab.medicine.umich.edu/student-blogs/understanding-the-burden-of-facemasks"
+          },
+          {
+            "title": "Bacterial profile and associated factors of face mask ...",
+            "snippet": "Bacterial contamination was found in 84.5% of masks and included strains of MRSA (1.5%) and MSSA (0.25%). While environmental samples mirrored ...",
+            "url": "https://link.springer.com/article/10.1186/s12982-026-02814-0"
+          },
+          {
+            "title": "Bacteria Found on More Than 80% of Healthcare Workers' Masks",
+            "snippet": "Bacterial contamination was detected on more than 80% of face masks worn by healthcare workers, including methicillin-resistant Staphylococcus ...",
+            "url": "https://www.emjreviews.com/microbiology-infectious-diseases/news/bacteria-found-on-more-than-80-of-healthcare-workers-masks/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-041-deepseek-candidate",
+  "timestamp": "2026-11-06T07:36:18.414210+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 17767.718
+}

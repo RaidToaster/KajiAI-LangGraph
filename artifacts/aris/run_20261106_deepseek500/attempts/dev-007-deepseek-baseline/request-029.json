@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Why should you pay more taxes than Donald Trump pays? And that’s a fact. $750. Remember what he said when that was raised a while ago, how he only pays … He said, ‘Because I’m smart. I know how to game the system.’",
+        "query": "Why should you pay more taxes than Donald Trump pays? original source fact check",
+        "candidates": [
+          {
+            "title": "Here's Why You Pay More In Taxes Than Donald Trump",
+            "snippet": "\"I bet you pay more taxes than Donald Trump, who is the President of the United States.\" Bloomberg Opinion's Tim O'Brien explains why ...",
+            "url": "https://www.youtube.com/watch?v=YG5VFv8Y8qQ"
+          },
+          {
+            "title": "Fact-Checking Trump's Claim That He 'Prepaid Millions' in ...",
+            "snippet": "Trump requested extensions to file his individual returns. Each time, he made the required payment to the I.R.S. for income taxes he might owe — ...",
+            "url": "https://www.nytimes.com/2020/11/02/us/politics/trump-taxes-prepay-fact-check.html"
+          },
+          {
+            "title": "Fact Check: Experts Call Trump's Tax Claim False",
+            "snippet": "President Donald Trump on Thursday repeated his past claim that the American people are the most heavily burdened with taxes in the world, ...",
+            "url": "https://www.nbcnews.com/politics/donald-trump/fact-check-experts-call-trump-s-tax-claim-false-n791651"
+          },
+          {
+            "title": "Trump taxes: A 'fundamentally unfair' system?",
+            "snippet": "For years, US President Donald Trump has shrugged off criticism of his low tax bills, famously boasting that not paying taxes made him \"smart\".",
+            "url": "https://www.bbc.com/news/business-54364904"
+          },
+          {
+            "title": "Spinning Trump's Taxes - FactCheck. ...",
+            "snippet": "The large loss, the Times reported, could have allowed Trump to avoid paying federal income taxes for up to 18 years. But in defending Trump, ...",
+            "url": "https://www.factcheck.org/2016/10/spinning-trumps-taxes/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-007-deepseek-baseline",
+  "timestamp": "2026-11-06T05:46:50.858676+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11200.171
+}

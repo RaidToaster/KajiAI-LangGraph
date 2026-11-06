@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Pogba Has Quit The French National Team Over Macron's Remarks on Islam.",
+        "query": "Did Paul Pogba announce or communicate any decision to leave the French national team, and if so, when and through what channel?",
+        "candidates": [
+          {
+            "title": "What happened to Paul Pogba? Why midfielder is not playing ...",
+            "snippet": "Paul Pogba helped France win the 2018 World Cup, but the midfielder is absent from Les Bleus' squad for the 2026 tournament. Here's what happened to the former Manchester United and Juventus star.",
+            "url": "https://www.sportingnews.com/us/soccer/news/what-happened-paul-pogba-why-midfielder-not-playing-france-world-cup-2026/3724848a8180fab1cd19772e"
+          },
+          {
+            "title": "World Cup 2026 - France : Paul Pogba breaks his silence on ...",
+            "snippet": "Left out of the French squad for the 2026 World Cup, Paul Pogba is not giving up hope of one day rejoining Les Bleus. Absent from the 2026 World Cup with the French national team, Paul Pogba is watching the action unfold from the United States. Despite making his comeback to competitive football ...",
+            "url": "https://foot-africa.com/en/news/cdm-2026-france-paul-pogba-breaks-his-silence-on-missing-out-1240345/"
+          },
+          {
+            "title": "What’s happened to Paul Pogba? Reason why World Cup winner ...",
+            "snippet": "Missing out: Paul Pogba was excluded from France's squad for the FIFA World Cup 2026 after being unable to demonstrate his fitness.",
+            "url": "https://www.manchestereveningnews.co.uk/sport/football/football-news/paul-pogba-france-world-cup-34262110"
+          },
+          {
+            "title": "Will Paul Pogba return to the France squad? Didier Deschamps ...",
+            "snippet": "France boss Didier Deschamps addressed the topic of Paul Pogba's possible return to the national team and explained what the Monaco midfielder must focus on at the moment.",
+            "url": "https://www.goal.com/en/lists/paul-pogba-return-france-squad-didier-deschamps-midfielder-receive-call-up-long-awaited-monaco-debut-nears/blt3a23e982099324b5"
+          },
+          {
+            "title": "What happened to Paul Pogba? Why French superstar no longer ...",
+            "snippet": "What happened to Paul Pogba? Why French superstar no longer plays for France at World Cup originally appeared on The Sporting News. Add The Sporting News as a Preferred Source by clicking here.",
+            "url": "https://sports.yahoo.com/articles/happened-paul-pogba-why-french-171101191.html?fr=sycsrp_catchall"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-028-deepseek-candidate",
+  "timestamp": "2026-11-06T07:05:13.088659+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 15902.406
+}

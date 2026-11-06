@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Most Arab citizens support normalization with Israel.",
+        "query": "What question wording and response options were used to measure 'support for normalization,' and do they distinguish between diplomatic, economic, and cultural normalization?",
+        "candidates": [
+          {
+            "title": "Normalizing Relations from the Cold War to the Present",
+            "snippet": "by AC Demmer · 2024 · Cited by 7 — “Normalization of relations” is a phrase of recent origin, widely used by scholars, politicians, and journalists. Defining normalization ...",
+            "url": "https://www.cambridge.org/core/journals/modern-american-history/article/normalizing-relations-from-the-cold-war-to-the-present-continuing-war-pursuing-peace-and-building-empire/7A25EDB34357AE21B69BF4B525FF303D"
+          },
+          {
+            "title": "Support for \"Normalization\" of Relations Between Palestinians ...",
+            "snippet": "by M Albzour · 2019 · Cited by 50 — To get a comprehensive picture of Palestinians' understanding of normalization, we investigated endorsement of intergroup relations in multiple spheres (e.g., ...",
+            "url": "https://jspp.psychopen.eu/index.php/jspp/article/view/5177/5177.html"
+          },
+          {
+            "title": "Translation, Cross-Cultural Adaptation, and Validation of ...",
+            "snippet": "by P Cruchinho · 2024 · Cited by 735 — This article aimed: 1) identify all guidelines and recommendations for translation, cross-cultural adaptation, and validation within the healthcare sciences; 2) ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11151507/"
+          },
+          {
+            "title": "Attitudes Toward Normalization in a Conflict Context",
+            "snippet": "by I Khatib · 2025 · Cited by 4 — The study concentrates on a specific form of normalization known as cultural normalization. This concept embodies the elements of normalization and signifies a ...",
+            "url": "https://www.ovid.com/journals/pcjpp/fulltext/10.1037/pac0000790~attitudes-toward-normalization-in-a-conflict-context-between"
+          },
+          {
+            "title": "Measurement Instruments in Cross-National Surveys",
+            "snippet": "by D Behr · 2016 · Cited by 18 — This contribution deals with measurement instruments – that is, questionnaires and individual questions – used in cross-national survey research.",
+            "url": "https://www.gesis.org/fileadmin/admin/Dateikatalog/pdf/guidelines/measurement_instruments_crossnational_surveys_behr_braun_dorer_2016.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-118-deepseek-candidate",
+  "timestamp": "2026-11-06T05:05:27.956542+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8717.265
+}

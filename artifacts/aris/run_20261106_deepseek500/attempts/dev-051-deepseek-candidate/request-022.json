@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "People who do not vote for the Bharatiya Janata Party (BJP) in the 2020 elections will not get the COVID vaccine free of cost.",
+        "query": "Election Commission of India 2020 Bihar BJP free vaccine complaint order primary record",
+        "candidates": [
+          {
+            "title": "Election Commission Says BJP's Free Covid Vaccine Promise Not A Poll ...",
+            "snippet": "The BJP's promise of providing free coronavirus vaccine in its manifesto for the Bihar assembly polls is not in violation of the provisions ...",
+            "url": "https://www.ndtv.com/india-news/election-commission-says-bjps-free-covid-vaccine-promise-not-a-poll-code-violation-explains-why-2318529"
+          },
+          {
+            "title": "BJP vaccine promise not a violation of poll code, says EC | Elections News",
+            "snippet": "The BJP's promise of free Covid-19 vaccine to the people of Bihar in its election manifesto is not violative of the Model Code of Conduct (MCC),",
+            "url": "https://indianexpress.com/elections/bihar-elections-bjp-covid-vaccine-promise-ec-6910752/"
+          },
+          {
+            "title": "Bihar assembly election 2020: BJP's promise of free vaccine not a violation ...",
+            "snippet": "Bihar assembly election 2020: BJP's promise of free vaccine not a violation of election code, says EC. Union finance minister Nirmala Sitharaman ...",
+            "url": "https://m.hindustantimes.com/bihar-election/bihar-assembly-election-2020-bjp-s-promise-of-free-vaccine-not-a-violation-of-election-code-says-ec/story-RTILpF89ArSTTIbKYxZaeM.html"
+          },
+          {
+            "title": "BJP's free vaccine promise in Bihar not a violation of poll code, says Election ...",
+            "snippet": "Bihar polls BJP's free vaccine promise in Bihar not a violation of poll code, says Election Commission",
+            "url": "https://scroll.in/latest/977300/bjps-free-covid-vaccine-promise-in-bihar-not-a-violation-of-poll-code-says-election-commission"
+          },
+          {
+            "title": "BJP's vaccine vow may be immune from EC action",
+            "snippet": "BJP's poll manifesto promise for “free Covid-19 vaccine” in Bihar, legal experts and former Election Commission officials are of the opinion ...",
+            "url": "https://timesofindia.indiatimes.com/elections/assembly-elections/bihar/bjps-vaccine-vow-may-be-immune-from-ec-action/articleshow/78819495.cms"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-051-deepseek-candidate",
+  "timestamp": "2026-11-06T08:07:44.629730+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 19653.953
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls evidence",
+        "candidates": [
+          {
+            "title": "Klobuchar misfires with debate salvo on Wisconsin voter ...",
+            "snippet": "“While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls.” Mostly False. Legal ...",
+            "url": "https://politifact.com/factchecks/2020/mar/02/amy-klobuchar/klobuchar-misfires-wisconsin-voter-claim/"
+          },
+          {
+            "title": "Did you miss the South Carolina debate? Read the transcript",
+            "snippet": "And then, finally, voting. While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting ...",
+            "url": "https://www.wcax.com/content/news/Did-you-miss-the-South-Carolina-debate-Read-the-transcript-568212241.html"
+          },
+          {
+            "title": "Democratic Candidates Debate in Charleston, South Carolina",
+            "snippet": "And then, finally, voting. While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting ...",
+            "url": "https://www.presidency.ucsb.edu/documents/democratic-candidates-debate-charleston-south-carolina-0"
+          },
+          {
+            "title": "Transcript: The first night of the second Democratic debate",
+            "snippet": "BASH: Senator Amy Klobuchar? KLOBUCHAR: Let's get real. Tonight we debate, but ultimately, we have to beat Donald Trump. My background, it's a ...",
+            "url": "https://www.washingtonpost.com/politics/2019/07/31/transcript-first-night-second-democratic-debate/"
+          },
+          {
+            "title": "Resumed; Congressional Record Vol. 172, No. 50 (Senate",
+            "snippet": "... said: Look, it is the Senate, we have to have a debate, and caused us to take turns. That seems like a small thing, but it is not a small ...",
+            "url": "https://www.congress.gov/congressional-record/volume-172/issue-50/senate-section/article/S1314-1"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-03T08:39:25.206605+00:00",
+  "status": "reserved_outcome_unknown"
+}

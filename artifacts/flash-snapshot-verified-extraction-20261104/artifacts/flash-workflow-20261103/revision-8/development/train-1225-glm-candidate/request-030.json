@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "Search for critiques or revised estimates of the PPP bottom-125-million figure from other economists or fact-checkers",
+        "candidates": [
+          {
+            "title": "Global Poverty Revisited Using 2021 PPPs and",
+            "snippet": "by E Foster · 2025 · Cited by 34 — The international poverty line, which is based on the typical poverty line in low-income countries, increases by around 40 percent to. $3.00 ... Read more",
+            "url": "https://documents1.worldbank.org/curated/en/099503206032533226/pdf/IDU-e2e09dcf-0af2-481a-a60a-64adf28171d0.pdf"
+          },
+          {
+            "title": "PPP Fraud: Big Numbers, Bigger Numbers to Go",
+            "snippet": "Sep 6, 2024 — Congress acted swiftly to prevent the worst consequences, appropriating $2.2 trillion within weeks through the Coronavirus Aid, Relief, and ... Read more",
+            "url": "https://www.taf.org/fbtn2024-covidfraud/"
+          },
+          {
+            "title": "The looting of the Covid relief plan known as PPP",
+            "snippet": "Mar 28, 2022 — The official in charge of Covid relief tells NBC News' Lester Holt that programs like PPP were structured in ways that were \"an invitation\" to ... Read more",
+            "url": "https://www.nbcnews.com/politics/justice-department/biggest-fraud-generation-looting-covid-relief-program-known-ppp-n1279664"
+          },
+          {
+            "title": "What Is Purchasing Power Parity (PPP), and How Is It ...",
+            "snippet": "Economists use PPP to compare standards of living, economic productivity, and GDP across countries. PPP -adjusted GDP can provide a more realistic picture of ... Read more",
+            "url": "https://www.investopedia.com/updates/purchasing-power-parity-ppp/"
+          },
+          {
+            "title": "$3 a day: A new poverty line has shifted the World Bank's ...",
+            "snippet": "by J Hasell · 2025 · Cited by 3 — In June 2025, the World Bank increased its extreme poverty estimates by 125 million people. This doesn't mean the world has gotten poorer: ...",
+            "url": "https://ourworldindata.org/new-international-poverty-line-3-dollars-per-day"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-03T15:22:12.091383+00:00",
+  "status": "reserved_outcome_unknown"
+}

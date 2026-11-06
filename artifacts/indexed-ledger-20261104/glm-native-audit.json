@@ -1,0 +1,52 @@
+{
+  "auditor": "root native Codex; same-family/provisional judgment; not human annotation",
+  "audited_record": "glm-anchor/result.json",
+  "record_sha256": "25f3e4d6d8732490371daaac5cedea82074ef0d2054d3cfcacb7856cf5ec1efe",
+  "plan": {
+    "scope_preserved": true,
+    "guidance_only": true,
+    "limitations": "Redundant role/wording/context assertions; none added as required factual obligations."
+  },
+  "native_compilation": {
+    "parsed": true,
+    "whole_claim_exact": true,
+    "lookup_retained": true,
+    "gate_eligible": false,
+    "guard_changes": false
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "selected": "S1/P3",
+      "supported": false,
+      "reason": "Main negative-search finding is present, but the quoted Pants on Fire rating is outside selected P3 (in P1/P4); punctuation-normalized quote is not the complete issue."
+    },
+    {
+      "id": "F2",
+      "selected": "S2/P2",
+      "supported": false,
+      "reason": "Lyons attribution/fabrications are present, but Feb.26 date is in P1, and inventor of fake news is from other sources, not this selected Snopes passage."
+    },
+    {
+      "id": "F3",
+      "selected": "S3/P1",
+      "supported": false,
+      "reason": "Satirical author attribution is present; Newsweek was unable to find any evidence appears in P3, not selected P1. Independently traced is stronger than selected text establishes."
+    },
+    {
+      "id": "F4",
+      "selected": "S2/P4",
+      "supported": false,
+      "reason": "Praise and a related negative comparison are visible, but P4 truncates the statement mid-sentence. It alone does not establish the claimed absence of the specific comparison in the complete statement."
+    },
+    {
+      "id": "F5",
+      "selected": "S4/P1",
+      "supported": false,
+      "reason": "Negative Reuters snippet is present; separately described headline is source metadata, outside selected passage. Full methodology remains absent."
+    }
+  ],
+  "origin_summary": "Documented searches are distinguishable from shared alleged tweet. No official denial is invented. However S3 origin passages omit P4 containing completed no-response sentence; several dates/actions use broader context. Summary says independent fact-checks while sources_independent=false. Preserve all uncertainty; this is not established independent corroboration.",
+  "jev": "All five support probabilities >=0.88 using broader context. These do not repair strict selected-passage failures; no provenance call because other gaps block.",
+  "decision": "Decisive selected-passage fidelity failure. Close before control proxy/DeepSeek; no development release; no retries/repair/pruning."
+}

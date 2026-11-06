@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A “new virus” disease called Novel Bunya V!rus that is caused by ticks is diagnosed as severe fever with thrombocytopenia syndrome (SFTS) is spreading in China.",
+        "query": "Peer-reviewed seroprevalence or case series of SFTSV in Jiangsu 2020 independent of Global Times reporting",
+        "candidates": [
+          {
+            "title": "Seroprevalence of severe fever with thrombocytopenia ... - PMC",
+            "snippet": "by JM SUN · 2014 · Cited by 41 — Overall, 5·51% (76/1380) of blood samples were seropositive for SFTSV and seroprevalence varied significantly between sites within Zhejiang province (1·50–10·57 ... Read more",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4411641/"
+          },
+          {
+            "title": "Seroprevalence of severe fever with thrombocytopenia ...",
+            "snippet": "by P Li · 2017 · Cited by 61 — The overall pooled seroprevalence of SFTSV antibodies was 4.3% in Jiangsu province ) was 3.3% (95%CI: 2.4%-4.2%). 3.2%-5.4%).",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175592"
+          },
+          {
+            "title": "Detection of severe fever with thrombocytopenia syndrome ...",
+            "snippet": "by S Liang · 2022 · Cited by 1 — The detection rates of SFTSV total antibodies were 43.7% (7/16) and 3.6% (48/1,339) in SFTSV RNA-positive and SFTSV RNA-negative samples, respectively (Table 2) ... Read more",
+            "url": "https://jphe.amegroups.org/article/view/8006/html"
+          },
+          {
+            "title": "Current National and Global Status of Severe Fever with ...",
+            "snippet": "Aug 1, 2024 — a total of 1,185 cases has been reported . From 2017 to 2020 , annual SFTS case reports ranged from 200 to 250, and from 150 to 200 since 2021. ...",
+            "url": "https://id-info.jihs.go.jp/en/risk-assessment/severe-fever-with-thrombocytopenia-syndrome/20240801/index.html"
+          },
+          {
+            "title": "Severe Fever with Thrombocytopenia Syndrome (SFTS)",
+            "snippet": "by MR Bhuiyan · 2026 — Serological studies from China have detected SFTSV antibodies in cattle, sheep, dogs, and pigs, with high seroprevalence in areas where human ... Read more",
+            "url": "https://researcherslinks.com/articles/severe-fever-with-thrombocytopenia-13100"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-246-deepseek-candidate",
+  "timestamp": "2026-11-06T05:00:08.722784+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8398.031
+}

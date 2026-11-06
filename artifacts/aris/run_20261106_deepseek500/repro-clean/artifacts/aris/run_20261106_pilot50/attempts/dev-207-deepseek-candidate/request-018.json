@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "At independence, Nigeria had a population of 45 million.",
+        "query": "Nigeria 1960 official statistical yearbook population estimate census",
+        "candidates": [
+          {
+            "title": "Nigeria Population (2026)",
+            "snippet": "Population of Nigeria (2026 and historical) ; 1970, 55,893,838, +2.22% ; 1965, 50,086,764, +2.14% ; 1960, 45,053,782 , +1.94% ; 1955, 40,935,634, +1.89% ... Read more",
+            "url": "https://www.worldometers.info/world-population/nigeria-population/"
+          },
+          {
+            "title": "1960 Census of Population: Advance Reports, Final ...",
+            "snippet": "May 15, 2023 — This series consists of 52 reports — one each for the United States, 50 States, and the District of Columbia.",
+            "url": "https://www.census.gov/library/publications/1960/dec/population-pc-a1.html"
+          },
+          {
+            "title": "UNSD — Demographic and Social Statistics - UN.org.",
+            "snippet": "The Demographic Yearbook disseminates statistics on population size and composition, national official population estimates - 1989 1970 - 1979 1960 - 1969 1948 ...",
+            "url": "https://unstats.un.org/unsd/demographic-social/products/dyb/"
+          },
+          {
+            "title": "In 1962, Nigeria conducted a population census ...",
+            "snippet": "Conducted in May 1962, the initial count reported 45.26 million Nigerians. had a population of 23.25 million, while the Northern Region had 22. ...",
+            "url": "https://www.facebook.com/HistoricalnigeriaYoruba/posts/in-1962-nigeria-conducted-a-population-census-that-challenged-the-existing-balan/122311330472076276/"
+          },
+          {
+            "title": "Nigerian population estimated in census years and implied ...",
+            "snippet": "Table 6 shows the different census estimates for colonial and post-colonial Nigeria … between the 1953 and 1962/3 censuses , Statistical Yearbook .",
+            "url": "https://www.researchgate.net/figure/Nigerian-population-estimated-in-census-years-and-implied-compound-annual-growth-rates_tbl3_262269544"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-207-deepseek-candidate",
+  "timestamp": "2026-11-06T00:09:36.191248+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 3241.5
+}

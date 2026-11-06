@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "India’s imports from China increased by 27% in April-August 2020",
+        "query": "Ministry of Commerce and Industry India April-August 2020 China imports trade data press release",
+        "candidates": [
+          {
+            "title": "US International Trade in Goods and Services, September 2026",
+            "snippet": "The U.S. goods and services trade deficit decreased in September 2026 according to the U.S. Bureau of Economic Analysis and the U.S. Census ...",
+            "url": "https://www.bea.gov/data/intl-trade-investment/international-trade-goods-and-services"
+          },
+          {
+            "title": "Press Releases",
+            "snippet": "U.S. Department of Commerce Announces Final Circumvention Decision on Imports of Hydrofluorocarbon Blends from China ... Exports of Hydrofluorocarbon ...",
+            "url": "https://www.trade.gov/press-releases"
+          },
+          {
+            "title": "Trade in Goods with China Available years: 2026 | 2025 | 2024 | 2023 | 2022",
+            "snippet": "2020 : U.S. trade in goods with China ; June 2020, 9,240.6, 37,286.9, -28,046.2 ; July 2020, 9,090.1, 40,469.8, -31,379.8.",
+            "url": "https://www.census.gov/foreign-trade/balance/c5700.html"
+          },
+          {
+            "title": "China is one of the leading trade partners of India, constituting 9 ...",
+            "snippet": "",
+            "url": "https://www.facebook.com/cnbctv18india/posts/china-is-one-of-the-leading-trade-partners-of-india-constituting-9-percent-of-in/3155868184450558/"
+          },
+          {
+            "title": "Statistics - GACC",
+            "snippet": "Preliminary Release. (1) China's Total Export & Import Values, Sep 2026(in CNY) · (1) China's Total Export & Import Values, Sep 2026 (in USD) · (2) China's ...",
+            "url": "http://english.customs.gov.cn/Statistics/Statistics"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-054-deepseek-candidate",
+  "timestamp": "2026-11-06T08:17:01.922958+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 20211.218
+}

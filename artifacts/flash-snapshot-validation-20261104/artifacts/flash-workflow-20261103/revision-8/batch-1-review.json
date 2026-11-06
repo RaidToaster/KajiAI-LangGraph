@@ -1,0 +1,91 @@
+{
+  "attempted_new": 2,
+  "reused_attempts": 14,
+  "matched_cases_per_model": 2,
+  "glm": {
+    "train-1209": {
+      "prediction": "Refuted",
+      "accepted": "ABSTAIN",
+      "errors": [
+        "Page fetch failed for https://www.nytimes.com/2020/01/13/us/wisconsin-voter-purge.html: target_http_error"
+      ],
+      "search_queries": [
+        "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls evidence",
+        "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls counterevidence",
+        "Retrieve the full Politifact ruling and Wisconsin Election Commission records from February 2020 on the 190,000+ voter purge and court stay to independently evaluate the underlying accuracy claim.",
+        "Judge finds Wisconsin elections commissioners in contempt of court, orders them to quickly remove people from the rolls, Milwaukee Journal Sentinel, Jan. 13, 2020.",
+        "Retrieve the full Politifact ruling text for the March 2, 2020 Klobuchar Wisconsin fact-check, including its final Truth-O-Meter rating.",
+        "Appeals court blocks purge of Wisconsin voter rolls for the time being, Milwaukee Journal Sentinel, Jan. 14, 2020."
+      ],
+      "round_proposals": [
+        "TRUE",
+        "TRUE",
+        "FALSE"
+      ],
+      "ollama_assessments": [
+        {
+          "output_tokens": 369,
+          "finish": "stop",
+          "verdict_field": true,
+          "start_marker": true,
+          "end_marker": true
+        },
+        {
+          "output_tokens": 500,
+          "finish": "stop",
+          "verdict_field": true,
+          "start_marker": true,
+          "end_marker": true
+        },
+        {
+          "output_tokens": 740,
+          "finish": "stop",
+          "verdict_field": true,
+          "start_marker": true,
+          "end_marker": true
+        }
+      ]
+    },
+    "train-1218": {
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "errors": [
+        "Analysis failed: ValueError: Expected one complete assessment block"
+      ],
+      "search_queries": [
+        "US Senator Bernie Sanders was opposed to Obamacare. evidence",
+        "US Senator Bernie Sanders was opposed to Obamacare. counterevidence"
+      ],
+      "round_proposals": [
+        "UNVERIFIED"
+      ],
+      "ollama_assessments": [
+        {
+          "output_tokens": 286,
+          "finish": "stop",
+          "verdict_field": true,
+          "start_marker": false,
+          "end_marker": false
+        }
+      ]
+    }
+  },
+  "scientific_status": "No accepted verdicts. One of two new GLM cells completed all rounds, including reference retrieval; the other retained a line-format failure. Frozen development guard remains reachable.",
+  "actual_usage": {
+    "jev": 17,
+    "jev_input_tokens": 41385,
+    "jev_output_tokens": 4471,
+    "tinyfish_search": 8,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 16,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "ollama": 4,
+    "ollama_input_tokens": 10613,
+    "ollama_output_tokens": 1895,
+    "ollama_estimated_usd": 0.00253945,
+    "jev_estimated_usd": 0.00173817
+  },
+  "analysis_sha256": "d99c3573eed9d14761cb8c160090d5f8ad2c06b108375ebdfae41c6ef79cfd41"
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3.",
+        "query": "You’re watching the cheaters and all those people that send in the phony ballots. … They want to have the count weeks after November 3. counterevidence",
+        "candidates": [
+          {
+            "title": "Exhaustive fact check finds little evidence of voter fraud ... - PBS",
+            "snippet": "Either they had mailed them or dropped them off and those ballots showed up after they had voted in person, whether in early voting or on ...",
+            "url": "https://www.pbs.org/newshour/show/exhaustive-fact-check-finds-little-evidence-of-voter-fraud-but-2020s-big-lie-lives-on"
+          },
+          {
+            "title": "The Myth of Voter Fraud | Brennan Center for Justice",
+            "snippet": "Extensive research reveals that fraud is very rare. Yet repeated, false allegations of fraud can make it harder for millions of eligible Americans to ...",
+            "url": "https://www.brennancenter.org/topics/voting-elections/vote-suppression/myth-voter-fraud"
+          },
+          {
+            "title": "Voter fraud happens, but election offices have safeguards",
+            "snippet": "Yes, voter fraud happens. But it's rare and election offices have safeguards to catch it · What's stopping people from committing voter fraud?",
+            "url": "https://whyy.org/articles/elections-2024-voter-fraud-ballots/"
+          },
+          {
+            "title": "- EXAMINING IRREGULARITIES IN THE 2020 ELECTION",
+            "snippet": "... fraud, especially when the State did not first purge or verify those addresses and they sent thousands of ballots to people that no longer lived there? I have ...",
+            "url": "https://www.govinfo.gov/content/pkg/CHRG-116shrg43071/html/CHRG-116shrg43071.htm"
+          },
+          {
+            "title": "FACT CHECK: Trump Falsely Claims That Votes Shouldn't Be ...",
+            "snippet": "Trump also suggested that voters should have mailed in their ballots well before the deadlines set by states, saying, \"If people wanted to get ...",
+            "url": "https://www.npr.org/2020/11/01/930140373/fact-check-trump-falsely-claims-that-votes-shouldnt-be-counted-after-election-da"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-008-deepseek-baseline",
+  "timestamp": "2026-11-06T05:47:47.262867+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11256.578
+}

@@ -1,0 +1,13 @@
+# SUPERSEDED — use PILOT_50_NEXT_SESSION_PROMPT.md
+
+Latest2026-11-06userrequest:50sameAVeriTeCcases x candidate/baseline x bothexactFlashmodels=200freshattempts, measuretokens/time/costandstopbeforedecidingon500. PILOT_50_NEXT_SESSION_PROMPT.md/PILOT_50_HANDOFF.md containthenewprospectivepilotscope. Earlierqualificationgoalpromptbelowishistorical,notthenexttask.
+
+/goal Continue and complete the KajiAI-LangGraph workflow-improvement study in D:\Projects\!skripsi\KajiAI-LangGraph.
+
+Read AGENTS.md, NEXT_SESSION_STATE.md, CONTINUE_RESEARCH_PROMPT.md, and the latest handoff/continuation sections first. They contain the authoritative checkpoint; do not restart from historical next-step instructions. Verify actual records and that the old chat/worker is stopped before dispatching anything. Preserve the dirty tree and every historical failure/source archive/usage record. Never use GPT-6 Astra.
+
+The goal remains a qualified improvement under the unchanged8-case/model development and untouched12-case/model confirmation guards, then500candidate+500matchedcurrent-baseline attempts on EACH exact model glm-5.3-flash:cloud and deepseek-v4.1-flash:cloud using the same frozen final manifest:2000finalattempts. No final run is released yet. Deliver verified venue-neutral PDF,editable source and reproducibility package with raw traceability and the requested decomposition/ledger comparison.
+
+Move quickly: submission target was three days fromNov5. I chose KEEP TINYFETCH and accepted likely deadline overrun; do not switch to publicHTTP. I may manually switch to Builder when free limits run out; screenshots show12USDwallet/auto-reloadoff. Prepare concrete costs/spend cap and verify actualdailyquota before paidrequests; don't upgrade/topup/changebilling automatically. Expanded justified diagnostic authority persists, but scientificguards/callcaps/oneworker/twothreads/300s and existingcredit constraints remain.
+
+Latestproofnativephase is CLOSEDFAILED: sixfindings faithful, but ISS1 reason invents a specific Newsweek search method.27Flash/8Jev continuationcalls fullyaccounted; noactiveworker, no confirmation/finalattempts.172tests pass but no candidate qualifies. Address that concrete remaining semantic-output failure with a justified new mechanism/freeze, not more confidence wording or old-phase retries. Then promptly execute original development/confirmation screens if both-model native fidelity passes. Native truthful abstention may establish engineering readiness only, never efficacy. Own implementation,experiments,analysis and paper verification end to end; don't stop at a plan or negative snapshot.

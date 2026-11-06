@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages. original source fact check",
+        "candidates": [
+          {
+            "title": "Covid: Do all tier 3 area workers get 80% of their wages?",
+            "snippet": "Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of ...",
+            "url": "https://www.bbc.co.uk/news/54633147"
+          },
+          {
+            "title": "Access to Work: get support if you have a disability or health condition",
+            "snippet": "Access to Work can help you get or stay in work if you have a physical or mental health condition or disability. The support you get will depend on your needs.",
+            "url": "https://www.gov.uk/access-to-work"
+          },
+          {
+            "title": "Getting Universal Credit if you're sick or disabled",
+            "snippet": "If you have difficulty working because you're sick or disabled, you might: get more Universal Credit not have to look for work while you get Universal Credit",
+            "url": "https://www.citizensadvice.org.uk/benefits/universal-credit/if-youre-sick-or-disabled/getting-universal-credit-if-youre-sick-or-disabled/"
+          },
+          {
+            "title": "Limited Capability for Work and Work-Related Activity (LCWRA) Guide",
+            "snippet": "LCWRA is a category within Universal Credit (UC) for people whose health condition or disability severely limits their ability to work. Being in this category ...",
+            "url": "https://carescribe.io/blog/limited-capability-for-work-and-work-related-activity-lcwra-guide/"
+          },
+          {
+            "title": "Welfare reform: health-related and disability benefits",
+            "snippet": "On this page: Personal independence payment; Universal credit; Work capability assessment; Health assessments for PIP, UC and ESA; Employment ...",
+            "url": "https://cpag.org.uk/welfare-rights/whats-new/welfare-reform-health-and-disability-benefits"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-baseline",
+  "timestamp": "2026-11-06T08:32:44.467532+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21153.765
+}

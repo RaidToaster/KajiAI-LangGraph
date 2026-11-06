@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Bernie Sanders was opposed to Obamacare.",
+        "query": "Did Bernie Sanders publicly oppose the Affordable Care Act (Obamacare) before its passage in 2010?",
+        "candidates": [
+          {
+            "title": "Joe Biden Claims Bernie Sanders Opposed Obamacare",
+            "snippet": "Sanders voted for the passage of Obamacare, even though he did not like that it did not include a public option. Before voting for the bill, ...",
+            "url": "https://www.nbcmiami.com/news/politics/politifact/politifact-joe-biden-leaves-out-key-facts-in-claim-that-bernie-sanders-opposed-obamacare/2200764/"
+          },
+          {
+            "title": "Joe Biden leaves out key facts in claim that Bernie Sanders ...",
+            "snippet": "Biden said Sanders “opposed Obamacare, didn't like the fact we didn't push a single-payer option.” Sanders voted for the passage of Obamacare, ...",
+            "url": "https://politifact.com/factchecks/2020/feb/27/joe-biden/joe-biden-leaves-out-key-facts-claim-bernie-sander/"
+          },
+          {
+            "title": "Obamacare Veterans Say Sanders Is Overstating His Role ...",
+            "snippet": "Politifact found Sanders to be overstating his role in crafting the ACA a bit. On his contention that he “helped write” the law, the fact ...",
+            "url": "https://www.buzzfeednews.com/article/evanmcsan/obamacare-veterans-say-sanders-is-overstating-his-role-in-cr"
+          },
+          {
+            "title": "Bernie Sanders's claim that he would expand, not ...",
+            "snippet": "Sanders did not directly dispute her claim but said the bill would have expanded, not eliminated, Medicare. , a.k.a. Obamacare.",
+            "url": "https://www.washingtonpost.com/news/fact-checker/wp/2015/11/23/bernie-sanderss-claim-that-he-would-expand-not-dismantle-the-affordable-care-act/"
+          },
+          {
+            "title": "Senator Bernie Sanders Explains Why Obamacare Isn't Enough",
+            "snippet": "Senator Bernie Sanders explains why he protected the Affordable Care Act while pushing for Medicare for all and reveals his past as a carpenter ...",
+            "url": "https://www.youtube.com/watch?v=nb6XA9XS_ic"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1218-glm-candidate",
+  "timestamp": "2026-11-05T10:04:34.326911+00:00",
+  "status": "reserved_outcome_unknown"
+}

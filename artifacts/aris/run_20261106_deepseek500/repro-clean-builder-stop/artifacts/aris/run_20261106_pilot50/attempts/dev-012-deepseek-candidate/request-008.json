@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "New Zealand’s new Food Bill bans gardening",
+        "query": "Does the text of the New Zealand Food Bill contain any provision that bans or restricts gardening, and if so, what is the exact wording?",
+        "candidates": [
+          {
+            "title": "How to declare items when arriving in NZ",
+            "snippet": "Everyone travelling into New Zealand must complete a New Zealand Traveller Declaration; declare all risk items – like food, plants, wooden ...",
+            "url": "https://www.mpi.govt.nz/bring-send-to-nz/bringing-and-posting-items-to-nz/how-to-declare-items-when-arriving-in-nz"
+          },
+          {
+            "title": "What you can and can't bring",
+            "snippet": "Some items are prohibited: you can't bring or import these into New Zealand. · Some items are restricted: you need approval to import or export ...",
+            "url": "https://www.customs.govt.nz/travel-to-and-from-new-zealand/prohibited-and-restricted-items"
+          },
+          {
+            "title": "Food Standards Code Compilation",
+            "snippet": "FSANZ is committed to ensuring that our content is accessible to all users. While we strive to make all documents compliant with accessibility standards, some ...",
+            "url": "https://www.foodstandards.gov.au/sites/default/files/2025-03/Food%20Standards%20Code%20-%20Compilation%20%28March%202025%29.pdf"
+          },
+          {
+            "title": "New Labels for Bioengineered Foods: What the Public ...",
+            "snippet": "What Do the New Labels Mean for Me and My Family? Familiar foods may soon have text or a symbol disclosing that they contain bioengineered food, or you may ...",
+            "url": "https://extension.rutgers.edu/fs1334"
+          },
+          {
+            "title": "Text - H.R.1 - 119th Congress (2025-2026): An act to ...",
+            "snippet": "Text for H.R.1 - 119th Congress (2025-2026): An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+            "url": "https://www.congress.gov/bill/119th-congress/house-bill/1/text"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-012-deepseek-candidate",
+  "timestamp": "2026-11-06T00:53:56.330543+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5901.64
+}

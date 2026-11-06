@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "What details does the fact check identify as missing from Harris' statement about Lincoln's Supreme Court nomination?",
+        "candidates": [
+          {
+            "title": "Fact check: Harris' lesson on Lincoln Supreme Court nom ...",
+            "snippet": "\"Kamala Harris' use of Lincoln to justify not nominating a Supreme Court Justice was totally false. The Senate was not in session and the minute ...",
+            "url": "https://www.usatoday.com/story/news/factcheck/2020/10/13/fact-check-harris-lesson-lincoln-supreme-court-nom-lacks-detail/5943183002/"
+          },
+          {
+            "title": "Kamala Harris, Honest Abe and the Supreme Court",
+            "snippet": "There's no evidence that Lincoln said he delayed the nomination to let voters choose the next president, as Harris said.",
+            "url": "https://www.factcheck.org/2020/10/kamala-harris-honest-abe-and-the-supreme-court/"
+          },
+          {
+            "title": "Kamala Harris's 'little history lesson' about Lincoln's ...",
+            "snippet": "Harris is correct that a seat became available 27 days before the election. And that Lincoln didn't nominate anyone until after he won.",
+            "url": "https://www.washingtonpost.com/history/2020/10/08/lincoln-supreme-court-kamala-harris/"
+          },
+          {
+            "title": "Why Lincoln didn't appoint a justice amid 1864 election",
+            "snippet": "Kamala Harris claimed that President Lincoln chose not to nominate a Supreme Court justice until after the election because he wanted the people ...",
+            "url": "https://www.13newsnow.com/article/news/verify/verify-why-abraham-lincoln-chose-not-to-appoint-a-supreme-court-justice-during-the-1864-election/507-c6ff8887-900b-46b8-aae5-f5b8cd87442e"
+          },
+          {
+            "title": "Harris jumped to conclusions on Lincoln's court nomination",
+            "snippet": "Democratic vice presidential candidate Kamala Harris invoked Abraham Lincoln to say why a nominee to succeed the late Justice Ruth Bader ...",
+            "url": "https://politifact.com/article/2020/oct/08/kamala-harris-jumped-conclusions-about-abraham-lin/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-deepseek-candidate",
+  "timestamp": "2026-11-06T01:16:06.559768+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7231.859
+}

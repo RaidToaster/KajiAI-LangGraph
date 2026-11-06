@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Hyderabad Metropolitan Water Supply and Sewerage Board (HMWSSB) is delivering 1kg bleaching powder, chlorine tablets to people’s doorsteps",
+        "query": "HMWSSB press release OR official notification doorstep distribution bleaching powder chlorine tablets Hyderabad October 2020",
+        "candidates": [
+          {
+            "title": "K Ashok Reddy, IAS",
+            "snippet": "As precaution pl mix the water with chlorine tablets. Chlorine tablets are distributed by HMWSSB staff at your doorstep. 11:20 PM · Oct 15, 2020·.",
+            "url": "https://x.com/mdhmwssb/status/1316987375491239936"
+          },
+          {
+            "title": "Government distributes chlorine tablets in flood-hit areas",
+            "snippet": "Health department officials are now distributing chlorine tablets and bleaching powder in panchayats so that people would get clean water for ...",
+            "url": "https://reliefweb.int/report/india/government-distributes-chlorine-tablets-flood-hit-areas"
+          },
+          {
+            "title": "Distribution of bleaching powder, alum, phenyle, halogen ...",
+            "snippet": "Distribution of bleaching powder, alum, phenyle, halogen tablets with leaflets and drinking water pouch at Gaurnagar flood relief camps.",
+            "url": "https://www.facebook.com/goalpara.gov.in/posts/distribution-of-bleaching-powder-alum-phenyle-halogen-tablets-with-leaflets-and-/2659158677635561/"
+          },
+          {
+            "title": "Special HMWSSB Team Deployed in Karwan Constituency ...",
+            "snippet": "Special HMWSSB Team Deployed in Karwan Constituency for Door-to-Door Distribution of Chlorine Tablets In response to the recent surge in ...",
+            "url": "https://www.facebook.com/kausarmohiuddinkarwan/posts/special-hmwssb-team-deployed-in-karwan-constituency-for-door-to-door-distributio/1255136472741079/"
+          },
+          {
+            "title": "National Symposium on Safe Water and Disinfection",
+            "snippet": "1. Chlorination with bleaching powder in PWSS. 10,796. 51, 03, 264. 122.0 MT (approx.) 2. Distribution of NaDCC tablets during emergency. -. Flood affected ...",
+            "url": "https://master-jalshakti-ddws.digifootprint.gov.in/static/uploads/2024/05/National-Symposium-on-Safe-Water-and-Disinfection-Chlorination-Initiatives-1.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-087-glm-candidate",
+  "timestamp": "2026-11-06T01:55:31.033018+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9596.343
+}

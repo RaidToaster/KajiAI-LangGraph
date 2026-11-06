@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Amy Coney Barrett was confirmed as US Supreme Court Justice on October 26, 2020",
+        "query": "Amy Coney Barrett was confirmed as US Supreme Court Justice on October 26, 2020 original source fact check",
+        "candidates": [
+          {
+            "title": "Amy Coney Barrett Confirmed To Supreme Court",
+            "snippet": "The Senate has voted 52-48 to confirm Judge Amy Coney Barrett to the Supreme Court, just about a week before Election Day and 30 days after ...",
+            "url": "https://www.npr.org/2020/10/26/927640619/senate-confirms-amy-coney-barrett-to-the-supreme-court"
+          },
+          {
+            "title": "Senate Confirms Amy Coney Barrett for Supreme Court",
+            "snippet": "Following a unanimous vote by the Judiciary Committee last week, the Senate just confirmed Seventh Circuit Court of Appeals Judge Amy Coney ...",
+            "url": "https://trumpwhitehouse.archives.gov/articles/senate-confirms-amy-coney-barrett-supreme-court/"
+          },
+          {
+            "title": "Amy Coney Barrett Supreme Court nomination",
+            "snippet": "In the subsequent confirmation vote on the 26th, the Senate voted 52–48 in favor of confirming Amy Coney Barrett as an Associate Justice to the Supreme Court.",
+            "url": "https://en.wikipedia.org/wiki/Amy_Coney_Barrett_Supreme_Court_nomination"
+          },
+          {
+            "title": "Justice Amy Coney Barrett",
+            "snippet": "The full Senate confirmed Barrett by a 52-48 vote on October 26. She was the first Supreme Court Justice since the 19th century to receive confirmation ...",
+            "url": "https://supreme.justia.com/justices/amy-coney-barrett/"
+          },
+          {
+            "title": "Amy Coney Barrett",
+            "snippet": "She served as a federal appeals judge for three years before being confirmed as a U.S. Supreme Court Justice in October 2020. Born Amy Vivian Coney in New ...",
+            "url": "https://www.oyez.org/justices/amy_coney_barrett"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-031-deepseek-baseline",
+  "timestamp": "2026-11-06T07:14:56.978499+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16486.296
+}

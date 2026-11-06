@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Sen. Lindsey Graham said \"President Donald Trump probably knows more about medicine and specifically viruses than the so called scientists at the NIH and CDC\".",
+        "query": "Retrieve the full Reuters and CheckYourFact fact-check pages to confirm their detailed findings beyond headline snippets.",
+        "candidates": [
+          {
+            "title": "Reuters Fact Check",
+            "snippet": "Reuters Fact Check addresses online misinformation with coverage that maintains accuracy, integrity and impartiality. The unit is part of Reuters news ...",
+            "url": "https://www.reuters.com/fact-check/"
+          },
+          {
+            "title": "About Reuters Fact Check",
+            "snippet": "The principal aim of this unit is to fact-check visual material and claims posted on social media. The fact-checking producers in this unit report their ...",
+            "url": "https://www.reuters.com/fact-check/about/"
+          },
+          {
+            "title": "FactCheck.org - A Project of The Annenberg Public Policy Center",
+            "snippet": "Home; Articles. FactCheck Posts · SciCheck · En Español · Players Guide 2026 · Project 2025 series · Debunking Viral Claims. Ask a Question.",
+            "url": "https://www.factcheck.org/"
+          },
+          {
+            "title": "Web Sites for Fact Checking - Misinformation and ... - CSI Library",
+            "snippet": "Fact-checking journalism is the heart of PolitiFact. Our core principles are independence, transparency, fairness, thorough reporting and ...",
+            "url": "https://library.csi.cuny.edu/misinformation/fact-checking-websites"
+          },
+          {
+            "title": "List of fact-checking websites - Wikipedia",
+            "snippet": "This list of fact-checking websites includes websites that provide fact-checking services about both political and non-political subjects.",
+            "url": "https://en.wikipedia.org/wiki/List_of_fact-checking_websites"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1205-glm-candidate",
+  "timestamp": "2026-11-05T10:48:20.675832+00:00",
+  "status": "reserved_outcome_unknown"
+}

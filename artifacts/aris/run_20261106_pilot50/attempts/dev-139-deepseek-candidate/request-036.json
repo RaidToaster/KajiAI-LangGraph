@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "A campaign ad video for John Cornyn says that his plan would guarantee insurers must sell plans to any patient with preexisting conditions and will be covered in his plan.",
+        "query": "Search the FCC public files and political ad archives for a preserved copy or verified transcript of the 'Will Be Covered' Cornyn ad.",
+        "candidates": [
+          {
+            "title": "TV Station KVIH-TV - Profile Political Subfolder - FCC Public File",
+            "snippet": "Political Files ; PDF icon KVII TEXANS FOR SENATOR JOHN CORNYN-R 6981257 (Opens in new browser window), 94.62 KB, 05/19/2026 7:29 PM ; PDF icon Cornyn Lonestar ... Missing:  archives  preserved  copy  verified  transcript",
+            "url": "https://publicfiles.fcc.gov/tv-profile/kvih-tv/political-files/2026/federal/us-senate/cornyn/cornyn-lonestar-victory-fund-runoff/0edac74a-6270-f13e-360e-1d3b18c5857e"
+          },
+          {
+            "title": "FCC Public Inspection Files: Home",
+            "snippet": "This site provides summary information about, and access to, the “public inspection file” contact us at 1-877-480-3201. Phone: 1-888-225-5322 1-844-432-2275 Missing:  preserved  copy  verified  transcript  Cornyn",
+            "url": "https://publicfiles.fcc.gov/"
+          },
+          {
+            "title": "Democrat James Talarico launched a new TV ad accusing ...",
+            "snippet": "Texas State Representative James Talarico presents a political advertisement criticizing Attorney General Ken Paxton. Talarico alleges that ...",
+            "url": "https://www.facebook.com/eptimes/posts/democrat-james-talarico-launched-a-new-tv-ad-accusing-republican-ken-paxton-of-f/1560240596131235/"
+          },
+          {
+            "title": "Ad in Texas GOP Runoff Attacks Cornyn on Immigration, Islam",
+            "snippet": "A TV ad attacking incumbent Texas Sen. John Cornyn for supporting “Muslim mass immigration” misleadingly cites a 2021 quote from Cornyn ...",
+            "url": "https://www.factcheck.org/2026/05/ad-in-texas-gop-runoff-attacks-cornyn-on-immigration-islam/"
+          },
+          {
+            "title": "Cornyn cuts straight-to-camera ad on Trump - Punchbowl News",
+            "snippet": "Cornyn cuts straight-to-camera ad on Trump. In case you're tracking, the Texas Senate primary between Sen. John Cornyn (R-Texas) and Attorney ...",
+            "url": "https://punchbowl.news/article/senate/cornyn-ad-trump/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-139-deepseek-candidate",
+  "timestamp": "2026-11-06T01:23:32.299561+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7677.609
+}

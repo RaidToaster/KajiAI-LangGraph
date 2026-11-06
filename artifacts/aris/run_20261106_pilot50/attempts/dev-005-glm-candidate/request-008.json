@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The United States of America and its Western allies have been using their media outlets to publish articles based on fabricated information under allegations of non-compliance with the Chemical Weapons Convention.",
+        "query": "Is there documentary evidence (journalistic records, leaks, whistleblower accounts, court filings) showing that any of these articles were based on fabricated information?",
+        "candidates": [
+          {
+            "title": "We are the investigative journalists who worked on the Panama ...",
+            "snippet": "Apr 19, 2016 · The source decided to give the data to journalists and not, f.e., to Wikileaks. As journalists, we have to protect our source: We cant guarantee ...",
+            "url": "https://www.reddit.com/r/IAmA/comments/4fi6ck/we_are_the_investigative_journalists_who_worked/"
+          },
+          {
+            "title": "News outlets were leaked insider material from the Trump campaign ...",
+            "snippet": "Aug 15, 2024 · At least three news outlets were leaked confidential material from inside the Donald Trump campaign, including its report vetting JD Vance as a ...",
+            "url": "https://firstamendment.mtsu.edu/post/news-outlets-were-leaked-insider-material-from-the-trump-campaign-they-chose-not-to-print-it/"
+          },
+          {
+            "title": "Detailed Case Histories - Fostering Integrity in Research - NCBI - NIH",
+            "snippet": "After its formal investigation in 2005, a Seoul National University committee determined that both of Hwang's articles were based on fabricated data (SNU, 2006) ...",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK475955/"
+          },
+          {
+            "title": "Telltale Data Signs of Bogus Scientific Papers and Fraudulent ...",
+            "snippet": "Mar 21, 2025 · This fake research can confound legitimate researchers who must wade through dense equations, evidence, images, and methodologies, only to find ...",
+            "url": "https://gijn.org/stories/telltale-data-signs-fraudulent-academic-research/"
+          },
+          {
+            "title": "[PDF] The Implausibility of Secrecy - UF Law Scholarship Repository",
+            "snippet": "Feb 1, 2014 · 31 Thousands of officials with delegated authority classify and then seek to protect documents as secret; hundreds of thousands of documents are ...",
+            "url": "https://scholarship.law.ufl.edu/cgi/viewcontent.cgi?article=1384&context=facultypub"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:46:19.702826+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5445.015
+}

@@ -1,0 +1,111 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://www.axios.com/2019/06/28/candidates-support-healthcare-for-undocumented-immigrants-democratic-debate contains verbatim: Every single Democratic candidate at the Thursday debates said they support providing health care for undocumented immigrants in the United ...",
+            "url": "https://www.axios.com/2019/06/28/candidates-support-healthcare-for-undocumented-immigrants-democratic-debate",
+            "quote": "Every single Democratic candidate at the Thursday debates said they support providing health care for undocumented immigrants in the United ...",
+            "context": "Every single Democratic candidate at the Thursday debates said they support providing health care for undocumented immigrants in the United ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.youtube.com/watch?v=aMSmoNOZJ9Y contains verbatim: All Democrats on the stage raised their hands when asked if their health care plan would offer coverage for undocumented immigrants ...",
+            "url": "https://www.youtube.com/watch?v=aMSmoNOZJ9Y",
+            "quote": "All Democrats on the stage raised their hands when asked if their health care plan would offer coverage for undocumented immigrants ...",
+            "context": "All Democrats on the stage raised their hands when asked if their health care plan would offer coverage for undocumented immigrants ..."
+          },
+          {
+            "finding": "Retained full_page record for https://www.nbcnews.com/video/health-care-for-undocumented-immigrants-where-the-candidates-stand-62832710000 contains verbatim: In a show of hands, the candidates show if they support health care for undocumented immigrants. Mayor Pete Buttigieg and former Vice President Joe Biden explain their positions.June 28, 2019",
+            "url": "https://www.nbcnews.com/video/health-care-for-undocumented-immigrants-where-the-candidates-stand-62832710000",
+            "quote": "In a show of hands, the candidates show if they support health care for undocumented immigrants. Mayor Pete Buttigieg and former Vice President Joe Biden explain their positions.June 28, 2019",
+            "context": "the Senate race in Alaska takes so long to count\n\n  03:56\n* ## Election results yield historic firsts\n\n  01:39\n* ## Stock market surges on election results\n\n  00:59\n* ## Democrats take Congress in historic win\n\n  03:05\n* ## Tech moguls suffer defeat as midterm results show young men swinging away from Trump\n\n  02:53\n* ## Trump blames Iran war for GOP losses but says he would ‘do it again’\n\n  02:15\n* ## Trump answers questions from reporters after Republican midterm losses\n\n  06:47\n* ## Sen. Schumer: ‘We have seen a generational remake of the Senate map’\n\n  00:43\n* ## Hakeem Jeffries speaks after Democrats claim a majority in House and Senate\n\n  02:16\n* ## Full Special Report: Hakeem Jeffries says Democrats will deliver change after midterm win\n\n  04:48\n* ## Full Special Report: Chuck Schumer speaks after Democrats' midterm victory\n\n  15:42\n* ## Speaker Johnson has told staff he will not run for minority leader after GOP midterm losses\n\n  03:04\n* ## Nikki Haley to Republicans: ‘This is Not the Time to Whine’\n\n  03:29\n* ## House Democratic Leader Hakeem Jeffries Talks Midterm Results\n\n  03:28\n\n## NBC News\n\n# Health care for undocumented immigrants: Where the candidates stand\n\n03:09\n\nIn a show of hands, the candidates show if they support health care for undocumented immigrants. Mayor Pete Buttigieg and former Vice President Joe Biden explain their positions.June 28, 2019\n\nGet more newson\n\n* UP NEXT\n\n  ## Researchers find AI chatbots cited spoofed campaign websites ahead of midterms\n\n  05:15\n* ## New Contenders Emerge in Both Parties in Race for 2028\n\n  02:15\n* ## Data Centers Lose Big as Voters Voice Outrage in Midterms\n\n  02:27\n* ## Kornacki: Why the Midterm Election Results Are Historic\n\n  05:49\n* ## Democrats Preview Plan to Tackle Affordability, Investigate Trump\n\n  01:59\n* ## Republicans Point Fingers After Midterms Defeat\n\n  02:18\n\nGet more newson"
+          },
+          {
+            "finding": "Retained snippet record for https://www.yahoo.com/news/democratic-debate-health-care-undocumented-immigrants-020812191.html contains verbatim: \"We're talking about something people are given the opportunity to buy into in the same way that there are undocumented immigrants in my ...",
+            "url": "https://www.yahoo.com/news/democratic-debate-health-care-undocumented-immigrants-020812191.html",
+            "quote": "\"We're talking about something people are given the opportunity to buy into in the same way that there are undocumented immigrants in my ...",
+            "context": "\"We're talking about something people are given the opportunity to buy into in the same way that there are undocumented immigrants in my ..."
+          },
+          {
+            "finding": "Retained snippet record for https://ballotpedia.org/Presidential_debates,_2020 contains verbatim: The first of three presidential debates will take place on September 29, 2020, in Cleveland, Ohio. Case Western Reserve University and Cleveland Clinic will ...",
+            "url": "https://ballotpedia.org/Presidential_debates,_2020",
+            "quote": "The first of three presidential debates will take place on September 29, 2020, in Cleveland, Ohio. Case Western Reserve University and Cleveland Clinic will ...",
+            "context": "The first of three presidential debates will take place on September 29, 2020, in Cleveland, Ohio. Case Western Reserve University and Cleveland Clinic will ..."
+          },
+          {
+            "finding": "Retained snippet record for https://www.nytimes.com/2024/05/15/us/politics/biden-trump-debates.html?eafs_enabled=false contains verbatim: President Biden and Donald J. Trump have agreed to two debates, one on June 27 on CNN and one on Sept. 10 on ABC News, the first onstage ...",
+            "url": "https://www.nytimes.com/2024/05/15/us/politics/biden-trump-debates.html?eafs_enabled=false",
+            "quote": "President Biden and Donald J. Trump have agreed to two debates, one on June 27 on CNN and one on Sept. 10 on ABC News, the first onstage ...",
+            "context": "President Biden and Donald J. Trump have agreed to two debates, one on June 27 on CNN and one on Sept. 10 on ABC News, the first onstage ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_3": {
+          "type": "choice",
+          "instructions": "Does `citations[3].context`, including the quote, support `citations[3].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_4": {
+          "type": "choice",
+          "instructions": "Does `citations[4].context`, including the quote, support `citations[4].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_5": {
+          "type": "choice",
+          "instructions": "Does `citations[5].context`, including the quote, support `citations[5].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-482-deepseek-candidate",
+  "timestamp": "2026-11-06T05:13:32.404211+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 9201.718
+}

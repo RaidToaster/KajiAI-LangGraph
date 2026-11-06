@@ -1,0 +1,75 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Germany’s Foreign Minister Heiko Maas said that Thailand’s King Maha Vajiralongkorn didn’t do anything illegal while at his German residence.",
+        "query": "Bundestag plenary record 2020 search for the Foreign Minister statement on the Thai King's stay in Germany (prospective: primary parliamentary transcript independent of media retellings)",
+        "candidates": [
+          {
+            "title": "Germany says Thai king cannot rule from there",
+            "snippet": "Oct 8, 2020 — Germany's foreign minister has said that Thailand's King Maha Vajiralongkorn should not be conducting politics from the European country, ...",
+            "url": "https://www.reuters.com/world/asia-pacific/germany-says-thai-king-cannot-rule-there-2020-10-08/"
+          },
+          {
+            "title": "German Foreign Minister's comments about Thailand's anti ...",
+            "snippet": "Oct 30, 2020 — On October 7, 2020 , Maas said during the federal parliamentary session that the Thai king should not be conducting Thai politics from Germany , ... Read more",
+            "url": "https://factcheck.afp.com/german-foreign-ministers-comments-about-thailands-anti-government-protests-misrepresented-social"
+          },
+          {
+            "title": "German parliament clarifies its stance on HM the King's ...",
+            "snippet": "Nov 23, 2020 — The Bundestag , Germany's federal parliament , has announced that Thailand's King Maha Vajiralongkorn could be expelled from Germany .",
+            "url": "https://thethaiger.com/news/national/german-parliament-clarifies-its-stance-on-hm-the-kings-stays-in-bavaria"
+          },
+          {
+            "title": "Germany doubts Thailand's king will return to Bavaria..",
+            "snippet": "Dec 13, 2020 — King Vajiralongkorn returned to Thailand for a longer than normal visit to mark the fourth anniversary of his widely revered father's passing on ... Read more",
+            "url": "http://thaiscandemo.blogspot.com/2020/12/hamburg-germany-german-media-that-took.html"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-024-glm-candidate",
+  "timestamp": "2026-11-05T18:07:49.715627+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 52489.296
+}

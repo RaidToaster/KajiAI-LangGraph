@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Igbo people In Nigeria (Igbo people are found in southeastern Nigeria) are the richest people per capita in Africa.",
+        "query": "What data sources or studies measure per-capita wealth or income for the Igbo people in Nigeria?",
+        "candidates": [
+          {
+            "title": "WDI - The World by Income and Region",
+            "snippet": "The World Bank classifies economies for analytical purposes into four income groups: low, lower-middle, upper-middle, and high income.",
+            "url": "https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html"
+          },
+          {
+            "title": "Nigeria's Wealth Rating | 2025 | Economic Data",
+            "snippet": "Nigeria's Income per capita level. Data source: World Economics Research, London and Credit Suisse, Zurich. Wealth uses GDP per capita derived from World ...",
+            "url": "https://www.worldeconomics.com/Wealth/Nigeria.aspx"
+          },
+          {
+            "title": "Nigeria is a wealthy country in terms of total economy and ...",
+            "snippet": "Nigeria is a wealthy country in terms of total economy and natural resources; but the GDP per person is only around 1600.",
+            "url": "https://www.facebook.com/oladeleidowujnr/posts/nigeria-is-a-wealthy-country-in-terms-of-total-economy-and-natural-resources-but/10245551561908750/"
+          },
+          {
+            "title": "Nigeria Launches its Most Extensive National Measure of ...",
+            "snippet": "Highlights of the 2022 Multidimensional Poverty Index survey reveal that: 63% of persons living within Nigeria (133 million people) are multidimensionally poor.",
+            "url": "https://nigerianstat.gov.ng/news/78"
+          },
+          {
+            "title": "How does the World Bank classify countries by income?",
+            "snippet": "by B Rohenkohl · 2025 · Cited by 8 — GNI per capita is a measure of the average income of a country's residents, including income that is earned abroad. It's calculated by dividing a country's ...",
+            "url": "https://ourworldindata.org/world-bank-income-groups-explained"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-435-deepseek-candidate",
+  "timestamp": "2026-11-05T23:53:05.849095+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 2251.156
+}

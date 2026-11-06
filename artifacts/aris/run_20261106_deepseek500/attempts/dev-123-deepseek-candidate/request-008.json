@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "From 8th October the UK government will combine weekly flu and covid reports.",
+        "query": "What was the stated start date for combining weekly flu and COVID-19 reports, and which year did it refer to?",
+        "candidates": [
+          {
+            "title": "Illness Levels Over Time | Respiratory Illnesses",
+            "snippet": "7 days ago — Updates on how COVID - 19 , Flu , and RSV may be spreading nationally and in your state . Illness Levels Over Time For Everyone Oct. 30, 2026, visit ...",
+            "url": "https://www.cdc.gov/respiratory-viruses/data/activity-levels.html"
+          },
+          {
+            "title": "New York State Department of Health Announces Start of ...",
+            "snippet": "Nov 7, 2025 — for the week ending November 01, 2025 , shows there were 1,332 lab-confirmed cases of flu, 2,141 cases of COVID-19, and 734 cases of RSV",
+            "url": "https://www.health.ny.gov/press/releases/2025/2025-11-07_respiratory_surveillance_report.htm"
+          },
+          {
+            "title": "Nebraska Influenza & Other Respiratory Disease ...",
+            "snippet": "Oct 24, 2026 — OUTBREAK SURVEILLANCE: 1 COVID - 19 associated outbreak have been reported in long-term care facilities during the 2026-27 surveillance season. Read more",
+            "url": "https://dhhs.ne.gov/Flu%20Documents/Report.pdf"
+          },
+          {
+            "title": "History of flu (influenza): Outbreaks and vaccine timeline",
+            "snippet": "In the fall of 1918 at Mayo Clinic, people with the flu and other contagious illnesses are cared for in the isolation hospital. Keeping patients with these ... Read more",
+            "url": "https://www.mayoclinic.org/diseases-conditions/history-disease-outbreaks-vaccine-timeline/flu"
+          },
+          {
+            "title": "Respiratory Illness Data Dashboard | Washington State ...",
+            "snippet": "Each influenza season is reported as week 40 through week 39 of the following year . Note that due to reporting lag, counts may be different at the county or ... Read more",
+            "url": "https://doh.wa.gov/data-and-statistical-reports/diseases-and-chronic-conditions/communicable-disease-surveillance-data/respiratory-illness-data-dashboard"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-123-deepseek-candidate",
+  "timestamp": "2026-11-06T04:03:35.667903+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5004.984
+}

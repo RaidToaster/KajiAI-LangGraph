@@ -1,0 +1,91 @@
+FF.......F                                                               [100%]
+================================== FAILURES ===================================
+_ test_exhaustion_preserves_prior_output_and_counts_provider_calls[False-3-2] _
+
+config = {'model': {'provider': 'ollama', 'name': 'gemma4:31b-cloud', 'base_url': 'http://localhost:11434', 'temperature': 0.0}...tion_standard': 'Apply a strict medical evidence standard and do not generalize beyond the studied population.'}}, ...}
+repair = False, baseline_calls = 3, candidate_calls = 2
+
+    @pytest.mark.parametrize("repair,baseline_calls,candidate_calls", [(False,3,2),(True,6,4)])
+    def test_exhaustion_preserves_prior_output_and_counts_provider_calls(config, repair, baseline_calls, candidate_calls):
+        baseline, bp, bs = execute(config, False, repair=repair)
+        candidate, cp, cs = execute(config, True, repair=repair)
+        assert (bp.calls, cp.calls) == (baseline_calls, candidate_calls)
+        assert bs.calls == cs.calls == 3
+        assert len(baseline.research_history) == 3
+        assert len(candidate.research_history) == 2
+        assert baseline.research_history[-1].queries == []
+        assert candidate.research_history[-1].decision == candidate.stop_reason == "query_exhausted"
+        prior = baseline.research_history[1].assessment
+        assert candidate.research_history[-1].assessment == prior
+        assert candidate.predicted_verdict == prior.proposed_verdict
+        assert candidate.prediction_summary == prior.summary
+        assert candidate.verdict == "UNVERIFIED"
+        assert candidate.verification_status == "insufficient_evidence"
+        assert candidate.budget.tokens_used == (30 if repair else 20)
+>       assert type(candidate).model_validate_json(candidate.model_dump_json()) == candidate
+E       AssertionError: assert FinalResult(c...tations': []}) == FinalResult(c...tations': []})
+E         
+E         Use -v to get more diff
+
+tests\test_query_exhaustion.py:87: AssertionError
+_ test_exhaustion_preserves_prior_output_and_counts_provider_calls[True-6-4] __
+
+config = {'model': {'provider': 'ollama', 'name': 'gemma4:31b-cloud', 'base_url': 'http://localhost:11434', 'temperature': 0.0}...tion_standard': 'Apply a strict medical evidence standard and do not generalize beyond the studied population.'}}, ...}
+repair = True, baseline_calls = 6, candidate_calls = 4
+
+    @pytest.mark.parametrize("repair,baseline_calls,candidate_calls", [(False,3,2),(True,6,4)])
+    def test_exhaustion_preserves_prior_output_and_counts_provider_calls(config, repair, baseline_calls, candidate_calls):
+        baseline, bp, bs = execute(config, False, repair=repair)
+        candidate, cp, cs = execute(config, True, repair=repair)
+        assert (bp.calls, cp.calls) == (baseline_calls, candidate_calls)
+        assert bs.calls == cs.calls == 3
+        assert len(baseline.research_history) == 3
+        assert len(candidate.research_history) == 2
+        assert baseline.research_history[-1].queries == []
+        assert candidate.research_history[-1].decision == candidate.stop_reason == "query_exhausted"
+        prior = baseline.research_history[1].assessment
+        assert candidate.research_history[-1].assessment == prior
+        assert candidate.predicted_verdict == prior.proposed_verdict
+        assert candidate.prediction_summary == prior.summary
+        assert candidate.verdict == "UNVERIFIED"
+        assert candidate.verification_status == "insufficient_evidence"
+        assert candidate.budget.tokens_used == (30 if repair else 20)
+>       assert type(candidate).model_validate_json(candidate.model_dump_json()) == candidate
+E       AssertionError: assert FinalResult(c...tations': []}) == FinalResult(c...tations': []})
+E         
+E         Use -v to get more diff
+
+tests\test_query_exhaustion.py:87: AssertionError
+____________ test_acceptance_can_be_lost_by_skipping_reassessment _____________
+
+config = {'model': {'provider': 'ollama', 'name': 'gemma4:31b-cloud', 'base_url': 'http://localhost:11434', 'temperature': 0.0}...tion_standard': 'Apply a strict medical evidence standard and do not generalize beyond the studied population.'}}, ...}
+
+    def test_acceptance_can_be_lost_by_skipping_reassessment(config):
+        """Document the quality tradeoff; do not claim output equivalence to round 3."""
+        class LaterAcceptance(DeterministicBackend):
+            def __init__(self):
+                self.calls = 0
+            def analyze(self, *args, **kwargs):
+                self.calls += 1
+                value, tokens = super().analyze(*args, **kwargs)
+                if self.calls < 3:
+                    value.gaps = ["Reassessment needed."]
+                return value, tokens
+        outputs = []
+        for enabled in [False,True]:
+            cfg = deepcopy(config)
+            cfg["policy"].update(search_calls_per_round=2,max_search_calls=20,stop_on_query_exhaustion=enabled)
+            outputs.append(run_claim("A fixture claim",domain="general",max_rounds=3,
+                                     model=LaterAcceptance(),retriever=Search(),config=cfg))
+>       assert outputs[0].verdict == "TRUE"
+E       AssertionError: assert 'UNVERIFIED' == 'TRUE'
+E         
+E         - TRUE
+E         + UNVERIFIED
+
+tests\test_query_exhaustion.py:147: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_query_exhaustion.py::test_exhaustion_preserves_prior_output_and_counts_provider_calls[False-3-2]
+FAILED tests/test_query_exhaustion.py::test_exhaustion_preserves_prior_output_and_counts_provider_calls[True-6-4]
+FAILED tests/test_query_exhaustion.py::test_acceptance_can_be_lost_by_skipping_reassessment
+3 failed, 7 passed in 0.50s

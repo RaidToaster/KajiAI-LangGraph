@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "All USA Ballots Arriving After Election Day Will Be Thrown Out counterevidence",
+        "candidates": [
+          {
+            "title": "Supreme Court has not invalidated state laws on ballots received after ...",
+            "snippet": "Supreme Court has indicated it will invalidate state laws permitting ballots received after November 3 to be counted. This is false;",
+            "url": "https://factcheck.afp.com/doc.afp.com.D4YN3T6"
+          },
+          {
+            "title": "Supreme Court rules states can count late-arriving mailed ballots ... - AP.org",
+            "snippet": "The federal appeals court in New Orleans struck down a Mississippi law allowing ballots to be counted if they arrive within five business days ...",
+            "url": "https://www.ap.org/news-highlights/elections/2026/supreme-court-rules-states-can-count-late-arriving-mailed-ballots-rejecting-trump-led-challenge/"
+          },
+          {
+            "title": "Fact Check: It is NOT True That All Ballots Arriving After Election Day ...",
+            "snippet": "No, that's not true: 22 states have extended mail-in ballot receipt deadlines beyond Election Day.",
+            "url": "https://leadstories.com/hoax-alert/2020/10/fact-check-it-is-not-true-that-all-ballots-arriving-after-election-day-will-be-thrown-out.html"
+          },
+          {
+            "title": "Supreme Court skeptical of allowing states to count mail ballots that arrive ...",
+            "snippet": "Mailed ballots that arrive after Election Day may be counted in 14 states and Washington, D.C., as long as they have been postmarked on or ...",
+            "url": "https://stateline.org/2026/03/23/supreme-court-skeptical-of-allowing-states-to-count-mail-ballots-that-arrive-after-election-day/"
+          },
+          {
+            "title": "Many States Count Mail Ballots That Arrive After Election Day. Those ...",
+            "snippet": "The U.S. Supreme Court is set to hear arguments over a Mississippi law that allows counting late-arriving mail ballots after Election Day.",
+            "url": "https://www.usnews.com/news/best-states/ohio/articles/2026-03-20/many-states-count-mail-ballots-that-arrive-after-election-day-those-grace-periods-could-go-away"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-017-deepseek-baseline",
+  "timestamp": "2026-11-06T06:27:43.497274+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13652.812
+}

@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Joe Biden said 'If Your 8-Year-Old Child Says They Want To Be Transgender, They Have A Right To Transition'.",
+        "query": "Search for any primary audio, video, or transcript record in which Joe Biden uses the exact phrase 'right to transition' in connection with an 8-year-old child.",
+        "candidates": [
+          {
+            "title": "Fact check: Fabricated Biden quote supports transgender ...",
+            "snippet": "Oct 22, 2020 — Posts on social media falsely attribute a quote to Joe Biden in which he says that transgender children have a right to transition and there ...",
+            "url": "https://www.reuters.com/article/world/fact-check-fabricated-biden-quote-supports-transgender-childrens-right-to-tran-idUSKBN2772PC/"
+          },
+          {
+            "title": "Biden did not say transgender children should be able to ' ...",
+            "snippet": "Oct 21, 2020 — CLAIM: Democratic presidential candidate Joe Biden said if your 8 - year - old child wants to be transgender to make life easier, “they have a right ... Read more",
+            "url": "https://apnews.com/article/fact-checking-9582957367"
+          },
+          {
+            "title": "No, Biden didn't say 8-year-olds have 'right to transition' as ...",
+            "snippet": "Oct 24, 2020 — CLAIM: Democratic presidential candidate Joe Biden said if your 8 - year - old child wants to be transgender to make life easier, “they have a right ... Read more",
+            "url": "https://www.oregonlive.com/health/2020/10/no-biden-didnt-say-8-year-olds-have-right-to-transition-as-transgender.html"
+          },
+          {
+            "title": "Fact check: Fabricated Biden quote supports transgender ...",
+            "snippet": "Oct 22, 2020 — Posts on social media falsely attribute a quote to Joe Biden in which he says that transgender children have a right to transition and there ...",
+            "url": "https://www.reuters.com/jp/article/fact-check-fabricated-biden-quote-supports-transgender-childrens-right-to-tran-idUSKBN2772PC/"
+          },
+          {
+            "title": "No, Biden Didn't Say Kids Should Be Allowed to Get ' ...",
+            "snippet": "May 23, 2024 — U.S. President Joe Biden did not express support for gender-affirming surgery for children . He expressed support for ending discrimination ... Read more",
+            "url": "https://www.snopes.com/fact-check/biden-gender-affrming-surgery/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-068-deepseek-candidate",
+  "timestamp": "2026-11-05T18:19:54.017855+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 53213.609
+}

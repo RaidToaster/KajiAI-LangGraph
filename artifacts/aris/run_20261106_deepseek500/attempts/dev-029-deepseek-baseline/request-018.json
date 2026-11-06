@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Wire called Durga puja racist and the goddess Durga a sex worker",
+        "query": "the goddess Durga a sex worker evidence",
+        "candidates": [
+          {
+            "title": "What is the reason behind the practice of taking some clay from a prostitute's ...",
+            "snippet": "Goddess Durga's idol made during Durga Puja is incomplete without the soil from the house of a sex worker. The belief is that the soil should be begged for and ...",
+            "url": "https://www.quora.com/What-is-the-reason-behind-the-practice-of-taking-some-clay-from-a-prostitutes-area-brothel-for-Devi-Durgas-idol-for-Durga-Puja"
+          },
+          {
+            "title": "You Need Soil From a Sex Worker's Doorstep to Make Maa Durga's Idol",
+            "snippet": "",
+            "url": "https://www.thequint.com/videos/you-need-soil-from-a-sex-workers-doorstep-to-make-maa-durgas-idol-heres-why-video-durga-puja-pujo"
+          },
+          {
+            "title": "1 OF SEX WORKERS, FESTIVALS, AND RIGHTS",
+            "snippet": "Durga, in the form of the goddess, is imagined as a sex worker. But here, she herself is the wrong-doer, an embodiment of evil forces.",
+            "url": "https://law.utexas.edu/wp-content/uploads/sites/31/2018/05/dutta_of_sex_workers.pdf"
+          },
+          {
+            "title": "I had to start the Navratri series talking about how contrasting our rituals and ...",
+            "snippet": "",
+            "url": "https://www.instagram.com/reel/DAQuqwCTlhS/?hl=en"
+          },
+          {
+            "title": "An Open Letter of a Sex Worker to Goddess Durga",
+            "snippet": "Goddess Durga's idol made during Durga Puja is incomplete without the soil from the house of a sex worker. The belief is that the soil should ...",
+            "url": "https://www.differenttruths.com/an-open-letter-of-a-prostitute-to-goddess-durga/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-029-deepseek-baseline",
+  "timestamp": "2026-11-06T07:08:35.342024+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 16104.656
+}

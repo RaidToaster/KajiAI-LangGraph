@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Wildfires do not Affect Mexico And Canada",
+        "query": "Wildfires do not Affect Mexico And Canada original source fact check",
+        "candidates": [
+          {
+            "title": "The burning truth: five wildfire myths debunked - UNDRR",
+            "snippet": "Heat, drought and wind do more to spread wildfires than arsonists. The myth: Arson, not climate change, is responsible for most major wildfires.",
+            "url": "https://www.undrr.org/news/burning-truth-five-wildfire-myths-debunked"
+          },
+          {
+            "title": "Major Driver of Worsening Canadian Wildfires Is Climate ...",
+            "snippet": "But climate change — and not a lack of “Debris Removal,” as Trump suggested — is the main factor leading to worsening Canadian wildfires and ...",
+            "url": "https://www.factcheck.org/2026/07/major-driver-of-worsening-canadian-wildfires-is-climate-change-not-forest-mismanagement/"
+          },
+          {
+            "title": "Fact check: Wildfires do affect Canada and Mexico - Reuters",
+            "snippet": "VERDICT False. Wildfires do affect Canada and Mexico. The map seems to show U.S. fires only. This article was produced by the Reuters Fact ...",
+            "url": "https://www.reuters.com/article/world/fact-check-wildfires-do-affect-canada-and-mexico-idUSKBN2672GR/"
+          },
+          {
+            "title": "Canadian wildfires supercharged by climate, not directed ...",
+            "snippet": "Canada is facing one of its most intense fire seasons on record but claims that the 2026 blazes were manufactured to exacerbate the severity ...",
+            "url": "https://factcheck.afp.com/doc.afp.com.C2TP463"
+          },
+          {
+            "title": "Wildfire smoke and global borders: a reality check - Facebook",
+            "snippet": "Forests always burn. Indigenous burnings helped manage the forest floor, encouraged growth and reduced the 'fuel' that helps promote forest ...",
+            "url": "https://www.facebook.com/groups/642270005002618/posts/1047531354476479/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-348-deepseek-baseline",
+  "timestamp": "2026-11-06T03:53:23.759733+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 4393.078
+}

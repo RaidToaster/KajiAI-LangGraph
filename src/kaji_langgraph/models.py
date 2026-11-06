@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-from typing import Any, Literal
+from typing import Annotated, Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, StringConstraints
+from pydantic.json_schema import SkipJsonSchema
 
 Domain = Literal["auto", "general", "scientific", "political", "health_medical"]
 Verdict = Literal["TRUE", "FALSE", "MISLEADING", "CONFLICTING", "NOT_ENOUGH_EVIDENCE", "UNVERIFIED"]
@@ -20,6 +21,17 @@ class Classification(BaseModel):
 
 class Decomposition(BaseModel):
     assertions: list[str] = Field(default_factory=list)
+
+
+class QuestionDecomposition(BaseModel):
+    """Unverified statements and search questions, never evidence or answers."""
+
+    assertions: list[Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]] = Field(
+        min_length=1, max_length=6,
+    )
+    questions: list[Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]] = Field(
+        min_length=1, max_length=8,
+    )
 
 
 class SourceRecord(BaseModel):
@@ -69,6 +81,12 @@ class EvidenceAssessment(BaseModel):
     sources_independent: bool = False
     peer_reviewed_sources: bool = False
     next_queries: list[str] = Field(default_factory=list)
+    # Preserve the default analyzer's existing wire schema. These fields store
+    # the separately validated indexed-mode output, not new baseline requests.
+    component_ledger: SkipJsonSchema[list[dict[str, Any]]] = Field(default_factory=list)
+    source_origin_ledger: SkipJsonSchema[list[dict[str, Any]]] = Field(default_factory=list)
+    raw_indexed_assessment: SkipJsonSchema[dict[str, Any]] = Field(default_factory=dict)
+    indexed_input: SkipJsonSchema[dict[str, Any]] = Field(default_factory=dict)
 
 
 class BenchmarkAssessment(EvidenceAssessment):
@@ -128,6 +146,9 @@ class FinalResult(BaseModel):
     sources: list[SourceRecord] = Field(default_factory=list)
     retrieval_ledger: list[SourceRecord] = Field(default_factory=list)
     assertions: list[str] = Field(default_factory=list)
+    verification_questions: list[str] = Field(default_factory=list)
+    planning_statements: list[str] = Field(default_factory=list)
+    decomposition_method: str = "statements"
     gaps: list[str] = Field(default_factory=list)
     contradictions: list[str] = Field(default_factory=list)
     search_queries: list[str] = Field(default_factory=list)

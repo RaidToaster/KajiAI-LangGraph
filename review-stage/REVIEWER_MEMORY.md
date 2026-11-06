@@ -1,25 +1,15 @@
-# Reviewer Memory
-
-No previous rounds in this invocation.
-
-## Round 1 — Score 5/10
+# Reviewer memory
 
 
-Round 1 findings to carry forward:
+This is the first new-run review; historical 5/10 is not superseded as a study-quality judgment. Two pilot transport defects were found and fixed during this round. Engineering is ready for the approved small pilot; larger inference remains unauthorized by this review. Retain every failure/incomplete pair. No triggering exhaustion pair means inconclusive. Human annotation stays parallel, and automated judgments remain explicitly nonhuman.
 
-- **Verified, not suspect:** authoritative completed 500-by-two study; archived runtime provenance; central counts; replay metrics; paired bootstrap; failure denominators; CSV agreement; broad citation validity.
-- **Open scientific limitations:** independent citation validation, held-out generalization, and identification of a distinctive mechanism. Offline fixes cannot resolve these.
-- **Confirmed fixable defects:** manuscript regeneration overwrites revised prose; stale diagnostic status; documented pytest temporary-directory failure.
-- **Confirmed research opportunity:** 252 empty-query third rounds consume substantial resources. Preserve the observed two gains/one loss; do not claim a cost-only improvement.
-- **Next review:** inspect actual diffs and new output artifacts, verify preservation and regression checks, and ensure any stopping change is described as unevaluated future runtime behavior rather than a revision to historical scores.
-- **Readiness remains:** `not ready`, same-family/provisional.
+## Round2
+ Round 2 of 2 is complete. Accounting reconciles, recovery retained the failure, and neither candidate triggered. Preserve the baseline default, the NO GO decision and all raw records. Engineering progress and a compiled paper do not establish scientific readiness. No further review round or live execution is authorized by this verdict.
 
-## Round 2 — Score 5/10
+## 2026-11-03 controlled follow-up
 
+The previous paragraph records the earlier run. The new frozen study completed eight scripted pairs and twelve live model–case pairs. Round-two review gaps blocked all six unresolved cases. The six completed-review cases stopped and preserved their prior outputs, but two Gemma acceptances were lost. The e01 counterexample alone crosses the quality guard. The e02 diary corroborates the ceremony under the authored reading. Reconcile 15 physical sends and 42,447 observed tokens separately from the 15 versus 8 policy-attributed sends. Keep the baseline default and batch two untouched. Both new reviews were same-family and provisional.
 
-- **Resolved:** manuscript/notes generator overwrite behavior; historical diagnostic status ambiguity; practical pytest temporary-directory execution problem.
-- **Verified improvement:** descriptive RQs/contribution, matched selected-cohort comparison, selected gold/prediction distinction, illustrative accepted-error cases and honest stopping tradeoff.
-- **Preserved:** historical inference runtime, predictions, failures, source archive and central results. No measured stopping-policy or candidate-model improvement is claimed.
-- **Still open:** independent citation validation; controlled mechanism evidence; held-out generalization; hosted-model drift and incomplete historical usage metadata.
-- **Final handoff:** finish state/tooling records, final PDF checks and fresh documented invocation check. Executor-reported post-inspection documentation corrections should be recorded as such.
-- **Final research verdict:** **5/10, not ready**, same-family/provisional. The authorized two research rounds are complete; further inference requires a separately justified and authorized stage.
+## 2026-11-03 manuscript handoff
+
+A fresh Sol review judged the pre-edit draft almost ready for its bounded claim. The new draft foregrounds the no-go, provides a paired comparison table and includes the decisive evidence example. The source ZIP recount is byte-identical and the scripted replay matches eight saved pairs. The venue-neutral paper is ready for author review. No new inference or annotation took place. Preserve the baseline default, second batch untouched and all historical attempts.

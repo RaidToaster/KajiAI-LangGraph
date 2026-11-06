@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Former mayor of New York, US, Mike Bloomberg owns more wealth than the bottom 125 million Americans.",
+        "query": "combined net worth of the bottom half of Americans around February 2020 Federal Reserve Distributional Financial Accounts",
+        "candidates": [
+          {
+            "title": "The Fed - Distributional Financial Accounts Overview",
+            "snippet": "These interactive charts and tables allow users to explore the level, composition, and share of U.S. household wealth held by five percentile ...",
+            "url": "https://www.federalreserve.gov/releases/efa/efa-distributional-financial-accounts.htm"
+          },
+          {
+            "title": "Distribution of Household Wealth in the U.S. since 1989",
+            "snippet": "Note: Distributions by generation are defined by birth year as follows: Silent and Earlier=born before 1946, Baby Boomer=born 1946-1964, Gen X= ...",
+            "url": "https://www.federalreserve.gov/releases/z1/dataviz/dfa/distribute/chart/"
+          },
+          {
+            "title": "Net Worth Held by the Bottom 50% (1st to 50th Wealth ... - FRED",
+            "snippet": "Graph and download economic data for Net Worth Held by the Bottom 50% (1st to 50th Wealth Percentiles) (WFRBLB50107) from Q3 1989 to Q2 2026 about net worth ...",
+            "url": "https://fred.stlouisfed.org/series/WFRBLB50107"
+          },
+          {
+            "title": "The Distributional Financial Accounts of the United States",
+            "snippet": "by M Batty · 2020 · Cited by 44 — This paper describes the construction of the Distributional Financial Accounts. (DFA), a dataset containing quarterly estimates of the distribution of U.S. ...",
+            "url": "http://www.kamilasommer.net/DFA_NBER_June2020.pdf"
+          },
+          {
+            "title": "How much wealth does the American middle class have?",
+            "snippet": "The American middle class had $14 trillion, or around 8% of all household wealth in the US in Q2 2026. Wealth, also referred to as net worth ...",
+            "url": "https://usafacts.org/answers/how-much-wealth-does-the-american-middle-class-have/country/united-states/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1225-glm-candidate",
+  "timestamp": "2026-11-05T10:14:08.294461+00:00",
+  "status": "reserved_outcome_unknown"
+}

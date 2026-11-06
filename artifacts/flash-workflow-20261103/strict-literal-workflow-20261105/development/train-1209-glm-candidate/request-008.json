@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "US Senator Amy Klobuchar said While we are all sitting here debating, Wisconsin has kicked hundreds of thousands of people off of their voting rolls",
+        "query": "On what date and in what venue did Klobuchar make this statement, and is there a verbatim transcript or video recording of it?",
+        "candidates": [
+          {
+            "title": "Klobuchar Statement in Response to Senate Foreign Relations ...",
+            "snippet": "May 21, 2020 ... WASHINGTON – U.S. Senator Amy Klobuchar (D-MN), Ranking Member of the Senate Rules Committee, issued the following statement in ...",
+            "url": "https://www.klobuchar.senate.gov/public/index.cfm/2020/5/klobuchar-statement-in-response-to-senate-foreign-relations-chairman-limiting-press-access"
+          },
+          {
+            "title": "Minnesota Gov.-elect Amy Klobuchar discusses her transition ...",
+            "snippet": "Minnesota Gov.-elect Amy Klobuchar discusses her transition from the U.S. Senate to the governor's office and takes questions from reporters ...",
+            "url": "https://www.facebook.com/MPRnews/videos/live-amy-klobuchar-speaks-after-historic-minnesota-governor-win/1172941448430255/"
+          },
+          {
+            "title": "Sen. Klobuchar Clashes with Sen. Schmitt After He Mistakenly ...",
+            "snippet": "Sen. Klobuchar Holds News Conference in Minneapolis. Sen. Amy Klobuchar (D-MN), the 2026 Minnesota Democratic gubernatorial nominee, and the ...",
+            "url": "https://www.c-span.org/clip/senate-committee/sen-klobuchar-clashes-with-sen-schmitt-after-he-mistakenly-claims-jack-smith-attended-nba-game-in-atlanta/5207550"
+          },
+          {
+            "title": "Senator Amy Klobuchar - Congress.gov",
+            "snippet": "Amy Klobuchar, the Senator from Minnesota - in Congress from 2007 through Present.",
+            "url": "https://www.congress.gov/member/amy-klobuchar/K000367"
+          },
+          {
+            "title": "Transcript: Senate Rules Committee Hearing on AI and Elections",
+            "snippet": "Sen. Klobuchar expressed urgency for the Senate to “take the lead” on crafting relevant bipartisan legislation that will pass constitutional ...",
+            "url": "https://www.techpolicy.press/transcript-senate-rules-committee-hearing-on-ai-and-elections/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1209-glm-candidate",
+  "timestamp": "2026-11-05T10:18:16.248906+00:00",
+  "status": "reserved_outcome_unknown"
+}

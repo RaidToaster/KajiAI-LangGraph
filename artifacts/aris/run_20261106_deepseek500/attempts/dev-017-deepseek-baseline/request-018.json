@@ -1,0 +1,62 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "All USA Ballots Arriving After Election Day Will Be Thrown Out",
+        "query": "Pennsylvania North Carolina late-arriving mail ballot deadline October 2020",
+        "candidates": [
+          {
+            "title": "Supreme Court Rules Pennsylvania Can Count Ballots ...",
+            "snippet": "Oct 19, 2020 — And on Monday, a state appeals court in North Carolina said the state can count ballots that arrive as late as Nov. 12, as long as they are ... Read more",
+            "url": "https://www.npr.org/2020/10/19/922411176/supreme-court-rules-pennsylvania-can-count-ballots-received-after-election-day"
+          },
+          {
+            "title": "Supreme Court to Let PA, NC Accept Absentee Ballots ...",
+            "snippet": "Dec 11, 2020 — Supreme Court Allows Longer Deadlines for Absentee Ballots in Pennsylvania and North Carolina ... arriving after 8 p.m. on Election Day ... Read more",
+            "url": "https://www.nytimes.com/2020/10/28/us/supreme-court-pennsylvania-north-carolina-absentee-ballots.html"
+          },
+          {
+            "title": "US supreme court deals setback to Republicans over mail ...",
+            "snippet": "Oct 28, 2020 — Court decision allows extension of absentee ballot deadlines in swing states of Pennsylvania and North Carolina .",
+            "url": "https://www.theguardian.com/us-news/2020/oct/28/pennsylvania-elections-ballot-extension-supreme-court"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-017-deepseek-baseline",
+  "timestamp": "2026-11-06T06:28:50.472036+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 13719.781
+}

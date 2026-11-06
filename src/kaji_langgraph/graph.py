@@ -14,6 +14,7 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.config import get_stream_writer
 
 from kaji_langgraph.config import effective_policy, load_config
+from kaji_langgraph.evidence_references import reference_queries
 from kaji_langgraph.gate import evidence_gaps, retained_evidence
 from kaji_langgraph.jev import JevClient
 from kaji_langgraph.llm import ModelBackend, OllamaBackend, heuristic_decomposition, keyword_classification
@@ -22,6 +23,7 @@ from kaji_langgraph.models import (
     EvidenceAssessment,
     FinalResult,
     ResearchRound,
+    QuestionDecomposition,
     SourceRecord,
 )
 from kaji_langgraph.report import format_report
@@ -88,6 +90,41 @@ def _citation_key(finding: str, url: str, quote: str, content_hash: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 
+def _unused_queries(state: ClaimState, reference_sources: list[SourceRecord] | None = None) -> list[str]:
+    """Use the same query inventory for retrieval and exhaustion decisions."""
+    previous = set(state.get("search_queries", []))
+    candidates = [
+        *state.get("assessment", EvidenceAssessment()).next_queries,
+        *state.get("verification_questions", []),
+        f"{state['claim']} evidence",
+        f"{state['claim']} counterevidence",
+        *[f"{assertion} evidence" for assertion in state["assertions"]],
+        *[f"{assertion} original source fact check" for assertion in state["assertions"]],
+    ]
+    if state["policy"].get("require_independent_provenance_review") and _PROVENANCE_GAP in state.get("gaps", []):
+        candidates[:0] = [
+            f"{state['claim']} primary record transcript official statement",
+            f"{state['claim']} independently verified original reporting evidence",
+        ]
+    queries = list(dict.fromkeys(q.strip() for q in candidates if q.strip() and q.strip() not in previous))
+    if reference_sources and state.get("reference_date"):
+        cutoff = datetime.fromisoformat(state["reference_date"]).date()
+        leads = (
+            query
+            for source in reference_sources
+            for query in reference_queries(state["claim"], cutoff, source.page_text)
+            if query not in previous
+        )
+        if (lead := next(leads, None)) is not None:
+            if lead in queries:
+                queries.remove(lead)
+            queries.insert(1, lead)
+    return queries or ([f"{state['claim']} evidence counterevidence"] if not previous else [])
+
+
+_PROVENANCE_GAP = "Find independently sourced evidence whose verification method is visible."
+
+
 class WorkflowNodes:
     def __init__(
         self, model: ModelBackend, retriever: Retriever, config: dict[str, Any],
@@ -118,6 +155,12 @@ class WorkflowNodes:
                 for field in ("relevant", "evidence", "counterevidence")
             )
         ]
+
+    def _research_queries(self, state: ClaimState) -> list[str]:
+        sources = None
+        if state["policy"].get("search_source_references", False):
+            sources = sorted(self.usable_sources(state), key=lambda s: s.jev_scores.get("evidence", 0), reverse=True)
+        return _unused_queries(state, sources)
 
     def citation_review_gaps(self, state: ClaimState) -> list[str]:
         if not self.jev:
@@ -160,6 +203,8 @@ class WorkflowNodes:
             "claim": claim,
             "sources": [],
             "assertions": [],
+            "verification_questions": [],
+            "decomposition_method": "statements",
             "research_round": 0,
             "research_history": [],
             "assessment": EvidenceAssessment(),
@@ -247,21 +292,41 @@ class WorkflowNodes:
         return update
 
     def decompose(self, state: ClaimState) -> dict[str, Any]:
+        method = self.config["model"].get("decomposition_method", "statements")
+        if method not in {"statements", "statements_and_questions", "questions_as_guidance"}:
+            raise ValueError("decomposition_method must be statements, statements_and_questions, or questions_as_guidance")
+        questions = []
+        planning_statements = []
         if _budget_reason(state) in {"token_budget_exhausted", "time_budget_exhausted"}:
             assertions, tokens = heuristic_decomposition(state["claim"]), 0
+            method = "statements_fallback"
         else:
             try:
-                self.progress(f"{self.model_label}: decomposing the claim into assertions")
-                assertions, tokens = self.model.decompose(state["claim"])
+                if method in {"statements_and_questions", "questions_as_guidance"}:
+                    self.progress(f"{self.model_label}: decomposing the claim into statements and verification questions")
+                    plan, tokens = self.model.decompose_with_questions(
+                        state["claim"], reference_date=state["reference_date"],
+                    )
+                    plan = QuestionDecomposition.model_validate(plan)
+                    planning_statements, questions = plan.assertions, plan.questions
+                    assertions = heuristic_decomposition(state["claim"]) if method == "questions_as_guidance" else plan.assertions
+                else:
+                    self.progress(f"{self.model_label}: decomposing the claim into assertions")
+                    assertions, tokens = self.model.decompose(state["claim"])
             except Exception as exc:
                 assertions, tokens = heuristic_decomposition(state["claim"]), None
+                method = "statements_fallback"
                 errors = [
                     *state.get("errors", []),
                     f"Decomposition model unavailable: {type(exc).__name__}: {exc}",
                 ]
         assertions = [item.strip() for item in assertions if item.strip()]
         assertions = list(dict.fromkeys([state["claim"], *assertions]))
-        update: dict[str, Any] = {"assertions": assertions, "budgets": _record_tokens(state, tokens)}
+        update: dict[str, Any] = {
+            "assertions": assertions, "verification_questions": list(dict.fromkeys(questions)),
+            "planning_statements": planning_statements,
+            "decomposition_method": method, "budgets": _record_tokens(state, tokens),
+        }
         if "errors" in locals():
             update["errors"] = errors
         return update
@@ -270,18 +335,7 @@ class WorkflowNodes:
         budget = state["budgets"].model_copy(deep=True)
         if _budget_reason(state):
             return {"last_new_sources": 0, "budget_blocked": True}
-        assessment = state.get("assessment", EvidenceAssessment())
-        previous = set(state.get("search_queries", []))
-        candidates = [
-            *assessment.next_queries,
-            f"{state['claim']} evidence",
-            f"{state['claim']} counterevidence",
-            *[f"{assertion} evidence" for assertion in state["assertions"]],
-            *[f"{assertion} original source fact check" for assertion in state["assertions"]],
-        ]
-        queries = list(dict.fromkeys(query.strip() for query in candidates if query.strip() and query.strip() not in previous))
-        if not queries:
-            queries = [f"{state['claim']} evidence counterevidence"] if not previous else []
+        queries = self._research_queries(state)
         allowed = min(
             state["policy"].get("search_calls_per_round", 2),
             max(0, budget.max_search_calls - budget.search_calls),
@@ -295,11 +349,13 @@ class WorkflowNodes:
         jev_audit = dict(state.get("jev_audit", {}))
         search_ranking = list(jev_audit.get("search_ranking", []))
         deadline_reached = False
+        round_queries: list[str] = []
         for query in queries:
             if _elapsed({**state, "budgets": budget}) >= budget.max_seconds:
                 deadline_reached = True
                 break
             budget.search_calls += 1
+            round_queries.append(query)
             self.progress(f"Search {budget.search_calls}/{budget.max_search_calls}: {query}")
             max_retries = (
                 max(0, int(state["policy"].get("max_retries", 0)))
@@ -429,6 +485,7 @@ class WorkflowNodes:
             "search_queries": [*state.get("search_queries", []), *queries],
             "budgets": budget,
             "last_new_sources": len(new_records),
+            "round_queries": round_queries,
             "stagnant_rounds": stagnant,
             "research_round": state.get("research_round", 0) + 1,
             "errors": errors,
@@ -446,16 +503,36 @@ class WorkflowNodes:
         try:
             sources = self.usable_sources(state)
             self.progress(f"{self.model_label}: assessing {len(sources)} source(s)")
-            assessment, tokens = self.model.analyze(
-                state["claim"], state["domain"], state["assertions"], sources,
-                state.get("gaps", []), state["reference_date"],
-                self.config.get("domain_guidance", {}).get(state["domain"], {}),
-            )
-            return {"assessment": assessment, "budgets": _record_tokens(state, tokens)}
+            arguments = (state["claim"], state["domain"], state["assertions"], sources,
+                         state.get("gaps", []), state["reference_date"],
+                         self.config.get("domain_guidance", {}).get(state["domain"], {}))
+            mode = self.config["model"].get("assessment_mode", "standard")
+            path_feedback, path_tokens = None, 0
+            if mode in {"passage_decision","path_adjudicated","evidence_adjudicated"} and self.config["model"].get("predecision_source_path_review"):
+                if not self.jev:
+                    raise RuntimeError("Predecision source-path review requires Jev; no silent bypass")
+                from kaji_langgraph.source_paths import review_source_paths
+                path_feedback, path_tokens = review_source_paths(self.jev, state['claim'], sources,
+                    timeout=min(12.0, _remaining(state,state['budgets'])),
+                    bind_anchors=self.config['model'].get('bound_source_anchors',False))
+            if mode == "standard":
+                assessment, tokens = self.model.analyze(*arguments)
+            else:
+                assessment, tokens = self.model.analyze_indexed(
+                    *arguments, verification_questions=state.get("verification_questions", []),
+                    planning_statements=state.get("planning_statements", []), use_ledger=mode == "ledger",
+                    executed_queries=[q for trace in state.get("research_history", []) for q in trace.queries] + state.get("round_queries", []),
+                    **({'source_path_review':path_feedback} if path_feedback is not None else {}),
+                    **({'relation_reviewer':self.jev,
+                        'single_materiality_owner':self.config['model'].get('single_materiality_owner',False)} if mode=='evidence_adjudicated' else {}),
+                )
+            all_tokens = tokens + path_tokens if isinstance(tokens,int) and isinstance(path_tokens,int) else None
+            return {"assessment": assessment, "budgets": _record_tokens(state, all_tokens)}
         except Exception as exc:
             errors = [*state.get("errors", []), f"Analysis failed: {type(exc).__name__}: {exc}"]
+            partial = getattr(exc, "partial_assessment", None)
             return {
-                "assessment": EvidenceAssessment(gaps=["The model did not return a valid evidence assessment."]),
+                "assessment": partial if isinstance(partial, EvidenceAssessment) else EvidenceAssessment(gaps=["The model did not return a valid evidence assessment."]),
                 "errors": errors,
                 "fatal_error": True,
                 "budgets": _record_tokens(state, None),
@@ -472,9 +549,9 @@ class WorkflowNodes:
         fatal_error = state.get("fatal_error", False)
         jev_audit = dict(state.get("jev_audit", {}))
         citation_audit = list(jev_audit.get("citations", []))
+        candidates = []
         if self.jev and assessment.evidence:
             sources = {source.url: source for source in self.usable_sources(state)}
-            candidates = []
             for item in assessment.evidence:
                 for url in item.source_urls:
                     source = sources.get(url)
@@ -521,13 +598,35 @@ class WorkflowNodes:
                     })
         jev_audit["citations"] = citation_audit
         semantic_gaps.extend(self.citation_review_gaps({**state, "jev_audit": jev_audit}))
+        if state["policy"].get("require_independent_provenance_review") and not (structural_gaps or semantic_gaps):
+            if not self.jev or not candidates or _remaining(state, budget) <= 1 or budget.tokens_used >= budget.max_tokens:
+                semantic_gaps.append(_PROVENANCE_GAP)
+            else:
+                try:
+                    review, tokens = self.jev.check_provenance(
+                        state["claim"], assessment.proposed_verdict,
+                        [{k: v for k, v in item.items() if k != "key"} for item in candidates],
+                        timeout=min(12.0, _remaining(state, budget)),
+                    )
+                    budget = _add_tokens(budget, tokens)
+                    jev_audit["provenance"] = [
+                        *jev_audit.get("provenance", []),
+                        {"round": state["research_round"], "verdict": assessment.proposed_verdict,
+                         "citation_keys": [item["key"] for item in candidates], **review},
+                    ]
+                    if review["relation"] != "independent" or review["confidence"] < self.config["jev"]["citation_min_confidence"]:
+                        semantic_gaps.append(_PROVENANCE_GAP)
+                except Exception as exc:
+                    errors.append(f"Jev provenance check failed: {type(exc).__name__}: {exc}")
+                    semantic_gaps.append(_PROVENANCE_GAP)
+                    fatal_error = True
         gaps = list(dict.fromkeys([*gaps, *semantic_gaps]))
         history = list(state.get("research_history", []))
         if state.get("research_round", 0) > 0:
             history.append(
                 ResearchRound(
                     round_number=state["research_round"],
-                    queries=state.get("search_queries", [])[-state["policy"].get("search_calls_per_round", 2) :],
+                    queries=state.get("round_queries", []),
                     new_sources=state.get("last_new_sources", 0),
                     proposed_verdict=assessment.proposed_verdict,
                     confidence=assessment.confidence,
@@ -557,6 +656,14 @@ class WorkflowNodes:
             stop_reason, route = "stagnant_research", "finalize"
         elif reason := _budget_reason(state):
             stop_reason, route = reason, "finalize"
+        elif (
+            state["policy"].get("stop_on_query_exhaustion", False)
+            and not self._research_queries(state)
+            # A no-search round can still finish pending source/citation work.
+            and not (self.jev and any(not s.jev_scores for s in state.get("sources", [])))
+            and not state.get("semantic_gaps")
+        ):
+            stop_reason, route = "query_exhausted", "finalize"
         else:
             stop_reason, route = "", "research"
         history = list(state["research_history"])
@@ -615,6 +722,9 @@ class WorkflowNodes:
             sources=[source for source in self.usable_sources(state) if source.url in cited],
             retrieval_ledger=state.get("sources", []),
             assertions=state.get("assertions", []),
+            verification_questions=state.get("verification_questions", []),
+            planning_statements=state.get("planning_statements", []),
+            decomposition_method=state.get("decomposition_method", "statements"),
             gaps=gaps,
             contradictions=assessment.contradictions,
             search_queries=state.get("search_queries", []),
@@ -644,11 +754,22 @@ def build_graph(
 ):
     config = config or load_config()
     model_cfg = config["model"]
+    if model_cfg.get("decomposition_method", "statements") not in {"statements", "statements_and_questions", "questions_as_guidance"}:
+        raise ValueError("decomposition_method must be statements, statements_and_questions, or questions_as_guidance")
+    if model_cfg.get("assessment_mode", "standard") not in {"standard", "indexed", "ledger", "reference_first", "scope_first", "factored", "extractive", "adjudicated", "catalogued", "proof", "bound_proof", "literal_proof", "strict_literal", "passage_decision", "path_adjudicated", "evidence_adjudicated"}:
+        raise ValueError("Unknown assessment_mode")
     backend = model or OllamaBackend(
         model=model_cfg["name"],
         base_url=model_cfg["base_url"],
         temperature=model_cfg.get("temperature", 0.0),
         verdict_mode=model_cfg.get("verdict_mode", "open"),
+        canonical_evidence_prompt=model_cfg.get("canonical_evidence_prompt", False),
+        recover_empty_assessment=model_cfg.get("recover_empty_assessment", False),
+        compact_evidence_prompt=model_cfg.get("compact_evidence_prompt", False),
+        brief_assessment_tokens=model_cfg.get("brief_assessment_tokens"),
+        line_assessment_prompt=model_cfg.get("line_assessment_prompt", False),
+        line_reasoning_effort=model_cfg.get("line_reasoning_effort"),
+        assessment_mode=model_cfg.get("assessment_mode", "standard"),
     )
     jev_cfg = config.get("jev", {})
     jev_backend = jev

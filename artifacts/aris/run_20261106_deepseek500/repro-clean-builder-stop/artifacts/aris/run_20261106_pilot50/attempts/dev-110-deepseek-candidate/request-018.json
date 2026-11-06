@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Fact check: Harris' statement on Lincoln's Supreme Court nomination misses key details",
+        "query": "Search for contemporaneous 1864 primary records (Lincoln papers, Senate journal, contemporary newspapers) documenting whether Lincoln gave any public or private explanation for delaying the Chase nomination.",
+        "candidates": [
+          {
+            "title": "Digital Collections - Presidential Election of 1864",
+            "snippet": "Oct 2, 2026 — It includes the complete collection of Stern's contemporary newspapers , Lincoln's law papers , sheet music, broadsides, prints, cartoons ... Read more",
+            "url": "https://guides.loc.gov/presidential-election-1864/digital-collections"
+          },
+          {
+            "title": "Lincoln Delays Naming Chase",
+            "snippet": "Oct 8, 2020 — Lincoln would almost surely have nominated someone, probably Chase , and the Senate would have confirmed him, in late 1864 or early 1865.",
+            "url": "https://walterstahr.com/2020/10/08/lincoln-delays-naming-chase/"
+          },
+          {
+            "title": "Message of President Abraham Lincoln nominating ...",
+            "snippet": "Message of President Abraham Lincoln nominating Salmon P. Chase to be Chief Justice of the Supreme Court of the United States. 12/6/ 1864 . Read more",
+            "url": "https://docsteach.org/document/message-of-president-abraham-lincoln-nominating-salmon-p-chase-to-be-chief-justice-of-the-supreme-court-of-the-united-states/"
+          },
+          {
+            "title": "Why Lincoln didn't appoint a justice amid 1864 election",
+            "snippet": "Oct 9, 2020 — There is no evidence that Lincoln ever said this or that his reasons for delaying a Supreme Court nomination had anything to do with the ... Read more",
+            "url": "https://www.king5.com/article/news/verify/verify-why-abraham-lincoln-chose-not-to-appoint-a-supreme-court-justice-during-the-1864-election/507-c6ff8887-900b-46b8-aae5-f5b8cd87442e"
+          },
+          {
+            "title": "Lincoln and Chase, a Reappraisal",
+            "snippet": "Chase hastened to assure Lincoln that he had no knowledge of the documents and offered to resign, his third offer; Lincoln refused to accept his resignation. Read more",
+            "url": "https://quod.lib.umich.edu/j/jala/2629860.0012.103/--lincoln-and-chase-a-reappraisal?rgn=main;view=fulltext"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-110-deepseek-candidate",
+  "timestamp": "2026-11-06T01:16:20.611705+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 7245.921
+}

@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "What primary records document the RTO's access to or inability to access the registration papers of the vehicle involved in the Pulwama blast, and what names were recorded?",
+        "candidates": [
+          {
+            "title": "Media Briefings",
+            "snippet": "In response to a media query regarding Pakistans response to India's dossier on the Pulwama terror attack, the Official Spokesperson said:",
+            "url": "https://www.mea.gov.in/media-briefings?dtl/31186/Official_Spokespersons_response_to_a_media_query_regarding_Pakistans_response_to_Indias_dossier_on_the_Pulwama_terror_attack"
+          },
+          {
+            "title": "Owner of Pulwama terror attack vehicle has joined JeM: NIA",
+            "snippet": "“With the support of forensic and automobile experts, the NIA has been able to identify the vehicle used for the blast,” he said.",
+            "url": "https://www.thehindu.com/news/national/other-states/maruti-eeco-used-in-pulwama-terror-attack-nia-identifies-owner/article61538484.ece"
+          },
+          {
+            "title": "Watch: Delhi Blast Car Sold To Tariq In Pulwama",
+            "snippet": "Delhi Blast car was sold to Tariq in Pulwama. The i20 car is under Haryana registration and still named under its previous owner.",
+            "url": "https://www.youtube.com/watch?v=_sZA153aXQU"
+          },
+          {
+            "title": "2019 Pulwama attack",
+            "snippet": "The 2019 Pulwama attack occurred on 14 February 2019, when a convoy of vehicles carrying Indian security personnel on the Jammu–Srinagar National Highway ...",
+            "url": "https://en.wikipedia.org/wiki/2019_Pulwama_attack"
+          },
+          {
+            "title": "Pulwama District, Government of Jammu and Kashmir | Rice ...",
+            "snippet": "DISTRICT PULWAMA · ABOUT DISTRICT · Hon'ble Lieutenant Governor J&K · Deputy Commissioner · Quick Links · DISTRICT MAP · General Election 2024 - IT Applications.",
+            "url": "https://pulwama.gov.in/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-deepseek-candidate",
+  "timestamp": "2026-11-05T10:28:33.826562+00:00",
+  "status": "reserved_outcome_unknown"
+}

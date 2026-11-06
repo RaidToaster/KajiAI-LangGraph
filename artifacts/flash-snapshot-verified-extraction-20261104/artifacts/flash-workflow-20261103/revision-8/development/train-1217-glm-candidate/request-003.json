@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba.",
+        "query": "Cuba has a lung cancer vaccine that the US had no access to because it sanctioned Cuba. evidence",
+        "candidates": [
+          {
+            "title": "Cuba Has a Lung Cancer Vaccine. But American Patients Can't ...",
+            "snippet": "Cuba Has a Lung Cancer Vaccine. But American Patients Can't Get It Without Breaking the Law. Country: Cuba United states. Missing:  access  sanctioned  evidence",
+            "url": "https://pulitzercenter.org/stories/cuba-has-lung-cancer-vaccine-american-patients-cant-get-it-without-breaking-law"
+          },
+          {
+            "title": "Why an American went to Cuba for cancer care - BBC News",
+            "snippet": "Cuba has faced more than 50 years of US sanctions. Now, for the first time, a unique drug developed on the communist island is being tested ...",
+            "url": "https://www.bbc.com/news/magazine-39640165"
+          },
+          {
+            "title": "Cuba lung cancer vaccine and us patient access - Facebook",
+            "snippet": "Cuba's lung cancer vaccine reportedly extends survival, while American patients cannot legally access it Cuba developed a lung cancer ... Missing:  evidence  | Show results with:",
+            "url": "https://www.facebook.com/InfiniteCuriosityUSA/posts/cubas-lung-cancer-vaccine-reportedly-extends-survival-while-american-patients-ca/1134853769499685/"
+          },
+          {
+            "title": "Cuba Has a Lung Cancer Vaccine - And Now The Rest of The ...",
+            "snippet": "The Cubans also have another potential lung cancer vaccine called Racotumomab, which reportedly disrupts a particular lipid in tumour cell ...",
+            "url": "https://www.sciencealert.com/cuba-has-a-lung-vaccine-and-now-the-us-and-everyone-want-it"
+          },
+          {
+            "title": "CimaVax-EGF - Wikipedia",
+            "snippet": "However, some cancer patients from the US have defied the embargo and travelled to Cuba for treatment with CimaVax. Trials are being organized in the United ... · · · Missing:  access  sanctioned",
+            "url": "https://en.wikipedia.org/wiki/CimaVax-EGF"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1217-glm-candidate",
+  "timestamp": "2026-11-04T08:03:16.240228+00:00",
+  "status": "reserved_outcome_unknown"
+}

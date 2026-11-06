@@ -1,0 +1,68 @@
+{
+  "attempted_new": 6,
+  "retained_attempts": 14,
+  "matched_cases_per_model": 4,
+  "attempts": {
+    "glm": {
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "errors": [
+        "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+        "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+        "Page fetch failed for https://www.lgraham.senate.gov/public/index.cfm/2020/2/graham-on-coronavirus-response: target_http_error",
+        "Analysis failed: ValueError: not enough values to unpack (expected 3, got 2)"
+      ],
+      "output_tokens": 433,
+      "done_reason": "stop",
+      "repeated_fetches": {
+        "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/": 2
+      },
+      "assertion_line_shapes": [
+        {
+          "resolution_flag": "true",
+          "fields": 3
+        }
+      ]
+    },
+    "deepseek": {
+      "prediction": "ABSTAIN",
+      "accepted": "ABSTAIN",
+      "errors": [
+        "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+        "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+        "Page fetch failed for https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/: target_http_error",
+        "Page fetch failed for https://www.lgraham.senate.gov/public/index.cfm/2020/2/graham-on-coronavirus-response: target_http_error",
+        "Analysis failed: ValueError: Expected one complete assessment block"
+      ],
+      "output_tokens": 460,
+      "done_reason": "stop",
+      "repeated_fetches": {
+        "https://www.reuters.com/article/world/false-claim-sen-lindsey-graham-said-donald-trump-probably-knows-more-about-med-idUSKBN20R19B/": 3
+      },
+      "assertion_line_shapes": [
+        {
+          "resolution_flag": "true",
+          "fields": 4
+        }
+      ]
+    }
+  },
+  "usage": {
+    "jev": 59,
+    "jev_input_tokens": 142812,
+    "jev_output_tokens": 14729,
+    "tinyfish_search": 28,
+    "tinyfish_search_input_tokens": 0,
+    "tinyfish_search_output_tokens": 0,
+    "tinyfish_fetch": 55,
+    "tinyfish_fetch_input_tokens": 0,
+    "tinyfish_fetch_output_tokens": 0,
+    "ollama": 16,
+    "ollama_input_tokens": 40266,
+    "ollama_output_tokens": 7815,
+    "ollama_estimated_usd": 0.014062400000000001,
+    "jev_estimated_usd": 0.005998104000000001
+  },
+  "analysis_sha256": "edfb4a8dc8507c5b8db98907ce39675198ed5f466bac2c48118c94aac9a8c5e6",
+  "scientific_status": "No candidate acceptance. Three GLM failures versus a possible four baseline failures over the full schedule."
+}

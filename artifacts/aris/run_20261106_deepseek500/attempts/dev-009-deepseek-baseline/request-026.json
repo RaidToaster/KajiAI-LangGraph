@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent.",
+        "query": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it’s very much bigger than any GDP we’ve ever had. You have to go back to the 1950s, and then it’s less than half. This is the greatest number, 33.1 percent. original source fact check",
+        "candidates": [
+          {
+            "title": "Donald Trump Rally Transcript Tampa, FL 10/29",
+            "snippet": "You see the number today? 33.1 GDP. The biggest in the history of our country by almost triple, right? Almost triple. Now it's very much bigger than any GDP we ...",
+            "url": "https://www.rev.com/transcripts/donald-trump-rally-speech-transcript-tampa-fl-october-29"
+          },
+          {
+            "title": "US 2020 election: The economy under Trump in six charts",
+            "snippet": "Mr Trump has said the recent recovery in growth is \"the biggest in the history of our country by almost triple...that's bigger than any nation\".",
+            "url": "https://www.bbc.com/news/world-45827430"
+          },
+          {
+            "title": "U.S. GDP booms at 33.1% rate in Q3, better than expected",
+            "snippet": "Third-quarter gross domestic product, a measure of the total goods and services produced in the July-to-September period, expanded at a 33.1% ...",
+            "url": "https://www.reddit.com/r/news/comments/jk99j4/us_gdp_booms_at_331_rate_in_q3_better_than/"
+          },
+          {
+            "title": "Fortunly's Annotated Guide to a Century of US GDP by Year",
+            "snippet": "Take a look at our timeline of the last century US GDP by year and enjoy the detailed insight into a century of the American economy.",
+            "url": "https://fortunly.com/statistics/us-gdp-by-year-guide/"
+          },
+          {
+            "title": "Wealth inequality in the United States",
+            "snippet": "the top 1 percent have seen their wealth grow by almost 300 percent since 1989. The top 1% held a total of $43.45 trillion.",
+            "url": "https://en.wikipedia.org/wiki/Wealth_inequality_in_the_United_States"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-009-deepseek-baseline",
+  "timestamp": "2026-11-06T05:55:47.379005+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 11736.687
+}

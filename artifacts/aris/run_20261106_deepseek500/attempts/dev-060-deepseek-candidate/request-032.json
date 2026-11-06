@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "UK Employees unable to work in tier 3 areas will get a combination of Job Support Scheme and Universal Credit, which will mean they get 80% of their wages.",
+        "query": "HM Treasury or DWP primary statement 21 October 2020 Job Support Scheme Universal Credit combined 80% wages tier 3 unable to work",
+        "candidates": [
+          {
+            "title": "Changes To The Job Support Scheme Announced By The ...",
+            "snippet": "HM Treasury announced changes to the Job Support Scheme (JSS) on 22 October which may make a significant difference on employer take-up of the scheme.",
+            "url": "https://www.legal500.com/intelligence/united-kingdom/employment-and-hr/changes-to-the-job-support-scheme-announced-by-the-treasury"
+          },
+          {
+            "title": "HMRC – Job Support Scheme (October 2020) - R3",
+            "snippet": "You continue to pay your furloughed employees at least 80% of their usual wages for the hours they do not work, up to a cap of £2,500 per month. Missing:  Treasury  DWP  statement  21  Universal  Credit  tier  unable",
+            "url": "https://www.r3.org.uk/technical-library/hmrc-job-support-scheme-october-2020/"
+          },
+          {
+            "title": "Job Support Scheme expanded to firms required to close due ...",
+            "snippet": "The government will support eligible businesses by paying two thirds of each employees' salary (or 67%), up to a maximum of £2,100 a month. Missing:  DWP  primary  Universal  80%  tier",
+            "url": "https://www.gov.uk/government/news/job-support-scheme-expanded-to-firms-required-to-close-due-to-covid-restrictions"
+          },
+          {
+            "title": "THE JOB SUPPORT SCHEME - Croner Navigate |",
+            "snippet": "The Job Support Scheme will be open from 1 November 2020 and run for 6 months, until 30 April 2021. The government will review the terms of the scheme in ... Missing:  DWP  21  80%  3",
+            "url": "https://library.croneri.co.uk/cch_uk/btl/covid19-it-misc-covid19_15"
+          },
+          {
+            "title": "The Job Support Scheme - Spencer West",
+            "snippet": "The scheme guarantees an employee will receive at least 77% of their pay, where the government grant has not been capped. capped at £697.92 per month.",
+            "url": "https://www.spencer-west.com/news/the-job-support-scheme/"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-060-deepseek-candidate",
+  "timestamp": "2026-11-06T08:34:45.313742+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 21274.625
+}

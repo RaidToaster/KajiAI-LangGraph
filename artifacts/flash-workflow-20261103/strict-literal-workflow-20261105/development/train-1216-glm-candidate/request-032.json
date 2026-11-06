@@ -1,0 +1,85 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Kunal Kamra said, The RDX laden car which caused the blast in Pulwama, RTO has not been able to access its papers stating under whose name it was registered, till date. The government wants more than 70 year old papers in the NRC.",
+        "query": "Find an outlet other than BOOM (e.g., Alt News) independently reporting the quote attribution or Kamra's denial",
+        "candidates": [
+          {
+            "title": "What are some media outlets that only report the news, without ...",
+            "snippet": "I think PBS, Bloomberg, C-SPAN, Reuters, Associated Press. Certainly, a lot of sources give unbiased news, ... Both sources must be independent,",
+            "url": "https://www.quora.com/What-are-some-media-outlets-that-only-report-the-news-without-any-added-opinions-or-bias"
+          },
+          {
+            "title": "10 Journalism Brands Where You Find Real Facts Rather Than ...",
+            "snippet": "top outlets such as the Washington Post, the New York Times, NBC News and the New Republic have fired journalists for such ethics violations. Missing:  BOOM  quote  attribution  Kamra's",
+            "url": "https://www.forbes.com/sites/berlinschoolofcreativeleadership/2017/02/01/10-journalism-brands-where-you-will-find-real-facts-rather-than-alternative-facts/"
+          },
+          {
+            "title": "Is there any media outlet that reports just facts without any bias ...",
+            "snippet": "Even a recitation of facts is subject to bias. All media companies post both news and opinions. A factual report from a quality source will ...",
+            "url": "https://www.quora.com/Is-there-any-media-outlet-that-reports-just-facts-without-any-bias-whatsoever-or-do-you-think-that-s-impossible-I-say-maybe-it-s-impossible-because-facts-are-not-math-They-re-not-absolute-But-there-has-to-be"
+          },
+          {
+            "title": "Web Sites for Fact Checking - Misinformation and ... - CSI Library",
+            "snippet": "Media Bias/Fact Check (MBFC), founded in 2015, is an independent online media outlet. MBFC is dedicated to educating the public on media bias ... Missing:  BOOM  Alt  attribution  Kamra's",
+            "url": "https://library.csi.cuny.edu/misinformation/fact-checking-websites"
+          },
+          {
+            "title": "Media Bias and Fact Checking News Sources - Pace University",
+            "snippet": "Lack of author attribution may, but not always, signify that the news story is suspect and requires verification. Missing:  outlet  BOOM  (eg,  quote  Kamra's",
+            "url": "https://libguides.pace.edu/fakenews/analyzingandfactchecking"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "train-1216-glm-candidate",
+  "timestamp": "2026-11-05T10:35:15.363915+00:00",
+  "status": "reserved_outcome_unknown"
+}

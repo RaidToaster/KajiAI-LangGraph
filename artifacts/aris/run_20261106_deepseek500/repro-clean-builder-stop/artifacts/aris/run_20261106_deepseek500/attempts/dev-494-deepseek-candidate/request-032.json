@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "The Obama-Biden administration secretly launched a surveillance operation on the Trump campaign.",
+        "query": "Search the DOJ OIG Crossfire Hurricane report and FISA Court filings for any order or application naming the Trump campaign itself (not just Carter Page or other individuals) as a surveillance target.",
+        "candidates": [
+          {
+            "title": "DOJ OIG Releases Review of Four FISA Applications and Other ...",
+            "snippet": "The DOJ Office of the Inspector General’s (OIG) findings are summarized in the report’s Executive Summary, available at the links below.",
+            "url": "https://oig.justice.gov/news/doj-oig-releases-review-four-fisa-applications-and-other-aspects-fbis-crossfire-hurricane"
+          },
+          {
+            "title": "DOJ OIG Releases Review of Four FISA Applications and Other ...",
+            "snippet": "Four FBI applications filed with the Foreign Intelligence Surveillance Court (FISC) in 2016 and 2017 to conduct Foreign Intelligence Surveillance Act (FISA) surveillance targeting Carter Page; and whether these applications complied with DOJ and FBI policies and satisfied the government’s obligations to the FISC (Chapter 5-8);",
+            "url": "https://oig.justice.gov/sites/default/files/2020-08/2019-12-09.pdf"
+          },
+          {
+            "title": "Review of Four FISA Applications and Other Aspects of the FBI ...",
+            "snippet": "This report has 2 open recommendations.",
+            "url": "https://www.oversight.gov/reports/review-four-fisa-applications-and-other-aspects-fbis-crossfire-hurricane-investigation"
+          },
+          {
+            "title": "Inspector General report on the Crossfire Hurricane ...",
+            "snippet": "The Republican Party 's Nunes memo alleged that the DOJ and FBI abused the Foreign Intelligence Surveillance Act (FISA) in their applications to the Foreign Intelligence Surveillance Court (FISC) to surveil Carter Page, a former member for the 2016 Trump campaign.",
+            "url": "https://en.wikipedia.org/wiki/Inspector_General_report_on_the_Crossfire_Hurricane_investigation"
+          },
+          {
+            "title": "Review of Four FISA Applications and Other Aspects of the FBI ...",
+            "snippet": "Over the next several weeks, the 01 Attorney prepared and edited a draft application using information principally provided by the FBI case agent assigned to the Carter Page investigation at the time and, in a few instances, by an OGC attorney (OGC Attorney) or other Crossfire Hurricane team members.",
+            "url": "https://donohueintellaw.ll.georgetown.edu/sites/default/files/assets/o20012.pdf"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-494-deepseek-candidate",
+  "timestamp": "2026-11-06T04:33:48.909159+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 6818.218
+}

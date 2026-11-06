@@ -1,0 +1,66 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "citations": [
+          {
+            "finding": "Retained snippet record for https://www.theguardian.com/technology/2023/may/08/ai-generated-news-websites-study contains verbatim: May 8, 2023 — Celebritiesdeaths.com is among 49 supposed news sites that NewsGuard, an organization tracking misinformation, has identified as “almost ... Read more",
+            "url": "https://www.theguardian.com/technology/2023/may/08/ai-generated-news-websites-study",
+            "quote": "May 8, 2023 — Celebritiesdeaths.com is among 49 supposed news sites that NewsGuard, an organization tracking misinformation, has identified as “almost ... Read more",
+            "context": "May 8, 2023 — Celebritiesdeaths.com is among 49 supposed news sites that NewsGuard, an organization tracking misinformation, has identified as “almost ... Read more"
+          },
+          {
+            "finding": "Retained snippet record for https://www.marubeni.com/en/research/potomac/backnumber/19.html contains verbatim: In the US, “fake news ” frequently becomes widely shared on the internet. Recently, a shooting incident occurred as a result of this spreading of fake news . Read more",
+            "url": "https://www.marubeni.com/en/research/potomac/backnumber/19.html",
+            "quote": "In the US, “fake news ” frequently becomes widely shared on the internet. Recently, a shooting incident occurred as a result of this spreading of fake news . Read more",
+            "context": "In the US, “fake news ” frequently becomes widely shared on the internet. Recently, a shooting incident occurred as a result of this spreading of fake news . Read more"
+          },
+          {
+            "finding": "Retained snippet record for https://www.ncbi.nlm.nih.gov/books/NBK475955/ contains verbatim: After its formal investigation in 2005, a Seoul National University committee determined that both of Hwang's articles were based on fabricated data (SNU, 2006) ...",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK475955/",
+            "quote": "After its formal investigation in 2005, a Seoul National University committee determined that both of Hwang's articles were based on fabricated data (SNU, 2006) ...",
+            "context": "After its formal investigation in 2005, a Seoul National University committee determined that both of Hwang's articles were based on fabricated data (SNU, 2006) ..."
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "citation_0": {
+          "type": "choice",
+          "instructions": "Does `citations[0].context`, including the quote, support `citations[0].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_1": {
+          "type": "choice",
+          "instructions": "Does `citations[1].context`, including the quote, support `citations[1].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        },
+        "citation_2": {
+          "type": "choice",
+          "instructions": "Does `citations[2].context`, including the quote, support `citations[2].finding`? Judge the finding as written.",
+          "criteria": {
+            "supports": "The source directly states or clearly implies the finding.",
+            "contradicts": "The source states or implies the opposite of the finding.",
+            "unrelated": "The source does not establish the finding, including when key qualifications are missing."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-005-glm-candidate",
+  "timestamp": "2026-11-06T00:47:19.391908+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 5504.703
+}

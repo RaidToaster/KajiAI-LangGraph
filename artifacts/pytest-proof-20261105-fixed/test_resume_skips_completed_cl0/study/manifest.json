@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "code_sha256": "a297bf40bbfa8e1365da42bcc4b351202d0468c44cf6e9975070cb6606dca78a",
+  "dataset_sha256": "2d8637eac7e92c2d15c1294cc0cda37d743e078c5bf747b46f70ec2697cb2fe2",
+  "dataset_path": "D:\\Projects\\!skripsi\\KajiAI-LangGraph\\artifacts\\pytest-proof-20261105-fixed\\test_resume_skips_completed_cl0\\data.json",
+  "claim_ids": [
+    0
+  ],
+  "seed": 1,
+  "config": {
+    "model": {
+      "provider": "ollama",
+      "name": "gemma4:31b-cloud",
+      "base_url": "http://localhost:11434",
+      "temperature": 0.0,
+      "decomposition_method": "statements",
+      "assessment_mode": "standard",
+      "canonical_evidence_prompt": false,
+      "recover_empty_assessment": false,
+      "compact_evidence_prompt": false,
+      "verdict_mode": "averitec"
+    },
+    "jev": {
+      "enabled": false,
+      "model": "jev-1.13.0",
+      "domain_min_confidence": 0.6,
+      "citation_min_confidence": 0.8,
+      "injection_cutoff": 0.9,
+      "irrelevant_cutoff": 0.1,
+      "max_source_reviews_per_round": 20,
+      "citation_batch_size": 6
+    },
+    "policy": {
+      "require_evidence_quotes": true,
+      "full_page_retrieval": false,
+      "page_fetches_per_search": 2,
+      "page_fetch_timeout_seconds": 30,
+      "page_max_bytes": 1000000,
+      "page_text_limit": 20000,
+      "search_calls_per_round": 1,
+      "max_search_calls": 4,
+      "max_scrapes": 20,
+      "max_execution_time_seconds": 30,
+      "max_token_limit": 250000,
+      "max_results_per_search": 5,
+      "max_stagnant_rounds": 2,
+      "stop_on_query_exhaustion": false,
+      "retry_on_failure": true,
+      "max_retries": 3,
+      "retry_delay_seconds": 0
+    },
+    "domain_guidance": {
+      "general": {
+        "research": "Prefer original documents and independent corroboration. Search for both supporting evidence and credible counterevidence.",
+        "analysis": "Evaluate relevance, provenance, temporal fit, and source independence.",
+        "verification_standard": "Require direct evidence for decisive verdicts and preserve material uncertainty."
+      },
+      "scientific": {
+        "research": "Prioritize peer-reviewed studies, academic journals, original datasets, and official scientific institutions such as WHO, NIH, and CDC.",
+        "analysis": "Assess study design, sample limitations, replication, and whether the retrieved evidence is genuinely peer reviewed.",
+        "verification_standard": "Apply a high evidentiary bar and require multiple credible independent sources."
+      },
+      "political": {
+        "research": "Seek primary records and reporting across different editorial perspectives; search specifically for omitted context and counterevidence.",
+        "analysis": "Check partisan framing, cherry-picked facts, source incentives, dates, jurisdictions, and whether reports share the same underlying source.",
+        "verification_standard": "Evaluate evidence on its merits and do not treat outlet diversity as source independence."
+      },
+      "health_medical": {
+        "research": "Prioritize official health organizations, peer-reviewed medical journals, systematic reviews, clinical guidelines, and registered clinical trials.",
+        "analysis": "Distinguish systematic reviews, trials, observational studies, case reports, expert opinion, and anecdotes; note population and dosage limitations.",
+        "verification_standard": "Apply a strict medical evidence standard and do not generalize beyond the studied population."
+      }
+    },
+    "domains": {
+      "general": {},
+      "scientific": {
+        "require_https": true
+      },
+      "political": {},
+      "health_medical": {
+        "require_peer_reviewed": true
+      }
+    }
+  },
+  "max_rounds": 3,
+  "workers": 1,
+  "conditions": [
+    "full",
+    "closed_book"
+  ],
+  "versions": {
+    "langgraph": "1.2.11",
+    "langchain-ollama": "1.1.0",
+    "typesafe-sdk": "0.7.1",
+    "pydantic": "2.13.5"
+  },
+  "scope": "Development-set, contemporary open-web, label-only evaluation",
+  "temporal_cutoff_enforced": false,
+  "gold_evidence_used": false,
+  "model_only_acceptance": "No evidence gate; score predictions only",
+  "offline_comparisons": "First-round truncation and acceptance-policy replay on exact saved assessments",
+  "live_drift": "Seed fixes task order; remote model and web responses may change",
+  "development_pilot": "Separate earlier-code pilot; never merged into study results",
+  "created_at": "2026-11-05T08:42:58.945896+00:00"
+}

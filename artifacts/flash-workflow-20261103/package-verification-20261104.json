@@ -1,0 +1,33 @@
+{
+  "status": "verified negative development snapshot; scientific objective not achieved",
+  "archive": {
+    "archive": "artifacts/flash-workflow-20261103/flash-study-negative-development-20261104-verified.zip",
+    "sha256": "e1a6970d2dcbeb48e16f939c85d4710ed30e8ccd4dec336693bb37dbfbb70553",
+    "bytes": 35910495,
+    "file_count": 6803,
+    "scope": "No qualifying workflow; no confirmation or final attempts."
+  },
+  "extraction_root": "artifacts/flash-snapshot-verified-extraction-20261104",
+  "checks": {
+    "all_6803_packaged_file_digests_checked": true,
+    "recount_semantically_equal": true,
+    "method_replay_byte_identical": true,
+    "stopping_reanalysis_equal": true,
+    "pdf_digest_equal": true,
+    "source_digest_equal": true,
+    "original_runtime_and_protocol_freeze_still_valid": true
+  },
+  "commands": [
+    "verify_flash_snapshot.py --output reproduction-recount.json",
+    "flash_method_windows.py",
+    "analyze_live.py stopping-reproduction.json batch1"
+  ],
+  "new_source_import": "PYTHONPATH set to the clean extraction src, with existing project interpreter/dependencies",
+  "new_live_attempts_this_continuation": {
+    "development": 1,
+    "fixed_packet_diagnostic": 2
+  },
+  "final_attempts_started": 0,
+  "no_worker_remaining": true,
+  "no_commit_push_or_publication": true
+}

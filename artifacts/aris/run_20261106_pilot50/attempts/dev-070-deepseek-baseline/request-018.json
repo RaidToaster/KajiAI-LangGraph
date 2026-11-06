@@ -1,0 +1,88 @@
+{
+  "service": "jev",
+  "request": {
+    "path": "/v1/systemone",
+    "body": {
+      "state": {
+        "claim": "Dr Anthony Fauci wrote a paper regarding the Spanish Flu and stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks.",
+        "query": "stated that the majority of deaths in 1918-1919 was because of bacterial pneumonia from wearing masks. evidence",
+        "candidates": [
+          {
+            "title": "Predominant Role of Bacterial Pneumonia as a Cause ... - PMC",
+            "snippet": "by DM Morens · 2008 · Cited by 2275 — The majority of deaths in the 1918–1919 influenza pandemic likely resulted directly from secondary bacterial pneumonia caused by common upper respiratory–tract ...",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2599911/"
+          },
+          {
+            "title": "Study: Bacterial pneumonia was main killer in 1918 flu ...",
+            "snippet": "\"Histological and bacteriologic evidence suggests that the vast majority of influenza deaths resulted from secondary bacterial pneumonia,\" says ...",
+            "url": "https://www.cidrap.umn.edu/influenza-vaccines/study-bacterial-pneumonia-was-main-killer-1918-flu-pandemic"
+          },
+          {
+            "title": "Bacterial Pneumonia to Blame for Most 1918 Flu Pandemic ...",
+            "snippet": "Most victims succumbed to pneumonia caused when bacteria that normally inhabit the nose and throat invaded the lungs along a pathway created when the flu virus ...",
+            "url": "https://respiratory-therapy.com/disorders-diseases/infectious-diseases/other-infections/bacterial-pneumonia-to-blame-for-most-1918-flu-pandemic-deaths/"
+          },
+          {
+            "title": "Deaths from Bacterial Pneumonia during 1918–19 ...",
+            "snippet": "However, healthcare providers, medical experts, and published data from the 1918 period suggest that most deaths were caused by secondary bacterial pneumonias ( ...",
+            "url": "https://wwwnc.cdc.gov/eid/article/14/8/07-1313_article"
+          },
+          {
+            "title": "The 1918–1919 Influenza Pandemic as Covered in The JI",
+            "snippet": "by M Litzinger · Cited by 2 — The deadly 1918–1919 influenza pandemic generated an impressive body of immunological research into the cause and prevention of the disease, and that urgency is ...",
+            "url": "https://www.aai.org/About/History/History-Articles-Keep-for-Hierarchy/The-1918%E2%80%931919-Influenza-Pandemic-as-Covered-in-(1)"
+          }
+        ]
+      },
+      "model": "jev-1.13.0",
+      "questions": {
+        "result_0": {
+          "type": "noul",
+          "instructions": "Is `candidates[0]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_1": {
+          "type": "noul",
+          "instructions": "Is `candidates[1]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_2": {
+          "type": "noul",
+          "instructions": "Is `candidates[2]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_3": {
+          "type": "noul",
+          "instructions": "Is `candidates[3]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        },
+        "result_4": {
+          "type": "noul",
+          "instructions": "Is `candidates[4]` likely to provide direct evidence for or against `claim` and `query` if fetched?",
+          "criteria": {
+            "true": "The title and snippet point to a directly relevant source or original record.",
+            "false": "Only loosely related, opinion without evidence, or unrelated to the claim."
+          }
+        }
+      }
+    }
+  },
+  "task": "dev-070-deepseek-baseline",
+  "timestamp": "2026-11-06T01:42:30.617748+00:00",
+  "status": "reserved_outcome_unknown",
+  "reservation_usd": 0.0027525120000000004,
+  "input_upper_bound": 65536,
+  "monotonic_started": 8815.937
+}
