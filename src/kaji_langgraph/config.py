@@ -19,6 +19,8 @@ def load_config(path: str | Path | None = None) -> dict[str, Any]:
     model = config["model"]
     model["name"] = os.getenv("KAJI_MODEL", model["name"])
     model["base_url"] = os.getenv("KAJI_OLLAMA_BASE_URL", model["base_url"])
+    if "KAJI_DECOMPOSITION_METHOD" in os.environ:
+        model["decomposition_method"] = os.environ["KAJI_DECOMPOSITION_METHOD"]
     return config
 
 

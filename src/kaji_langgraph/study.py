@@ -35,6 +35,17 @@ class ClosedBookAssessment(BaseModel):
     summary: str
 
 
+def closed_book_prompt(claim: str, reference_date: str | None) -> str:
+    """Shared verbatim control prompt for opt-in incremental experiments."""
+    return f"""Assess the factual claim using your existing knowledge only.
+Claim: {claim}
+Claim reference date: {reference_date or 'not supplied'}
+Use TRUE for supported claims, FALSE for refuted claims, CONFLICTING for genuine
+conflicting evidence/cherry-picking, and NOT_ENOUGH_EVIDENCE when you cannot
+resolve the claim. Missing knowledge is not FALSE. Give your best assessment
+and honest Low, Medium, or High confidence. Do not invent citations."""
+
+
 def closed_book(claim: str, reference_date: str | None, config: dict) -> FinalResult:
     """Same model and JSON adapter; no retrieval, domain routing, or acceptance."""
     started = time.monotonic()
@@ -44,13 +55,7 @@ def closed_book(claim: str, reference_date: str | None, config: dict) -> FinalRe
     budget = BudgetState(max_rounds=1, max_search_calls=0, max_scrapes=0,
                          max_seconds=config["policy"]["max_execution_time_seconds"])
     try:
-        assessment, tokens = backend._structured(ClosedBookAssessment, f"""Assess the factual claim using your existing knowledge only.
-Claim: {claim}
-Claim reference date: {reference_date or 'not supplied'}
-Use TRUE for supported claims, FALSE for refuted claims, CONFLICTING for genuine
-conflicting evidence/cherry-picking, and NOT_ENOUGH_EVIDENCE when you cannot
-resolve the claim. Missing knowledge is not FALSE. Give your best assessment
-and honest Low, Medium, or High confidence. Do not invent citations.""")
+        assessment, tokens = backend._structured(ClosedBookAssessment, closed_book_prompt(claim, reference_date))
         budget.tokens_used = tokens or 0
         budget.token_usage_complete = tokens is not None
         return FinalResult(claim=claim, domain="not_classified", budget=budget,

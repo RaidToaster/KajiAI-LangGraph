@@ -8,6 +8,7 @@ from kaji_langgraph.models import (
     BudgetState,
     EvidenceAssessment,
     FinalResult,
+    QuestionDecomposition,
     ResearchRound,
     SourceRecord,
 )
@@ -19,6 +20,8 @@ class ClaimState(TypedDict, total=False):
     domain: str
     classification: dict[str, Any]
     assertions: list[str]
+    query_plan: QuestionDecomposition
+    query_plan_error: str
     sources: list[SourceRecord]
     research_round: int
     research_history: list[ResearchRound]

@@ -16,7 +16,7 @@ from langgraph.config import get_stream_writer
 from kaji_langgraph.config import effective_policy, load_config
 from kaji_langgraph.gate import evidence_gaps, retained_evidence
 from kaji_langgraph.jev import JevClient
-from kaji_langgraph.llm import ModelBackend, OllamaBackend, heuristic_decomposition, keyword_classification
+from kaji_langgraph.llm import ModelBackend, OllamaBackend, PlanningResponseError, heuristic_decomposition, keyword_classification
 from kaji_langgraph.models import (
     BudgetState,
     EvidenceAssessment,
@@ -247,8 +247,23 @@ class WorkflowNodes:
         return update
 
     def decompose(self, state: ClaimState) -> dict[str, Any]:
+        planning: dict[str, Any] = {}
         if _budget_reason(state) in {"token_budget_exhausted", "time_budget_exhausted"}:
             assertions, tokens = heuristic_decomposition(state["claim"]), 0
+        elif self.config["model"].get("decomposition_method") == "questions_as_guidance":
+            assertions, tokens = heuristic_decomposition(state["claim"]), 0
+            planner = getattr(self.model, "decompose_with_questions", None)
+            if planner is None:
+                planning["query_plan_error"] = "Question planning is unavailable for this backend."
+            else:
+                self.progress(f"{self.model_label}: planning verification questions")
+                try:
+                    plan, tokens = planner(state["claim"], reference_date=state["reference_date"])
+                    planning["query_plan"] = plan
+                except PlanningResponseError as exc:
+                    tokens = exc.tokens
+                    planning["query_plan_error"] = str(exc)
+                    self.progress("Invalid question plan. Using restored search queries.")
         else:
             try:
                 self.progress(f"{self.model_label}: decomposing the claim into assertions")
@@ -261,7 +276,7 @@ class WorkflowNodes:
                 ]
         assertions = [item.strip() for item in assertions if item.strip()]
         assertions = list(dict.fromkeys([state["claim"], *assertions]))
-        update: dict[str, Any] = {"assertions": assertions, "budgets": _record_tokens(state, tokens)}
+        update: dict[str, Any] = {"assertions": assertions, "budgets": _record_tokens(state, tokens), **planning}
         if "errors" in locals():
             update["errors"] = errors
         return update
@@ -272,13 +287,27 @@ class WorkflowNodes:
             return {"last_new_sources": 0, "budget_blocked": True}
         assessment = state.get("assessment", EvidenceAssessment())
         previous = set(state.get("search_queries", []))
+        counterevidence = f"{state['claim']} counterevidence"
         candidates = [
-            *assessment.next_queries,
             f"{state['claim']} evidence",
-            f"{state['claim']} counterevidence",
+            counterevidence,
             *[f"{assertion} evidence" for assertion in state["assertions"]],
             *[f"{assertion} original source fact check" for assertion in state["assertions"]],
         ]
+        plan = state.get("query_plan")
+        priority = []
+        remaining_leads = []
+        if plan:
+            leads = [plan.questions[0], *[f"{item} evidence" for item in plan.assertions], *plan.questions[1:]]
+            unused_leads = [query for query in dict.fromkeys(leads) if query not in previous]
+            priority = unused_leads[:1]
+            remaining_leads = unused_leads[1:]
+            if counterevidence not in previous:
+                if previous:
+                    priority.insert(0, counterevidence)
+                else:
+                    priority.append(counterevidence)
+        candidates = [*priority, *assessment.next_queries, *remaining_leads, *candidates]
         queries = list(dict.fromkeys(query.strip() for query in candidates if query.strip() and query.strip() not in previous))
         if not queries:
             queries = [f"{state['claim']} evidence counterevidence"] if not previous else []
@@ -615,6 +644,8 @@ class WorkflowNodes:
             sources=[source for source in self.usable_sources(state) if source.url in cited],
             retrieval_ledger=state.get("sources", []),
             assertions=state.get("assertions", []),
+            query_plan=state.get("query_plan"),
+            query_plan_error=state.get("query_plan_error"),
             gaps=gaps,
             contradictions=assessment.contradictions,
             search_queries=state.get("search_queries", []),
@@ -644,6 +675,8 @@ def build_graph(
 ):
     config = config or load_config()
     model_cfg = config["model"]
+    if model_cfg.get("decomposition_method", "statements") not in {"statements", "questions_as_guidance"}:
+        raise ValueError("decomposition_method must be statements or questions_as_guidance")
     backend = model or OllamaBackend(
         model=model_cfg["name"],
         base_url=model_cfg["base_url"],

@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-from typing import Any, Literal
+from typing import Annotated, Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 
 Domain = Literal["auto", "general", "scientific", "political", "health_medical"]
 Verdict = Literal["TRUE", "FALSE", "MISLEADING", "CONFLICTING", "NOT_ENOUGH_EVIDENCE", "UNVERIFIED"]
@@ -20,6 +20,17 @@ class Classification(BaseModel):
 
 class Decomposition(BaseModel):
     assertions: list[str] = Field(default_factory=list)
+
+
+ResearchLead = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=500)]
+
+
+class QuestionDecomposition(BaseModel):
+    """Unverified subclaims and questions for retrieval planning."""
+
+    model_config = ConfigDict(extra="forbid")
+    assertions: list[ResearchLead] = Field(min_length=1, max_length=6)
+    questions: list[ResearchLead] = Field(min_length=1, max_length=8)
 
 
 class SourceRecord(BaseModel):
@@ -128,6 +139,8 @@ class FinalResult(BaseModel):
     sources: list[SourceRecord] = Field(default_factory=list)
     retrieval_ledger: list[SourceRecord] = Field(default_factory=list)
     assertions: list[str] = Field(default_factory=list)
+    query_plan: QuestionDecomposition | None = None
+    query_plan_error: str | None = None
     gaps: list[str] = Field(default_factory=list)
     contradictions: list[str] = Field(default_factory=list)
     search_queries: list[str] = Field(default_factory=list)

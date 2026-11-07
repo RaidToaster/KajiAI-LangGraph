@@ -90,6 +90,13 @@ export KAJI_OLLAMA_BASE_URL=http://localhost:11434
 export KAJI_TIMEZONE=Asia/Jakarta
 ```
 
+Set `KAJI_DECOMPOSITION_METHOD=questions_as_guidance` to use LLM-generated
+subclaims and verification questions as search leads. The workflow keeps the
+original verification targets and records the plan and executed queries in its
+JSON trace. Invalid plans fall back to the standard search queue. The planner
+uses one model call per claim and is opt-in for the CLI and the evaluation and
+study runners.
+
 Live retrieval uses [TinyFish Search](https://docs.tinyfish.ai/search-api/reference)
 for ranked URLs and [TinyFish Fetch](https://docs.tinyfish.ai/fetch-api/reference)
 for clean page text. Set `TINYFISH_API_KEY` in the environment; the key is never
@@ -208,3 +215,26 @@ Final analysis includes confidence intervals, paired accuracy differences,
 first-round truncation, and offline acceptance-policy replay. These replays
 reuse saved evidence and are not independent live workflow ablations. A blinded
 citation-audit worksheet is generated with human judgments left blank.
+
+## Opt-in incremental DeepSeek study
+
+`python -m kaji_langgraph.incremental` provides an isolated study controller with
+identity-only exposure auditing, protected evaluation splits, a shared saved
+model-only prediction, all-claim or confidence-routed research, blind evidence
+assessment, retention/adjudication, durable physical-send journals and committed
+paired scoring. Existing graph and study defaults retain their behavior.
+
+See [the incremental study guide](src/kaji_langgraph/incremental/README.md).
+The completed, versioned study used the approved 100 final / 30 calibration /
+22 selection split. On the once-only final 100 claims, model-only and the frozen
+Low+Medium research policy both scored **73.0%**, macro F1 **0.4241**, with no
+label changes or accepted evidence. Research covered 26 claims and increased
+latency and estimated cost. Model-only remains the deployment recommendation.
+
+See the [completed report](evaluation/results/deepseek-incremental-v2-20261107/revision-1/REPORT.md)
+and [offline reproduction commands](evaluation/results/deepseek-incremental-v2-20261107/revision-1/REPRODUCE.md).
+Frozen sources, raw journals, commitments, paired predictions and resource
+accounting are preserved alongside them. All 500 local identities now have
+documented DeepSeek exposure, so another development cycle needs a new protected
+evaluation pool. The earlier v1 preparation contains no inference and remains
+blocked. The historical DeepSeek coordinator remains paused as authorized.
